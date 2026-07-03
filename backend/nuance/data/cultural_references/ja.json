@@ -240,6 +240,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%97%9D%E5%AD%90/%E5%85%A7%E7%AF%87/%E9%BD%92%E7%89%A9%E8%AB%96",
       "source_work": "荘子",
       "source_work_key": "mnemosyne.ja.work.荘子",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "万物斉同",
         "万物斉同の境地",
@@ -304,6 +305,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E4%B8%87%E8%91%89%E4%BB%AE%E5%90%8D",
       "source_work": "万葉集",
       "source_work_key": "mnemosyne.ja.work.万葉集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "万葉仮名",
         "Man'yōgana",
@@ -852,6 +854,7 @@
       "source_url": "https://ja.wikisource.org/wiki/阿含経典",
       "source_work": "阿含経典 (Āgama sūtras)",
       "source_work_key": "mnemosyne.ja.work.阿含経典_āgama_sūtras",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "五蘊盛衰",
         "五蘊の盛衰",
@@ -950,6 +953,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/他力本願",
       "source_work": "浄土三部経",
       "source_work_key": "mnemosyne.ja.work.浄土三部経",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "他力本願",
         "他力本願の心",
@@ -976,6 +980,7 @@
       "source_url": "https://www.bdk.or.jp/document/digitaldl/dBET_T09n0262.pdf",
       "source_work": "法華経",
       "source_work_key": "mnemosyne.ja.work.法華経",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "依正不二",
         "依正不二の理",
@@ -1003,6 +1008,7 @@
       "source_url": "https://ctext.org/mengzi/liang-hui-wang-xia",
       "source_work": "孟子",
       "source_work_key": "mnemosyne.ja.work.孟子",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "先憂後楽",
         "先憂後楽の精神",
@@ -1069,6 +1075,7 @@
       "source_url": "https://ja.wikisource.org/wiki/古事記/下巻",
       "source_work": "古事記 (Kojiki)",
       "source_work_key": "mnemosyne.ja.work.古事記_kojiki",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "八岐大蛇",
         "やまたのおろち",
@@ -1188,6 +1195,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "六条御息所",
         "ろくじょうのみやすどころ",
@@ -1213,6 +1221,7 @@
       "source_url": "https://www.wisdomlib.org/buddhism/book/lotus-sutra/d/doc11854.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "六波羅蜜",
         "六波羅蜜を修める",
@@ -1296,6 +1305,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E7%A6%AE%E8%A8%98/%E5%8D%9A%E5%AD%A6%E7%AF%80",
       "source_work": "礼記",
       "source_work_key": "mnemosyne.ja.work.礼記",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "切磋琢磨",
         "切磋琢磨する",
@@ -1324,6 +1334,7 @@
       "source_url": "https://www.wisdomlib.org/buddhism/book/mahayana-sutras/d/doc11254.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "十二因縁",
         "十二因縁説",
@@ -1691,6 +1702,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%91%89%E8%B6%8A%E6%98%A5%E7%A7%8B/%E5%8D%81%E5%8D%B7",
       "source_work": "呉越春秋",
       "source_work_key": "mnemosyne.ja.work.呉越春秋",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "呉越同舟",
         "呉越同舟する",
@@ -1802,6 +1814,7 @@
       "source_url": "https://ja.wikisource.org/wiki/阿含経典",
       "source_work": "阿含経典 (Āgamas)",
       "source_work_key": "mnemosyne.ja.work.阿含経典_āgamas",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "四無量心",
         "四無量心の",
@@ -1975,6 +1988,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_scriptures_phrases_因果の理_を悟る",
       "id": "ja_classical_or_scriptural_allusion_因果の理_を悟る_cdb8be18",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1988,6 +2002,7 @@
       "source_url": "https://ja.wikisource.org/wiki/般若心経",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "因果の理を悟る",
         "因果の理を悟った",
@@ -2221,6 +2236,7 @@
       "source_url": "https://ja.wikisource.org/wiki/土佐日記",
       "source_work": "土佐日記",
       "source_work_key": "mnemosyne.ja.work.土佐日記",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "土佐日記",
         "Tosa Nikki",
@@ -2315,6 +2331,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/地獄",
       "source_work": "Various (Buddhist teachings)",
       "source_work_key": "mnemosyne.ja.work.various_buddhist_teachings",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "地獄極楽",
         "地獄と極楽",
@@ -2712,6 +2729,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "天人合一",
         "天人合一の思想",
@@ -3014,6 +3032,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/法句経",
       "source_work": "法句経",
       "source_work_key": "mnemosyne.ja.work.法句経",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "寂滅為楽",
         "寂滅為楽の",
@@ -3284,6 +3303,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/52_1451.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "我が身に引きかへ",
         "我が身に引き返えす",
@@ -3389,6 +3409,7 @@
       "source_url": "https://ja.wikisource.org/wiki/平家物語/巻第九",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "扇の的",
         "扇の的の場面",
@@ -3748,6 +3769,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "業報因縁",
         "業因報縁",
@@ -4074,6 +4096,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000081/files/456_14949.html",
       "source_work": "日本書紀, 万葉集, Various",
       "source_work_key": "mnemosyne.ja.work.日本書紀_万葉集_various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "浦島太郎が",
         "浦島太郎に",
@@ -4166,6 +4189,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%B6%85%E6%A7%83",
       "source_work": "阿含経",
       "source_work_key": "mnemosyne.ja.work.阿含経",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "涅槃寂静である",
         "涅槃寂静を得る",
@@ -4255,6 +4279,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E7%82%BA%E6%94%BF%E7%AC%AC%E4%BA%8C",
       "source_work": "論語",
       "source_work_key": "mnemosyne.ja.work.論語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "温故知新",
         "温故知新する",
@@ -4295,6 +4320,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E4%B8%96%E8%AA%AA%E6%96%B0%E8%AA%9E/%E5%8D%B7%E4%BA%8C",
       "source_work": "世説新語",
       "source_work_key": "mnemosyne.ja.work.世説新語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "漱石枕流",
         "漱石枕流の故事",
@@ -4362,6 +4388,7 @@
       "source_url": "https://ja.wikisource.org/wiki/平家物語/巻第一",
       "source_work": "諸行無常（しょぎょうむじょう） in 『平家物語』",
       "source_work_key": "mnemosyne.ja.work.諸行無常_しょぎょうむじょう_in_平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "無常",
         "むじょう",
@@ -4388,6 +4415,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B9%E5%BB%A0%E8%A8%98",
       "source_work": "方丈記",
       "source_work_key": "mnemosyne.ja.work.方丈記",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "無常迅速の世",
         "無常迅速なり"
@@ -4425,6 +4453,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_terms_無我観",
       "id": "ja_classical_or_scriptural_allusion_無我観_4939ef70",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4438,6 +4467,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "無我観を持つ",
         "無我観を示す",
@@ -4457,6 +4487,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.mahayana_sutras_無明",
       "id": "ja_classical_or_scriptural_allusion_無明_7f3d2b9d",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4470,6 +4501,7 @@
       "source_url": "https://ja.wikisource.org/wiki/般若心経",
       "source_work": "般若心経 (Heart Sutra)",
       "source_work_key": "mnemosyne.ja.work.般若心経_heart_sutra",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "無明",
         "無明を断つ",
@@ -4552,6 +4584,7 @@
       "source_url": "https://ctext.org/dao-de-jing",
       "source_work": "道德経 (Daodejing)",
       "source_work_key": "mnemosyne.ja.work.道德経_daodejing",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "無為自然",
         "無為自然の",
@@ -4619,6 +4652,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_scriptures_phrases_無相の悟り",
       "id": "ja_classical_or_scriptural_allusion_無相の悟り_893b701b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4633,6 +4667,7 @@
       "source_url": "https://www.bdk.or.jp/document/digitaldl/dBET_T08n0229.pdf",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "無相の悟り",
         "無相の悟りを得る",
@@ -4700,6 +4735,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_metaphors_煩悩の炎を消す",
       "id": "ja_classical_or_scriptural_allusion_煩悩の炎を消す_72c187ba",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4713,6 +4749,7 @@
       "source_url": "https://www.tipitaka.org/",
       "source_work": "般若心経 (Heart Sutra)",
       "source_work_key": "mnemosyne.ja.work.般若心経_heart_sutra",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "煩悩の炎を消す",
         "煩悩の炎を消える",
@@ -4733,6 +4770,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ja.explanation.zen_terms_煩悩即菩提",
       "id": "ja_classical_or_scriptural_allusion_煩悩即菩提_147dc1b6",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4746,6 +4784,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "煩悩即菩提",
         "煩悩が菩提となる",
@@ -4788,6 +4827,7 @@
       "source_url": "https://ja.wikisource.org/wiki/涅槃経",
       "source_work": "涅槃経",
       "source_work_key": "mnemosyne.ja.work.涅槃経",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "生死流転",
         "生死流転の世界",
@@ -4898,6 +4938,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E7%99%BD%E6%B0%8F%E6%96%87%E9%9B%86",
       "source_work": "白氏文集",
       "source_work_key": "mnemosyne.ja.work.白氏文集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "白氏文集",
         "『白氏文集』",
@@ -5022,6 +5063,7 @@
       "source_url": "https://ja.wikisource.org/wiki/平家物語/巻第一",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "盛者必衰の理",
         "盛者必衰",
@@ -5240,6 +5282,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000148/card50000.html",
       "source_work": "平家物語 (Heike Monogatari)",
       "source_work_key": "mnemosyne.ja.work.平家物語_heike_monogatari",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "祇園精舎の鐘の声",
         "ぎおんしょうじゃのかねのこえ",
@@ -5304,6 +5347,7 @@
       "source_url": "https://www.tipitaka.org/romn/cscd/06HrS.1-14.html",
       "source_work": "般若心経 (Heart Sutra)",
       "source_work_key": "mnemosyne.ja.work.般若心経_heart_sutra",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "空即是色",
         "空即是色の",
@@ -5316,6 +5360,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.hannya_shingyo_phrase_空即是色_を説く",
       "id": "ja_classical_or_scriptural_allusion_空即是色_を説く_eefbd62a",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5330,6 +5375,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "空即是色だ",
         "空即是色ではない",
@@ -5346,6 +5392,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_terms_空寂",
       "id": "ja_classical_or_scriptural_allusion_空寂_da80a9a6",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5359,6 +5406,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "空寂",
         "空寂とした",
@@ -5450,6 +5498,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/501_19564.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "空蝉",
         "うつせみ",
@@ -5557,6 +5606,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/437_19820.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "紫のゆかり",
         "紫の縁",
@@ -5601,6 +5651,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_doctrine_jp_縁起の法",
       "id": "ja_classical_or_scriptural_allusion_縁起の法_c35dafa5",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5614,6 +5665,7 @@
       "source_license": "not_required",
       "source_work": "Various Mahayana sutras (e.g., 般若心経, 法華経)",
       "source_work_key": "mnemosyne.ja.work.various_mahayana_sutras_e_g_般若心経_法華経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "縁起の法",
         "縁起の理",
@@ -5841,6 +5893,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "般若心経を読む",
         "般若心経で祈る",
@@ -5855,6 +5908,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.heart_sutra_phrases_般若心経の_色即是空",
       "id": "ja_classical_or_scriptural_allusion_般若心経の_色即是空_62d59cf0",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5869,6 +5923,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "色即是空である",
         "色即是空で",
@@ -5887,6 +5942,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.prajnaparamita_heart_sutra_phrases_般若心経の_色即是空_を唱える",
       "id": "ja_classical_or_scriptural_allusion_般若心経の_色即是空_を唱える_792d5d86",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5900,6 +5956,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "色即是空（しきそくぜくう）",
         "色即是空と言う",
@@ -5913,6 +5970,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_scriptures_般若心経の_色即是空_空即是色",
       "id": "ja_classical_or_scriptural_allusion_般若心経の_色即是空_空即是色_2dd2c5a8",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5927,6 +5985,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/般若心経",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "色即是空、空即是色",
         "色空不二"
@@ -5938,6 +5997,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_scriptures_japanese_般若心経を唱える",
       "id": "ja_classical_or_scriptural_allusion_般若心経を唱える_eb88afe8",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5952,6 +6012,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%90%8C%E5%BF%83%E7%B6%93",
       "source_work": "般若心経 (Heart Sutra)",
       "source_work_key": "mnemosyne.ja.work.般若心経_heart_sutra",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "般若心経を唱える",
         "般若心経を唱えること",
@@ -6107,6 +6168,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B5%8C",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "色即是空",
         "しきそくぜくう",
@@ -6119,6 +6181,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.hannya_shingyo_phrase_色即是空_と悟る",
       "id": "ja_classical_or_scriptural_allusion_色即是空_と悟る_82c79927",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6133,6 +6196,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "色即是空だ",
         "色即是空と悟る",
@@ -6271,6 +6335,7 @@
       "source_url": "https://ja.wikisource.org/wiki/落窪物語",
       "source_work": "落窪物語",
       "source_work_key": "mnemosyne.ja.work.落窪物語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "落窪物語",
         "Ochikubo Monogatari",
@@ -6525,6 +6590,7 @@
       "source_url": "https://ja.wikisource.org/wiki/阿含経典",
       "source_work": "阿含経典 (Āgamas)",
       "source_work_key": "mnemosyne.ja.work.阿含経典_āgamas",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "諸法無我",
         "諸法無我の",
@@ -6551,6 +6617,7 @@
       "source_url": "https://www.tipitaka.org/romn/cscd/05Dhp.1-20.html",
       "source_work": "法句経 (Dhammapada)",
       "source_work_key": "mnemosyne.ja.work.法句経_dhammapada",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "諸行無常の",
         "諸行は無常なり",
@@ -6576,6 +6643,7 @@
         "zh": "谚语意为“把珍珠丢在猪前”，指把有价值的东西给无法欣赏的人。源自圣经（马太福音7:6），在日语中广泛使用。"
       },
       "id": "ja_classical_or_scriptural_allusion_豚に真珠_67d9652b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical allusion with correct origin and meaning.",
@@ -6590,6 +6658,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E3%83%9E%E3%82%BF%E3%82%A4%E3%81%AB%E3%82%88%E3%82%8B%E7%A6%8F%E9%9F%B3%E6%9B%B8#7:6",
       "source_work": "新約聖書 (New Testament)",
       "source_work_key": "mnemosyne.ja.work.新約聖書_new_testament",
+      "subcategory": "biblical",
       "surface_patterns": [
         "豚に真珠",
         "豚に真珠を与える",
@@ -6618,6 +6687,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%BC%AA%E5%BB%BB%E8%BB%A2%E7%94%9F",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "輪廻転生する",
         "輪廻転生を繰り返す",
@@ -6659,6 +6729,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.karma_samsara_teaching_輪廻転生の業_を説く",
       "id": "ja_classical_or_scriptural_allusion_輪廻転生の業_を説く_bc762ee7",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6672,6 +6743,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B5%8C",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "輪廻転生の業を説く",
         "輪廻転生の業を説いて",
@@ -6815,6 +6887,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "金剛不滅",
         "金剛不壊",
@@ -7253,6 +7326,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/515_24306.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "須磨の浦",
         "Suma no ura",
@@ -8919,6 +8993,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%80%E5%88%BB%E5%8D%83%E9%87%91",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "一刻千金"
       ]
@@ -8942,6 +9017,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%80%E5%AD%97%E4%B8%80%E5%8F%A5",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "一字一句"
       ]
@@ -8965,6 +9041,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%80%E5%AD%97%E5%8D%83%E9%87%91",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "一字千金"
       ]
@@ -9117,6 +9194,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E4%B8%80%E6%9C%9F%E4%B8%80%E4%BC%9A",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "一期一会",
         "一期一会の",
@@ -9191,6 +9269,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%80%E6%B1%81%E4%B8%80%E8%8F%9C",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "一汁一菜"
       ]
@@ -9214,6 +9293,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%80%E6%B1%81%E4%B8%89%E8%8F%9C",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "一汁三菜"
       ]
@@ -9352,6 +9432,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%80%E7%B6%B2%E6%89%93%E5%B0%BD",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "一網打尽"
       ]
@@ -9375,6 +9456,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%80%E8%A1%A3%E5%B8%AF%E6%B0%B4",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "一衣帯水"
       ]
@@ -9474,6 +9556,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%83%E5%8D%81%E4%BA%94%E6%97%A5",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "七十五日"
       ]
@@ -9562,6 +9645,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%83%E8%BB%A2%E5%85%AB%E8%B5%B7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "七転八起"
       ]
@@ -9585,6 +9669,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%87%E5%AF%BF%E7%84%A1%E7%96%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "万寿無疆"
       ]
@@ -9752,6 +9837,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%89%E6%97%A5%E5%9D%8A%E4%B8%BB",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "三日坊主"
       ]
@@ -9942,6 +10028,7 @@
       "source_url": "https://ja.wikisource.org/wiki/著者:与謝蕪村",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "与謝蕪村",
         "Yosa Buson",
@@ -10064,6 +10151,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B9%B3%E6%AF%8D%E6%97%A5%E5%82%98",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "乳母日傘"
       ]
@@ -10140,6 +10228,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%BA%8C%E4%BA%BA%E4%B8%89%E8%84%9A",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "二人三脚"
       ]
@@ -10368,6 +10457,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E4%BA%95%E5%8E%9F%E8%A5%BF%E9%B6%B4",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "井原西鶴",
         "いはらさいかく",
@@ -10955,6 +11045,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "以心伝心",
         "以心伝心する",
@@ -10981,6 +11072,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%BC%8A%E5%B0%B9%E8%B2%A0%E9%BC%8E",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "伊尹負鼎"
       ]
@@ -11056,6 +11148,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%BC%9A%E8%80%85%E5%AE%9A%E9%9B%A2",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "会者定離"
       ]
@@ -11171,6 +11264,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%BD%B3%E4%BA%BA%E8%96%84%E5%91%BD",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "佳人薄命"
       ]
@@ -11344,6 +11438,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%84%AA%E5%85%88%E9%A0%86%E4%BD%8D",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "優先順位"
       ]
@@ -11914,6 +12009,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%88%A9%E4%BC%91%E4%B8%83%E5%89%87",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "利休七則",
         "Rikyū Shichisoku",
@@ -11940,6 +12036,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%89%8D%E4%BB%A3%E6%9C%AA%E8%81%9E",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "前代未聞"
       ]
@@ -12130,6 +12227,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%8D%81%E4%BA%BA%E5%8D%81%E8%89%B2",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "十人十色"
       ]
@@ -12266,6 +12364,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%8D%83%E5%A4%89%E4%B8%87%E5%8C%96",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "千変万化"
       ]
@@ -12289,6 +12388,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%8D%83%E7%B7%A8%E4%B8%80%E5%BE%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "千編一律"
       ]
@@ -12488,6 +12588,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%8D%98%E5%88%80%E7%9B%B4%E5%85%A5",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "単刀直入"
       ]
@@ -12718,6 +12819,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%8F%AF%E6%83%9C%E8%BA%AB%E5%91%BD",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "可惜身命"
       ]
@@ -12814,6 +12916,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%90%8C%E5%BA%8A%E7%95%B0%E5%A4%A2",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "同床異夢"
       ]
@@ -13002,6 +13105,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%90%AE%E7%99%B0%E8%88%90%E7%97%94",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "吮癰舐痔"
       ]
@@ -13117,6 +13221,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%93%80%E5%93%80%E7%88%B6%E6%AF%8D",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "哀哀父母"
       ]
@@ -13140,6 +13245,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%93%80%E6%AF%80%E9%AA%A8%E7%AB%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "哀毀骨立"
       ]
@@ -13163,6 +13269,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%93%80%E7%B3%B8%E8%B1%AA%E7%AB%B9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "哀糸豪竹"
       ]
@@ -13186,6 +13293,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%93%80%E9%B4%BB%E9%81%8D%E9%87%8E",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "哀鴻遍野"
       ]
@@ -13462,6 +13570,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%9B%A0%E5%B0%8F%E5%A4%B1%E5%A4%A7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "因小失大"
       ]
@@ -13594,6 +13703,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/在原業平",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "在原業平",
         "業平",
@@ -13800,6 +13910,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%9D%82%E6%9C%AC%E9%BE%8D%E9%A6%AC",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "坂本龍馬",
         "龍馬",
@@ -13959,6 +14070,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%B9%B3%E5%AE%B6%E7%89%A9%E8%AA%9E/%E5%8D%83%E6%9C%AC%E6%A9%8B%E3%81%AE%E5%8A%87%E5%A0%B4",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "壇ノ浦",
         "壇の浦",
@@ -14090,6 +14202,7 @@
       "source_url": "https://www.aozora.gr.jp/index_pages/person148.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "夏目漱石",
         "Natsume Sōseki",
@@ -14390,6 +14503,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%A4%A7%E5%99%A8%E6%99%A9%E6%88%90",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "大器晩成"
       ]
@@ -14593,6 +14707,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%A4%A9%E5%A4%89%E5%9C%B0%E7%95%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "天変地異"
       ]
@@ -14805,6 +14920,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%A4%A9%E8%A1%A3%E7%84%A1%E7%B8%AB",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "天衣無縫"
       ]
@@ -15162,6 +15278,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%A5%BD%E4%BA%8B%E5%A4%9A%E9%AD%94",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "好事多魔"
       ]
@@ -15289,6 +15406,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%AE%89%E5%AE%85%E6%AD%A3%E8%B7%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "安宅正路"
       ]
@@ -15312,6 +15430,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%AE%89%E5%B1%85%E5%8D%B1%E6%80%9D",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "安居危思"
       ]
@@ -15421,6 +15540,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%AE%89%E8%BB%8A%E8%92%B2%E8%BC%AA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "安車蒲輪"
       ]
@@ -15444,6 +15564,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%AE%89%E9%96%91%E6%81%AC%E9%9D%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "安閑恬静"
       ]
@@ -15952,6 +16073,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%B2%A1%E7%9B%AE%E5%85%AB%E7%9B%AE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "岡目八目"
       ]
@@ -16043,6 +16165,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "川端康成",
         "Kawabata Yasunari",
@@ -16069,6 +16192,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%B7%A6%E9%AE%83%E5%8F%B3%E9%B0%88",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "左鮃右鰈"
       ]
@@ -16190,6 +16314,7 @@
       "source_url": "https://ja.wikisource.org/wiki/平家物語/巻第九#敦盛最期",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "平敦盛の笛",
         "敦盛の笛",
@@ -16752,6 +16877,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%BC%B1%E8%82%89%E5%BC%B7%E9%A3%9F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "弱肉強食"
       ]
@@ -17860,6 +17986,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%82%AA%E4%BA%8B%E5%8D%83%E9%87%8C",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "悪事千里"
       ]
@@ -17906,6 +18033,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%82%AA%E4%BA%BA%E6%AD%A3%E6%A9%9F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "悪人正機"
       ]
@@ -17929,6 +18057,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%82%AA%E6%9C%A8%E7%9B%97%E6%B3%89",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "悪木盗泉"
       ]
@@ -18090,6 +18219,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%84%9B%E5%88%A5%E9%9B%A2%E8%8B%A6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "愛別離苦"
       ]
@@ -18113,6 +18243,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%84%9B%E5%A4%9A%E6%86%8E%E7%94%9F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "愛多憎生"
       ]
@@ -18136,6 +18267,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%84%9B%E6%A5%8A%E8%91%89%E5%85%90",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "愛楊葉児"
       ]
@@ -18715,6 +18847,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%89%8B%E5%89%8D%E5%91%B3%E5%99%8C",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "手前味噌"
       ]
@@ -19032,6 +19165,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%8C%89%E5%85%B5%E4%B8%8D%E5%8B%95",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "按兵不動"
       ]
@@ -19055,6 +19189,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%8C%89%E7%94%B2%E4%BC%91%E5%85%B5",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "按甲休兵"
       ]
@@ -19289,6 +19424,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%8F%A1%E9%AB%AA%E5%90%90%E5%93%BA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "握髪吐哺"
       ]
@@ -19404,6 +19540,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%95%AC%E5%A4%A9%E6%84%9B%E4%BA%BA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "敬天愛人"
       ]
@@ -19714,6 +19851,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%96%87%E6%AD%A6%E4%B8%A1%E9%81%93",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "文武両道"
       ]
@@ -19737,6 +19875,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%96%87%E8%B3%AA%E5%BD%AC%E5%BD%AC",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "文質彬彬"
       ]
@@ -19800,6 +19939,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%96%AD%E7%AB%A0%E5%8F%96%E7%BE%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "断章取義"
       ]
@@ -20554,6 +20694,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%99%8F%E5%AC%B0%E7%8B%90%E8%A3%98",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "晏嬰狐裘"
       ]
@@ -20577,6 +20718,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%99%8F%E5%AD%90%E9%AB%98%E7%AF%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "晏子高節"
       ]
@@ -20623,6 +20765,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%9A%97%E7%AE%AD%E5%82%B7%E4%BA%BA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "暗箭傷人"
       ]
@@ -20646,6 +20789,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%9A%97%E9%9B%B2%E4%BD%8E%E8%BF%B7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "暗雲低迷"
       ]
@@ -20669,6 +20813,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%9A%97%E9%A6%99%E7%96%8E%E5%BD%B1",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "暗香疎影"
       ]
@@ -20692,6 +20837,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%9A%97%E9%A6%99%E8%93%8A%E8%91%A7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "暗香蓊葧"
       ]
@@ -20738,6 +20884,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%9B%B2%E5%AD%A6%E9%98%BF%E4%B8%96",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "曲学阿世"
       ]
@@ -20807,6 +20954,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%9C%89%E5%82%99%E7%84%A1%E6%82%A3",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "有備無患"
       ]
@@ -20893,6 +21041,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Y%C5%ABsoku_kojitsu",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "有職故実",
         "ゆうそくこじつ",
@@ -21037,6 +21186,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%9C%AA%E9%9B%A8%E7%B6%A2%E7%B9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "未雨綢繆"
       ]
@@ -21074,6 +21224,7 @@
       "source_url": "https://ja.wikisource.org/wiki/著者:本居宣長",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "本居宣長",
         "宣長",
@@ -21235,6 +21386,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%9C%BD%E6%9C%A8%E7%B3%9E%E7%89%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "朽木糞牆"
       ]
@@ -21398,6 +21550,7 @@
       "source_url": "https://ja.wikisource.org/wiki/著者:松尾芭蕉",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "松尾芭蕉",
         "Bashō",
@@ -21750,6 +21903,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%A1%91%E7%94%B0%E6%BB%84%E6%B5%B7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "桑田滄海"
       ]
@@ -21773,6 +21927,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%A1%91%E7%94%B0%E7%A2%A7%E6%B5%B7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "桑田碧海"
       ]
@@ -21921,6 +22076,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%A1%9C%E6%A2%85%E6%A1%83%E6%9D%8E",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "桜梅桃李"
       ]
@@ -22027,6 +22183,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%A3%AE%E7%BE%85%E4%B8%87%E8%B1%A1",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "森羅万象"
       ]
@@ -22181,6 +22338,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%AB%9B%E9%A2%A8%E6%B2%90%E9%9B%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "櫛風沐雨"
       ]
@@ -23248,6 +23406,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%AD%BB%E6%B4%BB%E5%95%8F%E9%A1%8C",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "死活問題"
       ]
@@ -23340,6 +23499,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%AF%9B%E9%81%82%E8%87%AA%E8%96%A6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "毛遂自薦"
       ]
@@ -23959,6 +24119,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%B2%88%E9%AD%9A%E8%90%BD%E9%9B%81",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "沈魚落雁"
       ]
@@ -24074,6 +24235,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%B2%B9%E6%96%AD%E5%A4%A7%E6%95%B5",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "油断大敵"
       ]
@@ -24530,6 +24692,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%B5%85%E7%80%AC%E4%BB%87%E6%B3%A2",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "浅瀬仇波"
       ]
@@ -25088,6 +25251,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E%E7%B5%B5%E5%B7%BB",
       "source_work": "源氏物語絵巻",
       "source_work_key": "mnemosyne.ja.work.源氏物語絵巻",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鞍馬天狗が現れる",
         "鞍馬天狗が現れて",
@@ -25116,6 +25280,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E%E7%B5%B5%E5%B7%BB",
       "source_work": "源氏物語絵巻",
       "source_work_key": "mnemosyne.ja.work.源氏物語絵巻",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鞍馬天狗の",
         "鞍馬天狗が",
@@ -25224,6 +25389,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%BB%84%E6%B5%B7%E6%A1%91%E7%94%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "滄海桑田"
       ]
@@ -25293,6 +25459,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%BC%81%E5%A4%AB%E4%B9%8B%E5%88%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "漁夫之利"
       ]
@@ -25523,6 +25690,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%84%9A%E7%90%B4%E7%85%AE%E9%B6%B4",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "焚琴煮鶴"
       ]
@@ -25573,6 +25741,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%84%A1%E6%88%91%E5%A4%A2%E4%B8%AD",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "無我夢中"
       ]
@@ -26418,6 +26587,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "猪突猛進",
         "猪突猛進する",
@@ -26810,6 +26980,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%90%B4%E6%A3%8B%E6%9B%B8%E7%94%BB",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "琴棋書画"
       ]
@@ -26974,6 +27145,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%94%BB%E7%AB%9C%E7%82%B9%E7%9D%9B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "画竜点睛"
       ]
@@ -27026,6 +27198,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%96%91%E5%BF%83%E6%9A%97%E9%AC%BC",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "疑心暗鬼"
       ]
@@ -27233,6 +27406,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%99%BD%E6%B2%B3%E5%A4%9C%E8%88%B9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "白河夜船"
       ]
@@ -27767,6 +27941,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%9B%B8%E7%A2%81%E4%BA%95%E7%9B%AE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "相碁井目"
       ]
@@ -28141,6 +28316,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%A0%B4%E9%82%AA%E9%A1%95%E6%AD%A3",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "破邪顕正"
       ]
@@ -28940,6 +29116,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%BE%8E%E4%BA%BA%E8%96%84%E5%91%BD",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "美人薄命"
       ]
@@ -29824,6 +30001,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%83%B8%E5%85%88%E4%B8%89%E5%AF%B8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "胸先三寸"
       ]
@@ -30780,6 +30958,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%83%BD%E9%B7%B9%E9%9A%A0%E7%88%AA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "能鷹隠爪"
       ]
@@ -31523,6 +31702,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%87%A5%E8%96%AA%E5%98%97%E8%83%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "臥薪嘗胆"
       ]
@@ -31546,6 +31726,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%87%A8%E6%B8%87%E6%8E%98%E4%BA%95",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "臨渇掘井"
       ]
@@ -31569,6 +31750,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%87%AA%E5%88%86%E6%9C%AC%E4%BD%8D",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "自分本位"
       ]
@@ -31592,6 +31774,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%87%AA%E6%A5%AD%E8%87%AA%E5%BE%97",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "自業自得"
       ]
@@ -31715,6 +31898,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.mahayana_sutra_phrases_般若心経_を唱える",
       "id": "ja_cultural_reference_般若心経_を唱える_508f56e5",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -31729,6 +31913,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "般若心経",
       "source_work_key": "mnemosyne.ja.work.般若心経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "般若心経を唱えて",
         "般若心経を唱えた"
@@ -32683,6 +32868,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%9B%99%E9%B3%B4%E8%9F%AC%E5%99%AA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "蛙鳴蟬噪"
       ]
@@ -32871,6 +33057,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/行雲流水",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "行雲流水",
         "行雲流水の",
@@ -33990,6 +34177,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/赤穂事件",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "赤穂浪士",
         "四十七士",
@@ -34077,6 +34265,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%B6%81%E7%81%AB%E6%89%93%E5%8A%AB",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "趁火打劫"
       ]
@@ -34481,6 +34670,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%BB%BD%E8%A3%98%E8%82%A5%E9%A6%AC",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "軽裘肥馬"
       ]
@@ -34757,6 +34947,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%81%8F%E6%82%AA%E6%8F%9A%E5%96%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "遏悪揚善"
       ]
@@ -34888,6 +35079,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%84%AD%E8%A1%9B%E6%A1%91%E9%96%93",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "鄭衛桑間"
       ]
@@ -34980,6 +35172,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%87%91%E5%9F%8E%E6%B9%AF%E6%B1%A0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "金城湯池"
       ]
@@ -35143,6 +35336,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%87%91%E7%A7%91%E7%8E%89%E6%9D%A1",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "金科玉条"
       ]
@@ -35350,6 +35544,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "鎌倉幕府",
         "Kamakura bakufu",
@@ -35376,6 +35571,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%8E%A7%E8%A2%96%E4%B8%80%E8%A7%A6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "鎧袖一触"
       ]
@@ -35422,6 +35618,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%8F%A1%E8%8A%B1%E6%B0%B4%E6%9C%88",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "鏡花水月"
       ]
@@ -35914,6 +36111,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%98%BF%E7%88%BA%E4%B8%8B%E9%A0%B7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "阿爺下頷"
       ]
@@ -35937,6 +36135,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%98%BF%E8%BD%86%E8%BD%86%E5%9C%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "阿轆轆地"
       ]
@@ -37266,6 +37465,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%A2%A8%E5%A3%B0%E9%B6%B4%E5%94%B3",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "風声鶴唳"
       ]
@@ -37303,6 +37503,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Art_of_War_(Giles)",
       "source_work": "孫子 (The Art of War)",
       "source_work_key": "mnemosyne.ja.work.孫子_the_art_of_war",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "風林火山",
         "風林火山の旗"
@@ -38061,6 +38262,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%B0%A5%E5%AF%A1%E5%AD%A4%E7%8B%AC",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "鰥寡孤独"
       ]
@@ -38191,6 +38393,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%B4%89%E5%B7%A3%E7%94%9F%E9%B3%B3",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "鴉巣生鳳"
       ]
@@ -38214,6 +38417,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%B4%89%E9%9B%80%E7%84%A1%E5%A3%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "鴉雀無声"
       ]
@@ -38329,6 +38533,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%B6%8F%E9%B3%B4%E7%8B%97%E7%9B%97",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "鶏鳴狗盗"
       ]
@@ -38505,6 +38710,7 @@
       "reference_type": "cultural_reference",
       "register": "common",
       "short_explanation": "A folk tale of time displacement and return.",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "浦島太郎"
       ]
@@ -38956,6 +39162,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/card457.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "命をかけても守り給へ",
         "命をかけても守り給ふ",
@@ -39819,6 +40026,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/52_1548.html",
       "source_work": "源氏物語 (The Tale of Genji)",
       "source_work_key": "mnemosyne.ja.work.源氏物語_the_tale_of_genji",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "譬へ",
         "譬へる",
@@ -40426,6 +40634,7 @@
       "source_license": "public_domain",
       "source_work": "Genji Monogatari (源氏物語) and Norinaga's commentaries",
       "source_work_key": "mnemosyne.ja.work.genji_monogatari_源氏物語_and_norinaga_s_commentaries",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "もののあはれ",
         "物の哀れ",
@@ -40849,6 +41058,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000081/files/437_19841.html",
       "source_work": "一寸法師",
       "source_work_key": "mnemosyne.ja.work.一寸法師",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "一寸法師",
         "いっすんぼうし",
@@ -41930,6 +42140,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000035/files/301_14912.html",
       "source_work": "人間失格",
       "source_work_key": "mnemosyne.ja.work.人間失格",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "人間失格"
       ]
@@ -42212,6 +42423,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000024/files/5_581.html",
       "source_work": "伊勢物語",
       "source_work_key": "mnemosyne.ja.work.伊勢物語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "伊勢物語",
         "いせものがたり",
@@ -42553,6 +42765,7 @@
       "source_url": "https://ja.wikisource.org/wiki/保元物語",
       "source_work": "保元物語",
       "source_work_key": "mnemosyne.ja.work.保元物語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "保元物語",
         "ほうげんものがたり",
@@ -42670,6 +42883,7 @@
       "source_url": "https://ja.wikisource.org/wiki/源氏物語",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "光源氏",
         "ひかるげんじ",
@@ -42747,6 +42961,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%BE%92%E7%84%B6%E8%8D%89",
       "source_work": "徒然草",
       "source_work_key": "mnemosyne.ja.work.徒然草",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "兼好法師",
         "吉田兼好",
@@ -43272,6 +43487,7 @@
       "source_url": "https://ja.wikisource.org/wiki/東海道四谷怪談",
       "source_work": "東海道四谷怪談",
       "source_work_key": "mnemosyne.ja.work.東海道四谷怪談",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "四谷怪談",
         "『四谷怪談』",
@@ -43922,6 +44138,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E/%E5%8D%B7%E4%B9%9D",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "夕顔の巻",
         "夕顔",
@@ -44338,6 +44555,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000057/files/156_15111.html",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "天狗",
         "天狗の面",
@@ -45092,6 +45310,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/515_24306.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "宇治十帖",
         "Uji jūjō",
@@ -45315,6 +45534,7 @@
       "source_url": "https://www.aozora.gr.jp/index_pages/person81.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "宮沢賢治",
         "Kenji Miyazawa",
@@ -45440,6 +45660,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "小野小町",
         "小町",
@@ -45583,6 +45804,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000129/files/673_14544.html",
       "source_work": "山椒大夫",
       "source_work_key": "mnemosyne.ja.work.山椒大夫",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "山椒大夫",
         "さんしょうだゆう",
@@ -45887,6 +46109,7 @@
       "source_url": "https://ja.wikisource.org/wiki/平家物語",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "平家物語",
         "平家物語（へいけものがたり）",
@@ -45912,6 +46135,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%B9%B3%E5%AE%B6%E7%89%A9%E8%AA%9E",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "語り継ぐ",
         "語り継いで",
@@ -45954,6 +46178,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000057/files/57_14544.html",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "那須与一",
         "与一",
@@ -46495,6 +46720,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%AB%96%E8%AA%9E/%E7%82%BA%E6%94%BF%E7%AC%AC%E4%BA%8C",
       "source_work": "論語",
       "source_work_key": "mnemosyne.ja.work.論語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "志学の年",
         "志学の年になる",
@@ -47339,6 +47565,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/135_15111.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "我が身一つは草の葉の露なり",
         "我が身一つは草の葉の露であれど",
@@ -47640,6 +47867,7 @@
       "source_url": "https://ja.wikisource.org/wiki/平家物語/巻第九#敦盛最期",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "敦盛最期",
         "あつもりさいご",
@@ -48147,6 +48375,7 @@
       "source_url": "https://en.wikisource.org/wiki/Shin_Kokin_Wakashū",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "新古今集",
         "しんこきんしゅう",
@@ -48314,6 +48543,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%B9%B3%E5%AE%B6%E7%89%A9%E8%AA%9E/%E5%B7%BB%E7%AC%AC%E4%B8%80",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "春の夜の夢のごとし",
         "春の夜の夢",
@@ -48698,6 +48928,7 @@
       "source_url": "https://ja.wikisource.org/wiki/更級日記",
       "source_work": "更級日記",
       "source_work_key": "mnemosyne.ja.work.更級日記",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "更級日記",
         "Sarashina Nikki",
@@ -48736,6 +48967,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Soga_Monogatari",
       "source_work": "曽我物語",
       "source_work_key": "mnemosyne.ja.work.曽我物語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "曽我物語",
         "そがものがたり",
@@ -49148,6 +49380,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "杖を突いて看る",
         "杖を突いて見る",
@@ -49522,6 +49755,7 @@
       "source_url": "https://ja.wikisource.org/wiki/源氏物語/桐壺",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "桐壺",
         "桐壺の更衣",
@@ -49960,6 +50194,7 @@
       "source_url": "https://ja.wikisource.org/wiki/著者:正岡子規",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "正岡子規",
         "Masaoka Shiki",
@@ -50610,6 +50845,7 @@
       "source_license": "public_domain",
       "source_work": "浄瑠璃物語 (Jōruri Monogatari)",
       "source_work_key": "mnemosyne.ja.work.浄瑠璃物語_jōruri_monogatari",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "浄瑠璃姫",
         "浄瑠璃",
@@ -50729,6 +50965,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BA%8B%E8%A8%98",
       "source_work": "古事記",
       "source_work_key": "mnemosyne.ja.work.古事記",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "海幸山幸",
         "海幸山幸の",
@@ -50818,6 +51055,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/card457.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "涙の滝に身を投げんとする心",
         "涙の滝に身を投げんとす",
@@ -50859,6 +51097,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%9E%95%E8%8D%89%E5%AD%90",
       "source_work": "枕草子",
       "source_work_key": "mnemosyne.ja.work.枕草子",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "清少納言",
         "Sei Shōnagon",
@@ -50898,6 +51137,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/52_14550.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "源氏物語の明石",
         "明石の巻",
@@ -50939,6 +51179,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/52_14543.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "朝顔",
         "朝顔の巻",
@@ -50979,6 +51220,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/52_14542.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "源氏物語の若紫",
         "若紫の巻",
@@ -51197,6 +51439,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E7%89%9B%E8%8B%A5%E4%B8%B8",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "牛若丸が",
         "牛若丸だった",
@@ -51225,6 +51468,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000057/files/156_15097.html",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "牛若丸",
         "弁慶が",
@@ -51266,6 +51510,7 @@
       "source_url": "https://ja.wikisource.org/wiki/牡丹灯籠",
       "source_work": "牡丹灯籠",
       "source_work_key": "mnemosyne.ja.work.牡丹灯籠",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "牡丹灯籠",
         "ぼたん灯籠",
@@ -51536,6 +51781,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E7%8C%BF%E8%9F%B9%E5%90%88%E6%88%A6",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "猿蟹合戦",
         "猿蟹合戦の",
@@ -51633,6 +51879,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000214/files/1668_28410.html",
       "source_work": "田舎教師",
       "source_work_key": "mnemosyne.ja.work.田舎教師",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "田舎教師",
         "いなかきょうし"
@@ -51736,6 +51983,7 @@
       "source_url": "https://en.wikisource.org/wiki/Hyakunin_Isshu",
       "source_work": "百人一首",
       "source_work_key": "mnemosyne.ja.work.百人一首",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "百人一首",
         "ひゃくにんいっしゅ",
@@ -51912,6 +52160,7 @@
       "source_url": "https://ja.wikisource.org/wiki/著者:石川啄木",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "石川啄木",
         "Ishikawa Takuboku",
@@ -52380,6 +52629,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000019/files/5_581.html",
       "source_work": "竹取物語",
       "source_work_key": "mnemosyne.ja.work.竹取物語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "竹取物語",
         "たけとりものがたり",
@@ -52555,6 +52805,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "紫の上",
         "むらさきのうえ",
@@ -52593,6 +52844,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "紫式部",
         "Murasaki Shikibu",
@@ -52907,6 +53159,7 @@
       "source_url": "https://ja.wikisource.org/wiki/平家物語",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "義経",
         "源義経",
@@ -53904,6 +54157,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E/%E5%8D%B71",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "花の色は移りにけりないたづらに わが身世にふるながめせしまに"
       ]
@@ -54185,6 +54439,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000057/files/156_15097.html",
       "source_work": "平家物語",
       "source_work_key": "mnemosyne.ja.work.平家物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "葛の葉",
         "葛の葉が",
@@ -54230,6 +54485,7 @@
       "source_url": "https://ja.wikisource.org/wiki/源氏物語/葵",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "葵の上",
         "葵上",
@@ -54362,6 +54618,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000148/files/779_14944.html",
       "source_work": "虞美人草",
       "source_work_key": "mnemosyne.ja.work.虞美人草",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "虞美人草",
         "Gubijinsō",
@@ -54439,6 +54696,7 @@
       "source_url": "https://ja.wikisource.org/wiki/蜻蛉日記",
       "source_work": "蜻蛉日記",
       "source_work_key": "mnemosyne.ja.work.蜻蛉日記",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "蜻蛉日記",
         "かげろう日記",
@@ -54813,6 +55071,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Tale_of_the_Heike",
       "source_work": "平家物語 (Heike Monogatari)",
       "source_work_key": "mnemosyne.ja.work.平家物語_heike_monogatari",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "諸行無常の響きあり",
         "諸行無常の響き",
@@ -55021,6 +55280,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "軍記物語",
         "軍記",
@@ -55483,6 +55743,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000081/files/437_19820.html",
       "source_work": "金色夜叉",
       "source_work_key": "mnemosyne.ja.work.金色夜叉",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "金色夜叉",
         "こんじきやしゃ",
@@ -55878,6 +56139,7 @@
       "source_url": "https://en.wikisource.org/wiki/Ugetsu_Monogatari",
       "source_work": "雨月物語",
       "source_work_key": "mnemosyne.ja.work.雨月物語",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "雨月物語",
         "うげつものがたり",
@@ -56019,6 +56281,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E/%E5%A4%95%E9%9C%A7",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "雲の上は同じ空なる旅ながら",
         "雲の上は同じ空なる旅なり",
@@ -56129,6 +56392,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E/%E5%8D%B7%E5%8D%81%E4%BA%8C",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "須磨の巻",
         "須磨",
@@ -56168,6 +56432,7 @@
       "source_url": "https://ja.wikisource.org/wiki/源氏物語/須磨",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "須磨の秋",
         "須磨の秋の",
@@ -56357,6 +56622,7 @@
       "source_url": "https://ja.wikisource.org/wiki/風姿花伝",
       "source_work": "風姿花伝",
       "source_work_key": "mnemosyne.ja.work.風姿花伝",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "風姿花伝",
         "風姿花伝（ふうしかでん）",
@@ -56616,6 +56882,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000052/files/1567_14913.html",
       "source_work": "源氏物語",
       "source_work_key": "mnemosyne.ja.work.源氏物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鶯の谷より出でて (うぐいすのたによりいでて)",
         "鶯の谷より出で (うぐいすのたによりいで)",
@@ -56772,6 +57039,7 @@
       "short_explanation": "A reference to classical court literature and romance.",
       "source_author": "Murasaki Shikibu",
       "source_work": "The Tale of Genji",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "源氏物語"
       ]
@@ -57806,6 +58074,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "和魂洋才",
         "和魂洋才の精神",
@@ -57875,6 +58144,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/四苦八苦",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "四苦八苦",
         "四苦",
@@ -57980,6 +58250,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/因果応報",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "因果応報",
         "因果応報の理",

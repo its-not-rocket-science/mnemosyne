@@ -85,6 +85,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि अस्त्र",
         "अग्नि अस्त्र का",
@@ -497,6 +498,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारत",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि का पुत्र कार्तिकेय",
         "अग्नि के पुत्र कार्तिकेय",
@@ -661,6 +663,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_shruti_phrases_अग_न_क_शक_त",
       "id": "hi_classical_or_scriptural_allusion_अग_न_क_शक_त_c325aabb",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -675,6 +678,7 @@
       "source_url": "https://hi.wikisource.org/wiki/भगवद्गीता",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि की शक्ति",
         "अग्नि की शक्ति का",
@@ -1171,6 +1175,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि देव की जन्म कथाएँ",
         "अग्नि देव की जन्म कथा में",
@@ -1959,6 +1964,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%82",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "अग्नि परीक्षा में",
         "अग्नि परीक्षा देना",
@@ -2021,6 +2027,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि-बाण",
         "अग्नि-बाण के",
@@ -2110,6 +2117,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारत",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि मुख",
         "अग्नि मुख वाला",
@@ -2460,6 +2468,7 @@
       "source_url": "https://wikisource.org/wiki/वाल्मीकि_रामायण_बालकाण्ड",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "अग्नि-शिखा",
         "अग्नि-शिखा उठना",
@@ -2491,6 +2500,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "अग्निशिखा",
         "अग्निशिखा का",
@@ -3296,6 +3306,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%85%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%AE_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "अध्यात्म रामायण",
       "source_work_key": "mnemosyne.hi.work.अध_य_त_म_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "अध्यात्म रामायण",
         "अध्यात्म रामायण में",
@@ -3497,6 +3508,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%A3_%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%B5",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अभिमन्यु का चक्रव्यूह",
         "चक्रव्यूह में अभिमन्यु",
@@ -3554,6 +3566,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "अयोध्या का वर्णन",
         "अयोध्या के वर्णन",
@@ -3584,6 +3597,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गांडीव धनुष का",
         "गांडीव धनुष से",
@@ -3614,6 +3628,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अर्जुन का धनुष",
         "अर्जुन के धनुष",
@@ -3897,6 +3912,7 @@
       "source_url": "https://www.wikisource.org/wiki/महाभारत/अश्वमेध_पर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अश्वमेध यज्ञ",
         "अश्वमेध",
@@ -3940,6 +3956,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.hindi_ashtavakra_jnana_अष_ट_वक_र_क_ज_ञ_न",
       "id": "hi_classical_or_scriptural_allusion_अष_ट_वक_र_क_ज_ञ_न_506e1841",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3953,6 +3970,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%85%E0%A4%B7%E0%A5%8D%E0%A4%9F%E0%A4%BE%E0%A4%B5%E0%A4%95%E0%A5%8D%E0%A4%B0_%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "अष्टावक्र गीता",
       "source_work_key": "mnemosyne.hi.work.अष_ट_वक_र_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अष्टावक्र का ज्ञान",
         "अष्टावक्र का ज्ञान प्राप्त",
@@ -3982,6 +4000,7 @@
         "zh": "阿什塔瓦克拉·吉塔是归于智者阿什塔瓦克拉的经典文本，专注于非二元性和自我实现的哲学。在阿德瓦伊塔·韦丹塔和精神文学中具有重要意义。"
       },
       "id": "hi_classical_or_scriptural_allusion_अष_ट_वक_र_ग_त_293eb758",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly reflect the reference.",
@@ -3994,6 +4013,7 @@
       "source_license": "public_domain",
       "source_work": "अष्टावक्र गीता",
       "source_work_key": "mnemosyne.hi.work.अष_ट_वक_र_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अष्टावक्र गीता",
         "अष्टावक्र",
@@ -4173,6 +4193,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अहिंसा परमो धर्मः परमो दमः",
         "अहिंसा परमो धर्मः परमः दमः",
@@ -4230,6 +4251,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अहिंसा परमो धर्मः सर्वेषां सर्वदा",
         "अहिंसा परमो धर्मः सर्वेषां सर्वदा स्यात्",
@@ -4290,6 +4312,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत (अनुशासन पर्व)",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत_अन_श_सन_पर_व",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अहिंसा सर्वो धर्मः",
         "अहिंसा सर्वेषु धर्मेषु"
@@ -4315,6 +4338,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%82",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "अहल्या उद्धार",
         "अहल्या का उद्धार",
@@ -4345,6 +4369,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "अहल्या का उद्धार करना",
         "अहल्या का उद्धार हुआ",
@@ -5036,6 +5061,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/maha05.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "एकलव्य का अंगूठा",
         "एकलव्य का अंगूठा काटना",
@@ -5076,6 +5102,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D/%E0%A4%86%E0%A4%A6%E0%A4%BF%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%83",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "एकलव्य की गुरु भक्ति",
         "एकलव्य की भक्ति",
@@ -5164,6 +5191,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्/वनपर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "औदुंबरिका",
         "औदुंबरिकाओं",
@@ -5211,6 +5239,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कुंती पुत्र",
         "कुन्तीपुत्र",
@@ -5309,6 +5338,7 @@
       "source_url": "https://hi.wikisource.org/wiki/वाल्मीकि_रामायण",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "कुबेर का खजाना",
         "कुबेर के खजाने",
@@ -5383,6 +5413,7 @@
       "source_url": "https://www.wikisource.org/wiki/महाभारत/भीष्म_पर्व/अध्याय_1",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कुरुक्षेत्र",
         "कुरुक्षेत्र का युद्ध",
@@ -5501,6 +5532,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_scriptural_allusions_क_ष_ण_क_ग_त",
       "id": "hi_classical_or_scriptural_allusion_क_ष_ण_क_ग_त_d1bdfd78",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5515,6 +5547,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण की गीता",
         "कृष्ण की गीता में",
@@ -5532,6 +5565,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_classical_allusions_क_ष_ण_क_ब_स",
       "id": "hi_classical_or_scriptural_allusion_क_ष_ण_क_ब_स_11a284c5",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5545,6 +5579,7 @@
       "source_url": "https://wikisource.org/wiki/भगवद्गीता",
       "source_work": "भगवद्गीता, श्रीमद्भागवतम्, हरिवंश पुराण",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त_श_र_मद_भ_गवतम_हर_व_श_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण की बंसी में",
         "कृष्ण की बंसी से",
@@ -5647,6 +5682,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_krishna_क_ष_ण_क_म_खन_च_र",
       "id": "hi_classical_or_scriptural_allusion_क_ष_ण_क_म_खन_च_र_492a708f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5661,6 +5697,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण का माखन चोरी",
         "कृष्ण माखन चुराते हैं",
@@ -5783,6 +5820,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_scriptural_allusions_क_ष_ण_ल_ल",
       "id": "hi_classical_or_scriptural_allusion_क_ष_ण_ल_ल_0f234f1c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5797,6 +5835,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण लीला",
         "कृष्ण लीला में",
@@ -5937,6 +5976,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कंस का अत्याचार",
         "कंस के अत्याचार",
@@ -5997,6 +6037,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कंस वध",
         "कंस का वध",
@@ -6068,6 +6109,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्ण का कवच और कुंडल",
         "कर्ण के कवच-कुंडल",
@@ -6111,6 +6153,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4_%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A3_%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%B5",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्ण का कवच और कुण्डल",
         "कवच और कुण्डल",
@@ -6141,6 +6184,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्_आदि_पर्व_१०५",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्ण का जन्म रहस्य",
         "कर्ण का जन्म का रहस्य",
@@ -6171,6 +6215,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "दानवीरता",
         "दानवीर",
@@ -6204,6 +6249,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्_वर्ण_पर्व_३०",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्ण का दानवीरत्व",
         "दानवीर कर्ण",
@@ -6247,6 +6293,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्ण की वीरता",
         "कर्ण की वीरता की कहानी"
@@ -6285,6 +6332,7 @@
       "source_url": "https://www.wikisource.org/wiki/महाभारत",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्ण का श्राप",
         "श्राप कर्ण का"
@@ -6296,6 +6344,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_कर_म_स_द_ध_त",
       "id": "hi_classical_or_scriptural_allusion_कर_म_स_द_ध_त_4d15ac04",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6310,6 +6359,7 @@
       "source_url": "https://sa.wikisource.org/wiki/भगवद्गीता",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्म सिद्धांत",
         "कर्म के सिद्धांत",
@@ -6364,6 +6414,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_कर_मण_य_व_ध_क_रस_त_म_फ",
       "id": "hi_classical_or_scriptural_allusion_कर_मण_य_व_ध_क_रस_त_म_फल_ष_कद_चन_2b1a50fe",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6378,6 +6429,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन",
         "कर्मण्येवाधिकारस्ते मा फलेषु कदाचनः",
@@ -6445,6 +6497,7 @@
         "zh": "业瑜伽指的是无私行动的道路，是印度哲学中的一个关键概念，特别是在《博伽梵歌》中。"
       },
       "id": "hi_classical_or_scriptural_allusion_कर_मय_ग_22b1b536",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns match the text in the Bhagavad Gita.",
@@ -6459,6 +6512,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6_%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्मयोग",
         "कर्म योग",
@@ -6501,6 +6555,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.vedic_allusions_कल_न_ध",
       "id": "hi_classical_or_scriptural_allusion_कल_न_ध_13c4a1a4",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6515,6 +6570,7 @@
       "source_url": "https://hi.wikisource.org/wiki/भगवद्गीता",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कलानिधि",
         "कलानिधि का",
@@ -6559,6 +6615,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3_%E0%A4%AC%E0%A4%BE%E0%A4%B2%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "गंगा अवतरण",
         "गंगा का अवतरण",
@@ -6598,6 +6655,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गांडीव धनुष",
         "गांडीव",
@@ -6624,6 +6682,7 @@
         "zh": "吉塔教诲指的是克里希纳在俱卢之野战场上对阿周那的教导，是《薄伽梵歌》的核心，强调责任、正义和奉献。"
       },
       "id": "hi_classical_or_scriptural_allusion_ग_त_उपद_श_455b1e96",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The explanation and surface patterns correctly refer to the teachings of Krishna to Arjuna in the Bhagavad Gita, and the source details are accurate.",
@@ -6638,6 +6697,7 @@
       "source_url": "https://sanskritdocuments.org/doc_giitaa/bhagavadgita.html",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता उपदेश",
         "भगवद्गीता का उपदेश",
@@ -6651,6 +6711,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_क_अठ_रह_अध_य_य",
       "id": "hi_classical_or_scriptural_allusion_ग_त_क_अठ_रह_अध_य_य_4bf0def5",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6665,6 +6726,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता के अठारह अध्याय",
         "गीता में अठारह अध्याय",
@@ -6682,6 +6744,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_क_कर_म_स_द_ध_त",
       "id": "hi_classical_or_scriptural_allusion_ग_त_क_कर_म_स_द_ध_त_e5f0e1d3",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6696,6 +6759,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता का कर्म सिद्धांत",
         "गीता में कर्म सिद्धांत",
@@ -6712,6 +6776,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.bhagavad_gita_phrases_ग_त_क_च_दहव_अध_य_य",
       "id": "hi_classical_or_scriptural_allusion_ग_त_क_च_दहव_अध_य_य_bc621805",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6726,6 +6791,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता का चौदहवाँ अध्याय",
         "गीता के चौदहवें अध्याय",
@@ -6743,6 +6809,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.bhagavad_gita_phrases_ग_त_क_चत_र_थ_अध_य_य",
       "id": "hi_classical_or_scriptural_allusion_ग_त_क_चत_र_थ_अध_य_य_4dd15f56",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6757,6 +6824,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता का चतुर्थ अध्याय",
         "गीता के चौथे अध्याय",
@@ -6774,6 +6842,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_scriptural_references_ग_त_क_ज_ञ_न_य_ग",
       "id": "hi_classical_or_scriptural_allusion_ग_त_क_ज_ञ_न_य_ग_ef381925",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6788,6 +6857,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता का ज्ञान योग",
         "ज्ञान योग",
@@ -6802,6 +6872,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_क_न_ष_क_म_कर_म",
       "id": "hi_classical_or_scriptural_allusion_ग_त_क_न_ष_क_म_कर_म_e7df28f2",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6816,6 +6887,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता का निष्काम कर्म",
         "गीता में निष्काम कर्म",
@@ -6832,6 +6904,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_क_म_क_ष_म_र_ग",
       "id": "hi_classical_or_scriptural_allusion_ग_त_क_म_क_ष_म_र_ग_8add5208",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6846,6 +6919,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता का मोक्ष मार्ग",
         "गीता में मोक्ष मार्ग",
@@ -6863,6 +6937,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_क_य_ग_श_वर_श_र_क_ष",
       "id": "hi_classical_or_scriptural_allusion_ग_त_क_य_ग_श_वर_श_र_क_ष_ण_1654a2fa",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6877,6 +6952,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता का योगेश्वर श्रीकृष्ण",
         "गीता में योगेश्वर श्रीकृष्ण",
@@ -6907,6 +6983,7 @@
         "zh": "《吉塔》的信息指的是《博伽梵歌》的教义，这是一部700节的印度教经典，属于印度史诗《摩诃婆罗多》。它涉及战士阿尔朱那面临的道德和哲学困境，并强调责任、正义和奉献。"
       },
       "id": "hi_classical_or_scriptural_allusion_ग_त_क_स_द_श_d04d036e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to the Bhagavad Gita and its teachings is accurate and well-supported by the source work and author.",
@@ -6921,6 +6998,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6_%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता का संदेश",
         "भगवद गीता"
@@ -6962,6 +7040,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindu_scripture_bhagavad_gita_ग_त_ज_ञ_न",
       "id": "hi_classical_or_scriptural_allusion_ग_त_ज_ञ_न_8b6966e6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6976,6 +7055,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता ज्ञान",
         "गीता का ज्ञान",
@@ -6993,6 +7073,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.rabindranath_tagore_geetanjali_ग_त_जल",
       "id": "hi_classical_or_scriptural_allusion_ग_त_जल_f144a9c1",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7006,6 +7087,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/2555",
       "source_work": "गीतांजलि",
       "source_work_key": "mnemosyne.hi.work.ग_त_जल",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीतांजलि का",
         "गीतांजलि में",
@@ -7022,6 +7104,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_अव_न_श_आत_म",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_अव_न_श_आत_म_35af091f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7036,6 +7119,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अविनाशी आत्मा",
         "अविनाशी आत्मा में",
@@ -7052,6 +7136,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.bhagavad_gita_phrases_ग_त_म_आत_म_स_वर_प",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_आत_म_स_वर_प_3ea034b5",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7066,6 +7151,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में आत्म-स्वरूप",
         "गीता में आत्मा का स्वरूप",
@@ -7083,6 +7169,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.bhagavad_gita_phrases_ग_त_म_कर_म_य_ग",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_कर_म_य_ग_0f3272cc",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7097,6 +7184,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में कर्म योग",
         "गीता में कर्म योग का वर्णन",
@@ -7114,6 +7202,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_ज_ञ_न_म_र_ग",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_ज_ञ_न_म_र_ग_9f3efcd1",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7128,6 +7217,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में ज्ञान मार्ग",
         "गीता में ज्ञान मार्ग का",
@@ -7145,6 +7235,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_धर_म_क_स_थ_पन",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_धर_म_क_स_थ_पन_eeb7ec77",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7159,6 +7250,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में धर्म की स्थापना",
         "गीता में धर्म स्थापना",
@@ -7176,6 +7268,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_प_र_ष_त_तम_य_ग",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_प_र_ष_त_तम_य_ग_e70deb47",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7190,6 +7283,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में पुरुषोत्तम योग",
         "गीता में पुरुषोत्तम का योग",
@@ -7206,6 +7300,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_परम_त_म_क_स_वर_प",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_परम_त_म_क_स_वर_प_c871144e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7220,6 +7315,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में परमात्मा का स्वरूप",
         "गीता में परमात्मा के स्वरूप",
@@ -7236,6 +7332,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_ब_रह_म_क_वर_णन",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_ब_रह_म_क_वर_णन_1ba7bd8c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7250,6 +7347,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में ब्रह्म का वर्णन",
         "गीता में ब्रह्म का वर्णन करना",
@@ -7267,6 +7365,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_भक_त_म_र_ग",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_भक_त_म_र_ग_aa22f202",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7281,6 +7380,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में भक्ति मार्ग",
         "गीता में भक्ति मार्ग का",
@@ -7297,6 +7397,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.bhagavad_gita_phrases_ग_त_म_भक_त_य_ग",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_भक_त_य_ग_d317c75a",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7311,6 +7412,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में भक्ति योग",
         "गीता में भक्ति योग का वर्णन",
@@ -7328,6 +7430,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_भगव_न_क_अवत_र",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_भगव_न_क_अवत_र_c7d3d456",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7342,6 +7445,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में भगवान के अवतार",
         "गीता में भगवान अवतार",
@@ -7359,6 +7463,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_य_ग_क_स_र",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_य_ग_क_स_र_0165542f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7373,6 +7478,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में योग का सार",
         "गीता में योग के सार",
@@ -7389,6 +7495,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_य_द_ध_क_न_त_क_प_",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_य_द_ध_क_न_त_क_प_रश_न_281b77de",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7403,6 +7510,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में युद्ध के नैतिक प्रश्न",
         "गीता में युद्ध के नैतिक प्रश्नों",
@@ -7420,6 +7528,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_रणन_त_क_ज_ञ_न",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_रणन_त_क_ज_ञ_न_938d38ef",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7434,6 +7543,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में रणनीतिक ज्ञान",
         "गीता में रणनीति का ज्ञान",
@@ -7451,6 +7561,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_ल_क_स_ग_रह",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_ल_क_स_ग_रह_dc8365b9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7465,6 +7576,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में लोक संग्रह",
         "गीता में लोक-संग्रह",
@@ -7482,6 +7594,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_व_ज_ञ_न_य_ग",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_व_ज_ञ_न_य_ग_bbefc08a",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7496,6 +7609,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में विज्ञान योग",
         "गीता में विज्ञान-योग",
@@ -7513,6 +7627,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_ग_त_म_शरण_गत",
       "id": "hi_classical_or_scriptural_allusion_ग_त_म_शरण_गत_a6f8bd68",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7527,6 +7642,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता में शरणागति",
         "गीता में शरणागति लेना",
@@ -7644,6 +7760,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_scriptural_allusions_ग_प_य_क_च_तच_र",
       "id": "hi_classical_or_scriptural_allusion_ग_प_य_क_च_तच_र_400f36de",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7658,6 +7775,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%E0%A4%A6%E0%A5%8D%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "भगवद्गीता, श्रीमद्भागवतम्, सूरसागर",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त_श_र_मद_भ_गवतम_स_रस_गर",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गोपियों का चितचोर",
         "गोपियों का चितचोर होना",
@@ -7786,6 +7904,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_govardhan_leela_ग_वर_धन_ल_ल",
       "id": "hi_classical_or_scriptural_allusion_ग_वर_धन_ल_ल_e50286f5",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7800,6 +7919,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A5%8D_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "भगवद्गीता, भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त_भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गोवर्धन लीला",
         "गोवर्धन लीला का",
@@ -7892,6 +8012,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गरुड़ की गति",
         "गरुड़ की गति से",
@@ -7980,6 +8101,7 @@
       "source_url": "https://www.valmikiramayan.net/",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "चित्रकूट की रामायण",
         "चित्रकूट में रामायण",
@@ -8356,6 +8478,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%82",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "जटायु का युद्ध",
         "जटायु ने युद्ध किया",
@@ -8386,6 +8509,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "जन्मेजय का सर्प यज्ञ",
         "जन्मेजय के सर्प यज्ञ",
@@ -8416,6 +8540,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "जन्मेजय का सर्पसत्र",
         "जन्मेजय सर्पसत्र",
@@ -8467,6 +8592,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "जयद्रथ वध",
         "जयद्रथ का वध करना",
@@ -8605,6 +8731,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4",
       "source_work": "महाभारत / पुराण",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "त्रेता युग",
         "त्रेता",
@@ -8657,6 +8784,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_ramcharitmanas_phrases_त_लस_क_र_म",
       "id": "hi_classical_or_scriptural_allusion_त_लस_क_र_म_e0d41446",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8671,6 +8799,7 @@
       "source_url": "https://archive.org/details/RamcharitmanasTulsidas",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "तुलसी का राम",
         "तुलसी के राम",
@@ -8701,6 +8830,7 @@
         "zh": "这指的是由图尔西达斯所写的《罗摩衍那》，这是印度文学中一部受人尊敬的文本，叙述了拉玛神的生平。"
       },
       "id": "hi_classical_or_scriptural_allusion_त_लस_क_र_म_यण_516b7f63",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference is accurate and verifiable, relating directly to Tulsidas's work 'रामचरितमानस'.",
@@ -8715,6 +8845,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%9A%E0%A4%BF%E0%A4%A4%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A4%B8",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "तुलसी का रामायण",
         "रामायण तुलसी का"
@@ -8726,6 +8857,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hi_religious_texts_त_लस_द_स_क_र_मचर_तम_नस",
       "id": "hi_classical_or_scriptural_allusion_त_लस_द_स_क_र_मचर_तम_नस_72fd25b1",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8739,6 +8871,7 @@
       "source_url": "https://hi.wikisource.org/wiki/रामचरितमानस",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "तुलसीदास की रामचरितमानस",
         "तुलसीदास जी की रामचरितमानस",
@@ -8912,6 +9045,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "द्रोणाचार्य",
         "गुरु द्रोणाचार्य",
@@ -8952,6 +9086,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "द्रोणाचार्य और एकलव्य",
         "द्रोण और एकलव्य",
@@ -8992,6 +9127,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "द्रोणाचार्य का गुरुदक्षिणा",
         "द्रोणाचार्य की गुरुदक्षिणा",
@@ -9032,6 +9168,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्_(अनुवादः)/सभापर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "द्रोपदी का चीरहरण",
         "द्रौपदी चीरहरण",
@@ -9059,6 +9196,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "दुर्योधन का पांडुपुत्रों से द्वेष",
         "दुर्योधन का पांडुपुत्रों के प्रति द्वेष",
@@ -9119,6 +9257,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्_आदि_पर्व_७०",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "देवयानी और शर्मिष्ठा",
         "देवयानी तथा शर्मिष्ठा",
@@ -9201,6 +9340,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_puranic_narratives_दश_वत_र_क_कथ",
       "id": "hi_classical_or_scriptural_allusion_दश_वत_र_क_कथ_ad51ce01",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9215,6 +9355,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "दशावतार की कहानी",
         "भगवान के दशावतार",
@@ -9257,6 +9398,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D/%E0%A4%85%E0%A4%AF%E0%A5%8B%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1%E0%A4%83",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "दशरथ का वचन",
         "दशरथ का दिया वचन",
@@ -9297,6 +9439,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "धृतराष्ट्र की दृष्टि",
         "धृतराष्ट्र की अंधता",
@@ -9479,6 +9622,7 @@
       "source_url": "https://hi.wikisource.org/wiki/महाभारत",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "धर्मराज युधिष्ठिर",
         "धर्मराज युधिष्ठिर ने",
@@ -9509,6 +9653,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "धरती का भार उठाने वाला बलराम",
         "बलराम धरती का भार उठाते थे",
@@ -9567,6 +9712,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "नाग और गरुड़ की लड़ाई",
         "नागों और गरुड़ की लड़ाई",
@@ -10156,6 +10302,7 @@
         "zh": "该短语意为“规定的职责”，是印度教哲学中的核心概念，尤其在《博伽梵歌》中，强调无执着地履行义务。"
       },
       "id": "hi_classical_or_scriptural_allusion_न_यत_कर_म_0d4371f1",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The term 'नियत कर्म' and its explanation are accurate and directly referenced in Bhagavad Gita 3.8.",
@@ -10170,6 +10317,7 @@
       "source_url": "https://www.hindisamay.com/contentDetail.aspx?id=1487&pageno=1",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "नियत कर्म",
         "नियत कर्तव्य",
@@ -10388,6 +10536,7 @@
         "zh": "'निष्काम कर्म'翻译为'无私的行动'，是印度哲学中的一个关键概念，特别是在《博伽梵歌》中，强调在不执着于结果的情况下履行自己的职责的重要性。"
       },
       "id": "hi_classical_or_scriptural_allusion_न_ष_क_म_कर_म_874169e9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- 'निष्काम कर्म' is accurately attributed to the Bhagavad Gita and correctly explained.",
@@ -10402,6 +10551,7 @@
       "source_url": "https://www.bhagavad-gita.org/",
       "source_work": "भगवद गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "निष्काम कर्म",
         "कर्म",
@@ -10539,6 +10689,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D/03_%E0%A4%B5%E0%A4%A8%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%83",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "नल-दमयंती कथा",
         "नल और दमयंती की कथा",
@@ -10655,6 +10806,7 @@
       "source_url": "https://www.valmikiramayan.net/utf8/aranya/sarga15/aranya_15_frame.htm",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "पंचवटी",
         "पंचवटी में",
@@ -10695,6 +10847,7 @@
       "source_url": "https://www.wikisource.org/wiki/महाभारत/विराट_पर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "पांडवों का अज्ञातवास",
         "पांडव अज्ञातवास",
@@ -10722,6 +10875,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "वनवास",
         "वनवास करना",
@@ -10924,6 +11078,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "पुष्पक विमान",
         "पुष्पक",
@@ -10949,6 +11104,7 @@
         "zh": "这句话出自《博伽梵歌》（第4章，第8节），意为“保护正义者”，强调恢复法的神圣使命。"
       },
       "id": "hi_classical_or_scriptural_allusion_पर_त_र_ण_य_स_ध_न_म_37acafdd",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable, and the surface patterns correctly reflect the scriptural context of the phrase.",
@@ -10963,6 +11119,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6_%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "परित्राणाय साधूनाम्",
         "साधूनाम् परित्राणाय"
@@ -11082,6 +11239,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%82",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "परशुराम जी का क्रोध",
         "परशुराम क्रोधित हुए",
@@ -11112,6 +11270,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "बाणासुर का वध",
         "बाणासुर के वध",
@@ -11534,6 +11693,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "बकासुर का वध",
         "बकासुर का वध करना",
@@ -11718,6 +11878,7 @@
       "source_url": "https://sa.wikisource.org/wiki/रामायणम्/बालकाण्डः/सर्गः_४४",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "भागीरथ की तपस्या",
         "भागीरथ तपस्या",
@@ -11799,6 +11960,7 @@
       "source_url": "https://www.wikisource.org/wiki/महाभारत/सभापर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भीम की गदा",
         "भीम की गदा जैसा",
@@ -11839,6 +12001,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्_(अनुवादः)/शल्यपर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भीम का गदा युद्ध",
         "भीम का गदा-युद्ध",
@@ -11866,6 +12029,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भीम द्वारा हिडिंब वध",
         "भीम ने हिडिंब का वध किया",
@@ -11897,6 +12061,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्_आदि_पर्व_९५",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भीष्म ने प्रतिज्ञा ली",
         "भीष्म की प्रतिज्ञा का पालन",
@@ -11926,6 +12091,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भीष्म का शरशैय्या पर सोना",
         "भीष्म शरशैय्या पर सोये",
@@ -11970,6 +12136,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/maha01.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भीष्म प्रतिज्ञा",
         "भीष्म की प्रतिज्ञा",
@@ -12103,6 +12270,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_scriptural_allusions_भगव_न_क_म_य",
       "id": "hi_classical_or_scriptural_allusion_भगव_न_क_म_य_eb3bcba6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12117,6 +12285,7 @@
       "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?language=dv&field_chapter_value=4&field_nsutra_value=6&language=dv",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवान की माया",
         "भगवान की माया में",
@@ -12134,6 +12303,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_scriptural_allusions_भगव_न_क_ल_ल",
       "id": "hi_classical_or_scriptural_allusion_भगव_न_क_ल_ल_28d95fa5",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12148,6 +12318,7 @@
       "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?language=dv&field_chapter_value=4&field_nsutra_value=6&language=dv",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवान की लीला",
         "भगवान की लीला में",
@@ -12165,6 +12336,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindu_mythology_phrases_भगव_न_क_ष_ण_क_म_खनच_र_ह_न",
       "id": "hi_classical_or_scriptural_allusion_भगव_न_क_ष_ण_क_म_खनच_र_ह_न_e65f7ce9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12178,6 +12350,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/कृष्ण",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवान कृष्ण माखनचोर हैं",
         "भगवान कृष्ण का माखन चुराना",
@@ -12224,6 +12397,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_भगव_न_क_ष_ण_क_स_दर_शन_",
       "id": "hi_classical_or_scriptural_allusion_भगव_न_क_ष_ण_क_स_दर_शन_चक_र_ध_रण_करन_56fa5082",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12238,6 +12412,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवान कृष्ण का सुदर्शन चक्र धारण करना",
         "भगवान कृष्ण के सुदर्शन चक्र को",
@@ -12383,6 +12558,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारत",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवान परशुराम",
         "भगवान परशुराम का",
@@ -12444,6 +12620,7 @@
       "source_url": "https://sa.wikisource.org/wiki/वाल्मीकि_रामायण",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "भगवान राम",
         "भगवान राम का",
@@ -12478,6 +12655,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "भगवान राम का राज्याभिषेक",
         "भगवान राम के राज्याभिषेक",
@@ -12509,6 +12687,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%82",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "भगवान राम की लक्ष्मण रेखा",
         "भगवान राम की लक्ष्मण रेखा खींचना",
@@ -12539,6 +12718,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "भगवान राम का वनवास",
         "भगवान राम के वनवास",
@@ -12570,6 +12750,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "भगवान राम का सीता स्वयंवर",
         "भगवान राम सीता स्वयंवर में शामिल हुए",
@@ -12620,6 +12801,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.hi.explanation.vishnu_avatars_phrases_भगव_न_व_ष_ण_क_क_र_म_अवत_र",
       "id": "hi_classical_or_scriptural_allusion_भगव_न_व_ष_ण_क_क_र_म_अवत_र_f13d1b67",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12634,6 +12816,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवान विष्णु का कूर्म अवतार लेना",
         "कूर्म अवतार में भगवान विष्णु",
@@ -12726,6 +12909,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारत",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवान श्रीकृष्ण",
         "भगवान श्रीकृष्ण का",
@@ -12749,6 +12933,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_भगव_न_श_र_क_ष_ण_क_ग_त_",
       "id": "hi_classical_or_scriptural_allusion_भगव_न_श_र_क_ष_ण_क_ग_त_प_रवचन_90dd4279",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12763,6 +12948,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवान श्रीकृष्ण का गीता प्रवचन",
         "भगवान श्रीकृष्ण के गीता प्रवचन",
@@ -12793,6 +12979,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%82",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवान श्रीकृष्ण की द्वारका नगरी",
         "द्वारका नगरी में श्रीकृष्ण का राज्य",
@@ -12823,6 +13010,7 @@
       "source_url": "https://sa.wikisource.org/wiki/वाल्मीकि_रामायण",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "भगवान श्रीरामचन्द्र",
         "भगवान श्रीरामचन्द्र जी",
@@ -13131,6 +13319,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "भगवान हनुमान का संजीवनी बूटी लाना",
         "भगवान हनुमान के संजीवनी बूटी लाने",
@@ -13179,6 +13368,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.bhagavad_gita_phrases_भगवद_ग_त_क_ज_ञ_न",
       "id": "hi_classical_or_scriptural_allusion_भगवद_ग_त_क_ज_ञ_न_1abbf314",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -13193,6 +13383,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवद्गीता का ज्ञान",
         "भगवद्गीता का ज्ञान देना",
@@ -13221,6 +13412,7 @@
         "zh": "《薄伽梵歌》中的知识之道（智瑜伽），强调通过智慧、辨别力以及对实相与自我的真正本质的理解来实现自我觉醒。"
       },
       "id": "hi_classical_or_scriptural_allusion_भगवद_ग_त_क_ज_ञ_नय_ग_ecc5d49a",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Jnana Yoga in Bhagavad Gita, well-attested in chapters 2-5.",
@@ -13235,6 +13427,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवद्गीता का ज्ञानयोग",
         "ज्ञानयोग",
@@ -13261,6 +13454,7 @@
         "zh": "《薄伽梵歌》中的虔信之道（信瑜伽），通过对神圣的爱与奉献、崇拜以及虔诚来实现灵性解脱。"
       },
       "id": "hi_classical_or_scriptural_allusion_भगवद_ग_त_क_भक_त_य_ग_88715803",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Bhakti Yoga in Bhagavad Gita, primarily chapter 12.",
@@ -13275,6 +13469,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवद्गीता का भक्तियोग",
         "भक्तियोग",
@@ -13288,6 +13483,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_religious_texts_phrases_भगवद_ग_त_क_य_द_ध_द_य",
       "id": "hi_classical_or_scriptural_allusion_भगवद_ग_त_क_य_द_ध_द_य_ग_fa3a4274",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -13302,6 +13498,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भगवद्गीता का युद्धोद्योग",
         "भगवद्गीता के युद्धोद्योग",
@@ -13436,6 +13633,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_allusions_म_य_क_म_ह_न_र_प",
       "id": "hi_classical_or_scriptural_allusion_म_य_क_म_ह_न_र_प_a34a21b8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -13450,6 +13648,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "माया का मोहिनी रूप",
         "माया के मोहिनी रूप",
@@ -13521,6 +13720,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "महात्मा विदुर की नीति",
         "विदुर नीति का पालन करते हैं",
@@ -13586,6 +13786,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता का",
         "गीता में",
@@ -13626,6 +13827,7 @@
       "source_license": "public_domain",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "महाभारत प्रेरणाएँ",
         "प्रेरणाएँ महाभारत",
@@ -13664,6 +13866,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "महाभारत का युद्ध",
         "महाभारत युद्ध",
@@ -13690,6 +13893,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "विराटपर्व",
         "विराटपर्व में",
@@ -13721,6 +13925,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "वनपर्व",
         "वनपर्व में",
@@ -13752,6 +13957,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "चित्रसेन",
         "चित्रसेन का वर्णन",
@@ -13810,6 +14016,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_phrases_य_ग_कर_मस_क_शलम",
       "id": "hi_classical_or_scriptural_allusion_य_ग_कर_मस_क_शलम_a065c6b9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -13824,6 +14031,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "योगः कर्मसु कौशलम्",
         "योगस्य कर्मसु कौशलम्",
@@ -13897,6 +14105,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.bhagavad_gita_phrases_य_ग_न_कस_म_श_च_त_क_ल_ऽप_न_श_",
       "id": "hi_classical_or_scriptural_allusion_य_ग_न_कस_म_श_च_त_क_ल_ऽप_न_श_चत_e4aa6552",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -13911,6 +14120,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "योगिनः कस्मिंश्चित् कालेऽपि न शोचति",
         "योगिनः कस्मिंश्चित् कालेऽपि न शोचन्ति",
@@ -14044,6 +14254,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "युद्धिष्ठिर का धर्म",
         "धर्मराज युद्धिष्ठिर",
@@ -14084,6 +14295,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "युधिष्ठिर का सत्य",
         "युधिष्ठिर की सत्यनिष्ठा",
@@ -14140,6 +14352,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्/वनपर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "यक्ष प्रश्न",
         "यक्ष के प्रश्न",
@@ -14171,6 +14384,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "यतो धर्मस्ततो जयः",
         "यतो धर्मस्ततो जयः स्यात्",
@@ -14200,6 +14414,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राजा दशरथ का पुत्रेष्टि यज्ञ",
         "दशरथ का पुत्रेष्टि यज्ञ",
@@ -14354,6 +14569,7 @@
       "source_url": "https://www.valmiki.iitk.ac.in/sloka?field_kanda_tid=2&language=dv",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राम और भरत मिलाप",
         "राम-भरत मिलन",
@@ -14398,6 +14614,7 @@
       "source_url": "https://www.valmikiramayan.net/",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राम का वनवास",
         "राम का चौदह वर्ष का वनवास",
@@ -14467,6 +14684,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रामायण का आदर्श",
         "रामायण में आदर्श",
@@ -14505,6 +14723,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रामायण युद्ध",
         "रामायण का युद्ध",
@@ -14545,6 +14764,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D/%E0%A4%AF%E0%A5%81%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1%E0%A4%83",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राम-रावण युद्ध",
         "राम और रावण का युद्ध",
@@ -14572,6 +14792,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राम-लक्ष्मण का वन गमन",
         "राम और लक्ष्मण का वन गमन",
@@ -14603,6 +14824,7 @@
       "source_url": "https://hi.wikisource.org/wiki/वाल्मीकि_रामायण",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राम-लक्ष्मण-सीता",
         "राम लक्ष्मण सीता",
@@ -14638,6 +14860,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%82",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राम-लक्ष्मण-सीता का वनवास",
         "राम-लक्ष्मण-सीता के वनवास",
@@ -14668,6 +14891,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%82",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राम सेतु का निर्माण",
         "राम सेतु का निर्माण करना",
@@ -14684,6 +14908,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.ramcharitmanas_books_र_मचर_तम_नस_क_उत_तरक_ड",
       "id": "hi_classical_or_scriptural_allusion_र_मचर_तम_नस_क_उत_तरक_ड_c26ce5fc",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14698,6 +14923,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%9A%E0%A4%B0%E0%A4%BF%E0%A4%A4%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A4%B8",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "उत्तरकांड",
         "उत्तरकांड में",
@@ -14716,6 +14942,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.ramcharitmanas_books_र_मचर_तम_नस_क_ब_लक_ड",
       "id": "hi_classical_or_scriptural_allusion_र_मचर_तम_नस_क_ब_लक_ड_a79cd94f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14730,6 +14957,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%9A%E0%A4%B0%E0%A4%BF%E0%A4%A4%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A4%B8",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "बालकांड",
         "बालकांड में",
@@ -14762,6 +14990,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रावण का दशानन होना",
         "रावण दशानन था",
@@ -14804,6 +15033,7 @@
       "source_url": "https://www.valmikiramayan.net/",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रावण का दस सिर",
         "रावण के दस सिर",
@@ -14831,6 +15061,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रावण सीता का हरण करता है",
         "रावण द्वारा सीता का हरण",
@@ -14874,6 +15105,7 @@
       "source_url": "https://www.wikisource.org/wiki/रामायण/युद्ध_काण्ड",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रावण वध",
         "रावण का वध",
@@ -14887,6 +15119,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_scriptural_allusions_र_स_ल_ल",
       "id": "hi_classical_or_scriptural_allusion_र_स_ल_ल_4b6791fe",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14901,6 +15134,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "रास लीला में",
         "रास लीला का",
@@ -15002,6 +15236,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%82",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "लक्ष्मण रेखा",
         "लक्ष्मण की रेखा",
@@ -15216,6 +15451,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D/%E0%A4%89%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%AA%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%83",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "विदुर नीति",
         "विदुर की नीति",
@@ -15243,6 +15479,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्_उद्योग_पर्व_३३",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "विदुर नीति का सार",
         "विदुर नीति का अर्थ",
@@ -15285,6 +15522,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "वेदव्यास",
         "महर्षि वेदव्यास"
@@ -15381,6 +15619,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%82",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "वाली का अभिमान",
         "वाली का गर्व",
@@ -15412,6 +15651,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "वाल्मीकि श्लोक",
         "वाल्मीकि के श्लोक",
@@ -15509,6 +15749,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A5%8D%E0%A4%A3%E0%A5%81_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "विष्णु के दशावतार",
         "विष्णु के दशावतारों",
@@ -15630,6 +15871,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_shlokas_वह_उठ_ए_ज_उठ_जग",
       "id": "hi_classical_or_scriptural_allusion_वह_उठ_ए_ज_उठ_जग_f8e6a7dd",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -15644,6 +15886,7 @@
       "source_url": "https://www.gitasupersite.iitk.ac.in/srimad?language=dv&field_chapter_value=11&field_nsutra_value=18",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "वह उठाए जे उठै जग",
         "वह उठाए जो जग उठै",
@@ -15783,6 +16026,7 @@
         "zh": "《施里·拉玛查里特玛纳斯》是图尔西达斯创作的一首史诗，叙述了拉玛神的生平。它是印度文学中的重要文本，以其诗意的美和精神教义而受到尊敬。"
       },
       "id": "hi_classical_or_scriptural_allusion_श_र_र_मचर_तम_नस_fff87f21",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Tulsidas and the significance of Shri Ramcharitmanas in Hindu literature are accurate and verifiable.",
@@ -15796,6 +16040,7 @@
       "source_url": "https://www.wikisource.org/wiki/Ramcharitmanas",
       "source_work": "श्रीरामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.श_र_र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "श्रीरामचरितमानस",
         "रामचरितमानस"
@@ -15834,6 +16079,7 @@
       "source_url": "https://www.valmikiramayan.net/baala/sarga56/bala_56_prose.htm",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "श्रवण कुमार",
         "श्रवणकुमार",
@@ -16119,6 +16365,7 @@
       "source_url": "https://www.valmiki.iitk.ac.in/mahakavya/mahabharata",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "शकुनी की चाल",
         "शकुनी चाल",
@@ -16145,6 +16392,7 @@
         "zh": "这指的是《罗摩衍那》中信徒沙巴丽将尝过的浆果献给罗摩，象征纯粹的奉献和对真诚供品的接纳，无论社会地位如何。"
       },
       "id": "hi_classical_or_scriptural_allusion_शबर_क_ब_र_00981061",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference accurately summarizes the well-known episode from Ramcharitmanas and the surface patterns are suitable.",
@@ -16159,6 +16407,7 @@
       "source_url": "https://www.hindisamay.com/contentDetail/ramcharitmanas-poetry-ramcharitmanas-poetry-by-tulsidas.html",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "शबरी के बेर",
         "शबरी द्वारा दिए गए बेर",
@@ -16287,6 +16536,7 @@
       "source_url": "https://www.valmikiramayan.net/utf8/yuddha/sarga119/yuddha_119_frame.htm",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "सीता की अग्नि परीक्षा",
         "अग्नि परीक्षा",
@@ -16327,6 +16577,7 @@
       "source_url": "https://www.valmikiramayan.net/",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "सीता का वनवास",
         "सीता का निर्वासन",
@@ -16367,6 +16618,7 @@
       "source_url": "https://www.wikisource.org/wiki/रामायण/अरण्य_काण्ड",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "सीता-हरण",
         "सीता हरण",
@@ -16459,6 +16711,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhagavad_gita_sudama_स_द_म_क_म_लन",
       "id": "hi_classical_or_scriptural_allusion_स_द_म_क_म_लन_d8bdc446",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -16473,6 +16726,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "सुदामा का मिलन",
         "सुदामा मिलन",
@@ -16580,6 +16834,7 @@
       "source_url": "https://www.wikisource.org/wiki/महाभारत/वनपर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "सावित्री और सत्यवान",
         "सावित्री-सत्यवान",
@@ -16933,6 +17188,7 @@
         "zh": "指的是哈奴曼对罗摩的模范忠诚，象征着印度教传统中的无私奉献和忠诚。"
       },
       "id": "hi_classical_or_scriptural_allusion_हन_म_न_क_भक_त_1626145a",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference accurately describes Hanuman's devotion to Rama as depicted in 'रामचरितमानस', and the surface patterns are appropriate.",
@@ -16947,6 +17203,7 @@
       "source_url": "https://www.hindisamay.com/contentDetail.aspx?id=14&pageno=1",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "हनुमान की भक्ति",
         "हनुमानजी की भक्ति",
@@ -16993,6 +17250,7 @@
       "source_url": "https://www.valmiki.iitk.ac.in/ramayana",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "हनुमान की लंका दहन",
         "लंका दहन",
@@ -17033,6 +17291,7 @@
       "source_url": "https://sa.wikisource.org/wiki/रामायणम्/सुन्दरकाण्डः",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "हनुमान का संजीवनी लाना",
         "हनुमान द्वारा संजीवनी लाना",
@@ -17089,6 +17348,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "हनुमान जी का लंका दहन",
         "हनुमान जी द्वारा लंका दहन",
@@ -17133,6 +17393,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%B9%E0%A4%B0%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0",
       "source_work": "Various (पुराण, महाभारत, लोककथाएँ)",
       "source_work_key": "mnemosyne.hi.work.various_प_र_ण_मह_भ_रत_ल_ककथ_ए",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "हरिश्चन्द्र का सत्य",
         "हरिश्चन्द्र की सत्यनिष्ठा",
@@ -19152,6 +19413,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "वाल्मीकि रामायण, महाभारत",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण_मह_भ_रत",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "अग्निबाण",
         "अग्निबाण चलाना",
@@ -19760,6 +20022,7 @@
       "source_location": "आदिपर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अज्ञातवास",
         "अज्ञात वास"
@@ -21764,6 +22027,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "एकलव्य",
         "एकलव्य की कहानी"
@@ -22497,6 +22761,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_krishna_cultural_phrases_क_ष_ण_क_म_खन_च_र",
       "id": "hi_cultural_reference_क_ष_ण_क_म_खन_च_र_20740b5c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22511,6 +22776,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%E0%A4%A6%E0%A5%8D%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "भगवद्गीता, पुराण",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण का माखन चोर",
         "कृष्ण माखन चुराते थे",
@@ -23310,6 +23576,7 @@
         "zh": "指诵读或学习《薄伽梵歌》，在印度教传统中被视为虔诚与灵性修习的行为。"
       },
       "id": "hi_cultural_reference_ग_त_प_ठ_0bb8d55c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately describes the practice of reciting or studying the Bhagavad Gita and the surface patterns are correct.",
@@ -23323,6 +23590,7 @@
       "source_url": "https://www.hindigeetapdf.com/",
       "source_work": "श्रीमद्भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.श_र_मद_भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीतापाठ",
         "गीता पाठ",
@@ -23574,6 +23842,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_krishna_lore_ग_प_ग_प_ल_स_ब_ध",
       "id": "hi_cultural_reference_ग_प_ग_प_ल_स_ब_ध_4398609d",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23587,6 +23856,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "भगवद्गीता",
       "source_work_key": "mnemosyne.hi.work.भगवद_ग_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गोपी-गोपाल संबंध",
         "गोपी-गोपाल के संबंध",
@@ -27302,6 +27572,7 @@
       "source_location": "आदिपर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "धर्मराज",
         "धर्म राज",
@@ -32345,6 +32616,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रावण की लंका",
         "लंका रावण की",
@@ -35393,6 +35665,7 @@
       "source_license": "public_domain",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि की अग्नि-कथा",
         "अग्नि-कथा में",
@@ -36310,6 +36583,7 @@
       "confidence": 0.76,
       "explanation_key": "mnemosyne.hi.explanation.tulsidas_literary_phrases_अग_न_स_ह_र",
       "id": "hi_literary_reference_अग_न_स_ह_र_7a1008bc",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36324,6 +36598,7 @@
       "source_url": "https://sa.wikisource.org/wiki/रामचरितमानस",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "अग्नि संहार",
         "अग्नि संहार करना",
@@ -36835,6 +37110,7 @@
       "source_location": "उत्तरा पर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अश्वत्थामा",
         "अश्वत्थामा का नाम",
@@ -37257,6 +37533,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "इंदुमती का विवाह",
         "इंदुमती के विवाह",
@@ -37424,6 +37701,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "उर्मिला",
         "उर्मिला की",
@@ -37461,6 +37739,7 @@
       "source_license": "public_domain",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "उर्मिला के आंसू",
         "उर्मिला के आँसू",
@@ -37669,6 +37948,7 @@
       "source_url": "https://sa.wikisource.org/wiki/वाल्मीकि_रामायण/युद्धकाण्ड",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "और उसका किला लंका जल गई",
         "और उसका किला लंका जल गया",
@@ -38717,6 +38997,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_kabir_sakhi_कब_र_क_स_ख",
       "id": "hi_literary_reference_कब_र_क_स_ख_ad768f18",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38730,6 +39011,7 @@
       "source_url": "https://archive.org/details/kabir-granthaavali",
       "source_work": "कबीर ग्रंथावली",
       "source_work_key": "mnemosyne.hi.work.कब_र_ग_र_थ_वल",
+      "subcategory": "doha_kabir",
       "surface_patterns": [
         "कबीर की साखी",
         "कबीर साखी",
@@ -38799,6 +39081,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्ण के दान",
         "कर्ण का दान देना",
@@ -38842,6 +39125,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्ण की दानवीरता",
         "कर्ण का दान"
@@ -38879,6 +39163,7 @@
       "source_location": "आदिपर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्ण की दानशीलता",
         "कर्ण",
@@ -38918,6 +39203,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्ण का रथ",
         "कर्ण-रथ"
@@ -39171,6 +39457,7 @@
         "zh": "图尔西达斯是16世纪的印地语诗人和圣人，以创作通俗版《罗摩衍那》——《罗摩传》著称。他因其虔诚诗歌和对印地文学及巴克提运动的深远影响而备受尊崇。"
       },
       "id": "hi_literary_reference_कव_त_लस_द_स_46b681db",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Tulsidas is correctly described as the author of 'रामचरितमानस' and a major figure in Hindi literature and the Bhakti movement; surface patterns are appropriate.",
@@ -39184,6 +39471,7 @@
       "source_url": "https://www.hindisamay.com/contentDetail.aspx?id=18&pageno=1",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "कवि तुलसीदास",
         "Tulsidas",
@@ -39270,6 +39558,7 @@
         "zh": "卡维瓦尔·图尔西达斯是一位受人尊敬的诗人圣人，以其史诗《拉玛查里特马纳斯》而闻名，该诗在奉献的背景下重述了《罗摩衍那》。他的作品在印地文学和精神性中占据中心地位。"
       },
       "id": "hi_literary_reference_कव_वर_त_लस_493cc644",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly reflect the reference.",
@@ -39282,6 +39571,7 @@
       "source_license": "public_domain",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "कविवर तुलसी",
         "तुलसी दास",
@@ -39307,6 +39597,7 @@
         "zh": "卡维·瓦尔·图尔西达斯是16世纪著名的诗人圣人，以其史诗《拉玛查里特马纳斯》而闻名，该作品用阿瓦迪方言重述了《罗摩衍那》，使普通人能够理解。"
       },
       "id": "hi_literary_reference_कव_वर_त_लस_द_स_f4cbaab9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and useful for learners.",
@@ -39319,6 +39610,7 @@
       "source_license": "public_domain",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "कविवर तुलसीदास",
         "तुलसीदास",
@@ -39593,6 +39885,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hi_ramcharitmanas_phrases_ग_स_व_म_त_लस_द_स_क_च_प_ई",
       "id": "hi_literary_reference_ग_स_व_म_त_लस_द_स_क_च_प_ई_f2629964",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39607,6 +39900,7 @@
       "source_url": "https://archive.org/details/Ramcharitmanas",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "गोस्वामी तुलसीदास की चौपाई",
         "गोस्वामी तुलसीदास की चौपाई में",
@@ -39840,6 +40134,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "चंद्रवंशी राजा",
         "चंद्रवंशी राजाओं",
@@ -40112,6 +40407,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.hi_literary_references_जह_र_ज_स_त_मर_गय_वह_क_य_कर_",
       "id": "hi_literary_reference_जह_र_ज_स_त_मर_गय_वह_क_य_कर_ग_स_ध_जन_7be51c30",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40126,6 +40422,7 @@
       "source_url": "https://archive.org/details/RamcharitmanasTulsidas",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "जहाँ राजा सीता मर गये वहां क्या करेंगे साधुजन",
         "जहाँ राजा सीता मर गए वहाँ क्या करेंगे साधुजन",
@@ -40378,6 +40675,7 @@
         "zh": "“Chaupai”是一种押韵的对句体，图尔西达斯在其作品中广泛使用，尤其在《罗摩传》中，以其道德和精神教义常被引用。"
       },
       "id": "hi_literary_reference_त_लस_द_स_क_च_प_ई_55315cde",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly describes the poetic form and its association with Tulsidas and Ramcharitmanas; surface patterns are appropriate.",
@@ -40391,6 +40689,7 @@
       "source_url": "https://www.hindisamay.com/contentDetail/ramcharitmanas-poetry-ramcharitmanas-poetry-by-tulsidas.html",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "तुलसीदास की चौपाई",
         "तुलसीदास की चौपाइयाँ",
@@ -40417,6 +40716,7 @@
         "zh": "图尔西达斯的“多哈”指的是这位著名诗人圣人创作的对句，常以简明语言传达道德、精神或哲理信息。"
       },
       "id": "hi_literary_reference_त_लस_द_स_क_द_ह_2fb53238",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly identifies Tulsidas's dohas as couplets with moral or spiritual messages, and the surface patterns and attribution are accurate.",
@@ -40430,6 +40730,7 @@
       "source_url": "https://hi.wikisource.org/wiki/रामचरितमानस",
       "source_work": "रामचरितमानस / दोहावली",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस_द_ह_वल",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "तुलसीदास का दोहा",
         "तुलसीदास के दोहे",
@@ -40442,6 +40743,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hi_ramcharitmanas_phrases_त_लस_द_स_क_र_मचर_तम_नस",
       "id": "hi_literary_reference_त_लस_द_स_क_र_मचर_तम_नस_4e9247f3",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40455,6 +40757,7 @@
       "source_url": "https://hi.wikisource.org/wiki/रामचरितमानस",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "तुलसीदास का रामचरितमानस",
         "तुलसीदास द्वारा रचित रामचरितमानस",
@@ -40549,6 +40852,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "दुर्योधन का अभिमान",
         "दुर्योधन के अभिमान",
@@ -40630,6 +40934,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "दशरथ",
         "राजा दशरथ"
@@ -40684,6 +40989,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "धनुष भंग",
         "धनुष का भंग",
@@ -41052,6 +41358,7 @@
       "source_url": "https://hi.wikisource.org/wiki/महाभारत",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "नल-दमयन्ती",
         "नल और दमयन्ती",
@@ -41082,6 +41389,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AA%E0%A4%9E%E0%A5%8D%E0%A4%9A%E0%A4%A4%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "पंचतंत्र",
       "source_work_key": "mnemosyne.hi.work.प_चत_त_र",
+      "subcategory": "panchatantra",
       "surface_patterns": [
         "पंचतंत्र में वर्णित कथा",
         "पंचतंत्र की कथाएँ",
@@ -41110,6 +41418,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AA%E0%A4%82%E0%A4%9A%E0%A4%A4%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "पंचतंत्र",
       "source_work_key": "mnemosyne.hi.work.प_चत_त_र",
+      "subcategory": "panchatantra",
       "surface_patterns": [
         "चित्रकूट",
         "चित्रकूट में",
@@ -41516,6 +41825,7 @@
       "source_url": "https://sa.wikisource.org/wiki/वाल्मीकि_रामायण/किष्किन्धाकाण्ड",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "बाली और सुग्रीव की लड़ाई",
         "बाली-सुग्रीव युद्ध",
@@ -41576,6 +41886,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भीम का हनुमान से मिलन",
         "भीम हनुमान से मिला",
@@ -41966,6 +42277,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "मंथरा की चाल",
         "मंथरा की चाल चलना",
@@ -42391,6 +42703,7 @@
       "source_url": "https://sa.wikisource.org/wiki/महाभारतम्",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "महीपत",
         "महीपति",
@@ -42421,6 +42734,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "महाभारत के दर्शन",
         "महाभारत में दर्शन",
@@ -42452,6 +42766,7 @@
       "source_url": "https://hi.wikisource.org/wiki/महाभारत",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "भीष्म प्रतिज्ञा का",
         "भीष्म प्रतिज्ञा को",
@@ -42486,6 +42801,7 @@
       "source_url": "https://www.sacred-texts.com/hin/maha/index.htm",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "महाभारत काल",
         "महाभारत काल का",
@@ -42701,6 +43017,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rama/index.htm",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रामायण काल",
         "रामायण काल का",
@@ -42717,6 +43034,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.ramcharitmanas_darshan_र_मचर_तम_नस_म_दर_शन",
       "id": "hi_literary_reference_र_मचर_तम_नस_म_दर_शन_e6b1d28d",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42730,6 +43048,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%9A%E0%A4%B0%E0%A4%BF%E0%A4%A4%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A4%B8",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रामचरितमानस में दर्शन",
         "रामचरितमानस के दर्शन",
@@ -42829,6 +43148,7 @@
         "zh": "指拉宾德拉纳特·泰戈尔的著名诗集《吉檀迦利》，1913年获诺贝尔文学奖，以其精神和哲学深度著称。"
       },
       "id": "hi_literary_reference_रव_द_रन_थ_ट_ग_र_क_ग_त_जल_7020c6d4",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Reference to Tagore's 'Gitanjali' is accurate, surface patterns are correct, and explanation is factually correct and useful.",
@@ -42842,6 +43162,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/6524",
       "source_work": "गीतांजलि",
       "source_work_key": "mnemosyne.hi.work.ग_त_जल",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "रवींद्रनाथ टैगोर की गीतांजलि",
         "गीतांजलि",
@@ -42869,6 +43190,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "रामायण",
       "source_work_key": "mnemosyne.hi.work.र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "लंका में आग लगाना",
         "लंका में आग लगा दी",
@@ -43033,6 +43355,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "व्यास का महाभारत",
         "व्यास के महाभारत",
@@ -43104,6 +43427,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%95%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "वाल्मीकि रामायण",
       "source_work_key": "mnemosyne.hi.work.व_ल_म_क_र_म_यण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "वाल्मीकि रामायण",
         "वाल्मीकि की रामायण",
@@ -43162,6 +43486,7 @@
         "zh": "出自杜勒西达斯的印地语史诗《罗摩功行录》中的短语，其中‘पथबंधु’（pathbandhu）意为‘路上的朋友’或‘向导’。常用于描述人生旅途中的真正伙伴或导师。"
       },
       "id": "hi_literary_reference_वह_पथब_ध_थ_a30a8801",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase 'पथबंधु' appears in Tulsidas's Ramcharitmanas; the attribution is plausible and useful for learners.",
@@ -43176,6 +43501,7 @@
       "source_url": "https://archive.org/details/RamcharitmanasTulsidas",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "वह पथबंधु था",
         "पथबंधु",
@@ -43514,6 +43840,7 @@
         "zh": "这句话出自图尔西达斯的《罗摩传》，表达了整个世界都被悉多和罗摩充满，象征着普遍的神性。"
       },
       "id": "hi_literary_reference_स_य_र_ममय_सब_जग_ज_न_af42426f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is correctly attributed to Tulsidas's Ramcharitmanas (Uttarkand), and the explanation and surface patterns are accurate.",
@@ -43528,6 +43855,7 @@
       "source_url": "https://hi.wikisource.org/wiki/रामचरितमानस/उत्तर_काण्ड",
       "source_work": "रामचरितमानस",
       "source_work_key": "mnemosyne.hi.work.र_मचर_तम_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "सियाराममय सब जग जानी",
         "सियाराममय सब जग",
@@ -43809,6 +44137,7 @@
       "source_location": "आदिपर्व",
       "source_work": "महाभारत",
       "source_work_key": "mnemosyne.hi.work.मह_भ_रत",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "सावीत्री",
         "सावित्री",
@@ -47424,6 +47753,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%AA%E0%A4%82%E0%A4%9A%E0%A4%A4%E0%A4%A4%E0%A5%8D%E0%A4%B0",
       "source_work": "पंचतंत्र",
       "source_work_key": "mnemosyne.hi.work.प_चत_त_र",
+      "subcategory": "panchatantra",
       "surface_patterns": [
         "पंचतंत्र की कहानी",
         "पंचतंत्र की कथा",
@@ -48280,6 +48610,7 @@
         "zh": "拉希姆的对句（dohe）是由拉希姆创作的简短押韵诗句，以智慧、道德教诲和简洁著称。它们在印地文学和日常生活中因其实用建议被广泛引用。"
       },
       "id": "hi_proverb_tradition_रह_म_क_द_ह_688556c9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Rahim's dohe are well-known in Hindi literature, and the explanation and surface patterns are accurate and useful for learners.",
@@ -48293,6 +48624,7 @@
       "source_url": "https://www.typingbaba.com/2020/10/rahim-ke-dohe-in-hindi.html",
       "source_work": "रहीम के दोहे",
       "source_work_key": "mnemosyne.hi.work.रह_म_क_द_ह",
+      "subcategory": "doha_rahim",
       "surface_patterns": [
         "रहीम के दोहे",
         "Rahim ke dohe",

@@ -57,6 +57,7 @@
         "zh": "指圣经《创世记》中的第一个男人和女人，象征着人类的起源和原罪的概念。常用于引发诱惑、纯真或关系开始等主题。"
       },
       "id": "fr_classical_or_scriptural_allusion_adam_et_ève_0bcfdf70",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and useful for learners.",
@@ -71,6 +72,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Gen%C3%A8se",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Adam et Ève",
         "le couple Adam et Ève",
@@ -84,6 +86,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_french_allusions_adam_et_ève_après_la_chute",
       "id": "fr_classical_or_scriptural_allusion_adam_et_ève_après_la_chute_3559c627",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -98,6 +101,7 @@
       "source_url": "https://www.bible.com/fr/bible/110/GEN.3.NEG75.html",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Adam et Ève après la chute",
         "la chute d'Adam et Ève"
@@ -165,6 +169,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_french_allusions_agnus_dei",
       "id": "fr_classical_or_scriptural_allusion_agnus_dei_ca933150",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -179,6 +184,7 @@
       "source_url": "https://www.bible.com/fr/bible/110/JHN.1.29.NEG75.html",
       "source_work": "Bible / Christian liturgy",
       "source_work_key": "mnemosyne.fr.work.bible_christian_liturgy",
+      "subcategory": "biblical",
       "surface_patterns": [
         "l'Agnus Dei",
         "Agnus Dei (Lamb of God)"
@@ -203,6 +209,7 @@
         "zh": "拉丁文祈祷文，意为“除去世人罪孽的神的羔羊”，用于天主教礼仪，源自约翰福音1:29。"
       },
       "id": "fr_classical_or_scriptural_allusion_agnus_dei_qui_tollis_peccata_mundi_49e68cec",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Catholic liturgy derived from John 1:29.",
@@ -217,6 +224,7 @@
       "source_url": "https://en.wikisource.org/wiki/Bible_(King_James)/John#1:29",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Agnus Dei",
         "Agnus Dei qui tollis peccata mundi"
@@ -264,6 +272,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_levitique_phrases_aimer_son_prochain_comme_s",
       "id": "fr_classical_or_scriptural_allusion_aimer_son_prochain_comme_soi_même_62e6943d",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -278,6 +287,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/L%C3%A9vitique#19.18",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Aimer son prochain comme soi-même."
       ]
@@ -288,6 +298,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_bible_nt_aimez_vos_ennemis",
       "id": "fr_classical_or_scriptural_allusion_aimez_vos_ennemis_c249c58a",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -302,6 +313,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Matthieu#5:44",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "aimez vos ennemis",
         "aimez vos ennemis, et priez pour ceux qui vous maltraitent",
@@ -352,6 +364,7 @@
         "zh": "希伯来礼仪欢呼，意为“赞美主”，用于犹太教和基督教礼拜，特别是在复活节期间。"
       },
       "id": "fr_classical_or_scriptural_allusion_alleluia_0595c5c9",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Standard liturgical exclamation with correct biblical reference.",
@@ -366,6 +379,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Psaumes#150:6",
       "source_work": "La Sainte Bible",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Alleluia",
         "Alléluia",
@@ -421,6 +435,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_eschatology_phrases_aller_en_enfer",
       "id": "fr_classical_or_scriptural_allusion_aller_en_enfer_2a03af8b",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -435,6 +450,7 @@
       "source_url": "https://www.bible.com/bible/116/MAT.25.46.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "aller en enfer",
         "aller en enfer pour qqch",
@@ -447,6 +463,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.fr_bible_nt_hell_aller_en_enfer_pour_ses_péchés",
       "id": "fr_classical_or_scriptural_allusion_aller_en_enfer_pour_ses_péchés_e9bda5f0",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -461,6 +478,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Ésaïe#66:24",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "aller en enfer pour ses péchés",
         "il ira en enfer pour ses péchés",
@@ -562,6 +580,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fr_amen",
       "id": "fr_classical_or_scriptural_allusion_amen_8ff6fd77",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -576,6 +595,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Matthieu#5",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Amen",
         "Ainsi soit-il",
@@ -732,6 +752,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_bible_nt_trinity_au_nom_du_père_du_fils_et_du_s",
       "id": "fr_classical_or_scriptural_allusion_au_nom_du_père_du_fils_et_du_saint_esprit_ca2c6294",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -746,6 +767,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Matthieu#28:19",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "au nom du Père, du Fils et du Saint-Esprit",
         "au nom du Père, et du Fils, et du Saint-Esprit",
@@ -886,6 +908,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_samson_phrases_avoir_la_force_de_samson",
       "id": "fr_classical_or_scriptural_allusion_avoir_la_force_de_samson_39ca0174",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -900,6 +923,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Juges#Chapitre_16",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "avoir la force de Samson",
         "posséder la force de Samson",
@@ -1147,6 +1171,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_baiser_de_judas_baiser_de_judas",
       "id": "fr_classical_or_scriptural_allusion_baiser_de_judas_f9488f4f",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1161,6 +1186,7 @@
       "source_url": "https://www.bible.com/bible/116/MAT.26.48-49.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Baiser de Judas",
         "le baiser de Judas"
@@ -1221,6 +1247,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_boire_le_calice_jusqu_à_la_l",
       "id": "fr_classical_or_scriptural_allusion_boire_le_calice_jusqu_à_la_lie_3f26a14a",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Biblical and classical allusions are accurately cited with verifiable sources.",
@@ -1235,6 +1262,7 @@
       "source_url": "https://www.bible.com/fr/bible/110/PSA.75.8.NEG1979",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Boire le calice jusqu’à la lie",
         "boire le calice jusqu’à la dernière goutte",
@@ -1303,6 +1331,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.bible_armor_phrases_bouclier_de_la_foi",
       "id": "fr_classical_or_scriptural_allusion_bouclier_de_la_foi_2116eee2",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1317,6 +1346,7 @@
       "source_url": "https://www.bible.com/bible/116/EPH.6.16.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le bouclier de la foi",
         "prendre le bouclier de la foi",
@@ -1329,6 +1359,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_parables_phrases_brebis_égarée",
       "id": "fr_classical_or_scriptural_allusion_brebis_égarée_fc7169ad",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1343,6 +1374,7 @@
       "source_url": "https://www.bible.com/bible/116/MAT.18.12-14.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la brebis égarée",
         "une brebis égarée",
@@ -1355,6 +1387,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_phrases_béni_soit_celui_qui_vient_au_n",
       "id": "fr_classical_or_scriptural_allusion_béni_soit_celui_qui_vient_au_nom_du_seigneur_912e3cfa",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1369,6 +1402,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Psaumes#118",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Béni soit celui qui vient au nom du Seigneur",
         "Béni soit celui qui vient en son nom",
@@ -1394,6 +1428,7 @@
         "zh": "《万福玛利亚》的一部分，引用路加福音中依撒伯尔向玛利亚的问候，祝福她腹中的耶稣。"
       },
       "id": "fr_classical_or_scriptural_allusion_béni_soit_le_fruit_de_tes_entrailles_4ec3a5a8",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference matches the biblical verse Luke 1:42 and the Hail Mary prayer, and surface patterns are correct.",
@@ -1408,6 +1443,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Luke+1%3A42&version=LSG",
       "source_work": "Bible, Gospel of Luke",
       "source_work_key": "mnemosyne.fr.work.bible_gospel_of_luke",
+      "subcategory": "biblical",
       "surface_patterns": [
         "béni soit le fruit de tes entrailles",
         "béni est le fruit de tes entrailles",
@@ -1420,6 +1456,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_phrases_béni_soit_le_fruit_du_travail_",
       "id": "fr_classical_or_scriptural_allusion_béni_soit_le_fruit_du_travail_de_tes_mains_455283cf",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1434,6 +1471,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Psaumes#128",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Béni soit le fruit du travail de tes mains",
         "Que soit béni le fruit de tes mains",
@@ -1446,6 +1484,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_luc_phrases_béni_soit_le_fruit",
       "id": "fr_classical_or_scriptural_allusion_béni_soit_le_fruit_fcd809db",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1460,6 +1499,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Luc#1.42",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Béni soit le fruit",
         "Béni soit le fruit de ton sein",
@@ -1473,6 +1513,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fr_béni_soit_le_nom_du_seigneur",
       "id": "fr_classical_or_scriptural_allusion_béni_soit_le_nom_du_seigneur_2e1f7632",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1487,6 +1528,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Psaumes#113",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Béni soit le nom du Seigneur",
         "Que soit béni le nom du Seigneur",
@@ -1512,6 +1554,7 @@
         "zh": "祈求上帝赐福于面包的祝福，基督教传统中常在餐前诵念，表达对食物的感恩。"
       },
       "id": "fr_classical_or_scriptural_allusion_béni_soit_le_pain_bcf3947b",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The blessing is well-documented in Christian liturgy and aligns with biblical and medieval traditions.",
@@ -1526,6 +1569,7 @@
       "source_url": "https://www.bible.com",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Béni soit le pain",
         "Béni soit ce pain",
@@ -1538,6 +1582,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_apocalypse_phrases_bête_de_l_apocalypse",
       "id": "fr_classical_or_scriptural_allusion_bête_de_l_apocalypse_0c6db9a5",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1552,6 +1597,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Apocalypse#13.1",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la bête de l’Apocalypse",
         "la bête de l’Apocalypse.",
@@ -1564,6 +1610,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_apocalypse_phrases_bête_de_l_apocalypse",
       "id": "fr_classical_or_scriptural_allusion_bête_de_l_apocalypse_3e37c1ed",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1578,6 +1625,7 @@
       "source_url": "https://www.bible.com/bible/116/REV.13.1-18.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la Bête de l'Apocalypse",
         "la Bête apocalyptique",
@@ -1668,6 +1716,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fr_c_est_écrit",
       "id": "fr_classical_or_scriptural_allusion_c_est_écrit_72471bf5",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1682,6 +1731,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Matthieu#26",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Il est écrit",
         "Comme il est écrit",
@@ -1694,6 +1744,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fr_car_dieu_a_tant_aimé_le_monde",
       "id": "fr_classical_or_scriptural_allusion_car_dieu_a_tant_aimé_le_monde_ca03814e",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1708,6 +1759,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Jean#3",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Car Dieu a tant aimé le monde",
         "Car Dieu a tant aimé le monde qu'Il a donné Son Fils",
@@ -1836,6 +1888,7 @@
         "zh": "对耶稣受难的圣经典故，意思是“每个人都必须背负自己的十字架”。它反映了基督教忍受个人苦难的概念。"
       },
       "id": "fr_classical_or_scriptural_allusion_chacun_porte_sa_croix_23138b56",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Direct biblical allusion with precise source citation and high confidence.",
@@ -1850,6 +1903,7 @@
       "source_url": "https://www.bible.com/bible/1649/MAT.16.24.MSG",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Chacun porte sa croix",
         "Chacun doit porter sa croix",
@@ -1863,6 +1917,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_demons_chasser_les_démons",
       "id": "fr_classical_or_scriptural_allusion_chasser_les_démons_c9b65618",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1877,6 +1932,7 @@
       "source_url": "https://www.bible.com/bible/110/MAR.1.34.NIV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "chasser les démons",
         "chasser un démon",
@@ -1890,6 +1946,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fr.explanation.bible_passion_phrases_chemin_de_croix",
       "id": "fr_classical_or_scriptural_allusion_chemin_de_croix_9c6e913e",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1904,6 +1961,7 @@
       "source_url": "https://www.bible.com/bible/116/MAT.27.32-56.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le chemin de croix",
         "faire le chemin de croix",
@@ -2023,6 +2081,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.bible_references_cité_céleste",
       "id": "fr_classical_or_scriptural_allusion_cité_céleste_00d506c3",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2037,6 +2096,7 @@
       "source_url": "https://www.bible.com/bible/116/REV.21.2.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Cité céleste",
         "la Cité céleste"
@@ -2048,6 +2108,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_references_colonne_de_feu",
       "id": "fr_classical_or_scriptural_allusion_colonne_de_feu_40d4a1c5",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2062,6 +2123,7 @@
       "source_url": "https://www.bible.com/bible/116/EXO.13.21-22.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Colonne de feu",
         "la colonne de feu",
@@ -2150,6 +2212,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_phrases_convertissez_vous_et_croyez_à_",
       "id": "fr_classical_or_scriptural_allusion_convertissez_vous_et_croyez_à_l_évangile_61c9219a",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2164,6 +2227,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/%C3%89vangile_selon_Marc#1",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Convertissez-vous et croyez à l’Évangile",
         "Convertissez-vous et croyez en l'Évangile",
@@ -2202,6 +2266,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_genesis_création_du_monde_en_six_jours",
       "id": "fr_classical_or_scriptural_allusion_création_du_monde_en_six_jours_5c970254",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2216,6 +2281,7 @@
       "source_url": "https://www.bible.com/bible/116/GEN.1.1-31.NLT",
       "source_work": "Genesis",
       "source_work_key": "mnemosyne.fr.work.genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la création du monde en six jours",
         "création du monde en six jours",
@@ -2353,6 +2419,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_phrases_de_profundis_clamavi_ad_te_dom",
       "id": "fr_classical_or_scriptural_allusion_de_profundis_clamavi_ad_te_domine_aec35d2d",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2367,6 +2434,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Vulgate/Psaumes#129",
       "source_work": "Bible (Vulgate)",
       "source_work_key": "mnemosyne.fr.work.bible_vulgate",
+      "subcategory": "biblical",
       "surface_patterns": [
         "De profundis clamavi ad te, Domine",
         "De profundis",
@@ -2405,6 +2473,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.bible_references_derniers_temps",
       "id": "fr_classical_or_scriptural_allusion_derniers_temps_96119b05",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2419,6 +2488,7 @@
       "source_url": "https://www.bible.com/bible/116/2TI.3.1.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Derniers temps",
         "les derniers temps"
@@ -2457,6 +2527,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.bible_matthew_devenir_comme_un_enfant",
       "id": "fr_classical_or_scriptural_allusion_devenir_comme_un_enfant_e82b9075",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2471,6 +2542,7 @@
       "source_url": "https://www.bible.com/bible/116/MAT.18.3.NLT",
       "source_work": "Gospel of Matthew",
       "source_work_key": "mnemosyne.fr.work.gospel_of_matthew",
+      "subcategory": "biblical",
       "surface_patterns": [
         "devenir comme un enfant",
         "devenir enfant",
@@ -2535,6 +2607,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.french_religious_phrases_dieu_vous_garde",
       "id": "fr_classical_or_scriptural_allusion_dieu_vous_garde_df58531e",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2548,6 +2621,7 @@
       "source_license": "not_required",
       "source_work": "Bible (various passages)",
       "source_work_key": "mnemosyne.fr.work.bible_various_passages",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Dieu vous garde !",
         "Que Dieu vous garde !",
@@ -2599,6 +2673,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_references_douze_tribus_d_israël",
       "id": "fr_classical_or_scriptural_allusion_douze_tribus_d_israël_867a5d6f",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2613,6 +2688,7 @@
       "source_url": "https://www.bible.com/bible/116/GEN.49.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Douze tribus d'Israël",
         "les douze tribus d'Israël"
@@ -2650,6 +2726,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_references_déluge_universel",
       "id": "fr_classical_or_scriptural_allusion_déluge_universel_4d94e705",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2664,6 +2741,7 @@
       "source_url": "https://www.bible.com/bible/116/GEN.6.5-9.17.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Déluge universel",
         "le Déluge universel",
@@ -2704,6 +2782,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.fr_bible_phrases_enfants_de_lumière",
       "id": "fr_classical_or_scriptural_allusion_enfants_de_lumière_e3ab1988",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2718,6 +2797,7 @@
       "source_url": "https://www.bible.com/bible/1612/1TH.5.5.BFC",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "enfants de lumière",
         "enfant de lumière",
@@ -2935,6 +3015,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fils_de_lumière",
       "id": "fr_classical_or_scriptural_allusion_fils_de_lumière_e9f16447",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2949,6 +3030,7 @@
       "source_url": "https://www.bible.com/fr/bible/110/LUK.16.8.LSG",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "fils de la lumière"
       ]
@@ -3093,6 +3175,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_divine_glory_gloire_de_dieu",
       "id": "fr_classical_or_scriptural_allusion_gloire_de_dieu_3c27161e",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3107,6 +3190,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Psaumes#24",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la gloire de Dieu",
         "la Gloire divine",
@@ -3176,6 +3260,7 @@
         "zh": "这是耶稣登山宝训中的八福之一，意为“虚心的人有福了”，应许谦卑的人将得到天国。"
       },
       "id": "fr_classical_or_scriptural_allusion_heureux_les_pauvres_en_esprit_f30f0080",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical allusion with correct surface patterns and source.",
@@ -3190,6 +3275,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Sainte_Bible_(Louis_Segond)/Matthieu/5",
       "source_work": "La Sainte Bible (Louis Segond)",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible_louis_segond",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Heureux les pauvres en esprit",
         "Bienheureux les pauvres en esprit",
@@ -3319,6 +3405,7 @@
         "zh": "基督教复活节欢呼，宣告耶稣复活，用于礼拜仪式和信徒之间的问候。"
       },
       "id": "fr_classical_or_scriptural_allusion_il_est_ressuscité_36f0153a",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correct Easter acclamation with clear biblical origin.",
@@ -3333,6 +3420,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/%C3%89vangile_selon_Matthieu#28:6",
       "source_work": "La Sainte Bible",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Il est ressuscité",
         "Il est ressuscité!",
@@ -3346,6 +3434,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_bible_phrases_il_faut_rendre_à_césar_ce_qui_est",
       "id": "fr_classical_or_scriptural_allusion_il_faut_rendre_à_césar_ce_qui_est_à_césar_562aecbb",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3360,6 +3449,7 @@
       "source_url": "https://www.bible.com/bible/1612/MAT.22.21.BFC",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "rendre à César ce qui est à César",
         "à César ce qui est à César",
@@ -3386,6 +3476,7 @@
         "zh": "出自《使徒行传》的圣经箴言，强调慷慨的美德和给予的快乐，广泛用于伦理和教育讨论。"
       },
       "id": "fr_classical_or_scriptural_allusion_il_y_a_plus_de_joie_à_donner_qu_à_recevoir_b283eb7f",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Acts 20:35 is correct and verifiable in the Louis Segond Bible.",
@@ -3400,6 +3491,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Sainte_Bible_(Louis_Segond)/Actes/20",
       "source_work": "La Sainte Bible (Louis Segond)",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible_louis_segond",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Il y a plus de joie à donner qu’à recevoir",
         "Il y a plus de bonheur à donner qu'à recevoir",
@@ -3412,6 +3504,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_phrases_in_nomine_patris_et_filii_et_s",
       "id": "fr_classical_or_scriptural_allusion_in_nomine_patris_et_filii_et_spiritus_sancti_de77a0db",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3426,6 +3519,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Matthieu#28.19",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "In nomine Patris et Filii et Spiritus Sancti",
         "In nomine Patris, et Filii, et Spiritus Sancti",
@@ -3479,6 +3573,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_french_je_suis_l_alpha_et_l_oméga",
       "id": "fr_classical_or_scriptural_allusion_je_suis_l_alpha_et_l_oméga_3e6b17c1",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3493,6 +3588,7 @@
       "source_url": "https://www.bible.com/fr/bible/131/REV.1.8.LSG",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Je suis l'alpha et l'oméga",
         "Je suis l'alpha et l'oméga, dit le Seigneur Dieu",
@@ -3543,6 +3639,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.fr_bible_phrases_jeter_la_première_pierre",
       "id": "fr_classical_or_scriptural_allusion_jeter_la_première_pierre_363a7948",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3557,6 +3654,7 @@
       "source_url": "https://www.bible.com/bible/1612/JHN.8.7.BFC",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "lancer la première pierre",
         "qui n'a pas péché lui jette la première pierre"
@@ -3591,6 +3689,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.bible_divine_judge_juge_de_paix_divin",
       "id": "fr_classical_or_scriptural_allusion_juge_de_paix_divin_c966f42f",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3605,6 +3704,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Psaumes#50",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le Juge de paix divin",
         "le Juge divin",
@@ -3618,6 +3718,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.biblical_judgment_last_jugement_dernier",
       "id": "fr_classical_or_scriptural_allusion_jugement_dernier_4f8c88c4",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3632,6 +3733,7 @@
       "source_url": "https://www.bible.com/bible/116/MAT.25.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le grand Jugement dernier"
       ]
@@ -3705,6 +3807,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_scriptural_allusions_l_agneau_pascal",
       "id": "fr_classical_or_scriptural_allusion_l_agneau_pascal_72c66b23",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3719,6 +3822,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Exode#12",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "l'agneau pascal",
         "l'agneau de Pâques",
@@ -3732,6 +3836,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_fr_phrases_l_amour_de_dieu",
       "id": "fr_classical_or_scriptural_allusion_l_amour_de_dieu_af0ea013",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3746,6 +3851,7 @@
       "source_url": "https://www.bible.com/fr/bible/149/MAT.22.37-39.NEG79.html",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "l’amour de Dieu",
         "l'amour divin",
@@ -3758,6 +3864,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_scriptural_allusions_l_arbre_de_la_connaissa",
       "id": "fr_classical_or_scriptural_allusion_l_arbre_de_la_connaissance_04e1644f",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3772,6 +3879,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Gen%C3%A8se#2",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "l'arbre de la connaissance",
         "l'arbre de la connaissance du bien et du mal",
@@ -3809,6 +3917,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_scriptural_allusions_l_aveugle_né",
       "id": "fr_classical_or_scriptural_allusion_l_aveugle_né_c664f687",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3823,6 +3932,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Jean#9",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "l'aveugle-né",
         "l'aveugle de naissance",
@@ -3970,6 +4080,7 @@
         "zh": "出自《申命记》和《马太福音》的圣经说法，意思是精神食粮与身体食物同样重要，常用于强调超出物质需求的更深层需求。"
       },
       "id": "fr_classical_or_scriptural_allusion_l_homme_ne_vit_pas_seulement_de_pain_4e35ee18",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Deuteronomy 8:3 and Matthew 4:4 is correct and verifiable in the Louis Segond Bible.",
@@ -3984,6 +4095,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Sainte_Bible_(Louis_Segond)/Deut%C3%A9ronome/8",
       "source_work": "La Sainte Bible (Louis Segond)",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible_louis_segond",
+      "subcategory": "biblical",
       "surface_patterns": [
         "L’homme ne vit pas seulement de pain",
         "L'homme ne vit pas de pain seulement",
@@ -4071,6 +4183,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.bible_scriptural_allusions_l_éternel",
       "id": "fr_classical_or_scriptural_allusion_l_éternel_6584548d",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4085,6 +4198,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Psaumes#41",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "l'Éternel",
         "l'Éternel Dieu",
@@ -4204,6 +4318,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_la_colombe_de_l_esprit",
       "id": "fr_classical_or_scriptural_allusion_la_colombe_de_l_esprit_a63e3a42",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4218,6 +4333,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Colombe_(symbole)",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la colombe de l'Esprit",
         "colombe de l'Esprit",
@@ -4295,6 +4411,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_fr_phrases_la_foi_sauve",
       "id": "fr_classical_or_scriptural_allusion_la_foi_sauve_5be8d062",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4309,6 +4426,7 @@
       "source_url": "https://www.bible.com/fr/bible/149/EPH.2.8-9.NEG79.html",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la foi sauve",
         "la foi sauve les âmes",
@@ -4350,6 +4468,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_phrases_la_lettre_tue_mais_l_esprit_vi",
       "id": "fr_classical_or_scriptural_allusion_la_lettre_tue_mais_l_esprit_vivifie_9273a8e9",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4364,6 +4483,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/2_Corinthiens#3.6",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "La lettre tue, mais l’esprit vivifie",
         "La lettre tue, l’esprit vivifie",
@@ -4428,6 +4548,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_la_manne_céleste",
       "id": "fr_classical_or_scriptural_allusion_la_manne_céleste_8704d04a",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4442,6 +4563,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Manne",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la manne céleste",
         "la manne",
@@ -4454,6 +4576,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.bible_references_la_montagne_de_la_tentation",
       "id": "fr_classical_or_scriptural_allusion_la_montagne_de_la_tentation_3433fe22",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4468,6 +4591,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+4%3A8-10&version=NIV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la montagne de la tentation",
         "le mont de la tentation",
@@ -4532,6 +4656,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_eschatology_la_pierre_angulaire",
       "id": "fr_classical_or_scriptural_allusion_la_pierre_angulaire_a6b0dd79",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4546,6 +4671,7 @@
       "source_url": "https://www.bible.com/bible/116/PSA.118.22.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la pierre angulaire",
         "la pierre de l'angle",
@@ -4637,6 +4763,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_hebraique_phrases_la_terre_promise",
       "id": "fr_classical_or_scriptural_allusion_la_terre_promise_8aeb2c6c",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4651,6 +4778,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Exode#Exode_3",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la terre promise",
         "la terre promise de Dieu",
@@ -4702,6 +4830,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_la_transfiguration",
       "id": "fr_classical_or_scriptural_allusion_la_transfiguration_2149b9ca",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4716,6 +4845,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Transfiguration_de_Jésus",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la Transfiguration",
         "Transfiguration",
@@ -4755,6 +4885,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.bible_passion_narrative_la_tunique_sans_couture",
       "id": "fr_classical_or_scriptural_allusion_la_tunique_sans_couture_dbc6caf9",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4769,6 +4900,7 @@
       "source_url": "https://www.bible.com/bible/116/JHN.19.23-24.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la tunique sans couture",
         "la tunique sans couture du Christ",
@@ -4869,6 +5001,7 @@
         "zh": "耶稣欢迎孩子的圣经短语，用于强调纯真和开放，常见于宗教或教育语境。"
       },
       "id": "fr_classical_or_scriptural_allusion_laissez_venir_à_moi_les_petits_enfants_6119adc0",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Matthew 19:14, Mark 10:14, Luke 18:16 is correct and verifiable in the Louis Segond Bible.",
@@ -4883,6 +5016,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Sainte_Bible_(Louis_Segond)/Matthieu/19",
       "source_work": "La Sainte Bible (Louis Segond)",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible_louis_segond",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Laissez venir à moi les petits enfants",
         "Laissez les enfants venir à moi",
@@ -4895,6 +5029,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_fr_phrases_le_bon_grain_et_l_ivraie",
       "id": "fr_classical_or_scriptural_allusion_le_bon_grain_et_l_ivraie_26f6b543",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4909,6 +5044,7 @@
       "source_url": "https://www.bible.com/fr/bible/149/MAT.13.24-30.NEG79.html",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le bon grain et l’ivraie",
         "séparer le bon grain de l’ivraie",
@@ -4921,6 +5057,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_chretienne_phrases_le_bon_samaritain",
       "id": "fr_classical_or_scriptural_allusion_le_bon_samaritain_a96f0166",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4935,6 +5072,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Luc#Luc_10",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "un bon Samaritain",
         "le bon Samaritain de la parabole"
@@ -4998,6 +5136,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_le_buisson_ardent",
       "id": "fr_classical_or_scriptural_allusion_le_buisson_ardent_90ec5f72",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5012,6 +5151,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Buisson_ardent",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le buisson ardent",
         "le buisson qui brûle sans se consumer"
@@ -5100,6 +5240,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_le_chandelier_à_sept_branche",
       "id": "fr_classical_or_scriptural_allusion_le_chandelier_à_sept_branches_40499b95",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5114,6 +5255,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Menorah",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le chandelier à sept branches",
         "chandelier à sept branches",
@@ -5220,6 +5362,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_phrases_le_christ_est_ressuscité",
       "id": "fr_classical_or_scriptural_allusion_le_christ_est_ressuscité_123048b0",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5234,6 +5377,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Matthieu#28.6",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Le Christ est ressuscité",
         "Christ est ressuscité",
@@ -5372,6 +5516,7 @@
         "zh": "源自圣经中尼布甲尼撒的梦（但以理书2章），描述看似强大但有隐藏弱点的东西。"
       },
       "id": "fr_classical_or_scriptural_allusion_le_colosse_aux_pieds_d_argile_e2901b81",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Daniel 2 in the Bible.",
@@ -5386,6 +5531,7 @@
       "source_url": "https://en.wikisource.org/wiki/Bible_(King_James)/Daniel#2:31",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le colosse aux pieds d'argile",
         "pieds d'argile"
@@ -5471,6 +5617,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_french_le_désir_est_la_racine_de_tou",
       "id": "fr_classical_or_scriptural_allusion_le_désir_est_la_racine_de_tous_les_maux_4a0afb27",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5485,6 +5632,7 @@
       "source_url": "https://www.bible.com/fr/bible/131/1TI.6.10.LSG",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Le désir est la racine de tous les maux",
         "Le désir est la racine de tout mal",
@@ -5627,6 +5775,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_chretienne_phrases_le_fils_prodigue",
       "id": "fr_classical_or_scriptural_allusion_le_fils_prodigue_431d9f6f",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5641,6 +5790,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Luc#Luc_15",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "un fils prodigue",
         "le retour du fils prodigue"
@@ -5652,6 +5802,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_passion_narrative_le_golgotha",
       "id": "fr_classical_or_scriptural_allusion_le_golgotha_f7c46beb",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5666,6 +5817,7 @@
       "source_url": "https://www.bible.com/bible/116/MAT.27.33.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le Golgotha",
         "le Calvaire",
@@ -5716,6 +5868,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.fr.explanation.bible_references_le_jardin_des_oliviers",
       "id": "fr_classical_or_scriptural_allusion_le_jardin_des_oliviers_7cf412e5",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5730,6 +5883,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+26%3A36-46&version=NIV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le jardin des Oliviers",
         "Gethsémani",
@@ -5782,6 +5936,7 @@
         "zh": "所罗门王智断两妇争子的圣经故事。象征着公正而深刻的判断。"
       },
       "id": "fr_classical_or_scriptural_allusion_le_jugement_de_salomon_2e1d6150",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and explanation are accurate and verifiable.",
@@ -5796,6 +5951,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/1_ROIS_3",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le jugement de Salomon",
         "un jugement salomonique",
@@ -5808,6 +5964,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_eschatology_le_jugement_dernier",
       "id": "fr_classical_or_scriptural_allusion_le_jugement_dernier_ed7ecb03",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5822,6 +5979,7 @@
       "source_url": "https://www.bible.com/bible/116/MAT.25.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le jugement dernier",
         "le jour du Jugement",
@@ -5914,6 +6072,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_references_le_livre_de_la_vie",
       "id": "fr_classical_or_scriptural_allusion_le_livre_de_la_vie_2e68ab72",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5928,6 +6087,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Revelation+20%3A12-15&version=NIV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le livre de la vie",
         "le livre de vie",
@@ -6070,6 +6230,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fr.explanation.shakespeare_allusions_french_le_monde_est_un_théât",
       "id": "fr_classical_or_scriptural_allusion_le_monde_est_un_théâtre_da7f1207",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6084,6 +6245,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Tout_le_monde_est_un_th%C3%A9%C3%A2tre",
       "source_work": "As You Like It",
       "source_work_key": "mnemosyne.fr.work.as_you_like_it",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Le monde est un grand théâtre",
         "Tout le monde est un théâtre"
@@ -6095,6 +6257,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.shakespeare_as_you_like_it_le_monde_est_une_scène_",
       "id": "fr_classical_or_scriptural_allusion_le_monde_est_une_scène_où_chacun_joue_son_rôle_b82258a0",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6109,6 +6272,7 @@
       "source_url": "https://www.gutenberg.org/files/1514/1514-h/1514-h.htm#act2",
       "source_work": "As You Like It",
       "source_work_key": "mnemosyne.fr.work.as_you_like_it",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Le monde est une scène où chacun joue son rôle",
         "le monde est une scène où chacun joue un rôle",
@@ -6212,6 +6376,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_jesus_teachings_le_pain_de_la_vie",
       "id": "fr_classical_or_scriptural_allusion_le_pain_de_la_vie_1c8a5617",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6226,6 +6391,7 @@
       "source_url": "https://www.bible.com/bible/116/JHN.6.35.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le pain de la vie",
         "le Pain de vie",
@@ -6252,6 +6418,7 @@
         "zh": "源自《主祷文》的短语，现比喻基本需求或生计。"
       },
       "id": "fr_classical_or_scriptural_allusion_le_pain_quotidien_9eee4a98",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Scriptural allusion is correctly attributed to the Lord's Prayer with accurate surface patterns and metaphorical usage.",
@@ -6266,6 +6433,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Matthieu#6.11",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le pain quotidien",
         "notre pain quotidien",
@@ -6354,6 +6522,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fr.explanation.bible_blood_price_le_prix_du_sang",
       "id": "fr_classical_or_scriptural_allusion_le_prix_du_sang_8b402944",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6368,6 +6537,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/L%C3%A9vitique#35:31",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le prix du sang",
         "prix du sang",
@@ -6394,6 +6564,7 @@
         "zh": "基督教神学概念，指亚当和夏娃在伊甸园中犯下的原罪，被认为遗传给了全人类，导致人类堕落。"
       },
       "id": "fr_classical_or_scriptural_allusion_le_péché_originel_7ba5c7c5",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Theological attribution and biblical references are correct.",
@@ -6408,6 +6579,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Genèse#Chapitre_3",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le péché originel",
         "péché originel",
@@ -6511,6 +6683,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_bible_luke_phrases_le_royaume_de_dieu_est_en_vo",
       "id": "fr_classical_or_scriptural_allusion_le_royaume_de_dieu_est_en_vous_d7136fb0",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6525,6 +6698,7 @@
       "source_url": "https://www.bible.com/bible/162/LUK.17.21.NIV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Le royaume de Dieu est en vous",
         "Le royaume de Dieu est parmi vous"
@@ -6563,6 +6737,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.bible_hebraique_le_rêve_de_pharaon",
       "id": "fr_classical_or_scriptural_allusion_le_rêve_de_pharaon_fdecfb83",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6577,6 +6752,7 @@
       "source_url": "https://www.bible.com/fr/bible/110/GEN.41.NEG75",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le rêve de Pharaon",
         "les rêves de Pharaon",
@@ -6665,6 +6841,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_fr_phrases_le_sel_de_la_terre",
       "id": "fr_classical_or_scriptural_allusion_le_sel_de_la_terre_89c78628",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6679,6 +6856,7 @@
       "source_url": "https://www.bible.com/fr/bible/149/MAT.5.13.NEG79.html",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "vous êtes le sel de la terre"
       ]
@@ -6702,6 +6880,7 @@
         "zh": "圣经中关于创造周的记载，确立了安息日为休息日，在讨论工作生活平衡和宗教遵守时被广泛引用。"
       },
       "id": "fr_classical_or_scriptural_allusion_le_septième_jour_dieu_se_reposa_d79da03e",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Genesis 2:2-3 is correct and verifiable in the Louis Segond Bible.",
@@ -6716,6 +6895,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Sainte_Bible_(Louis_Segond)/Gen%C3%A8se/2",
       "source_work": "La Sainte Bible (Louis Segond)",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible_louis_segond",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Le septième jour, Dieu se reposa",
         "Dieu se reposa le septième jour",
@@ -6728,6 +6908,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_hebraique_phrases_le_serpent_du_jardin_d_éde",
       "id": "fr_classical_or_scriptural_allusion_le_serpent_du_jardin_d_éden_13569c70",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6742,6 +6923,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Gen%C3%A8se#Gen%C3%A8se_3",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le serpent du jardin d'Éden",
         "le serpent d'Éden",
@@ -6870,6 +7052,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_references_le_temple_de_salomon",
       "id": "fr_classical_or_scriptural_allusion_le_temple_de_salomon_300c1c5b",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6884,6 +7067,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=1+Kings+6&version=NIV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le temple de Salomon",
         "le temple de Jérusalem",
@@ -6922,6 +7106,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fr.explanation.shakespeare_allusions_fr_le_théâtre_du_monde",
       "id": "fr_classical_or_scriptural_allusion_le_théâtre_du_monde_3fd021e5",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6936,6 +7121,7 @@
       "source_url": "https://www.gutenberg.org/files/1531/1531-h/1531-h.htm",
       "source_work": "As You Like It",
       "source_work_key": "mnemosyne.fr.work.as_you_like_it",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Le théâtre du monde",
         "Le monde est un théâtre",
@@ -6948,6 +7134,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fr.explanation.shakespeare_as_you_like_it_phrases_le_théâtre_du_m",
       "id": "fr_classical_or_scriptural_allusion_le_théâtre_du_monde_est_une_comédie_342e134a",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6962,6 +7149,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1532",
       "source_work": "As You Like It",
       "source_work_key": "mnemosyne.fr.work.as_you_like_it",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Le théâtre du monde est une comédie",
         "Le monde est une comédie",
@@ -7078,6 +7266,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_le_veau_d_or",
       "id": "fr_classical_or_scriptural_allusion_le_veau_d_or_56a13a78",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7092,6 +7281,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Veau_d'or",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "adorer le veau d'or",
         "le veau d'or biblique"
@@ -7335,6 +7525,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_bible_matthew_phrases_les_derniers_seront_les_p",
       "id": "fr_classical_or_scriptural_allusion_les_derniers_seront_les_premiers_c1d19fdd",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7349,6 +7540,7 @@
       "source_url": "https://www.bible.com/bible/162/MAT.20.16.NIV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Les derniers seront les premiers, et les premiers seront les derniers"
       ]
@@ -7372,6 +7564,7 @@
         "zh": "一句圣经谚语，意思是现在领先的人以后可能会落后，反之亦然，常用于强调谦卑和命运的逆转。"
       },
       "id": "fr_classical_or_scriptural_allusion_les_premiers_seront_les_derniers_0af81a29",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical proverb commonly used in French; source verifiable.",
@@ -7386,6 +7579,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/%C3%89vangile_selon_Matthieu#20:16",
       "source_work": "La Sainte Bible",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "les premiers seront les derniers",
         "les derniers seront les premiers",
@@ -7399,6 +7593,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_hebraique_phrases_les_tables_de_la_loi",
       "id": "fr_classical_or_scriptural_allusion_les_tables_de_la_loi_8840b762",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7413,6 +7608,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Exode#Exode_31",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "les tables de la loi",
         "les tables de Moïse",
@@ -7501,6 +7697,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fr_main_de_dieu",
       "id": "fr_classical_or_scriptural_allusion_main_de_dieu_f9bed814",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7514,6 +7711,7 @@
       "source_url": "https://www.bible.com",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Main de Dieu",
         "la main de Dieu",
@@ -7552,6 +7750,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_bible_exodus_phrases_manne_céleste",
       "id": "fr_classical_or_scriptural_allusion_manne_céleste_69f3eba0",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7566,6 +7765,7 @@
       "source_url": "https://www.bible.com/bible/162/EXO.16.NIV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la manne du ciel",
         "la manne divine"
@@ -7577,6 +7777,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fr_maudit_soit_le_fruit_de_ton_sein",
       "id": "fr_classical_or_scriptural_allusion_maudit_soit_le_fruit_de_ton_sein_c17a72c4",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7591,6 +7792,7 @@
       "source_url": "https://www.bible.com/bible/165/JDG.17.2.WEB",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Maudit soit le fruit de ton sein",
         "que maudit soit le fruit de ton sein"
@@ -7602,6 +7804,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_mettre_sa_foi_en_dieu",
       "id": "fr_classical_or_scriptural_allusion_mettre_sa_foi_en_dieu_bced2115",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7616,6 +7819,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Psaumes#22",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "mettre sa foi en Dieu",
         "mettre sa confiance en Dieu",
@@ -7706,6 +7910,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_nouveau_testament",
       "id": "fr_classical_or_scriptural_allusion_nouveau_testament_0eacaed7",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7719,6 +7924,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Nouveau_Testament",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Nouveau Testament",
         "le Nouveau Testament"
@@ -7755,6 +7961,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fr_par_la_grâce_de_dieu",
       "id": "fr_classical_or_scriptural_allusion_par_la_grâce_de_dieu_5f3ee5d5",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7769,6 +7976,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Ephesians+2%3A8-9&version=VULGATE",
       "source_work": "Bible (Vulgate)",
       "source_work_key": "mnemosyne.fr.work.bible_vulgate",
+      "subcategory": "biblical",
       "surface_patterns": [
         "par la grâce de Dieu",
         "par la seule grâce de Dieu",
@@ -7806,6 +8014,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_passer_par_la_vallée_de_l_om",
       "id": "fr_classical_or_scriptural_allusion_passer_par_la_vallée_de_l_ombre_de_la_mort_ece0a1e8",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7820,6 +8029,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Psaumes#23",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "la vallée de l'ombre de la mort",
         "la vallée de l'ombre et de la mort",
@@ -7857,6 +8067,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fr_pierre_angulaire",
       "id": "fr_classical_or_scriptural_allusion_pierre_angulaire_1d77820f",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7871,6 +8082,7 @@
       "source_url": "https://www.bible.com",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "pierre angulaire",
         "une pierre angulaire"
@@ -7926,6 +8138,7 @@
         "zh": "耶稣对控告行淫妇人的众人说的话，意思是只有无罪的人才能扔石头定罪。"
       },
       "id": "fr_classical_or_scriptural_allusion_que_celui_qui_n_a_jamais_péché_jette_la_première_pierre_e2001cad",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical allusion with correct surface patterns and source.",
@@ -7940,6 +8153,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Sainte_Bible_(Louis_Segond)/Jean/8",
       "source_work": "La Sainte Bible (Louis Segond)",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible_louis_segond",
+      "subcategory": "biblical",
       "surface_patterns": [
         "que celui qui n’a jamais péché jette la première pierre",
         "jeter la première pierre",
@@ -7992,6 +8206,7 @@
         "zh": "字面意思是“寻找者必寻见”，源自圣经马太福音7:7，鼓励坚持不懈地寻找。"
       },
       "id": "fr_classical_or_scriptural_allusion_qui_cherche_trouve_1eb1be07",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical allusion, correctly matched surface patterns.",
@@ -8006,6 +8221,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Crampon_1923/Évangile_selon_saint_Matthieu,_7",
       "source_work": "Bible (Matthew 7:7)",
       "source_work_key": "mnemosyne.fr.work.bible_matthew_7_7",
+      "subcategory": "biblical",
       "surface_patterns": [
         "qui cherche trouve",
         "cherche et tu trouveras",
@@ -8031,6 +8247,7 @@
         "zh": "这句法语谚语源自圣经（何西阿书8:7），意思是‘种风者收获风暴’，警告有害的行为会带来严重的后果。"
       },
       "id": "fr_classical_or_scriptural_allusion_qui_sème_le_vent_récolte_la_tempête_ea955a41",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Derived from Hosea 8:7; accurate and verifiable.",
@@ -8045,6 +8262,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1912/Os%C3%A9e#8:7",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Qui sème le vent récolte la tempête",
         "Semer le vent et récolter la tempête",
@@ -8331,6 +8549,7 @@
         "zh": "基于以赛亚异象的礼拜赞美诗，赞美上帝为圣洁；是基督教弥撒的核心部分。"
       },
       "id": "fr_classical_or_scriptural_allusion_sanctus_sanctus_sanctus_90825393",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Isaiah 6:3; central to Christian liturgy.",
@@ -8345,6 +8564,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Isa%C3%AFe#6:3",
       "source_work": "La Sainte Bible",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Sanctus, Sanctus, Sanctus",
         "Saint, Saint, Saint",
@@ -8460,6 +8680,7 @@
         "zh": "典出圣经对假先知的警告，指那些声称拥有神授权柄但误导他人的骗子。体现了文化对江湖骗子和操纵者的警惕。"
       },
       "id": "fr_classical_or_scriptural_allusion_se_méfier_du_faux_prophète_a0587a5e",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The allusion is correctly traced to Matthew 7:15 in the New Testament, with a clear biblical source.",
@@ -8474,6 +8695,7 @@
       "source_url": "https://www.bible.com/fr/bible/154/MAT.7.15.LSG",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "se méfier du faux prophète",
         "méfiez-vous du faux prophète",
@@ -8515,6 +8737,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fr_si_tu_savais_le_don_de_dieu",
       "id": "fr_classical_or_scriptural_allusion_si_tu_savais_le_don_de_dieu_25a8ee74",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8529,6 +8752,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=John+4%3A10&version=VULGATE",
       "source_work": "Bible (Vulgate)",
       "source_work_key": "mnemosyne.fr.work.bible_vulgate",
+      "subcategory": "biblical",
       "surface_patterns": [
         "si tu savais le don de Dieu",
         "si vous saviez le don de Dieu",
@@ -8748,6 +8972,7 @@
         "zh": "来自《利未记》和福音书的中心伦理诫命，概括了爱与相互尊重的律法，是犹太教-基督教伦理的基础。"
       },
       "id": "fr_classical_or_scriptural_allusion_tu_aimeras_ton_prochain_comme_toi_même_31d65a50",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Leviticus 19:18 and Matthew 22:39 is correct and verifiable in the Louis Segond Bible.",
@@ -8762,6 +8987,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Sainte_Bible_(Louis_Segond)/L%C3%A9vitique/19",
       "source_work": "La Sainte Bible (Louis Segond)",
       "source_work_key": "mnemosyne.fr.work.la_sainte_bible_louis_segond",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Tu aimeras ton prochain comme toi-même",
         "Aime ton prochain comme toi-même",
@@ -8787,6 +9013,7 @@
         "zh": "耶稣在玛窦福音中对宗徒伯多禄说的话，立他为基督教会的基础，是天主教关于教宗权威教义的关键经文。"
       },
       "id": "fr_classical_or_scriptural_allusion_tu_es_pierre_et_sur_cette_pierre_je_bâtirai_mon_église_1034523f",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This is a correct scriptural allusion to Matthew 16:18, with accurate surface patterns and explanation.",
@@ -8801,6 +9028,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+16%3A18&version=LSG",
       "source_work": "Bible, Gospel of Matthew",
       "source_work_key": "mnemosyne.fr.work.bible_gospel_of_matthew",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Tu es Pierre",
         "sur cette pierre je bâtirai mon Église",
@@ -9571,6 +9799,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_fr_vaincre_le_mal_par_le_bien",
       "id": "fr_classical_or_scriptural_allusion_vaincre_le_mal_par_le_bien_a608f803",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9585,6 +9814,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Romans+12%3A21&version=VULGATE",
       "source_work": "Bible (Vulgate)",
       "source_work_key": "mnemosyne.fr.work.bible_vulgate",
+      "subcategory": "biblical",
       "surface_patterns": [
         "vaincre le mal par le bien",
         "vaincre le mal avec le bien",
@@ -9646,6 +9876,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_à_l_image_de_dieu",
       "id": "fr_classical_or_scriptural_allusion_à_l_image_de_dieu_6cbe80ed",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9660,6 +9891,7 @@
       "source_url": "https://www.bible.com/bible/116/GEN.1.27.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "À l’image de Dieu",
         "créé à l’image de Dieu",
@@ -9685,6 +9917,7 @@
         "zh": "仰赖上帝的恩典。一种祈求神意或命运的表达，反映在不确定情况下依赖上帝旨意。"
       },
       "id": "fr_classical_or_scriptural_allusion_à_la_grâce_de_dieu_5fa3e353",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Scriptural allusion is accurate, with verifiable phrasing in Christian tradition and correct explanation.",
@@ -9698,6 +9931,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/%C3%80_la_gr%C3%A2ce_de_Dieu",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "à la grâce de Dieu",
         "à la grâce de Dieu seul",
@@ -9927,6 +10161,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_lot_wife_être_changé_en_statue_de_sel",
       "id": "fr_classical_or_scriptural_allusion_être_changé_en_statue_de_sel_296242cc",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9941,6 +10176,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Gen%C3%A8se#19.26",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "changé en statue de sel",
         "transformé en statue de sel",
@@ -10173,6 +10409,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fr.explanation.bible_references_french_être_dans_les_vignes_du_se",
       "id": "fr_classical_or_scriptural_allusion_être_dans_les_vignes_du_seigneur_7e1ac225",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10187,6 +10424,7 @@
       "source_url": "https://www.bible.com/fr/bible/116/ISA.5.7.NEG71",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Être dans les vignes du Seigneur",
         "Se trouver dans les vignes du Seigneur",
@@ -10384,6 +10622,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_judges_phrases_être_fort_comme_samson",
       "id": "fr_classical_or_scriptural_allusion_être_fort_comme_samson_256b4351",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10398,6 +10637,7 @@
       "source_url": "https://www.bible.com/fr/bible/134/JUG.13.1.NEG1979",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "fort comme Samson",
         "force de Samson",
@@ -11016,6 +11256,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_bible_phrases_être_un_bon_samaritain",
       "id": "fr_classical_or_scriptural_allusion_être_un_bon_samaritain_1f55daa0",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11030,6 +11271,7 @@
       "source_url": "https://www.bible.com/bible/1612/LUK.10.25.BFC",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "bon samaritain",
         "être un samaritain",
@@ -11042,6 +11284,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_leviticus_phrases_être_un_bouc_émissaire",
       "id": "fr_classical_or_scriptural_allusion_être_un_bouc_émissaire_fffdc6c4",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11056,6 +11299,7 @@
       "source_url": "https://www.bible.com/bible/116/LEV.16.NIV",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "être un bouc émissaire",
         "le bouc émissaire"
@@ -11136,6 +11380,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_allusions_être_un_colosse_aux_pieds_d_",
       "id": "fr_classical_or_scriptural_allusion_être_un_colosse_aux_pieds_d_argile_a6e79fe2",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11150,6 +11395,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Daniel#2.31-35",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "un colosse aux pieds d'argile",
         "être un colosse aux pieds d'argile",
@@ -18526,6 +18772,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_luc_parables_enfant_prodigue",
       "id": "fr_cultural_reference_enfant_prodigue_ed437d3e",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18540,6 +18787,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Luc#15",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "l'enfant prodigue",
         "le fils prodigue",
@@ -19365,6 +19613,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.fr.explanation.biblical_phrases_fr_faire_sonner_les_trompettes",
       "id": "fr_cultural_reference_faire_sonner_les_trompettes_1048d806",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19378,6 +19627,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Trumpet",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "faire sonner les trompettes",
         "faire retentir les trompettes",
@@ -19731,6 +19981,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.bible_messianic_titles_fils_de_david",
       "id": "fr_cultural_reference_fils_de_david_2e676451",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19745,6 +19996,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Matthieu#1",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le Fils de David",
         "descendant de David",
@@ -30530,6 +30782,7 @@
         "zh": "喉结，因圣经中的亚当而得名，象征着禁果的永恒印记。常用于解剖学和口语语境。"
       },
       "id": "fr_cultural_reference_une_pomme_d_adam_18c96a06",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and explanation are accurate and verifiable.",
@@ -30544,6 +30797,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/GEN%C3%88SE_3",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "une pomme d’Adam",
         "la pomme d’Adam",
@@ -31629,6 +31883,7 @@
         "zh": "成为社会中坚；被视为不可或缺或品德高尚的人或群体。源自耶稣《登山宝训》，强调信徒的道德影响力。"
       },
       "id": "fr_cultural_reference_être_le_sel_de_la_terre_1ec22829",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and explanation are accurate and verifiable; surface patterns are correct.",
@@ -31643,6 +31898,7 @@
       "source_url": "https://fr.wikisource.org/wiki/%C3%89vangile_selon_Matthieu#5",
       "source_work": "Évangile selon Matthieu (Gospel of Matthew)",
       "source_work_key": "mnemosyne.fr.work.évangile_selon_matthieu_gospel_of_matthew",
+      "subcategory": "biblical",
       "surface_patterns": [
         "être le sel de la terre",
         "le sel de la terre",
@@ -31957,6 +32213,7 @@
       "canonical_reference": "être ou ne pas être",
       "confidence": 0.88,
       "id": "etre_ou_ne_pas_etre",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "reference_type": "literary_reference",
@@ -31964,6 +32221,7 @@
       "short_explanation": "A famous formulation of existential hesitation.",
       "source_author": "Shakespeare",
       "source_work": "Hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "être ou ne pas être"
       ]
@@ -33457,6 +33715,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.shakespeare_as_you_like_it_french_phrases_comme_il",
       "id": "fr_literary_reference_comme_il_vous_plaira_10e0f077",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33471,6 +33730,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Comme_il_vous_plaira",
       "source_work": "As You Like It",
       "source_work_key": "mnemosyne.fr.work.as_you_like_it",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Comme il vous plaira",
         "Comme il vous plaira !",
@@ -34282,6 +34542,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.bible_phrases_faire_tomber_les_idoles",
       "id": "fr_literary_reference_faire_tomber_les_idoles_989e5e8d",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34296,6 +34557,7 @@
       "source_url": "https://www.bible.com/fr/bible/110/1SA.5.4.LSG",
       "source_work": "La Bible",
       "source_work_key": "mnemosyne.fr.work.la_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "faire tomber les idoles",
         "faire tomber une idole",
@@ -37134,6 +37396,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.fr_biblical_phrases_le_chemin_de_la_vie_ou_de_la_m",
       "id": "fr_literary_reference_le_chemin_de_la_vie_ou_de_la_mort_7c2c9919",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37148,6 +37411,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Deut%C3%A9ronome#30.19",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fr.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Le chemin de la vie ou de la mort",
         "Le chemin qui mène à la vie ou à la mort",
@@ -41037,6 +41301,7 @@
         "zh": "莎士比亚戏剧《哈姆雷特》中哈姆雷特著名独白的开场白，反映了存在的疑问和对生与死的思考。法语译文在文学和哲学中广为人知。"
       },
       "id": "fr_literary_reference_être_ou_ne_pas_être_telle_est_la_question_0edcd03c",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Exact line from Shakespeare's 'Hamlet' (Act III, Scene 1); French translation is canonical and widely recognized.",
@@ -41051,6 +41316,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Hamlet_(Shakespeare)#Acte_III",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.fr.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Être ou ne pas être, telle est la question",
         "Être ou ne pas être, telle est la question.",
@@ -42206,6 +42472,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.fr.explanation.biblical_literary_traditions_aller_au_désert",
       "id": "fr_proverb_tradition_aller_au_désert_6758ab99",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42220,6 +42487,7 @@
       "source_url": "https://www.larousse.fr/dictionnaires/francais/d%C3%A9sert/24750",
       "source_work": "Bible / Various",
       "source_work_key": "mnemosyne.fr.work.bible_various",
+      "subcategory": "biblical",
       "surface_patterns": [
         "aller au désert",
         "partir au désert",

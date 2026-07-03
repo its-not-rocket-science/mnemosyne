@@ -36,12 +36,14 @@
       "canonical_reference": "et tu Brute",
       "confidence": 0.88,
       "id": "et_tu_brute",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "reference_type": "classical_or_scriptural_allusion",
       "register": "classical",
       "short_explanation": "A betrayal by someone close.",
       "source_work": "Shakespeare/Caesar tradition",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "et tu Brute"
       ]
@@ -232,6 +234,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.la.explanation.hebrew_bible_genesis_abraham_et_isaac_in_monte",
       "id": "la_classical_or_scriptural_allusion_abraham_et_isaac_in_monte_bf2be683",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -246,6 +249,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Genesis+22&version=NIV",
       "source_work": "Genesis",
       "source_work_key": "mnemosyne.la.work.genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Abraham et Isaac in monte",
         "Abraham et Isaac",
@@ -7680,6 +7684,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.latin_cultural_references_ecce_ancilla_domini",
       "id": "la_classical_or_scriptural_allusion_ecce_ancilla_domini_44e7047f",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Luke 1:38 in the Vulgate with correct surface patterns.",
@@ -7694,6 +7699,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0059:book=Luke:chapter=1&highlight=ancilla",
       "source_work": "Biblia Sacra Vulgata (Luke 1:38)",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata_luke_1_38",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Ecce ancilla Domini",
         "ancilla Domini",
@@ -9643,6 +9649,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.latin_phrases_general_hoc_est_corpus_meum",
       "id": "la_classical_or_scriptural_allusion_hoc_est_corpus_meum_88ea4319",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly identified as Vulgate Matthew 26:26.",
@@ -9657,6 +9664,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+26%3A26&version=VULGATE",
       "source_work": "Vulgate (Matthew 26:26)",
       "source_work_key": "mnemosyne.la.work.vulgate_matthew_26_26",
+      "subcategory": "biblical",
       "surface_patterns": [
         "hoc est corpus meum",
         "this is my body"
@@ -10593,6 +10601,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.la.explanation.bible_vulgate_lux_in_tenebris",
       "id": "la_classical_or_scriptural_allusion_lux_in_tenebris_dce3c0dd",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10607,6 +10616,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=John+1%3A5&version=VULGATE",
       "source_work": "Gospel of John",
       "source_work_key": "mnemosyne.la.work.gospel_of_john",
+      "subcategory": "biblical",
       "surface_patterns": [
         "lux in tenebris",
         "lux in tenebris est"
@@ -11035,6 +11045,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.la.explanation.genesis_vulgate_phrases_memento_homo_quia_pulvis_e",
       "id": "la_classical_or_scriptural_allusion_memento_homo_quia_pulvis_es_et_in_pulverem_reverteris_c6508f7b",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11049,6 +11060,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Genesis+3%3A19&version=VULGATE",
       "source_work": "Genesis",
       "source_work_key": "mnemosyne.la.work.genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Memento, homo, quia pulvis es et in pulverem reverteris",
         "Memento homo quia pulvis es et in pulverem reverteris",
@@ -15699,6 +15711,7 @@
         "zh": "一种从传统创世日期开始计算年份的年代系统，用于犹太教和某些基督教传统。反映了中世纪对圣经事件进行年代测定的尝试。"
       },
       "id": "la_cultural_reference_anno_mundi_5b944a5d",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and explanation are accurate and verifiable.",
@@ -15712,6 +15725,7 @@
       "source_url": "https://www.sefaria.org/",
       "source_work": "Hebrew Bible (Tanakh) and Rabbinic literature",
       "source_work_key": "mnemosyne.la.work.hebrew_bible_tanakh_and_rabbinic_literature",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Anno Mundi",
         "A.M."
@@ -28860,6 +28874,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.la.explanation.shakespeare_stage_directions_exeunt_omnes",
       "id": "la_literary_reference_exeunt_omnes_d7c8468e",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -28873,6 +28888,7 @@
       "source_url": "https://www.opensourceshakespeare.org/",
       "source_work": "Various (Shakespearean tradition)",
       "source_work_key": "mnemosyne.la.work.various_shakespearean_tradition",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Exeunt omnes",
         "Exeunt omnes (stage direction)"
@@ -32192,6 +32208,7 @@
         "zh": "这个短语翻译为“不要碰我”，并且著名地归于耶稣在约翰福音中，象征着神圣与世俗之间的界限。"
       },
       "id": "la_literary_reference_noli_me_tangere_ae3e2011",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the phrase is correctly linked to the Gospel of John and its context.",
@@ -32206,6 +32223,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=John+20%3A17&version=NIV",
       "source_work": "Gospel of John",
       "source_work_key": "mnemosyne.la.work.gospel_of_john",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Noli me tangere"
       ]
@@ -33577,6 +33595,7 @@
         "zh": "这个短语翻译为“什么是真理？”，它是由彼拉多在约翰福音中著名地说出，提出了关于真理本质的哲学问题。"
       },
       "id": "la_literary_reference_quid_est_veritas_0481b014",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the phrase is correctly linked to the Gospel of John and its philosophical implications.",
@@ -33591,6 +33610,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=John+18%3A38&version=NIV",
       "source_work": "Gospel of John",
       "source_work_key": "mnemosyne.la.work.gospel_of_john",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Quid est veritas?",
         "quid est veritas"

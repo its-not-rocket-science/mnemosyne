@@ -174,6 +174,7 @@
         "zh": "圣经中的第一个男人和女人亚当与夏娃，他们的不顺从导致了人类的堕落。基督教神学中的基础故事，常在艺术、文学和习语中被引用（如‘苹果不落离树远’）。"
       },
       "id": "de_classical_or_scriptural_allusion_adam_und_eva_568e90bd",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "A1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to the Bible and theological context are accurate; surface patterns and idiomatic references are correct.",
@@ -188,6 +189,7 @@
       "source_url": "https://www.bibleserver.com/ELB/1.Mose3",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.de.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Adam und Eva",
         "Adam und Evas",
@@ -925,6 +927,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.de.explanation.biblical_texts_arche_noah",
       "id": "de_classical_or_scriptural_allusion_arche_noah_ee7668c5",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns correctly match the text.",
@@ -939,6 +942,7 @@
       "source_url": "https://www.bibel-online.net/bibel/online/elberfelder/1.mose/6/",
       "source_work": "Genesis",
       "source_work_key": "mnemosyne.de.work.genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Arche Noah",
         "die Arche Noah"
@@ -1553,6 +1557,7 @@
         "zh": "《新约圣经》中的一个比喻（路加福音10:25-37），讲述一个撒玛利亚人帮助受伤男子的故事，阐释怜悯与邻人之爱的美德。"
       },
       "id": "de_classical_or_scriptural_allusion_barmherziger_samariter_f3adec25",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Parable is accurately sourced from the New Testament and culturally significant.",
@@ -1567,6 +1572,7 @@
       "source_url": "https://www.bibleserver.com/DE/LUT/Lukas10,25-37",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.de.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "der barmherzige Samariter",
         "Barmherziger Samariter",
@@ -1592,6 +1598,7 @@
         "zh": "知识之树指的是《创世纪》中伊甸园的树，其果实赋予善恶的知识，象征着诱惑和失去纯真。"
       },
       "id": "de_classical_or_scriptural_allusion_baum_der_erkenntnis_73588b04",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns correctly match the text.",
@@ -1606,6 +1613,7 @@
       "source_url": "https://www.bibel-online.net/bibel/online/elberfelder/1.mose/2/",
       "source_work": "Genesis",
       "source_work_key": "mnemosyne.de.work.genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Baum der Erkenntnis",
         "der Baum der Erkenntnis"
@@ -3206,6 +3214,7 @@
       "confidence": 0.84,
       "explanation_key": "mnemosyne.de.explanation.bible_teufel_beelzebub_allusion_den_teufel_mit_bee",
       "id": "de_classical_or_scriptural_allusion_den_teufel_mit_beelzebub_austreiben_531a07b0",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3220,6 +3229,7 @@
       "source_url": "https://www.bibleserver.com/DE1951/Matth%C3%A4us12,24",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.de.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "den Teufel mit Beelzebub austreiben",
         "Teufel mit Beelzebub austreiben",
@@ -3844,6 +3854,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.de.explanation.biblical_allusions_german_der_mensch_als_göttliche",
       "id": "de_classical_or_scriptural_allusion_der_mensch_als_göttliches_wesen_4c436d5c",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3858,6 +3869,7 @@
       "source_url": "https://www.bibleserver.com/Genesis1:27",
       "source_work": "Genesis",
       "source_work_key": "mnemosyne.de.work.genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Der Mensch als göttliches Wesen",
         "Mensch als göttliches Wesen"
@@ -5605,6 +5617,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.biblical_creation_michelangelo_die_erschaffung_ada",
       "id": "de_classical_or_scriptural_allusion_die_erschaffung_adams_a92bf0d0",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5619,6 +5632,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Genesis+2%3A7&version=NIV",
       "source_work": "Bibel / Genesis",
       "source_work_key": "mnemosyne.de.work.bibel_genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Die Erschaffung Adams",
         "Erschaffung Adams"
@@ -6005,6 +6019,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.de.explanation.biblical_references_die_hexe_von_endor",
       "id": "de_classical_or_scriptural_allusion_die_hexe_von_endor_fffa3985",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference is accurate and correctly identifies the biblical source and its significance.",
@@ -6019,6 +6034,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=1+Samuel+28&version=ELB",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.de.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Die Hexe von Endor",
         "Hexe von Endor"
@@ -6471,6 +6487,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.biblical_allusions_german_die_rache_ist_mein_spric",
       "id": "de_classical_or_scriptural_allusion_die_rache_ist_mein_spricht_der_herr_4cf77c76",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6485,6 +6502,7 @@
       "source_url": "https://www.bibleserver.com/DELUT/Roemer12,19",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.de.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Die Rache ist mein, spricht der Herr",
         "Rache ist mein, spricht der Herr",
@@ -7387,6 +7405,7 @@
         "zh": "耶稣基督被钉十字架时戴的荆棘冠冕，象征苦难与牺牲。是基督教的核心象征，代表救赎与殉道。"
       },
       "id": "de_classical_or_scriptural_allusion_dornenkrone_9913e4c3",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and surface patterns are accurate and verifiable in Christian scripture and German cultural references.",
@@ -7401,6 +7420,7 @@
       "source_url": "https://www.bibleserver.com/Matthäus27,29",
       "source_work": "Bibel / New Testament",
       "source_work_key": "mnemosyne.de.work.bibel_new_testament",
+      "subcategory": "biblical",
       "surface_patterns": [
         "die Dornenkrone",
         "Dornenkrone",
@@ -8052,6 +8072,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.bibel_goldenes_kalb_goldenes_kalb",
       "id": "de_classical_or_scriptural_allusion_goldenes_kalb_04becebd",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8066,6 +8087,7 @@
       "source_url": "https://www.bibleserver.com/DE1951/2.Mose32",
       "source_work": "Bibel (Exodus 32:1–6)",
       "source_work_key": "mnemosyne.de.work.bibel_exodus_32_1_6",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Goldenes Kalb",
         "ein goldenes Kalb",
@@ -8116,6 +8138,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.biblical_phrases_de_gott_mit_uns",
       "id": "de_classical_or_scriptural_allusion_gott_mit_uns_c10af64f",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8129,6 +8152,7 @@
       "source_url": "https://www.bibleserver.com/DE/LUT/Isaiah7,14",
       "source_work": "Bibel / Bible",
       "source_work_key": "mnemosyne.de.work.bibel_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Gott ist mit uns",
         "Gott war mit uns",
@@ -8141,6 +8165,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.de.explanation.german_biblical_allusions_gott_mit_uns",
       "id": "de_classical_or_scriptural_allusion_gott_mit_uns_c1ac941e",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8155,6 +8180,7 @@
       "source_url": "https://www.bibleserver.com/DE/LUT/Geremia15,20",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.de.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Gott mit uns",
         "Gott mit uns!",
@@ -8239,6 +8265,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.shakespeare_hamlet_phrases_hamlet_s_monolog",
       "id": "de_classical_or_scriptural_allusion_hamlet_s_monolog_d6b45fe6",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8253,6 +8280,7 @@
       "source_url": "https://www.gutenberg.org/files/1524/1524-h/1524-h.htm#act3",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.de.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Hamlets Monolog",
         "Hamlets Monolog (\"Sein oder Nichtsein\")",
@@ -8612,6 +8640,7 @@
         "zh": "圣经中以忍受巨大苦难著称的人物。‘Hiobsbotschaft’意为‘坏消息’，‘Hiobsgeduld’指面对逆境的耐心。"
       },
       "id": "de_classical_or_scriptural_allusion_hiob_165cc2a8",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to the Book of Job is accurate and verifiable; surface patterns and explanations are correct.",
@@ -8626,6 +8655,7 @@
       "source_url": "https://www.bibleserver.com/ELB/Job1",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.de.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "der Hiob",
         "ein Hiob",
@@ -8882,6 +8912,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.bibel_schweiss_angesichts_im_schweisse_deines_ange",
       "id": "de_classical_or_scriptural_allusion_im_schweisse_deines_angesichts_cc0a092c",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8896,6 +8927,7 @@
       "source_url": "https://www.bibleserver.com/DE1951/1.Mose3",
       "source_work": "Bibel (1. Mose/Genesis)",
       "source_work_key": "mnemosyne.de.work.bibel_1_mose_genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "im Schweiße deines Angesichts",
         "im Schweiß seines Angesichts",
@@ -9103,6 +9135,7 @@
         "zh": "因背叛而得到的贿赂或奖赏，源于犹大出卖耶稣所得的酬劳。常用于比喻任何不义之财。"
       },
       "id": "de_classical_or_scriptural_allusion_judaslohn_10afde35",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to the Gospel of Matthew is precise and verifiable; surface patterns and explanations are accurate.",
@@ -9117,6 +9150,7 @@
       "source_url": "https://www.bibleserver.com/ELB/Matth%C3%A4us26:15",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.de.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "der Judaslohn",
         "ein Judaslohn",
@@ -9179,6 +9213,7 @@
         "zh": "与圣经中该隐与亚伯故事相关的印记或耻辱，象征罪恶感、羞耻或错误行为的可见标志。常用于比喻描述罪恶感的负担。"
       },
       "id": "de_classical_or_scriptural_allusion_kainsmal_24796b58",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Biblical attribution (Genesis 4:15) is accurate and the surface patterns align with scriptural and literary usage.",
@@ -9193,6 +9228,7 @@
       "source_url": "https://www.bibleserver.com/text/LUT/1.Mose4,15",
       "source_work": "Bibel (Genesis)",
       "source_work_key": "mnemosyne.de.work.bibel_genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Kainsmal",
         "das Kainsmal",
@@ -9595,6 +9631,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.de.explanation.bible_exodus_phrases_manna_fällt_vom_himmel",
       "id": "de_classical_or_scriptural_allusion_manna_fällt_vom_himmel_063e711c",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9609,6 +9646,7 @@
       "source_url": "https://www.bibleserver.com/DE1951/Exodus16",
       "source_work": "Das Zweite Buch Mose (Exodus)",
       "source_work_key": "mnemosyne.de.work.das_zweite_buch_mose_exodus",
+      "subcategory": "biblical",
       "surface_patterns": [
         "das Manna fällt vom Himmel",
         "wie Manna vom Himmel fallen"
@@ -10889,6 +10927,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.biblical_phrases_de_sodom_und_gomorra",
       "id": "de_classical_or_scriptural_allusion_sodom_und_gomorra_0e37363e",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10903,6 +10942,7 @@
       "source_url": "https://www.bibleserver.com/DE/LUT/Genesis18,1-33",
       "source_work": "Bibel / Bible",
       "source_work_key": "mnemosyne.de.work.bibel_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "wie Sodom und Gomorra"
       ]
@@ -11042,6 +11082,7 @@
         "zh": "源于圣经仪式中将罪恶转嫁给山羊（利未记16章），指被不公平地归咎于他人的错误或不幸的人。"
       },
       "id": "de_classical_or_scriptural_allusion_sündenbock_8efffa9e",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correct biblical allusion with precise source and usage patterns.",
@@ -11056,6 +11097,7 @@
       "source_url": "https://www.bibleserver.com/DE/LUT/Leviticus16",
       "source_work": "Bible (Leviticus)",
       "source_work_key": "mnemosyne.de.work.bible_leviticus",
+      "subcategory": "biblical",
       "surface_patterns": [
         "zum Sündenbock machen",
         "der Sündenbock sein",
@@ -31093,6 +31135,7 @@
         "zh": "基督教节日，庆祝东方三博士朝拜圣婴耶稣。在德国，这是一个公共假日（1月6日），传统包括用粉笔祝福家庭。"
       },
       "id": "de_cultural_reference_heilige_drei_könige_576c08f6",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution, surface patterns, and explanation are accurate and verifiable.",
@@ -31107,6 +31150,7 @@
       "source_url": "https://www.bibleserver.com/Matthäus2,1-12",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.de.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Heilige Drei Könige",
         "die Heiligen Drei Könige",
@@ -48619,6 +48663,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.de.explanation.biblical_allusions_german_wie_im_paradies",
       "id": "de_cultural_reference_wie_im_paradies_3293551c",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -48633,6 +48678,7 @@
       "source_url": "https://www.bibleserver.com/Genesis2",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.de.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "wie im Paradies",
         "sich fühlen wie im Paradies",
@@ -53772,6 +53818,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.shakespeare_hamlet_german_phrases_der_rest_ist_sch",
       "id": "de_literary_reference_der_rest_ist_schweigen_529f16ef",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -53786,6 +53833,7 @@
       "source_url": "https://www.projekt-gutenberg.org/shakesp/hamlet05.html",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.de.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Der Rest ist Schweigen",
         "Und der Rest ist Schweigen"
@@ -57672,6 +57720,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.shakespeare_as_you_like_it_german_phrases_die_welt",
       "id": "de_literary_reference_die_welt_ist_eine_bühne_169d95ec",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -57686,6 +57735,7 @@
       "source_url": "https://www.projekt-gutenberg.org/shakesp/asyoulik.html",
       "source_work": "As You Like It",
       "source_work_key": "mnemosyne.de.work.as_you_like_it",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Die Welt ist eine Bühne",
         "Die ganze Welt ist eine Bühne",
@@ -59223,6 +59273,7 @@
         "zh": "莎士比亚悲剧的主人公，象征着优柔寡断与存在主义的怀疑。在德语中，*Hamlet*常代表哲学或心理上的困境。"
       },
       "id": "de_literary_reference_hamlet_dcb17698",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and explanation are accurate and verifiable.",
@@ -59237,6 +59288,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1527",
       "source_work": "The Tragedy of Hamlet, Prince of Denmark",
       "source_work_key": "mnemosyne.de.work.the_tragedy_of_hamlet_prince_of_denmark",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Hamlet",
         "der Hamlet",
@@ -59250,6 +59302,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.de.explanation.schiller_shakespeare_adaptations_hamlet_oder_die_l",
       "id": "de_literary_reference_hamlet_oder_die_lange_nacht_nimmt_ein_ende_661f4a5c",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -59263,6 +59316,7 @@
       "source_url": "https://de.wikisource.org/wiki/Hamlet_oder_Die_lange_Nacht_nimmt_ein_Ende",
       "source_work": "Hamlet oder Die lange Nacht nimmt ein Ende",
       "source_work_key": "mnemosyne.de.work.hamlet_oder_die_lange_nacht_nimmt_ein_ende",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Die lange Nacht nimmt ein Ende",
         "lange Nacht nimmt ein Ende"
@@ -59274,6 +59328,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.shakespeare_hamlet_hamlet_sein_oder_nichtsein",
       "id": "de_literary_reference_hamlet_sein_oder_nichtsein_50ac4704",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -59288,6 +59343,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/65",
       "source_work": "The Tragedy of Hamlet, Prince of Denmark",
       "source_work_key": "mnemosyne.de.work.the_tragedy_of_hamlet_prince_of_denmark",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Sein oder Nichtsein, das ist hier die Frage"
       ]
@@ -61587,6 +61643,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.shakespeare_othello_phrases_othello_der_mohr_von_v",
       "id": "de_literary_reference_othello_der_mohr_von_venedig_a111f2c5",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -61600,6 +61657,7 @@
       "source_url": "https://www.gutenberg.org/files/1531/1531-h/1531-h.htm",
       "source_work": "The Tragedy of Othello, the Moor of Venice",
       "source_work_key": "mnemosyne.de.work.the_tragedy_of_othello_the_moor_of_venice",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Othello, der Mohr von Venedig",
         "der Mohr von Venedig",
@@ -61625,6 +61683,7 @@
         "zh": "奥赛罗是威廉·莎士比亚的一部悲剧，探讨了嫉妒、背叛和种族主义的主题。"
       },
       "id": "de_literary_reference_othello_f5958436",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable, and the surface patterns correctly reflect the themes of Shakespeare's tragedy.",
@@ -61639,6 +61698,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1531",
       "source_work": "Othello",
       "source_work_key": "mnemosyne.de.work.othello",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Othello",
         "Der Othello",
@@ -61803,6 +61863,7 @@
         "zh": "威廉·莎士比亚的一部悲剧，讲述了两位年轻恋人的死亡最终使他们对立的家庭和解。它是西方文学的基石，探讨了爱、命运和冲突的主题。"
       },
       "id": "de_literary_reference_romeo_und_julia_d4664667",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly reflect the text's themes and significance.",
@@ -61817,6 +61878,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/151",
       "source_work": "Romeo and Juliet",
       "source_work_key": "mnemosyne.de.work.romeo_and_juliet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Romeo und Julia",
         "Romeo und Julia von Shakespeare",
@@ -62271,6 +62333,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.shakespeare_hamlet_sein_oder_nichtsein_sein_oder_n",
       "id": "de_literary_reference_sein_oder_nichtsein_2f5ef938",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -62285,6 +62348,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1527",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.de.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Sein oder Nicht-Sein",
         "To be or not to be"
@@ -62296,6 +62360,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.de.explanation.en_hamlet_phrases_shakespeares_hamlet",
       "id": "de_literary_reference_shakespeares_hamlet_08aa413f",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -62309,6 +62374,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/65",
       "source_work": "The Tragedy of Hamlet, Prince of Denmark",
       "source_work_key": "mnemosyne.de.work.the_tragedy_of_hamlet_prince_of_denmark",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Hamlet sein",
         "Hamlet spielen",
@@ -63974,6 +64040,7 @@
         "zh": "圣经典故，意为某事完全难以理解或神秘莫测，出自《启示录》中的七印。"
       },
       "id": "de_proverb_tradition_das_ist_für_mich_ein_buch_mit_sieben_siegeln_d7c4bf48",
+      "is_poetic_citation": true,
       "language": "de",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correct biblical allusion and cultural understanding of the phrase.",
@@ -63988,6 +64055,7 @@
       "source_url": "https://www.bibleserver.com/LUT/Offenbarung5",
       "source_work": "Bible (Luther translation)",
       "source_work_key": "mnemosyne.de.work.bible_luther_translation",
+      "subcategory": "biblical",
       "surface_patterns": [
         "ein Buch mit sieben Siegeln",
         "Buch mit sieben Siegeln",

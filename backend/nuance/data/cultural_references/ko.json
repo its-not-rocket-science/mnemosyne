@@ -2030,6 +2030,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ko.explanation.kr_biblical_allusions_네_이웃_사랑하기를_네_몸_같이_하라",
       "id": "ko_classical_or_scriptural_allusion_네_이웃_사랑하기를_네_몸_같이_하라_1af0e995",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2044,6 +2045,7 @@
       "source_url": "https://www.bible.com/ko",
       "source_work": "성경 (Bible)",
       "source_work_key": "mnemosyne.ko.work.성경_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "네 이웃 사랑하기를 네 몸 같이 하라",
         "네 이웃을 네 몸 같이 사랑하라",
@@ -4321,6 +4323,7 @@
         "zh": "来自圣经（哥林多前书13:4）的一句话，意为'爱是恒久忍耐'，描述了爱的持久本质。它经常在韩国的婚礼和基督教教导中被引用。"
       },
       "id": "ko_classical_or_scriptural_allusion_사랑은_오래_참는다_fc9d848d",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Phrase correctly from 1 Corinthians 13:4; frequently used in Korean weddings and Christian teachings.",
@@ -4335,6 +4338,7 @@
       "source_url": "https://ko.wikisource.org/wiki/성경/개역한글/고린도전서",
       "source_work": "성경 (Bible) - 고린도전서 (1 Corinthians)",
       "source_work_key": "mnemosyne.ko.work.성경_bible_고린도전서_1_corinthians",
+      "subcategory": "biblical",
       "surface_patterns": [
         "사랑은 오래 참는다고",
         "사랑은 오래 참는 것",
@@ -4547,6 +4551,7 @@
         "zh": "《马太福音》中的'登山宝训'，是耶稣教导的集合，包括八福。它是基督教伦理的基础文本，在韩国基督教背景中被广泛引用。"
       },
       "id": "ko_classical_or_scriptural_allusion_산상수훈_faf20a71",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Sermon on the Mount is accurately attributed to Matthew's Gospel; common in Korean Christian contexts.",
@@ -4561,6 +4566,7 @@
       "source_url": "https://ko.wikisource.org/wiki/성경/개역한글/마태복음",
       "source_work": "성경 (Bible) - 마태복음 (Matthew)",
       "source_work_key": "mnemosyne.ko.work.성경_bible_마태복음_matthew",
+      "subcategory": "biblical",
       "surface_patterns": [
         "산상수훈의 가르침",
         "산상수훈에 따르면",
@@ -5074,6 +5080,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ko.explanation.bible_korean_phrases_성경_구절_네_이웃을_네_몸과_같이_사랑하라",
       "id": "ko_classical_or_scriptural_allusion_성경_구절_네_이웃을_네_몸과_같이_사랑하라_2e341dc6",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5088,6 +5095,7 @@
       "source_url": "https://bible.godpia.com/read/leviticus/19/18",
       "source_work": "성경 (Holy Bible)",
       "source_work_key": "mnemosyne.ko.work.성경_holy_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "네 이웃을 네 몸과 같이 사랑하라",
         "네 이웃을 네 몸과 같이 사랑해야 한다",
@@ -5596,6 +5604,7 @@
         "zh": "圣经中的'十诫'，是上帝在西奈山上赐予摩西的一套宗教和道德诫命。它们是犹太教和基督教的中心，在韩国文化中广为人知。"
       },
       "id": "ko_classical_or_scriptural_allusion_십계명_e76426be",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Ten Commandments correctly sourced to Exodus and Deuteronomy; standard biblical knowledge in Korea.",
@@ -5610,6 +5619,7 @@
       "source_url": "https://ko.wikisource.org/wiki/성경/개역한글/출애굽기",
       "source_work": "성경 (Bible) - 출애굽기 (Exodus) / 신명기 (Deuteronomy)",
       "source_work_key": "mnemosyne.ko.work.성경_bible_출애굽기_exodus_신명기_deuteronomy",
+      "subcategory": "biblical",
       "surface_patterns": [
         "십계명을 지키다",
         "십계명 중 하나",
@@ -5681,6 +5691,7 @@
         "zh": "十字架，基督教的中心象征，代表耶稣被钉十字架；在韩国语境中，它也出现在文学中作为牺牲和苦难的象征。"
       },
       "id": "ko_classical_or_scriptural_allusion_십자가_353091ca",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate as a Christian symbol; the explanation and source references are correct.",
@@ -5695,6 +5706,7 @@
       "source_url": "https://ko.wikisource.org/wiki/성경",
       "source_work": "Bible (Korean translation)",
       "source_work_key": "mnemosyne.ko.work.bible_korean_translation",
+      "subcategory": "biblical",
       "surface_patterns": [
         "십자가",
         "십자가를 지다",
@@ -24672,6 +24684,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1101001&cid=40942&categoryId=32208",
       "source_work": "판소리계 소설",
       "source_work_key": "mnemosyne.ko.work.판소리계_소설",
+      "subcategory": "pansori",
       "surface_patterns": [
         "칠채",
         "칠채를 이루다",
@@ -24819,6 +24832,7 @@
       "source_license": "not_required",
       "source_work": "속담",
       "source_work_key": "mnemosyne.ko.work.속담",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "피리 부는 사공",
         "피리 부는 사공이",
@@ -35576,6 +35590,7 @@
       "source_license": "not_required",
       "source_work": "속담",
       "source_work_key": "mnemosyne.ko.work.속담",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "고래 싸움에 새우등이 터진다",
         "고래 싸움에 새우등이 터졌다",
@@ -35658,6 +35673,7 @@
       "source_license": "not_required",
       "source_work": "속담",
       "source_work_key": "mnemosyne.ko.work.속담",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "고목에 꽃이 피다",
         "고목에 꽃이 피어",
@@ -35795,6 +35811,7 @@
       "source_license": "not_required",
       "source_work": "속담",
       "source_work_key": "mnemosyne.ko.work.속담",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "고슴도치가 새끼 예쁘다",
         "고슴도치가 새끼를 예쁘게 본다",
@@ -35930,6 +35947,7 @@
       "source_license": "not_required",
       "source_work": "속담",
       "source_work_key": "mnemosyne.ko.work.속담",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "고슴도치의 새끼는 예쁘다",
         "고슴도치 새끼가 예쁘다",
@@ -36131,6 +36149,7 @@
       "source_license": "not_required",
       "source_work": "속담",
       "source_work_key": "mnemosyne.ko.work.속담",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "고운말이 고와야 미운말도 곱다",
         "고운 말이 고와야 미운 말도 곱다",
@@ -36240,6 +36259,7 @@
       "source_license": "not_required",
       "source_work": "속담",
       "source_work_key": "mnemosyne.ko.work.속담",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "곧이곧대로 듣다",
         "곧이곧대로 듣습니다",
@@ -36508,6 +36528,7 @@
       "source_license": "not_required",
       "source_work": "속담",
       "source_work_key": "mnemosyne.ko.work.속담",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "광대도 눈물 흘리는 연극이다",
         "광대도 눈물 흘리는 연극이요",
@@ -41148,6 +41169,7 @@
       "source_license": "not_required",
       "source_work": "속담",
       "source_work_key": "mnemosyne.ko.work.속담",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "장님 보고 코끼리 만진다",
         "장님은 코끼리를 만진다",
@@ -41601,6 +41623,7 @@
       "source_license": "not_required",
       "source_work": "속담",
       "source_work_key": "mnemosyne.ko.work.속담",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "피리 부는 사공은 배가 안 보인다",
         "피리 부는 사공은 배가 보이지 않는다",

@@ -3544,6 +3544,7 @@
         "zh": "土耳其短语，意为“天启四骑士”，源自圣经《启示录》。它象征着征服、战争、饥荒和死亡。"
       },
       "id": "tr_classical_or_scriptural_allusion_mahşerin_dört_atlısı_d3b85a0a",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This phrase is a direct reference to the Four Horsemen of the Apocalypse from the Book of Revelation; attribution and explanation are accurate.",
@@ -3558,6 +3559,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Mah%C5%9Ferin_d%C3%B6rt_atl%C4%B1s%C4%B1",
       "source_work": "Kitab-ı Mukaddes (Bible)",
       "source_work_key": "mnemosyne.tr.work.kitab_ı_mukaddes_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "mahşerin dört atlısı",
         "mahşerin dört atlısı deyimi"
@@ -30117,6 +30119,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.tr.explanation.shakespeare_hamlet_adaptations_hamlet_shakespeare_",
       "id": "tr_literary_reference_hamlet_shakespeare_in_uyarlamaları_30f46be7",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -30130,6 +30133,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1526",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.tr.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Hamlet",
         "Hamlet'i",
@@ -32528,6 +32532,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.tr.explanation.shakespeare_macbeth_adaptations_macbeth_shakespear",
       "id": "tr_literary_reference_macbeth_shakespeare_in_uyarlamaları_5e6dd99b",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -32541,6 +32546,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/2264",
       "source_work": "Macbeth",
       "source_work_key": "mnemosyne.tr.work.macbeth",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Macbeth",
         "Macbeth'i",
@@ -35000,6 +35006,7 @@
         "zh": "威廉·莎士比亚的悲剧，讲述威尼斯的一位摩尔将军，探讨嫉妒和种族主义主题；在土耳其文学界广为人知。"
       },
       "id": "tr_literary_reference_othello_f5958436",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly identifies Shakespeare's play and its relevance in Turkish literary context.",
@@ -35014,6 +35021,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1531",
       "source_work": "Othello",
       "source_work_key": "mnemosyne.tr.work.othello",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Othello",
         "Othello'nun",
@@ -35758,6 +35766,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.tr.explanation.shakespeare_romeo_juliet_phrases_romeo_ve_juliet_s",
       "id": "tr_literary_reference_romeo_ve_juliet_shakespeare_in_uyarlamaları_9688ed8d",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35772,6 +35781,7 @@
       "source_url": "https://www.gutenberg.org/files/1514/1514-h/1514-h.htm",
       "source_work": "Romeo and Juliet",
       "source_work_key": "mnemosyne.tr.work.romeo_and_juliet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Romeo ve Juliet",
         "Romeo'yu ve Juliet'i",
@@ -38367,6 +38377,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.tr.explanation.shakespeare_adaptations_turkey_şehir_tiyatroları_n",
       "id": "tr_literary_reference_şehir_tiyatroları_nın_hamlet_uyarlaması_29679613",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38379,6 +38390,7 @@
       "source_license": "public_domain",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.tr.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Şehir Tiyatroları’nın Hamlet uyarlaması",
         "Hamlet uyarlaması",

@@ -1,28 +1,36 @@
 # Cultural Catalogue Audit
 
-## Update — 2026-07-03
+## Update — 2026-07-03 (rule-based backfill run)
 
-Following quality-gate implementation (Session 3) and false-positive removal, and wiring of Hindi/Turkish/Finnish plugins (Session 1):
+Rule-based subcategory pass (`scripts/infer_subcategory.py`) completed. 9,429 seed entries updated; 9,301 entries now carry `subcategory` in catalogue JSON (128 carry only `is_poetic_citation=True`). 43,012 entries have no matching rule — candidates for LLM pass.
 
-### Subcategory coverage
+### Subcategory coverage (post rule-based backfill)
 
-Subcategory backfill scripts created but not yet run (requires `infer_subcategory.py` + LLM pass). Current state after rebuild:
-
-| Language | Entries | With subcategory | is_poetic_citation |
+| Language | Entries | With subcategory | Coverage |
 |---|---|---|---|
-| en | 12,033 | 0 (0%) | 0 |
-| fa | 985 | 0 (0%) | 0 |
-| ar | 1,260 | 0 (0%) | 0 |
-| hi | 1,585 | 0 (0%) | 0 |
-| zh | 10,537 | 2 (0%) | 0 |
-| ja | 2,210 | 0 (0%) | 0 |
-| ko | 1,374 | 0 (0%) | 0 |
-| ru | 1,900 | 0 (0%) | 0 |
-| de | 2,532 | 0 (0%) | 0 |
-| fr | 1,879 | 0 (0%) | 0 |
-| es | 4,643 | 0 (0%) | 0 |
+| zh | 10,537 | 7,475 | 71% |
+| ar | 1,260 | 386 | 31% |
+| fa | 985 | 242 | 25% |
+| hi | 1,585 | 244 | 15% |
+| ja | 2,210 | 254 | 11% |
+| fr | 1,879 | 134 | 7% |
+| ko | 1,374 | 17 | 1% |
+| fi | 1,341 | 29 | 2% |
+| he | 1,317 | 24 | 2% |
+| de | 2,532 | 34 | 1% |
+| grc | 1,380 | 7 | 1% |
+| la | 1,400 | 10 | 1% |
+| en | 12,033 | 411 | 3% |
+| it | 2,183 | 14 | 1% |
+| es | 4,643 | 7 | 0% |
+| pt | 2,267 | 4 | 0% |
+| tr | 1,615 | 6 | 0% |
+| ru | 1,900 | 3 | 0% |
+| **TOTAL** | **52,441** | **9,301** | **17.7%** |
 
-To populate: run `python scripts/infer_subcategory.py --report` then `python scripts/extend_cultural_catalogue.py --language fa --backfill-subcategory` (etc. per language).
+Remaining 43,012 unclassified entries: run `python scripts/extend_cultural_catalogue.py --language <lang> --backfill-subcategory` per language for LLM pass.
+
+### Quality-gate implementation (Session 3) and false-positive removal, and wiring of Hindi/Turkish/Finnish plugins (Session 1)
 
 ### Spot-test (post false-positive removal)
 

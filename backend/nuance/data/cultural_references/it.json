@@ -2600,6 +2600,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.it.explanation.biblical_phrases_dio_non_è_morto",
       "id": "it_classical_or_scriptural_allusion_dio_non_è_morto_75213b12",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2614,6 +2615,7 @@
       "source_url": "https://www.bibbiaedu.it/CEI/Revelation/1/18",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.it.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Dio non è morto",
         "Dio non muore"
@@ -3699,6 +3701,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.it.explanation.biblical_phrases_gesù_giuseppe_e_maria",
       "id": "it_classical_or_scriptural_allusion_gesù_giuseppe_e_maria_2de72ccd",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3713,6 +3716,7 @@
       "source_url": "https://www.bibbiaedu.it/CEI/Luke/2/48",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.it.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Gesù, Giuseppe e Maria",
         "Gesù Giuseppe e Maria",
@@ -10869,6 +10873,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.it.explanation.shakespeare_merchant_of_venice_proverb_è_tutto_oro",
       "id": "it_classical_or_scriptural_allusion_è_tutto_oro_quel_che_luccica_da_shakespeare_traduzione_itali_d6583ae6",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10883,6 +10888,7 @@
       "source_url": "https://www.gutenberg.org/files/1531/1531-h/1531-h.htm#act2-scene7",
       "source_work": "The Merchant of Venice",
       "source_work_key": "mnemosyne.it.work.the_merchant_of_venice",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "È tutto oro quel che luccica",
         "tutto oro quel che luccica"
@@ -21867,6 +21873,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.shakespeare_romeo_juliet_references_il_balcone_di_",
       "id": "it_cultural_reference_il_balcone_di_giulietta_9b72b34d",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21881,6 +21888,7 @@
       "source_url": "https://www.gutenberg.org/files/1514/1514-h/1514-h.htm",
       "source_work": "Romeo and Juliet",
       "source_work_key": "mnemosyne.it.work.romeo_and_juliet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "il balcone di Giulietta",
         "balcone di Giulietta",
@@ -26529,6 +26537,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.it.explanation.giorgione_tempesta_la_tempesta_di_giorgione",
       "id": "it_cultural_reference_la_tempesta_di_giorgione_b8e10e6f",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26542,6 +26551,7 @@
       "source_url": "https://it.wikipedia.org/wiki/La_Tempesta",
       "source_work": "La Tempesta",
       "source_work_key": "mnemosyne.it.work.la_tempesta",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "La Tempesta di Giorgione",
         "La Tempesta",
@@ -27619,6 +27629,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.it.explanation.verdi_macbeth_phrases_macbeth_vieni_t_affretta",
       "id": "it_cultural_reference_macbeth_vieni_t_affretta_8a124a82",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27633,6 +27644,7 @@
       "source_url": "https://www.gutenberg.org/files/27092/27092-h/27092-h.htm#page90",
       "source_work": "Macbeth",
       "source_work_key": "mnemosyne.it.work.macbeth",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Vieni! t'affretta",
         "Vieni, t'affretta",
@@ -37687,6 +37699,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.shakespeare_hamlet_phrases_amleto_essere_o_non_ess",
       "id": "it_literary_reference_amleto_essere_o_non_essere_5c424b72",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37701,6 +37714,7 @@
       "source_url": "https://www.gutenberg.org/files/1524/1524-h/1524-h.htm#act3",
       "source_work": "The Tragedy of Hamlet, Prince of Denmark",
       "source_work_key": "mnemosyne.it.work.the_tragedy_of_hamlet_prince_of_denmark",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Essere o non essere",
         "Essere o non essere, questo è il problema",
@@ -43527,6 +43541,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.it.explanation.italian_resistance_literature_il_partigiano_johnny",
       "id": "it_literary_reference_il_partigiano_johnny_43cf879b",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43540,6 +43555,7 @@
       "source_url": "https://it.wikisource.org/wiki/Il_partigiano_Johnny",
       "source_work": "Il partigiano Johnny",
       "source_work_key": "mnemosyne.it.work.il_partigiano_johnny",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Il partigiano Johnny",
         "partigiano Johnny",
@@ -43552,6 +43568,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.fenoglio_partigiano_johnny_phrases_il_partigiano_j",
       "id": "it_literary_reference_il_partigiano_johnny_il_partigiano_non_muore_1a33c38c",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43565,6 +43582,7 @@
       "source_url": "https://it.wikisource.org/wiki/Il_partigiano_Johnny",
       "source_work": "Il partigiano Johnny",
       "source_work_key": "mnemosyne.it.work.il_partigiano_johnny",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Il partigiano non muore",
         "Il partigiano Johnny non muore",
@@ -44211,6 +44229,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.en_shakespeare_as_you_like_it_phrase_il_teatro_del",
       "id": "it_literary_reference_il_teatro_del_mondo_da_shakespeare_traduzione_italiana_di_al_dbf12178",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44225,6 +44244,7 @@
       "source_url": "https://www.gutenberg.org/files/150/150-h/150-h.htm#act2-7",
       "source_work": "As You Like It",
       "source_work_key": "mnemosyne.it.work.as_you_like_it",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "il teatro del mondo",
         "il mondo è un teatro",
@@ -46738,6 +46758,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.shakespeare_macbeth_references_macbeth_streghe_e_i",
       "id": "it_literary_reference_macbeth_streghe_e_il_destino_91d1617d",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -46752,6 +46773,7 @@
       "source_url": "https://www.gutenberg.org/files/1533/1533-h/1533-h.htm",
       "source_work": "Macbeth",
       "source_work_key": "mnemosyne.it.work.macbeth",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Macbeth e le streghe",
         "le streghe di Macbeth",
@@ -47940,6 +47962,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.it.explanation.shakespeare_othello_references_otello_moretta_pell",
       "id": "it_literary_reference_otello_moretta_pellegrina_37660f15",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -47954,6 +47977,7 @@
       "source_url": "https://www.gutenberg.org/files/1533/1533-h/1533-h.htm",
       "source_work": "Othello",
       "source_work_key": "mnemosyne.it.work.othello",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "la moretta pellegrina",
         "Otello e Desdemona",
@@ -52303,6 +52327,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.it.explanation.italian_proverbs_common_a_tutte_le_feste_scappare",
       "id": "it_proverb_tradition_a_tutte_le_feste_scappare_09399b44",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -52316,6 +52341,7 @@
       "source_license": "not_required",
       "source_work": "Italian Proverbs",
       "source_work_key": "mnemosyne.it.work.italian_proverbs",
+      "subcategory": "biblical",
       "surface_patterns": [
         "a tutte le feste scappare",
         "a tutte le feste scappare non si può",
@@ -52453,6 +52479,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.it.explanation.italian_proverbs_common_a_voler_di_miele",
       "id": "it_proverb_tradition_a_voler_di_miele_bd61700c",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -52466,6 +52493,7 @@
       "source_license": "not_required",
       "source_work": "Italian Proverbs",
       "source_work_key": "mnemosyne.it.work.italian_proverbs",
+      "subcategory": "biblical",
       "surface_patterns": [
         "a voler di miele",
         "a voler di miele e di fiele",

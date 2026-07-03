@@ -6501,6 +6501,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.pt.explanation.en_shakespeare_hamlet_pt_o_choro_de_ofélia_em_haml",
       "id": "pt_classical_or_scriptural_allusion_o_choro_de_ofélia_em_hamlet_de_shakespeare_versão_portuguesa_db39befa",
+      "is_poetic_citation": true,
       "language": "pt",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6515,6 +6516,7 @@
       "source_url": "https://pt.wikisource.org/wiki/Hamlet",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.pt.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "o choro de Ofélia",
         "a loucura de Ofélia",
@@ -50928,6 +50930,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.pt.explanation.shakespeare_hamlet_phrases_há_mais_coisas_no_céu_e",
       "id": "pt_literary_reference_há_mais_coisas_no_céu_e_na_terra_do_que_sonha_a_tua_vã_filos_cc1d244d",
+      "is_poetic_citation": true,
       "language": "pt",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -50942,6 +50945,7 @@
       "source_url": "https://www.gutenberg.org/files/1526/1526-h/1526-h.htm",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.pt.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Há mais coisas no céu e na terra do que sonha a tua vã filosofia",
         "There are more things in heaven and earth, Horatio, than are dreamt of in your philosophy",
@@ -55567,6 +55571,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.pt.explanation.pt_shakespeare_hamlet_o_pranto_de_ofélia_em_romeu_",
       "id": "pt_literary_reference_o_pranto_de_ofélia_em_romeu_e_julieta_de_shakespeare_versão__267a4e5c",
+      "is_poetic_citation": true,
       "language": "pt",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -55581,6 +55586,7 @@
       "source_url": "https://pt.wikisource.org/wiki/Hamlet",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.pt.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "pranto de Ofélia",
         "Ofélia chorando"
@@ -56345,6 +56351,7 @@
         "zh": "威廉·莎士比亚的喜剧，讲述雅典森林中的仙子、身份误认与魔法恶作剧。探讨爱情、幻觉与现实的主题。"
       },
       "id": "pt_literary_reference_o_sonho_de_uma_noite_de_verão_ec7b3ef5",
+      "is_poetic_citation": true,
       "language": "pt",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference is accurate, verifiable, and correctly attributed to Shakespeare's 'A Midsummer Night's Dream'.",
@@ -56359,6 +56366,7 @@
       "source_url": "https://pt.wikisource.org/wiki/Sonho_de_Uma_Noite_de_Ver%C3%A3o/Atos",
       "source_work": "A Midsummer Night's Dream",
       "source_work_key": "mnemosyne.pt.work.a_midsummer_night_s_dream",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "o sonho de uma noite de verão",
         "Sonho de uma Noite de Verão",

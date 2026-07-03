@@ -3197,6 +3197,7 @@
         "zh": "出自诗篇97:11的短语，意为“为义人撒种光明”，用于表达对义人的希望和奖赏。常在犹太教礼仪和文学中被引用。"
       },
       "id": "he_classical_or_scriptural_allusion_אור_זרוע_לצדיק_36fde7f4",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is accurately quoted from Psalms 97:11 and its usage is correctly described.",
@@ -3211,6 +3212,7 @@
       "source_url": "https://mechon-mamre.org/p/pt/pt2697.htm#11",
       "source_work": "Psalms",
       "source_work_key": "mnemosyne.he.work.psalms",
+      "subcategory": "biblical",
       "surface_patterns": [
         "אור זרוע לצדיק",
         "אור זרוע"
@@ -3610,6 +3612,7 @@
         "zh": "意为“请不要走”的短语，出现在希伯来圣经（创世记18:3）中，亚伯拉罕请求天使不要离开。是一种礼貌的恳求。"
       },
       "id": "he_classical_or_scriptural_allusion_אל_נא_תלך_7ba35321",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical reference with correct source location.",
@@ -3624,6 +3627,7 @@
       "source_url": "https://www.sefaria.org/Genesis.18.3",
       "source_work": "Tanakh (Hebrew Bible)",
       "source_work_key": "mnemosyne.he.work.tanakh_hebrew_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "אל נא תלך",
         "אל תלך נא"
@@ -3762,6 +3766,7 @@
         "zh": "这句话告诫不要过度依赖人类的智慧，呼应了圣经中的主题，如箴言3:5（“你要专心仰赖耶和华，不可倚靠自己的聪明”）。在犹太伦理文学中用于强调在神圣智慧面前的谦卑。"
       },
       "id": "he_classical_or_scriptural_allusion_אל_תבטח_בחכמה_b082bbbf",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Proverbs 3:5 is accurate as an allusion; surface patterns match the biblical theme.",
@@ -3776,6 +3781,7 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%9C%D7%99_%D7%92",
       "source_work": "משלי (Proverbs)",
       "source_work_key": "mnemosyne.he.work.משלי_proverbs",
+      "subcategory": "biblical",
       "surface_patterns": [
         "אל תבטח בחכמה",
         "אל תבטחו בחכמה",
@@ -4079,6 +4085,7 @@
         "zh": "出自箴言23:9（“不要说话给愚昧人听”），警告不要对轻视智慧的人浪费言语。用于建议在沟通中要有辨别力。"
       },
       "id": "he_classical_or_scriptural_allusion_אל_תדבר_אל_אוזן_כסיל_3df4a17a",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Proverbs 23:9; surface patterns and explanation are correct.",
@@ -4093,6 +4100,7 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%9C%D7%99_%D7%9B%D7%92",
       "source_work": "משלי (Proverbs)",
       "source_work_key": "mnemosyne.he.work.משלי_proverbs",
+      "subcategory": "biblical",
       "surface_patterns": [
         "אל תדבר אל אוזן כסיל",
         "אל תדברו אל אוזן כסיל",
@@ -4156,6 +4164,7 @@
         "zh": "出自十诫（出埃及记20:13，“不可作假见证陷害人”），禁止作假见证。这是犹太教的基本伦理原则。"
       },
       "id": "he_classical_or_scriptural_allusion_אל_תדבר_שקר_ברעך_ee5af2dc",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Exodus 20:13; surface patterns match the commandment.",
@@ -4170,6 +4179,7 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%A9%D7%9E%D7%95%D7%AA_%D7%9B",
       "source_work": "שמות (Exodus)",
       "source_work_key": "mnemosyne.he.work.שמות_exodus",
+      "subcategory": "biblical",
       "surface_patterns": [
         "אל תדבר שקר ברעך",
         "אל תדברו שקר ברעכם",
@@ -4234,6 +4244,7 @@
         "zh": "来自箴言3:7的圣经告诫，警告不要依赖自己的智慧。它强调谦卑和对神圣指引的信任。"
       },
       "id": "he_classical_or_scriptural_allusion_אל_תהי_חכם_בעיניך_dd5abb5f",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical reference from Proverbs 3:7; surface patterns match and explanation is correct.",
@@ -4248,6 +4259,7 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%9C%D7%99_%D7%92_%D7%96",
       "source_work": "משלי (Proverbs)",
       "source_work_key": "mnemosyne.he.work.משלי_proverbs",
+      "subcategory": "biblical",
       "surface_patterns": [
         "אל תהי חכם בעיניך",
         "אל תהיה חכם בעיניך",
@@ -4579,6 +4591,7 @@
         "zh": "出自《创世记》3:20对夏娃的圣经称号，意为“众生之母”，用于表示人类的起源或作为对赋予生命力量的诗歌引用。"
       },
       "id": "he_classical_or_scriptural_allusion_אם_כל_חי_9ecec2e9",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Genesis 3:20 is accurate and surface patterns are correct.",
@@ -4593,6 +4606,7 @@
       "source_url": "https://he.wikisource.org/wiki/בראשית_ג_כ",
       "source_work": "בראשית (Genesis)",
       "source_work_key": "mnemosyne.he.work.בראשית_genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "אם כל חי",
         "אם כל החי",
@@ -4709,6 +4723,7 @@
         "zh": "十诫的开头语句，宣告上帝的身份和对以色列的权威。"
       },
       "id": "he_classical_or_scriptural_allusion_אנכי_ה_אלהיך_40cada77",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Exodus 20:2 and Deuteronomy 5:6 with correct explanation and plausible confidence.",
@@ -4723,6 +4738,7 @@
       "source_url": "https://www.sefaria.org/Exodus.20.2",
       "source_work": "תנ״ך (Tanakh) – Exodus 20:2, Deuteronomy 5:6",
       "source_work_key": "mnemosyne.he.work.תנ_ך_tanakh_exodus_20_2_deuteronomy_5_6",
+      "subcategory": "biblical",
       "surface_patterns": [
         "אנכי ה' אלהיך",
         "אנכי ה' אלוהיך",
@@ -4865,6 +4881,7 @@
         "zh": "出自《箴言》28:14，意为“常存敬畏的人有福了”（即谨慎）。强调犹太伦理中谨慎和畏惧行恶的美德。"
       },
       "id": "he_classical_or_scriptural_allusion_אשרי_אדם_מפחד_תמיד_05d60f36",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical reference from Proverbs 28:14 with correct meaning.",
@@ -4879,6 +4896,7 @@
       "source_url": "https://he.wikisource.org/wiki/משלי_כח",
       "source_work": "משלי (Proverbs)",
       "source_work_key": "mnemosyne.he.work.משלי_proverbs",
+      "subcategory": "biblical",
       "surface_patterns": [
         "אשרי אדם מפחד תמיד",
         "אשרי אדם מפחד"
@@ -5369,6 +5387,7 @@
         "zh": "出自《箴言》3:6的圣经经文，意为“在你一切所行的事上都要认定他，他必指引你的路”。常用来鼓励在日常生活中依靠上帝。"
       },
       "id": "he_classical_or_scriptural_allusion_בכל_דרכיך_דעהו_cd09dc10",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Proverbs 3:6 is accurate and surface patterns match the verse.",
@@ -5383,6 +5402,7 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%9C%D7%99_%D7%92",
       "source_work": "משלי (Proverbs)",
       "source_work_key": "mnemosyne.he.work.משלי_proverbs",
+      "subcategory": "biblical",
       "surface_patterns": [
         "בכל דרכיך דעהו",
         "בכל דרכיך דעהו והוא יישר אורחותיך"
@@ -5470,6 +5490,7 @@
         "zh": "出自《创世记》3:16，神对夏娃的咒诅：“你必在痛苦中生育儿女。”这是一句圣经短语，指生育的艰辛，常被隐喻用于困难的创作过程。"
       },
       "id": "he_classical_or_scriptural_allusion_בעצב_תלדי_בנים_4c3b598e",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical reference from Genesis 3:16 with correct meaning.",
@@ -5484,6 +5505,7 @@
       "source_url": "https://he.wikisource.org/wiki/בראשית_ג",
       "source_work": "בראשית (Genesis)",
       "source_work_key": "mnemosyne.he.work.בראשית_genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "בעצב תלדי בנים",
         "בעצב תלדי"
@@ -6195,6 +6217,7 @@
         "zh": "出自《箴言》15:23的短语，意为“话合其时，何等美好！”强调适时说话的价值。"
       },
       "id": "he_classical_or_scriptural_allusion_דבר_בעתו_מה_טוב_065afa3f",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Proverbs 15:23; surface patterns and explanation accurate.",
@@ -6209,6 +6232,7 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%9C%D7%99_%D7%98%D7%95",
       "source_work": "משלי (Proverbs)",
       "source_work_key": "mnemosyne.he.work.משלי_proverbs",
+      "subcategory": "biblical",
       "surface_patterns": [
         "דבר בעתו מה טוב",
         "דבר בעתו"
@@ -6412,6 +6436,7 @@
         "zh": "出自《箴言》3:17，描述智慧之道令人愉悦且和平。常用来强调妥拉或智慧的温和与和谐本质。"
       },
       "id": "he_classical_or_scriptural_allusion_דרכיה_דרכי_נועם_6982d73f",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Proverbs 3:17 is accurate and surface patterns are correct.",
@@ -6426,6 +6451,7 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%9C%D7%99_%D7%92_%D7%99%D7%96",
       "source_work": "משלי (Proverbs)",
       "source_work_key": "mnemosyne.he.work.משלי_proverbs",
+      "subcategory": "biblical",
       "surface_patterns": [
         "דרכיה דרכי נועם",
         "דרכי נועם",
@@ -12085,6 +12111,7 @@
         "zh": "出自以赛亚书40:4的圣经短语，意为“弯曲的将被修直”。比喻用来描述纠正不公或困难。"
       },
       "id": "he_classical_or_scriptural_allusion_והיה_העקוב_למישור_59c11ab2",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Biblical phrase from Isaiah 40:4, accurately described.",
@@ -12099,6 +12126,7 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%99%D7%A9%D7%A2%D7%99%D7%94_%D7%9C",
       "source_work": "ישעיהו (Isaiah) 40:4",
       "source_work_key": "mnemosyne.he.work.ישעיהו_isaiah_40_4",
+      "subcategory": "biblical",
       "surface_patterns": [
         "והיה העקוב למישור",
         "העקוב למישור",
@@ -18818,6 +18846,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.he.explanation.he_common_cultural_refs_מ_י_כ_מ_כ_ה_ב_א_ל_ם_י_הו_ה",
       "id": "he_classical_or_scriptural_allusion_מ_י_כ_מ_כ_ה_ב_א_ל_ם_י_הו_ה_2a0753c4",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Exodus 15:11 and used in daily liturgy.",
@@ -18832,6 +18861,7 @@
       "source_url": "https://www.sefaria.org/Exodus.15.11?lang=he",
       "source_work": "Tanakh (Exodus)",
       "source_work_key": "mnemosyne.he.work.tanakh_exodus",
+      "subcategory": "biblical",
       "surface_patterns": [
         "מי כמוכה באלים ה'",
         "מי כמוכה באלים",
@@ -19433,6 +19463,7 @@
         "zh": "出自诗篇34:13的短语，意为“谁渴望生命？”，用于引入关于过美好生活的伦理教导。它也是拉比以色列·梅尔·卡根所著著名犹太伦理著作的书名。"
       },
       "id": "he_classical_or_scriptural_allusion_מי_האיש_החפץ_חיים_997b0d45",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is correctly sourced from Psalms 34:13 and its usage is accurately described.",
@@ -19447,6 +19478,7 @@
       "source_url": "https://mechon-mamre.org/p/pt/pt2634.htm#13",
       "source_work": "Psalms",
       "source_work_key": "mnemosyne.he.work.psalms",
+      "subcategory": "biblical",
       "surface_patterns": [
         "מי האיש החפץ חיים",
         "החפץ חיים"
@@ -24246,12 +24278,14 @@
       "canonical_reference": "דוד וגוליית",
       "confidence": 0.88,
       "id": "דוד_וגוליית",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "reference_type": "classical_or_scriptural_allusion",
       "register": "classical",
       "short_explanation": "A small or weaker opponent facing a giant.",
       "source_work": "Hebrew Bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "דוד וגוליית"
       ]
@@ -24275,12 +24309,14 @@
       "canonical_reference": "לך אל הנמלה",
       "confidence": 0.88,
       "id": "לך_אל_הנמלה",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "reference_type": "classical_or_scriptural_allusion",
       "register": "classical",
       "short_explanation": "Learn diligence from the ant.",
       "source_work": "Proverbs",
+      "subcategory": "biblical",
       "surface_patterns": [
         "לך אל הנמלה"
       ]
@@ -24290,12 +24326,14 @@
       "canonical_reference": "מגדל בבל",
       "confidence": 0.88,
       "id": "מגדל_בבל",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B2",
       "reference_type": "classical_or_scriptural_allusion",
       "register": "classical",
       "short_explanation": "Confusion of language or failed human overreach.",
       "source_work": "Genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "מגדל בבל"
       ]
@@ -32165,6 +32203,7 @@
         "zh": "圣经短语（以赛亚书51:1），意为“采石场”或“起源之源”，比喻性地指代一个人的根源或出身。常用于文学和正式语境。"
       },
       "id": "he_literary_reference_כור_מחצב_e198f0a9",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is indeed from Isaiah 51:1 and used metaphorically for origins.",
@@ -32179,6 +32218,7 @@
       "source_url": "https://he.wikisource.org/wiki/קטגוריה:ישעיהו_נא_א",
       "source_work": "Tanakh (Isaiah 51:1)",
       "source_work_key": "mnemosyne.he.work.tanakh_isaiah_51_1",
+      "subcategory": "biblical",
       "surface_patterns": [
         "כור מחצב",
         "כור המחצב"
@@ -32524,6 +32564,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.he.explanation.hebrew_biblical_phrases_מ_ה_ל_י_ו_ל_כ_ם_ל_י_ש_לו_ם",
       "id": "he_literary_reference_מ_ה_ל_י_ו_ל_כ_ם_ל_י_ש_לו_ם_ב_ב_ית_י_ו_ל_כ_ם_ש_לו_ם_ב_ב_ת_יכ__8cbaf1a0",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -32538,6 +32579,7 @@
       "source_url": "https://www.sefaria.org/2_Kings.3.13?lang=bi",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.he.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "מה לי ולכם? לי שלום בביתי, ולכם שלום בביתכם",
         "מה לי ולכם? לי שלום בביתי ולכם בביתכם",
@@ -33095,6 +33137,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.he.explanation.tanakh_phrases_ע_ד_ת_נ_ע_ר_י_ם",
       "id": "he_literary_reference_ע_ד_ת_נ_ע_ר_י_ם_755521bb",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33109,6 +33152,7 @@
       "source_url": "https://www.sefaria.org/Numbers.11.28?lang=he",
       "source_work": "Tanakh (Hebrew Bible)",
       "source_work_key": "mnemosyne.he.work.tanakh_hebrew_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "עדת נעריים",
         "עדת נערים",
@@ -33634,6 +33678,7 @@
         "zh": "指智慧七柱，因T.E.劳伦斯的回忆录《智慧七柱》而广为人知，也出现在希伯来圣经（箴言9:1）中。在现代希伯来语中，可指基本原则或文学作品。"
       },
       "id": "he_literary_reference_שבעה_עמודים_f4750028",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Proverbs 9:1 and T.E. Lawrence is accurate; surface patterns are correct.",
@@ -33648,6 +33693,7 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%9E%D7%A9%D7%9C%D7%99_%D7%98",
       "source_work": "משלי (Proverbs) 9:1 / Seven Pillars of Wisdom",
       "source_work_key": "mnemosyne.he.work.משלי_proverbs_9_1_seven_pillars_of_wisdom",
+      "subcategory": "biblical",
       "surface_patterns": [
         "שבעה עמודים",
         "שבעת העמודים",
@@ -33673,6 +33719,7 @@
         "zh": "圣经术语，指整个宇宙，常用来表达整体性或天与地的对比。"
       },
       "id": "he_literary_reference_שמים_וארץ_25c7ce21",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical reference to Genesis 1:1 and other passages; explanation and confidence are appropriate.",
@@ -33687,6 +33734,7 @@
       "source_url": "https://www.sefaria.org/Genesis.1.1",
       "source_work": "תנ״ך (Tanakh) – e.g., Genesis 1:1, Isaiah 1:2",
       "source_work_key": "mnemosyne.he.work.תנ_ך_tanakh_e_g_genesis_1_1_isaiah_1_2",
+      "subcategory": "biblical",
       "surface_patterns": [
         "שמים וארץ",
         "השמים והארץ",

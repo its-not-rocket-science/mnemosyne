@@ -146,6 +146,7 @@
         "zh": "指亚当和夏娃堕落前居住的圣经乐园伊甸园。象征纯真、纯洁与失去的理想状态。"
       },
       "id": "fi_classical_or_scriptural_allusion_aatamin_ja_eevan_puutarha_f4d606c6",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and explanation are accurate and verifiable; surface patterns match common usage.",
@@ -160,6 +161,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Genesis+2&version=KJV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fi.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Aatamin ja Eevan puutarha",
         "Aatamin ja Eevan puutarhassa",
@@ -185,6 +187,7 @@
         "zh": "源自圣经中亚当的肋骨的故事，常被用作隐喻指代配偶或伴侣，或在讨论性别角色时使用。"
       },
       "id": "fi_classical_or_scriptural_allusion_aatamin_kylkiluu_e2f7d844",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Biblical attribution is accurate and well-supported; surface patterns are correct.",
@@ -199,6 +202,7 @@
       "source_url": "https://www.bible.com/bible/116/GEN.2.21-22.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fi.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Aatamin kylkiluu",
         "Aatamin kylkiluun",
@@ -735,6 +739,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.biblical_allusions_finnish_auta_itseäsi_niin_jumal",
       "id": "fi_classical_or_scriptural_allusion_auta_itseäsi_niin_jumala_auttaa_c1839be8",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -749,6 +754,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/PRO.28.26.NLB17.html",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fi.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Auta itseäsi, niin Jumala auttaa",
         "Auta itseäsi, niin Jumala sinua auttaa"
@@ -760,6 +766,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.fi_bible_beatitudes_autuaat_ovat_puhdassydämiset_v",
       "id": "fi_classical_or_scriptural_allusion_autuaat_ovat_puhdassydämiset_vuorisaarnasta_d93272cb",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -774,6 +781,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+5%3A8&version=KJV",
       "source_work": "Raamattu (Bible)",
       "source_work_key": "mnemosyne.fi.work.raamattu_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "'Autuaat ovat puhdassydämiset!'",
         "Vuorisaarnan lause"
@@ -1307,6 +1315,7 @@
         "zh": "指圣经中的伊甸园及其露水或祝福，常在芬兰宗教和文学语境中象征纯洁、天真或失去的乐园。"
       },
       "id": "fi_classical_or_scriptural_allusion_eedenin_kaste_7c762b5a",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Biblical attribution is accurate; surface patterns and explanation are correct.",
@@ -1321,6 +1330,7 @@
       "source_url": "https://www.bible.com/bible/116/GEN.2.4-3.24.NLT",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fi.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Eedenin kaste",
         "Eedenin kastetta",
@@ -1333,6 +1343,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fi.explanation.eedenin_kirot_bible_eedenin_kirot",
       "id": "fi_classical_or_scriptural_allusion_eedenin_kirot_c6ad5ab4",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1347,6 +1358,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/GEN.3.FIN1992.html",
       "source_work": "Raamattu (Bible)",
       "source_work_key": "mnemosyne.fi.work.raamattu_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Eedenin kiroukset",
         "Eedenin kirot",
@@ -1373,6 +1385,7 @@
         "zh": "圣经典故，指伊甸园中知识树的叶子，常见于芬兰文学中，象征失去的纯真、知识或不服从的后果。"
       },
       "id": "fi_classical_or_scriptural_allusion_eedenin_lehti_437754c7",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical allusion with verifiable source (Genesis 3:7).",
@@ -1387,6 +1400,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Genesis+3%3A7&version=KJV",
       "source_work": "Genesis",
       "source_work_key": "mnemosyne.fi.work.genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Eedenin lehti",
         "Eedenin lehdet",
@@ -1438,6 +1452,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.eedenin_puutarha_bible_eedenin_puutarha",
       "id": "fi_classical_or_scriptural_allusion_eedenin_puutarha_4329e884",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1452,6 +1467,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/GEN.2.FIN1992.html",
       "source_work": "Raamattu (Bible)",
       "source_work_key": "mnemosyne.fi.work.raamattu_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Eedenin puutarhassa",
         "Eedenin puutarhaan",
@@ -1806,6 +1822,7 @@
         "zh": "指代圣经中人类因原罪而堕落之前的时期。在芬兰文化中，象征着失去的天堂或纯真。"
       },
       "id": "fi_classical_or_scriptural_allusion_ennen_syntiinlankeemusta_dad317e8",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and useful for learners.",
@@ -1820,6 +1837,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/GEN.3.NIV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fi.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "ennen syntiinlankeemusta",
         "ennen syntiinlankeemusta -"
@@ -2053,6 +2071,7 @@
         "zh": "指圣经中法老梦见七只肥牛和七只瘦牛，约瑟将其解释为丰年后将有饥荒的预言。象征预示性的梦或警告。"
       },
       "id": "fi_classical_or_scriptural_allusion_faaraon_uni_7f242080",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Pharaoh's dream in Genesis is accurate, the surface patterns are correct, and the attribution is appropriate.",
@@ -2068,6 +2087,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Genesis+41&version=FI1938",
       "source_work": "Genesis",
       "source_work_key": "mnemosyne.fi.work.genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Faaraon uni",
         "faaraon unet",
@@ -2544,6 +2564,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.finnish_biblical_phrases_herra_paratkoon_raamatun_",
       "id": "fi_classical_or_scriptural_allusion_herra_paratkoon_raamatun_suomennoksesta_163b7787",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2557,6 +2578,7 @@
       "source_url": "https://www.biblesociety.fi/",
       "source_work": "Raamatun suomennos (Finnish Bible translation)",
       "source_work_key": "mnemosyne.fi.work.raamatun_suomennos_finnish_bible_translation",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Herra paratkoon"
       ]
@@ -3112,6 +3134,7 @@
         "zh": "指圣经《创世记》中「知善恶树的果子」，象征道德意识的起源与人类的堕落。在芬兰语中比喻性地用于描述关键或变革性事件。"
       },
       "id": "fi_classical_or_scriptural_allusion_hyvän_ja_pahan_hedelmä_692f76c7",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical allusion with verifiable source and usage in Finnish context.",
@@ -3126,6 +3149,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Genesis+2%3A9%2C+3%3A3&version=KJV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fi.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Hyvän ja pahan hedelmä",
         "Hyvän ja pahan hedelmän",
@@ -3738,6 +3762,7 @@
         "zh": "暗指圣经中被上帝保护或引导的概念，常在芬兰文学和语言中比喻性使用。"
       },
       "id": "fi_classical_or_scriptural_allusion_jumalan_kämmenellä_d97ab140",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Biblical allusion is accurate (Psalms 91:4) and surface patterns are correct.",
@@ -3752,6 +3777,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Psalm+91%3A4&version=KJV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fi.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Jumalan kämmenellä",
         "Jumalan kämmeneltä"
@@ -3866,6 +3892,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.finnish_religious_phrases_bible_jumalan_tahtoon_ki",
       "id": "fi_classical_or_scriptural_allusion_jumalan_tahtoon_kirkon_opetuksesta_28218993",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3880,6 +3907,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+6%3A10&version=KJV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fi.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Jumalan tahtoon",
         "Jumalan tahtoon!",
@@ -5642,6 +5670,7 @@
         "zh": "应许之地：指上帝应许给亚伯拉罕及其后裔的土地，常比喻为充满希望或实现梦想的地方。"
       },
       "id": "fi_classical_or_scriptural_allusion_luvattu_maa_119db76f",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate biblical allusion with correct Finnish forms and source.",
@@ -5656,6 +5685,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Raamattu",
       "source_work": "Raamattu (Finnish Bible)",
       "source_work_key": "mnemosyne.fi.work.raamattu_finnish_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Luvattu maa",
         "luvattua maata",
@@ -5732,6 +5762,7 @@
         "zh": "世上的盐：出自圣经登山宝训（马太福音5:13），指具有巨大价值和道德影响力的人。"
       },
       "id": "fi_classical_or_scriptural_allusion_maan_suola_302b3e0e",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Matthew 5:13 with correct Finnish inflectional patterns.",
@@ -5746,6 +5777,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Raamattu",
       "source_work": "Raamattu (Finnish Bible)",
       "source_work_key": "mnemosyne.fi.work.raamattu_finnish_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Maan suola",
         "maan suolana",
@@ -7966,6 +7998,7 @@
         "zh": "典故源自圣经中埃及七个荒年，象征困苦或匮乏时期。该短语在芬兰语中常用于指经济或农业上的艰难时期。"
       },
       "id": "fi_classical_or_scriptural_allusion_seitsemän_laihan_vuoden_aika_fa43ff88",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately alludes to the biblical story of seven lean years in Genesis, with correct Finnish surface patterns and context.",
@@ -7980,6 +8013,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Raamattu_(1933/1938)/1._Mooseksen_kirja#41",
       "source_work": "Raamattu (Bible), 1. Mooseksen kirja (Genesis)",
       "source_work_key": "mnemosyne.fi.work.raamattu_bible_1_mooseksen_kirja_genesis",
+      "subcategory": "biblical",
       "surface_patterns": [
         "seitsemän laihan vuoden aika",
         "seitsemän laihaa vuotta",
@@ -10224,6 +10258,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.fi_bible_ten_commandments_älä_varastako_äläkä_vale",
       "id": "fi_classical_or_scriptural_allusion_älä_varastako_äläkä_valehtele_äläkä_pettäkö_vanhasta_kymmene_29a20fd2",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10238,6 +10273,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/EXO.20.FIN1992.html",
       "source_work": "Exodus",
       "source_work_key": "mnemosyne.fi.work.exodus",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Älä varasta, älä valehtele, äläkä petä",
         "Älä varastako, äläkä valehtele, äläkä pettäkö",
@@ -10275,6 +10311,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.fi_bible_gethsemane_öljymäki_ja_getsemane_isä_jos_",
       "id": "fi_classical_or_scriptural_allusion_öljymäki_ja_getsemane_isä_jos_mahdollista_vie_tämä_malja_min_3c085dae",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10289,6 +10326,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/MAT.26.FIN1992.html",
       "source_work": "New Testament",
       "source_work_key": "mnemosyne.fi.work.new_testament",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Öljymäki ja Getsemane",
         "Getsemane",
@@ -10329,6 +10367,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fi.explanation.biblical_allusions_fi_001_aatamin_puvussa_pesemätö",
       "id": "fi_cultural_reference_aatamin_puvussa_pesemätön_viattomuus_45a1e1f5",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10343,6 +10382,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Genesis+3%3A7&version=KJV",
       "source_work": "Bible",
       "source_work_key": "mnemosyne.fi.work.bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Aatamin puvussa - pesemätön viattomuus",
         "Aatamin puku",
@@ -22851,6 +22891,7 @@
         "zh": "指哈姆雷特的存在性问题“生存还是毁灭”，象征着深刻的怀疑或根本性的人生困境。常在面对艰难或哲学性抉择时引用。"
       },
       "id": "fi_literary_reference_hamletin_kysymys_83ae8d4b",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Hamlet's existential question is accurate, the surface patterns are appropriate, and the attribution to Shakespeare's 'Hamlet' is correct.",
@@ -22865,6 +22906,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1524",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.fi.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Hamletin kysymys",
         "Hamletin dilemma",
@@ -25969,6 +26011,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.shakespeare_hamlet_phrases_koko_maailma_on_teatter",
       "id": "fi_literary_reference_koko_maailma_on_teatteri_5113712f",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25983,6 +26026,7 @@
       "source_url": "https://shakespeare.fi/teokset/hamlet/",
       "source_work": "Hamlet",
       "source_work_key": "mnemosyne.fi.work.hamlet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Koko maailma on teatteri",
         "maailma on teatteri",
@@ -27390,6 +27434,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.shakespeare_king_lear_kuningas_learin_hulluus",
       "id": "fi_literary_reference_kuningas_learin_hulluus_dbea5f6e",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27403,6 +27448,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/65",
       "source_work": "King Lear",
       "source_work_key": "mnemosyne.fi.work.king_lear",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Kuningas Learin hulluus",
         "Learin hulluus",
@@ -27415,6 +27461,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.shakespeare_kuningas_lear_kuningas_learin_hulluus_",
       "id": "fi_literary_reference_kuningas_learin_hulluus_vallan_ja_mielen_järkkymisen_tragedi_9a3fa157",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27428,6 +27475,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1129",
       "source_work": "King Lear",
       "source_work_key": "mnemosyne.fi.work.king_lear",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Kuningas Lear",
         "vallan ja mielen järkkymisen tragedia"
@@ -29629,6 +29677,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.bible_finnish_genesis_miehen_kylkiluu",
       "id": "fi_literary_reference_miehen_kylkiluu_7fa8015c",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -29643,6 +29692,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/GEN.2.21-23.KJV",
       "source_work": "Raamattu (Bible)",
       "source_work_key": "mnemosyne.fi.work.raamattu_bible",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Miehen kylkiluu",
         "miesten kylkiluut",
@@ -31448,6 +31498,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.shakespeare_romeo_julia_phrases_rakastavaiset_kaup",
       "id": "fi_literary_reference_rakastavaiset_kaupungin_muurien_ulkopuolella_klassinen_rakka_0eb9a966",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -31461,6 +31512,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1514",
       "source_work": "Romeo and Juliet",
       "source_work_key": "mnemosyne.fi.work.romeo_and_juliet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Rakastavaiset kaupungin muurien ulkopuolella",
         "rakastavaiset kaupungin muurien ulkopuolella -klassinen rakkausdraama",
@@ -31658,6 +31710,7 @@
         "zh": "指两位恋人因外部力量而注定悲剧的命运，源自莎士比亚的著名戏剧。常用来形容注定无果或不幸的爱情。"
       },
       "id": "fi_literary_reference_romeon_ja_julian_kohtalo_4a1d4076",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly alludes to the tragic fate of the lovers in Shakespeare's 'Romeo and Juliet', with appropriate surface patterns and accurate attribution.",
@@ -31672,6 +31725,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1513",
       "source_work": "Romeo and Juliet",
       "source_work_key": "mnemosyne.fi.work.romeo_and_juliet",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Romeon ja Julian kohtalo",
         "Romeon ja Julia -kohtalo",
@@ -32926,6 +32980,7 @@
         "zh": "指由芬兰-瑞典作家扎哈里亚斯·托佩柳斯创作的童话故事，他的作品是芬兰儿童文学和民族认同的重要组成部分。"
       },
       "id": "fi_literary_reference_topeliuksen_satu_74e04fbb",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Zacharias Topelius and his fairy tales is accurate, the surface patterns are appropriate, and the explanation is correct and useful.",
@@ -32939,6 +32994,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Lukemisia_lapsille",
       "source_work": "Lukemisia lapsille",
       "source_work_key": "mnemosyne.fi.work.lukemisia_lapsille",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Topeliuksen satu",
         "Topeliuksen sadut",
@@ -33530,6 +33586,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.shakespeare_macbeth_power_theme_vallan_naamio_klas",
       "id": "fi_literary_reference_vallan_naamio_klassisen_tragedian_teema_teatterilavalla_viit_60fc31b1",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33543,6 +33600,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1530",
       "source_work": "Macbeth",
       "source_work_key": "mnemosyne.fi.work.macbeth",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Vallan naamio",
         "vallan naamion",

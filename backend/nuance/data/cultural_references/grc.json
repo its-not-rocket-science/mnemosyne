@@ -1415,6 +1415,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.grc.explanation.nt_phrases_σοφίαν_τὴν_ἐν_τω_ι_λόγωι",
       "id": "grc_classical_or_scriptural_allusion_σοφίαν_τὴν_ἐν_τω_ι_λόγωι_013affa6",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1429,6 +1430,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=John+1%3A1-14&version=SBLGNT",
       "source_work": "New Testament",
       "source_work_key": "mnemosyne.grc.work.new_testament",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν τὴν ἐν τῷ Λόγῳ",
         "τὴν σοφίαν τὴν ἐν τῷ Λόγῳ",
@@ -1480,6 +1482,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.grc.explanation.nt_phrases_σοφίαν_τὴν_ἐπὶ_σταυρου",
       "id": "grc_classical_or_scriptural_allusion_σοφίαν_τὴν_ἐπὶ_σταυρου_de8a9209",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1494,6 +1497,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=1+Corinthians+1%3A18-25&version=SBLGNT",
       "source_work": "New Testament",
       "source_work_key": "mnemosyne.grc.work.new_testament",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν τὴν ἐπὶ Σταυροῦ",
         "τὴν σοφίαν τὴν ἐπὶ Σταυροῦ",
@@ -3863,6 +3867,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.grc.explanation.septuagint_psalms_ἐν_τω_ι_σκότει_βαδίζω",
       "id": "grc_classical_or_scriptural_allusion_ἐν_τω_ι_σκότει_βαδίζω_648c94e1",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3877,6 +3882,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0190:book=Ps:poem=82",
       "source_work": "Psalms",
       "source_work_key": "mnemosyne.grc.work.psalms",
+      "subcategory": "biblical",
       "surface_patterns": [
         "ἐν τῷ σκότει βαδίζω",
         "ἐν σκότει βαδίζω",
@@ -4594,6 +4600,7 @@
         "zh": "这个短语的意思是“真理使你自由”，通常与关于知识和启蒙的哲学讨论相关，特别是在新约（约翰 8:32）中找到。"
       },
       "id": "grc_classical_or_scriptural_allusion_ἡ_ἀλήθεια_ἐλευθερώσει_ὑμα_σ_932a10bc",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to the New Testament is accurate and the phrase is well-known in philosophical discussions.",
@@ -4608,6 +4615,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0140:chapter=8",
       "source_work": "Ἰωάννης (John)",
       "source_work_key": "mnemosyne.grc.work.ἰωάννησ_john",
+      "subcategory": "biblical",
       "surface_patterns": [
         "ἡ ἀλήθεια ἐλευθερώσει ὑμᾶς",
         "ἀλήθεια ἐλευθερώσει"
@@ -5617,12 +5625,14 @@
       "canonical_reference": "ἄλφα καὶ ὦ",
       "confidence": 0.88,
       "id": "αλφα_και_ω",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "reference_type": "classical_or_scriptural_allusion",
       "register": "classical",
       "short_explanation": "Alpha and omega; beginning and end.",
       "source_work": "Revelation",
+      "subcategory": "biblical",
       "surface_patterns": [
         "ἄλφα καὶ ὦ"
       ]
@@ -5661,6 +5671,7 @@
       "canonical_reference": "λόγος",
       "confidence": 0.7,
       "id": "λογοσ",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "Only annotate when context strongly suggests scriptural/philosophical use.",
@@ -5668,6 +5679,7 @@
       "register": "religious",
       "short_explanation": "Word, reason, or divine ordering principle depending on context.",
       "source_work": "John 1 / Greek philosophical tradition",
+      "subcategory": "biblical",
       "surface_patterns": [
         "λόγος"
       ]
@@ -5677,12 +5689,14 @@
       "canonical_reference": "ὁ καλὸς ποιμήν",
       "confidence": 0.88,
       "id": "ο_καλοσ_ποιμην",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "reference_type": "classical_or_scriptural_allusion",
       "register": "classical",
       "short_explanation": "The good shepherd.",
       "source_work": "John",
+      "subcategory": "biblical",
       "surface_patterns": [
         "ὁ καλὸς ποιμήν"
       ]
