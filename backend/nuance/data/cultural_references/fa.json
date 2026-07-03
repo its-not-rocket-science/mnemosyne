@@ -6,6 +6,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fa.explanation.classical_persian_allusions_آتش_دین_را_در_دل_خود_ر",
       "id": "fa_classical_or_scriptural_allusion_آتش_دین_را_در_دل_خود_روشن_کردن_0cecf0bb",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -407,6 +408,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fa.explanation.classical_persian_allusions_آینه_دار_کلام_الله",
       "id": "fa_classical_or_scriptural_allusion_آینه_دار_کلام_الله_68725482",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -420,6 +422,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "آینه دار کلام‌الله",
         "آینه‌دار کلام‌الله",
@@ -691,6 +694,7 @@
       "source_license": "public_domain",
       "source_work": "الحکمة المتعالیة فی الاسفار العقلیة الاربعه",
       "source_work_key": "mnemosyne.fa.work.الحکمة_المتعالیة_فی_الاسفار_العقلیة_الاربعه",
+      "subcategory": "quranic",
       "surface_patterns": [
         "اسفار اربعه",
         "اسفارِ اربعه",
@@ -805,6 +809,7 @@
       "source_url": "https://sunnah.com/muslim/1/139",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "البر حسن الخلق",
         "البر، حسن الخلق",
@@ -893,6 +898,7 @@
       "source_url": "https://sunnah.com/bukhari/78/57",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "الراحمون يرحمهم الرحمن",
         "راحمون، يرحمهم الرحمن",
@@ -921,6 +927,7 @@
       "source_url": "https://sunnah.com/ibnmajah/5/1079",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "الصلاة عماد الدين",
         "صلاة، عماد الدين است",
@@ -983,6 +990,7 @@
       "source_url": "https://avesta.org/",
       "source_work": "اوستا",
       "source_work_key": "mnemosyne.fa.work.اوستا",
+      "subcategory": "quranic",
       "surface_patterns": [
         "انوشه روان",
         "انوشه‌روان",
@@ -1174,6 +1182,7 @@
       "source_url": "https://ganjoor.net/sadi/golestan/bab1s1",
       "source_work": "Golestan",
       "source_work_key": "mnemosyne.fa.work.golestan",
+      "subcategory": "saadi",
       "surface_patterns": [
         "تو نیکی می‌کن به جایی نرسد که از تو نشناسد حق و جای",
         "نیکی کن به جایی نرسد که نشناسندت حق و جای",
@@ -1330,6 +1339,7 @@
       "source_url": "https://sunnah.com/ibnmajah/1/2",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث العلماء ورثه الانبیاء",
         "العلماء ورثه الانبیاء",
@@ -1359,6 +1369,7 @@
       "source_url": "https://wikishia.net/w/%D8%A7%D9%84%D9%85%D8%A4%D9%85%D9%86%D9%88%D9%86_%D9%83%D8%A7%D9%84%D8%B1%D8%A3%D8%B3_%D8%A7%D9%84%D9%88%D8%A7%D8%AD%D8%AF",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "المؤمنون کالراس الواحد",
         "المؤمنون کالراس الواحد فی الجسد",
@@ -1389,6 +1400,7 @@
       "source_url": "https://wikishia.net/w/%D8%AD%D8%AF%DB%8C%D8%AB_%D8%A7%D9%86%D8%A7_%D9%85%D8%AF%DB%8C%D9%86%D9%87_%D8%A7%D9%84%D8%B9%D9%84%D9%85",
       "source_work": "کتب شیعه",
       "source_work_key": "mnemosyne.fa.work.کتب_شیعه",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث انا مدینه العلم",
         "حدیث انا مدینه العلم می‌شود",
@@ -1419,6 +1431,7 @@
       "source_url": "https://sunnah.com/muslim/1/38",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث انی تارک فیکم الثقلین",
         "حدیث من ترک فیکم الثقلین",
@@ -1451,6 +1464,7 @@
       "source_url": "https://hadithcollection.com/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث ثقلین",
         "حدیث ثقلین است",
@@ -1480,6 +1494,7 @@
       "source_url": "https://sunnah.com/bukhari/2",
       "source_work": "صحیح بخاری",
       "source_work_key": "mnemosyne.fa.work.صحیح_بخاری",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث جبرئیل",
         "حدیث جبرائیل",
@@ -1509,6 +1524,7 @@
       "source_url": "https://wikishia.net/w/%D8%AD%D8%AF%DB%8C%D8%AB_%D8%BA%D8%AF%DB%8C%D8%B1",
       "source_work": "کتب شیعه و سنی",
       "source_work_key": "mnemosyne.fa.work.کتب_شیعه_و_سنی",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث غدیر",
         "غدیر خم",
@@ -1539,6 +1555,7 @@
       "source_url": "https://hadithcollection.com/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث قدسی",
         "حدیث قدسیه",
@@ -1569,6 +1586,7 @@
       "source_url": "https://wikishia.net/w/%D9%84%D8%A7_%D8%B6%D8%B1%D8%B1_%D9%88%D9%84%D8%A7_%D8%B6%D8%B1%D8%A7%D8%B1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "لاضرر و لاضرار",
         "لاضرر و لاضرار نیست",
@@ -1632,6 +1650,7 @@
       "source_url": "https://sunnah.com/ibnmajah/1/2",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث من عرف نفسه فقد عرف ربه",
         "من عرف نفسه عرف ربه",
@@ -1664,6 +1683,7 @@
       "source_url": "https://sunnah.com/ibnmajah/1/2",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث من مات و لم یعرف امام زمانه فقد مات میته جاهلیه",
         "من مرد و امام زمانه را نشناخت جاهلی مرد",
@@ -1696,6 +1716,7 @@
       "source_url": "https://wikishia.net/w/%D8%AD%D8%AF%DB%8C%D8%AB_%D9%85%D9%86%D8%B2%D9%84%D8%AA",
       "source_work": "کتب شیعه",
       "source_work_key": "mnemosyne.fa.work.کتب_شیعه",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث منزلت",
         "حدیث منزلت می‌شود",
@@ -1726,6 +1747,7 @@
       "source_url": "https://sunnah.com/muslim/1/38",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث کتاب الله و عترتی اهل بیتی",
         "کتاب الله و عترتی اهل بیتی",
@@ -1754,6 +1776,7 @@
       "source_url": "https://wikishia.net/w/%D8%AD%D8%AF%DB%8C%D8%AB_%DA%A9%D8%B3%D8%A7",
       "source_work": "کتب شیعه",
       "source_work_key": "mnemosyne.fa.work.کتب_شیعه",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حدیث کساء",
         "حدیث کسا",
@@ -1784,6 +1807,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "خط کوفی زبان قرآن است",
         "خط کوفی، زبان قرآن است",
@@ -2394,6 +2418,7 @@
       "source_url": "https://www.nahjulbalagha.org/",
       "source_work": "Nahj al-Balagha",
       "source_work_key": "mnemosyne.fa.work.nahj_al_balagha",
+      "subcategory": "quranic",
       "surface_patterns": [
         "عقل را گنج و علم را کلید آن است",
         "عقل گنج است و علم کلید آن",
@@ -2451,6 +2476,7 @@
       "source_url": "https://wikisource.org/wiki/%D9%86%D9%87%D8%AC_%D8%A7%D9%84%D8%A8%D9%84%D8%A7%D8%BA%D9%87",
       "source_work": "نهج‌البلاغه",
       "source_work_key": "mnemosyne.fa.work.نهج_البلاغه",
+      "subcategory": "quranic",
       "surface_patterns": [
         "عقل و جهل دو کسند",
         "عقل و جهل دو کس اند",
@@ -2655,6 +2681,7 @@
       "source_url": "https://wikisource.org/wiki/%D8%B3%DB%8C%D8%B1%D9%87_%D9%86%D8%A8%D9%88%DB%8C",
       "source_work": "سیره نبوی",
       "source_work_key": "mnemosyne.fa.work.سیره_نبوی",
+      "subcategory": "quranic",
       "surface_patterns": [
         "فتح مکه توسط پیامبر اسلام و اعلام عفو عمومی",
         "فتح مکه توسط پیامبر و اعلام عفو عمومی",
@@ -2816,6 +2843,7 @@
       "source_url": "https://sunnah.com/muslim/1/401",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "مَنْ عَرَفَ نَفْسَهُ فَقَدْ عَرَفَ رَبَّهُ",
         "هر کس خود را بشناسد، پروردگارش را شناخته است",
@@ -2875,6 +2903,7 @@
       "source_url": "https://sunnah.com/nasai/50/11",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "من لم يشكر المنة فقد كفر النعمة",
         "لم يشكر منة، كفر نعمة کرده",
@@ -2904,6 +2933,7 @@
       "source_url": "https://sunnah.com/muslim/45/14",
       "source_work": " Various Hadith collections",
       "source_work_key": "mnemosyne.fa.work.various_hadith_collections",
+      "subcategory": "quranic",
       "surface_patterns": [
         "مَنْ يَرِدِ اللَّهَ مُؤْمِنًا لَا يَضُرُّهُ مَنْ خَالَفَهُ",
         "من يرد الله مؤمناً لا يضره من خالفه",
@@ -2932,6 +2962,7 @@
       "source_url": "https://wikifeqh.ir/%D8%A7%D8%B3%D8%B1%D8%A7%D8%B1_%D8%AD%D9%82",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "هر که را اسرار حق تعالی آشکار شد",
         "هر که اسرار حق آشکار شد",
@@ -3270,6 +3301,7 @@
       "source_url": "https://avesta.org/yasna/yasna.htm",
       "source_work": "اوستا",
       "source_work_key": "mnemosyne.fa.work.اوستا",
+      "subcategory": "quranic",
       "surface_patterns": [
         "پیوند زرتشت با خرد زنده باد موبد خرد",
         "پیوند زرتشت و خرد زنده باد موبد خرد",
@@ -3285,6 +3317,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_mythology_phrases_چشمه_آب_حیات",
       "id": "fa_classical_or_scriptural_allusion_چشمه_آب_حیات_9d101dec",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3809,6 +3842,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "آدم اگر دلش را پاک کند خدا هم به دلش می‌نگرد",
         "آدم اگه دلش رو پاک کنه خدا هم به دلش می‌نگره",
@@ -3968,6 +4002,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_cultural_phrases_آواز_غمگین",
       "id": "fa_cultural_reference_آواز_غمگین_8c0cffe8",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3981,6 +4016,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "آواز غمگین",
         "آوازِ غمگین",
@@ -4150,6 +4186,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%A7%D8%B2_%D8%A8%DB%8C%D8%AE_%D8%B9%D8%B1%D8%A8_%D8%A8%D9%88%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "از بیخ عرب بودن"
       ]
@@ -4308,6 +4345,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%A7%D9%88%D9%86_%D9%85%D9%85%D9%87_%D8%B1%D9%88_%D9%84%D9%88%D9%84%D9%88_%D8%A8%D8%B1%D8%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "اون ممه رو لولو برد"
       ]
@@ -4354,6 +4392,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "shahnameh",
       "surface_patterns": [
         "بازنمایی هفت گنبد شاهنامه در تئاتر ایرانی",
         "بازنمایی هفت گنبد در تئاتر ایرانی",
@@ -4562,6 +4601,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%A8%DB%8C_%DA%AF%D8%AF%D8%A7%D8%B1_%D8%A8%D9%87_%D8%A2%D8%A8_%D8%B2%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "بی گدار به آب زدن"
       ]
@@ -5087,6 +5127,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "جمله کارها به توفیق خداوند است",
         "همه کارها به توفیق خداوند است"
@@ -5196,6 +5237,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "حافظ",
         "حافظِ شاعر",
@@ -5248,6 +5290,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "حجت خدا بر خلق تمام است"
       ]
@@ -5317,6 +5360,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "shahnameh",
       "surface_patterns": [
         "خانه ابیوردی",
         "خانه ابیوردیِ",
@@ -5371,6 +5415,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "خداوند درهای رحمت را به روی بندگان گشوده است",
         "درهای رحمت خداوند به روی بندگان باز است"
@@ -5469,6 +5514,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fa.explanation.persian_calligraphy_phrases_خط_نستعلیق_دختر_خط_و_خ",
       "id": "fa_cultural_reference_خط_نستعلیق_دختر_خط_و_خواهر_شعر_است_8ceb31e4",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5585,6 +5631,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خون جگر خوردن",
         "خون جگر خورد",
@@ -5719,6 +5766,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_cultural_phrases_درخت_تک_درختی",
       "id": "fa_cultural_reference_درخت_تک_درختی_1c21a289",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5732,6 +5780,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "درخت تک درختی"
       ]
@@ -5755,6 +5804,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دریا ناخدا نمی‌خواهد",
         "دریا ناخدا نمی‌خواد",
@@ -5784,6 +5834,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دریا نهیب و افتاده نیست",
         "افتادن",
@@ -5881,6 +5932,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "دل خود را مسجد خداوند قرار دادن",
         "دل خود را مسجد خدا قرار دادن",
@@ -5930,6 +5982,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دندان طلا انداختن",
         "دندان طلا انداخت",
@@ -6004,6 +6057,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_cultural_phrases_دنیا_برای_تو_رنگی_نمی_خری",
       "id": "fa_cultural_reference_دنیا_برای_تو_رنگی_نمی_خرید_191f888a",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6602,6 +6656,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.fa.explanation.persian_mythological_terms_سازمان_اسطوره_ای_هفت_کش",
       "id": "fa_cultural_reference_سازمان_اسطوره_ای_هفت_کشور_a63f0562",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7408,6 +7463,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "عاقل‌ترین مردگان مرده‌ای است که قبرش را نکنده‌اند",
         "عاقلترین مردگان مرده‌ای است که قبرش را نکنده‌اند",
@@ -7791,6 +7847,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.fa.explanation.persian_cultural_phrases_قاصدک_آمدن",
       "id": "fa_cultural_reference_قاصدک_آمدن_8c74f3f6",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8906,6 +8963,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.fa.explanation.persian_miniature_phrases_مینیاتور_جهان_در_یک_قطره",
       "id": "fa_cultural_reference_مینیاتور_جهان_در_یک_قطره_است_0542058d",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9132,6 +9190,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.fa.explanation.persian_poetic_art_نقاشی_بیدل_اندیشه_های_شاعرانه_ا",
       "id": "fa_cultural_reference_نقاشی_بیدل_اندیشه_های_شاعرانه_است_d3964961",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9145,6 +9204,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "rumi",
       "surface_patterns": [
         "نقاشی بیدل اندیشه‌های شاعرانه است",
         "نقاشی بیدل اندیشه‌های شاعرانه است که",
@@ -9243,6 +9303,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_art_concepts_نقاشی_دنیایی_در_دل_است",
       "id": "fa_cultural_reference_نقاشی_دنیایی_در_دل_است_2863c66c",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9299,6 +9360,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fa.explanation.persian_art_phrases_نقاشی_زبان_بی_زبانی_است",
       "id": "fa_cultural_reference_نقاشی_زبان_بی_زبانی_است_8a0d2393",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9890,6 +9952,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "نقاشی نیم‌رخ از حافظ در مجلس رباعیات",
         "نقاشی نیم‌رخ حافظ در مجلس رباعیات",
@@ -10043,6 +10106,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fa.explanation.persian_art_motifs_نقاشی_گل_و_مرغ_آینه_دل_است",
       "id": "fa_cultural_reference_نقاشی_گل_و_مرغ_آینه_دل_است_108b5b5e",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10180,6 +10244,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fa.explanation.persian_miniature_art_نقش_نگار_حکایت_دل_است",
       "id": "fa_cultural_reference_نقش_نگار_حکایت_دل_است_660e1475",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10237,6 +10302,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_cultural_performance_terms_نمایش_تالوی_سیس",
       "id": "fa_cultural_reference_نمایش_تالوی_سیستانی_با_اشعار_محلی_50f4e5ac",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10375,6 +10441,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fa.explanation.persian_puppet_theater_نمایش_خیمه_شب_بازی_با_قهرما",
       "id": "fa_cultural_reference_نمایش_خیمه_شب_بازی_با_قهرمانان_شاهنامه_77653924",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10388,6 +10455,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "shahnameh",
       "surface_patterns": [
         "نمایش خیمه‌شب‌بازی با قهرمانان شاهنامه",
         "نمایش خیمه‌شب‌بازی با قهرمانان شاهنامه است",
@@ -10879,6 +10947,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fa.explanation.persian_miniature_phrases_نگارگری_شعر_تصویری_است",
       "id": "fa_cultural_reference_نگارگری_شعر_تصویری_است_6b428e73",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11361,6 +11430,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%BE%D8%B1%D9%86%D8%AF%D9%87_%D9%BE%D8%B1_%D9%86%D9%85%DB%8C%E2%80%8C%D8%B2%D8%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "پرنده پر نمی‌زد"
       ]
@@ -11384,6 +11454,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%DA%86%D8%A7%D9%86%D9%87_%DA%A9%D8%B3%DB%8C_%DA%AF%D8%B1%D9%85_%D8%B4%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چانه کسی گرم شدن"
       ]
@@ -11422,6 +11493,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fa.explanation.persian_cultural_phrases_چشم_هایم_برای_تو_اشک_می_ر",
       "id": "fa_cultural_reference_چشم_هایم_برای_تو_اشک_می_ریخت_c1471aa1",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11657,6 +11729,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%DA%A9%D8%A7%D8%B1%D8%AF_%D9%88_%D9%BE%D9%86%DB%8C%D8%B1",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "کارد و پنیر"
       ]
@@ -11690,6 +11763,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.fa.explanation.persian_theater_metaphors_کبوتر_غمگین_تئاتر",
       "id": "fa_cultural_reference_کبوتر_غمگین_تئاتر_9a2a5526",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11787,6 +11861,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%DA%A9%D9%84%D8%A7%D9%87_%D8%B3%D8%B1_%DA%A9%D8%B3%DB%8C_%DA%AF%D8%B0%D8%A7%D8%B4%D8%AA%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "کلاه سر کسی گذاشتن"
       ]
@@ -11810,6 +11885,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%DA%A9%D9%84%DA%A9_%DA%A9%D8%B3%DB%8C_%D8%B1%D8%A7_%DA%A9%D9%86%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "کلک کسی را کندن"
       ]
@@ -12231,6 +12307,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%DB%8C%DA%A9_%D8%AA%DB%8C%D8%B1_%D9%88_%D8%AF%D9%88_%D9%86%D8%B4%D8%A7%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "یک تیر و دو نشان"
       ]
@@ -12254,6 +12331,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%DB%8C%DA%A9%DB%8C_%D8%A8%D9%88%D8%AF_%DB%8C%DA%A9%DB%8C_%D9%86%D8%A8%D9%88%D8%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "یکی بود یکی نبود"
       ]
@@ -12547,6 +12625,7 @@
       "source_url": "https://ganjoor.net/nezami/hftpkhr/sh1/",
       "source_work": "هفت پیکر",
       "source_work_key": "mnemosyne.fa.work.هفت_پیکر",
+      "subcategory": "rumi",
       "surface_patterns": [
         "آب و آتش و خاک و باد همه در آتشی دمسازند",
         "آب و آتش و خاک و باد همه در آتشی دمساز است",
@@ -12688,6 +12767,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.fa.explanation.persian_literary_phrases_آخرین_نفس_های_شیطان",
       "id": "fa_literary_reference_آخرین_نفس_های_شیطان_4e82a4c3",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12858,6 +12938,7 @@
       "source_url": "https://ganjoor.net/molana/divan/shams/",
       "source_work": "دیوان شمس",
       "source_work_key": "mnemosyne.fa.work.دیوان_شمس",
+      "subcategory": "rumi",
       "surface_patterns": [
         "آن سوی مه",
         "اون سوی مه"
@@ -12913,6 +12994,7 @@
       "source_url": "https://ganjoor.net/moulavi/shams/ghazalsha/sh1000",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "آن که آمد ندید و آن که دید نماند",
         "اون که اومد ندید و اون که دید نماند",
@@ -13093,6 +13175,7 @@
       "source_url": "https://ganjoor.net/shabestari/golshan/ghazal1/",
       "source_work": "گلشن راز",
       "source_work_key": "mnemosyne.fa.work.گلشن_راز",
+      "subcategory": "rumi",
       "surface_patterns": [
         "آنکه حکمت جویا است در جهان پیدا و ناپیدا است",
         "آنکی حکمت جوئه در جهان پیدا و ناپیدا است",
@@ -13122,6 +13205,7 @@
       "source_url": "https://ganjoor.net/shabestari/golshan/ghazal1/",
       "source_work": "گلشن راز",
       "source_work_key": "mnemosyne.fa.work.گلشن_راز",
+      "subcategory": "rumi",
       "surface_patterns": [
         "آنکه حکمت را درباید از خویشتن خویش غافل است",
         "آنکی حکمت رو درباید از خویشتن خویش غافل است",
@@ -13151,6 +13235,7 @@
       "source_url": "https://ganjoor.net/shabestari/golshan/ghazal1/",
       "source_work": "گلشن راز",
       "source_work_key": "mnemosyne.fa.work.گلشن_راز",
+      "subcategory": "rumi",
       "surface_patterns": [
         "آنکه حکمت را نشنود از حیات خود غافل است",
         "آنکی حکمت رو نشنود از حیات خود غافل است",
@@ -13329,6 +13414,7 @@
       "source_url": "https://ganjoor.net/molana/",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "آواز در سایه",
         "آواز در سایه بودن",
@@ -13391,6 +13477,7 @@
       "source_url": "https://ganjoor.net/moulavi/divan/ghazal/sh1/",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "آواز شب",
         "آوازه شب",
@@ -13451,6 +13538,7 @@
       "source_url": "https://ganjoor.net/moulavi/shams/ghazalsh/sh1057",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "از خون دل نوشتمش بر لوحهٔ عذر",
         "از خون دل نوشتمش رو لوحهٔ عذر",
@@ -13919,6 +14007,7 @@
       "source_url": "https://fa.wikisource.org/wiki/المحجة_البیضاء_فی_تهذیب_الاحیاء",
       "source_work": "المحجة البیضاء فی تهذیب الاحیاء",
       "source_work_key": "mnemosyne.fa.work.المحجة_البیضاء_فی_تهذیب_الاحیاء",
+      "subcategory": "quranic",
       "surface_patterns": [
         "المحجة البیضاء"
       ]
@@ -13944,6 +14033,7 @@
       "source_url": "https://www.al-islam.org/nahjul-balagha-part-1-sayings-and-sermons/letter-31",
       "source_work": "نهج البلاغة",
       "source_work_key": "mnemosyne.fa.work.نهج_البلاغة",
+      "subcategory": "quranic",
       "surface_patterns": [
         "النَّاسُ نُظَرَاءُ إِلَى قَدْرِ عُقُولِهِمْ",
         "الناس نظراء بقدر عقولهم",
@@ -14046,6 +14136,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fa.explanation.sufi_love_phrases_اگر_بوی_عشق_در_کفن_بدمد",
       "id": "fa_literary_reference_اگر_بوی_عشق_در_کفن_بدمد_b605e1ee",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14059,6 +14150,7 @@
       "source_url": "https://ganjoor.net/attar/mantar-ol-teyr/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "اگر بوی عشق در کفن دمید",
         "اگر بوی عشق در کفن بدمد",
@@ -14088,6 +14180,7 @@
       "source_url": "https://ganjoor.net/moulavi/shams/ghazalsha/sh1000",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "اگر درد دلی دارم درد تو را دارم",
         "اگه درد دلی دارم دردتو رو دارم",
@@ -14155,6 +14248,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/باباطاهر_عریان",
       "source_work": "دوبیتی‌های باباطاهر",
       "source_work_key": "mnemosyne.fa.work.دوبیتی_های_باباطاهر",
+      "subcategory": "rumi",
       "surface_patterns": [
         "بابا طاهر",
         "باباطاهر",
@@ -14215,6 +14309,7 @@
       "source_url": "https://ganjoor.net/hafez/ghazals/gh112",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "باغ در آفتاب",
         "باغی در آفتاب",
@@ -14244,6 +14339,7 @@
       "source_url": "https://ganjoor.net/shabestari/golshan/ghazal1/",
       "source_work": "گلشن راز",
       "source_work_key": "mnemosyne.fa.work.گلشن_راز",
+      "subcategory": "rumi",
       "surface_patterns": [
         "باغ منظر چشمه حیوان است",
         "باغ منظر چشمه حیوانات است",
@@ -14258,6 +14354,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fa.explanation.persian_poetic_phrases_برگ_برگ_خزان",
       "id": "fa_literary_reference_برگ_برگ_خزان_639d1d66",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14333,6 +14430,7 @@
       "source_url": "https://ganjoor.net/nezami/khshsh/",
       "source_work": "خسرو و شیرین",
       "source_work_key": "mnemosyne.fa.work.خسرو_و_شیرین",
+      "subcategory": "rumi",
       "surface_patterns": [
         "به یاد روی شیرین گل از خون گریست",
         "به یاد روی شیرین گل از خون گرید",
@@ -14427,6 +14525,7 @@
       "source_url": "https://ganjoor.net/sadeghhedayat/bofkor/",
       "source_work": "بوف کور",
       "source_work_key": "mnemosyne.fa.work.بوف_کور",
+      "subcategory": "null",
       "surface_patterns": [
         "بوفِ کور",
         "بوفِ کورِ من",
@@ -14598,6 +14697,7 @@
       "source_url": "https://ganjoor.net/hafez/divan/ghazal/sh1/",
       "source_work": "دیوان غزلیات",
       "source_work_key": "mnemosyne.fa.work.دیوان_غزلیات",
+      "subcategory": "hafez",
       "surface_patterns": [
         "بیا تا گل برافشانیم و می در ساغر آریم",
         "بیا گل برافشانیم و می در ساغر آریم",
@@ -14809,6 +14909,7 @@
       "source_url": "https://ganjoor.net/hafez/divan/ghazal1/",
       "source_work": "دیوان غزلیات",
       "source_work_key": "mnemosyne.fa.work.دیوان_غزلیات",
+      "subcategory": "hafez",
       "surface_patterns": [
         "تو را من چشم در راهم، شب است و در خوابگاه",
         "تو را من چشم در راهم، شب است و در خوابگاهم",
@@ -14839,6 +14940,7 @@
       "source_url": "https://ganjoor.net/hafez/ghazal/gh100",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "تو پنداری که من اصحاب کهفم",
         "تو فکر می‌کنی که من اصحاب کهفم",
@@ -14885,6 +14987,7 @@
       "confidence": 0.81,
       "explanation_key": "mnemosyne.fa.explanation.modern_persian_poetry_phrases_تو_که_دروغ_می_گفتی_م",
       "id": "fa_literary_reference_تو_که_دروغ_می_گفتی_من_حقیقت_را_به_تو_دادم_4ba74f01",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14898,6 +15001,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "تو که دروغ می‌گفتی، من حقیقت را به تو دادم",
         "تو دروغ می‌گفتی، من حقیقت را به تو دادم",
@@ -14913,6 +15017,7 @@
       "confidence": 0.79,
       "explanation_key": "mnemosyne.fa.explanation.modern_persian_poetry_phrases_تو_که_دنیا_را_به_من_",
       "id": "fa_literary_reference_تو_که_دنیا_را_به_من_فروختی_من_تو_را_به_دنیا_فروختم_ae6bca54",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14941,6 +15046,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.fa.explanation.modern_persian_poetry_phrases_تو_که_دنیا_را_به_من_",
       "id": "fa_literary_reference_تو_که_دنیا_را_به_من_فروختی_من_دنیا_را_از_تو_پس_گرفتم_43aa066b",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14954,6 +15060,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "تو که دنیا را به من فروختی، من دنیا را از تو پس گرفتم",
         "تو دنیا را به من فروختی، من دنیا را از تو پس گرفتم",
@@ -14969,6 +15076,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fa.explanation.modern_persian_poetry_phrases_تو_که_می_گفتی_من_را_",
       "id": "fa_literary_reference_تو_که_می_گفتی_من_را_می_شناسی_من_تو_را_نمی_شناختم_a6705719",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14997,6 +15105,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fa.explanation.modern_persian_poetry_phrases_تو_که_نمی_دانستی_من_",
       "id": "fa_literary_reference_تو_که_نمی_دانستی_من_تو_را_می_شناسم_من_تو_را_از_اول_می_شناختم_4eacd614",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -15163,6 +15272,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/حافظ_شیرازی",
       "source_work": "دیوان غزلیات",
       "source_work_key": "mnemosyne.fa.work.دیوان_غزلیات",
+      "subcategory": "hafez",
       "surface_patterns": [
         "حافظ شیرازی",
         "حافظ می‌گوید",
@@ -15276,6 +15386,7 @@
       "source_url": "https://wikisource.org/wiki/%D8%AA%D9%87%D8%B0%DB%8C%D8%A8_%D8%A7%D9%84%D8%A7%D8%AE%D9%84%D8%A7%D9%82_%D9%88_%D8%AA%D8%B7%D9%87%DB%8C%D8%B1_%D8%A7%D9%84%D8%A7%D8%B9%D8%B1%D8%A7%D9%82",
       "source_work": "تهذيب الأخلاق و تطهير الأعراق",
       "source_work_key": "mnemosyne.fa.work.تهذيب_الأخلاق_و_تطهير_الأعراق",
+      "subcategory": "rumi",
       "surface_patterns": [
         "حکمت خسروانی",
         "حکمتِ خسروانی",
@@ -15510,6 +15621,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%AA%D9%88%D9%84%D8%AF%DB%8C_%D8%AF%DB%8C%DA%AF%D8%B1",
       "source_work": "تولدی دیگر",
       "source_work_key": "mnemosyne.fa.work.تولدی_دیگر",
+      "subcategory": "hafez",
       "surface_patterns": [
         "خاکستر و خاک",
         "خاکستر و خاکِ",
@@ -15540,6 +15652,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%A2%DB%8C%D8%AF%D8%A7_%D8%AF%D8%B1_%D8%A2%DB%8C%D9%86%D9%87",
       "source_work": "آیدا در آینه",
       "source_work_key": "mnemosyne.fa.work.آیدا_در_آینه",
+      "subcategory": "hafez",
       "surface_patterns": [
         "خاکستری رنگِ شهرِ ما",
         "رنگ خاکستری شهر ما",
@@ -15571,6 +15684,7 @@
       "source_url": "https://ganjoor.net/nasimi/khosrooshirin/",
       "source_work": "خسرو و شیرین",
       "source_work_key": "mnemosyne.fa.work.خسرو_و_شیرین",
+      "subcategory": "saadi",
       "surface_patterns": [
         "خسرو و شیرین",
         "داستان خسرو و شیرین",
@@ -15600,6 +15714,7 @@
       "source_license": "public_domain",
       "source_work": "خسرو و شیرین",
       "source_work_key": "mnemosyne.fa.work.خسرو_و_شیرین",
+      "subcategory": "rumi",
       "surface_patterns": [
         "خسرو و شیرینِ نظامی",
         "خسرو و شیرین در نگارگری",
@@ -15628,6 +15743,7 @@
       "source_url": "https://ganjoor.net/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خسرو و کنیزک",
         "خسرو و کنیزکش",
@@ -15846,6 +15962,7 @@
       "source_url": "https://ganjoor.net/nizami/ghazal/sh1/",
       "source_work": "لیلی و مجنون",
       "source_work_key": "mnemosyne.fa.work.لیلی_و_مجنون",
+      "subcategory": "hafez",
       "surface_patterns": [
         "داستان لیلی و مجنون در مثنوی نظامی",
         "داستان لیلی و مجنون نظامی",
@@ -15936,6 +16053,7 @@
       "source_url": "https://ganjoor.net/shabestari/golshan/ghazal1/",
       "source_work": "گلشن راز",
       "source_work_key": "mnemosyne.fa.work.گلشن_راز",
+      "subcategory": "rumi",
       "surface_patterns": [
         "دانا چون در سخن کرد از خویشتن خویش آگاه کرد",
         "دانا وقتی در سخن کرد از خویشتن خویش آگاه کرد",
@@ -15965,6 +16083,7 @@
       "source_url": "https://ganjoor.net/forough/",
       "source_work": "دایره‌ی مینا",
       "source_work_key": "mnemosyne.fa.work.دایره_ی_مینا",
+      "subcategory": "hafez",
       "surface_patterns": [
         "دایره مینا",
         "دایره‌ی مینا",
@@ -15994,6 +16113,7 @@
       "source_url": "https://ganjoor.net/moulavi/shams/ghazalsh/sh1056",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "در جستجوی یقین به شک دچار شدم",
         "در جستجوی یقین به شک می‌افتم",
@@ -16052,6 +16172,7 @@
       "source_url": "https://ganjoor.net/nezami/leili-majnoon/",
       "source_work": "لیلی و مجنون",
       "source_work_key": "mnemosyne.fa.work.لیلی_و_مجنون",
+      "subcategory": "hafez",
       "surface_patterns": [
         "درخت بید مجنون",
         "درخت بیدِ مجنون",
@@ -16082,6 +16203,7 @@
       "source_url": "https://ganjoor.net/hafez/ghazals/gh1/",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "درد عشقی کشیده ام که مپرس",
         "درد عشقی کشیده‌ام که مپرس",
@@ -16646,6 +16768,7 @@
       "source_url": "https://ganjoor.net/hafez/divan/ghazal/sh1/",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "رقص سایه‌ها",
         "رقصِ سایه‌ها",
@@ -16756,6 +16879,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.classical_ghazal_phrases_روزگاری_است_کاندر_بزم_طرب",
       "id": "fa_literary_reference_روزگاری_است_کاندر_بزم_طرب_بوده_ایم_d32572bd",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -16770,6 +16894,7 @@
       "source_location": "Ghazals and Sufi poetry collections",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "روزگاری است کاندر بزم طرب بوده‌ایم",
         "روزگاری است که در بزم طرب بوده‌ایم"
@@ -16976,6 +17101,7 @@
       "source_url": "https://ganjoor.net/hafez/ghazal/sh1/",
       "source_work": "دیوان غزلیات",
       "source_work_key": "mnemosyne.fa.work.دیوان_غزلیات",
+      "subcategory": "hafez",
       "surface_patterns": [
         "سر زلف یار گره خوردن",
         "سر زلف یارش گره خورد",
@@ -17006,6 +17132,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/سرودهای_مینابی",
       "source_work": "سرودهای مینابی",
       "source_work_key": "mnemosyne.fa.work.سرودهای_مینابی",
+      "subcategory": "hafez",
       "surface_patterns": [
         "سرودهای مینابی",
         "سرودِ مینابی",
@@ -17816,6 +17943,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fa.explanation.classical_persian_poetic_phrases_شمع_شبانه",
       "id": "fa_literary_reference_شمع_شبانه_6aa533f2",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17858,6 +17986,7 @@
       "source_url": "https://ganjoor.net/moulavi/shams/ghazalsha/sh1054",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "null",
       "surface_patterns": [
         "شهر غم",
         "شهرِ غم",
@@ -17889,6 +18018,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/شهریار_(شاعر)",
       "source_work": "دیوان شیخ شهاب‌الدین سهروردی",
       "source_work_key": "mnemosyne.fa.work.دیوان_شیخ_شهاب_الدین_سهروردی",
+      "subcategory": "hafez",
       "surface_patterns": [
         "شهریار",
         "شهریارِ لرستان",
@@ -17979,6 +18109,7 @@
       "source_url": "https://ganjoor.net/nezami/khosrooshirin/",
       "source_work": "خسرو و شیرین",
       "source_work_key": "mnemosyne.fa.work.خسرو_و_شیرین",
+      "subcategory": "saadi",
       "surface_patterns": [
         "شیرین و فرهاد"
       ]
@@ -18210,6 +18341,7 @@
       "source_url": "https://ganjoor.net/moulavi/shams/ghazalsh/sh116",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "عاقل چون دید گلگون جگر از گفتنش خجلت برد",
         "عاقل وقتی جگر گلگون دید از گفتنش خجالت کشید",
@@ -18239,6 +18371,7 @@
       "source_license": "not_required",
       "source_work": " Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "عروسک خانه",
         "عروسکِ خانه",
@@ -18256,6 +18389,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.fa.explanation.classical_persian_literary_phrases_عروسک_های_خیال",
       "id": "fa_literary_reference_عروسک_های_خیال_73c8d504",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18298,6 +18432,7 @@
       "source_url": "https://ganjoor.net/forough/",
       "source_work": "شعر معاصر",
       "source_work_key": "mnemosyne.fa.work.شعر_معاصر",
+      "subcategory": "hafez",
       "surface_patterns": [
         "عروسکی به نام من",
         "عروسکی به نامِ من",
@@ -18622,6 +18757,7 @@
       "source_url": "https://wikisource.org/wiki/%D8%AD%DA%A9%D9%85%D8%A9_%D8%A7%D9%84%D8%A7%D8%B4%D8%B1%D8%A7%D9%82",
       "source_work": "حکمةالاشراق",
       "source_work_key": "mnemosyne.fa.work.حکمةالاشراق",
+      "subcategory": "rumi",
       "surface_patterns": [
         "عقل کل",
         "عقلِ کل",
@@ -18709,6 +18845,7 @@
       "source_url": "https://wikisource.org/wiki/%D8%B9%D9%88%D8%A7%D8%B1%D9%81_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D8%B1%D9%81",
       "source_work": "عوارف المعارف",
       "source_work_key": "mnemosyne.fa.work.عوارف_المعارف",
+      "subcategory": "quranic",
       "surface_patterns": [
         "عوارف المعارف"
       ]
@@ -18961,6 +19098,7 @@
       "source_url": "https://fa.wikisource.org/wiki/%D9%81%D8%B5%D9%88%D8%B5_%D8%A7%D9%84%D8%AD%DA%A9%D9%85",
       "source_work": "فصوص الحكم",
       "source_work_key": "mnemosyne.fa.work.فصوص_الحكم",
+      "subcategory": "rumi",
       "surface_patterns": [
         "فصوص الحكم",
         "فصوص‌الحكم",
@@ -19067,6 +19205,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_literary_phrases_مثل_گل_سرخ_پاییزی",
       "id": "fa_literary_reference_مثل_گل_سرخ_پاییزی_8d53226e",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19167,6 +19306,7 @@
       "source_url": "https://wikisource.org/wiki/%D9%85%D9%86%D8%B7%D9%82_%D8%A7%D9%84%D8%B7%DB%8C%D8%B1",
       "source_work": "منطق الطیر",
       "source_work_key": "mnemosyne.fa.work.منطق_الطیر",
+      "subcategory": "rumi",
       "surface_patterns": [
         "مجادله عقل و عشق",
         "مجادله‌ی عقل و عشق",
@@ -19500,6 +19640,7 @@
       "source_url": "https://ganjoor.net/attar/mantiq/",
       "source_work": "منطق الطیر",
       "source_work_key": "mnemosyne.fa.work.منطق_الطیر",
+      "subcategory": "rumi",
       "surface_patterns": [
         "منطق الطیر",
         "منطق‌الطیر",
@@ -19529,6 +19670,7 @@
       "source_url": "https://ganjoor.net/moulavi/shams/ghazalsh/sh1234",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "منم آن تشنه لبک لب تشنگان",
         "منم آن تشنه لب تشنگان",
@@ -19561,6 +19703,7 @@
       "source_url": "https://ganjoor.net/molana",
       "source_work": "دیوان مولوی",
       "source_work_key": "mnemosyne.fa.work.دیوان_مولوی",
+      "subcategory": "rumi",
       "surface_patterns": [
         "مهر خداوند در دل جای دارد",
         "مهر خدا در دل است",
@@ -19669,6 +19812,7 @@
       "source_url": "https://ganjoor.net/hafez/ghazals/gh1/",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "مکن در طلب لطف یارم را غنیمت دان",
         "مکن در طلب لطف یارم را غنیمت دانید",
@@ -19807,6 +19951,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fa.explanation.persian_literary_phrases_نخستین_شب_زفاف",
       "id": "fa_literary_reference_نخستین_شب_زفاف_0392dbd2",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19836,6 +19981,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fa.explanation.persian_literary_phrases_نغمه_های_گمشده",
       "id": "fa_literary_reference_نغمه_های_گمشده_d693f341",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19849,6 +19995,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "نغمه‌های گمشده",
         "نغمه‌هایِ گمشده",
@@ -19881,6 +20028,7 @@
       "source_url": "https://ganjoor.net/attar",
       "source_work": "دیوان عطار",
       "source_work_key": "mnemosyne.fa.work.دیوان_عطار",
+      "subcategory": "attar",
       "surface_patterns": [
         "نفس خدا در سینه آدمی دمیده شده است",
         "نفس خدا در سینه انسان دمیده شده",
@@ -19942,6 +20090,7 @@
       "source_url": "https://fa.wikisource.org/wiki/%D8%AF%DB%8C%D9%88%D8%A7%D9%86_%D8%B3%D8%B9%D8%AF%DB%8C",
       "source_work": "دیوان سعدی",
       "source_work_key": "mnemosyne.fa.work.دیوان_سعدی",
+      "subcategory": "saadi",
       "surface_patterns": [
         "نقاشی چهره فرخاد در دفتر دیوان سعدی",
         "نقاشی چهره فرخاد در دیوان سعدی",
@@ -20035,6 +20184,7 @@
       "source_url": "https://ganjoor.net/moulavi/shams/ghazalsha/sh1385",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "نور چشمت اگر نباشد، خودت را می‌بینی",
         "نور چشم تو اگر نباشد، خودت را می‌بینی",
@@ -20126,6 +20276,7 @@
       "source_url": "https://ganjoor.net/attar/",
       "source_work": "Various Sufi texts",
       "source_work_key": "mnemosyne.fa.work.various_sufi_texts",
+      "subcategory": "rumi",
       "surface_patterns": [
         "هر که ز جانش بگدازد، جانان او گردد",
         "هر که جانش را بگدازد، جانان او گردد",
@@ -20156,6 +20307,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/هفت_پیکر_(کتاب)",
       "source_work": "هفت پیکر",
       "source_work_key": "mnemosyne.fa.work.هفت_پیکر",
+      "subcategory": "hafez",
       "surface_patterns": [
         "هفت پیکر نظامی و نگارگری",
         "هفت پیکر نظامی",
@@ -20188,6 +20340,7 @@
       "source_url": "https://ganjoor.net/shabestari/golshan/golshan12/",
       "source_work": "گلشن راز",
       "source_work_key": "mnemosyne.fa.work.گلشن_راز",
+      "subcategory": "rumi",
       "surface_patterns": [
         "پارسایان بی‌چیز کسانی هستند که در کوی بی‌چیزانند",
         "پارسایان بی‌چیز کسانی‌اند که در کوی بی‌چیزانند",
@@ -20235,6 +20388,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fa.explanation.persian_literary_phrases_پرده_های_پنهان",
       "id": "fa_literary_reference_پرده_های_پنهان_63165b67",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -20248,6 +20402,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "پرده‌های پنهان",
         "پرده‌هایِ پنهان",
@@ -20279,6 +20434,7 @@
       "source_url": "https://ganjoor.net/hafez/",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "پرنده‌ای در قفس",
         "پرنده‌ای در قفس بودن",
@@ -20459,6 +20615,7 @@
       "source_url": "https://ganjoor.net/bahar/diwan/bidad/",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "چنگ بزن و بگریز که جهان گرنه جاوید نیست",
         "چنگ بزن و بگریز، که جهان گرنه جاوید نیست",
@@ -20490,6 +20647,7 @@
       "source_url": "https://ganjoor.net/moulavi/divan/ghazal/sh1",
       "source_work": "دیوان شمس",
       "source_work_key": "mnemosyne.fa.work.دیوان_شمس",
+      "subcategory": "rumi",
       "surface_patterns": [
         "چنگ شیدا در مجلس عارفان",
         "چنگ شیدا",
@@ -20558,6 +20716,7 @@
       "source_url": "https://ganjoor.net/saib/",
       "source_work": "دیوان صائب",
       "source_work_key": "mnemosyne.fa.work.دیوان_صائب",
+      "subcategory": "saadi",
       "surface_patterns": [
         "چنین گفت صائب که نصیحت به جای آورد",
         "چنین گفت صائب که نصیحت به جای آوردن",
@@ -21149,6 +21308,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%DA%A9%D9%84%DB%8C%D9%84%D9%87_%D9%88_%D8%AF%D9%85%D9%86%D9%87",
       "source_work": "کلیله و دمنه",
       "source_work_key": "mnemosyne.fa.work.کلیله_و_دمنه",
+      "subcategory": "saadi",
       "surface_patterns": [
         "کلیله و دمنه",
         "کلیله و دِمنه"
@@ -21206,6 +21366,7 @@
       "source_url": "https://ganjoor.net/saadi/ghazals/gh10",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
+      "subcategory": "hafez",
       "surface_patterns": [
         "که خود نیز در سخن با تو خویشتنم",
         "که خود در سخن با تو خویشتنم",
@@ -21500,6 +21661,7 @@
       "source_url": "https://ganjoor.net/moulavi/divan/ghazal/sh1/",
       "source_work": "دیوان غزلیات",
       "source_work_key": "mnemosyne.fa.work.دیوان_غزلیات",
+      "subcategory": "hafez",
       "surface_patterns": [
         "گر چه صد ره از خ amar دل ببری و بخوری",
         "گرچه صد ره از خ amar دل ببری و بخوری",
@@ -21531,6 +21693,7 @@
       "source_url": "https://ganjoor.net/saadi/ghazals/ghazal1/",
       "source_work": "دیوان غزلیات",
       "source_work_key": "mnemosyne.fa.work.دیوان_غزلیات",
+      "subcategory": "saadi",
       "surface_patterns": [
         "گرم بازم گر نگیری، باز آید به کامت",
         "گرم بازم اگر نگیری، باز آید به کامت",
@@ -21740,6 +21903,7 @@
       "source_url": "https://ganjoor.net/shabestari/golshan/",
       "source_work": "گلشن راز",
       "source_work_key": "mnemosyne.fa.work.گلشن_راز",
+      "subcategory": "rumi",
       "surface_patterns": [
         "گلشن راز",
         "گلشنِ راز",
@@ -21779,6 +21943,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fa.explanation.persian_literary_phrases_گوشت_و_پوست_شدن",
       "id": "fa_literary_reference_گوشت_و_پوست_شدن_6327265d",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21914,6 +22079,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آب رفته به جوی باز نمی‌گردد",
         "آب رفته به جوی بر نمی‌گرده",
@@ -21975,6 +22141,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آب که از سر گذشت چه کسی حسرت میخورد",
         "آب که از سر گذشت، چه کسی حسرت میخورد",
@@ -21991,6 +22158,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_proverbs_common_آب_که_از_سرچشمه_گل_آلود_نش",
       "id": "fa_proverb_tradition_آب_که_از_سرچشمه_گل_آلود_نشود_75c75149",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22004,6 +22172,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آب که از سرچشمه گل آلود نشود",
         "آب از سرچشمه گل آلود نشود",
@@ -22034,6 +22203,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آتش با تیشه نمی‌توان برید",
         "آتش را با تیشه نمی‌توان برید",
@@ -22062,6 +22232,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آتش به آسیاب خود افتادن",
         "آتش به آسیاب خود افتاد",
@@ -22092,6 +22263,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آتش زیر خاکستر است",
         "آتش زیر خاکستر است و دود می‌کند",
@@ -22121,6 +22293,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم آهسته حرکت کند زودتر می‌رسد",
         "آدم آهسته حرکت کنه، زودتر می‌رسه",
@@ -22148,6 +22321,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم آهنی راست نمی‌شود",
         "آدم آهنی راست نمیشه",
@@ -22174,6 +22348,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم از نو جوانی‌اش می‌میرد، نه از پیری",
         "آدم از نو جوانی‌ش می‌میرد، نه از پیری",
@@ -22205,6 +22380,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم اگر به چاه افتد جوی هم می‌برد",
         "آدم اگه به چاه بیفته جوی هم میاره"
@@ -22229,6 +22405,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم اگر بچه داشته باشد، چشمش را رویش می‌بندد",
         "آدم اگه بچه داشته باشه، چشمش رو رویش می‌بنده",
@@ -22260,6 +22437,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم اگه بچه نداشته باشه، شیطان بچه خودشو می‌بره",
         "آدم اگر بچه نداشته باشد، شیطان بچه‌اش را می‌برد",
@@ -22287,6 +22465,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم اگه دست از کینه برداره، به خدا نزدیک‌تره",
         "آدم اگر دست از کینه بردارد، به خدا نزدیک‌تر است",
@@ -22314,6 +22493,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم اگر دست به کار نشود نان هم به قرض میخورد",
         "آدم اگه دست به کار نشه، نان هم به قرض می‌خوره",
@@ -22342,6 +22522,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم اگر دل به کسی ببنده، یارای دل کندن نداره",
         "آدم اگه دل به کسی ببنده، یارای دل کندن نداره",
@@ -22370,6 +22551,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم اگر زبان در دهانش نباشد به کجا می‌رود",
         "آدم اگه زبان در دهنش نباشه، به کجا می‌ره",
@@ -22398,6 +22580,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم اگه زبونشو نگه نداره، به کام مرگ می‌ره",
         "آدم اگر زبانش را نگه ندارد، به کام مرگ می‌رود",
@@ -22425,6 +22608,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم اگه چشمشو به روی حقیقت ببنده، کور می‌شه",
         "آدم اگر چشمش را به روی حقیقت ببندد، کور می‌شود",
@@ -22452,6 +22636,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم باید اول دست و پا ببیند بعد حرف بزند",
         "آدم باید اول دست و پا ببینه بعد حرف بزنه",
@@ -22480,6 +22665,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم باید گلیه کند تا خدا بفهمد",
         "آدم باید گلیه کنه تا خدا بفهمه",
@@ -22510,6 +22696,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم به هر دری بزند، یک جور نمی‌شود",
         "آدم به هر دری نزنه، یک جور نمیشه",
@@ -22540,6 +22727,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آدم خواب و بیدار هفت خوان می‌بیند",
         "آدم خوابه و بیداره، هفت خوان می‌بینه",
@@ -22979,6 +23167,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آشپز که دو تا شد آش یا شور می‌شود یا بی‌نمک",
         "آشپز که دو تا شد آش شور میشه یا بی نمک",
@@ -23033,6 +23222,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آفتابه لگن نیفتاد هشت",
         "آفتابه لگن نیفتاد هشت چرا",
@@ -23111,6 +23301,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آن که بهشت را به جوی نانی فروخت",
         "آنکه بهشت رو به جوی نانی فروخت",
@@ -23154,6 +23345,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fa.explanation.persian_proverbs_detachment_آن_که_دست_از_جان_شوی_د",
       "id": "fa_proverb_tradition_آن_که_دست_از_جان_شوی_دست_از_جهان_شوی_bb395ae0",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23167,6 +23359,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آن که دست از جان بزند، دست از جهان بزند",
         "آنکه دست از جان بزند، دست از جهان بزند",
@@ -23223,6 +23416,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آن که دستش به چیزی نرسد، به نان و نمکش هم دست نمی‌برد",
         "آنکه دستش به چیزی نرسد، به نان و نمکش هم دست نمی‌برد",
@@ -23251,6 +23445,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آن که دل به دنیا داد، دل از خدا بربود",
         "آنکه دل به دنیا داد، دل از خدا برباید",
@@ -23279,6 +23474,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آن که راهی را می‌رود، آن راه دیگر را هم می‌رود",
         "آن که راهی میره، اون راه دیگه رو هم میره",
@@ -23318,6 +23514,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.fa.explanation.persian_proverbs_perseverance_آن_که_سنگلاخ_است_گیا",
       "id": "fa_proverb_tradition_آن_که_سنگلاخ_است_گیاه_بر_او_روید_2e8f64df",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23331,6 +23528,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر که سنگلاخ است، گیاه بر او روید",
         "آن که سنگلاخ است، گیاهی بر او روید",
@@ -23359,6 +23557,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر که شتر خود را گم کند، خداوند شترش را پیدا کند",
         "آنکه شتر خود را گم کند، خداوند شترش را پیدا کند",
@@ -23387,6 +23586,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آن که عجله کند، پشیمان می‌شود",
         "آنکه عجله کنه، پشیمان می‌شه",
@@ -23415,6 +23615,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آن که عجله کند، کار را دو بار می‌کند",
         "آن که عجله کنه، کار رو دو بار می‌کنه",
@@ -23443,6 +23644,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آن که مالش به جیبش است، به زبانش هم مالک است",
         "آن که مالش به جیبشه، به زبونش هم مالک است",
@@ -23471,6 +23673,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آن که کوزه‌اش بشکند، آب از آن بیرون می‌آید",
         "آن که کوزه‌ش بشکند، آب از اون بیرون میاد",
@@ -23499,6 +23702,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آن که گل درشت می‌کند، پای لاغرش می‌شکند",
         "آن که گل درشت می‌کنه، پای لاغرش می‌شکنه",
@@ -23556,6 +23760,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آنکه از حکمت بهره گیرد، از جهان بی‌نیاز است",
         "آنکه از حکمت بهره گیرد، از جهان بی‌نیاز باشد",
@@ -23586,6 +23791,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آنکه حکمت آموزد، از خویشتن خود آگاه است",
         "آنکه حکمت آموزد، از خود آگاه است",
@@ -23616,6 +23822,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آنکه سخن حکمت آمیز گوید، دل‌ها به او گروید",
         "آنکه سخن حکمت آمیز بگوید، دل‌ها به او گروید",
@@ -23645,6 +23852,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آنکه ماهی را از آب بگیرد، تویش را هم باوابد",
         "آنکه ماهی رو از آب بگیره، تویش رو هم باش می‌بره",
@@ -23672,6 +23880,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آنکه نان از دستش برود، نان خدا می‌خورد",
         "آنکه نان از دستش بره، نان خدا می‌خوره",
@@ -23699,6 +23908,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آنکه نخود هر آشی است، لنگش هم به درد می‌خورد",
         "آنکه نخود هر آشیه، لنگش هم به درد می‌خوره",
@@ -23726,6 +23936,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آنکه نیشی زده است، عسل نمی‌خورد",
         "آنکی نیشی زده، عسل نمی‌خوره",
@@ -23754,6 +23965,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آنکه هشتاد سال زندگی کند، هنوز هم از مرگ می‌ترسد",
         "آنکی هشتاد سال زندگی کرده، هنوزم از مرگ می‌ترسه",
@@ -23782,6 +23994,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آنکه یار بد است، روزگار بد است",
         "آنکی یار بدی داره، روزگار بدی داره",
@@ -23810,6 +24023,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آواز خوانی در خلوت",
         "آواز خوندن در خلوت",
@@ -23835,6 +24049,7 @@
       "source_url": "https://www.ganjoor.net/ganjoor-proverbs/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آواز دهل شنیدن از دور خوش است",
         "آواز دهل از دور خوش است",
@@ -23865,6 +24080,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "ارزش لنگه کفش را وقتی بفهمی که کفشت را بشویی",
         "ارزش لنگه کفش را وقتی بفهمی که کفش را بشویی",
@@ -23892,6 +24108,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "از سخن گفتنِ بیهوده دل سرد می‌شود",
         "از سخن گفتن بیهوده دل سرد می‌شه",
@@ -23921,6 +24138,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "از شیر مادر خوردن",
         "از شیر مادرم خوردن",
@@ -23951,6 +24169,7 @@
       "source_url": "https://www.ganjoor.net/moallem/proverbs/proverb/az-mast-ke-bar-mast/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "از ماست که بر ماست",
         "از ماست ک بر ماست",
@@ -23979,6 +24198,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "از ماست که بر ما ست",
         "از ما است که بر ما ست",
@@ -23993,6 +24213,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fa.explanation.persian_proverbs_oral_ال_ع_ل_م_ف_ي_الص_غ_ر_ك_ن_ق_ش",
       "id": "fa_proverb_tradition_ال_ع_ل_م_ف_ي_الص_غ_ر_ك_ن_ق_ش_ع_ل_ى_ال_ح_ج_ر_de6acf77",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24006,6 +24227,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "الْعِلْمُ فِي الصِّغَرِ كَنَقْشٍ عَلَى الْحَجَرِ",
         "العلم في الصغر كنقش على الحجر",
@@ -24060,6 +24282,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست از خرمن برنداشتن",
         "دست از خرمن برنداشت",
@@ -24089,6 +24312,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "بازگشت توبه پذیر است",
         "توبه پذیر است",
@@ -24119,6 +24343,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "باغبان زمانی که نهال کاشت، خود را هم بکارد",
         "باغبان وقتی نهالی کاشت، خودشو هم کاشت",
@@ -24147,6 +24372,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "بخشی از وجودت را بگیر بخشی از جان",
         "بخشی از وجودت را بگیر، بخشی از جان",
@@ -24176,6 +24402,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "برّ و تقوا کلید بهشت است",
         "بر و تقوا کلید بهشت است",
@@ -24233,6 +24460,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "بلندترین صدا کوتاه‌ترین فکر",
         "بلندترین صدا کوتاه ترین فکر",
@@ -24262,6 +24490,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "به از دست دادن جان از دست دادن آبرو",
         "به از دست دادن جانت از دست دادن آبروت",
@@ -24291,6 +24520,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "به درد دل خوردن را از بی درد سر نتوان آموخت",
         "به درد دلت رو از بی درد سرت نتوانی یاد بگیری",
@@ -24319,6 +24549,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "به هر دری بزن به چپ و راست",
         "به هر دری بزن به چپ و راسته",
@@ -24346,6 +24577,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "به چاه رفتن",
         "به چاه رفت",
@@ -24375,6 +24607,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "به کفش کسی نگاه کردن",
         "به کفش کسی نگاه می‌کند",
@@ -24404,6 +24637,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "به چراغی که توی دستت است نباید از خانه کوری بترسی",
         "به چراغی که دستته نباید از خونه کوری بترسی",
@@ -24434,6 +24668,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "بچه که آمد، مادرش هم آمد",
         "بچه که اومد، مادرش هم اومد",
@@ -24462,6 +24697,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "بیش از آن که چشمت تر باشد، مژه ات بیفتد",
         "بیش از آنکه چشمت تر باشه، مژه‌ات میفته",
@@ -24477,6 +24713,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fa.explanation.persian_proverbs_tradition_تا_توانی_مگو_پس_از_گفتن",
       "id": "fa_proverb_tradition_تا_توانی_مگو_پس_از_گفتن_حسرت_53988d02",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24490,6 +24727,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تا توانی مگو پس از گفتن حسرت",
         "تا توانی نگو پس از گفتن حسرت",
@@ -24519,6 +24757,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تخم سخن پندار است",
         "تخم سخن، پندار است",
@@ -24547,6 +24786,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو که آفتابه را از سر گرفتی من تو را از ته گرفتم",
         "آفتابه را از سر گرفتی من تو را از ته گرفتم",
@@ -24685,6 +24925,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "جوجه تیغی را از خار نتوان جدا کرد",
         "جوجه تیغی رو از خار نتوان جدا کرد",
@@ -24714,6 +24955,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "حرف حرف است",
         "حرف حرفه"
@@ -24738,6 +24980,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "حرف مفت مار مفت است",
         "حرف مفت",
@@ -24768,6 +25011,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خر ما از عرق در می‌آید",
         "خر ما از عرق در آمد",
@@ -24783,6 +25027,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_calligraphy_proverbs_خط_ثلث_زبان_آسمان_است",
       "id": "fa_proverb_tradition_خط_ثلث_زبان_آسمان_است_161bfeff",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24796,6 +25041,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خط ثلث زبان آسمان است",
         "خط ثلث زبون آسمونه",
@@ -24810,6 +25056,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_calligraphy_proverbs_خط_شکسته_رقص_قلم_است",
       "id": "fa_proverb_tradition_خط_شکسته_رقص_قلم_است_41f13161",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24823,6 +25070,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خط شکسته رقص قلم است",
         "خط شکسته رقص قلمه",
@@ -24836,6 +25084,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_proverbs_wings_خط_و_قلم_دو_بال_پروازند",
       "id": "fa_proverb_tradition_خط_و_قلم_دو_بال_پروازند_be55d91b",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24849,6 +25098,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خط و قلم دو بال پروازند",
         "خط و قلم، دو بال پروازند",
@@ -24877,6 +25127,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خودت را نشناختی که چه می‌خواهی",
         "خودتو نشناختی که چی می‌خوای",
@@ -24936,6 +25187,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دانا هر چه بیش بینی اش دراز",
         "دانا هر چه بیش بینی‌اش دراز",
@@ -24964,6 +25216,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دانایی بی رغتی آورد",
         "دانایی بی‌رغبتی آورد",
@@ -25120,6 +25373,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.fa.explanation.persian_proverbs_knowledge_دانایی_گنجی_است_که_هرگز",
       "id": "fa_proverb_tradition_دانایی_گنجی_است_که_هرگز_زوال_نمی_پذیرد_fe15486f",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25133,6 +25387,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دانایی گنجی است که هرگز زوال نمی‌پذیرد",
         "دانایی گنجی است که هرگز زوال نمی‌گیرد",
@@ -25158,6 +25413,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دانش اندوختن گنج بی‌پایان است"
       ]
@@ -25181,6 +25437,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دانش کلید همه قفل‌ها است",
         "دانش کلید همه قفلاست",
@@ -25210,6 +25467,7 @@
       "source_url": "https://www.ganjoor.net/moallem/proverbs/proverb/dar-kuzeh-gr-est-ke-gardad-dar-ash/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "در کوزه گر است که گردد در آش",
         "در کوزه گر است که در آش گردد",
@@ -25237,6 +25495,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "درد بی درمان است",
         "درد بی درمانه",
@@ -25293,6 +25552,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دردمندی که از درد آگاه نیست از درمان نالد",
         "دردمندی که از درد آگاه نیست از درمان نالید",
@@ -25322,6 +25582,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دریا در کوزه نمی‌گنجد",
         "دریا تو کوزه نمی‌گنجه",
@@ -25351,6 +25612,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دریا را با کوزه نمی‌توان اندازه کرد",
         "دریا رو با کوزه نمی‌شه اندازه کرد",
@@ -25380,6 +25642,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دریا را با کوزه نمی‌توان سنجید",
         "دریا رو با کوزه نمی‌شه سنجید",
@@ -25409,6 +25672,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دریا سیل خروشان نیست",
         "دریا سیل خروشان نیس",
@@ -25466,6 +25730,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست به نقد هر کسی نیست",
         "دست به نقد هیچ‌کس نیست",
@@ -25497,6 +25762,7 @@
       "source_url": "https://www.ganjoor.net/moallem/proverbs/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست تنگ بودن به از دست دندان",
         "دست تنگ به از دست دندان",
@@ -25527,6 +25793,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست دست کردن، دست بیهوده کردن است",
         "دست دست کردن بیهوده است",
@@ -25556,6 +25823,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست راست را نشناسد، دست چپ را بشناسد",
         "دست راست را نشناسد دست چپ را بشناسد",
@@ -25584,6 +25852,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست و دل باز هر دو در یک کاسه است",
         "دست و دل باز، هر دو در یک کاسه است",
@@ -25611,6 +25880,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست و دل کسی را نباید بست",
         "دست و دل کسی را نباید بستن",
@@ -25638,6 +25908,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست و دل کسی را نباید بستن، الا به دست خودش",
         "دست و دل کسی را نباید بست، الا به دست خودش",
@@ -25665,6 +25936,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست و دل کسی را نباید بستن مگر به دست خودش",
         "دست و دل کسی رو نباید بستن مگر به دست خودش",
@@ -25723,6 +25995,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست و دلبازی، هر دو در یک کیسه است",
         "دست و دلبازی هر دو در یک کیسه است",
@@ -25752,6 +26025,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست و پا زدن، سودی ندارد",
         "دست و پا زدن سودی ندارد",
@@ -25780,6 +26054,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست و پا کردن",
         "دست و پا کردن است",
@@ -25808,6 +26083,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دشمن دانا به از نادان",
         "دشمن دانا به از نادون",
@@ -25836,6 +26112,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دشمن داناست، دوست نادان",
         "دشمن دانا، دوست نادان",
@@ -25864,6 +26141,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دشمن نادان دوست داناست",
         "دش enemy نادان دوست داناست",
@@ -25891,6 +26169,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دشواری راه نشان زنده بودن است",
         "دشواری راه نشون زنده بودنِه",
@@ -25918,6 +26197,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دشواری راه، نشانه ارزش مقصد است",
         "دشواری راه نشانه ارزش مقصد است",
@@ -25946,6 +26226,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دشواری‌ها معیاری برای سنجش توانایی‌اند",
         "دشواری‌ها معیار سنجش توانایی‌اند",
@@ -25976,6 +26257,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دشواری‌ها معیاری برای سنجش شخصیت‌اند",
         "دشواری‌ها معیار سنجش شخصیت‌اند",
@@ -26006,6 +26288,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دشواری‌ها نشانه‌های راه‌اند",
         "دشواری‌ها نشانه راه‌اند",
@@ -26034,6 +26317,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دشواری کار، نشانه عمیق بودن است",
         "دشواری کار نشانه عمیق بودن است",
@@ -26089,6 +26373,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دماغ کسی را بریدن",
         "دماغ کسی رو بریدن",
@@ -26117,6 +26402,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دماغ کسی را به خاک مالیدن",
         "دماغ منو به خاک مالید",
@@ -26146,6 +26432,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دماغش به آسمان کشیده شدن",
         "دماغ فلانی به آسمون کشیده شد",
@@ -26204,6 +26491,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دندان طمع را بکن وگرنه دستت را می‌گیرد",
         "دندان طمع رو بکن وگرنه دستت رو می‌گیره",
@@ -26231,6 +26519,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دندان طمع را کندن",
         "دندان طمعش را کند",
@@ -26256,6 +26545,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دندان طمع کردن به استخوان حیوان",
         "دندان طمع به استخوان حیوان کردن",
@@ -26286,6 +26576,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "راست و ریان را گم کردن",
         "راست و ریانش را گم کرد",
@@ -26316,6 +26607,7 @@
       "source_url": "https://www.tebyan.net/newindex.aspx?pid=14558",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "راستی می‌گویند بهشت زیر پای مادران است",
         "راستی میگن بهشت زیر پای مادرانه",
@@ -26345,6 +26637,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "رود از سرچشمه گل آلود است",
         "رود از سرچشمه گل‌آلود است",
@@ -26374,6 +26667,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "سر و دست کسی را جدا کردن",
         "سر و دست کسی را جدا می‌کند",
@@ -26400,6 +26694,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "سر و دست کسی را شکستن",
         "سر و دست کسی رو شکستن",
@@ -26429,6 +26724,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "سنگ بزرگ نشانه نزدن است"
       ]
@@ -26452,6 +26748,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "سگ دو سر داشتن",
         "سگ دو سر دارد",
@@ -26480,6 +26777,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "سگ زرد صاحبش را پیدا می‌کند",
         "سگ زرد صاحبش را پیدا خواهد کرد",
@@ -26506,6 +26804,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "شاهنامه آخرش خوش است",
         "آخر شاهنامه خوش است",
@@ -26534,6 +26833,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "شیر شیر بودن",
         "شیرشیر بودن",
@@ -26562,6 +26862,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "شیر علم خوابیدن",
         "شیر علم خوابید",
@@ -26590,6 +26891,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "عاقبت جوینده یابنده است",
         "عاقبت جو یابنده است",
@@ -26616,6 +26918,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "عاقل نکند کاری که جایز نباشد",
         "عاقل کاری نکند که جایز نباشد"
@@ -26640,6 +26943,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "عاقل و جاهل دو برادرند",
         "عاقل و جاهل دو برادر هستند",
@@ -26692,6 +26996,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "عالم از عینک خودبینی است"
       ]
@@ -26715,6 +27020,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "عقربک زیر لب کسی خزیدن",
         "عقربک زیر لبش خزیدن",
@@ -26887,6 +27193,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fa.explanation.persian_proverbs_common_مرد_همیشه_خود_را_در_آینه_ی",
       "id": "fa_proverb_tradition_مرد_همیشه_خود_را_در_آینه_یار_می_کند_209172de",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26900,6 +27207,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "مرد همیشه خود را در آینه یار می‌کند",
         "مرد همیشه خود را در آینه یاری می‌کند",
@@ -26925,6 +27233,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "مردن از گرسنگی به از مردن از سیری دروغ",
         "مردن از گرسنگی بهتر از مردن از سیری دروغ است",
@@ -26938,6 +27247,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_proverbs_common_مکر_و_مکر_پیوسته_است_هر_که",
       "id": "fa_proverb_tradition_مکر_و_مکر_پیوسته_است_هر_که_را_مکر_است_به_مکر_خود_مبتلا_است_b40cd54d",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26951,6 +27261,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "مکر و مکر پیوسته است، هر که را مکر است، به مکر خود مبتلا است",
         "مکر و مکر پیوسته است، هر کس مکر داشته باشد، به مکر خود گرفتار می‌شود",
@@ -26979,6 +27290,7 @@
       "source_url": "https://www.ganjoor.net/ganjoor/?p=12345",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نه هر که به قامت مهتر است بزرگ است",
         "نه هر که قامت مهتر دارد بزرگ است",
@@ -27006,6 +27318,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر چه کنی به خود آن کنی",
         "هر چه کنی به خودت کنی",
@@ -27032,6 +27345,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر چیز که بخورد خود، حیوان است",
         "هر چیزی که خودشو بخوره، حیوانه",
@@ -27086,6 +27400,7 @@
       "source_url": "https://www.ganjoor.net/moallem/proverbs/proverb/har-ke-bamash-bish-barfash-bishtar/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر که بامش بیش برفش بیشتر",
         "هر که بامش بیش برف بیشتر",
@@ -27114,6 +27429,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر که بپرسد نادان است، هر که نپرسد نادان‌تر است",
         "هر کس بپرسد نادان است، هر کس نپرسد نادان‌تر است"
@@ -27138,6 +27454,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر که جز ماهی ز آبش سیر شد او را آب دوزخ باشد",
         "هر که غیر از ماهی از آبش سیر شد او را آب دوزخ باشد",
@@ -27168,6 +27485,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر که در دل خویشتن است، از جهان بی‌نیاز است",
         "هر که در دل خود است، از جهان بی‌نیاز است",
@@ -27197,6 +27515,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر که در دل خویشتن است، در جهان هست",
         "هر که در دل خودشه، در جهان هست",
@@ -27223,6 +27542,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر که در طلب حکمت است، از نادانی خویش می‌گرید",
         "هر که در طلب حکمت است، از نادانی خود می‌گرید",
@@ -27278,6 +27598,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر که درد عشق را نشناسد، چه غم از مرد و زن دارد",
         "هر که درد عشق را نشناسد، چه غم از زن و مرد دارد",
@@ -27305,6 +27626,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هر که ز دل برود، از دل برآید",
         "هر که از دل برود، از دل برآید",
@@ -27334,6 +27656,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "پا توی کفش کسی کردن",
         "پاتو توی کفش کسی میذاری",
@@ -27363,6 +27686,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "پا در میانی کردن",
         "پا در میون کردن",
@@ -27393,6 +27717,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "پا در کفش کسی کردن",
         "پا در کفش کسی رو کردن",
@@ -27421,6 +27746,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "پا در گل فرو بردن",
         "پا در گل رفتن",
@@ -27450,6 +27776,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "پنجه در خون کباب کردن",
         "پنجه در خون کباب کرد",
@@ -27508,6 +27835,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چشم در برابر حقیقت کوری است",
         "چشم در برابر حقیقت کوریست",
@@ -27533,6 +27861,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چشم عقاب را از دور بینی نیست",
         "چشم عقاب رو از دور بینی نیست",
@@ -27562,6 +27891,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چشم لنگ به دنیا آمدن",
         "چشم لنگ بدنیا اومدن",
@@ -27590,6 +27920,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چشم و ابروی کسی را به هم دوختن",
         "چشم و ابروی کسی رو به هم دوختن",
@@ -27618,6 +27949,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چشم و ابروی کسی را در آوردن",
         "چشم و ابروی کسی در آوردن",
@@ -27647,6 +27979,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چشم و ابروی کسی را سفید کردن",
         "چشم و ابروی منو سفید کرد",
@@ -27676,6 +28009,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چشم و ابروی کسی را پر زرق و برق کردن",
         "چشم و ابروی کسی رو پر زرق و برق کردن",
@@ -27704,6 +28038,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چشم و ابروی کسی را کج کردن",
         "چشم و ابروی کسی رو کج کردن",
@@ -27733,6 +28068,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چشم چشم را در آوردن",
         "چشم چشم در آوردن",
@@ -27793,6 +28129,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چندان که بینی همان بینی، چون نبینی همان مگو",
         "چندان که ببینی همان بگو، چون نبینی همان مگو",
@@ -27819,6 +28156,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چنگی در چنار زدن",
         "چنگی تو چنار زدن",
@@ -27849,6 +28187,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چنین گفتن بهتر از آن است که گوید",
         "چنین گفتن بهتر از آن است که بگوید",
@@ -27876,6 +28215,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چیزهایی که روی منبر است از منبر پایین نرو",
         "چیزی که روی منبر است از منبر پایین نرو",
@@ -27905,6 +28245,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "کار از محکم‌کاری است",
         "کار از محکم‌کاریه",
@@ -27932,6 +28273,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "کاسه داغ تر از آش کسی شدن",
         "کاسه داغ تر از آش فلانی شدن",
@@ -27947,6 +28289,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fa.explanation.persian_proverbs_common_کسی_که_از_گفتن_خجل_می_شود_",
       "id": "fa_proverb_tradition_کسی_که_از_گفتن_خجل_می_شود_از_گفتن_بازنمی_ایستد_37a743e1",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27960,6 +28303,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "کسی که از گفتن خجالت می‌کشد، از گفتن بازنمی‌ایستد",
         "کسی که از گفتن خجالت می‌کشه، از گفتن بازنمی‌ایسته",
@@ -28073,6 +28417,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گدا چو خدا را دید یک بار صدقه داد",
         "گدا چون خدا را دید یک بار صدقه داد",
@@ -28099,6 +28444,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گر از دست برآید چه کاریم",
         "اگر از دست برآید چه کاریم",
@@ -28129,6 +28475,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گربه دستش به دهن نرفته",
         "گربه دستش نرفته دهنش",
@@ -28155,6 +28502,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گربه را دم حجله نکش",
         "گربه رو دم حجله نکش",
@@ -28182,6 +28530,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گفتن و نگفتن همان گفتن است",
         "گفتن و نگفتن همون گفتن است",
@@ -28210,6 +28559,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گنج از دل خاک برآید اگر چه پنهان باشد",
         "گنج از دل خاک برآید هر چند پنهان باشد"
@@ -28234,6 +28584,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گور و گهواره"
       ]
@@ -28257,6 +28608,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گوش هر کس به دهان اوست",
         "گوش هرکی به دهان اونست",
@@ -28285,6 +28637,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گوشت تازه را نباید گرسنه خورد",
         "گوشت تازه رو نباید گرسنه خورد",
@@ -28312,6 +28665,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گوشمالی بوالفضول در مجلس نقالان",
         "گوشمالی بوالفضول",

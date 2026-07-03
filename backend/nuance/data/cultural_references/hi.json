@@ -409,6 +409,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A4%9C%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि की धारा",
         "अग्नि की लहर",
@@ -527,6 +528,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%AE%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि की परिभाषा",
         "अग्नि का वर्णन",
@@ -3823,6 +3825,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_ashokan_edicts_अश_क_क_कल_ग_य_द_ध",
       "id": "hi_classical_or_scriptural_allusion_अश_क_क_कल_ग_य_द_ध_77c4c0a2",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4039,6 +4042,7 @@
         "zh": "'असुरों का वध'指的是印度教神话中恶魔的毁灭，常常象征着善战胜恶，如《罗摩衍那》和《摩诃婆罗多》等各种文本中所描绘的那样。"
       },
       "id": "hi_classical_or_scriptural_allusion_अस_र_क_वध_d8630256",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly reflect the theme of good versus evil in Hindu mythology.",
@@ -4210,6 +4214,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindu_scriptures_mahopanishad_अह_स_परम_धर_म_परम_ब_",
       "id": "hi_classical_or_scriptural_allusion_अह_स_परम_धर_म_परम_ब_रह_म_35d7d26e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4267,6 +4272,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.isha_upanishad_phrases_अह_स_सत_यमक_र_धस_त_य_ग_श_न_",
       "id": "hi_classical_or_scriptural_allusion_अह_स_सत_यमक_र_धस_त_य_ग_श_न_त_अपर_ग_रह_15e4dd76",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4750,6 +4756,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.isha_upanishad_phrases_ईश_व_स_यम_इद_सर_वम",
       "id": "hi_classical_or_scriptural_allusion_ईश_व_स_यम_इद_सर_वम_7f3ea144",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5520,6 +5527,7 @@
       "source_location": "कृष्ण-सुदामा कथा",
       "source_work": "भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण और सुदामा",
         "कृष्ण-सुदामा",
@@ -5778,6 +5786,7 @@
       "source_location": "कृष्ण लीला",
       "source_work": "भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण की लीलाएँ",
         "कृष्ण की लीलाएं",
@@ -5790,6 +5799,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_religious_allusions_क_ष_ण_र_ध_क_म_लन",
       "id": "hi_classical_or_scriptural_allusion_क_ष_ण_र_ध_क_म_लन_47f2b150",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5906,6 +5916,7 @@
         "zh": "克里希纳利拉指的是克里希纳神的神圣戏剧和消遣，在各种文本和表演中庆祝，突显了他的顽皮和慈爱本性。"
       },
       "id": "hi_classical_or_scriptural_allusion_क_ष_णल_ल_7cc0bbe5",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Krishna Leela is accurate and well-supported by classical texts, with correct surface patterns.",
@@ -6472,6 +6483,7 @@
       "source_url": "https://www.wikisource.org/wiki/Bhagavad_Gita",
       "source_work": "Bhagavad Gita",
       "source_work_key": "mnemosyne.hi.work.bhagavad_gita",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्मफल",
         "कर्म फल",
@@ -7010,6 +7022,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_geet_govind_pad_ग_त_ग_व_न_द_क_पद",
       "id": "hi_classical_or_scriptural_allusion_ग_त_ग_व_न_द_क_पद_c4d0f767",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7818,6 +7831,7 @@
       "source_license": "public_domain",
       "source_work": "ज्ञानेश्वरी",
       "source_work_key": "mnemosyne.hi.work.ज_ञ_न_श_वर",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "ग्यानेश्वरी",
         "ज्ञानेश्वरी",
@@ -8212,6 +8226,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/manusmriti-with-the-commentary-of-medhatithi",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "पुरुषार्थ चतुर्विध",
         "चतुर्विध पुरुषार्थ",
@@ -8265,6 +8280,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जाको राखे साइयाँ मार सके न कोई",
         "जाको रखे साइयाँ मार सके न कोई"
@@ -8610,6 +8626,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_classical_geet_govind_जयद_व_क_ग_त_ग_व_द",
       "id": "hi_classical_or_scriptural_allusion_जयद_व_क_ग_त_ग_व_द_d4d65755",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8693,6 +8710,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6_%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "Bhagavad Gita",
       "source_work_key": "mnemosyne.hi.work.bhagavad_gita",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "त्रिगुणातीत",
         "त्रिगुणातीत अवस्था",
@@ -8771,6 +8789,7 @@
       "source_url": "https://sa.wikisource.org/wiki/पुराण",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "त्रिलोक",
         "त्रिलोकी",
@@ -8954,6 +8973,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.mahavakya_phrases_तत_त_वमस",
       "id": "hi_classical_or_scriptural_allusion_तत_त_वमस_8fb8c21f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9453,6 +9473,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_upanishads_phrases_ध_य_न_ब_रह_म",
       "id": "hi_classical_or_scriptural_allusion_ध_य_न_ब_रह_म_4b4f7fd3",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9579,6 +9600,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.manusmriti_phrases_धर_म_रक_षत_रक_ष_त",
       "id": "hi_classical_or_scriptural_allusion_धर_म_रक_षत_रक_ष_त_37946aa1",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10729,6 +10751,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A5%8B%E0%A4%97_%E0%A5%A4%E0%A5%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "योग उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.य_ग_उपन_षद",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "पंचाग्नि परीक्षा",
         "पंचाग्नि परीक्षा लेना",
@@ -10767,6 +10790,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.उपन_षद",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "पंचमहाभूत",
         "पंचमहाभूतों",
@@ -11288,6 +11312,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_classical_allusions_001_ब_त_त_ह_ब_स_र_द_आग_क",
       "id": "hi_classical_or_scriptural_allusion_ब_त_त_ह_ब_स_र_द_आग_क_स_ध_ल_f6424213",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11302,6 +11327,7 @@
       "source_url": "https://sa.wikisource.org/wiki/हितोपदेशः",
       "source_work": "हितोपदेश",
       "source_work_key": "mnemosyne.hi.work.ह_त_पद_श",
+      "subcategory": "panchatantra",
       "surface_patterns": [
         "बीती ताहि बिसार दे आगे की सुधि ले",
         "बीती को बिसार दे आगे की सुधि ले",
@@ -11509,6 +11535,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism",
       "source_work": "उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.उपन_षद",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "ब्रह्म का साक्षात्कार",
         "ब्रह्म साक्षात्कार",
@@ -14308,6 +14335,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.hi_mythology_terms_यक_ष_ण_क_श_र_प",
       "id": "hi_classical_or_scriptural_allusion_यक_ष_ण_क_श_र_प_6f664f39",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14511,6 +14539,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.hindi_devotional_literature_र_ध_क_ष_ण_म_लन",
       "id": "hi_classical_or_scriptural_allusion_र_ध_क_ष_ण_म_लन_1d4ade0e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14642,6 +14671,7 @@
       "source_url": "https://archive.org/details/RamcharitmanasTulsidas",
       "source_work": "Ramcharitmanas",
       "source_work_key": "mnemosyne.hi.work.ramcharitmanas",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राम नाम सत्य है",
         "राम नाम सत्य है, सत्य ही राम है",
@@ -16143,6 +16173,7 @@
         "zh": "湿婆舞蹈是湿婆神表演的一种强大舞蹈，象征着创造与毁灭的宇宙循环。在印度教神话中具有重要意义，常在奉献场合中吟诵。"
       },
       "id": "hi_classical_or_scriptural_allusion_श_व_त_डव_e12d575b",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to 'Shiva Tandava Stotra' by Ravana is accurate, and the surface patterns correctly reflect the cultural significance of the dance.",
@@ -16180,6 +16211,7 @@
         "zh": "湿婆和帕尔瓦蒂是印度神话中的重要神祇，代表神圣的男性和女性，他们的结合象征着创造的平衡。"
       },
       "id": "hi_classical_or_scriptural_allusion_श_व_प_र_वत_4fe000d7",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct.",
@@ -16780,6 +16812,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.hindi_classical_phrases_स_रज_क_प_य_र_य_जगत_क_न_य_य",
       "id": "hi_classical_or_scriptural_allusion_स_रज_क_प_य_र_य_जगत_क_न_य_य_af467df2",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17112,6 +17145,7 @@
         "zh": "希兰雅卡希普是印度神话中的一位魔王，以其傲慢和对毗湿奴的反对而闻名，最终导致他被化身纳拉西姆哈击败。"
       },
       "id": "hi_classical_or_scriptural_allusion_ह_रण_यकश_यप_b1425682",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct.",
@@ -17125,6 +17159,7 @@
       "source_location": "Canto 7",
       "source_work": "Bhagavata Purana",
       "source_work_key": "mnemosyne.hi.work.bhagavata_purana",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "हिरण्यकश्यप",
         "हिरण्यकश्यप का नाम"
@@ -19602,6 +19637,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.hi.explanation.hindi_cultural_phrases_अग_न_श_ख_ध_रण",
       "id": "hi_cultural_reference_अग_न_श_ख_ध_रण_8df0e534",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19711,6 +19747,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अग्नि-साक्षी होना",
         "अग्नि-साक्षी हुई",
@@ -20240,6 +20277,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%AC_%E0%A4%AA%E0%A4%9B%E0%A4%A4%E0%A4%BE%E0%A4%8F_%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE_%E0%A4%B9%E0%A5%8B%E0%A4%A4_%E0%A4%9C%E0%A4%AC_%E0%A4%9A%E0%A4%BF%E0%A4%A1%E0%A4%BC%E0%A4%BF%E0%A4%AF%E0%A4%BE_%E0%A4%9A%E0%A5%81%E0%A4%97_%E0%A4%97%E0%A4%88_%E0%A4%96%E0%A5%87%E0%A4%A4",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अब पछताए क्या होत जब चिड़िया चुग गई खेत"
       ]
@@ -20694,6 +20732,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%86%E0%A4%81%E0%A4%96_%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आँख मारना"
       ]
@@ -20717,6 +20756,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%86%E0%A4%88%E0%A4%A8%E0%A4%BE_%E0%A4%A6%E0%A4%BF%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आईना दिखाना"
       ]
@@ -20890,6 +20930,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%86%E0%A4%A0%E0%A5%8B%E0%A4%82_%E0%A4%AA%E0%A4%B9%E0%A4%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आठों पहर"
       ]
@@ -20943,6 +20984,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%86%E0%A4%A6%E0%A4%BE%E0%A4%A8-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A6%E0%A4%BE%E0%A4%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आदान-प्रदान"
       ]
@@ -21219,6 +21261,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%86%E0%A4%AE_%E0%A4%95%E0%A5%87_%E0%A4%86%E0%A4%AE%2C_%E0%A4%97%E0%A5%81%E0%A4%A0%E0%A4%B2%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%82_%E0%A4%95%E0%A5%87_%E0%A4%A6%E0%A4%BE%E0%A4%AE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आम के आम, गुठलियों के दाम"
       ]
@@ -21242,6 +21285,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%86%E0%A4%AE_%E0%A4%95%E0%A5%87_%E0%A4%86%E0%A4%AE_%E0%A4%97%E0%A5%81%E0%A4%A0%E0%A4%B2%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%82_%E0%A4%95%E0%A5%87_%E0%A4%A6%E0%A4%BE%E0%A4%AE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आम के आम गुठलियों के दाम"
       ]
@@ -21295,6 +21339,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%86%E0%A4%B0%E0%A4%A4%E0%A5%80_%E0%A4%89%E0%A4%A4%E0%A4%BE%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आरती उतारना"
       ]
@@ -21318,6 +21363,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%86%E0%A4%B5%E0%A4%B6%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A4%A4%E0%A4%BE_%E0%A4%86%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0_%E0%A4%95%E0%A5%80_%E0%A4%9C%E0%A4%A8%E0%A4%A8%E0%A5%80_%E0%A4%B9%E0%A5%88",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आवश्यकता आविष्कार की जननी है"
       ]
@@ -21378,6 +21424,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%86%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%80%E0%A4%A8_%E0%A4%95%E0%A4%BE_%E0%A4%B8%E0%A4%BE%E0%A4%81%E0%A4%AA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आस्तीन का साँप"
       ]
@@ -21503,6 +21550,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%88%E0%A4%A6_%E0%A4%95%E0%A4%BE_%E0%A4%9A%E0%A4%BE%E0%A4%81%E0%A4%A6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ईद का चाँद"
       ]
@@ -21526,6 +21574,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%88%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%B0_%E0%A4%95%E0%A5%80_%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%BE_%E0%A4%95%E0%A4%B9%E0%A5%80%E0%A4%82_%E0%A4%A7%E0%A5%82%E0%A4%AA_%E0%A4%95%E0%A4%B9%E0%A5%80%E0%A4%82_%E0%A4%9B%E0%A4%BE%E0%A4%AF%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ईश्वर की माया कहीं धूप कहीं छाया"
       ]
@@ -21549,6 +21598,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%88%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%B0_%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A5%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ईश्वर जाने"
       ]
@@ -21572,6 +21622,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%89%E0%A4%A1%E0%A4%BC%E0%A4%A4%E0%A5%80_%E0%A4%9A%E0%A4%BF%E0%A4%A1%E0%A4%BC%E0%A4%BF%E0%A4%AF%E0%A4%BE_%E0%A4%95%E0%A5%87_%E0%A4%AA%E0%A4%B0_%E0%A4%AA%E0%A4%B9%E0%A4%9A%E0%A4%BE%E0%A4%A8%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "उड़ती चिड़िया के पर पहचानना"
       ]
@@ -21741,6 +21792,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%89%E0%A4%B2%E0%A5%8D%E0%A4%9F%E0%A4%BE_%E0%A4%9A%E0%A5%8B%E0%A4%B0_%E0%A4%95%E0%A5%8B%E0%A4%A4%E0%A4%B5%E0%A4%BE%E0%A4%B2_%E0%A4%95%E0%A5%8B_%E0%A4%A1%E0%A4%BE%E0%A4%82%E0%A4%9F%E0%A5%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "उल्टा चोर कोतवाल को डांटे"
       ]
@@ -21764,6 +21816,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%89%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A5%82_%E0%A4%95%E0%A4%BE_%E0%A4%AA%E0%A4%9F%E0%A5%8D%E0%A4%A0%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "उल्लू का पट्ठा"
       ]
@@ -21787,6 +21840,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%89%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A5%82_%E0%A4%AC%E0%A4%A8%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "उल्लू बनाना"
       ]
@@ -21931,6 +21985,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%8F%E0%A4%95_%E0%A4%A6%E0%A5%82%E0%A4%9C%E0%A5%87_%E0%A4%95%E0%A5%87_%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "एक दूजे के वास्ते"
       ]
@@ -21954,6 +22009,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%8F%E0%A4%95_%E0%A4%AA%E0%A4%82%E0%A4%A5_%E0%A4%A6%E0%A5%8B_%E0%A4%95%E0%A4%BE%E0%A4%9C",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "एक पंथ दो काज"
       ]
@@ -22201,6 +22257,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A5%8C%E0%A4%86_%E0%A4%9A%E0%A4%B2%E0%A4%BE_%E0%A4%B9%E0%A4%82%E0%A4%B8_%E0%A4%95%E0%A5%80_%E0%A4%9A%E0%A4%BE%E0%A4%B2",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "कौआ चला हंस की चाल"
       ]
@@ -22224,6 +22281,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A5%81%E0%A4%8F%E0%A4%81_%E0%A4%95%E0%A4%BE_%E0%A4%AE%E0%A5%87%E0%A4%82%E0%A4%A2%E0%A4%95",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "कुएँ का मेंढक"
       ]
@@ -22276,6 +22334,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A4%82%E0%A4%97%E0%A4%BE%E0%A4%B2%E0%A5%80_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%86%E0%A4%9F%E0%A4%BE_%E0%A4%97%E0%A5%80%E0%A4%B2%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "कंगाली में आटा गीला"
       ]
@@ -22352,6 +22411,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A5%8C%E0%A4%A1%E0%A4%BC%E0%A5%80_%E0%A4%95%E0%A5%8B_%E0%A4%A4%E0%A4%82%E0%A4%97",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "कौड़ी को तंग"
       ]
@@ -22421,6 +22481,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A5%81%E0%A4%82%E0%A4%AD%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A3_%E0%A4%95%E0%A5%80_%E0%A4%A8%E0%A5%80%E0%A4%82%E0%A4%A6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "कुंभकर्ण की नींद"
       ]
@@ -22444,6 +22505,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A4%BE%E0%A4%AE_%E0%A4%95%E0%A4%BE_%E0%A4%A8_%E0%A4%95%E0%A4%BE%E0%A4%9C_%E0%A4%95%E0%A4%BE_%E0%A4%A6%E0%A5%81%E0%A4%B6%E0%A5%8D%E0%A4%AE%E0%A4%A8_%E0%A4%85%E0%A4%A8%E0%A4%BE%E0%A4%9C_%E0%A4%95%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "काम का न काज का दुश्मन अनाज का"
       ]
@@ -22613,6 +22675,7 @@
       "source_license": "public_domain",
       "source_work": "Coolie",
       "source_work_key": "mnemosyne.hi.work.coolie",
+      "subcategory": "filmi",
       "surface_patterns": [
         "कुली-भाई",
         "कुली भाई",
@@ -22737,6 +22800,7 @@
         "zh": "克里希纳的长笛象征着神圣的音乐和爱的迷人力量，常与克里希纳性格中顽皮和浪漫的方面相关联。"
       },
       "id": "hi_cultural_reference_क_ष_ण_क_ब_स_र_cdae1b13",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference is accurate and the explanation correctly captures the symbolic significance of Krishna's flute in Hindu mythology.",
@@ -22848,6 +22912,7 @@
       "source_license": "public_domain",
       "source_work": "भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्णा शरणम् मम",
         "कृष्ण शरणम् मम"
@@ -22902,6 +22967,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A4%AE%E0%A4%B0_%E0%A4%A4%E0%A5%8B%E0%A4%A1%E0%A4%BC%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "कमर तोड़ना"
       ]
@@ -23001,6 +23067,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "कलम और तलवार का युद्ध",
         "कलम और तलवार के युद्ध",
@@ -23123,6 +23190,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%96%E0%A5%8B%E0%A4%A6%E0%A4%BE_%E0%A4%AA%E0%A4%B9%E0%A4%BE%E0%A4%A1%E0%A4%BC_%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A4%B2%E0%A5%80_%E0%A4%9A%E0%A5%81%E0%A4%B9%E0%A4%BF%E0%A4%AF%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "खोदा पहाड़ निकली चुहिया"
       ]
@@ -23169,6 +23237,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%96%E0%A4%BC%E0%A5%82%E0%A4%A8_%E0%A4%95%E0%A4%BE_%E0%A4%AC%E0%A4%A6%E0%A4%B2%E0%A4%BE_%E0%A4%96%E0%A4%BC%E0%A5%82%E0%A4%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "ख़ून का बदला ख़ून"
       ]
@@ -23192,6 +23261,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%96%E0%A4%BC%E0%A5%82%E0%A4%A8_%E0%A4%B8%E0%A5%82%E0%A4%96%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "ख़ून सूखना"
       ]
@@ -23215,6 +23285,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%96%E0%A4%BC%E0%A4%BE%E0%A4%B2%E0%A5%80_%E0%A4%A6%E0%A4%BF%E0%A4%AE%E0%A4%BE%E0%A4%97%E0%A4%BC_%E0%A4%B6%E0%A5%88%E0%A4%A4%E0%A4%BE%E0%A4%A8_%E0%A4%95%E0%A4%BE_%E0%A4%98%E0%A4%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "ख़ाली दिमाग़ शैतान का घर"
       ]
@@ -23268,6 +23339,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%96%E0%A4%9F%E0%A5%8D%E0%A4%9F%E0%A5%87_%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%82%E0%A4%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "खट्टे अंगूर"
       ]
@@ -23291,6 +23363,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%96%E0%A4%BC%E0%A4%AC%E0%A4%B0_%E0%A4%B2%E0%A5%87%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "ख़बर लेना"
       ]
@@ -23314,6 +23387,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%96%E0%A4%BC%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A5%80_%E0%A4%AA%E0%A5%81%E0%A4%B2%E0%A4%BE%E0%A4%B5",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "ख़याली पुलाव"
       ]
@@ -23337,6 +23411,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%96%E0%A4%B0%E0%A5%80_%E0%A4%96%E0%A5%8B%E0%A4%9F%E0%A5%80_%E0%A4%B8%E0%A5%81%E0%A4%A8%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "खरी खोटी सुनाना"
       ]
@@ -23360,6 +23435,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%97%E0%A5%82%E0%A4%81%E0%A4%97%E0%A5%87_%E0%A4%95%E0%A4%BE_%E0%A4%97%E0%A5%81%E0%A4%A1%E0%A4%BC_%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "गूँगे का गुड़ खाना"
       ]
@@ -23523,6 +23599,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%97%E0%A4%BE%E0%A4%97%E0%A4%B0_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%B8%E0%A4%BE%E0%A4%97%E0%A4%B0_%E0%A4%AD%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "गागर में सागर भरना"
       ]
@@ -23533,6 +23610,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_ghazal_terms_ग_ज_ल_क_श_र",
       "id": "hi_cultural_reference_ग_ज_ल_क_श_र_72c1e6c6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23546,6 +23624,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Ghazal",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ग़ज़ल के शेर",
         "ग़ज़ल के शेरों",
@@ -24174,6 +24253,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%97%E0%A5%81%E0%A4%B2%E0%A4%9B%E0%A4%B0%E0%A5%8D%E0%A4%B0%E0%A5%87_%E0%A4%89%E0%A4%A1%E0%A4%BC%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "गुलछर्रे उड़ाना"
       ]
@@ -24226,6 +24306,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%97%E0%A5%87%E0%A4%B9%E0%A5%82%E0%A4%81_%E0%A4%95%E0%A5%87_%E0%A4%B8%E0%A4%BE%E0%A4%A5_%E0%A4%98%E0%A5%81%E0%A4%A8_%E0%A4%AD%E0%A5%80_%E0%A4%AA%E0%A4%BF%E0%A4%B8%E0%A4%A4%E0%A4%BE_%E0%A4%B9%E0%A5%88",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "गेहूँ के साथ घुन भी पिसता है"
       ]
@@ -24368,6 +24449,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%98%E0%A5%80_%E0%A4%95%E0%A5%87_%E0%A4%A6%E0%A4%BF%E0%A4%8F_%E0%A4%9C%E0%A4%B2%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "घी के दिए जलाना"
       ]
@@ -24391,6 +24473,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%98%E0%A5%8B%E0%A4%A1%E0%A4%BC%E0%A4%BE_%E0%A4%98%E0%A4%BE%E0%A4%B8_%E0%A4%B8%E0%A5%87_%E0%A4%AF%E0%A4%BE%E0%A4%B0%E0%A5%80_%E0%A4%95%E0%A4%B0%E0%A5%87_%E0%A4%A4%E0%A5%8B_%E0%A4%96%E0%A4%BE%E0%A4%8F_%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE%3F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "घोड़ा घास से यारी करे तो खाए क्या?"
       ]
@@ -24414,6 +24497,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%98%E0%A5%8B%E0%A4%A1%E0%A4%BC%E0%A5%87_%E0%A4%AC%E0%A5%87%E0%A4%9A%E0%A4%95%E0%A4%B0_%E0%A4%B8%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "घोड़े बेचकर सोना"
       ]
@@ -24437,6 +24521,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%98%E0%A4%B0_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82_%E0%A4%A6%E0%A4%BE%E0%A4%A8%E0%A5%87_%E0%A4%85%E0%A4%AE%E0%A5%8D%E0%A4%AE%E0%A4%BE_%E0%A4%9A%E0%A4%B2%E0%A5%80_%E0%A4%AD%E0%A5%81%E0%A4%A8%E0%A4%BE%E0%A4%A8%E0%A5%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "घर में नहीं दाने अम्मा चली भुनाने"
       ]
@@ -24554,6 +24639,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9A%E0%A5%82%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A4%BE_%E0%A4%95%E0%A4%BE%E0%A4%9F%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चूतिया काटना"
       ]
@@ -24577,6 +24663,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9A%E0%A5%82%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A4%BE_%E0%A4%95%E0%A4%9F%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चूतिया कटना"
       ]
@@ -24869,6 +24956,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9A%E0%A5%82%E0%A4%A8%E0%A4%BE_%E0%A4%B2%E0%A4%97%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चूना लगाना"
       ]
@@ -24892,6 +24980,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9A%E0%A5%81%E0%A4%AA_%E0%A4%B0%E0%A4%B9%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चुप रहना"
       ]
@@ -24915,6 +25004,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9A%E0%A4%BE%E0%A4%AF_%E0%A4%AA%E0%A4%BE%E0%A4%A8%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चाय पानी"
       ]
@@ -24961,6 +25051,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9A%E0%A4%BE%E0%A4%B0_%E0%A4%A6%E0%A4%BF%E0%A4%A8_%E0%A4%95%E0%A5%80_%E0%A4%9A%E0%A4%BE%E0%A4%81%E0%A4%A6%E0%A4%A8%E0%A5%80_%E0%A4%AB%E0%A4%BF%E0%A4%B0_%E0%A4%85%E0%A4%81%E0%A4%A7%E0%A5%87%E0%A4%B0%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%A4",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चार दिन की चाँदनी फिर अँधेरी रात"
       ]
@@ -25014,6 +25105,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9A%E0%A5%81%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A5%82_%E0%A4%AD%E0%A4%B0_%E0%A4%AA%E0%A4%BE%E0%A4%A8%E0%A5%80_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%A1%E0%A5%82%E0%A4%AC_%E0%A4%AE%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चुल्लू भर पानी में डूब मरना"
       ]
@@ -25037,6 +25129,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9A%E0%A5%87%E0%A4%B9%E0%A4%B0%E0%A4%BE_%E0%A4%89%E0%A4%A4%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चेहरा उतरना"
       ]
@@ -25148,6 +25241,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9A%E0%A4%AE%E0%A4%A1%E0%A4%BC%E0%A5%80_%E0%A4%9C%E0%A4%BE%E0%A4%8F_%E0%A4%AA%E0%A4%B0_%E0%A4%A6%E0%A4%AE%E0%A4%A1%E0%A4%BC%E0%A5%80_%E0%A4%A8_%E0%A4%9C%E0%A4%BE%E0%A4%8F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चमड़ी जाए पर दमड़ी न जाए"
       ]
@@ -25171,6 +25265,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9B%E0%A4%BE%E0%A4%A4%E0%A5%80_%E0%A4%9A%E0%A5%8C%E0%A4%A1%E0%A4%BC%E0%A5%80_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "छाती चौड़ी होना"
       ]
@@ -25194,6 +25289,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9B%E0%A4%BE%E0%A4%A4%E0%A5%80_%E0%A4%AB%E0%A5%82%E0%A4%B2%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "छाती फूलना"
       ]
@@ -25340,6 +25436,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9B%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A5%80%E0%A4%B8_%E0%A4%95%E0%A4%BE_%E0%A4%86%E0%A4%81%E0%A4%95%E0%A4%A1%E0%A4%BC%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "छत्तीस का आँकड़ा"
       ]
@@ -25363,6 +25460,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%BE%E0%A4%97_%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जाग जाना"
       ]
@@ -25386,6 +25484,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%BE%E0%A4%97%E0%A5%83%E0%A4%A4_%E0%A4%B9%E0%A5%8B_%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जागृत हो जाना"
       ]
@@ -25409,6 +25508,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%BE%E0%A4%97%E0%A5%83%E0%A4%A4_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जागृत होना"
       ]
@@ -25432,6 +25532,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%BF%E0%A4%97%E0%A4%B0_%E0%A4%95%E0%A4%BE_%E0%A4%9F%E0%A5%81%E0%A4%95%E0%A4%A1%E0%A4%BC%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जिगर का टुकड़ा"
       ]
@@ -25455,6 +25556,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A5%8B_%E0%A4%97%E0%A4%B0%E0%A4%9C%E0%A4%A4%E0%A5%87_%E0%A4%B9%E0%A5%88%E0%A4%82_%E0%A4%B5%E0%A5%8B_%E0%A4%AC%E0%A4%B0%E0%A4%B8%E0%A4%A4%E0%A5%87_%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जो गरजते हैं वो बरसते नहीं"
       ]
@@ -25478,6 +25580,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%BE%E0%A4%A8_%E0%A4%B9%E0%A5%88_%E0%A4%A4%E0%A5%8B_%E0%A4%9C%E0%A4%B9%E0%A4%BE%E0%A4%A8_%E0%A4%B9%E0%A5%88",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जान है तो जहान है"
       ]
@@ -25537,6 +25640,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A5%88%E0%A4%B8%E0%A4%BE_%E0%A4%95%E0%A4%BF_%E0%A4%AE%E0%A5%88%E0%A4%82_%E0%A4%95%E0%A4%B9_%E0%A4%B0%E0%A4%B9%E0%A4%BE_%E0%A4%A5%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जैसा कि मैं कह रहा था"
       ]
@@ -25560,6 +25664,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A5%88%E0%A4%B8%E0%A5%80_%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A5%80_%E0%A4%B5%E0%A5%88%E0%A4%B8%E0%A5%80_%E0%A4%AD%E0%A4%B0%E0%A4%A8%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जैसी करनी वैसी भरनी"
       ]
@@ -25583,6 +25688,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%BF%E0%A4%B8_%E0%A4%A5%E0%A4%BE%E0%A4%B2%E0%A5%80_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A4%BE_%E0%A4%89%E0%A4%B8%E0%A5%80_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%9B%E0%A5%87%E0%A4%A6_%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जिस थाली में खाना उसी में छेद करना"
       ]
@@ -25606,6 +25712,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A5%88%E0%A4%B8%E0%A4%BE_%E0%A4%A6%E0%A5%87%E0%A4%B8_%E0%A4%B5%E0%A5%88%E0%A4%B8%E0%A4%BE_%E0%A4%AD%E0%A5%87%E0%A4%B8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जैसा देस वैसा भेस"
       ]
@@ -25956,6 +26063,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%B2-%E0%A4%A5%E0%A4%B2_%E0%A4%8F%E0%A4%95_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जल-थल एक होना"
       ]
@@ -25979,6 +26087,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%B2%E0%A5%87_%E0%A4%AA%E0%A4%B0_%E0%A4%A8%E0%A4%AE%E0%A4%95_%E0%A4%9B%E0%A4%BF%E0%A4%A1%E0%A4%BC%E0%A4%95%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जले पर नमक छिड़कना"
       ]
@@ -26097,6 +26206,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%B2%E0%A4%A4%E0%A5%87_%E0%A4%98%E0%A4%B0_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%B9%E0%A4%BE%E0%A4%A5_%E0%A4%B8%E0%A5%87%E0%A4%82%E0%A4%95%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जलते घर में हाथ सेंकना"
       ]
@@ -26120,6 +26230,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%B2%E0%A4%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जलन"
       ]
@@ -26319,6 +26430,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9C%E0%A4%B9%E0%A4%BE%E0%A4%81_%E0%A4%9A%E0%A4%BE%E0%A4%B9_%E0%A4%B5%E0%A4%B9%E0%A4%BE%E0%A4%81_%E0%A4%B0%E0%A4%BE%E0%A4%B9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जहाँ चाह वहाँ राह"
       ]
@@ -26496,6 +26608,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A0%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%A8%E0%A5%87_%E0%A4%B2%E0%A4%97%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "ठिकाने लगाना"
       ]
@@ -26635,6 +26748,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A1%E0%A5%82%E0%A4%AC%E0%A4%A4%E0%A5%87_%E0%A4%95%E0%A5%8B_%E0%A4%A4%E0%A4%BF%E0%A4%A8%E0%A4%95%E0%A5%87_%E0%A4%95%E0%A4%BE_%E0%A4%B8%E0%A4%B9%E0%A4%BE%E0%A4%B0%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "डूबते को तिनके का सहारा"
       ]
@@ -26687,6 +26801,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A2%E0%A4%AA%E0%A5%8B%E0%A4%B0_%E0%A4%B6%E0%A4%82%E0%A4%96",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ढपोर शंख"
       ]
@@ -26806,6 +26921,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "filmi",
       "surface_patterns": [
         "ताजमहल प्रेम कहानी",
         "प्रेम कहानी ताजमहल",
@@ -26977,6 +27093,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A4%E0%A5%82%E0%A4%AB%E0%A4%BC%E0%A4%BE%E0%A4%A8_%E0%A4%95%E0%A5%87_%E0%A4%AA%E0%A4%B9%E0%A4%B2%E0%A5%87_%E0%A4%95%E0%A5%80_%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%A4%E0%A4%BF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "तूफ़ान के पहले की शांति"
       ]
@@ -27105,6 +27222,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A4%E0%A5%87%E0%A4%B2_%E0%A4%B2%E0%A5%87%E0%A4%A8%E0%A5%87_%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "तेल लेने जाना"
       ]
@@ -27128,6 +27246,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A5%E0%A4%BE%E0%A4%B2%E0%A5%80_%E0%A4%95%E0%A4%BE_%E0%A4%AC%E0%A5%88%E0%A4%97%E0%A4%A8_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "थाली का बैगन होना"
       ]
@@ -27151,6 +27270,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A5%E0%A4%95%E0%A4%95%E0%A4%B0_%E0%A4%AC%E0%A5%88%E0%A4%A0_%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "थककर बैठ जाना"
       ]
@@ -27174,6 +27294,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A5%82%E0%A4%A7_%E0%A4%95%E0%A4%BE_%E0%A4%9C%E0%A4%B2%E0%A4%BE_%E0%A4%9B%E0%A4%BE%E0%A4%9B_%E0%A4%AD%E0%A5%80_%E0%A4%AB%E0%A5%82%E0%A4%81%E0%A4%95_%E0%A4%AB%E0%A5%82%E0%A4%81%E0%A4%95_%E0%A4%95%E0%A4%B0_%E0%A4%AA%E0%A5%80%E0%A4%A4%E0%A4%BE_%E0%A4%B9%E0%A5%88",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दूध का जला छाछ भी फूँक फूँक कर पीता है"
       ]
@@ -27197,6 +27318,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A5%82%E0%A4%A7_%E0%A4%95%E0%A4%BE_%E0%A4%A6%E0%A5%82%E0%A4%A7_%E0%A4%94%E0%A4%B0_%E0%A4%AA%E0%A4%BE%E0%A4%A8%E0%A5%80_%E0%A4%95%E0%A4%BE_%E0%A4%AA%E0%A4%BE%E0%A4%A8%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दूध का दूध और पानी का पानी"
       ]
@@ -27220,6 +27342,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A4%BF%E0%A4%A8_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%A4%E0%A4%BE%E0%A4%B0%E0%A5%87_%E0%A4%A6%E0%A5%87%E0%A4%96%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दिन में तारे देखना"
       ]
@@ -27243,6 +27366,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A5%8B_%E0%A4%A8%E0%A4%BE%E0%A4%B5%E0%A5%8B%E0%A4%82_%E0%A4%95%E0%A5%80_%E0%A4%B8%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दो नावों की सवारी"
       ]
@@ -27266,6 +27390,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A5%80%E0%A4%AF%E0%A5%87_%E0%A4%A4%E0%A4%B2%E0%A5%87_%E0%A4%85%E0%A4%81%E0%A4%A7%E0%A5%87%E0%A4%B0%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दीये तले अँधेरा"
       ]
@@ -27289,6 +27414,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A5%82%E0%A4%B0_%E0%A4%95%E0%A5%87_%E0%A4%A2%E0%A5%8B%E0%A4%B2_%E0%A4%B8%E0%A5%81%E0%A4%B9%E0%A4%BE%E0%A4%B5%E0%A4%A8%E0%A5%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दूर के ढोल सुहावने"
       ]
@@ -27312,6 +27438,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A5%82%E0%A4%B0_%E0%A4%95%E0%A5%87_%E0%A4%A2%E0%A5%8B%E0%A4%B2_%E0%A4%B8%E0%A5%81%E0%A4%B9%E0%A4%BE%E0%A4%B5%E0%A4%A8%E0%A5%87_%E0%A4%B2%E0%A4%97%E0%A4%A4%E0%A5%87_%E0%A4%B9%E0%A5%88%E0%A4%82",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दूर के ढोल सुहावने लगते हैं"
       ]
@@ -27335,6 +27462,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A4%BE%E0%A4%B2_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%95%E0%A5%81%E0%A4%9B_%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%BE_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दाल में कुछ काला होना"
       ]
@@ -27386,6 +27514,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A4%AE_%E0%A4%A4%E0%A5%8B%E0%A4%A1%E0%A4%BC_%E0%A4%A6%E0%A5%87%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दम तोड़ देना"
       ]
@@ -27409,6 +27538,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A4%AE_%E0%A4%A6%E0%A5%87%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दम देना"
       ]
@@ -27432,6 +27562,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A6%E0%A4%AE_%E0%A4%A8%E0%A4%BE%E0%A4%95_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%86%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "दम नाक में आना"
       ]
@@ -27628,6 +27759,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8%E0%A5%87%E0%A4%95%E0%A5%80_%E0%A4%94%E0%A4%B0_%E0%A4%AA%E0%A5%82%E0%A4%9B_%E0%A4%AA%E0%A5%82%E0%A4%9B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "नेकी और पूछ पूछ"
       ]
@@ -27651,6 +27783,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8%E0%A4%BE%E0%A4%95_%E0%A4%95%E0%A4%9F%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "नाक कटना"
       ]
@@ -27674,6 +27807,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8%E0%A4%BE%E0%A4%95%E0%A5%8B%E0%A4%82_%E0%A4%9A%E0%A4%A8%E0%A5%87_%E0%A4%9A%E0%A4%AC%E0%A4%B5%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "नाकों चने चबवाना"
       ]
@@ -27697,6 +27831,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8%E0%A4%BE%E0%A4%95_%E0%A4%AA%E0%A4%B0_%E0%A4%AE%E0%A4%95%E0%A5%8D%E0%A4%96%E0%A5%80_%E0%A4%A8_%E0%A4%AC%E0%A5%88%E0%A4%A0%E0%A4%A8%E0%A5%87_%E0%A4%A6%E0%A5%87%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "नाक पर मक्खी न बैठने देना"
       ]
@@ -27720,6 +27855,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A4%B2_%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "निकल जाना"
       ]
@@ -28177,6 +28313,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "नाटक में अभिनय करना",
         "नाटक में अभिनय करता है",
@@ -28237,6 +28374,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8%E0%A5%8C_%E0%A4%A6%E0%A5%8B_%E0%A4%97%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B0%E0%A4%B9_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "नौ दो ग्यारह होना"
       ]
@@ -28297,6 +28435,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8%E0%A4%BE%E0%A4%AE_%E0%A4%95%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "नाम कमाना"
       ]
@@ -28320,6 +28459,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8%E0%A4%BE%E0%A4%AE_%E0%A4%AC%E0%A4%A1%E0%A4%BC%E0%A5%87_%E0%A4%94%E0%A4%B0_%E0%A4%A6%E0%A4%B0%E0%A5%8D%E0%A4%B6%E0%A4%A8_%E0%A4%9B%E0%A5%8B%E0%A4%9F%E0%A5%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "नाम बड़े और दर्शन छोटे"
       ]
@@ -28355,6 +28495,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "नारी का सम्मान",
         "सम्मान नारी का"
@@ -28453,6 +28594,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8_%E0%A4%B0%E0%A4%B9%E0%A5%87%E0%A4%97%E0%A4%BE_%E0%A4%AC%E0%A4%BE%E0%A4%81%E0%A4%B8_%E0%A4%A8_%E0%A4%AC%E0%A4%9C%E0%A5%87%E0%A4%97%E0%A5%80_%E0%A4%AC%E0%A4%BE%E0%A4%81%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "न रहेगा बाँस न बजेगी बाँसुरी"
       ]
@@ -28590,6 +28732,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8%E0%A4%AF%E0%A4%BE_%E0%A4%A8%E0%A5%8C_%E0%A4%A6%E0%A4%BF%E0%A4%A8_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A8%E0%A4%BE_%E0%A4%B8%E0%A5%8C_%E0%A4%A6%E0%A4%BF%E0%A4%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "नया नौ दिन पुराना सौ दिन"
       ]
@@ -28673,6 +28816,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AA%E0%A4%BE%E0%A4%81%E0%A4%9A%E0%A5%8B%E0%A4%82_%E0%A4%89%E0%A4%82%E0%A4%97%E0%A4%B2%E0%A4%BF%E0%A4%AF%E0%A4%BE%E0%A4%81_%E0%A4%AC%E0%A4%B0%E0%A4%BE%E0%A4%AC%E0%A4%B0_%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82_%E0%A4%B9%E0%A5%8B%E0%A4%A4%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "पाँचों उंगलियाँ बराबर नहीं होती"
       ]
@@ -28696,6 +28840,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "पंच परमेश्वर"
       ]
@@ -29257,6 +29402,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AA%E0%A5%88%E0%A4%B8%E0%A4%BE_%E0%A4%B5%E0%A4%B8%E0%A5%82%E0%A4%B2",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "पैसा वसूल"
       ]
@@ -29280,6 +29426,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AA%E0%A4%A4%E0%A4%BE_%E0%A4%9A%E0%A4%B2%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "पता चलना"
       ]
@@ -29303,6 +29450,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AA%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A5%87_%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82_%E0%A4%AA%E0%A4%A1%E0%A4%BC%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "पल्ले नहीं पड़ना"
       ]
@@ -29349,6 +29497,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AB%E0%A4%9F_%E0%A4%95%E0%A5%87_%E0%A4%B9%E0%A4%BE%E0%A4%A5_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%86%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "फट के हाथ में आना"
       ]
@@ -29372,6 +29521,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AB%E0%A4%9F_%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "फट जाना"
       ]
@@ -29447,6 +29597,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A5%87%E0%A4%A1%E0%A4%BC%E0%A4%BE_%E0%A4%97%E0%A4%BC%E0%A4%B0%E0%A5%8D%E0%A4%95%E0%A4%BC_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बेड़ा ग़र्क़ होना"
       ]
@@ -29470,6 +29621,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A5%82%E0%A4%A2%E0%A4%BC%E0%A5%80_%E0%A4%98%E0%A5%8B%E0%A4%A1%E0%A4%BC%E0%A5%80_%E0%A4%B2%E0%A4%BE%E0%A4%B2_%E0%A4%B2%E0%A4%97%E0%A4%BE%E0%A4%AE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बूढ़ी घोड़ी लाल लगाम"
       ]
@@ -29493,6 +29645,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A4%BE%E0%A4%A4_%E0%A4%AC%E0%A4%A8%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बात बनना"
       ]
@@ -29516,6 +29669,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A4%82%E0%A4%A6%E0%A4%B0_%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE_%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A5%87_%E0%A4%85%E0%A4%A6%E0%A4%B0%E0%A4%95_%E0%A4%95%E0%A4%BE_%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%A6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बंदर क्या जाने अदरक का स्वाद"
       ]
@@ -29539,6 +29693,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A4%BF%E0%A4%A8_%E0%A4%AE%E0%A4%BE%E0%A4%81%E0%A4%97%E0%A5%87_%E0%A4%AE%E0%A5%8B%E0%A4%A4%E0%A5%80_%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A5%87_%E0%A4%AE%E0%A4%BE%E0%A4%81%E0%A4%97%E0%A5%87_%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A5%87_%E0%A4%A8_%E0%A4%AD%E0%A5%80%E0%A4%96",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बिन माँगे मोती मिले माँगे मिले न भीख"
       ]
@@ -29676,6 +29831,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A5%8B%E0%A4%AF%E0%A4%BE_%E0%A4%AA%E0%A5%87%E0%A4%A1%E0%A4%BC_%E0%A4%AC%E0%A4%AC%E0%A5%82%E0%A4%B2_%E0%A4%95%E0%A4%BE_%E0%A4%A4%E0%A5%8B_%E0%A4%86%E0%A4%AE_%E0%A4%95%E0%A4%B9%E0%A4%BE%E0%A4%81_%E0%A4%B8%E0%A5%87_%E0%A4%B9%E0%A5%8B%E0%A4%8F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बोया पेड़ बबूल का तो आम कहाँ से होए"
       ]
@@ -29766,6 +29922,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A4%BE%E0%A4%B2_%E0%A4%AC%E0%A4%BE%E0%A4%81%E0%A4%95%E0%A4%BE_%E0%A4%A8_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बाल बाँका न होना"
       ]
@@ -29789,6 +29946,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A4%BE%E0%A4%B2-%E0%A4%AC%E0%A4%BE%E0%A4%B2_%E0%A4%AC%E0%A4%9A%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बाल-बाल बचाना"
       ]
@@ -29812,6 +29970,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A4%BE%E0%A4%B2-%E0%A4%AC%E0%A4%BE%E0%A4%B2_%E0%A4%AC%E0%A4%9A%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बाल-बाल बचना"
       ]
@@ -29835,6 +29994,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A4%BE%E0%A4%B2-%E0%A4%AC%E0%A4%BE%E0%A4%B2_%E0%A4%AE%E0%A5%8B%E0%A4%A4%E0%A5%80_%E0%A4%AA%E0%A4%BF%E0%A4%B0%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बाल-बाल मोती पिरोना"
       ]
@@ -29969,6 +30129,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A4%95%E0%A4%B0%E0%A5%87_%E0%A4%95%E0%A5%80_%E0%A4%AE%E0%A4%BE%E0%A4%81_%E0%A4%95%E0%A4%AC_%E0%A4%A4%E0%A4%95_%E0%A4%96%E0%A4%BC%E0%A5%88%E0%A4%B0_%E0%A4%AE%E0%A4%A8%E0%A4%BE%E0%A4%AF%E0%A5%87%E0%A4%97%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बकरे की माँ कब तक ख़ैर मनायेगी"
       ]
@@ -30191,6 +30352,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AC%E0%A4%B9%E0%A4%A4%E0%A5%80_%E0%A4%97%E0%A4%82%E0%A4%97%E0%A4%BE_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%B9%E0%A4%BE%E0%A4%A5_%E0%A4%A7%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बहती गंगा में हाथ धोना"
       ]
@@ -30253,6 +30415,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AD%E0%A5%87%E0%A4%A1%E0%A4%BC_%E0%A4%95%E0%A5%80_%E0%A4%96%E0%A4%BE%E0%A4%B2_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%AD%E0%A5%87%E0%A4%A1%E0%A4%BC%E0%A4%BF%E0%A4%AF%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "भेड़ की खाल में भेड़िया"
       ]
@@ -30981,6 +31144,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%A0_%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मुठ मारना"
       ]
@@ -31044,6 +31208,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A5%80%E0%A4%A8-%E0%A4%AE%E0%A5%87%E0%A4%96_%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मीन-मेख निकालना"
       ]
@@ -31067,6 +31232,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A4%BF%E0%A4%AF%E0%A4%BE%E0%A4%81_%E0%A4%AC%E0%A5%80%E0%A4%B5%E0%A5%80_%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BC%E0%A5%80_%E0%A4%A4%E0%A5%8B_%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE_%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%97%E0%A4%BE_%E0%A4%95%E0%A4%BE%E0%A4%9C%E0%A4%BC%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मियाँ बीवी राज़ी तो क्या करेगा काज़ी"
       ]
@@ -31228,6 +31394,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A4%BE_%E0%A4%95%E0%A5%80_%E0%A4%A6%E0%A5%8C%E0%A4%A1%E0%A4%BC_%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%9C%E0%A4%BF%E0%A4%A6_%E0%A4%A4%E0%A4%95",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मुल्ला की दौड़ मस्जिद तक"
       ]
@@ -31251,6 +31418,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%81%E0%A4%B9_%E0%A4%95%E0%A4%BE%E0%A4%B2%E0%A4%BE_%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मुँह काला करना"
       ]
@@ -31274,6 +31442,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%81%E0%A4%B9_%E0%A4%AE%E0%A5%80%E0%A4%A0%E0%A4%BE_%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मुँह मीठा करना"
       ]
@@ -31297,6 +31466,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%81%E0%A4%B9_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%B0%E0%A4%BE%E0%A4%AE_%E0%A4%AC%E0%A4%97%E0%A4%BC%E0%A4%B2_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%9B%E0%A5%81%E0%A4%B0%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मुँह में राम बग़ल में छुरी"
       ]
@@ -31320,6 +31490,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%81%E0%A4%B9%E0%A4%A4%E0%A5%8B%E0%A4%A1%E0%A4%BC_%E0%A4%9C%E0%A4%B5%E0%A4%BE%E0%A4%AC",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मुँहतोड़ जवाब"
       ]
@@ -31389,6 +31560,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A4%97%E0%A4%B0%E0%A4%AE%E0%A4%9A%E0%A5%8D%E0%A4%9B_%E0%A4%95%E0%A5%87_%E0%A4%86%E0%A4%81%E0%A4%B8%E0%A5%82",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मगरमच्छ के आँसू"
       ]
@@ -31448,6 +31620,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A4%A8_%E0%A4%9A%E0%A4%82%E0%A4%97%E0%A4%BE_%E0%A4%A4%E0%A5%8B_%E0%A4%95%E0%A4%A0%E0%A5%8C%E0%A4%A4%E0%A5%80_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%97%E0%A4%82%E0%A4%97%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मन चंगा तो कठौती में गंगा"
       ]
@@ -31471,6 +31644,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A4%A8_%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मन मारना"
       ]
@@ -31524,6 +31698,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A4%B0%E0%A5%87_%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A4%BE_%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%97_%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82_%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A4%A4%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मरे बिना स्वर्ग नहीं मिलता"
       ]
@@ -31547,6 +31722,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A4%B0%E0%A4%A4%E0%A4%BE_%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE_%E0%A4%A8_%E0%A4%95%E0%A4%B0%E0%A4%A4%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मरता क्या न करता"
       ]
@@ -31570,6 +31746,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A4%B8%E0%A5%87%E0%A4%82_%E0%A4%AD%E0%A5%80%E0%A4%97%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मसें भीगना"
       ]
@@ -31793,6 +31970,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AF%E0%A4%A5%E0%A4%BE_%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BE_%E0%A4%A4%E0%A4%A5%E0%A4%BE_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%9C%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "यथा राजा तथा प्रजा"
       ]
@@ -31940,6 +32118,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B0%E0%A5%8B%E0%A4%9C%E0%A4%BC%E0%A5%80_%E0%A4%B0%E0%A5%8B%E0%A4%9F%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "रोज़ी रोटी"
       ]
@@ -32169,6 +32348,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B0%E0%A5%8B%E0%A4%9F%E0%A5%80-%E0%A4%A6%E0%A4%BE%E0%A4%B2_%E0%A4%B8%E0%A5%87_%E0%A4%96%E0%A4%BC%E0%A5%81%E0%A4%B6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "रोटी-दाल से ख़ुश"
       ]
@@ -32258,6 +32438,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%A8_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%9C%E0%A4%BC%E0%A5%8B%E0%A4%B0_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "रान में ज़ोर होना"
       ]
@@ -32338,6 +32519,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE_%E0%A4%95%E0%A4%B9%E0%A4%BE%E0%A4%A8%E0%A5%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "राम कहानी"
       ]
@@ -32361,6 +32543,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE_%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A5%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "राम जाने"
       ]
@@ -32514,6 +32697,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%AC%E0%A4%BE%E0%A4%A3",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "रामबाण"
       ]
@@ -35594,6 +35778,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_phrase_andhare_band_kamre_अ_ध_र_ब_द_कमर",
       "id": "hi_literary_reference_अ_ध_र_ब_द_कमर_7705a7c6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35871,6 +36056,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_अग_न_क_तरह_जलन",
       "id": "hi_literary_reference_अग_न_क_तरह_जलन_8353acaf",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35901,6 +36087,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_अग_न_क_तरह_ब_झन",
       "id": "hi_literary_reference_अग_न_क_तरह_ब_झन_6e2b8f5d",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36109,6 +36296,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.hi.explanation.prasad_literary_phrases_अग_न_क_श_खर",
       "id": "hi_literary_reference_अग_न_क_श_खर_4ec8779c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36228,6 +36416,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.classical_sanskrit_literature_अग_न_प_रण_त",
       "id": "hi_literary_reference_अग_न_प_रण_त_89938e06",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36256,6 +36445,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.bacchan_poetry_अग_न_पथ",
       "id": "hi_literary_reference_अग_न_पथ_21c4bfdf",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36270,6 +36460,7 @@
       "source_url": "https://www.kavitakosh.org/kk/अग्नि_पथ",
       "source_work": "अग्नि पथ",
       "source_work_key": "mnemosyne.hi.work.अग_न_पथ",
+      "subcategory": "filmi",
       "surface_patterns": [
         "अग्नि पथ",
         "अग्नि पथ पर",
@@ -36287,6 +36478,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.bacchan_poetry_अग_न_पथ",
       "id": "hi_literary_reference_अग_न_पथ_44dd01a0",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36330,6 +36522,7 @@
         "zh": "《阿格尼帕斯》是哈里万什·赖·巴赫昌创作的一首著名印地语诗，讲述了在逆境中奋斗和决心的故事。它激励了印度的许多人。"
       },
       "id": "hi_literary_reference_अग_न_पथ_ebceaca6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns correctly reflect the poem's themes and significance.",
@@ -36354,6 +36547,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_अग_न_पथ_पर_चलन",
       "id": "hi_literary_reference_अग_न_पथ_पर_चलन_150c3949",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36438,6 +36632,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_अग_न_र_मय",
       "id": "hi_literary_reference_अग_न_र_मय_56e6b9d7",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36466,6 +36661,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_अग_न_र_मय_व_ण",
       "id": "hi_literary_reference_अग_न_र_मय_व_ण_a09d4140",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36494,6 +36690,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.hi.explanation.modern_hindi_poetry_अग_न_व_ण",
       "id": "hi_literary_reference_अग_न_व_ण_1c47060e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36523,6 +36720,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.kalidasa_literary_terms_अग_न_वर_ष",
       "id": "hi_literary_reference_अग_न_वर_ष_c99450df",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36554,6 +36752,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.hi.explanation.modern_hindi_poetry_phrases_अग_न_स_व_दन",
       "id": "hi_literary_reference_अग_न_स_व_दन_7eb2c701",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36616,6 +36815,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.hi.explanation.classical_hindi_poetic_terms_अग_न_सद_श_य",
       "id": "hi_literary_reference_अग_न_सद_श_य_8971fb53",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36659,6 +36859,7 @@
         "zh": "अज्ञेय (Agyeya)是著名的印地语诗人和小说家Sachchidananda Hiranand Vatsyayan的笔名，以其现代主义风格和对印地语文学的重要贡献而闻名。"
       },
       "id": "hi_literary_reference_अज_ञ_य_d0544f7f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly identify the literary figure and his contributions.",
@@ -36725,6 +36926,7 @@
         "zh": "《阿比吉尼亚那沙昆塔拉姆》是卡利达萨创作的经典梵文剧，描绘了沙昆塔拉与杜尚塔王的爱情故事。它在印度文学中因其诗意之美和对爱情与命运的探索而具有重要意义。"
       },
       "id": "hi_literary_reference_अभ_ज_ञ_न_श_क_तलम_213753f2",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns match the text well.",
@@ -36927,6 +37129,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.amaru_shataka_अमर_शतक_क_पद_वल",
       "id": "hi_literary_reference_अमर_शतक_क_पद_वल_36a7e02a",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37061,6 +37264,7 @@
         "zh": "这个词描述了充满泪水的事物，常用于诗歌中以传达深刻的情感或悲伤。"
       },
       "id": "hi_literary_reference_अश_र_प_र_त_6e27b448",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The term is correctly described as conveying deep emotion or sorrow in poetry.",
@@ -37123,6 +37327,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_आओ_प_य_म_ल_ओ",
       "id": "hi_literary_reference_आओ_प_य_म_ल_ओ_7a65ef84",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37621,6 +37826,7 @@
         "zh": "“乌普玛”一词指的是在诗歌和散文中使用的隐喻或明喻，用于创造生动的意象并增强表达。"
       },
       "id": "hi_literary_reference_उपम_ए_c28daa8a",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The explanation accurately describes the term 'Upma' and its significance in literature, making it useful for learners.",
@@ -37765,6 +37971,7 @@
         "zh": "乌尔瓦希是印度神话中的天女，以其美丽和优雅而闻名，出现在包括《摩诃婆罗多》在内的各种文本中。"
       },
       "id": "hi_literary_reference_उर_वश_d9064a02",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Urvashi as a celestial nymph in the Mahabharata is accurate and the explanation aligns with her portrayal in the text.",
@@ -37790,6 +37997,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.hi_literary_phrases_उस_र_त",
       "id": "hi_literary_reference_उस_र_त_b9f80af4",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37966,6 +38174,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_kagaz_ki_naav_literary_क_गज_क_न_व",
       "id": "hi_literary_reference_क_गज_क_न_व_34a27949",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38073,6 +38282,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.bhakti_poetry_sanskriti_क_म_न_क_चन",
       "id": "hi_literary_reference_क_म_न_क_चन_86c5a772",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38087,6 +38297,7 @@
       "source_url": "https://hi.wikisource.org/wiki/सूरसागर",
       "source_work": "सूरसागर",
       "source_work_key": "mnemosyne.hi.work.स_रस_गर",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "कामिनी-कांचन",
         "कामिनी-कांचन का",
@@ -38306,6 +38517,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_classical_literature_क_ल_द_स_क_अभ_ज_ञ_नश_क_न",
       "id": "hi_literary_reference_क_ल_द_स_क_अभ_ज_ञ_नश_क_न_तलम_ece31554",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38332,6 +38544,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.kalidasa_ritusamhara_क_ल_द_स_क_ऋत_स_ह_र",
       "id": "hi_literary_reference_क_ल_द_स_क_ऋत_स_ह_र_4dfd0742",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38362,6 +38575,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.kalidasa_phrases_क_ल_द_स_क_म_घद_त",
       "id": "hi_literary_reference_क_ल_द_स_क_म_घद_त_357ccced",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38429,6 +38643,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.sa_meghadutam_phrases_क_ल_द_स_क_म_घद_तम",
       "id": "hi_literary_reference_क_ल_द_स_क_म_घद_तम_2b17edf2",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38554,6 +38769,7 @@
         "zh": "诗歌在表达情感和文化价值方面的重要性在各种文学传统中得到了强调。它作为艺术表达和社会评论的媒介。"
       },
       "id": "hi_literary_reference_क_व_य_क_महत_त_7565c5ad",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to various literary traditions accurately reflects the importance of poetry in expressing emotions and cultural values.",
@@ -38649,6 +38865,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_references_क_शव_द_स_क_क_व_य_न_र_म_ल",
       "id": "hi_literary_reference_क_शव_द_स_क_क_व_य_न_र_म_ल_य_e4545b1f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38678,6 +38895,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_puranic_texts_क_ष_ण_ल_ल_व_वरण",
       "id": "hi_literary_reference_क_ष_ण_ल_ल_व_वरण_e73aeca0",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38692,6 +38910,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%E0%A4%A6%E0%A5%8D%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "श्रीमद्भागवतम्",
       "source_work_key": "mnemosyne.hi.work.श_र_मद_भ_गवतम",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण लीला विवरण",
         "कृष्ण लीला विवरण में",
@@ -38722,6 +38941,7 @@
         "zh": "克里希纳和苏达玛的故事是印度教神话中的一个著名故事，阐述了友谊、忠诚和神圣恩典的主题。贫穷的婆罗门苏达玛拜访了他的富有朋友克里希纳，后者尊重他们的纽带。"
       },
       "id": "hi_literary_reference_क_ष_ण_स_द_म_4aba3b40",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly reflect the story from the Bhagavata Purana.",
@@ -38736,6 +38956,7 @@
       "source_url": "https://www.wikisource.org/wiki/Bhagavata_Purana",
       "source_work": "Bhagavata Purana",
       "source_work_key": "mnemosyne.hi.work.bhagavata_purana",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्णा-सुदामा",
         "कृष्ण और सुदामा की कहानी"
@@ -38936,6 +39157,7 @@
         "zh": "卡比尔的诗句是一部强调个人体验在灵性中的重要性并批判仪式实践的精神诗歌集。它们在巴克提运动中具有重要意义。"
       },
       "id": "hi_literary_reference_कब_र_क_ब_न_93b2b91d",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns correctly reflect the text's themes and significance in the Bhakti movement.",
@@ -38948,6 +39170,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "doha_kabir",
       "surface_patterns": [
         "कबीर की बानी",
         "कबीर की वाणी",
@@ -39287,6 +39510,7 @@
         "zh": "卡利达萨是梵文文学中最伟大的诗人和剧作家之一，以《沙恭达拉》和《梅加杜塔》等作品而闻名。"
       },
       "id": "hi_literary_reference_कल_द_स_क_रचन_ए_2b9a6afb",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Kalidasa is accurate and verifiable, and the surface patterns match the text.",
@@ -39378,6 +39602,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_kavita_kaumudi_कव_त_क_म_द",
       "id": "hi_literary_reference_कव_त_क_म_द_ddeed1ba",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39515,6 +39740,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.sa_kiratarjuniyam_phrases_कव_भ_रव_क_क_र_त_र_ज_न_यम",
       "id": "hi_literary_reference_कव_भ_रव_क_क_र_त_र_ज_न_यम_eb9f29f8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39780,6 +40006,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_puranic_texts_ग_प_य_क_य_गद_न",
       "id": "hi_literary_reference_ग_प_य_क_य_गद_न_13356fb6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39794,6 +40021,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%E0%A4%A6%E0%A5%8D%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "श्रीमद्भागवतम्",
       "source_work_key": "mnemosyne.hi.work.श_र_मद_भ_गवतम",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गोपियों का योगदान",
         "गोपियों के योगदान",
@@ -39811,6 +40039,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.bhakti_literature_cowherd_ग_प_य_ग_य",
       "id": "hi_literary_reference_ग_प_य_ग_य_6c78689e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39873,6 +40102,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "filmi",
       "surface_patterns": [
         "गुलजार",
         "गुलजार साहब",
@@ -39983,6 +40213,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.vaishnava_epithets_घनश_य_म",
       "id": "hi_literary_reference_घनश_य_म_87d82945",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40031,6 +40262,7 @@
         "zh": "《昌达利卡》是著名剧作家维贾伊·滕杜尔卡创作的剧作，探讨了种姓歧视和社会不公的主题。它因其对当代印度社会问题的大胆描绘而具有重要意义。"
       },
       "id": "hi_literary_reference_च_ड_ल_क_0889393f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns correctly reflect the work.",
@@ -40055,6 +40287,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.bhakti_poetry_gopis_च_द_र_वल",
       "id": "hi_literary_reference_च_द_र_वल_814dc15f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40165,6 +40398,7 @@
         "zh": "这个短语翻译为“十四夜的月亮”，常用于诗歌中描述美丽和完美。"
       },
       "id": "hi_literary_reference_च_दहव_क_च_द_053c253e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase's meaning and usage in poetry are accurately described, with correct surface patterns.",
@@ -40338,6 +40572,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hi_geetgovind_phrases_जयद_व_क_ग_त_ग_व_न_द",
       "id": "hi_literary_reference_जयद_व_क_ग_त_ग_व_न_द_0ba1cd0b",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40542,6 +40777,7 @@
         "zh": "卡比尔的诗歌中提到的短语，指的是克里希纳（戈帕尔）在其嬉戏舞蹈（罗萨利拉）时佩戴的脚环发出的声音。象征着神圣的喜悦与虔诚。"
       },
       "id": "hi_literary_reference_ठन_ठन_ग_प_ल_8e059705",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Kabir's devotional poetry and the explanation of Krishna's anklets are accurate and verifiable.",
@@ -40555,6 +40791,7 @@
       "source_url": "https://archive.org/details/BeejakKabirDas",
       "source_work": "बीजक",
       "source_work_key": "mnemosyne.hi.work.ब_जक",
+      "subcategory": "doha_kabir",
       "surface_patterns": [
         "ठन-ठन गोपाल",
         "ठन ठन गोपाल",
@@ -40567,6 +40804,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.hi.explanation.hi_literary_phrases_त_मन_बदल_द_य",
       "id": "hi_literary_reference_त_मन_बदल_द_य_579b5863",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40595,6 +40833,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_tar_saptak_त_र_सप_तक",
       "id": "hi_literary_reference_त_र_सप_तक_a6c940f4",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40883,6 +41122,7 @@
         "zh": "《十王子传》是丹丁创作的梵文散文作品，叙述了十位王子的冒险故事。它因其叙事风格和对后期印度文学的影响而具有重要意义。"
       },
       "id": "hi_literary_reference_दशक_म_र_चर_त_685e83c9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns are correct.",
@@ -41291,6 +41531,7 @@
         "zh": "Nayika Bhed指的是古典印度文学中女性角色的分类，特别是在诗歌和戏剧中，突显她们的情感和心理特征。"
       },
       "id": "hi_literary_reference_न_य_क_भ_द_edf641a3",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to classical Indian literature is accurate, and the surface patterns match the text.",
@@ -41751,6 +41992,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.sa_kadambari_phrases_ब_णभट_ट_क_क_दम_बर",
       "id": "hi_literary_reference_ब_णभट_ट_क_क_दम_बर_84493358",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -41842,6 +42084,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_classical_basant_ras_बस_त_र_स",
       "id": "hi_literary_reference_बस_त_र_स_f16f1bb0",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -41917,6 +42160,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%85%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%87%E0%A4%B0_%E0%A4%A8%E0%A4%97%E0%A4%B0%E0%A5%80",
       "source_work": "अंधेर नगरी",
       "source_work_key": "mnemosyne.hi.work.अ_ध_र_नगर",
+      "subcategory": "null",
       "surface_patterns": [
         "भारतेंदु हरिश्चंद्र की ‘अंधेर नगरी’",
         "‘अंधेर नगरी’ भारतेंदु हरिश्चंद्र द्वारा लिखी गई",
@@ -41962,6 +42206,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.kabir_dohas_phrases_भगव_न_भए_म_रख",
       "id": "hi_literary_reference_भगव_न_भए_म_रख_c11fa856",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -41976,6 +42221,7 @@
       "source_url": "https://hi.wikisource.org/wiki/बीजक",
       "source_work": "बीजक",
       "source_work_key": "mnemosyne.hi.work.ब_जक",
+      "subcategory": "doha_kabir",
       "surface_patterns": [
         "भगवान भए मूरख",
         "भगवान भए मूरख हुए",
@@ -42031,6 +42277,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_meghadutam_literary_म_घद_त",
       "id": "hi_literary_reference_म_घद_त_39a46c2f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42061,6 +42308,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hi_classical_literature_म_घद_त_क_स_द_श",
       "id": "hi_literary_reference_म_घद_त_क_स_द_श_8acdc23a",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42091,6 +42339,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hi_classical_literature_म_घद_तम",
       "id": "hi_literary_reference_म_घद_तम_ef6a6fd8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42324,6 +42573,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.hindi_philosophical_terms_म_य_दर_पण",
       "id": "hi_literary_reference_म_य_दर_पण_dd8fa2bd",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42353,6 +42603,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_bhakti_poetry_म_र_क_ग_त",
       "id": "hi_literary_reference_म_र_क_ग_त_bfb44e31",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42366,6 +42617,7 @@
       "source_url": "https://archive.org/details/MeerabaiPadavali",
       "source_work": "मीराबाई की पदावली",
       "source_work_key": "mnemosyne.hi.work.म_र_ब_ई_क_पद_वल",
+      "subcategory": "doha_rahim",
       "surface_patterns": [
         "मीरा के गीत",
         "मीरा के गीत हैं",
@@ -42420,6 +42672,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_mirabai_padavali_म_र_ब_ई_क_पद_वल",
       "id": "hi_literary_reference_म_र_ब_ई_क_पद_वल_6c12d7e0",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42818,6 +43071,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.yoga_vasishtha_य_गव_श_ष_ठ",
       "id": "hi_literary_reference_य_गव_श_ष_ठ_9938f845",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42908,6 +43162,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hi_literary_rang_mahal_र_ग_महल",
       "id": "hi_literary_reference_र_ग_महल_fb37ce9c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43658,6 +43913,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.hi.explanation.hi_literary_phrases_स_गर_लहर_और_म",
       "id": "hi_literary_reference_स_गर_लहर_और_म_112e1d5e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43723,6 +43979,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_ghalib_ghazals_स_न_त_स_न_कह_स_स_न",
       "id": "hi_literary_reference_स_न_त_स_न_कह_स_स_न_de33a066",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43737,6 +43994,7 @@
       "source_url": "https://www.rekhta.org/ghazals/suno-to-suno-kahan-se-sunun-ghalib",
       "source_work": "दीवान-ए-गालिब",
       "source_work_key": "mnemosyne.hi.work.द_व_न_ए_ग_ल_ब",
+      "subcategory": "doha_rahim",
       "surface_patterns": [
         "सुनो तो सुनो, कहाँ से सुनूँ?",
         "सुनो तो सुनो, कहाँ से सुनाऊँ?",
@@ -43881,6 +44139,7 @@
         "zh": "苏里亚·坎特·特里帕提‘尼拉拉’是一位杰出的印地语诗人和小说家，以其现代主义风格和深刻的情感表达而闻名。"
       },
       "id": "hi_literary_reference_स_र_यक_त_त_र_प_ठ_न_र_ल_b587d0d9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns correctly reflect his literary contributions.",
@@ -43904,6 +44163,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.dinkar_poetic_phrases_स_रज_क_स_तव_घ_ड",
       "id": "hi_literary_reference_स_रज_क_स_तव_घ_ड_fce4684c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44049,6 +44309,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hi_sursagar_phrases_स_रद_स_क_स_रस_गर",
       "id": "hi_literary_reference_स_रद_स_क_स_रस_गर_3e9bcb39",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44080,6 +44341,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_sursagar_literary_स_रस_गर",
       "id": "hi_literary_reference_स_रस_गर_87ea4c42",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44376,6 +44638,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.hindi_inscriptions_सम_द_रग_प_त_क_प_रय_ग_प_रशस_त",
       "id": "hi_literary_reference_सम_द_रग_प_त_क_प_रय_ग_प_रशस_त_19ff1499",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44420,6 +44683,7 @@
         "zh": "印度史诗《卡玛亚尼》（作者：Jaishankar Prasad）中的一句诗，反映了业力与人类行为后果的主题。"
       },
       "id": "hi_literary_reference_ह_त_ह_वह_ज_मन_ष_य_करत_ह_a6e01b81",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Famous line from Jaishankar Prasad's Kamayani with correct theme and source attribution.",
@@ -44446,6 +44710,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.premchand_godan_phrases_ह_र_क_ख_त_म_कर_ज_क_ग_ल_म_आ",
       "id": "hi_literary_reference_ह_र_क_ख_त_म_कर_ज_क_ग_ल_म_आट_ग_ल_40268ddf",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44670,6 +44935,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अंधा क्या चाहे दो आँखें",
         "अंधे को क्या चाहिये दो आँखें",
@@ -44740,6 +45006,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अंधों में काना राजा",
         "अंधे की लाठी काना राजा",
@@ -44765,6 +45032,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अंधेर नगरी में चौपट राजा",
         "अंधेर नगरी में चौपट राजा था",
@@ -44794,6 +45062,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अँधेरे में तीर मारना"
       ]
@@ -44817,6 +45086,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अक्ल बड़ी या भैंस",
         "अक्ल बड़ी है या भैंस",
@@ -44847,6 +45117,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अग्नि कोठी की आग",
         "अग्नि कोठी की आग लगी",
@@ -44874,6 +45145,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अग्नि कोठी का भस्म होना",
         "अग्नि कोठी भस्म हो गई",
@@ -44931,6 +45203,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अग्नि विना जीवन",
         "अग्नि के बिना जीवन",
@@ -44960,6 +45233,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अग्नि साक्षी होना",
         "अग्नि साक्षी लेना",
@@ -44988,6 +45262,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अग्नि से खेलना",
         "अग्नि से खेल रहा है",
@@ -45018,6 +45293,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अगर मगर तो नगर-नगर",
         "अगर मगर तो नगर नगर",
@@ -45083,6 +45359,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अधजल गगरी छलकत जाए",
         "अधजल गगरी छलक जाती है",
@@ -45113,6 +45390,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अपना-अपना भाग्य",
         "अपना भाग्य",
@@ -45142,6 +45420,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अपने मुँह मिठू बनना",
         "अपने मुँह से मिठू बनना",
@@ -45185,6 +45464,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अपने मुँह मियाँ मिट्ठू बनना",
         "अपने मुँह मियाँ मीठा बोलना",
@@ -45227,6 +45507,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आ बैल मुझे मार",
         "आ बैल मुझको मार",
@@ -45252,6 +45533,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आगे कुआं पीछे खाई",
         "आगे कुआं पीछे खाई है",
@@ -45282,6 +45564,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आगे कुएँ के पीछे खाई",
         "आगे कुएँ और पीछे खाई",
@@ -45311,6 +45594,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आगे कुआ पीछे खाई",
         "आगे कुएँ पीछे खाई",
@@ -45340,6 +45624,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आग लगे ऐसे कपड़ा जो पहन न सके",
         "आग लगे ऐसे कपड़े जो पहन न सके",
@@ -45369,6 +45654,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आटा गीला बीमार",
         "आटे को गीला करने से बीमार पड़ता है",
@@ -45398,6 +45684,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आती है जो मिठाई खिलाती है",
         "जो मिठाई खिलाती है वह आती है",
@@ -45426,6 +45713,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आधा तीतर आधा बटेर",
         "आधे तीतर आधे बटेर",
@@ -45491,6 +45779,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "इठलाते हुए हाथी गिरे",
         "इठलाता हुआ हाथी गिरे",
@@ -45532,6 +45821,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "उद्यम सदा सफल होता है",
         "उद्यम सफल होता है",
@@ -45569,6 +45859,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "उधार की रोटी",
         "रोटी उधार की"
@@ -45593,6 +45884,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "उल्टा चोर कोतवाल को डाँटे",
         "उल्टा चोर कोतवाल को डाँटता है",
@@ -45634,6 +45926,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "उल्टे बाँस बरेली को",
         "उल्टे बाँस बरेली को पहुँचाना"
@@ -45658,6 +45951,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "उसके अपने",
         "उसके अपने लोग",
@@ -45686,6 +45980,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "ऊँची दुकान फीका पकवान",
         "ऊँची दुकान का फीका पकवान",
@@ -45716,6 +46011,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "एक अनार सौ बीमार",
         "एक अनार के सौ बीमार",
@@ -45746,6 +46042,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "एक और एक ग्यारह",
         "एक और एक ग्यारह होते हैं",
@@ -45788,6 +46085,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "एक तो करेला दूजा नीम चढ़ा",
         "करेला नीम चढ़ा"
@@ -45812,6 +46110,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "एक था गधा",
         "एक था गधा, एक था बैल",
@@ -45841,6 +46140,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "एक हाथ से ताली नहीं बजती",
         "एक हाथ से ताली नहीं बज सकती",
@@ -45881,6 +46181,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "कौआ चले हंस की चाल",
         "कौआ हंस की चाल चल रहा है"
@@ -45905,6 +46206,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "कुटुम्बी से बैर अच्छा",
         "कुटुम्बी से बैर अच्छा है",
@@ -45933,6 +46235,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "काठ की हाँडी बार-बार नहीं चढ़ती",
         "काठ की हाँडी बार-बार नहीं चढ़ती है",
@@ -45961,6 +46264,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "कुत्ता भौंकने से पहाड़ नहीं हिलता",
         "कुत्ते भौंकने से पहाड़ नहीं हिलता",
@@ -46004,6 +46308,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "काला अक्षर भैंस बराबर",
         "काला अक्षर भैंस के बराबर"
@@ -46028,6 +46333,7 @@
         "zh": "卡比尔的多哈指的是15世纪诗人圣人卡比尔创作的对联，以简单易懂的方式传达深刻的精神和哲学信息。"
       },
       "id": "hi_proverb_tradition_कब_र_क_द_ह_efde6f6f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Kabir's couplets is accurate and well-established in literary tradition.",
@@ -46040,6 +46346,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "doha_kabir",
       "surface_patterns": [
         "कबीर का दोहा",
         "कबीर दोहे",
@@ -46094,6 +46401,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "खग गए हंस आगे",
         "खग गए हंस आगे हैं",
@@ -46122,6 +46430,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "खग जाने पंथ चुग्गा",
         "खग जानता है पंथ चुग्गा",
@@ -46150,6 +46459,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "गागर में सागर",
         "गागर में सागर भरना है",
@@ -46206,6 +46516,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "गधे की औकात",
         "गधे की औकात में",
@@ -46236,6 +46547,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "घाट-घाट का पानी पीना",
         "घाट-घाट का पानी पी चुका है",
@@ -46262,6 +46574,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "घोड़े के दाँत коле",
         "घोड़े के दाँत देखना",
@@ -46289,6 +46602,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "चोर की दाढ़ी में तिनका",
         "चोर की दाढ़ी में तिनका दिखाई देता है",
@@ -46316,6 +46630,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "चोर-चोर मौसेरे भाई",
         "चोर-चोर मौसेरे भाई होते हैं",
@@ -46344,6 +46659,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "छोटा मुँह बड़ी बात",
         "छोटे मुँह बड़ी बात",
@@ -46373,6 +46689,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जो गरजते हैं वही बरसते हैं",
         "जो गरजता है वही बरसता है",
@@ -46399,6 +46716,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जो जो करदा सो करदा",
         "जो जो करता सो करता",
@@ -46439,6 +46757,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ज्ञानी और अज्ञानी",
         "ज्ञानी अज्ञानी"
@@ -46463,6 +46782,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे उंगली उठे, वैसे सिर उठे",
         "जैसे उंगली उठती है, वैसे सिर उठता है",
@@ -46492,6 +46812,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे ऊँट की लात, वैसे ही राजा का बात",
         "जैसे ऊँट की लात, वैसे राजा की बात",
@@ -46522,6 +46843,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जैसे कुत्ता भौंकता है, वैसे ही संसार करता है",
         "जैसे कुत्ता भौंकता है, वैसे ही दुनिया करती है",
@@ -46586,6 +46908,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे को तैसा",
         "जैसे को तैसा होना",
@@ -46616,6 +46939,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे कर्म वैसा फल",
         "जैसे कर्म वैसा फल मिलता है",
@@ -46645,6 +46969,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे गाड़ी के दो पहिए हों, वैसे ही इंसान के दो कान",
         "जैसे गाड़ी के दो पहिए होते हैं, वैसे ही इंसान के दो कान होते हैं",
@@ -46671,6 +46996,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जैसे गधा खेत खाए, वैसे ही मूर्ख ज्ञान बाँटे",
         "गधे की तरह खेत खाना, मूर्ख की तरह ज्ञान बाँटना",
@@ -46699,6 +47025,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जैसे चोर की दाढ़ी में तिनका",
         "जैसे चोर की दाढ़ी में तिनके",
@@ -46727,6 +47054,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "चोर का निशान सदा रहता है",
         "चोर के निशान सदा रहते हैं",
@@ -46756,6 +47084,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे थे तैसे रहे, नाथा राजा बन गए",
         "जैसे थे तैसे रहे, नाथ राजा बन गया",
@@ -46783,6 +47112,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे नावाकिफ वैसा नुकसान",
         "जैसे अनजान वैसा नुकसान",
@@ -46811,6 +47141,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे प्यासे को पानी मिले, वैसे ही भूखे को भोजन मिले",
         "प्यासे को पानी मिले, भूखे को भोजन मिले",
@@ -46839,6 +47170,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे बादल गरजे वैसे ही राजा गरजे",
         "बादल गरजे, राजा गरजे",
@@ -46867,6 +47199,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जैसे मुर्दे में जान नहीं, वैसे ही बेवकूफ का ज्ञान नहीं",
         "जैसे मुर्दे में जान नहीं होती, वैसे ही बेवकूफ का ज्ञान नहीं होता",
@@ -46895,6 +47228,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे रंक का धन, वैसे ही राजा का मन",
         "रंक का धन, राजा का मन",
@@ -46923,6 +47257,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसी संगत वैसी रंगत",
         "जैसी संगत वैसी रंगत होती है",
@@ -46951,6 +47286,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जैसे सोने में सुहागा, वैसे ही राजा में रंक",
         "जैसे सोने में सुहागा होता है, वैसे ही राजा में रंक होता है",
@@ -46977,6 +47313,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसे साँप ने दूध पी लिया",
         "जैसे साँप दूध पी लेता है",
@@ -47006,6 +47343,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "जैसे हाथी के दाँत खाने के और दिखाने के और",
         "हाथी के दाँत खाने के लिए होते हैं, दिखाने के लिए होते हैं",
@@ -47031,6 +47369,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जब तक सांस तब तक आस",
         "जब तक सांस है तब तक आस है",
@@ -47058,6 +47397,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जहाँ गुरु का आदेश वहाँ शिष्य का ध्यान",
         "जहाँ गुरु का आदेश होता है, वहाँ शिष्य का ध्यान होता है",
@@ -47084,6 +47424,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जहाँ दाना गिरे वहाँ पक्षी बैठे",
         "जहाँ दाना गिरे, वहाँ पक्षी बैठते हैं",
@@ -47112,6 +47453,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जहाँ नदी का मोड़ वहाँ आदमी का जोड़",
         "जहाँ नदी का मोड़ होता है, वहाँ आदमी का जोड़ होता है",
@@ -47138,6 +47480,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जहाँ बाप का दस्तूर वहाँ बेटे का फूल",
         "जहाँ बाप के दस्तूर हों वहाँ बेटे का फूल",
@@ -47166,6 +47509,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जहाँ राजा का सिपाही वहाँ नागरिक की रात",
         "जहाँ राजा का सिपाही होता है, वहाँ नागरिक की रात होती है",
@@ -47194,6 +47538,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जहाँ सोता हो वहाँ पाँव मत रखना",
         "जहाँ सोता हो वहाँ पाँव न रखना",
@@ -47223,6 +47568,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जहाँ साँप लोटे वहाँ लाठी टूटे",
         "जहाँ साँप लोटेगा वहाँ लाठी टूटेगी",
@@ -47264,6 +47610,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "टूटा दिल न टूटा दम",
         "टूटा दिल न टूटा दम है",
@@ -47318,6 +47665,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "टका सेर भाजी टका सेर खाजा",
         "टके सेर भाजी टके सेर खाजा"
@@ -47342,6 +47690,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ठाकुर जी को मुर्गा",
         "ठाकुर जी के मुर्गे",
@@ -47367,6 +47716,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ठंडा लोहा होना",
         "ठंडे लोहे का होना",
@@ -47396,6 +47746,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ठगनी का गाना",
         "ठगनी के गाने",
@@ -47439,6 +47790,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ढाक के तीन पात",
         "ढाक के तीन पत्ते",
@@ -47464,6 +47816,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ढोल की पोल",
         "ढोल की पोल खुलना",
@@ -47494,6 +47847,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "थोथा चना बाजे घना",
         "थोथा चना बजता है घना",
@@ -47552,6 +47906,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "न नौ मन तेल होगा, न राधा नाचेगी",
         "नौ मन तेल नहीं होगा, तो राधा नहीं नाचेगी",
@@ -47580,6 +47935,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "न नौ मन तेल होगा न राधा नाचेगी",
         "न नौ मन तेल होगा तो राधा नाचेगी",
@@ -47607,6 +47963,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "नाम न जाने आँगन टेढ़ा",
         "नाम न जानने से आँगन टेढ़ा",
@@ -47648,6 +48005,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "नौ सौ चूहे खाय बिल्ली हज को चली",
         "नौ सौ चूहे खाकर बिल्ली हज को चली",
@@ -47673,6 +48031,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "नास्ति विद्या समो बन्धुः",
         "विद्या समो बन्धुः नास्ति",
@@ -47715,6 +48074,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "पाँचों उँगलियाँ घी में होना",
         "पाँचों उंगलियाँ घी में डालना",
@@ -47780,6 +48140,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "पूँछ में दुम",
         "पूँछ में दुम होना",
@@ -47810,6 +48171,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "पढ़ोगे लिखोगे बनोगे नवाब",
         "पढ़ोगे लिखोगे बनोगे नवाब होगे",
@@ -47850,6 +48212,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "परिवर्तन जीवन है",
         "जीवन में परिवर्तन",
@@ -47875,6 +48238,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "बेटे के हाथ बटेर",
         "बेटे के हाथ में बटेर",
@@ -47904,6 +48268,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "बुद्धि का बल",
         "बुद्धि बल",
@@ -47934,6 +48299,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "बिन बादल बरसात",
         "बिना बादल के बरसात",
@@ -47963,6 +48329,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "बिन बोले बाल-बच्चे",
         "बिना बोले बाल-बच्चे",
@@ -47991,6 +48358,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "बिन माँगे मोक्ष, मिला बंदे घोष",
         "बिना माँगे मोक्ष मिल गया",
@@ -48017,6 +48385,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/बीरबल_की_खिचड़ी",
       "source_work": "अकबर-बीरबल की कहानियाँ",
       "source_work_key": "mnemosyne.hi.work.अकबर_ब_रबल_क_कह_न_य",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "बीरबल की खिचड़ी",
         "बीरबल की खिचड़ी पकाना",
@@ -48093,6 +48462,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "बन्दर को अदरक का स्वाद क्या",
         "बन्दर क्या जाने अदरक का स्वाद होता है",
@@ -48118,6 +48488,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "भीगी बिल्ली होना",
         "भीगी बिल्ली के समान होना",
@@ -48147,6 +48518,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "भूत की पल्ली",
         "भूत की पल्ली में",
@@ -48218,6 +48590,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "भैंस के आगे बीन बजाना बेकार है",
         "भैंस के आगे बीन बजाना व्यर्थ है",
@@ -48243,6 +48616,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.hi.work.oral_tradition",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "भगवान की करनी",
         "भगवान की करनी कुछ और थी",
@@ -48268,6 +48642,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "भगवान के घर देर है, अंधेर नहीं",
         "भगवान के घर देर है पर अंधेर नहीं",
@@ -48295,6 +48670,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "भगवान के घर में छिपी हुई बात",
         "भगवान के घर में छिपी हुई बातें",
@@ -48324,6 +48700,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.hi.work.oral_tradition",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "भगवान के हाथ पैर होते हैं",
         "भगवान के हाथ पैर हैं",
@@ -48351,6 +48728,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.hi.work.oral_tradition",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "भगवान भरोसा",
         "भगवान पर भरोसा",
@@ -48378,6 +48756,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.hi.work.oral_tradition",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "भगवान भरोसे",
         "भगवान भरोसे रहना",
@@ -48406,6 +48785,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.hi.work.oral_tradition",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "भगवान भला करे",
         "भगवान भला करेगा",
@@ -48434,6 +48814,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "मूर्ख की निशानी, हाँ हाँ करना",
         "मूर्ख की निशानी है हाँ हाँ करना",
@@ -48497,6 +48878,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "मूर्ख की समाधि",
         "मूर्खों की समाधियाँ",
@@ -48526,6 +48908,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "मोल तोल कर खरीदना",
         "मोल तोल कर खरीदना चाहिए",
@@ -48554,6 +48937,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मुँह में राम बगल में छूरी",
         "मुँह में राम बगल में छूरी है",
@@ -48581,6 +48965,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "मक्खन का मोल",
         "मक्खन के मोल",
@@ -48651,6 +49036,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "लाठी और डंडे का देवता",
         "लाठी और डंडे के देवता",
@@ -48691,6 +49077,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "लातों के भूत बातों से नहीं मानते",
         "लातों के भूत बातों से नहीं मानेंगे",
@@ -48716,6 +49103,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "लोहे के चने चबाना",
         "लोहे के चने चबाने पड़ना",
@@ -48745,6 +49133,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "लोहा गरम है",
         "लोहा गरम होना",
@@ -48848,6 +49237,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "सोने पर सुहागा",
         "सोने पर सुहागा चढ़ाना",
@@ -48876,6 +49266,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "साँप का दूध पीना",
         "साँप का दूध पीना चाहता है",
@@ -48917,6 +49308,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "साँप भी मर जाए और लाठी भी न टूटे",
         "साँप मर जाए और लाठी भी न टूटे",
@@ -48943,6 +49335,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "साँप भी मर जाए लाठी भी न टूटे",
         "साँप भी मर जाए तो लाठी भी न टूटे",
@@ -48992,6 +49385,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "सौ सोनार की, लोहार के एक",
         "सौ सोनार की, लोहार की एक",
@@ -49136,6 +49530,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "हाथ की उंगली से गिनना",
         "हाथ की उंगलियाँ गिनना",
@@ -49177,6 +49572,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "हाथी के दाँत",
         "हाथी के दांत",
@@ -49215,6 +49611,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "हाथी के दाँत खाने के और दिखाने के और",
         "हाथी के दाँत खाने और दिखाने के अलग-अलग होते हैं",
@@ -49240,6 +49637,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "हाथी घोड़े बैठे",
         "हाथी घोड़े बैठा",
@@ -49270,6 +49668,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "हाथी निकल गया और दुम रह गई",
         "हाथी निकल गया और दुम रह गई है",
@@ -49299,6 +49698,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "हाथी निकल गया, दुम रह गई",
         "हाथी निकल गया, दुम बची",
@@ -49373,6 +49773,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "होली में रंग और दिवाली में दीप",
         "होली में रंग और दिवाली में दीप जलाना",
@@ -49402,6 +49803,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "हँसी खर्च करना",
         "हँसी खर्च करता है",
@@ -49432,6 +49834,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "हर चमड़ी का रंग अलग होता है, मगर सबका स्वभाव एक जैसा",
         "हर चमड़ी के रंग अलग होते हैं, मगर सबके स्वभाव एक जैसे हैं",

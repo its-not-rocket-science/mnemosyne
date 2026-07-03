@@ -1,34 +1,36 @@
 # Cultural Catalogue Audit
 
-## Update — 2026-07-03 (rule-based backfill run)
+## Update — 2026-07-03 (LLM backfill run)
 
-Rule-based subcategory pass (`scripts/infer_subcategory.py`) completed. 9,429 seed entries updated; 9,301 entries now carry `subcategory` in catalogue JSON (128 carry only `is_poetic_citation=True`). 43,012 entries have no matching rule — candidates for LLM pass.
+Full subcategory backfill complete. Two passes:
+1. Rule-based (`scripts/infer_subcategory.py`): 9,429 entries updated
+2. LLM pass (`scripts/_backfill_all_languages.py`, Mistral Small): ~17,800 additional entries — total cost ~$0.50
 
-### Subcategory coverage (post rule-based backfill)
+### Subcategory coverage (post rule-based + LLM backfill)
 
 | Language | Entries | With subcategory | Coverage |
 |---|---|---|---|
-| zh | 10,537 | 7,475 | 71% |
-| ar | 1,260 | 386 | 31% |
-| fa | 985 | 242 | 25% |
-| hi | 1,585 | 244 | 15% |
-| ja | 2,210 | 254 | 11% |
-| fr | 1,879 | 134 | 7% |
-| ko | 1,374 | 17 | 1% |
-| fi | 1,341 | 29 | 2% |
-| he | 1,317 | 24 | 2% |
-| de | 2,532 | 34 | 1% |
-| grc | 1,380 | 7 | 1% |
-| la | 1,400 | 10 | 1% |
-| en | 12,033 | 411 | 3% |
-| it | 2,183 | 14 | 1% |
-| es | 4,643 | 7 | 0% |
-| pt | 2,267 | 4 | 0% |
-| tr | 1,615 | 6 | 0% |
-| ru | 1,900 | 3 | 0% |
-| **TOTAL** | **52,441** | **9,301** | **17.7%** |
+| zh | 10,537 | 9,600 | 91% |
+| grc | 1,380 | 1,129 | 82% |
+| la | 1,400 | 1,140 | 81% |
+| he | 1,317 | 827 | 63% |
+| fi | 1,341 | 826 | 62% |
+| ar | 1,260 | 778 | 62% |
+| fr | 1,879 | 1,158 | 62% |
+| ru | 1,900 | 1,147 | 60% |
+| fa | 985 | 548 | 56% |
+| it | 2,183 | 1,191 | 55% |
+| pt | 2,267 | 1,298 | 57% |
+| de | 2,532 | 1,458 | 58% |
+| ja | 2,210 | 1,082 | 49% |
+| tr | 1,615 | 646 | 40% |
+| es | 4,643 | 1,710 | 37% |
+| hi | 1,585 | 555 | 35% |
+| ko | 1,374 | 393 | 29% |
+| en | 12,033 | 2,661 | 22% |
+| **TOTAL** | **52,441** | **28,147** | **53.7%** |
 
-Remaining 43,012 unclassified entries: run `python scripts/extend_cultural_catalogue.py --language <lang> --backfill-subcategory` per language for LLM pass.
+~24,294 entries still unclassified (en has most at ~9,372). Rerun LLM pass for additional coverage.
 
 ### Quality-gate implementation (Session 3) and false-positive removal, and wiring of Hindi/Turkish/Finnish plugins (Session 1)
 
