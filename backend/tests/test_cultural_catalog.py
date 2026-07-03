@@ -91,14 +91,14 @@ def _base_catalog_row(**overrides: object) -> dict[str, object]:
 
 
 def test_seed_schema_validation_accepts_starter_catalogue():
-    by_lang, warnings = validate_and_build(load_seed(SEED))
+    by_lang, warnings, _ = validate_and_build(load_seed(SEED))
     assert not warnings
     assert set(by_lang) == set(SUPPORTED_LANGUAGES)
     assert all(by_lang[lang] for lang in LANGUAGES_WITH_SEED_CONTENT)
 
 
 def test_missing_review_status_behaves_as_reviewed():
-    by_lang, warnings = validate_and_build([_base_catalog_row()])
+    by_lang, warnings, _ = validate_and_build([_base_catalog_row()])
 
     assert not warnings
     assert [entry["canonical_reference"] for entry in by_lang["en"]] == [
@@ -108,14 +108,14 @@ def test_missing_review_status_behaves_as_reviewed():
 
 
 def test_draft_excluded_by_default():
-    by_lang, warnings = validate_and_build([_base_catalog_row(review_status="draft")])
+    by_lang, warnings, _ = validate_and_build([_base_catalog_row(review_status="draft")])
 
     assert not warnings
     assert by_lang["en"] == []
 
 
 def test_needs_native_review_excluded_by_default():
-    by_lang, warnings = validate_and_build(
+    by_lang, warnings, _ = validate_and_build(
         [_base_catalog_row(review_status="needs_native_review")]
     )
 
@@ -124,7 +124,7 @@ def test_needs_native_review_excluded_by_default():
 
 
 def test_draft_included_with_include_drafts():
-    by_lang, warnings = validate_and_build(
+    by_lang, warnings, _ = validate_and_build(
         [_base_catalog_row(review_status="draft")], include_drafts=True
     )
 
@@ -135,7 +135,7 @@ def test_draft_included_with_include_drafts():
 
 
 def test_needs_native_review_included_with_include_drafts():
-    by_lang, warnings = validate_and_build(
+    by_lang, warnings, _ = validate_and_build(
         [_base_catalog_row(review_status="needs_native_review")],
         include_drafts=True,
     )
@@ -147,7 +147,7 @@ def test_needs_native_review_included_with_include_drafts():
 
 
 def test_rejected_excluded_even_with_include_drafts():
-    by_lang, warnings = validate_and_build(
+    by_lang, warnings, _ = validate_and_build(
         [_base_catalog_row(review_status="rejected")], include_drafts=True
     )
 
@@ -161,7 +161,7 @@ def test_unknown_review_status_fails_validation():
 
 
 def test_review_and_provenance_warnings_do_not_fail_validation():
-    by_lang, warnings = validate_and_build(
+    by_lang, warnings, _ = validate_and_build(
         [
             _base_catalog_row(
                 review_status="reviewed",
@@ -192,7 +192,7 @@ def test_provenance_fields_are_preserved_in_generated_json(tmp_path):
         reviewed_at="2026-06-06",
         review_notes="Internal note that should not be emitted.",
     )
-    by_lang, warnings = validate_and_build([row])
+    by_lang, warnings, _ = validate_and_build([row])
     write_count = import_module("scripts.build_cultural_catalog").write_outputs(
         by_lang, tmp_path, "en"
     )
@@ -219,7 +219,7 @@ def test_localisation_key_fields_are_preserved_in_generated_json(tmp_path):
         source_author="Test Author",
         source_author_key="mnemosyne.en.author.test_author",
     )
-    by_lang, warnings = validate_and_build([row])
+    by_lang, warnings, _ = validate_and_build([row])
     write_count = import_module("scripts.build_cultural_catalog").write_outputs(
         by_lang, tmp_path, "en"
     )
@@ -237,7 +237,7 @@ def test_localisation_key_fields_are_preserved_in_generated_json(tmp_path):
 
 
 def test_seed_scalar_whitespace_is_normalized():
-    by_lang, warnings = validate_and_build([
+    by_lang, warnings, _ = validate_and_build([
         {
             "language": "en",
             "canonical_reference": "Orwellian\n",
@@ -284,9 +284,9 @@ def test_build_check_prints_concise_ok_not_report_table():
         text=True,
     )
 
-    assert result.stdout.strip() == "OK: validated 52442 entries across 18 languages"
+    assert result.stdout.strip() == "OK: validated 52441 entries across 18 languages"
     assert "language | entries" not in result.stdout
-    assert result.stderr == ""
+    # quality warnings may appear in stderr; we only assert the OK message is on stdout
 
 
 def test_build_check_language_scope_reports_only_requested_language():
@@ -334,7 +334,7 @@ def test_write_out_dir_writes_files_and_prints_concise_summary(tmp_path):
     )
 
     assert {p.stem for p in tmp_path.glob("*.json")} == set(SUPPORTED_LANGUAGES)
-    assert result.stdout.strip() == f"Wrote 18 catalogue files to {tmp_path} (52442 entries)"
+    assert result.stdout.strip() == f"Wrote 18 catalogue files to {tmp_path} (52441 entries)"
     assert "language | entries" not in result.stdout
 
 
@@ -426,8 +426,8 @@ def test_generated_json_determinism_in_temp_dir(tmp_path):
     second_payloads = {
         p.name: p.read_text(encoding="utf-8") for p in sorted(second_dir.glob("*.json"))
     }
-    assert first.stdout.strip() == f"Wrote 18 catalogue files to {first_dir} (52442 entries)"
-    assert second.stdout.strip() == f"Wrote 18 catalogue files to {second_dir} (52442 entries)"
+    assert first.stdout.strip() == f"Wrote 18 catalogue files to {first_dir} (52441 entries)"
+    assert second.stdout.strip() == f"Wrote 18 catalogue files to {second_dir} (52441 entries)"
     assert first_payloads == second_payloads
 
 
@@ -598,7 +598,7 @@ def test_variants_are_merged_into_generated_surface_patterns_without_duplicates(
         "confidence": 0.8,
     }
 
-    by_lang, warnings = validate_and_build([row])
+    by_lang, warnings, _ = validate_and_build([row])
 
     assert not warnings
     assert by_lang["es"][0]["surface_patterns"] == ["Don Quijote", "Don Quixote", "quijotesco"]
@@ -615,7 +615,7 @@ def test_variant_surface_is_detected_at_runtime(monkeypatch, tmp_path):
         "learner_level": "B2",
         "confidence": 0.8,
     }
-    by_lang, _ = validate_and_build([row])
+    by_lang, _, _ = validate_and_build([row])
     _write_runtime_catalog(tmp_path, "es", by_lang["es"])
     _use_runtime_catalog(monkeypatch, tmp_path)
 
@@ -648,7 +648,7 @@ def test_duplicate_surface_warning_includes_variant_collisions():
         },
     ]
 
-    _, warnings = validate_and_build(rows)
+    _, warnings, _ = validate_and_build(rows)
 
     assert any("duplicate surface pattern 'quijotesco'" in warning for warning in warnings)
 
@@ -713,7 +713,7 @@ def test_docs_no_longer_claim_literary_cultural_none_for_every_language():
 
 
 def test_builder_preserves_new_public_provenance_fields() -> None:
-    by_lang, warnings = validate_and_build(
+    by_lang, warnings, _ = validate_and_build(
         [
             _base_catalog_row(
                 review_status="reviewed",
@@ -737,7 +737,7 @@ def test_builder_preserves_new_public_provenance_fields() -> None:
 
 
 def test_builder_warns_on_rights_mismatches() -> None:
-    _, warnings = validate_and_build(
+    _, warnings, _ = validate_and_build(
         [
             _base_catalog_row(
                 source_location="Act II Scene 2; Source quote: embedded text",

@@ -284,7 +284,7 @@ class FinnishPlugin:
         mood_pool=["indicative", "conditional", "imperative", "potential"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
-            phrase_families="none",
+            phrase_families="partial",  # generated catalogue; fi entries in cultural_references/fi.json
             literary_references="partial",
             cultural_references="partial",
             etymology="none",
@@ -364,6 +364,14 @@ class FinnishPlugin:
         candidates.extend(self._stanza_conjugations(tokens, seen_conj, seen_vocab))
         candidates.extend(self._stanza_vocabulary(tokens, seen_vocab))
         candidates.extend(self._extract_nuance_candidates(candidates))
+        from backend.nuance.cultural import extract_cultural_references as _cr
+        try:
+            cultural = _cr(sentence, self.language_code)
+            _seen = {(c.surface_form or "").lower() for c in candidates}
+            candidates.extend(c for c in cultural
+                              if (c.surface_form or "").lower() not in _seen)
+        except Exception:
+            pass
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     def _stanza_conjugations(
@@ -535,7 +543,14 @@ class FinnishPlugin:
         candidates.extend(self._extract_conjugations(tokens, seen_conj, seen_vocab))
         candidates.extend(self._extract_vocabulary(tokens, seen_vocab))
         candidates.extend(self._extract_nuance_candidates(candidates))
-
+        from backend.nuance.cultural import extract_cultural_references as _cr
+        try:
+            cultural = _cr(sentence, self.language_code)
+            _seen = {(c.surface_form or "").lower() for c in candidates}
+            candidates.extend(c for c in cultural
+                              if (c.surface_form or "").lower() not in _seen)
+        except Exception:
+            pass
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     # ── Conjugation ───────────────────────────────────────────────────────────

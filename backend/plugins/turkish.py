@@ -332,7 +332,7 @@ class TurkishPlugin:
         mood_pool=["conditional", "optative", "imperative", "necessitative"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
-            phrase_families="none",
+            phrase_families="partial",  # generated catalogue; tr entries in cultural_references/tr.json
             literary_references="partial",
             cultural_references="partial",
             etymology="none",
@@ -623,6 +623,14 @@ class TurkishPlugin:
                     ))
 
         candidates.extend(self._extract_nuance_candidates(candidates))
+        from backend.nuance.cultural import extract_cultural_references as _cr
+        try:
+            cultural = _cr(sentence, self.language_code)
+            _seen = {(c.surface_form or "").lower() for c in candidates}
+            candidates.extend(c for c in cultural
+                              if (c.surface_form or "").lower() not in _seen)
+        except Exception:
+            pass
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     # ------------------------------------------------------------------
@@ -835,6 +843,14 @@ class TurkishPlugin:
                         confidence=0.65,
                     ))
 
+        from backend.nuance.cultural import extract_cultural_references as _cr
+        try:
+            cultural = _cr(sentence, self.language_code)
+            _seen = {(c.surface_form or "").lower() for c in candidates}
+            candidates.extend(c for c in cultural
+                              if (c.surface_form or "").lower() not in _seen)
+        except Exception:
+            pass
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     # ------------------------------------------------------------------
@@ -907,6 +923,14 @@ class TurkishPlugin:
                     confidence=0.45 if morph else None,
                 ))
 
+        from backend.nuance.cultural import extract_cultural_references as _cr
+        try:
+            cultural = _cr(sentence, self.language_code)
+            _seen = {(c.surface_form or "").lower() for c in candidates}
+            candidates.extend(c for c in cultural
+                              if (c.surface_form or "").lower() not in _seen)
+        except Exception:
+            pass
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     # ------------------------------------------------------------------

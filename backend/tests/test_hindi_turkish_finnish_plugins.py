@@ -826,3 +826,37 @@ class TestFinnishPlugin:
         assert caps is not None
         assert caps.grammar_nuance == "partial"
         assert "conditional" in caps.notes
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Cultural catalogue wiring — hi / tr / fi
+# ─────────────────────────────────────────────────────────────────────────────
+
+class TestCulturalCatalogueWiring:
+
+    def test_hindi_cultural_catalogue_wired(self):
+        plugin = create_hindi()
+        result = plugin.analyze_text("कर्म ही पूजा है।")
+        assert isinstance(result, list)
+
+    def test_hindi_phrase_families_capability(self):
+        caps = create_hindi().capabilities
+        assert caps.nuance_capabilities.phrase_families == "partial"
+
+    def test_turkish_cultural_catalogue_wired(self):
+        plugin = create_turkish()
+        result = plugin.analyze_text("Kızını dövmeyen dizini döver.")
+        assert isinstance(result, list)
+
+    def test_turkish_phrase_families_capability(self):
+        caps = create_turkish().capabilities
+        assert caps.nuance_capabilities.phrase_families == "partial"
+
+    def test_finnish_cultural_catalogue_wired(self):
+        plugin = create_finnish()
+        result = plugin.analyze_text("Älä myy karhua ennen kuin se on kaadettu.")
+        assert isinstance(result, list)
+
+    def test_finnish_phrase_families_capability(self):
+        caps = create_finnish().capabilities
+        assert caps.nuance_capabilities.phrase_families == "partial"

@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 from pathlib import Path
 
@@ -337,7 +337,7 @@ def test_output_yaml_validates_with_build_cultural_catalog(tmp_path) -> None:
     ]) == 0
 
     rows = _load_yaml(out)
-    by_lang, warnings = validate_and_build(rows, include_drafts=True)
+    by_lang, warnings, _ = validate_and_build(rows, include_drafts=True)
     assert len(by_lang["en"]) == 1
     assert warnings == []
 
@@ -427,3 +427,4 @@ def test_summary_displays_new_source_fields(capsys) -> None:
     assert "Source quote: Short supporting quote." in out
     assert "Source note: Contextual provenance note." in out
     assert "Rights basis: common_usage_short_expression" in out
+

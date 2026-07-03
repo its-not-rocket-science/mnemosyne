@@ -1,5 +1,47 @@
 # Cultural Catalogue Audit
 
+## Update — 2026-07-03
+
+Following quality-gate implementation (Session 3) and false-positive removal, and wiring of Hindi/Turkish/Finnish plugins (Session 1):
+
+### Subcategory coverage
+
+Subcategory backfill scripts created but not yet run (requires `infer_subcategory.py` + LLM pass). Current state after rebuild:
+
+| Language | Entries | With subcategory | is_poetic_citation |
+|---|---|---|---|
+| en | 12,033 | 0 (0%) | 0 |
+| fa | 985 | 0 (0%) | 0 |
+| ar | 1,260 | 0 (0%) | 0 |
+| hi | 1,585 | 0 (0%) | 0 |
+| zh | 10,537 | 2 (0%) | 0 |
+| ja | 2,210 | 0 (0%) | 0 |
+| ko | 1,374 | 0 (0%) | 0 |
+| ru | 1,900 | 0 (0%) | 0 |
+| de | 2,532 | 0 (0%) | 0 |
+| fr | 1,879 | 0 (0%) | 0 |
+| es | 4,643 | 0 (0%) | 0 |
+
+To populate: run `python scripts/infer_subcategory.py --report` then `python scripts/extend_cultural_catalogue.py --language fa --backfill-subcategory` (etc. per language).
+
+### Spot-test (post false-positive removal)
+
+English: 7/8 targets — 'supposed' false positive removed (was matching "he supposed" at conf=0.70). The other 7 idioms still match. The 8th ("gone pear-shaped") was never in catalogue.
+
+### Hindi / Turkish / Finnish now wired
+
+- hi: 1,585 entries available in catalogue, now reaching plugin pipeline
+- tr: 1,615 entries available in catalogue, now reaching plugin pipeline
+- fi: 1,341 entries available in catalogue, now reaching plugin pipeline
+
+`phrase_families` capability updated to `"partial"` for all three.
+
+### Quality gate
+
+`build_cultural_catalog.py --quality-report` reports 9,705 quality warnings (LOW_CONFIDENCE_SINGLE_WORD). Most are legitimate cultural references (Greek single-word theological terms, Orwellian neologisms, Chinese idioms). The only confirmed false positive ('supposed') has been removed.
+
+---
+
 Updated after Session 1 of post-review gap closure: `extract_cultural_references()` is now wired into all 15 nuance plugins. Audit targets the generated JSON catalogue in `backend/nuance/data/cultural_references/` (52,442 entries across 18 languages).
 
 ## Summary

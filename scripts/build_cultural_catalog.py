@@ -238,9 +238,10 @@ def validate_and_build(
     rows: list[dict[str, Any]],
     only_language: str | None = None,
     include_drafts: bool = False,
-) -> tuple[dict[str, list[dict[str, Any]]], list[str]]:
+) -> tuple[dict[str, list[dict[str, Any]]], list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
+    quality_warnings: list[str] = []
     by_lang: dict[str, list[dict[str, Any]]] = {lang: [] for lang in SUPPORTED_LANGUAGES}
     ids: dict[str, set[str]] = defaultdict(set)
     surfaces: dict[str, dict[str, list[str]]] = defaultdict(lambda: defaultdict(list))
@@ -332,6 +333,15 @@ def validate_and_build(
             if confidence > 0.90 and (norm_pat in COMMON_WORDS or len(pat.strip()) < 6):
                 warnings.append(f"row {idx} ({lang}): high confidence {confidence:.2f} for ambiguous/common pattern {pat!r}")
             surfaces[lang][norm_pat].append(eid)
+        single_word_lower = [
+            p for p in merged_patterns
+            if len(p.split()) == 1 and p == p.lower() and p.isalpha()
+        ]
+        if single_word_lower and confidence < 0.75:
+            quality_warnings.append(
+                f"LOW_CONFIDENCE_SINGLE_WORD: {eid!r} "
+                f"patterns={single_word_lower} conf={confidence}"
+            )
         notes = raw.get("notes")
         if isinstance(notes, str):
             notes = clean_text(notes)
@@ -380,7 +390,7 @@ def validate_and_build(
 
     for lang in by_lang:
         by_lang[lang].sort(key=lambda e: (e["reference_type"], e["id"]))
-    return by_lang, warnings
+    return by_lang, warnings, quality_warnings
 
 
 def selected_languages(only_language: str | None = None) -> list[str]:
@@ -446,6 +456,8 @@ def main() -> int:
     )
     mode.add_argument("--write", action="store_true", help="write generated runtime JSON files")
     mode.add_argument("--report", action="store_true", help="validate and print summary report")
+    mode.add_argument("--quality-report", action="store_true",
+                      help="print quality warnings for all entries without building")
     parser.add_argument(
         "--language",
         choices=SUPPORTED_LANGUAGES,
@@ -461,7 +473,7 @@ def main() -> int:
     args = parser.parse_args()
 
     try:
-        by_lang, warnings = validate_and_build(
+        by_lang, warnings, quality_warnings = validate_and_build(
             load_seed(args.seed), args.language, include_drafts=args.include_drafts
         )
     except Exception as exc:
@@ -485,6 +497,21 @@ def main() -> int:
             f"Wrote {files_written} catalogue {pluralize(files_written, 'file')} to {args.out_dir} "
             f"({entries} {pluralize(entries, 'entry', 'entries')})"
         )
+    elif args.quality_report:
+        if quality_warnings:
+            print(f"{len(quality_warnings)} quality warnings:")
+            for w in quality_warnings:
+                print(f"   {w}")
+        else:
+            print("No quality warnings.")
+        return 0
+    if quality_warnings:
+        print(f"\n⚠  {len(quality_warnings)} quality warnings:", file=sys.stderr)
+        for w in quality_warnings[:20]:
+            print(f"   {w}", file=sys.stderr)
+        if len(quality_warnings) > 20:
+            print(f"   ... and {len(quality_warnings) - 20} more. Run --quality-report for full list.",
+                  file=sys.stderr)
     return 0
 
 

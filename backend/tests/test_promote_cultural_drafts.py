@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 from argparse import Namespace
 from pathlib import Path
@@ -201,7 +201,7 @@ def test_output_validates_with_build_cultural_catalog(tmp_path) -> None:
     draft, seed, allowlist = _paths(tmp_path, [_entry()], "break the ice\n")
     promoted, _, _ = promoter.promote(_args(draft, seed, allowlist))
 
-    by_lang, warnings = validate_and_build(promoted)
+    by_lang, warnings, _ = validate_and_build(promoted)
 
     assert warnings == []
     assert [entry["canonical_reference"] for entry in by_lang["en"]] == ["break the ice"]
@@ -218,5 +218,6 @@ def test_rights_basis_preserved_through_promotion(tmp_path) -> None:
 
     assert promoted[0]["rights_basis"] == "common_usage_short_expression"
 
-    by_lang, warnings = validate_and_build(promoted)
+    by_lang, warnings, _ = validate_and_build(promoted)
     assert warnings == []
+

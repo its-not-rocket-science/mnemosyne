@@ -12,3 +12,17 @@ frontend/corpora/manifest.lock.json
 backend/corpora/manifest.lock.json
 *.tmp
 node_modules/
+
+# Diagnostic / one-off scripts — use plain names (no underscore) for committed tools
+scripts/_*.py
+
+# Temporary database artefacts
+tmp_test_migration.db
+tmp*.db
+
+# One-off data capture scripts
+capture_lang_data.py
+capture_lang_data_v2.py
+
+# Gap closure prompt files
+mnemosyne_final_gaps.txt

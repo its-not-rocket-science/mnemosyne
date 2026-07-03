@@ -1325,6 +1325,170 @@ Notes:
 
 
 # ---------------------------------------------------------------------------
+# Subcategory backfill
+# ---------------------------------------------------------------------------
+
+_SUBCATEGORY_VALUES: dict[str, list[str]] = {
+    "zh": ["chengyu", "xiehouyu", "suyv", "yanyu"],
+    "ar": ["quranic", "hadith", "muallaqat", "abbasid", "modern_media"],
+    "fa": ["shahnameh", "hafez", "rumi", "saadi", "khayyam", "persian_proverb", "quranic"],
+    "ja": ["yojijukugo", "kanyoku", "kotowaza", "zen_koan"],
+    "ko": ["sajaseong_eo", "pansori", "sijo", "korean_proverb"],
+    "hi": ["doha_kabir", "doha_rahim", "ramcharitmanas", "bhagavad_gita",
+           "panchatantra", "filmi", "hindi_muhavare", "hindi_lokokti"],
+    "tr": ["biblical", "shakespearean", "latin_tag", "greek_tag", "literary_allusion", "proverb"],
+    "fi": ["biblical", "shakespearean", "latin_tag", "greek_tag", "literary_allusion", "proverb"],
+    "ru": ["biblical", "shakespearean", "latin_tag", "greek_tag", "literary_allusion", "proverb"],
+}
+_SUBCATEGORY_DEFAULT = ["biblical", "shakespearean", "latin_tag", "greek_tag",
+                        "literary_allusion", "proverb"]
+
+_BACKFILL_SYS = (
+    "You are a cultural catalogue specialist. For each entry, assign the most "
+    "specific subcategory value and determine if is_poetic_citation is true. "
+    "Return ONLY a JSON array in the same order as input."
+)
+
+_BACKFILL_USER = """\
+Assign subcategory and is_poetic_citation for these {lang_name} entries.
+Return [{{"subcategory": "...", "is_poetic_citation": true/false}}, ...] in the same order.
+Use null for subcategory if none of the defined values fit.
+
+Valid subcategory values for {lang_name}:
+{subcategory_values}
+
+Entries:
+{entries_json}"""
+
+
+def run_backfill_subcategory(
+    language: str,
+    model: str,
+    seed_path: Path,
+    batch_size: int = 20,
+) -> None:
+    import json as _json
+
+    lang_name = LANGUAGE_NAMES.get(language, language)
+    subcategory_values = ", ".join(
+        _SUBCATEGORY_VALUES.get(language, _SUBCATEGORY_DEFAULT)
+    )
+
+    try:
+        from ruamel.yaml import YAML as _RY
+        _ryaml = _RY()
+        _ryaml.preserve_quotes = True
+        with open(seed_path, encoding="utf-8") as _f:
+            all_entries = _ryaml.load(_f)
+        _use_ruamel = True
+    except ImportError:
+        import yaml as _pyyaml
+        with open(seed_path, encoding="utf-8") as _f:
+            all_entries = _pyyaml.safe_load(_f)
+        _use_ruamel = False
+
+    targets = [
+        (i, e) for i, e in enumerate(all_entries)
+        if e.get("language") == language
+        and not (e.get("subcategory") or "")
+    ]
+    print(f"Language: {lang_name} ({language})")
+    print(f"Entries needing subcategory: {len(targets):,}")
+    if not targets:
+        print("Nothing to backfill.")
+        return
+
+    client = make_client()
+    total_in = total_out = 0
+    batches = [targets[i:i + batch_size] for i in range(0, len(targets), batch_size)]
+
+    for b_idx, batch in enumerate(batches):
+        entries_payload = _json.dumps(
+            [
+                {
+                    "canonical_reference": e.get("canonical_reference"),
+                    "source_work": e.get("source_work"),
+                    "register": e.get("register"),
+                    "short_explanation": (e.get("short_explanation") or "")[:80],
+                }
+                for _, e in batch
+            ],
+            ensure_ascii=False,
+        )
+        user_msg = _BACKFILL_USER.format(
+            lang_name=lang_name,
+            subcategory_values=subcategory_values,
+            entries_json=entries_payload,
+        )
+        try:
+            resp = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": _BACKFILL_SYS},
+                    {"role": "user",   "content": user_msg},
+                ],
+                temperature=0,
+            )
+        except Exception as exc:
+            print(f"  batch {b_idx+1}: API error — {exc}", file=sys.stderr)
+            continue
+
+        total_in  += resp.usage.prompt_tokens
+        total_out += resp.usage.completion_tokens
+
+        raw = resp.choices[0].message.content or ""
+        start = raw.find("[")
+        end   = raw.rfind("]") + 1
+        if start < 0 or end <= start:
+            print(f"  batch {b_idx+1}: could not parse JSON array", file=sys.stderr)
+            continue
+
+        try:
+            results = _json.loads(raw[start:end])
+        except _json.JSONDecodeError as exc:
+            print(f"  batch {b_idx+1}: JSON parse error — {exc}", file=sys.stderr)
+            continue
+
+        if len(results) != len(batch):
+            print(f"  batch {b_idx+1}: expected {len(batch)} results, got {len(results)}", file=sys.stderr)
+            continue
+
+        for (orig_idx, entry), result in zip(batch, results):
+            sub = result.get("subcategory")
+            poetic = bool(result.get("is_poetic_citation", False))
+            if sub:
+                entry["subcategory"] = sub
+            if poetic:
+                entry["is_poetic_citation"] = True
+
+        print(f"  batch {b_idx+1}/{len(batches)}: processed {len(batch)} entries", flush=True)
+
+    cost_in  = total_in  / 1_000_000
+    cost_out = total_out / 1_000_000
+    provider = PROVIDERS.get(model, {})
+    price_in  = provider.get("in",  0.15)
+    price_out = provider.get("out", 0.60)
+    cost = cost_in * price_in + cost_out * price_out
+    print(f"\nTokens: {total_in:,} in / {total_out:,} out  ≈  ${cost:.4f}")
+
+    print(f"Writing {seed_path} ...", flush=True)
+    if _use_ruamel:
+        from ruamel.yaml import YAML as _RY2
+        _ryaml2 = _RY2()
+        _ryaml2.preserve_quotes = True
+        _ryaml2.default_flow_style = False
+        _ryaml2.width = 10000
+        with open(seed_path, "w", encoding="utf-8") as _f:
+            _ryaml2.dump(all_entries, _f)
+    else:
+        import yaml as _pyyaml2
+        with open(seed_path, "w", encoding="utf-8") as _f:
+            _pyyaml2.dump(all_entries, _f, allow_unicode=True,
+                          default_flow_style=False, sort_keys=False)
+    print("Done.")
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -1334,8 +1498,13 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     ap.add_argument("--language", "-l", help="Target language code (e.g. es, fr, de, zh)")
-    ap.add_argument("--target",   "-t", type=int, required=True,
-                    help="Target total entries for this language")
+    ap.add_argument("--target",   "-t", type=int, default=None,
+                    help="Target total entries for this language (required unless --backfill-subcategory)")
+    ap.add_argument("--backfill-subcategory", action="store_true",
+                    help="Enrich existing seed entries that lack a subcategory field, "
+                         "rather than generating new entries. Reads entries from --seed, "
+                         "sends them to the LLM in batches requesting subcategory and "
+                         "is_poetic_citation, and writes results back to the seed.")
     ap.add_argument("--model", "-m",
                     help="Generation + i18n model (overrides CULTURAL_CATALOGUE_MODEL; default: gpt-4o-mini)")
     ap.add_argument("--review-model",
@@ -1386,6 +1555,18 @@ def main() -> None:
 
     model        = resolve_model(args.model,        "CULTURAL_CATALOGUE_MODEL",        "gpt-4o-mini")
     review_model = resolve_model(args.review_model, "CULTURAL_CATALOGUE_REVIEW_MODEL", model)
+
+    if args.backfill_subcategory:
+        run_backfill_subcategory(
+            language=args.language,
+            model=model,
+            seed_path=args.seed,
+        )
+        return
+
+    if args.target is None:
+        ap.error("--target is required (unless --backfill-subcategory or --estimate-cost)")
+
     output       = args.output or Path(
         f"data/cultural_drafts/{args.language}_cultural_references_v1.generated.yaml"
     )

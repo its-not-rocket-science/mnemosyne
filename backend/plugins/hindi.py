@@ -406,7 +406,7 @@ class HindiPlugin:
         mood_pool=["imperative", "subjunctive", "subjunctive_or_imperative"],
         nuance_capabilities=NuanceCapabilities(
             idioms="none",
-            phrase_families="none",
+            phrase_families="partial",  # generated catalogue; hi entries in cultural_references/hi.json
             literary_references="partial",
             cultural_references="partial",
             etymology="none",
@@ -724,6 +724,14 @@ class HindiPlugin:
                     ))
 
         candidates.extend(self._extract_nuance_candidates(candidates))
+        from backend.nuance.cultural import extract_cultural_references as _cr
+        try:
+            cultural = _cr(sentence, self.language_code)
+            _seen = {(c.surface_form or "").lower() for c in candidates}
+            candidates.extend(c for c in cultural
+                              if (c.surface_form or "").lower() not in _seen)
+        except Exception:
+            pass
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     # ------------------------------------------------------------------
@@ -923,6 +931,14 @@ class HindiPlugin:
                 )
             )
 
+        from backend.nuance.cultural import extract_cultural_references as _cr
+        try:
+            cultural = _cr(sentence, self.language_code)
+            _seen = {(c.surface_form or "").lower() for c in candidates}
+            candidates.extend(c for c in cultural
+                              if (c.surface_form or "").lower() not in _seen)
+        except Exception:
+            pass
         return CandidateSentenceResult(text=sentence, candidates=candidates)
 
     # ------------------------------------------------------------------
