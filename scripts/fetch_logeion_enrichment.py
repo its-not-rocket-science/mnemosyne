@@ -20,6 +20,7 @@ import json
 import pathlib
 import sqlite3
 import sys
+import unicodedata
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
@@ -181,11 +182,18 @@ async def main() -> None:
         lemmas = _collect_lemmas(lang, pos_filter)
         slice_ = lemmas if args.limit == 0 else lemmas[:args.limit]
         print(f"{lang}: {len(lemmas)} lemmas found, processing {len(slice_)}")
-        n_fetched = n_cached = n_miss = n_error = 0
+        n_fetched = n_cached = n_miss = n_error = n_skip = 0
 
         for lemma in slice_:
             # Normalize to polytonic for grc before cache check
             lemma_norm = _to_polytonic(lemma, lang)
+            # Skip grc monotonic lemmas with no polytonic mapping — Logeion
+            # requires polytonic Greek and will never match bare monotonic forms.
+            if lang == "grc" and lemma_norm == lemma:
+                nfd = unicodedata.normalize("NFD", lemma)
+                if not any(unicodedata.category(c) == "Mn" for c in nfd):
+                    n_skip += 1
+                    continue
             if _cache_get(lemma_norm, lang) is not None:
                 n_cached += 1
                 continue
@@ -212,7 +220,7 @@ async def main() -> None:
                 await asyncio.sleep(1.0)
 
         print(f"{lang}: fetched={n_fetched} cached={n_cached} "
-              f"miss={n_miss} errors={n_error}")
+              f"miss={n_miss} skipped={n_skip} errors={n_error}")
 
 
 if __name__ == "__main__":

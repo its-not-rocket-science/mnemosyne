@@ -15,6 +15,7 @@ node_modules/
 
 # Diagnostic / one-off scripts — use plain names (no underscore) for committed tools
 scripts/_*.py
+scripts/_*.txt
 
 # Temporary database artefacts
 tmp_test_migration.db
