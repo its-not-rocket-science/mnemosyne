@@ -175,7 +175,7 @@ async def main() -> None:
     languages = args.languages or ["la", "grc"]
     pos_filter = _POS_FILTER_MAP[args.pos]
 
-    from backend.dictionary.logeion import fetch_structured, _cache_get
+    from backend.dictionary.logeion import fetch_structured, _cache_get, _to_polytonic
 
     for lang in languages:
         lemmas = _collect_lemmas(lang, pos_filter)
@@ -184,11 +184,14 @@ async def main() -> None:
         n_fetched = n_cached = n_miss = n_error = 0
 
         for lemma in slice_:
-            if _cache_get(lemma, lang) is not None:
+            # Normalize to polytonic for grc before cache check
+            lemma_norm = _to_polytonic(lemma, lang)
+            if _cache_get(lemma_norm, lang) is not None:
                 n_cached += 1
                 continue
             if args.dry_run:
-                print(f"  would fetch: {lemma}")
+                label = f"{lemma} -> {lemma_norm}" if lemma_norm != lemma else lemma
+                print(f"  would fetch: {label}")
                 continue
             try:
                 result = await fetch_structured(lemma, lang)
@@ -198,7 +201,8 @@ async def main() -> None:
                     gender = result.get("gender", "")
                     tag = f"{pos}{(' ' + gender) if gender else ''}"
                     defn = (result.get("ls_definition") or "")[:50]
-                    print(f"  {lemma} [{tag}]: {defn}...")
+                    display = f"{lemma_norm}" if lemma_norm != lemma else lemma
+                    print(f"  {display} [{tag}]: {defn}...")
                 else:
                     n_miss += 1
                 await asyncio.sleep(0.5)

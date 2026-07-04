@@ -492,6 +492,50 @@ class TestExtractMorphology:
         assert result == {}
 
 
+# ── _to_polytonic / _strip_quantity ──────────────────────────────────────────
+
+class TestGrcPolytonicNorm:
+    def test_already_polytonic_unchanged(self):
+        from backend.dictionary.logeion import _to_polytonic
+        assert _to_polytonic("λύω", "grc") == "λύω"  # λύω
+
+    def test_la_lemma_unchanged(self):
+        from backend.dictionary.logeion import _to_polytonic
+        assert _to_polytonic("amor", "la") == "amor"
+
+    def test_non_grc_unchanged(self):
+        from backend.dictionary.logeion import _to_polytonic
+        assert _to_polytonic("liebe", "de") == "liebe"
+
+    def test_strip_quantity_removes_breve(self):
+        from backend.dictionary.logeion import _strip_quantity
+        # κῠ́ων (with combining breve U+0306) -> κύων
+        kaikki = "κῠ́ων"
+        result = _strip_quantity(kaikki)
+        import unicodedata
+        has_breve = "̆" in unicodedata.normalize("NFD", result)
+        has_acute = "́" in unicodedata.normalize("NFD", result)
+        assert not has_breve, "combining breve should be stripped"
+        assert has_acute, "combining acute should be kept"
+
+    def test_monotonic_resolves_via_map(self):
+        from backend.dictionary.logeion import _to_polytonic, _load_grc_poly_map
+        poly_map = _load_grc_poly_map()
+        if not poly_map:
+            import pytest
+            pytest.skip("grc_lemmas.json not available in this environment")
+        # Pick any key that has a polytonic value
+        mono = next(iter(poly_map))
+        poly = _to_polytonic(mono, "grc")
+        assert poly != mono or poly == poly_map[mono], \
+            f"monotonic {mono!r} should resolve to {poly_map[mono]!r}, got {poly!r}"
+
+    def test_unmapped_monotonic_returned_as_is(self):
+        from backend.dictionary.logeion import _to_polytonic
+        # A nonsense Greek string that won't be in the map
+        assert _to_polytonic("ξξξξξξ", "grc") == "ξξξξξξ"
+
+
 # ── bcp47 coverage ────────────────────────────────────────────────────────────
 
 def test_all_mnemosyne_languages_mapped():

@@ -33,6 +33,7 @@ import json
 import logging
 import re
 import sqlite3
+import unicodedata
 import urllib.parse
 from pathlib import Path
 
@@ -63,6 +64,62 @@ _HEADERS = {
     "User-Agent": _USER_AGENT,
     "Referer": "https://logeion.uchicago.edu/",
 }
+
+
+# ── Greek polytonic normalisation ────────────────────────────────────────────
+# Our Greek morph data (grc_lemmas.json / grc_verb_morph.db) stores lemmas in
+# monotonic form (no diacritics).  Logeion's LSJ index uses standard polytonic
+# headwords.  We resolve the mismatch by lazy-loading a monotonic→polytonic map
+# derived from grc_lemmas.json citation fields (kaikki.org data), then stripping
+# their quantity marks (U+0306 COMBINING BREVE, U+0304 COMBINING MACRON) to
+# obtain forms that match Logeion's index.
+
+_GRC_LEMMAS_PATH = Path(__file__).resolve().parents[2] / "data" / "lexicons" / "grc_lemmas.json"
+_grc_poly_map: dict[str, str] | None = None
+
+
+def _strip_quantity(s: str) -> str:
+    nfd = unicodedata.normalize("NFD", s)
+    return unicodedata.normalize("NFC",
+        "".join(c for c in nfd if c not in {"̆", "̄"})
+    )
+
+
+def _load_grc_poly_map() -> dict[str, str]:
+    global _grc_poly_map
+    if _grc_poly_map is not None:
+        return _grc_poly_map
+    result: dict[str, str] = {}
+    try:
+        data = json.loads(_GRC_LEMMAS_PATH.read_text(encoding="utf-8"))
+        for mono, info in data.get("entries", {}).items():
+            if not isinstance(info, dict) or len(mono) < 2:
+                continue
+            citation = info.get("citation", "")
+            if not citation:
+                continue
+            first_word = _strip_quantity(citation.split()[0].rstrip(",;:()"))
+            if any(unicodedata.category(c) == "Mn"
+                   for c in unicodedata.normalize("NFD", first_word)):
+                result[mono] = first_word
+    except Exception:
+        pass
+    _grc_poly_map = result
+    logger.debug("grc poly map loaded: %d entries", len(result))
+    return result
+
+
+def _to_polytonic(lemma: str, lang: str) -> str:
+    """Resolve a monotonic grc lemma to its polytonic headword, or return as-is."""
+    if lang != "grc":
+        return lemma
+    if any(unicodedata.category(c) == "Mn"
+           for c in unicodedata.normalize("NFD", lemma)):
+        return lemma  # already polytonic
+    return _load_grc_poly_map().get(lemma, lemma)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 
 
 def _build_url(lemma: str, base_url: str) -> str:
@@ -127,6 +184,7 @@ async def fetch_definition(
     if language_code not in SUPPORTED_LANGUAGES:
         return None
 
+    lemma = _to_polytonic(lemma, language_code)
     url = _build_url(lemma, base_url)
 
     async with httpx.AsyncClient(
@@ -379,6 +437,7 @@ async def fetch_structured(
     if language_code not in SUPPORTED_LANGUAGES:
         return None
 
+    lemma = _to_polytonic(lemma, language_code)
     cached = _cache_get(lemma, language_code)
     if cached is not None:
         return cached
