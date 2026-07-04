@@ -172,6 +172,10 @@ async def enrich_objects(
                 updated["classical_citations"] = logeion_data.get("classical_citations", [])
                 updated["compound_words"]      = logeion_data.get("compound_words", [])
                 updated["lexicon_source"]      = logeion_data.get("lexicon_source")
+                if logeion_data.get("part_of_speech"):
+                    updated["part_of_speech"] = logeion_data["part_of_speech"]
+                if logeion_data.get("gender"):
+                    updated["gender"] = logeion_data["gender"]
             row.lesson_data = updated
             dirty.append(row)
 

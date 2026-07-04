@@ -1194,7 +1194,10 @@ export class MnemosyneDetailPane extends HTMLElement {
           </dl>
         ` : ''}
         ${ld.lexicon_source ? /* html */`
-          <p class="pane__lexicon-badge">${esc(ld.lexicon_source)}</p>
+          <p class="pane__lexicon-meta">
+            <span class="pane__lexicon-badge">${esc(ld.lexicon_source)}</span>${ld.part_of_speech ? /* html */`
+            <span class="pane__pos-badge">${esc(ld.part_of_speech)}${ld.gender ? ` · ${esc(ld.gender)}` : ''}</span>` : ''}
+          </p>
         ` : ''}
         ${ld.ls_definition ? /* html */`
           <p class="pane__ls-definition">${esc(ld.ls_definition)}</p>
@@ -4544,6 +4547,71 @@ export class MnemosyneDetailPane extends HTMLElement {
         margin: 0;
         color: var(--text);
         font-style: italic;
+      }
+
+      /* ── Lexicon badge + POS ─────────────────────────────────────── */
+      .pane__lexicon-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.4rem;
+        margin: 0 0 0.5rem;
+      }
+      .pane__lexicon-badge,
+      .pane__pos-badge {
+        display: inline-block;
+        padding: 0.15rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+      .pane__lexicon-badge {
+        background: var(--surface-raised, #f0f0f0);
+        color: var(--muted, #666);
+      }
+      .pane__pos-badge {
+        background: var(--accent-subtle, #e8f0fe);
+        color: var(--accent, #1a56db);
+      }
+
+      /* ── LS/LSJ definition ───────────────────────────────────────── */
+      .pane__ls-definition {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin: 0 0 0.6rem;
+        color: var(--text);
+      }
+
+      /* ── Classical citations ─────────────────────────────────────── */
+      .pane__citations {
+        margin: 0 0 0.6rem;
+        padding-inline-start: 1.25rem;
+        font-size: 0.8375rem;
+      }
+      .pane__citation {
+        margin-block-end: 0.25rem;
+        color: var(--muted, #555);
+      }
+      .pane__citation cite {
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      /* ── Compound words ──────────────────────────────────────────── */
+      .pane__compounds {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        margin: 0 0 0.6rem;
+      }
+      .pane__compound {
+        display: inline-block;
+        padding: 0.1rem 0.4rem;
+        border: 1px solid var(--border, #ddd);
+        border-radius: 0.2rem;
+        font-size: 0.8rem;
+        color: var(--text);
       }
     `
   }

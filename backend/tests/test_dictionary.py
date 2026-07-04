@@ -436,6 +436,62 @@ async def test_enrich_logeion_not_called_for_non_classical(db_session):
     assert not logeion_calls, "Logeion should not be called for 'es'"
 
 
+# ── _extract_morphology ───────────────────────────────────────────────────────
+
+class TestExtractMorphology:
+    from backend.dictionary.logeion import _extract_morphology
+
+    def test_la_verb_active(self):
+        from backend.dictionary.logeion import _extract_morphology
+        plain = "abduco, xi, ctum, 3, v. a., to lead away"
+        result = _extract_morphology(plain, "la")
+        assert result.get("part_of_speech") == "verb"
+        assert "gender" not in result
+
+    def test_la_verb_intransitive(self):
+        from backend.dictionary.logeion import _extract_morphology
+        plain = "abeo, ivi, itum, ire, v. n., to go away"
+        result = _extract_morphology(plain, "la")
+        assert result.get("part_of_speech") == "verb"
+
+    def test_la_noun_masculine(self):
+        from backend.dictionary.logeion import _extract_morphology
+        plain = "amor, oris, m., love, affection"
+        result = _extract_morphology(plain, "la")
+        assert result.get("part_of_speech") == "noun"
+        assert result.get("gender") == "masculine"
+
+    def test_la_noun_feminine(self):
+        from backend.dictionary.logeion import _extract_morphology
+        plain = "anima, ae, f., soul, breath"
+        result = _extract_morphology(plain, "la")
+        assert result.get("part_of_speech") == "noun"
+        assert result.get("gender") == "feminine"
+
+    def test_la_noun_neuter(self):
+        from backend.dictionary.logeion import _extract_morphology
+        plain = "nomen, inis, n., name"
+        result = _extract_morphology(plain, "la")
+        assert result.get("part_of_speech") == "noun"
+        assert result.get("gender") == "neuter"
+
+    def test_la_adjective(self):
+        from backend.dictionary.logeion import _extract_morphology
+        plain = "bonus, a, um, adj., good"
+        result = _extract_morphology(plain, "la")
+        assert result.get("part_of_speech") == "adjective"
+
+    def test_unknown_returns_empty(self):
+        from backend.dictionary.logeion import _extract_morphology
+        result = _extract_morphology("", "la")
+        assert result == {}
+
+    def test_unsupported_lang_returns_empty(self):
+        from backend.dictionary.logeion import _extract_morphology
+        result = _extract_morphology("chat, m., cat", "fr")
+        assert result == {}
+
+
 # ── bcp47 coverage ────────────────────────────────────────────────────────────
 
 def test_all_mnemosyne_languages_mapped():

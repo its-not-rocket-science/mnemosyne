@@ -173,17 +173,34 @@ def _extract_gloss(data: dict, language_code: str, lemma: str) -> str | None:
 # ── Structured extraction ─────────────────────────────────────────────────────
 
 _CITATION_ABBREVS: dict[str, str] = {
-    # Latin
-    "Cic.": "Cicero", "Verg.": "Virgil", "Ov.": "Ovid",
-    "Hor.": "Horace", "Liv.": "Livy", "Tac.": "Tacitus",
-    "Caes.": "Caesar", "Sal.": "Sallust", "Plin.": "Pliny",
-    "Quint.": "Quintilian", "Sen.": "Seneca", "Juv.": "Juvenal",
-    "Mart.": "Martial", "Cat.": "Catullus", "Lucr.": "Lucretius",
+    # Latin — prose
+    "Cic.": "Cicero", "Caes.": "Caesar", "Liv.": "Livy",
+    "Tac.": "Tacitus", "Sal.": "Sallust", "Quint.": "Quintilian",
+    "Plin.": "Pliny", "Plin. N.": "Pliny the Elder",
+    "Sen.": "Seneca", "Gell.": "Aulus Gellius",
+    "Varr.": "Varro", "Nep.": "Cornelius Nepos",
+    "App.": "Appian", "Suet.": "Suetonius",
+    "Curt.": "Curtius", "Just.": "Justinus",
+    "Fest.": "Festus", "Non.": "Nonius",
+    "Apul.": "Apuleius", "Aug.": "Augustine",
+    "Hier.": "Jerome", "Ambr.": "Ambrose",
+    "Ter.": "Terence", "Plaut.": "Plautus",
+    # Latin — poetry
+    "Verg.": "Virgil", "Ov.": "Ovid", "Hor.": "Horace",
+    "Juv.": "Juvenal", "Mart.": "Martial", "Cat.": "Catullus",
+    "Lucr.": "Lucretius", "Stat.": "Statius",
+    "Prop.": "Propertius", "Tib.": "Tibullus",
+    "Luc.": "Lucan", "Sil.": "Silius Italicus",
+    "Val.": "Valerius Flaccus",
     # Greek
     "Thuc.": "Thucydides", "Plat.": "Plato", "Arist.": "Aristotle",
     "Hdt.": "Herodotus", "Xen.": "Xenophon", "Hom.": "Homer",
     "Soph.": "Sophocles", "Eur.": "Euripides", "Aesch.": "Aeschylus",
     "Dem.": "Demosthenes", "Pind.": "Pindar",
+    "Polyb.": "Polybius", "Diod.": "Diodorus Siculus",
+    "Plut.": "Plutarch", "Luc.": "Lucian",
+    "Arr.": "Arrian", "App.": "Appian",
+    "D.C.": "Cassius Dio", "Strab.": "Strabo",
 }
 
 _CITATION_RE = re.compile(
@@ -236,6 +253,55 @@ def _extract_compounds(html: str) -> list[str]:
         return []
     compounds = [c.strip() for c in re.split(r"[,;]", match.group(1))]
     return [c for c in compounds if 2 < len(c) < 30][:8]
+
+
+# Latin POS/gender detection patterns (applied to first 200 chars of plain text)
+_LA_VERB_RE = re.compile(r"\bv\.\s*(?:a|n|dep|freq|intens|inch|impers|semidep)\.")
+_LA_ADJ_RE  = re.compile(r"\badj\.")
+_LA_ADV_RE  = re.compile(r"\badv\.")
+_LA_NOUN_GENDER_RE = re.compile(r",\s*([mfn])\.")
+
+# Greek definite articles that mark noun gender in LSJ entries
+_GRC_MASC = ("ὁ", "ὁ")   # ὁ  (with smooth breathing)
+_GRC_FEM  = ("ἡ",)             # ἡ  (with rough breathing)
+_GRC_NEUT = ("τό", "τό")  # τό
+
+_GENDER_NAMES = {"m": "masculine", "f": "feminine", "n": "neuter"}
+
+
+def _extract_morphology(plain: str, lang: str) -> dict:
+    """Extract part_of_speech and gender from an L&S/LSJ entry header.
+
+    Returns a (possibly empty) dict with keys ``part_of_speech`` and/or
+    ``gender``.  Best-effort: returns empty dict when pattern is unclear.
+    """
+    header = plain[:200]
+    result: dict = {}
+
+    if lang == "la":
+        if _LA_VERB_RE.search(header):
+            result["part_of_speech"] = "verb"
+        elif _LA_ADJ_RE.search(header):
+            result["part_of_speech"] = "adjective"
+        elif _LA_ADV_RE.search(header):
+            result["part_of_speech"] = "adverb"
+        else:
+            m = _LA_NOUN_GENDER_RE.search(header)
+            if m:
+                result["part_of_speech"] = "noun"
+                result["gender"] = _GENDER_NAMES[m.group(1)]
+    elif lang == "grc":
+        if any(a in header for a in _GRC_MASC):
+            result["part_of_speech"] = "noun"
+            result["gender"] = "masculine"
+        elif any(a in header for a in _GRC_FEM):
+            result["part_of_speech"] = "noun"
+            result["gender"] = "feminine"
+        elif any(a in header for a in _GRC_NEUT):
+            result["part_of_speech"] = "noun"
+            result["gender"] = "neuter"
+
+    return result
 
 
 # ── SQLite cache ──────────────────────────────────────────────────────────────
@@ -345,12 +411,14 @@ async def fetch_structured(
     if not plain:
         return None
 
+    morphology = _extract_morphology(plain, language_code)
     result: dict = {
         "gloss": plain[:_MAX_GLOSS_CHARS],
         "ls_definition": _extract_primary_definition(plain),
         "classical_citations": _extract_citations(raw_html),
         "compound_words": _extract_compounds(raw_html),
         "lexicon_source": lexicon_source,
+        **morphology,
     }
 
     _cache_set(lemma, language_code, result)
