@@ -168,6 +168,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Eur.+Ba.",
       "source_work": "Βάκχαι",
       "source_work_key": "mnemosyne.grc.work.βάκχαι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Διονύσου θίασος",
         "θίασος Διονύσου",
@@ -184,6 +185,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.grc.explanation.plato_republic_mimesis_εἰκών_ἐν_τω_ι_νόμωι",
       "id": "grc_classical_or_scriptural_allusion_εἰκών_ἐν_τω_ι_νόμωι_93d04841",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -198,6 +200,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus%3Atext%3A1999.01.0168%3Abook%3D10",
       "source_work": "Πολιτεία",
       "source_work_key": "mnemosyne.grc.work.πολιτεία",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "εἰκών ἐν τῷ νόμῳ",
         "ἡ εἰκών ἐν τῷ νόμῳ",
@@ -224,6 +227,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0168%3Abook%3D7%3Asection%3D514a",
       "source_work": "Πολιτεία",
       "source_work_key": "mnemosyne.grc.work.πολιτεία",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Εἰκών ἐν τῷ οὐρανῷ",
         "ἡ εἰκών ἐν τῷ οὐρανῷ",
@@ -249,6 +253,7 @@
         "zh": "一个俄耳甫斯或融合主义的声明，将多个神视为一体，被马克罗比乌斯在其《农神节》（1.18.17）中引用，反映了神圣力量的统一。"
       },
       "id": "grc_classical_or_scriptural_allusion_εἷσ_ζεύσ_εἷσ_ἅιδησ_εἷσ_ἥλιοσ_εἷσ_διόνυσοσ_53c5e19f",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Verifiable quotation from Macrobius, Saturnalia 1.18.17, reflecting syncretic theology.",
@@ -263,6 +268,7 @@
       "source_url": "http://penelope.uchicago.edu/Thayer/L/Roman/Texts/Macrobius/Saturnalia/1*.html#18.17",
       "source_work": "Saturnalia",
       "source_work_key": "mnemosyne.grc.work.saturnalia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "εἷς Ζεύς, εἷς Ἅιδης, εἷς Ἥλιος, εἷς Διόνυσος",
         "εἷς Ζεύς, εἷς Ἅιδης, εἷς Ἥλιος"
@@ -343,6 +349,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0044:book=Acts:chapter=18&highlight=θεοῦ%20θέλοντος",
       "source_work": "Πράξεις Ἀποστόλων (Acts of the Apostles)",
       "source_work_key": "mnemosyne.grc.work.πράξεισ_ἀποστόλων_acts_of_the_apostles",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Θεοῦ θέλοντος",
         "τοῦ Θεοῦ θέλοντος",
@@ -407,6 +414,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Κασσάνδρα μαντεύουσα",
         "ἡ Κασσάνδρα μαντεύουσα",
@@ -928,6 +936,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133:book=12:card=28",
       "source_work": "Iliad",
       "source_work_key": "mnemosyne.grc.work.iliad",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ποσειδῶνος τρίαινα",
         "τρίαινα Ποσειδῶνος",
@@ -1274,6 +1283,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0190:1cor.1",
       "source_work": "Πρὸς Κορινθίους Α´",
       "source_work_key": "mnemosyne.grc.work.πρὸσ_κορινθίουσ_α",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν παρὰ Θεῷ",
         "τὴν σοφίαν παρὰ Θεῷ",
@@ -1299,6 +1309,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0189",
       "source_work": "Septuagint",
       "source_work_key": "mnemosyne.grc.work.septuagint",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν παρὰ Κυρίου",
         "σοφίαν παρὰ τοῦ Κυρίου",
@@ -1331,6 +1342,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0189",
       "source_work": "Septuagint",
       "source_work_key": "mnemosyne.grc.work.septuagint",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν παρὰ Σολομῶντος",
         "σοφίαν παρὰ τοῦ Σολομῶντος",
@@ -1361,6 +1373,7 @@
       "source_url": "https://www.greekbible.com/",
       "source_work": "Ἡ Ἁγία Γραφή",
       "source_work_key": "mnemosyne.grc.work.ἡ_ἁγία_γραφή",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν τὴν ἐν τῇ γραφῇ",
         "σοφίαν ἐν τῇ γραφῇ",
@@ -1387,6 +1400,7 @@
       "source_url": "https://www.greekbible.com/index.php?search=1+Corinthians+2:5&tab=search&font=greek",
       "source_work": "Πρὸς Κορινθίους Α´",
       "source_work_key": "mnemosyne.grc.work.πρὸσ_κορινθίουσ_α",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν τὴν ἐν τῇ πίστει",
         "σοφίαν ἐν τῇ πίστει",
@@ -1413,6 +1427,7 @@
       "source_url": "https://www.greekbible.com/index.php?search=1+Corinthians+13:13&tab=search&font=greek",
       "source_work": "Πρὸς Κορινθίους Α´",
       "source_work_key": "mnemosyne.grc.work.πρὸσ_κορινθίουσ_α",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν τὴν ἐν τῇ ἀγάπῃ",
         "σοφίαν ἐν τῇ ἀγάπῃ",
@@ -1439,6 +1454,7 @@
       "source_url": "https://www.greekbible.com/index.php?search=Ephesians+1:17-18&tab=search&font=greek",
       "source_work": "Πρὸς Ἐφεσίους",
       "source_work_key": "mnemosyne.grc.work.πρὸσ_ἐφεσίουσ",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν τὴν ἐν τῇ ἐκκλησίᾳ",
         "σοφίαν ἐν τῇ ἐκκλησίᾳ",
@@ -1499,6 +1515,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0189",
       "source_work": "Septuagint",
       "source_work_key": "mnemosyne.grc.work.septuagint",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν τὴν ἐν τῷ Ναῷ",
         "τὴν σοφίαν τὴν ἐν τῷ Ναῷ",
@@ -1580,6 +1597,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133:book=15:card=36",
       "source_work": "Iliad",
       "source_work_key": "mnemosyne.grc.work.iliad",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Στυγὸς ὕδωρ",
         "ὕδωρ Στυγός",
@@ -2262,6 +2280,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "τὸ πῦρ τὸ αἰώνιον",
         "πῦρ αἰώνιον",
@@ -2667,6 +2686,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ὁ Μακεδών"
       ]
@@ -2972,6 +2992,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hdt.+1.46",
       "source_work": "Ἱστορίαι",
       "source_work_key": "mnemosyne.grc.work.ἱστορίαι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀπόλλωνος μαντεῖον",
         "τὸ μαντεῖον τοῦ Ἀπόλλωνος",
@@ -3080,6 +3101,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0164:book=61b",
       "source_work": "Φαίδων",
       "source_work_key": "mnemosyne.grc.work.φαίδων",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ σκότους πρὸς φῶς"
       ]
@@ -3408,6 +3430,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "biblical",
       "surface_patterns": [
         "ἀχάριστος ὁ θεός",
         "ἀχάριστος ἐστιν ὁ θεός"
@@ -3705,6 +3728,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.greek_new_testament_phrases_ἐγώ_εἰμι_ὁ_ἄρτοσ_ἡ_ζωή",
       "id": "grc_classical_or_scriptural_allusion_ἐγώ_εἰμι_ὁ_ἄρτοσ_ἡ_ζωή_42dcb087",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3719,6 +3743,7 @@
       "source_url": "https://www.gutenberg.org/files/55525/55525-h/55525-h.htm#John",
       "source_work": "Εὐαγγέλιον κατὰ Ἰωάννην",
       "source_work_key": "mnemosyne.grc.work.ευ_αγγέλιον_κατὰ_ἰωάννην",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Ἐγώ εἰμι ὁ ἄρτος τῆς ζωῆς",
         "ἐγώ εἰμι ὁ ἄρτος ἡ ζωή"
@@ -3744,6 +3769,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0084:text=HA",
       "source_work": "Historia Animalium",
       "source_work_key": "mnemosyne.grc.work.historia_animalium",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ γῆς πρὸς οὐρανόν",
         "ἐκ γῆς πρὸς τὸν οὐρανόν",
@@ -3773,6 +3799,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Sibyl",
       "source_work": "Various (Classical and Hellenistic traditions)",
       "source_work_key": "mnemosyne.grc.work.various_classical_and_hellenistic_traditions",
+      "subcategory": "religious",
       "surface_patterns": [
         "Ἐκ Σίβυλλῆς μαντεύματα",
         "Σίβυλλῆς μαντεύματα",
@@ -3785,6 +3812,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.grc.explanation.sophocles_oedipus_phrases_ἐκ_τη_σ_οἰδίποδοσ_τύφλησ",
       "id": "grc_classical_or_scriptural_allusion_ἐκ_τη_σ_οἰδίποδοσ_τύφλησ_9f0bfd1e",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3799,6 +3827,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0185:text=OT",
       "source_work": "Οἰδίπους Τύραννος",
       "source_work_key": "mnemosyne.grc.work.οἰδίπουσ_τύραννοσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τῆς Οἰδίποδος τύφλης",
         "ἐκ τῆς τυφλότητος τοῦ Οἰδίποδος",
@@ -3851,6 +3880,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.aeschylus_prometheus_bound_ἐκ_του_προμηθέωσ_πυρόσ",
       "id": "grc_classical_or_scriptural_allusion_ἐκ_του_προμηθέωσ_πυρόσ_e9db13c1",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3865,6 +3895,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0006",
       "source_work": "Prometheus Bound",
       "source_work_key": "mnemosyne.grc.work.prometheus_bound",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τοῦ Προμηθέως πυρός",
         "τὸ ἐκ Προμηθέως πῦρ",
@@ -3890,6 +3921,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ἐκ τῶν Ἐριννύων αἷμα",
         "αἷμα τῶν Ἐριννύων",
@@ -3916,6 +3948,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Exodus+14&version=LXX",
       "source_work": "Ἔξοδος",
       "source_work_key": "mnemosyne.grc.work.ἔξοδοσ",
+      "subcategory": "biblical",
       "surface_patterns": [
         "ἐκ τῶν Ἐρυθρῶν αἱμάτων",
         "ἐκ τῶν αἱμάτων τῶν Ἐρυθρῶν",
@@ -5482,6 +5515,7 @@
       "source_url": "https://www.gutenberg.org/files/55525/55525-h/55525-h.htm#Revelation",
       "source_work": "Ἀποκάλυψις Ἰωάννου",
       "source_work_key": "mnemosyne.grc.work.ἀποκάλυψισ_ἰωάννου",
+      "subcategory": "biblical",
       "surface_patterns": [
         "ὁ πρῶτος καὶ ὁ ἔσχατος",
         "ὁ πρῶτος καὶ ὁ ἔσχατος ὁ ζῶν",
@@ -6030,6 +6064,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "γίγνεσθαι εἰς χεῖρας τῶν Περσῶν",
         "εἰς χεῖρας Περσῶν γίγνεσθαι",
@@ -6351,6 +6386,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "δαιμόνιον τι",
         "τὸ δαιμόνιον",
@@ -6377,6 +6413,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0174:text=Plato:Apology:19d",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "δαιμόνιον ἔχειν",
         "τὸ δαιμόνιον ἔχειν",
@@ -6499,6 +6536,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0137",
       "source_work": "Homeric Hymn to Demeter",
       "source_work_key": "mnemosyne.grc.work.homeric_hymn_to_demeter",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Δημήτηρ καὶ Περσεφόνη",
         "Δημήτηρ τε καὶ Περσεφόνεια",
@@ -6600,6 +6638,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Διόνυσος",
         "Σατύρος",
@@ -6740,6 +6779,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0126:book=6:chapter=108",
       "source_work": "Histories",
       "source_work_key": "mnemosyne.grc.work.histories",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "δώδεκα θεοί",
         "οἱ δώδεκα θεοί",
@@ -6857,6 +6897,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Dionysia",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "θέατρον τῶν Διονυσίων",
         "τὸ θέατρον τῶν Διονυσίων",
@@ -7006,6 +7047,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Θησεύς ἀναγνωρισθείς",
         "ὁ Θησεύς ἀναγνωρισθείς",
@@ -7107,6 +7149,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "κίονες ἐν τῷ ναῷ",
         "κίονες ἐν τῷ ναῷ εἰσίν",
@@ -7317,6 +7360,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Ten_Books_on_Architecture",
       "source_work": "Περὶ τῆς ἀρχιτεκτονικῆς",
       "source_work_key": "mnemosyne.grc.work.περὶ_τη_σ_ἀρχιτεκτονικη_σ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Κανών ἐν τῇ τέχνη",
         "ὁ κανών ἐν τῇ τέχνη",
@@ -7354,6 +7398,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "καταστάσις",
         "τῆς πόλεως",
@@ -7431,6 +7476,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.grc.explanation.greek_cultural_phrases_κιθάρα_ἐν_τω_ι_χειμω_νι",
       "id": "grc_cultural_reference_κιθάρα_ἐν_τω_ι_χειμω_νι_5cc1c271",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7443,6 +7489,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἡ κιθάρα ἐν τῷ χειμῶνι",
         "τὴν κιθάραν ἐν τῷ χειμῶνι",
@@ -7459,6 +7506,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.grc.explanation.greek_theater_citharoedus_κιθαρωιδόσ_ἐν_τω_ι_θεάτρ",
       "id": "grc_cultural_reference_κιθαρωιδόσ_ἐν_τω_ι_θεάτρωι_121882e2",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7472,6 +7520,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0084",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "κιθαρῳδός ἐν τῷ θεάτρῳ",
         "ὁ κιθαρῳδός ἐν τῷ θεάτρῳ",
@@ -7721,6 +7770,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "κωμῳδία ἐν τῷ θέατρον",
         "κωμῳδία ἐν θέατρον",
@@ -7771,6 +7821,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.homer_iliad_myths_λήδα_καὶ_του_κύκνου",
       "id": "grc_cultural_reference_λήδα_καὶ_του_κύκνου_ce9548ad",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7784,6 +7835,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0133",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Λήδα καὶ τοῦ κύκνου",
         "Λήδας καὶ τοῦ κύκνου",
@@ -7860,6 +7912,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Λακεδαιμονίων",
         "ἀνδρεία",
@@ -8155,6 +8208,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.ovid_metamorphoses_myths_μέδουσα_καὶ_τὸ_βλέμμα",
       "id": "grc_cultural_reference_μέδουσα_καὶ_τὸ_βλέμμα_55094233",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8169,6 +8223,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0028%3Abook%3D4%3Acard%3D770",
       "source_work": "Μεταμορφώσεις",
       "source_work_key": "mnemosyne.grc.work.μεταμορφώσεισ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Μέδουσα καὶ τὸ βλέμμα",
         "ἡ Μέδουσα καὶ τὸ βλέμμα",
@@ -8451,6 +8506,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "μῖσος",
         "μῖσος ἔχειν"
@@ -8525,6 +8581,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "μολὼν λαβέ",
         "λαβέ μολὼν"
@@ -8549,6 +8606,7 @@
       "source_license": "not_required",
       "source_work": "Various (Classical literature)",
       "source_work_key": "mnemosyne.grc.work.various_classical_literature",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Μοῦσα ἐν τῷ καμίνῳ",
         "ἡ Μοῦσα ἐν τῷ καμίνῳ",
@@ -8574,6 +8632,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Music_of_the_Spheres",
       "source_work": "Περὶ τῆς ἐν οὐρανῷ μουσικῆς",
       "source_work_key": "mnemosyne.grc.work.περὶ_τη_σ_ἐν_ου_ρανω_ι_μουσικη_σ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Μουσικὴ τῶν ἀστέρων",
         "ἡ μουσικὴ τῶν ἀστέρων",
@@ -8669,6 +8728,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Μυστήρια Διονύσου",
         "Διονυσιακὰ μυστήρια",
@@ -8736,6 +8796,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Νάξος καὶ Διόνυσος",
         "Διόνυσος καὶ Νάξος"
@@ -8966,6 +9027,7 @@
       "source_license": "public_domain",
       "source_work": "Various (e.g., Herodotus, Histories)",
       "source_work_key": "mnemosyne.grc.work.various_e_g_herodotus_histories",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Οἱ βάρβαροι",
         "οι βάρβαροι",
@@ -9034,6 +9096,7 @@
         "zh": "基督教礼仪中的一句话，“全能者，不朽”，用于像三圣颂这样的赞美诗中，呼求上帝为全能且永恒。"
       },
       "id": "grc_cultural_reference_παντοκράτωρ_ἀθάνατοσ_a87e56b4",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Christian liturgical phrase used in hymns like the Trisagion.",
@@ -9046,6 +9109,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Παντοκράτωρ, ἀθάνατος",
         "Παντοκράτωρ ἀθάνατος",
@@ -9071,6 +9135,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἡ παρακαταθήκη τοῦ Διονύσου",
         "παρακαταθήκη Διονύσου",
@@ -9097,6 +9162,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0160:text=Paus.",
       "source_work": "Ἑλλάδος Περιήγησις",
       "source_work_key": "mnemosyne.grc.work.ἑλλάδοσ_περιήγησισ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Παυσανίας ὁ Σπαρτιάτης",
         "Παυσανίας ὁ Λακεδαιμόνιος",
@@ -9135,6 +9201,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "πείθω",
         "πείθεις",
@@ -9520,6 +9587,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0005%3Acard%3D1",
       "source_work": "Προμηθεύς Δεσμώτης",
       "source_work_key": "mnemosyne.grc.work.προμηθεύσ_δεσμώτησ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Προμηθεύς ἐν τῇ πέτρᾳ",
         "ὁ Προμηθεύς ἐν τῇ πέτρᾳ",
@@ -9545,6 +9613,7 @@
         "zh": "普罗米修斯和火象征着知识和启蒙的馈赠，以及在希腊神话中违抗众神的后果。"
       },
       "id": "grc_cultural_reference_προμηθεὺσ_καὶ_πυρ_5baeb3e3",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference accurately captures the symbolism of Prometheus and fire in Greek mythology.",
@@ -9559,6 +9628,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Aesch.+Prom.",
       "source_work": "Προμηθεὺς Δεσμώτης",
       "source_work_key": "mnemosyne.grc.work.προμηθεὺσ_δεσμώτησ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Προμηθεὺς",
         "πυρ",
@@ -9622,6 +9692,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.04.0062",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἡ Πυθία ἐν τῷ ναῷ",
         "ἡ Πυθία",
@@ -9996,6 +10067,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Σοφίαν τὴν ἐν τῇ Μονῇ",
         "τὴν ἐν τῇ Μονῇ σοφίαν",
@@ -10023,6 +10095,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0168",
       "source_work": "Πολιτεία",
       "source_work_key": "mnemosyne.grc.work.πολιτεία",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Σοφίαν τὴν ἐν τῇ Μουσικῇ",
         "τὴν ἐν τῇ Μουσικῇ σοφίαν",
@@ -10048,6 +10121,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Σοφίαν τὴν ἐν τῇ Τέχνῃ",
         "τὴν ἐν τῇ Τέχνῃ σοφίαν",
@@ -10123,6 +10197,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0050",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Σταγειρίτης καὶ φιλοσοφία",
         "φιλοσοφία καὶ Σταγειρίτης"
@@ -10134,6 +10209,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.grc.explanation.greek_cultural_phrases_συμφωνία_ἐν_τω_ι_ἀστρω_ι",
       "id": "grc_cultural_reference_συμφωνία_ἐν_τω_ι_ἀστρω_ι_f4b3dbe8",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10146,6 +10222,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἡ συμφωνία ἐν τῷ ἀστρῷ",
         "τὴν συμφωνίαν ἐν τῷ ἀστρῷ",
@@ -10187,6 +10264,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Σωκράτης",
         "Σωκράτη",
@@ -10357,6 +10435,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Τέχνη τῆς σκιᾶς",
         "ἡ τέχνη τῆς σκιᾶς",
@@ -10424,6 +10503,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.homer_iliad_phrases_τράπεζα_τω_ν_ἀθανάτων",
       "id": "grc_cultural_reference_τράπεζα_τω_ν_ἀθανάτων_b081c840",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10438,6 +10518,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0133%3Abook%3D1%3Achapter%3D7",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "τράπεζα τῶν ἀθανάτων",
         "τράπεζαν τῶν ἀθανάτων",
@@ -10544,6 +10625,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "οἱ τύραννοι τῶν Συρακουσῶν",
         "τῶν Συρακουσῶν τύραννοι",
@@ -10816,6 +10898,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "φιλία",
         "ἡ φιλία"
@@ -10853,6 +10936,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0050",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Φιλοσοφία καὶ ψυχή",
         "ψυχή καὶ φιλοσοφία"
@@ -10889,6 +10973,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Φοῖβος",
         "Ἀπόλλων",
@@ -11022,6 +11107,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0204",
       "source_work": "Various (e.g., Xenophon's 'Agesilaus')",
       "source_work_key": "mnemosyne.grc.work.various_e_g_xenophon_s_agesilaus",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀγησίλαος ὁ Λακεδαιμόνιος",
         "ὁ Ἀγησίλαος",
@@ -11034,6 +11120,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.grc.explanation.agora_agonistic_terms_ἀγώνιον_ἔποσ",
       "id": "grc_cultural_reference_ἀγώνιον_ἔποσ_f85a7763",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11047,6 +11134,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἀγώνιον ἔπος",
         "τὸ ἀγώνιον ἔπος",
@@ -11072,6 +11160,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἀγὼν τῶν δώδεκα",
         "τὸν ἀγῶνα τῶν δώδεκα",
@@ -11098,6 +11187,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0075",
       "source_work": "Athenaion Politeia",
       "source_work_key": "mnemosyne.grc.work.athenaion_politeia",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἀγὼν τῶν τριττύγων",
         "τὸν ἀγῶνα τῶν τριττύγων",
@@ -11123,6 +11213,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἀγὼν τῶν χορῶν",
         "τὸν ἀγῶνα τῶν χορῶν",
@@ -11160,6 +11251,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀθηνᾶ",
         "ἡ σοφία",
@@ -11185,6 +11277,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀθηναίων ἡ θέατρον",
         "τὸ Ἀθηναίων θέατρον",
@@ -11222,6 +11315,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀθηναῖοι καὶ Σπάρτη",
         "Ἀθηναῖοι",
@@ -11287,6 +11381,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0056:section=1453b",
       "source_work": "Poetics",
       "source_work_key": "mnemosyne.grc.work.poetics",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἀκρόασις τραγῳδίας",
         "ἡ τῆς τραγῳδίας ἀκρόασις",
@@ -11325,6 +11420,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀλέξανδρος βασιλεύς",
         "ὁ Ἀλέξανδρος βασιλεύς",
@@ -11480,6 +11576,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀνάγκη",
         "Ἀνάγκη θεά"
@@ -11824,6 +11921,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀρρητα ἱερά",
         "τὰ ἄρρητα ἱερά",
@@ -11888,6 +11986,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0137%3Abook%3D2%3Achapter%3D10",
       "source_work": "Ἱστορίαι",
       "source_work_key": "mnemosyne.grc.work.ἱστορίαι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀρχίδαμος ὁ Λακεδαιμόνιος",
         "Ἀρχίδαμος Λακεδαιμόνιος",
@@ -12094,6 +12193,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἁρμονία διὰ ῥαβδῶν",
         "ἁρμονίαν διὰ ῥαβδῶν",
@@ -12275,6 +12375,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἄρτεμις ἐπὶ τῷ ἐλάφῳ",
         "Ἄρτεμις ἐπὶ τῷ ἐλάφῳ ἱστάμενη"
@@ -12382,6 +12483,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.grc.explanation.homer_odyssey_myth_references_ἐκ_τη_σ_περσεφόνησ_κ",
       "id": "grc_cultural_reference_ἐκ_τη_σ_περσεφόνησ_κόμησ_3d02c899",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12396,6 +12498,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0136%3Abook%3D11%3Acard%3D200",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τῆς Περσεφόνης κόμης",
         "ἐκ Περσεφόνης κόμης",
@@ -12408,6 +12511,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.grc.explanation.amazon_warrior_phrases_ἐκ_τη_σ_ἀμαζόνων_δυνάμεωσ",
       "id": "grc_cultural_reference_ἐκ_τη_σ_ἀμαζόνων_δυνάμεωσ_0ff68aa5",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12421,6 +12525,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0126",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τῆς Ἀμαζόνων δυνάμεως",
         "ἐκ τῶν Ἀμαζόνων δυνάμεως",
@@ -12434,6 +12539,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.euripides_iphigenia_myth_references_ἐκ_τη_σ_ἰφιγεν",
       "id": "grc_cultural_reference_ἐκ_τη_σ_ἰφιγενείασ_θυσίασ_519226b0",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12448,6 +12554,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0102%3Acard%3D1360",
       "source_work": "Ἰφιγένεια ἐν Αὐλίδι",
       "source_work_key": "mnemosyne.grc.work.ἰφιγένεια_ἐν_αυ_λίδι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τῆς Ἰφιγενείας θυσίας",
         "ἐκ Ἰφιγενείας θυσίας",
@@ -12473,6 +12580,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0060",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τοῦ Λυκείου διδάγματος",
         "ἐκ Λυκείου διδάγματος",
@@ -12486,6 +12594,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.grc.explanation.homer_odyssey_myth_references_ἐκ_του_ταντάλου_πόνο",
       "id": "grc_cultural_reference_ἐκ_του_ταντάλου_πόνου_dbeb7fbd",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12500,6 +12609,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0136%3Abook%3D11%3Acard%3D570",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τοῦ Ταντάλου πόνου",
         "ἐκ Ταντάλου πόνου",
@@ -12512,6 +12622,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.grc.explanation.homer_iliad_myth_references_ἐκ_τω_ν_κενταύρων_μάχη",
       "id": "grc_cultural_reference_ἐκ_τω_ν_κενταύρων_μάχησ_bb42374e",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12526,6 +12637,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0134%3Abook%3D1%3Acard%3D250",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τῶν Κενταύρων μάχης",
         "ἐκ Κενταύρων μάχης",
@@ -12552,6 +12664,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0134%3Abook%3D7%3Acard%3D170",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τῶν Μυκηνῶν πυλῶν",
         "ἐκ Μυκηνῶν πυλῶν",
@@ -12837,6 +12950,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐπίκουρος λόγος",
         "ἐπίκουρον λόγον",
@@ -12863,6 +12977,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0202%3Abook%3D5%3Achapter%3D4",
       "source_work": "Ἑλληνικά",
       "source_work_key": "mnemosyne.grc.work.ἑλληνικά",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἐπαμεινώνδας ἐν Λεύκτροις",
         "Ἐπαμεινώνδας ὁ ἐν Λεύκτροις",
@@ -13109,6 +13224,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἔρως",
         "ἔρωτος",
@@ -13429,6 +13545,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἰδιῶται",
         "δημόται",
@@ -13466,6 +13583,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἰδιώτης",
         "ἰδιώτης ἄνθρωπος"
@@ -13502,6 +13620,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἰπποκράτης",
         "ἰατρική",
@@ -13620,6 +13739,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/places?type=place&loc=Delos",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "τὸ ἱερὸν τῆς Δήλου",
         "ἱερὸν Δήλου",
@@ -13659,6 +13779,7 @@
       "source_license": "not_required",
       "source_work": "Various mythological and ritual texts",
       "source_work_key": "mnemosyne.grc.work.various_mythological_and_ritual_texts",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἱερὸς γάμος",
         "ὁ ἱερὸς γάμος",
@@ -13697,6 +13818,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἱερὸς πόλεμος",
         "πόλεμος ἱερὸς"
@@ -13761,6 +13883,7 @@
       "source_license": "not_required",
       "source_work": "Orphic fragments",
       "source_work_key": "mnemosyne.grc.work.orphic_fragments",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ὀρφέων τελεταί",
         "αἱ Ὀρφέων τελεταί",
@@ -13840,6 +13963,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ὁ μέγας αὐλός",
         "ὁ αὐλός",
@@ -14099,6 +14223,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ὁρατός",
         "ὁρατή",
@@ -14136,6 +14261,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ὑποκριτής",
         "ὑποκριταί",
@@ -14452,6 +14578,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.grc.explanation.euripides_andromeda_phrases_βαλλομένη_εἰσ_τὴν_θάλα",
       "id": "grc_literary_reference_βαλλομένη_εἰσ_τὴν_θάλασσαν_9d123103",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14465,6 +14592,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0092:text=Andr.",
       "source_work": "Ἀνδρομέδα",
       "source_work_key": "mnemosyne.grc.work.ἀνδρομέδα",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "βαλλομένη εἰς τὴν θάλασσαν",
         "βαλλομένη εἰς θάλασσαν",
@@ -14671,6 +14799,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.grc.explanation.sophocles_fragments_γένοιτο_μὴ_γεγονέναι",
       "id": "grc_literary_reference_γένοιτο_μὴ_γεγονέναι_b56e8903",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14685,6 +14814,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0188:text=Sophocles:Fragments:583",
       "source_work": "Τηλέφεια",
       "source_work_key": "mnemosyne.grc.work.τηλέφεια",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "γένοιτο μὴ γεγονέναι",
         "μὴ γεγονέναι γένοιτο"
@@ -14888,6 +15018,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.grc.explanation.greek_philosophical_poetic_phrases_γη_ρασ_ἐστὶν_ἄν",
       "id": "grc_literary_reference_γη_ρασ_ἐστὶν_ἄνθοσ_τη_σ_ζωη_σ_99abaa2f",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14901,6 +15032,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "γῆρας ἐστὶν ἄνθος τῆς ζωῆς",
         "γῆρας ἄνθος τῆς ζωῆς ἐστίν",
@@ -14993,6 +15125,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "γνώμῃ μὲν ἔργον ἐστὶν ἐναντία",
         "γνώμῃ μὲν ἔργον ἐναντία ἐστίν",
@@ -15019,6 +15152,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0194:text=Sophocles:Fragments",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "γνώμῃ μὲν ἔργον ἐστὶν ἐναντίον",
         "γνώμῃ μὲν ἔργον ἐναντίον ἐστίν",
@@ -15676,6 +15810,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:text%3Dmetamorphoses",
       "source_work": "Μεταμορφώσεις",
       "source_work_key": "mnemosyne.grc.work.μεταμορφώσεισ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Δευκαλίων καὶ Πύρρᾳ",
         "Δευκαλίωνος καὶ Πύρρας",
@@ -15812,6 +15947,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0202:text=Hell.",
       "source_work": "Various fragments",
       "source_work_key": "mnemosyne.grc.work.various_fragments",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Δημόκριτος περὶ ἀτόμων",
         "Δημόκριτος περὶ τῶν ἀτόμων",
@@ -16374,6 +16510,7 @@
       "source_url": "https://el.wikisource.org/wiki/Εὐμενίδες",
       "source_work": "Εὐμενίδες",
       "source_work_key": "mnemosyne.grc.work.ευ_μενίδεσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Εὐμενίδες",
         "αἱ Εὐμενίδες",
@@ -16557,6 +16694,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "εἰκῇ λέγειν",
         "εἰκῇ",
@@ -16610,6 +16748,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.grc.explanation.euripides_heracles_phrases_εἰσ_κέρβερον_ἐκπέμπειν",
       "id": "grc_literary_reference_εἰσ_κέρβερον_ἐκπέμπειν_393bfd49",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -16623,6 +16762,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0094:text=HF",
       "source_work": "Ἡρακλῆς μαινόμενος",
       "source_work_key": "mnemosyne.grc.work.ἡρακλη_σ_μαινόμενοσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "εἰς Κέρβερον ἐκπέμπειν",
         "ἐκπέμπειν εἰς Κέρβερον",
@@ -16635,6 +16775,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.grc.explanation.hesiod_theogony_phrases_εἰσ_τὸν_τάρταρον_βάλλειν",
       "id": "grc_literary_reference_εἰσ_τὸν_τάρταρον_βάλλειν_84e211b1",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -16649,6 +16790,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0103:text=Theog.",
       "source_work": "Θεογονία",
       "source_work_key": "mnemosyne.grc.work.θεογονία",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "εἰς τὸν Τάρταρον βάλλειν",
         "εἰς Τάρταρον βάλλειν",
@@ -16675,6 +16817,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0156:fragment=41",
       "source_work": "Περὶ φύσεως",
       "source_work_key": "mnemosyne.grc.work.περὶ_φύσεωσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "εἰς ἕν τι πάντα ῥεῖ",
         "εἰς ἕν πάντα ῥεῖ",
@@ -16700,6 +16843,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "εἴ τις ἐστὶν ἐν βροτοῖς δαίμων",
         "εἴ τις δαίμων ἐστὶν ἐν βροτοῖς",
@@ -16754,6 +16898,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.grc.explanation.marcus_aurelius_meditations_εἶναι_ἐν_τω_ι_ἐνιαυτω_",
       "id": "grc_literary_reference_εἶναι_ἐν_τω_ι_ἐνιαυτω_ι_τη_σ_σοφίασ_d09e8053",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -16767,6 +16912,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0027%3Abook%3D2%3Achapter%3D17",
       "source_work": "Πρὸς ἑαυτόν",
       "source_work_key": "mnemosyne.grc.work.πρὸσ_ἑαυτόν",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐν τῷ ἐνιαυτῷ τῆς σοφίας",
         "ἐν ἐνιαυτῷ σοφίας",
@@ -17352,6 +17498,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0112:card=17",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Θησεύς καὶ Ἀriadne",
         "Θησεύς καὶ Ἀριάδνη",
@@ -17447,6 +17594,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0200:text=Thuc.",
       "source_work": "Ἱστορίαι",
       "source_work_key": "mnemosyne.grc.work.ἱστορίαι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Θουκυδίδης ἐν τῷ Ἱστορίαι",
         "Θουκυδίδης ἐν τῇ Ἱστορίᾳ",
@@ -17557,6 +17705,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0001",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Κirke καὶ οἱ μετενσαρκωμένοι",
         "Κirke καὶ μετενσαρκωμένοι",
@@ -18031,6 +18180,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.grc.explanation.greek_mythology_phrases_καλλιστώ_καὶ_ἀρκτούρου",
       "id": "grc_literary_reference_καλλιστώ_καὶ_ἀρκτούρου_2a5452e6",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18045,6 +18195,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:text%3Dmetamorphoses",
       "source_work": "Μεταμορφώσεις",
       "source_work_key": "mnemosyne.grc.work.μεταμορφώσεισ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Καλλιστώ καὶ Ἀρκτούρου"
       ]
@@ -18126,6 +18277,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=1+Corinthians+14%3A19&version=SBLGNT",
       "source_work": "Προς Κορινθίους Α'",
       "source_work_key": "mnemosyne.grc.work.προσ_κορινθίουσ_α",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "καρδίαν ἐν γράμμασι",
         "τὴν καρδίαν ἐν γράμμασι",
@@ -19025,6 +19177,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.homer_odyssey_phrases_κύκλωψ_ὁ_ἄμουσοσ",
       "id": "grc_literary_reference_κύκλωψ_ὁ_ἄμουσοσ_76f89d72",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19039,6 +19192,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0136:text%3DOdyssey",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Κύκλωψ ὁ ἄμουσος",
         "ὁ ἄμουσος Κύκλωψ",
@@ -19334,6 +19488,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0138%3Acard%3D1",
       "source_work": "Ἡρακλέους ἆθλα",
       "source_work_key": "mnemosyne.grc.work.ἡρακλέουσ_ἆθλα",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Λαόδικος καὶ τὰ μῆλα τῶν Ἐσπεριδῶν",
         "τὰ τῶν Ἐσπεριδῶν μῆλα",
@@ -19373,6 +19528,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Apollod.+2.5.2",
       "source_work": "Βιβλιοθήκη (Library)",
       "source_work_key": "mnemosyne.grc.work.βιβλιοθήκη_library",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Λερναία Ὕδρα",
         "η Λερναία Ύδρα",
@@ -19514,6 +19670,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0202:text=Hell.",
       "source_work": "Ἑλληνικά",
       "source_work_key": "mnemosyne.grc.work.ἑλληνικά",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Λυσάνδρος ἐν Αἰγός Ποταμοῖς",
         "Λυσάνδρου ἐν Αἰγός Ποταμοῖς"
@@ -19756,6 +19913,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0137:book=11:chapter=633",
       "source_work": "Περὶ τῶν ἐν Ὀδυσσείᾳ ἁμαρτημάτων",
       "source_work_key": "mnemosyne.grc.work.περὶ_τω_ν_ἐν_ὀδυσσείαι_ἁμαρτημάτων",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Μέδουσαν ἰδών ἐν τῷ βουλεύματι",
         "τὴν Μέδουσαν ἰδών",
@@ -19782,6 +19940,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0165",
       "source_work": "Μένων",
       "source_work_key": "mnemosyne.grc.work.μένων",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Μένων περὶ ἀρετῆς",
         "Μένων περὶ τῆς ἀρετῆς",
@@ -19876,6 +20035,7 @@
       "source_license": "not_required",
       "source_work": "Μήδεια",
       "source_work_key": "mnemosyne.grc.work.μήδεια",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Μήδεια μῆνις",
         "ἡ Μήδεια μῆνις",
@@ -20170,6 +20330,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.homer_iliad_opening_μη_νιν_ἄειδε_θεὰ_πηληιάδεω_ἀχι",
       "id": "grc_literary_reference_μη_νιν_ἄειδε_θεὰ_πηληιάδεω_ἀχιλη_οσ_ed263aed",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -20184,6 +20345,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133:book=1:line=1",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Μῆνιν ἄειδε θεὰ Πηληιάδεω Ἀχιλῆος",
         "τὴν μῆνιν ἄειδε"
@@ -20380,6 +20542,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0178",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Μιλτιάδης ἐν Μαραθῶνι",
         "Μιλτιάδου ἐν Μαραθῶνι",
@@ -20490,6 +20653,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.grc.explanation.homer_iliad_phrases_μου_σαι_δώσουσιν_ἐπιστήμην",
       "id": "grc_literary_reference_μου_σαι_δώσουσιν_ἐπιστήμην_f0429772",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -20504,6 +20668,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133:text=Il.",
       "source_work": "Ἰλιὰς",
       "source_work_key": "mnemosyne.grc.work.ἰλιὰσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Μοῦσαι δώσουσιν ἐπιστήμην",
         "αἱ Μοῦσαι δώσουσιν ἐπιστήμην",
@@ -20569,6 +20734,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0262%3Asection%3D1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "μουσικῶν ἀρίθμων ἁρμονία",
         "ἁρμονία μουσικῶν ἀριθμῶν",
@@ -20594,6 +20760,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0194%3Atext%3DPlat.%2C+Rep.%2C+3",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "μουσικὴ ἐν τῇ ψυχῇ",
         "μουσικὴν ἐν τῇ ψυχῇ",
@@ -20620,6 +20787,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0168%3Abook%3D3%3Asection%3D401d",
       "source_work": "Πολιτεία",
       "source_work_key": "mnemosyne.grc.work.πολιτεία",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "μουσικὴν ἀκούειν",
         "μουσικὴν ἀκούειν τινός",
@@ -20757,6 +20925,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0170:text=Apology:section=24b",
       "source_work": "Apology",
       "source_work_key": "mnemosyne.grc.work.apology",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "μὰ Δία",
         "μὰ τὸν Δία"
@@ -20891,6 +21060,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=12:card=225",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Νέκυια καὶ Σκύλλα",
         "ἡ Νέκυια καὶ ἡ Σκύλλα",
@@ -21160,6 +21330,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0200",
       "source_work": "Ἀνάβασις",
       "source_work_key": "mnemosyne.grc.work.ἀνάβασισ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ξενοφῶν ἐν τῇ Ἀνάβasi",
         "Ξενοφῶν ἐν τῇ Ἀνάβasi τῶν Ἑλλήνων",
@@ -21510,6 +21681,7 @@
       "source_url": "https://el.wikisource.org/wiki/Πέρσαι",
       "source_work": "Πέρσαι",
       "source_work_key": "mnemosyne.grc.work.πέρσαι",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Πέρσαι",
         "οἱ Πέρσαι",
@@ -21564,6 +21736,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0192:text=Fragm.:text=Euripides:fr.898",
       "source_work": "Fragmenta",
       "source_work_key": "mnemosyne.grc.work.fragmenta",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "πᾶν γλυκὺ τὸ φίλον",
         "γλυκὺ πᾶν τὸ φίλον",
@@ -21618,6 +21791,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0139:card=57",
       "source_work": "Ἔργα καὶ Ἡμέραι",
       "source_work_key": "mnemosyne.grc.work.ἔργα_καὶ_ἡμέραι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Πανδώρα καὶ τὸ πιστόν",
         "ἡ Πανδώρα καὶ τὸ πιστόν",
@@ -21682,6 +21856,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "παρρησία",
         "παρρησίαν"
@@ -21819,6 +21994,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hdt.+5",
       "source_work": "Herodotus' Histories",
       "source_work_key": "mnemosyne.grc.work.herodotus_histories",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Περσῶν πόλεμος",
         "Περσῶν"
@@ -22005,6 +22181,7 @@
       "source_url": "https://www.greekbible.com/index.php?version=lxx&search=Luke%2016:10",
       "source_work": "Εὐαγγέλιον κατὰ Λουκᾶν",
       "source_work_key": "mnemosyne.grc.work.ευ_αγγέλιον_κατὰ_λουκα_ν",
+      "subcategory": "biblical",
       "surface_patterns": [
         "πιστὸς ἐν μικροῖς καὶ ἐν μεγάλοις πιστός",
         "πιστὸς ἐν μικροῖς καὶ μεγάλoις",
@@ -22072,6 +22249,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0164",
       "source_work": "Various (e.g., Πολιτεία, Φαίδων, Νόμοι)",
       "source_work_key": "mnemosyne.grc.work.various_e_g_πολιτεία_φαίδων_νόμοι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Πλάτων περὶ ἀλλοτρίων",
         "Πλάτων περὶ τῶν ἀλλοτρίων",
@@ -22155,6 +22333,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0168:text=Rep.",
       "source_work": "Πολιτεία",
       "source_work_key": "mnemosyne.grc.work.πολιτεία",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Πλάτωνος σπήλαιον",
         "τὸ σπήλαιον τοῦ Πλάτωνος",
@@ -22320,6 +22499,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.grc.explanation.longinus_poetics_ποιητικὴ_τη_σ_εἰκόνοσ",
       "id": "grc_literary_reference_ποιητικὴ_τη_σ_εἰκόνοσ_10fdf18d",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22333,6 +22513,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0153%3Abook%3D1%3Achapter%3D1",
       "source_work": "Περὶ ὕψους",
       "source_work_key": "mnemosyne.grc.work.περὶ_ὕψουσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ποιητικὴ τῆς εἰκόνος",
         "ποιητικὴν τῆς εἰκόνος",
@@ -22440,6 +22621,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0133%3Abook%3D2%3Acard%3D816",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "πολλῶν ὀνόματι κέκληται",
         "πολλῶν ὀνόματι κεκλημένος",
@@ -22576,6 +22758,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Aeschylus,+Prometheus+Bound",
       "source_work": "Prometheus Bound",
       "source_work_key": "mnemosyne.grc.work.prometheus_bound",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "προμηθεῖον",
         "προμηθεῖον ἔχειν"
@@ -22860,6 +23043,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0031:card=90",
       "source_work": "Frogs",
       "source_work_key": "mnemosyne.grc.work.frogs",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "πρὸς Ἀθηνᾶς",
         "πρὸς τῆς Ἀθηνᾶς"
@@ -23099,6 +23283,7 @@
         "zh": "这个短语指的是希腊神话中塞壬的迷人声音，以其美丽的歌曲诱惑水手走向毁灭而闻名。"
       },
       "id": "grc_literary_reference_σειρήνισ_ἡ_φωνή_f4b5acd2",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, correctly referencing the Sirens in Homer's Odyssey.",
@@ -23113,6 +23298,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Hymn+to+Demeter",
       "source_work": "Odyssey",
       "source_work_key": "mnemosyne.grc.work.odyssey",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Σειρήνις ἡ φωνή",
         "φωνὴ Σειρήνιδος"
@@ -23353,6 +23539,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0001",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Σκύλλα καὶ Χάρυβδις",
         "Σκύλλα καὶ ἡ Χάρυβδις",
@@ -23365,6 +23552,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.grc.explanation.hesiod_poetic_wisdom_σοφίαν_τὴν_ἐν_τη_ι_ποιήσει",
       "id": "grc_literary_reference_σοφίαν_τὴν_ἐν_τη_ι_ποιήσει_245d2ad8",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23378,6 +23566,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0130",
       "source_work": "Ἔργα καὶ Ἡμέραι",
       "source_work_key": "mnemosyne.grc.work.ἔργα_καὶ_ἡμέραι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Σοφίαν τὴν ἐν τῇ Ποιήσει",
         "τὴν ἐν τῇ Ποιήσει σοφίαν",
@@ -23404,6 +23593,7 @@
       "source_url": "https://www.greekbible.com/index.php?search=Wisdom+1&tab=search&font=greek",
       "source_work": "Σοφία Σολομῶντος",
       "source_work_key": "mnemosyne.grc.work.σοφία_σολομω_ντοσ",
+      "subcategory": "biblical",
       "surface_patterns": [
         "σοφίαν τὴν ἐν τῇ σοφίᾳ",
         "σοφίαν ἐν τῇ σοφίᾳ",
@@ -23416,6 +23606,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.plato_philebus_philosophy_σοφίαν_τὴν_ἐν_τη_ι_φιλοσ",
       "id": "grc_literary_reference_σοφίαν_τὴν_ἐν_τη_ι_φιλοσοφίαι_b56d8eb1",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23430,6 +23621,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0177",
       "source_work": "Φίληβος",
       "source_work_key": "mnemosyne.grc.work.φίληβοσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Σοφίαν τὴν ἐν τῇ Φιλοσοφίᾳ",
         "τὴν ἐν τῇ Φιλοσοφίᾳ σοφίαν",
@@ -23443,6 +23635,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.grc.explanation.sophocles_ajax_phrases_σοφοκλέουσ_αἴασ_καὶ_σπουδή",
       "id": "grc_literary_reference_σοφοκλέουσ_αἴασ_καὶ_σπουδή_1e245b51",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23456,6 +23649,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0186:text=Aias",
       "source_work": "Αἴας",
       "source_work_key": "mnemosyne.grc.work.αἴασ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ὁ Αἴας τοῦ Σοφοκλέους",
         "ο Αίας του Σοφοκλή"
@@ -23885,6 +24079,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0174%3Atext%3DPhaedo%3Asection%3D116a",
       "source_work": "Φαίδων",
       "source_work_key": "mnemosyne.grc.work.φαίδων",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Σωκράτης ἐν τῷ δεσμωτηρίῳ",
         "ὁ ἐν τῷ δεσμωτηρίῳ Σωκράτης",
@@ -23938,6 +24133,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0178",
       "source_work": "οἱ νόμοι",
       "source_work_key": "mnemosyne.grc.work.οἱ_νόμοι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Σόλων ἐν τοῖς νόμους",
         "Σόλωνος ἐν τοῖς νόμους",
@@ -24184,6 +24380,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0174",
       "source_work": "Συμπόσιον",
       "source_work_key": "mnemosyne.grc.work.συμπόσιον",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "τράπεζα ἐν τῷ συμπόσῳ",
         "τράπεζα συμπόσιον",
@@ -24209,6 +24406,7 @@
         "zh": "一个喜剧性的夸张表达，意为“三万”（三倍一万），在阿里斯托芬的作品中用于嘲讽大数字或人群。"
       },
       "id": "grc_literary_reference_τρισμύριαι_γάρ_7604b31c",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The expression 'τρισμύριαι γάρ' is attested in Ecclesiazusae line 1169 and the explanation is accurate.",
@@ -24223,6 +24421,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0023:card=1150",
       "source_work": "Ecclesiazusae",
       "source_work_key": "mnemosyne.grc.work.ecclesiazusae",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "τρισμύριαι γάρ",
         "τρισμύριοι γάρ"
@@ -24329,6 +24528,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0001",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Τρώες καὶ Ἵππος",
         "Τρώες καὶ ο Ἵππος",
@@ -25369,6 +25569,7 @@
         "zh": "阿多尼斯哀歌的另一个版本，“我们哀悼阿多尼斯”，出自彼翁的诗，表达了对垂死之神的集体悲痛。"
       },
       "id": "grc_literary_reference_τὸν_ἄδωνιν_κλαίομεν_b82225cc",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Consistent with Bion's Adonis lament and the broader tradition of mourning Adonis.",
@@ -25383,6 +25584,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0103",
       "source_work": "Lament for Adonis",
       "source_work_key": "mnemosyne.grc.work.lament_for_adonis",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "τὸν Ἄδωνιν κλαίομεν",
         "κλαίομεν τὸν Ἄδωνιν",
@@ -25515,6 +25717,7 @@
       "source_license": "public_domain",
       "source_work": "Ἱππόλυτος",
       "source_work_key": "mnemosyne.grc.work.ἱππόλυτοσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Φαίδρα νοσοῦσα",
         "ἡ Φαίδρα νοσοῦσα",
@@ -25585,6 +25788,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0133%3Acard%3D1",
       "source_work": "Φιλοκτήτης",
       "source_work_key": "mnemosyne.grc.work.φιλοκτήτησ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ὁ Φιλοκτήτης ἐν Λήμνῳ",
         "Φιλοκτήτης ὁ ἐν Λήμνῳ"
@@ -25652,6 +25856,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0168",
       "source_work": "Πολιτεία",
       "source_work_key": "mnemosyne.grc.work.πολιτεία",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "φιλοτεχνία ἐν τῷ ἔργῳ",
         "φιλοτεχνία ἐν ἔργῳ",
@@ -25664,6 +25869,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.grc.explanation.greek_lyric_phrases_φόρμιγξ_ἐν_τη_ι_νυκτί",
       "id": "grc_literary_reference_φόρμιγξ_ἐν_τη_ι_νυκτί_d4ce3eb0",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25677,6 +25883,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0133%3Aalphabetic+letter%3DF",
       "source_work": "Fragmenta Adespota",
       "source_work_key": "mnemosyne.grc.work.fragmenta_adespota",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "φόρμιγξ ἐν τῇ νυκτί",
         "φόρμιγγα ἐν τῇ νυκτί",
@@ -25728,6 +25935,7 @@
         "zh": "这个短语指的是卡里斯（优雅）与阿佛洛狄忒（爱之女神）之间的联系，象征着希腊神话中的美丽与魅力。"
       },
       "id": "grc_literary_reference_χάρισ_καὶ_ἀφροδίτη_554ad09a",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, correctly referencing the connection between Charis and Aphrodite in the Homeric Hymns.",
@@ -25742,6 +25950,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Hymn+to+Aphrodite",
       "source_work": "Homeric Hymns",
       "source_work_key": "mnemosyne.grc.work.homeric_hymns",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Χάρις καὶ Ἀφροδίτη",
         "Ἀφροδίτη καὶ Χάρις"
@@ -25820,6 +26029,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Il.+6.179",
       "source_work": "Ἰλιάς (Iliad)",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ_iliad",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Χίμαιρα",
         "η Χίμαιρα",
@@ -25859,6 +26069,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0005",
       "source_work": "Χοηφόροι",
       "source_work_key": "mnemosyne.grc.work.χοηφόροι",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Χοηφόροι",
         "Libation Bearers",
@@ -26206,6 +26417,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0134:book=18:card=219",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἀκούειν τῆς σάλπιγγος",
         "ἀκούειν σάλπιγγος"
@@ -26231,6 +26443,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0134:book=11:card=15",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἀκούειν τῆς σάλπιγγος τοῦ πολέμου",
         "ἀκούειν σάλπιγγος πολέμου"
@@ -26242,6 +26455,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.homer_iliad_phrases_ἀκούειν_τὴν_φωνὴν_τη_σ_σάλπιγγ",
       "id": "grc_literary_reference_ἀκούειν_τὴν_φωνὴν_τη_σ_σάλπιγγοσ_4add9740",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26256,6 +26470,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "ἀκούειν τὴν φωνὴν τῆς σάλπιγγος",
         "ἀκούειν σάλπιγγος φωνήν",
@@ -26548,6 +26763,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.grc.explanation.plato_timaeus_phrases_ἀνάγειν_εἰσ_τὸν_τάρταρον",
       "id": "grc_literary_reference_ἀνάγειν_εἰσ_τὸν_τάρταρον_07d957ec",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26562,6 +26778,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0180",
       "source_work": "Τίμαιος",
       "source_work_key": "mnemosyne.grc.work.τίμαιοσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "ἀνάγειν εἰς τὸν Τάρταρον",
         "εἰς Τάρταρον ἀνάγειν",
@@ -26723,6 +26940,7 @@
       "source_license": "public_domain",
       "source_work": "Τρῳάδες",
       "source_work_key": "mnemosyne.grc.work.τρωιάδεσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ἀνδρομάχη πενθοῦσα",
         "ἡ Ἀνδρομάχη πενθοῦσα",
@@ -26912,6 +27130,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0186",
       "source_work": "Ἀντιγόνη",
       "source_work_key": "mnemosyne.grc.work.ἀντιγόνη",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ἀντιγόνη",
         "Antigone"
@@ -27235,6 +27454,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἀπὸ τῶν Τρωϊκῶν",
         "ἀπὸ τῶν Τρωϊκῶν γεγονώς",
@@ -27315,6 +27535,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "ἀρετὴν ζητεῖν",
         "ζητεῖν ἀρετήν"
@@ -27416,6 +27637,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0058",
       "source_work": "Πολιτικά",
       "source_work_key": "mnemosyne.grc.work.πολιτικά",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀριστοτέλης περὶ πολιτικῆς",
         "Ἀριστοτέλους περὶ πολιτικῆς",
@@ -27704,6 +27926,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0159:text%3DAlciphron",
       "source_work": "Ἐπιστολαὶ ἐρωτικαί",
       "source_work_key": "mnemosyne.grc.work.ἐπιστολαὶ_ἐρωτικαί",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "ἀσπάζομαι τὴν σκιὰν τοῦ τυράννου",
         "τὴν σκιὰν τοῦ τυράννου ἀσπάζομαι"
@@ -27897,6 +28120,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "ἀτρεκὴς λόγος",
         "ὁ ἀτρεκὴς λόγος"
@@ -27921,6 +28145,7 @@
         "zh": "这个短语翻译为“雅典诗歌”，指的是阿提卡地区的诗歌传统，特别与著名诗人如索福克勒斯和欧里庇得斯相关。"
       },
       "id": "grc_literary_reference_ἀττικὴ_ποιήσισ_473aa31d",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase correctly refers to the poetic tradition of Attica and is associated with notable poets, making it a useful reference.",
@@ -27933,6 +28158,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἀττικὴ ποιήσις",
         "ποιήσις Ἀττικὴ"
@@ -28188,6 +28414,7 @@
       "source_license": "public_domain",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ἀχιλλεύς θυμούμενος",
         "ὁ θυμούμενος Ἀχιλλεύς",
@@ -28346,6 +28573,7 @@
         "zh": "阿多尼亚节上的仪式哀歌，“阿多尼斯死了”，著名地出现在彼翁的《哀悼阿多尼斯》和忒奥克里托斯的《田园诗第15首》。"
       },
       "id": "grc_literary_reference_ἄδωνισ_θνήισκει_498d4da5",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attested ritual lament in Theocritus' Idyll 15 and Bion's Lament for Adonis.",
@@ -28360,6 +28588,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0103",
       "source_work": "Lament for Adonis",
       "source_work_key": "mnemosyne.grc.work.lament_for_adonis",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἄδωνις θνῄσκει",
         "Ἄδωνις θνῄσκει, κλαίετε",
@@ -28707,6 +28936,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.grc.explanation.greek_literary_road_song_ἄσμα_ἐν_τη_ι_ὁδω_ι",
       "id": "grc_literary_reference_ἄσμα_ἐν_τη_ι_ὁδω_ι_491c97e2",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -28720,6 +28950,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἄσμα ἐν τῇ ὁδῷ",
         "ἄσμα ἐν ὁδῷ",
@@ -29116,6 +29347,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0160:text=Isis",
       "source_work": "De Iside et Osiride",
       "source_work_key": "mnemosyne.grc.work.de_iside_et_osiride",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ μιᾶς σκιᾶς",
         "ἐκ μιᾶς τῆς σκιᾶς",
@@ -29128,6 +29360,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.marcus_aurelius_meditations_ἐκ_νυκτὸσ_εἰσ_φω_σ_ἄγε",
       "id": "grc_literary_reference_ἐκ_νυκτὸσ_εἰσ_φω_σ_ἄγειν_a71c4b1d",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -29141,6 +29374,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0027%3Abook%3D4%3Achapter%3D3",
       "source_work": "Πρὸς ἑαυτόν",
       "source_work_key": "mnemosyne.grc.work.πρὸσ_ἑαυτόν",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ νυκτὸς εἰς φῶς ἄγειν",
         "ἐκ νυκτὸς εἰς φῶς",
@@ -29157,6 +29391,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.grc.explanation.homer_iliad_phrases_ἐκ_τη_σ_ἐλένησ_ὠδη_σ",
       "id": "grc_literary_reference_ἐκ_τη_σ_ἐλένησ_ὠδη_σ_efbb680a",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -29171,6 +29406,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τῆς Ἐλένης ὠδῆς",
         "ἐκ τῆς ὠδῆς τῆς Ἐλένης",
@@ -29188,6 +29424,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.grc.explanation.homer_iliad_phrases_ἐκ_τη_σ_ἑλένησ_προσώπου",
       "id": "grc_literary_reference_ἐκ_τη_σ_ἑλένησ_προσώπου_f08e75ac",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -29202,6 +29439,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133:book=3:card=446",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τῆς Ἑλένης προσώπου",
         "ἐκ τοῦ Ἑλένης προσώπου",
@@ -29218,6 +29456,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.sisyphus_myth_phrases_ἐκ_του_σισύφου_βράχου",
       "id": "grc_literary_reference_ἐκ_του_σισύφου_βράχου_69218d89",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -29231,6 +29470,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133:book=6:card=489",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τοῦ Σισύφου βράχου",
         "ἐκ Σισύφου βράχου",
@@ -29244,6 +29484,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.grc.explanation.hermetic_literary_phrases_ἐκ_τω_ν_ἐρμη_δοσ_ὑποθέσε",
       "id": "grc_literary_reference_ἐκ_τω_ν_ἐρμη_δοσ_ὑποθέσεων_ac457bd2",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -29257,6 +29498,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.04.0063",
       "source_work": "Corpus Hermeticum",
       "source_work_key": "mnemosyne.grc.work.corpus_hermeticum",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐκ τῶν Ἐρμῆδος ὑποθέσεων",
         "ἐκ τῶν ὑποθέσεων τοῦ Ἐρμῆδος",
@@ -30715,6 +30957,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.grc.explanation.hesiod_works_and_days_ἐν_τω_ι_γάλακτι_τη_σ_γη_σ",
       "id": "grc_literary_reference_ἐν_τω_ι_γάλακτι_τη_σ_γη_σ_06d6a997",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -30729,6 +30972,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0132%3Acard%3D236",
       "source_work": "Γεωργικά",
       "source_work_key": "mnemosyne.grc.work.γεωργικά",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐν τῷ γάλακτι τῆς γῆς",
         "ἐν γάλακτι γῆς",
@@ -31581,6 +31825,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0057:entry=au)to%2Fs",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἐπὶ τῷ αὐτῷ",
         "ἐπὶ τῷ αὐτῷ καθεζόμενοι",
@@ -32080,6 +32325,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0136:book=10:card=73",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἑρμῆς καὶ τὰς ψυχὰς τῶν νεκρῶν",
         "ὁ Ἑρμῆς τῶν ψυχῶν",
@@ -32214,6 +32460,7 @@
       "source_location": "Book 24",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ἔκτωρ προκείμενος",
         "τοῦ Ἕκτορος προκειμένου"
@@ -32837,6 +33084,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0168:text=Plat.",
       "source_work": "Πολιτεία",
       "source_work_key": "mnemosyne.grc.work.πολιτεία",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἡ σοφία ἔχειν ἀκρότητα",
         "σοφίαν ἔχειν ἀκρότητα",
@@ -33059,6 +33307,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ἡ τῶν ἀρίστων ἡγεμονία",
         "ἡγεμονία τῶν ἀρίστων"
@@ -33548,6 +33797,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0138",
       "source_work": "Ἡρακλέους ἆθλα",
       "source_work_key": "mnemosyne.grc.work.ἡρακλέουσ_ἆθλα",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἡρακλέους ἆθλα",
         "τὰ ἆθλα τοῦ Ἡρακλέους",
@@ -33573,6 +33823,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0023",
       "source_work": "Ἡρακλέους Λόγοι",
       "source_work_key": "mnemosyne.grc.work.ἡρακλέουσ_λόγοι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἡρακλέους ἡ τελευταία πνοή",
         "Ἡρακλέους τελευταία πνοή",
@@ -33783,6 +34034,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0126",
       "source_work": "Ἱστορίαι",
       "source_work_key": "mnemosyne.grc.work.ἱστορίαι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἡρόδοτος περὶ Ἑλλήνων",
         "Ἡρόδοτος περὶ τῶν Ἑλλήνων",
@@ -33874,6 +34126,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.grc.explanation.hesiod_works_days_ἡσιόδου_ἔργα_καὶ_ἡμέραι",
       "id": "grc_literary_reference_ἡσιόδου_ἔργα_καὶ_ἡμέραι_ec5cc4b9",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33888,6 +34141,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0132:text%3DWorks%20and%20Days",
       "source_work": "Ἔργα καὶ Ἡμέραι",
       "source_work_key": "mnemosyne.grc.work.ἔργα_καὶ_ἡμέραι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἡσιόδου ἔργα τε καὶ ἡμέραι"
       ]
@@ -33950,6 +34204,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἥρως καὶ τὸ τέλος",
         "ὁ ἥρως καὶ τὸ τέλος",
@@ -34311,6 +34566,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0134%3Abook%3D1%3Acard%3D200",
       "source_work": "Ἰλιάς",
       "source_work_key": "mnemosyne.grc.work.ἰλιάσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ἰλιάδος πῦρ τε καὶ σίδηρος",
         "πῦρ καὶ σίδηρος τῆς Ἰλιάδος",
@@ -34578,6 +34834,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0092:text%3DIphigenia%20Aulidensis",
       "source_work": "Ἰφιγένεια ἐν Αὐλίδι",
       "source_work_key": "mnemosyne.grc.work.ἰφιγένεια_ἐν_αυ_λίδι",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἰφιγένεια ἐν Αὐλίδιδι",
         "ἡ Ἰφιγένεια ἐν Αὐλίδι",
@@ -34642,6 +34899,7 @@
       "source_url": "https://el.wikisource.org/wiki/Ἱκέτιδες_(Αἰσχύλος)",
       "source_work": "Ἱκέτιδες",
       "source_work_key": "mnemosyne.grc.work.ἱκέτιδεσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ἱκέτιδες",
         "αἱ Ἱκέτιδες",
@@ -34667,6 +34925,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0247",
       "source_work": "Περὶ φύσεως",
       "source_work_key": "mnemosyne.grc.work.περὶ_φύσεωσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ἱπποκράτης περὶ φύσεως",
         "Ἱπποκράτους περὶ φύσεως",
@@ -34693,6 +34952,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0105",
       "source_work": "Ἱππόλυτος στεφανηφόρος",
       "source_work_key": "mnemosyne.grc.work.ἱππόλυτοσ_στεφανηφόροσ",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ἱππόλυτος στεφανηφόρος",
         "Ἱππόλυτος"
@@ -34866,6 +35126,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0001",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ὀδυσσεύς καὶ Πολύφημος",
         "Ὀδυσσεύς Πολύφημος",
@@ -34903,6 +35164,7 @@
       "source_license": "public_domain",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ὀδυσσεύς πλανώμενος",
         "ὁ πλανώμενος Ὀδυσσεύς",
@@ -34933,6 +35195,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0136:book=12:card=39",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ὀδυσσεύς πρὸς τὴν Σειρήνα",
         "Ὀδυσσέας πρὸς τὰς Σειρήνας",
@@ -34960,6 +35223,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0136%3Abook%3D5%3Acard%3D200",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ὀδυσσεύς ἐν τῷ ἐρῷ",
         "Ὀδυσσεύς ἐν ἔρωτι",
@@ -35067,6 +35331,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=12:card=39",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ὀδυσσεὺς πρὸς τὴν Σειρήνα",
         "ὁ πρὸς τὴν Σειρήνα Ὀδυσσεύς",
@@ -35347,6 +35612,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0248%3Abook%3D1%3Asection%3D1",
       "source_work": "Περι ἐπιδημιῶν",
       "source_work_key": "mnemosyne.grc.work.περι_ἐπιδημιω_ν",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "ὁ βίος βραχύς, ἡ δὲ τέχνη μακρά",
         "βίος βραχύς, τέχνη δὲ μακρά",
@@ -36238,6 +36504,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0054:text=Eth. Nic.",
       "source_work": "Nicomachean Ethics",
       "source_work_key": "mnemosyne.grc.work.nicomachean_ethics",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "ὁ μὴ ἔχων ἐν τῇ ψυχῇ αὑτοῦ φίλον οὐκ ἔχει",
         "μὴ ἔχων ἐν τῇ ψυχῇ φίλον οὐκ ἔχει",
@@ -37052,6 +37319,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0190:text=Fragm.:text=Sophocles:fr.869",
       "source_work": "Fragmenta",
       "source_work_key": "mnemosyne.grc.work.fragmenta",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "ὁ φθόνος ἀρχή ἐστι τῶν κακῶν",
         "φθόνος ἀρχή ἐστι κακῶν",
@@ -37235,6 +37503,7 @@
         "zh": "阿基琉斯是荷马《伊利亚特》中的中心角色，以其军事才能和悲惨命运而闻名。他象征着英雄理想以及希腊神话中荣誉与死亡的复杂性。"
       },
       "id": "grc_literary_reference_ὁ_ἀχιλλεύσ_23502846",
+      "is_poetic_citation": true,
       "language": "grc",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The description accurately reflects Achilles' role in the 'Iliad' and the themes associated with his character.",
@@ -37249,6 +37518,7 @@
       "source_url": "http://classics.mit.edu/Homer/iliad.html",
       "source_work": "Iliad",
       "source_work_key": "mnemosyne.grc.work.iliad",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "ὁ Ἀχιλλεύς",
         "Ἀχιλλεύς"
@@ -37477,6 +37747,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0060%3Abook%3D1%3Asection%3D1355b",
       "source_work": "Τέχνη ῥητορική",
       "source_work_key": "mnemosyne.grc.work.τέχνη_ῥητορική",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ὄργανον ἐν τῇ χειρὶ",
         "ὄργανον ἐν χειρὶ",
@@ -37678,6 +37949,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ὑβρις",
         "ὑβριστής",
@@ -37715,6 +37987,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "ὑποκείμενον",
         "ὑποκείμενα",
@@ -38160,6 +38433,7 @@
       "source_location": "Zenobius 5.25",
       "source_work": "Corpus Paroemiographorum Graecorum",
       "source_work_key": "mnemosyne.grc.work.corpus_paroemiographorum_graecorum",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Γραῦς ἀθύρουσα",
         "γραῦς ἀθυροῦσα",
@@ -38197,6 +38471,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Δάκρυα τυφλοῦ",
         "τὰ δάκρυα τοῦ τυφλοῦ"
@@ -38305,6 +38580,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "δεῖ τὸν ἄνθρωπον τὸν φίλον ἀγαθόν",
         "δεῖ τὸν φίλον ἀγαθόν",
@@ -38331,6 +38607,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "δῶρον δ' ἄφιλον οὐδὲν γίγνεται",
         "δῶρον ἄφιλον οὐ γίγνεται",
@@ -38446,6 +38723,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "εἷς ἀνὴρ οὐδενὸς ἄξιος",
         "εἷς ἀνήρ",
@@ -38779,6 +39057,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "κύκλος ἐν τῇ γῇ",
         "κύκλον ἐν τῇ γῇ",
@@ -38866,6 +39145,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "λῖθος ἐν τῇ κεφαλῇ",
         "λίθος ἐν τῇ κεφαλῇ",
@@ -39122,6 +39402,7 @@
       "source_url": "https://el.wikisource.org/wiki/Παροιμίαι_των_Αρχαίων_Ελλήνων",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "μὴ πρὸς τὸν κακὸν ἄνδρα σπεῦδε",
         "μὴ σπεῦδε πρὸς τὸν κακὸν ἄνδρα",
@@ -39500,6 +39781,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:card=90",
       "source_work": "Ἔργα καὶ Ἡμέραι",
       "source_work_key": "mnemosyne.grc.work.ἔργα_καὶ_ἡμέραι",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Πανδώρας πύξις",
         "ἡ Πανδώρας πύξις",
@@ -39591,6 +39873,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Σκιὰ ἐν τῇ στήλῃ",
         "σκιὰ ἐν στήλῃ",
@@ -39642,6 +39925,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "σοφίαν ζητεῖν",
         "τὴν σοφίαν ζητεῖν",
@@ -39730,6 +40014,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "τόξον ἐν τῇ κεραμίδι",
         "τόξον ἐν κεραμίδι",
@@ -39845,6 +40130,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "χάριν ἐχθροῦ",
         "χάρις ἐχθροῦ",
@@ -39884,6 +40170,7 @@
       "source_url": "http://classics.mit.edu/Aristotle/nicomachaen.html",
       "source_work": "Nicomachean Ethics",
       "source_work_key": "mnemosyne.grc.work.nicomachean_ethics",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "χρυσὸς μέσος",
         "χρυσὸς μέσον"
@@ -39934,6 +40221,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "χρώματα ἐν τῷ πηλῷ",
         "χρώματα ἐν πηλῷ",
@@ -40106,6 +40394,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ἀλλότριος πλοῦτος",
         "πλοῦτος ἀλλότριος",
@@ -40260,6 +40549,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ἀνδρὸς γὰρ ἐν ἀνδρὶ φρόνησιν",
         "ἐν ἀνδρὶ γὰρ ἀνδρὸς φρόνησις"
@@ -40362,6 +40652,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ἀνὴρ ἀγαθὸς ἐν κακῷ χρόνῳ γίνεται",
         "ἀνὴρ ἀγαθὸς ἐν κακοῖς γίνεται",
@@ -40465,6 +40756,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ἀρετὴ καὶ τύχη ξυμμαχοῦσιν",
         "ἀρετὴ ξυμμαχεῖ τύχη",
@@ -40517,6 +40809,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ἀρετὴν μὴ ζητεῖν ἐν χρυσῷ",
         "μὴ ζητεῖν ἀρετὴν ἐν χρυσῷ"
@@ -40962,6 +41255,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0136%3Abook%3D12%3Achapter%3D12",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.grc.work.ὀδύσσεια",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ἐκ Σκύλλης εἰς Χάρυβδιν",
         "ἐκ τῆς Σκύλλης εἰς τὴν Χάρυβδιν",
@@ -41748,6 +42042,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ὁ καιρὸς πάντα φέρει",
         "καιρὸς πάντα φέρει",
@@ -41799,6 +42094,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.grc.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ὁ κακὸς ἀνήρ οὐκ ἔστι φίλος",
         "κακὸς ἀνήρ οὐκ ἔστι φίλος",

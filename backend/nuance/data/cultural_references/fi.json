@@ -287,6 +287,7 @@
         "zh": "阿伊诺是芬兰神话中的悲剧女英雄，是史诗《卡勒瓦拉》的核心人物。她为拒绝嫁给年迈的贤者维奈摩伊宁而投水自尽，象征着青春、牺牲与反抗。"
       },
       "id": "fi_classical_or_scriptural_allusion_aino_406c7b4a",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns and explanation align with Kalevala sources.",
@@ -301,6 +302,7 @@
       "source_url": "https://www.gutenberg.org/files/54700/54700-h/54700-h.htm#kalevala_031",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aino",
         "Aino taru",
@@ -355,6 +357,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fi.explanation.stoic_phrases_finnish_ajatuksesi_ovat_siemeniä_jot",
       "id": "fi_classical_or_scriptural_allusion_ajatuksesi_ovat_siemeniä_jotka_kasvavat_maailmassa_viittaus__6437d238",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -368,6 +371,7 @@
       "source_url": "https://en.wikisource.org/wiki/Author:Marcus_Aurelius",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ajatuksesi ovat siemeniä, jotka kasvavat maailmassa",
         "Ajatus on siemen, joka kasvaa maailmassa",
@@ -447,6 +451,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0185:text=Ant.",
       "source_work": "Antigone",
       "source_work_key": "mnemosyne.fi.work.antigone",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Antigone ei kumarru vallan edessä",
         "Ei kumarru vallan edessä, kuten Antigone",
@@ -459,6 +464,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_mythology_phrases_apollon_huilu_soitannon_ja",
       "id": "fi_classical_or_scriptural_allusion_apollon_huilu_soitannon_ja_harmonian_jumalallinen_voima_viit_032b78d7",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -473,6 +479,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0132",
       "source_work": "Hymni Apollonille",
       "source_work_key": "mnemosyne.fi.work.hymni_apollonille",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Apollon huilu",
         "Apollon soitto",
@@ -540,6 +547,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_mythology_ariadne_ariadnen_lanka_toivo_ja_su",
       "id": "fi_classical_or_scriptural_allusion_ariadnen_lanka_toivo_ja_suunta_löydetystä_ratkaisusta_d6f9c5f8",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -553,6 +561,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Ariadne",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ariadnen lanka",
         "Ariadnen langan avulla",
@@ -896,6 +905,7 @@
       "source_url": "https://en.wikisource.org/wiki/Novum_Organum",
       "source_work": "Novum Organum",
       "source_work_key": "mnemosyne.fi.work.novum_organum",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Baconin tieteellinen menetelmä",
         "tieteellinen menetelmä",
@@ -952,6 +962,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0191:text=Bacch.",
       "source_work": "Bakkhantit",
       "source_work_key": "mnemosyne.fi.work.bakkhantit",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Bakkhanttien into",
         "Bakkhanttien rajoja rikkova into",
@@ -978,6 +989,7 @@
       "source_url": "https://fr.wikisource.org/wiki/L%27%C3%89volution_cr%C3%A9atrice",
       "source_work": "L'Évolution créatrice",
       "source_work_key": "mnemosyne.fi.work.l_évolution_créatrice",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Bergsonin elämänvoiman teoria",
         "elämänvoiman teoria",
@@ -1045,6 +1057,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/11605",
       "source_work": "Le Mythe de Sisyphe",
       "source_work_key": "mnemosyne.fi.work.le_mythe_de_sisyphe",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Camuksen Sisyfos",
         "Sisyfos",
@@ -1100,6 +1113,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.greek_mythology_daedalus_daidaloksen_labyrintti_äl",
       "id": "fi_classical_or_scriptural_allusion_daidaloksen_labyrintti_äly_ja_eksyksissä_oleminen_85fe26df",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1113,6 +1127,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Daedalus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Daidaloksen labyrintti",
         "Daidaloksen äly",
@@ -1247,6 +1262,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/59",
       "source_work": "Discourse on the Method; Meditations on First Philosophy",
       "source_work_key": "mnemosyne.fi.work.discourse_on_the_method_meditations_on_first_philo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Descartesin cogito"
       ]
@@ -1639,6 +1655,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fi.explanation.aristotle_agon_phrases_elämä_on_taistelua_mutta_ei",
       "id": "fi_classical_or_scriptural_allusion_elämä_on_taistelua_mutta_ei_niitä_vastaan_vaan_heidän_kanssa_5402858c",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1652,6 +1669,7 @@
       "source_url": "https://en.wikisource.org/wiki/Nicomachean_Ethics",
       "source_work": "Nicomachean Ethics",
       "source_work_key": "mnemosyne.fi.work.nicomachean_ethics",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Elämä on taistelua, mutta ei niitä vastaan vaan heidän kanssaan",
         "Elämä on taistelua heidän kanssaan, ei heitä vastaan",
@@ -2025,6 +2043,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/ISA.6.NIV",
       "source_work": "Raamattu",
       "source_work_key": "mnemosyne.fi.work.raamattu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Esaiaan näky",
         "Esaiaan näyn",
@@ -2289,6 +2308,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/458",
       "source_work": "Phenomenology of Spirit",
       "source_work_key": "mnemosyne.fi.work.phenomenology_of_spirit",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Hegelin dialektiikka",
         "Hegelin dialektiikan",
@@ -2341,6 +2361,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/52570",
       "source_work": "Phänomenologie des Geistes",
       "source_work_key": "mnemosyne.fi.work.phänomenologie_des_geistes",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "thesis, antithesis, synthesis -prosessi",
         "historian dialektiikka"
@@ -2454,6 +2475,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Labours_of_Heracles",
       "source_work": "Herakles (Hercules) – Various",
       "source_work_key": "mnemosyne.fi.work.herakles_hercules_various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Herakleen urotyö",
         "Herakleen urotöiden"
@@ -2957,6 +2979,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/344",
       "source_work": "Leviathan",
       "source_work_key": "mnemosyne.fi.work.leviathan",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Hobbesin leviatan",
         "leviatan",
@@ -3028,6 +3051,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fi.explanation.homer_iliad_homeroksen_laulun_kaiku_tarujen_voima_",
       "id": "fi_classical_or_scriptural_allusion_homeroksen_laulun_kaiku_tarujen_voima_ja_ikuisuus_fada78ba",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3041,6 +3065,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Iliad",
       "source_work": "Iliad",
       "source_work_key": "mnemosyne.fi.work.iliad",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Homeroksen laulun kaiku",
         "Homeroksen laulun voima",
@@ -3296,6 +3321,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_myth_icarus_ikaroksen_lankeemus_ylpeyden_ja_",
       "id": "fi_classical_or_scriptural_allusion_ikaroksen_lankeemus_ylpeyden_ja_rajojen_rikkominen_a7b8cd6a",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3310,6 +3336,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:book=8:card=1",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.fi.work.metamorphoses",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ikaroksen lankeemus",
         "Ikaroksen ylpeys"
@@ -3544,6 +3571,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/5186",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ilmatar",
         "Ilmattaren",
@@ -3611,6 +3639,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Genesis+28%3A10-19&version=FI1992",
       "source_work": "Vanha testamentti",
       "source_work_key": "mnemosyne.fi.work.vanha_testamentti",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Jaakobin unelma",
         "Jaakobin tikapuut",
@@ -3637,6 +3666,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+27%3A32-56&version=FI1992",
       "source_work": "Uusi testamentti",
       "source_work_key": "mnemosyne.fi.work.uusi_testamentti",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Jeesuksen ristinkuolema",
         "Jeesuksen ristiinnaulitseminen",
@@ -3663,6 +3693,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+28%3A1-20&version=FI1992",
       "source_work": "Uusi testamentti",
       "source_work_key": "mnemosyne.fi.work.uusi_testamentti",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Jeesuksen ylösnousemus",
         "Jeesuksen nouseminen kuolleista",
@@ -3727,6 +3758,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.fi_greek_proverbs_joka_ei_itseään_tunne_tuntee_maa",
       "id": "fi_classical_or_scriptural_allusion_joka_ei_itseään_tunne_tuntee_maailman_käänteet_muunnelma_van_5271be0b",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3740,6 +3772,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Know_thyself",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Joka ei itseään tunne, tuntee maailman käänteet",
         "Joka ei tunne itseään, tuntee maailman käänteet",
@@ -4285,6 +4318,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/GEN.4.NIV116",
       "source_work": "Raamattu",
       "source_work_key": "mnemosyne.fi.work.raamattu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Kainin ja Abelin verta",
         "Kainin ja Abelin veren",
@@ -4406,6 +4440,7 @@
         "zh": "“Kalevalan laulut”指的是芬兰民族史诗《卡勒瓦拉》中的歌谣或诗句，是芬兰神话和民族认同的基础。"
       },
       "id": "fi_classical_or_scriptural_allusion_kalevalan_laulut_7b730873",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The explanation and surface patterns correctly reference the songs/runes of the Kalevala and their cultural importance.",
@@ -4419,6 +4454,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/5186",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kalevalan laulut",
         "laulut Kalevalasta",
@@ -4522,6 +4558,7 @@
       "source_url": "https://korpora.zim.uni-duisburg-essen.de/kant/aa04/",
       "source_work": "Groundwork of the Metaphysics of Morals",
       "source_work_key": "mnemosyne.fi.work.groundwork_of_the_metaphysics_of_morals",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "kategorinen imperatiivi",
         "kategorisen imperatiivin",
@@ -4548,6 +4585,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/5683",
       "source_work": "Kritik der praktischen Vernunft",
       "source_work_key": "mnemosyne.fi.work.kritik_der_praktischen_vernunft",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Kantian kategorinen imperatiivi",
         "toimi niin, että toimintasi voisi olla yleismaailmallinen laki",
@@ -4673,6 +4711,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.kierkegaard_philosophy_phrases_kierkegaardin_yksil",
       "id": "fi_classical_or_scriptural_allusion_kierkegaardin_yksilön_etsintä_usko_ja_järki_ristiriidassa_bb1370dd",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4686,6 +4725,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1160",
       "source_work": "Fear and Trembling; Concluding Unscientific Postscript",
       "source_work_key": "mnemosyne.fi.work.fear_and_trembling_concluding_unscientific_postscr",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kierkegaardin yksilön etsintä",
         "usko ja järki ristiriidassa",
@@ -5134,6 +5174,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/5186",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kullervon tarina",
         "Kullervon kohtalo",
@@ -5544,6 +5585,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1031",
       "source_work": "Two Treatises of Government",
       "source_work_key": "mnemosyne.fi.work.two_treatises_of_government",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Locke ja yhteiskuntasopimus",
         "luonnontila",
@@ -5571,6 +5613,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/GEN.19.26.NIV",
       "source_work": "Raamattu",
       "source_work_key": "mnemosyne.fi.work.raamattu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Lootin vaimo",
         "Lootin vaimon",
@@ -5732,6 +5775,7 @@
         "zh": "“Louhen salit”（洛希的大厅）指的是《卡勒瓦拉》中波赫约拉强大女族长洛希的神话大厅，象征神秘、魔法与异界。"
       },
       "id": "fi_classical_or_scriptural_allusion_louhen_salit_84b63bca",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately refers to Louhi's mythical halls in the Kalevala, with appropriate surface patterns and explanation.",
@@ -5746,6 +5790,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/5186",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Louhen salit",
         "Louhen saleissa",
@@ -6323,6 +6368,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_tragedy_medeia_medeian_raivo_tunteen_voimatt",
       "id": "fi_classical_or_scriptural_allusion_medeian_raivo_tunteen_voimattomuus_ja_hengen_kosto_6626222d",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6337,6 +6383,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0092:text=Med.",
       "source_work": "Medeia",
       "source_work_key": "mnemosyne.fi.work.medeia",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Medeia-raivo"
       ]
@@ -6577,6 +6624,7 @@
       "source_url": "https://fr.wikisource.org/wiki/De_l%27esprit_des_lois",
       "source_work": "De l'esprit des lois",
       "source_work_key": "mnemosyne.fi.work.de_l_esprit_des_lois",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Montesquieun vallan kolmijako-oppi",
         "vallan kolmijako-oppi",
@@ -6604,6 +6652,7 @@
       "source_url": "https://www.biblegateway.com/versions/Finnish-1992-Uusi-käännös-NKJV/",
       "source_work": "Vanha testamentti",
       "source_work_key": "mnemosyne.fi.work.vanha_testamentti",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Mooseksen laki",
         "Moseksen laki",
@@ -6658,6 +6707,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/3826",
       "source_work": "Thus Spoke Zarathustra",
       "source_work_key": "mnemosyne.fi.work.thus_spoke_zarathustra",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "yli-ihminen",
         "yli-ihmisen",
@@ -6686,6 +6736,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1998",
       "source_work": "Also sprach Zarathustra",
       "source_work_key": "mnemosyne.fi.work.also_sprach_zarathustra",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Nietzschen ylittävä ihminen",
         "ylittävä ihminen",
@@ -6741,6 +6792,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/GEN.6.NIV116",
       "source_work": "Raamattu",
       "source_work_key": "mnemosyne.fi.work.raamattu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Nooan arkki",
         "Nooan arkin",
@@ -6768,6 +6820,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/GEN.9.NIV116",
       "source_work": "Raamattu",
       "source_work_key": "mnemosyne.fi.work.raamattu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Nooan liitto",
         "Nooan liiton merkki",
@@ -6900,6 +6953,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.homer_odyssey_phrases_odysseuksen_matkat_seikkailu",
       "id": "fi_classical_or_scriptural_allusion_odysseuksen_matkat_seikkailun_ja_kotiinpaluun_symboli_viitta_0b32a2ea",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6913,6 +6967,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1372",
       "source_work": "Ὀδύσσεια",
       "source_work_key": "mnemosyne.fi.work.ὀδύσσεια",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Odysseuksen matkat",
         "Odysseuksen paluu kotiin",
@@ -7008,6 +7063,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.sophocles_oedipus_phrases_oidipuksen_kompastus_koh",
       "id": "fi_classical_or_scriptural_allusion_oidipuksen_kompastus_kohtalon_voima_ja_sokeus_viittaus_kreik_ffdcf4ee",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7021,6 +7077,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/2099",
       "source_work": "Οἰδίπους Τύραννος",
       "source_work_key": "mnemosyne.fi.work.οἰδίπουσ_τύραννοσ",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Oidipuksen kompastus",
         "Oidipuksen kohtalo",
@@ -7035,6 +7092,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_tragedy_oidipus_oidipuksen_tunnonvaivojen_va",
       "id": "fi_classical_or_scriptural_allusion_oidipuksen_tunnonvaivojen_varjo_kohtalon_ja_syyllisyyden_pai_e8b9861a",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7049,6 +7107,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0129:text=OT",
       "source_work": "Oidipus Rex",
       "source_work_key": "mnemosyne.fi.work.oidipus_rex",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Oidipuksen tunnonvaivat",
         "Oidipuksen syyllisyys"
@@ -7087,6 +7146,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.fi_stoic_quotes_onnellisuus_on_tavoiteltava_ei_saa",
       "id": "fi_classical_or_scriptural_allusion_onnellisuus_on_tavoiteltava_ei_saavutettava_perinteinen_stoa_ee2079a0",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7100,6 +7160,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Stoicism",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Onnellisuus on tavoiteltava, ei saavutettava",
         "Onnellisuus on tavoiteltava, ei saavutettavaa",
@@ -7204,6 +7265,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/152",
       "source_work": "Orpheus and Eurydice",
       "source_work_key": "mnemosyne.fi.work.orpheus_and_eurydice",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "musiikin voima ylittää kuoleman",
         "Orfeus ja Eurydike ooppera",
@@ -7231,6 +7293,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Acts+9&version=FI1992",
       "source_work": "Uusi testamentti",
       "source_work_key": "mnemosyne.fi.work.uusi_testamentti",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Paavalin kääntymys",
         "Paavalin kääntyminen",
@@ -7257,6 +7320,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Acts+13-28&version=FI1992",
       "source_work": "Uusi testamentti",
       "source_work_key": "mnemosyne.fi.work.uusi_testamentti",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Paavalin matkat",
         "Paavalin lähetysmatkat",
@@ -7296,6 +7360,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.plato_evil_absence_paha_on_hyvän_puute_platonin_aj",
       "id": "fi_classical_or_scriptural_allusion_paha_on_hyvän_puute_platonin_ajatuksen_muunnelma_filosofiast_dc6a38f9",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7309,6 +7374,7 @@
       "source_url": "https://en.wikisource.org/wiki/Republic_(Jowett)/Book_IX",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "paha on hyvän puute",
         "paha on hyvän puute - Platonin ajatuksen muunnelma",
@@ -7422,6 +7488,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_mythology_pandora_phrases_pandoran_lipas_toi",
       "id": "fi_classical_or_scriptural_allusion_pandoran_lipas_toivon_ja_tuhon_tulo_maailmaan_viittaus_kreik_24ad8d68",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7436,6 +7503,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/348",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Pandoran avaaminen",
         "Pandoran paha",
@@ -7666,6 +7734,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.aeschylus_prometheus_bound_prometheuksen_liekki_va",
       "id": "fi_classical_or_scriptural_allusion_prometheuksen_liekki_vapauden_ja_uhrautumisen_hinta_0da0c765",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7680,6 +7749,7 @@
       "source_url": "https://en.wikisource.org/wiki/Prometheus_Bound",
       "source_work": "Prometheus Bound",
       "source_work_key": "mnemosyne.fi.work.prometheus_bound",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Prometheuksen liekki",
         "Prometheuksen tulen liekki"
@@ -7691,6 +7761,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.greek_mythology_prometheus_phrases_prometheuksen_t",
       "id": "fi_classical_or_scriptural_allusion_prometheuksen_tulen_varastaminen_kieltäytyminen_alistumasta_4d49f4a3",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7705,6 +7776,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/348",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "tulen varastaminen",
         "Prometheuksen kapina",
@@ -8056,6 +8128,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Du_Contrat_social",
       "source_work": "Du Contrat Social",
       "source_work_key": "mnemosyne.fi.work.du_contrat_social",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Rousseaun yhteiskuntasopimus",
         "yhteiskuntasopimus",
@@ -8083,6 +8156,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+4%3A1-11&version=FI1992",
       "source_work": "Uusi testamentti",
       "source_work_key": "mnemosyne.fi.work.uusi_testamentti",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Saatana kiusaa Jeesusta erämaassa",
         "Saatana kiusasi Jeesusta erämaassa",
@@ -8140,6 +8214,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/LUK.19.1.NIV",
       "source_work": "Raamattu",
       "source_work_key": "mnemosyne.fi.work.raamattu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Sakkeuksen puu",
         "Sakkeuksen puun",
@@ -8166,6 +8241,7 @@
       "source_url": "https://archive.org/details/BeingAndNothingness",
       "source_work": "L'Être et le Néant",
       "source_work_key": "mnemosyne.fi.work.l_être_et_le_néant",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Sartren eksistentialismi",
         "eksistentialismi",
@@ -8194,6 +8270,7 @@
       "source_url": "https://www.marxists.org/reference/archive/sartre/works/exist/being-and-nothingness/",
       "source_work": "Being and Nothingness",
       "source_work_key": "mnemosyne.fi.work.being_and_nothingness",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "eksistentialistinen vastuu",
         "Sartren vastuu",
@@ -8221,6 +8298,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/4326",
       "source_work": "Die Welt als Wille und Vorstellung",
       "source_work_key": "mnemosyne.fi.work.die_welt_als_wille_und_vorstellung",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "tahto ja edustus",
         "tahto ja representaatio",
@@ -8302,6 +8380,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.christian_soul_immortality_sielun_kuolema_on_elämä",
       "id": "fi_classical_or_scriptural_allusion_sielun_kuolema_on_elämän_rikkonaisuutta_viittaus_kristillise_3b7983e1",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8315,6 +8394,7 @@
       "source_url": "https://www.ccel.org/ccel/schaff/encyc01.html?term=Soul",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "biblical",
       "surface_patterns": [
         "sielun kuolema on elämän rikkonaisuutta",
         "sielun kuolema merkitsee elämän rikkonaisuutta",
@@ -8464,6 +8544,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_mythology_sisyphus_phrases_sisyfoksen_uhraus",
       "id": "fi_classical_or_scriptural_allusion_sisyfoksen_uhraus_turhien_ponnistelujen_symboli_viittaus_kre_5a9286d1",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8478,6 +8559,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1372",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Sisyfoksen uhraus",
         "Sisyfoksen työ",
@@ -8533,6 +8615,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/GEN.18.NIV116",
       "source_work": "Raamattu",
       "source_work_key": "mnemosyne.fi.work.raamattu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Sodoman ja Gomorran tuho",
         "Sodoman ja Gomorran hävitys",
@@ -8573,6 +8656,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.plato_apology_phrases_sokrateen_kuolema_totuuden_e",
       "id": "fi_classical_or_scriptural_allusion_sokrateen_kuolema_totuuden_etsiminen_ja_uhraus_viittaus_anti_22b65f91",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8587,6 +8671,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0170%3Atext%3DApol.%3Asection%3D38c",
       "source_work": "Apologia",
       "source_work_key": "mnemosyne.fi.work.apologia",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Sokrateen kuolema",
         "Sokrateen kuolema totuuden etsiminen",
@@ -8685,6 +8770,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Kalevala_(1862)/I",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "sotkan muna",
         "sotkan munasta",
@@ -8742,6 +8828,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/3245",
       "source_work": "Ethics",
       "source_work_key": "mnemosyne.fi.work.ethics",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Spinozan jumalallinen substanssi",
         "luonto ja Jumala yhtyvät",
@@ -9016,6 +9103,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_mythology_tantalus_phrases_tantaloksen_kidut",
       "id": "fi_classical_or_scriptural_allusion_tantaloksen_kidutus_nälkä_ja_jano_lähellä_mutta_saavuttamatt_6d30dfa7",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9029,6 +9117,7 @@
       "source_url": "https://www.theoi.com/Text/AeschylusFragments.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Tantaloksen kidutus",
         "Tantaloksen rangaistus",
@@ -9217,6 +9306,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_mythology_theseus_phrases_theseuksen_voitto_",
       "id": "fi_classical_or_scriptural_allusion_theseuksen_voitto_minotauroksesta_rohkeuden_ja_järjen_triumf_e84c172b",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9230,6 +9320,7 @@
       "source_url": "https://www.theoi.com/Text/ApollodorusE.html#17",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Theseuksen voitto Minotauroksesta",
         "Theseus ja Minotauros",
@@ -9297,6 +9388,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.socratic_knowledge_ethics_tieto_ei_ole_voimaa_vaan",
       "id": "fi_classical_or_scriptural_allusion_tieto_ei_ole_voimaa_vaan_valinta_perinteinen_ajatus_sivistyk_8db8c45c",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9310,6 +9402,7 @@
       "source_url": "https://en.wikisource.org/wiki/Meno",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "tieto ei ole voimaa vaan valinta",
         "tieto on valinta, ei voimaa",
@@ -9350,6 +9443,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fi.explanation.greek_truth_simplicity_totuus_on_suuri_mutta_yksin",
       "id": "fi_classical_or_scriptural_allusion_totuus_on_suuri_mutta_yksinkertainen_viittaus_kreikkalaiseen_c3021d89",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9363,6 +9457,7 @@
       "source_url": "https://en.wikisource.org/wiki/Fragments_of_Parmenides",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "totuus on suuri, mutta yksinkertainen",
         "totuus on suuri ja yksinkertainen",
@@ -9429,6 +9524,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/34",
       "source_work": "One Thousand and One Nights",
       "source_work_key": "mnemosyne.fi.work.one_thousand_and_one_nights",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Tuhannen ja yhden yön tarinat",
         "Tuhannen ja yhden yön tarina",
@@ -9535,6 +9631,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.stoic_fragments_fi_tunteet_ovat_mielen_heijastus_e",
       "id": "fi_classical_or_scriptural_allusion_tunteet_ovat_mielen_heijastus_ei_sen_herra_stoalaisen_ajatte_68461a48",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9548,6 +9645,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Cleanthes",
       "source_work": "Stoicorum Veterum Fragmenta",
       "source_work_key": "mnemosyne.fi.work.stoicorum_veterum_fragmenta",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Tunteet ovat mielen heijastus, ei sen herra",
         "Tunteet eivät ole mielen herra, vaan sen heijastus",
@@ -9657,6 +9755,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/5186",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Tuonelan virta",
         "Tuonelan joki",
@@ -9795,6 +9894,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.bible_fi_quotes_usko_ilman_tekoja_on_kuollut_viitt",
       "id": "fi_classical_or_scriptural_allusion_usko_ilman_tekoja_on_kuollut_viittaus_kristilliseen_etiikkaa_1f98f168",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9809,6 +9909,7 @@
       "source_url": "https://www.bible.com/fi/bible/149/JAS.2.17.KJV",
       "source_work": "Jaakobin kirje",
       "source_work_key": "mnemosyne.fi.work.jaakobin_kirje",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Usko ilman tekoja on kuollut",
         "Usko ilman tekoja on turha",
@@ -9893,6 +9994,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=2+Corinthians+3%3A6&version=FI1992",
       "source_work": "Uusi testamentti",
       "source_work_key": "mnemosyne.fi.work.uusi_testamentti",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Uuden testamentin kirjaimet",
         "Uuden testamentin kirjaimellinen tulkinta",
@@ -9931,6 +10033,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.plato_republic_phrases_valon_ja_varjon_taistelu_hy",
       "id": "fi_classical_or_scriptural_allusion_valon_ja_varjon_taistelu_hyvän_ja_pahan_dualismi_viittaus_kr_3788c320",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9945,6 +10048,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0168%3Abook%3D7%3Asection%3D514a",
       "source_work": "Republic",
       "source_work_key": "mnemosyne.fi.work.republic",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "valon ja varjon taistelu",
         "hyvän ja pahan dualismi",
@@ -10056,6 +10160,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/ISA.1.NIV",
       "source_work": "Raamattu",
       "source_work_key": "mnemosyne.fi.work.raamattu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Vanhan testamentin profeetat",
         "Vanhan testamentin profeetta",
@@ -10096,6 +10201,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.latin_mythology_phrases_venuksen_kauneus_lemmen_ja",
       "id": "fi_classical_or_scriptural_allusion_venuksen_kauneus_lemmen_ja_kauneuden_jumalattaren_voima_viit_73027277",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10109,6 +10215,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1234",
       "source_work": "De rerum natura",
       "source_work_key": "mnemosyne.fi.work.de_rerum_natura",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Venuksen kauneus",
         "Venuksen lemmen ja kauneuden jumalattaren voima",
@@ -10178,6 +10285,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fi.explanation.socratic_wisdom_fi_viisaus_ei_ole_tiedon_määrä_vaa",
       "id": "fi_classical_or_scriptural_allusion_viisaus_ei_ole_tiedon_määrä_vaan_sen_käyttö_viittaus_sokrate_a5a59fbf",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10191,6 +10299,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Socratic_method",
       "source_work": "Various (Socratic dialogues)",
       "source_work_key": "mnemosyne.fi.work.various_socratic_dialogues",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Viisaus ei ole tiedon määrä vaan sen käyttö",
         "Viisaus on tiedon käyttöä",
@@ -10233,6 +10342,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.voltaire_god_quote_voltairen_satiirinen_optismi_jo",
       "id": "fi_classical_or_scriptural_allusion_voltairen_satiirinen_optismi_jos_jumala_ei_olisi_olemassa_hä_1a7490b2",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10246,6 +10356,7 @@
       "source_url": "https://en.wikiquote.org/wiki/Voltaire",
       "source_work": "Various (oral tradition)",
       "source_work_key": "mnemosyne.fi.work.various_oral_tradition",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Voltairen lausahdus Jumalasta",
         "Jos Jumala ei olisi olemassa, hänet pitäisi keksitään",
@@ -10435,6 +10546,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_mythology_phrases_zeuksen_ukkosenisku_jumalt",
       "id": "fi_classical_or_scriptural_allusion_zeuksen_ukkosenisku_jumalten_viha_ja_oikeudenmukaisuus_viitt_d98ad791",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10449,6 +10561,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133",
       "source_work": "Ilias",
       "source_work_key": "mnemosyne.fi.work.ilias",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Zeuksen ukkosenisku",
         "Zeuksen jumalten viha",
@@ -10462,6 +10575,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.ancient_philosophy_phrases_älykkyyden_kunniaksi_pl",
       "id": "fi_classical_or_scriptural_allusion_älykkyyden_kunniaksi_platonin_ideamaailman_viisaus_viittaus__35e6962b",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10476,6 +10590,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0165",
       "source_work": "Valtio",
       "source_work_key": "mnemosyne.fi.work.valtio",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Platonin ideamaailma",
         "Platonin viisaus",
@@ -10654,6 +10769,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.greek_mythology_symbols_öljypuun_lehvät_rauha_ja_v",
       "id": "fi_classical_or_scriptural_allusion_öljypuun_lehvät_rauha_ja_voiton_symboli_viittaus_kreikkalais_4b1f4c50",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10667,6 +10783,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Olive_wreath",
       "source_work": "Various (Olympic tradition)",
       "source_work_key": "mnemosyne.fi.work.various_olympic_tradition",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "öljypuun lehdet",
         "öljypuun lehvät",
@@ -10735,6 +10852,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.fi.explanation.finnish_folklore_phrases_ahti_saaren_tarina_kyläyh",
       "id": "fi_cultural_reference_ahti_saaren_tarina_kyläyhteisön_ja_naapuruuden_ydinkysymyksi_79f09b00",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10748,6 +10866,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Ahti_Saari",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ahti Saaren tarina",
         "Ahti Saaren tarinan",
@@ -10774,6 +10893,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ainakin se on teatteria!",
         "Ainakin se on teatteria",
@@ -10799,6 +10919,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Sammon_puolustus",
       "source_work": "Sammon puolustus",
       "source_work_key": "mnemosyne.fi.work.sammon_puolustus",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Gallen-Kallelan 'Sammon puolustus'",
         "Akseli Gallen-Kallelan 'Sammon puolustus'",
@@ -10892,6 +11013,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Paimion_sairaala",
       "source_work": "Paimio Sanatorium",
       "source_work_key": "mnemosyne.fi.work.paimio_sanatorium",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Alvar Aallon suunnittelema Paimio-sanatorio",
         "Paimio-sanatorio",
@@ -10943,6 +11065,7 @@
       "source_url": "https://en.wikisource.org/wiki/History_of_the_Peloponnesian_War",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Ateenan kulta-aika",
         "Ateenan kultakausi",
@@ -11072,6 +11195,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Dionysia",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Dionysoksen karnevaali",
         "Dionysoksen juhlat",
@@ -11124,6 +11248,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/The_Scream",
       "source_work": "The Scream (Norwegian: 'Skrik')",
       "source_work_key": "mnemosyne.fi.work.the_scream_norwegian_skrik",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Munchin 'Huuto'",
         "Edvard Munchin 'Huuto'",
@@ -11176,6 +11301,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Raatajat_rahanalla",
       "source_work": "Raatajat rahanalla",
       "source_work_key": "mnemosyne.fi.work.raatajat_rahanalla",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Järnefeltin 'Raatajat rahanalla'",
         "Eero Järnefeltin 'Raatajat rahanalla'",
@@ -11203,6 +11329,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei se olekaan niin että kaikki olisi pelkkää vallankäyttöä",
         "Kaikki ei ole pelkkää vallankäyttöä",
@@ -11229,6 +11356,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei se olekaan niin että kaikki olisi pelkkää yksinäisyyttä",
         "Kaikki ei ole pelkkää yksinäisyyttä",
@@ -11281,6 +11409,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Elämän suuri kiertue",
         "suuri kiertue"
@@ -11318,6 +11447,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "elävien kirjoissa",
         "olla elävien kirjoissa",
@@ -11343,6 +11473,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Surveiller_et_Punir",
       "source_work": "Surveiller et Punir",
       "source_work_key": "mnemosyne.fi.work.surveiller_et_punir",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "valta ja tieto",
         "valta tieto -suhde",
@@ -11368,6 +11499,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Akseli_Gallen-Kallela",
       "source_work": "Various paintings (e.g., 'Aino-taru', 'Sammon puolustus')",
       "source_work_key": "mnemosyne.fi.work.various_paintings_e_g_aino_taru_sammon_puolustus",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Gallen-Kallelan Aino-hahmo",
         "Aino-hahmo",
@@ -11497,6 +11629,7 @@
       "source_url": "https://www.habermas-online.net/s/die-theorie-des-kommunikativen-handelns/",
       "source_work": "Theorie des kommunikativen Handelns",
       "source_work_key": "mnemosyne.fi.work.theorie_des_kommunikativen_handelns",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "kommunikatiivinen toiminta",
         "Habermasin kommunikatiivinen toiminta",
@@ -11588,6 +11721,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Helene_Schjerfbeck",
       "source_work": "Tietäjä",
       "source_work_key": "mnemosyne.fi.work.tietäjä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Helene Schjerfbeckin 'Tietäjä'",
         "'Tietäjä'",
@@ -11627,6 +11761,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Hella Wuolijoen kartano",
         "Wuolijoen kartano",
@@ -12170,6 +12305,7 @@
       "source_url": "https://www.marxists.org/reference/archive/adorno/works/dialectic-enlightenment.htm",
       "source_work": "Dialektik der Aufklärung",
       "source_work_key": "mnemosyne.fi.work.dialektik_der_aufklärung",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "valistus hajoittaa itsensä",
         "valistuksen hajoaminen",
@@ -12218,6 +12354,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Hyvää iltaa, hyvät ihmiset!",
         "Hyvää iltaa hyvät ihmiset!",
@@ -12387,6 +12524,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_phrases_ilmarisen_sulka_taidon_ja_hienost",
       "id": "fi_cultural_reference_ilmarisen_sulka_taidon_ja_hienostuneisuuden_merkki_f4d46939",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12400,6 +12538,7 @@
       "source_url": "https://www.gutenberg.org/files/54790/54790-h/54790-h.htm",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ilmarisen sulka",
         "Ilmarisen sulan merkki",
@@ -12651,6 +12790,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/3561",
       "source_work": "Paavo ja hänen vävykuntansa",
       "source_work_key": "mnemosyne.fi.work.paavo_ja_hänen_vävykuntansa",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Juhani Ahon 'Paavo ja hänen vävykuntansa'",
         "'Paavo ja hänen vävykuntansa'",
@@ -12754,6 +12894,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fi.explanation.fi_contemporary_theatre_phrases_jälkiä_hiekassa_mu",
       "id": "fi_cultural_reference_jälkiä_hiekassa_muiston_ja_unohduksen_taistelu_viittaus_nyky_375aabed",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12767,6 +12908,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Jälkiä hiekassa",
         "Jäljet hiekassa",
@@ -12946,6 +13088,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Kaikki on hyvin",
         "Kaikki hyvin",
@@ -12997,6 +13140,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Kaksikymmentäviisi vuotta – ja vielä kiitos!",
         "25 vuotta – ja vielä kiitos!",
@@ -13022,6 +13166,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1665",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kalevala-kuvasto suomalaisessa grafiikassa ja kirjankuvituksessa",
         "Kalevalan kuvasto suomalaisessa grafiikassa ja kirjankuvituksessa",
@@ -13073,6 +13218,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kalevala",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kalevalainen ornamenttiperinne",
         "kalevalainen ornamentti",
@@ -13126,6 +13272,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_kantele_kalevalan_kantele",
       "id": "fi_cultural_reference_kalevalan_kantele_dfb41e6d",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -13139,6 +13286,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5478",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kalevalan kanteleen",
         "kanteleeseen"
@@ -13522,6 +13670,7 @@
       "source_license": "public_domain",
       "source_work": "Various (colloquial usage)",
       "source_work_key": "mnemosyne.fi.work.various_colloquial_usage",
+      "subcategory": "proverb",
       "surface_patterns": [
         "kalkkuna ei lennä",
         "kalkkuna ei lennä -syy",
@@ -14066,6 +14215,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Karjalainen_rapsodia",
       "source_work": "Various (folk-inspired orchestral works)",
       "source_work_key": "mnemosyne.fi.work.various_folk_inspired_orchestral_works",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "'Karjalainen rapsodia' -musiikkityyli",
         "Karjalainen rapsodia musiikkityyli",
@@ -14580,6 +14730,7 @@
       "source_url": "https://imslp.org/wiki/Kullervo_Symphony,_Op.7_(Sibelius,_Jean)",
       "source_work": "Kullervo Symphony, Op. 7",
       "source_work_key": "mnemosyne.fi.work.kullervo_symphony_op_7",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "'Kullervo-sinfonia' -ohjelmallisuus",
         "Kullervo-sinfonian ohjelmallisuus",
@@ -14758,6 +14909,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Kun on mieli maassa, ei voi lentää",
         "Kun mieli on maassa, ei voi lentää",
@@ -15152,6 +15304,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Lallin surma",
         "Lallin murha",
@@ -15423,6 +15576,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kaarlo_Bergbom",
       "source_work": "Various (Finnish folk and opera traditions)",
       "source_work_key": "mnemosyne.fi.work.various_finnish_folk_and_opera_traditions",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Lauluja sillalla",
         "yhteisön ilo ja suru teatterin ja oopperan perinteessä",
@@ -15476,6 +15630,7 @@
       "source_license": "not_required",
       "source_work": "Various (1960s cultural movement)",
       "source_work_key": "mnemosyne.fi.work.various_1960s_cultural_movement",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Leivän ja ruusujen taistelu",
         "taistelu leivästä ja ruusuista",
@@ -15513,6 +15668,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.fi_opera_theatre_phrases_loppusoitto_taiteen_ja_aj",
       "id": "fi_cultural_reference_loppusoitto_taiteen_ja_ajan_haurauden_symboli_viittaus_suoma_e323f5c8",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -15526,6 +15682,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Loppusoitto",
         "loppusoittoesitys",
@@ -15658,6 +15815,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "lumottu metsä",
         "lumotun metsän paikka",
@@ -15711,6 +15869,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kalevala",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Lönnrotin Kalevala-illustraatiot",
         "Gallen-Kallelan Kalevala-illustraatiot",
@@ -15992,6 +16151,7 @@
       "source_url": "https://www.marxists.org/reference/archive/marcuse/works/one-dimensional-man/",
       "source_work": "One-Dimensional Man",
       "source_work_key": "mnemosyne.fi.work.one_dimensional_man",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "yhdenulotteinen ihminen",
         "yhden ulottuvuuden ihminen",
@@ -16153,6 +16313,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.fi_kalevala_proverbs_mieti_ennen_kuin_puhut_sillä_",
       "id": "fi_cultural_reference_mieti_ennen_kuin_puhut_sillä_sanat_ovat_kuin_lennät_viittaus_4dd326db",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -16166,6 +16327,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/2590",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Mieti ennen kuin puhut, sillä sanat ovat kuin lennät",
         "Sanat ovat kuin lennät, mieti ennen kuin puhut",
@@ -16285,6 +16447,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.fi.explanation.common_phrases_finnish_mistä_tämä_kaikki_alkoi",
       "id": "fi_cultural_reference_mistä_tämä_kaikki_alkoi_844b4d63",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -16298,6 +16461,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Mistä tämä kaikki alkoi?",
         "Mistä tämä kaikki alkoi",
@@ -16362,6 +16526,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Niskavuoren_nuori_em%C3%A4nt%C3%A4",
       "source_work": "Niskavuoren nuori emäntä",
       "source_work_key": "mnemosyne.fi.work.niskavuoren_nuori_emäntä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Niskavuoren nuori emäntä",
         "Niskavuoren nuori emäntä -näytös",
@@ -16547,6 +16712,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Olli_Mannermaa",
       "source_work": "Pohjolan lumo",
       "source_work_key": "mnemosyne.fi.work.pohjolan_lumo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Pohjolan lumo",
         "Olli Mannermaan 'Pohjolan lumo'",
@@ -16585,6 +16751,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.fi_opera_curtain_phrases_oopperan_tulipunaiset_ver",
       "id": "fi_cultural_reference_oopperan_tulipunaiset_verhot_intohimon_ja_tragedian_symboli__bf2de815",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -16599,6 +16766,7 @@
       "source_url": "https://oopperabaletti.fi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "oopperan tulipunaiset verhot",
         "tulipunaiset verhot",
@@ -16626,6 +16794,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/152",
       "source_work": "Die Zauberflöte (The Magic Flute)",
       "source_work_key": "mnemosyne.fi.work.die_zauberflöte_the_magic_flute",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "oopperan tähtien loisto",
         "taiteen ja vallan spektakkelisuus",
@@ -16760,6 +16929,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kaski_(maalaus)",
       "source_work": "Kaski",
       "source_work_key": "mnemosyne.fi.work.kaski",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Pekka Halosen 'Kaski'",
         "'Kaski'",
@@ -17302,6 +17472,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.fi.explanation.finnish_peace_tradition_rauha_ei_ole_poissaoloa_va",
       "id": "fi_cultural_reference_rauha_ei_ole_poissaoloa_vaan_läsnäoloa_viittaus_suomalaisen__5388679d",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17316,6 +17487,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Uuno_Kailas",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "rauha ei ole poissaoloa vaan läsnäoloa",
         "rauha on läsnäoloa, ei poissaoloa",
@@ -17540,6 +17712,7 @@
         "zh": "意为“符文歌手之地”，唤起芬兰口头诗歌和符文歌唱传统，常与卡累利阿和《卡勒瓦拉》相关联。"
       },
       "id": "fi_cultural_reference_runonlaulajan_maa_1d13c93a",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly explains the phrase's cultural significance and its association with Finnish oral tradition and runo singing.",
@@ -17553,6 +17726,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Runonlaulajan maa",
         "runonlaulajien maa",
@@ -17591,6 +17765,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.fi_ballet_sleeping_beauty_phrases_ruususen_unelma_",
       "id": "fi_cultural_reference_ruususen_unelma_toiveiden_ja_todellisuuden_ristiriita_viitta_7e082d13",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17605,6 +17780,7 @@
       "source_url": "https://oopperabaletti.fi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ruususen unelma",
         "toiveiden ja todellisuuden ristiriita",
@@ -18039,6 +18215,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Sibelius-talo",
       "source_work": "Sibelius-talo",
       "source_work_key": "mnemosyne.fi.work.sibelius_talo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Sibelius-talo",
         "Sibelius Hall",
@@ -18076,6 +18253,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition (possibly popularized by literature)",
       "source_work_key": "mnemosyne.fi.work.oral_tradition_possibly_popularized_by_literature",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Silti on elettävä",
         "Mutta silti on elettävä"
@@ -18317,6 +18495,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Suden hetki",
         "sudenhetki",
@@ -18369,6 +18548,7 @@
       "source_url": "https://imslp.org/wiki/Symphony_No.3_in_C_major,_Op.52_(Sibelius,_Jean)",
       "source_work": "Symphony No. 3 in C major, Op. 52",
       "source_work_key": "mnemosyne.fi.work.symphony_no_3_in_c_major_op_52",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "'Suomalaisen sinfonian' rakenne",
         "Suomalaisen sinfonian rakenne",
@@ -20047,6 +20227,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.finnish_mythology_phrases_tapion_metsä_piilotetun_",
       "id": "fi_cultural_reference_tapion_metsä_piilotetun_viisauden_ja_luonnon_mysteerin_paikk_11df5005",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -20060,6 +20241,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Tapio_(mytologia)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Tapion metsä",
         "Tapion metsän",
@@ -20073,6 +20255,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_cultural_phrases_tapion_suojelus_metsän_j",
       "id": "fi_cultural_reference_tapion_suojelus_metsän_ja_metsästäjän_yhteys_0fc86ad4",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -20086,6 +20269,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Kalevala",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Tapion suojelus",
         "Tapion suoja",
@@ -20360,6 +20544,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Tulevaisuus kuuluu niille, jotka valmistautuvat",
         "Tulevaisuus kuuluu valmistautuville",
@@ -20477,6 +20662,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_tuonela_phrases_tuonelan_lehtien_valheet_",
       "id": "fi_cultural_reference_tuonelan_lehtien_valheet_kuolemattomuuden_hinta_viittaus_kre_d032983b",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -20491,6 +20677,7 @@
       "source_url": "https://www.gutenberg.org/files/58885/58885-h/58885-h.htm#Runo_47",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Tuonelan lehtien valheet",
         "Tuonelan lehtien petollisuus",
@@ -20704,6 +20891,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Valkoisen ruusun maa",
         "maa valkoisen ruusun",
@@ -20793,6 +20981,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fi.explanation.fi_pantomimi_klovneria_valon_tanssi_valon_ja_varjo",
       "id": "fi_cultural_reference_valon_ja_varjon_tanssi_hyvän_ja_pahan_kohtaaminen_viittaus_s_ccce1f99",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -20806,6 +20995,7 @@
       "source_license": "not_required",
       "source_work": "Various (pantomime and clowning traditions)",
       "source_work_key": "mnemosyne.fi.work.various_pantomime_and_clowning_traditions",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Valon ja varjon tanssi",
         "hyvän ja pahan kohtaaminen",
@@ -20914,6 +21104,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Vapauden hinta on vastuun ottaminen",
         "Vapaus vaatii vastuuta",
@@ -21182,6 +21373,7 @@
         "zh": "口语化的感叹词，意为“哦，亲爱的，孩子们”，常用于歌曲或故事中，表达轻微的沮丧或同情。"
       },
       "id": "fi_cultural_reference_voi_voi_pojat_acaed7e5",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Colloquial Finnish interjection, correctly identified as a cultural reference.",
@@ -21395,6 +21587,7 @@
       "reference_type": "cultural_reference",
       "register": "common",
       "short_explanation": "To go wrong; literally, to go into the forest.",
+      "subcategory": "proverb",
       "surface_patterns": [
         "mennä metsään"
       ]
@@ -21418,6 +21611,7 @@
         "zh": "指黎明或清晨的第一缕光线，常在芬兰文学和文化中象征新的开始或希望。"
       },
       "id": "fi_literary_reference_aamun_koitto_5fc91bd2",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Kalevala is accurate; surface patterns are correct and useful for learners.",
@@ -21431,6 +21625,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/50594",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "aamun koitto",
         "aamunkoitto",
@@ -22022,6 +22217,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Alaston_kuningatar",
       "source_work": "Alaston kuningatar",
       "source_work_key": "mnemosyne.fi.work.alaston_kuningatar",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Alaston kuningatar"
       ]
@@ -22312,6 +22508,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Demonin_morsian",
       "source_work": "Demonin morsian",
       "source_work_key": "mnemosyne.fi.work.demonin_morsian",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Demonin morsian",
         "demonin morsiamen",
@@ -22406,6 +22603,7 @@
       "source_url": "https://www.gutenberg.fi/ebooks/huovinen_veikko_havukka-ahon_ajattelija",
       "source_work": "Havukka-ahon ajattelija",
       "source_work_key": "mnemosyne.fi.work.havukka_ahon_ajattelija",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "\"Ei se mitään, kunhan ei tämä vielä huonone!\"",
         "Ei se mitään, kunhan ei tämä vielä huonone!",
@@ -22431,6 +22629,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1484",
       "source_work": "Papin tytär",
       "source_work_key": "mnemosyne.fi.work.papin_tytär",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ei se mitään, kunhan vaan pysyy järjissään!",
         "Ei se mitään, kunhan pysyy järjissään!",
@@ -22510,6 +22709,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei se olekaan niin että kaikki olisi pelkkää peloittelua",
         "Kaikki ei olekaan pelkkää peloittelua",
@@ -22562,6 +22762,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1532",
       "source_work": "Ryysyrannan Jooseppi",
       "source_work_key": "mnemosyne.fi.work.ryysyrannan_jooseppi",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ei tämä helppoa ole, mutta ei sekään mahdotonta!",
         "Ei helppoa, mutta ei mahdotonta",
@@ -22642,6 +22843,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4975",
       "source_work": "Kansliapäällikön talossa",
       "source_work_key": "mnemosyne.fi.work.kansliapäällikön_talossa",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ei tämä maailma olekaan niin yksinkertainen kuin se tuntuu!",
         "Maailma ei olekaan niin yksinkertainen kuin se tuntuu.",
@@ -22681,6 +22883,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.kivi_seitseman_veljesta_dialect_phrases_ei_tämäkää",
       "id": "fi_literary_reference_ei_tämäkään_auta_kivi_murteen_lausahduksesta_seitsemän_velje_75b429db",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22695,6 +22898,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1830",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ei tämäkään auta!",
         "Ei tämä auta!",
@@ -22721,6 +22925,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1640",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ei tämäkään auta, sanoi Kivi",
         "Ei tämäkään auta, sanoi Kivi - elämän yksinkertaistaminen",
@@ -22803,6 +23008,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1503",
       "source_work": "Huojuva talo",
       "source_work_key": "mnemosyne.fi.work.huojuva_talo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ei tässä puututa mihinkään, vaan eletään omaa elämää!",
         "Ei puututa mihinkään, vaan eletään omaa elämää!",
@@ -22856,6 +23062,7 @@
         "zh": "埃诺·莱诺的一首爱国诗，他是芬兰最负盛名的诗人之一，常在文化语境中被朗诵和引用。"
       },
       "id": "fi_literary_reference_eino_leinon_hymni_53162e4f",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly identifies Eino Leino's patriotic poem 'Hymni' with verifiable surface patterns.",
@@ -22868,6 +23075,7 @@
       "source_license": "public_domain",
       "source_work": "Hymni",
       "source_work_key": "mnemosyne.fi.work.hymni",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Eino Leinon Hymni",
         "Hymni (Eino Leino)",
@@ -22962,6 +23170,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1621",
       "source_work": "Täysi kuu",
       "source_work_key": "mnemosyne.fi.work.täysi_kuu",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Elämä on kuin savotakämpän pöytä: pyörii ja pyörii, mutta ei pysähdy!",
         "Elämä on kuin savotakämpän pöytä",
@@ -22987,6 +23196,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4942",
       "source_work": "Juoksuhautojen jälkeen",
       "source_work_key": "mnemosyne.fi.work.juoksuhautojen_jälkeen",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Elämä on kuin savottakämpän lattia: pehmeä, mutta kylmä!",
         "Elämä on kuin savottakämpän lattia, pehmeä mutta kylmä.",
@@ -23013,6 +23223,7 @@
       "source_url": "https://www.gutenberg.fi/ebooks/wuolijoki-niskavuoren-naiset",
       "source_work": "Niskavuoren naiset",
       "source_work_key": "mnemosyne.fi.work.niskavuoren_naiset",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Elämä on surkea juttu",
         "Elämä on surkea juttu,"
@@ -23076,6 +23287,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Elämän ja kuoleman raja",
         "raja elämän ja kuoleman välillä",
@@ -23113,6 +23325,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Elämän vaellus",
         "Elämän vaellus -",
@@ -23139,6 +23352,7 @@
       "source_url": "https://www.gutenberg.fi/ebooks/kivi-seitseman-veljesta",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Enää ei olla lapsia",
         "Enää ei olla lapsia,"
@@ -23217,6 +23431,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5508",
       "source_work": "Faunin iltapäivä",
       "source_work_key": "mnemosyne.fi.work.faunin_iltapäivä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Faunin iltapäivä"
       ]
@@ -23433,6 +23648,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Malade_imaginaire",
       "source_work": "Le Malade imaginaire",
       "source_work_key": "mnemosyne.fi.work.le_malade_imaginaire",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Harharetket",
         "matkan symboli teatterin ja oopperan klassikoissa",
@@ -23547,6 +23763,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Hein%C3%A4hattu_ja_Vilttitossu",
       "source_work": "Heinähattu ja Vilttitossu -kirjasarja",
       "source_work_key": "mnemosyne.fi.work.heinähattu_ja_vilttitossu_kirjasarja",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Heinähattu ja Vilttitossu",
         "Heinähattu ja Vilttitossun",
@@ -23654,6 +23871,7 @@
         "zh": "意为“精神之焰”的诗意表达，常见于芬兰文学，用以象征内在的激情、灵感或精神觉醒。唤起温暖与活力的意象。"
       },
       "id": "fi_literary_reference_hengen_liekki_0e3998f5",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and useful for learners.",
@@ -23666,6 +23884,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Hengen liekki",
         "hengen liekki -",
@@ -23691,6 +23910,7 @@
         "zh": "意为“精神之风”的比喻性表达，常见于芬兰文学，用以描述灵感、变化或神圣影响的力量。暗示运动与转变。"
       },
       "id": "fi_literary_reference_hengen_tuuli_ac05c614",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and useful for learners.",
@@ -23703,6 +23923,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Hengen tuuli",
         "hengen tuuli -",
@@ -23728,6 +23949,7 @@
         "zh": "出自芬兰作家Kalle Päätalo小说《Herääjän aamu》的短语，象征觉醒或新的开始，常用于比喻意义。"
       },
       "id": "fi_literary_reference_herääjän_aamu_abcc0788",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Verified as a novel by Kalle Päätalo with thematic relevance.",
@@ -23741,6 +23963,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Her%C3%A4%C3%A4j%C3%A4n_aamu",
       "source_work": "Herääjän aamu",
       "source_work_key": "mnemosyne.fi.work.herääjän_aamu",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Herääjän aamu",
         "Herääjän aamu -"
@@ -23766,6 +23989,7 @@
       "source_url": "https://www.gutenberg.fi/ebooks/kivi-seitseman-veljesta",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Hiki päässä ja kulta kainalossa",
         "Hiki päässä ja kulta kainalossa,"
@@ -23841,6 +24065,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Hirviön kynnet",
         "hirviön kynnet -",
@@ -23936,6 +24161,7 @@
       "source_url": "https://www.gutenberg.fi/ebooks/paasilinna_arto_janiksen_vuosi",
       "source_work": "Jäniksen vuosi",
       "source_work_key": "mnemosyne.fi.work.jäniksen_vuosi",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "\"Hyvät ihmiset, millaista tämä elämä oikein on?\"",
         "Hyvät ihmiset, millaista tämä elämä oikein on?"
@@ -23960,6 +24186,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4990",
       "source_work": "Pekka Lipposen seikkailut (sarja)",
       "source_work_key": "mnemosyne.fi.work.pekka_lipposen_seikkailut_sarja",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Hyvät naiset ja herrat, elämä on lyhyt ja rahan määrä vähäinen!",
         "Elämä on lyhyt ja rahan määrä vähäinen.",
@@ -24014,6 +24241,7 @@
       "source_url": "https://www.gutenberg.fi/ebooks/linna-tuntematon-sotilas",
       "source_work": "Tuntematon sotilas",
       "source_work_key": "mnemosyne.fi.work.tuntematon_sotilas",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Hänen nimensä oli Suomenmaa",
         "Hänen nimensä oli Suomenmaa,"
@@ -24155,6 +24383,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/1531",
       "source_work": "The Winter's Tale",
       "source_work_key": "mnemosyne.fi.work.the_winter_s_tale",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Ihmenäytelmä",
         "Myöhäistalvi",
@@ -24167,6 +24396,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.viita_betonimyllari_phrases_ihmisen_ikävä_on_kuin_",
       "id": "fi_literary_reference_ihmisen_ikävä_on_kuin_aalto_lauri_viidan_runoilmaisu_bfb7968b",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24181,6 +24411,7 @@
       "source_url": "https://www.gutenberg.fi/ebooks/viita-betonimyllari",
       "source_work": "Betonimylläri",
       "source_work_key": "mnemosyne.fi.work.betonimylläri",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ihmisen ikävä on kuin aalto",
         "Ihmisen ikävä on kuin aalto,"
@@ -24205,6 +24436,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5510",
       "source_work": "Ihmisen tahdosta",
       "source_work_key": "mnemosyne.fi.work.ihmisen_tahdosta",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ihmisen tahdosta"
       ]
@@ -24400,6 +24632,7 @@
         "zh": "指的是《卡勒瓦拉》中神话铁匠伊尔马里宁的锻造场，魔法物品如桑波在此被创造。象征创造力、工艺和锻造命运的力量。"
       },
       "id": "fi_literary_reference_ilmarisen_paja_d63ca7ca",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Ilmarinen's forge is a well-known motif in the Kalevala, the surface patterns are accurate, and the explanation matches the literary context.",
@@ -24414,6 +24647,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Kalevala_(1862)/X",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ilmarisen paja",
         "Ilmarisen pajassa",
@@ -24584,6 +24818,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.eino_leino_hymyileva_apollo_phrases_joka_kylään_me",
       "id": "fi_literary_reference_joka_kylään_mennään_siinä_soi_viittaus_kansanperinteeseen_ja_f7cf6f1c",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24597,6 +24832,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4431",
       "source_work": "Hymyilevä Apollo",
       "source_work_key": "mnemosyne.fi.work.hymyilevä_apollo",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Joka kylään mennään, siinä soi!",
         "Siinä soi, kun kylään mennään!",
@@ -24643,6 +24879,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.haavikko_poetic_lines_jos_sinä_olet_täällä_paavo_h",
       "id": "fi_literary_reference_jos_sinä_olet_täällä_paavo_haavikon_runon_tunnettu_rivi_e078e1a4",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24656,6 +24893,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5415",
       "source_work": "Yksinäinen puu",
       "source_work_key": "mnemosyne.fi.work.yksinäinen_puu",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Jos sinä olet täällä",
         "Jos sinä olet täällä -",
@@ -24758,6 +24996,7 @@
         "zh": "指的是《卡勒瓦拉》中尤卡海宁与维纳莫伊宁的对决，象征着青春与智慧的冲突，以及歌声与知识的力量。"
       },
       "id": "fi_literary_reference_joukahaisen_kilpa_3f3860f0",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The contest between Joukahainen and Väinämöinen is a documented episode in the Kalevala, and the surface patterns and explanation are accurate.",
@@ -24772,6 +25011,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Kalevala_(1862)/III",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Joukahaisen kilpa",
         "Joukahaisen kilpailu",
@@ -24908,6 +25148,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5508",
       "source_work": "Juhana-herra",
       "source_work_key": "mnemosyne.fi.work.juhana_herra",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Juhana-herra",
         "Juhana herra"
@@ -24946,6 +25187,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Seitsem%C3%A4n_veljest%C3%A4",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Jukolan kartano",
         "Jukolan talo",
@@ -24984,6 +25226,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/12000",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Jukolan mäki",
         "Jukolan mäellä",
@@ -25076,6 +25319,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.aleksis_kivi_seitseman_veljesta_jumalan_kalastaja",
       "id": "fi_literary_reference_jumalan_kalastaja_9ae7edfc",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25089,6 +25333,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1289",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Jumalan kalastaja",
         "Jumalan kalastajan",
@@ -25102,6 +25347,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_phrases_jumalauta_mitä_tämä_on_lönnrotin_",
       "id": "fi_literary_reference_jumalauta_mitä_tämä_on_lönnrotin_kalevalan_käännöksestä_1b305df4",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25115,6 +25361,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/360",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Jumalauta, mitä tämä on?",
         "Jumalauta mitä tämä on?",
@@ -25315,6 +25562,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_cultural_phrases_kalevalan_aamu_uuden_päi",
       "id": "fi_literary_reference_kalevalan_aamu_uuden_päivän_toivo_ja_mahdollisuudet_7e6332e4",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25328,6 +25576,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Kalevala",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kalevalan aamu",
         "kalevalainen aamu",
@@ -25708,6 +25957,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_phrases_kalevalan_yö_pimeyden_ja_unen_aik",
       "id": "fi_literary_reference_kalevalan_yö_pimeyden_ja_unen_aika_e00356e4",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25721,6 +25971,7 @@
       "source_url": "https://www.gutenberg.org/files/57313/57313-h/57313-h.htm",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kalevalan yö",
         "Kalevalan yö pimeyden ja unen aika",
@@ -25847,6 +26098,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1665",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kalevan poika"
       ]
@@ -25926,6 +26178,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5477",
       "source_work": "Kansakunnan lapset",
       "source_work_key": "mnemosyne.fi.work.kansakunnan_lapset",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kansakunnan lapset",
         "kansakunnan lapset -"
@@ -26069,6 +26322,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/7000",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "kanteleensoitto",
         "kanteleen soitto",
@@ -26192,6 +26446,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.karelia_songs_karjalan_kunnailla",
       "id": "fi_literary_reference_karjalan_kunnailla_2690ab21",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26206,6 +26461,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Karjalan_kunnailla",
       "source_work": "Karjalan kunnailla (folk song)",
       "source_work_key": "mnemosyne.fi.work.karjalan_kunnailla_folk_song",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Karjalan kunnailla",
         "Karjalan kunnailla lauletaan",
@@ -26312,6 +26568,7 @@
         "zh": "埃诺·莱诺的诗作，赞美夏日之美，常在课堂上教授，以其对芬兰自然的生动描绘而闻名。"
       },
       "id": "fi_literary_reference_kesäpäivä_4fa94c52",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable poem by Eino Leino, correctly described.",
@@ -26325,6 +26582,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Kes%C3%A4p%C3%A4iv%C3%A4",
       "source_work": "Kesäpäivä",
       "source_work_key": "mnemosyne.fi.work.kesäpäivä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kesäpäivä",
         "Kesäpäivä (Eino Leino)",
@@ -26556,6 +26814,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1545",
       "source_work": "Kivenmurikka",
       "source_work_key": "mnemosyne.fi.work.kivenmurikka",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kivenmurikka",
         "kivenmurikoita"
@@ -26660,6 +26919,7 @@
         "zh": "一个唤起森林之王神话或民间传说狩猎的短语，常用于芬兰民俗和文学中象征未开发的荒野或自然的奥秘。"
       },
       "id": "fi_literary_reference_korven_kuninkaan_metsästys_fb9ef8d8",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to 'Kalevala' (Runo 1-50) is accurate and verifiable; surface patterns align with folklore themes.",
@@ -26674,6 +26934,7 @@
       "source_url": "https://sampo.puheentutkimus.fi/kalevala/teos.php",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "korven kuninkaan metsästys",
         "korven kuninkaan metsästykseen"
@@ -26751,6 +27012,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Koskenlaskijan_morsian",
       "source_work": "Koskenlaskijan morsian",
       "source_work_key": "mnemosyne.fi.work.koskenlaskijan_morsian",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Koskenlaskijan morsian",
         "Koskenlaskijan morsiamena",
@@ -27397,6 +27659,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5405",
       "source_work": "Tuntematon sotilas",
       "source_work_key": "mnemosyne.fi.work.tuntematon_sotilas",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kuka on laulanut tämän laulun?"
       ]
@@ -27420,6 +27683,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4955",
       "source_work": "Kihlaus",
       "source_work_key": "mnemosyne.fi.work.kihlaus",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kuka sanoo minulle totuuden",
         "Kuka sanoo minulle totuuden?"
@@ -27472,6 +27736,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5030",
       "source_work": "Tunteeton vuosi",
       "source_work_key": "mnemosyne.fi.work.tunteeton_vuosi",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kukaan ei kuulekaan minua!",
         "Kukaan ei kuule minua.",
@@ -27708,6 +27973,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_phrases_kullervon_huuto_tragedian_ja_yksi",
       "id": "fi_literary_reference_kullervon_huuto_tragedian_ja_yksinäisyyden_ääni_dfaace3a",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27721,6 +27987,7 @@
       "source_url": "https://www.gutenberg.org/files/57313/57313-h/57313-h.htm",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kullervon huuto",
         "Kullervon huuto tragedian ja yksinäisyyden ääni",
@@ -27795,6 +28062,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1665",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kullervo kiroaa",
         "kirous"
@@ -27897,6 +28165,7 @@
         "zh": "指《卡勒瓦拉》中“库列尔沃的哀叹”，库列尔沃为自己的命运悲叹的悲剧哀歌。象征芬兰民间传说中的悲伤、不公与命运的重负。"
       },
       "id": "fi_literary_reference_kullervon_valitus_044a7ab8",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to the Kalevala and Elias Lönnrot is accurate and verifiable.",
@@ -27911,6 +28180,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/51867",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kullervon valitus",
         "Kullervon valituksen",
@@ -27923,6 +28193,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_phrases_kullervon_varjo_menetyksen_ja_kos",
       "id": "fi_literary_reference_kullervon_varjo_menetyksen_ja_koston_kaiku_d536f73b",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27936,6 +28207,7 @@
       "source_url": "https://www.gutenberg.org/files/54790/54790-h/54790-h.htm",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kullervon varjo",
         "Kullervon varjon kaiku",
@@ -27948,6 +28220,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.waltari_kultainen_vasikka_kultainen_vasikka",
       "id": "fi_literary_reference_kultainen_vasikka_e9fd6e3a",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27961,6 +28234,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4515",
       "source_work": "Kultainen vasikka",
       "source_work_key": "mnemosyne.fi.work.kultainen_vasikka",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kultainen vasikka"
       ]
@@ -28012,6 +28286,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4432",
       "source_work": "Hurskaan enkelin muisto",
       "source_work_key": "mnemosyne.fi.work.hurskaan_enkelin_muisto",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kun ei kärsivällisyys riitä, ei mikään riitä!",
         "Ei kärsivällisyys riitä, ei mikään riitä!",
@@ -28077,6 +28352,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.kivi_seitseman_veljesta_phrases_kunhan_ei_tämä_vie",
       "id": "fi_literary_reference_kunhan_ei_tämä_vielä_huonone_0c6b3dee",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -28090,6 +28366,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1463",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kunhan ei tämä vielä huonone",
         "Kunhan ei tämä vielä huonone!",
@@ -28208,6 +28485,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Britannicus",
       "source_work": "Britannicus",
       "source_work_key": "mnemosyne.fi.work.britannicus",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kuninkaan kaatuminen",
         "vallan turhuus klassisessa tragediassa",
@@ -28342,6 +28620,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kurittomat lapset",
         "kurittomat lapset -"
@@ -28697,6 +28976,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.jansson_moomin_motifs_kylmä_rauhallinen_hiljaisuus",
       "id": "fi_literary_reference_kylmä_rauhallinen_hiljaisuus_tove_janssonin_muumitarinoiden__d68db1af",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -28710,6 +28990,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5416",
       "source_work": "Muumit-sarja (Moomin series)",
       "source_work_key": "mnemosyne.fi.work.muumit_sarja_moomin_series",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kylmä rauhallinen hiljaisuus",
         "kylmä, rauhallinen hiljaisuus",
@@ -28778,6 +29059,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kylän pappi",
         "kylän pappi -"
@@ -28815,6 +29097,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/3550",
       "source_work": "Tuntematon sotilas",
       "source_work_key": "mnemosyne.fi.work.tuntematon_sotilas",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "käden jälki",
         "käden jäljen",
@@ -28857,6 +29140,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.waltari_dramatic_symbols_käytävä_on_pitkä_ja_pimeä",
       "id": "fi_literary_reference_käytävä_on_pitkä_ja_pimeä_mika_waltarin_näytelmän_symboli_abc53883",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -28870,6 +29154,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4956",
       "source_work": "Käytävä on pitkä ja pimeä",
       "source_work_key": "mnemosyne.fi.work.käytävä_on_pitkä_ja_pimeä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Käytävä on pitkä ja pimeä",
         "käytävän on pitkä ja pimeä",
@@ -29019,6 +29304,7 @@
         "zh": "一个诗意的短语，唤起「歌唱的森林」的意象——常用于描述芬兰文学和民间传说中自然的声音，如树叶沙沙作响或鸟儿鸣唱。"
       },
       "id": "fi_literary_reference_laulava_metsä_f0778923",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Directly sourced from the Kalevala, a foundational Finnish epic, with accurate surface patterns.",
@@ -29032,6 +29318,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/543",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Laulava metsä",
         "laulavan metsän"
@@ -29043,6 +29330,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.fi.explanation.leino_poetic_heritage_laulu_ei_koskaan_kuole_eino_",
       "id": "fi_literary_reference_laulu_ei_koskaan_kuole_eino_leinojen_runouden_perintö_4d95268d",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -29056,6 +29344,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5417",
       "source_work": "Various poems (e.g., 'Laulu ei koskaan kuole')",
       "source_work_key": "mnemosyne.fi.work.various_poems_e_g_laulu_ei_koskaan_kuole",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Laulu ei koskaan kuole",
         "Laulu ei koskaan kuole..."
@@ -29146,6 +29435,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1536",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Lea",
         "Lea-nainen",
@@ -29433,6 +29723,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1665",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Lemminkäisen äiti pelastaa",
         "äiti pelastaja"
@@ -29735,6 +30026,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_cultural_phrases_louhen_kattila_taikavoim",
       "id": "fi_literary_reference_louhen_kattila_taikavoiman_ja_katoamisen_astia_40f17c04",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -29748,6 +30040,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Kalevala",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Louhen kattila",
         "Louhen kattilan taika",
@@ -29860,6 +30153,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_phrases_louhen_käsky_kuuliaisuuden_ja_val",
       "id": "fi_literary_reference_louhen_käsky_kuuliaisuuden_ja_vallan_kertomus_60fbae64",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -29873,6 +30167,7 @@
       "source_url": "https://www.gutenberg.org/files/57313/57313-h/57313-h.htm",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Louhen käsky",
         "Louhen käsky kuuliaisuuden ja vallan kertomus",
@@ -30062,6 +30357,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Läpi yön",
         "yön läpi",
@@ -30139,6 +30435,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/253",
       "source_work": "Seven Brothers",
       "source_work_key": "mnemosyne.fi.work.seven_brothers",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "maan murros",
         "maan murroksen"
@@ -30305,6 +30602,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.kivi_nummisuutarit_phrases_menestys_on_työn_palkka",
       "id": "fi_literary_reference_menestys_on_työn_palkka_kiven_nummisuutarit_näytelmän_teema_10b2133f",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -30318,6 +30616,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/2608",
       "source_work": "Nummisuutarit",
       "source_work_key": "mnemosyne.fi.work.nummisuutarit",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Menestys on työn palkka",
         "Menestys on työn palkka -",
@@ -30506,6 +30805,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5405",
       "source_work": "Tuntematon sotilas",
       "source_work_key": "mnemosyne.fi.work.tuntematon_sotilas",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Miehen täytyy olla miehiä, vaikka maailma menisikin nurin!",
         "Miehen täytyy olla miehiä, vaikka maailma menisi nurin!",
@@ -30611,6 +30911,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.sodergran_poetry_phrases_minä_en_olekaan_yksin_edi",
       "id": "fi_literary_reference_minä_en_olekaan_yksin_edith_södergranin_runouden_ydinsanoma_3ceec175",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -30624,6 +30925,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4580",
       "source_work": "Various (Södergran's poetry)",
       "source_work_key": "mnemosyne.fi.work.various_södergran_s_poetry",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Minä en olekaan yksin",
         "Minä en ole yksin",
@@ -30636,6 +30938,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.kivi_seitseman_veljesta_phrases_missä_on_viisaus_s",
       "id": "fi_literary_reference_missä_on_viisaus_siellä_on_voitto_kiven_seitsemän_veljestä_t_06ec1250",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -30649,6 +30952,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/2608",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Missä on viisaus, siellä on voitto",
         "Missä viisaus, siellä voitto",
@@ -30976,6 +31280,7 @@
         "zh": "埃诺·莱诺（Eino Leino）的诗作，他是芬兰最受喜爱的诗人之一，以其忧郁的美感和夜与自然的主题而闻名。是芬兰文学的经典之作。"
       },
       "id": "fi_literary_reference_nocturne_4c0bae96",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and verifiable reference to a well-known poem by Eino Leino.",
@@ -30989,6 +31294,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Nocturne_(Eino_Leino)",
       "source_work": "Nocturne",
       "source_work_key": "mnemosyne.fi.work.nocturne",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Nocturne",
         "Eino Leinon Nocturne",
@@ -31177,6 +31483,7 @@
       "source_url": "https://finlit.fi/kalle-paatalo-collection",
       "source_work": "Nuori metsä",
       "source_work_key": "mnemosyne.fi.work.nuori_metsä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Nuori metsä",
         "Nuorta metsää"
@@ -31188,6 +31495,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.waltari_joko_tai_phrases_nyt_on_aika_sanoa_joko_ta",
       "id": "fi_literary_reference_nyt_on_aika_sanoa_joko_tai_mika_waltarin_historiallisten_rom_98566eda",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -31201,6 +31509,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Mika_Waltari",
       "source_work": "Various historical novels",
       "source_work_key": "mnemosyne.fi.work.various_historical_novels",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Nyt on aika sanoa joko-tai",
         "Joko-tai on nyt ajankohtainen",
@@ -31308,6 +31617,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/65",
       "source_work": "Henry VI (plays)",
       "source_work_key": "mnemosyne.fi.work.henry_vi_plays",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "näytelmä kuninkaan kuolemasta",
         "kuninkaan kuoleman näytelmä",
@@ -31349,6 +31659,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.fi.explanation.kullervo_phrases_ollaanhan_me_kaikki_ihmisiä_vaikk",
       "id": "fi_literary_reference_ollaanhan_me_kaikki_ihmisiä_vaikka_erilaisia_viittaus_aleksi_a39bcb3c",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -31362,6 +31673,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5458",
       "source_work": "Kullervo",
       "source_work_key": "mnemosyne.fi.work.kullervo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ollaanhan me kaikki ihmisiä, vaikka erilaisia!",
         "Kaikki ovat ihmisiä, vaikka erilaisia",
@@ -31403,6 +31715,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.eino_leino_hymyileva_apollo_phrases_onnellisuus_on",
       "id": "fi_literary_reference_onnellisuus_on_siinä_että_ei_tarvitse_etsiä_sitä_viittaus_ei_ef43aade",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -31416,6 +31729,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4316",
       "source_work": "Hymyilevä Apollo",
       "source_work_key": "mnemosyne.fi.work.hymyilevä_apollo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Onnellisuus on siinä, että ei tarvitse etsiä sitä",
         "Onnellisuus on siinä, ettei tarvitse etsiä sitä",
@@ -31600,6 +31914,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_phrases_pilvipatsaan_varjo",
       "id": "fi_literary_reference_pilvipatsaan_varjo_bed47f16",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -31614,6 +31929,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/51743",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Pilvipatsaan varjo",
         "pilvipatsaan varjon alla",
@@ -31893,6 +32209,7 @@
         "zh": "指波赫约拉的盛大婚宴，是《卡勒瓦拉》中的关键情节，象征着卡勒瓦拉英雄与波赫约拉人之间的联盟与冲突。"
       },
       "id": "fi_literary_reference_pohjolan_häät_f1df7a98",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference is accurate, with correct surface patterns and source location for the wedding feast episode in the Kalevala.",
@@ -31907,6 +32224,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/5186",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Pohjolan häät",
         "Pohjolan häissä",
@@ -32266,6 +32584,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0186%3Acard%3D1180",
       "source_work": "Oedipus Rex (Oidipus kuningas)",
       "source_work_key": "mnemosyne.fi.work.oedipus_rex_oidipus_kuningas",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "päätöksen hetki",
         "klassisen tragedian huippukohta",
@@ -32306,6 +32625,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.juhani_aho_maailman_murheita_phrases_raha_ei_tee_o",
       "id": "fi_literary_reference_raha_ei_tee_onnelliseksi_mutta_ilman_rahaa_ei_voi_olla_onnel_ab8b5d53",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -32319,6 +32639,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1055",
       "source_work": "Maailman murheita",
       "source_work_key": "mnemosyne.fi.work.maailman_murheita",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Raha ei tee onnelliseksi, mutta ilman rahaa ei voi olla onnellinenkaan",
         "Raha ei tee onnelliseksi, mutta ilman rahaa ei voi olla onnellinen",
@@ -32410,6 +32731,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.eino_leino_elaman_virta_phrases_rakkaus_on_kuin_ku",
       "id": "fi_literary_reference_rakkaus_on_kuin_kuolema_se_ei_tunnu_ennen_kuin_on_liian_myöh_c1fa8485",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -32423,6 +32745,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4316",
       "source_work": "Elämän virta",
       "source_work_key": "mnemosyne.fi.work.elämän_virta",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Rakkaus on kuin kuolema – se ei tunnu, ennen kuin on liian myöhäistä",
         "Rakkaus on kuin kuolema, se ei tunnu ennen kuin on liian myöhäistä",
@@ -32607,6 +32930,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/27",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ruma ankanpoikanen",
         "Rumasta ankanpoikasesta",
@@ -33124,6 +33448,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.fi_haavikko_linnut_babyloniassa_sanat_ovat_kuin_ki",
       "id": "fi_literary_reference_sanat_ovat_kuin_kivet_ne_voivat_murskata_tai_rakentaa_viitta_567f3199",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33137,6 +33462,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4985",
       "source_work": "Linnut Babyloniassa",
       "source_work_key": "mnemosyne.fi.work.linnut_babyloniassa",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Sanat ovat kuin kivet: ne voivat murskata tai rakentaa!",
         "Sanat ovat kuin kivet, ne voivat murskata tai rakentaa.",
@@ -33163,6 +33489,7 @@
       "source_url": "https://www.marxists.org/reference/archive/sartre/works/exist/being-and-nothingness/",
       "source_work": "L'Être et le Néant (Being and Nothingness)",
       "source_work_key": "mnemosyne.fi.work.l_être_et_le_néant_being_and_nothingness",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "\"Ihminen on tuomittu vapauteen\"",
         "Ihminen on tuomittu vapauteen",
@@ -33176,6 +33503,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.fi.explanation.sartre_no_exit_phrases_sartren_tunnettu_lausahdus_",
       "id": "fi_literary_reference_sartren_tunnettu_lausahdus_helvetti_on_toiset_bade19c1",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33190,6 +33518,7 @@
       "source_url": "https://www.gutenberg.org/files/63648/63648-h/63648-h.htm",
       "source_work": "Huis Clos (No Exit)",
       "source_work_key": "mnemosyne.fi.work.huis_clos_no_exit",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "\"Helvetti on toiset\"",
         "Helvetti on toiset",
@@ -33229,6 +33558,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Seitsem%C3%A4n_veljest%C3%A4",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Seitsemän veljeksen juhannus",
         "juhannus Seitsemässä veljeksessä",
@@ -33345,6 +33675,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1609",
       "source_work": "The Shepherd",
       "source_work_key": "mnemosyne.fi.work.the_shepherd",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Sielunpaimen",
         "Sielunpaimen-näytelmä",
@@ -33520,6 +33851,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.vaino_linna_tuntematon_sotilas_phrases_sota_on_kai",
       "id": "fi_literary_reference_sota_on_kaikkein_julmin_opettaja_viittaus_väinö_linnan_romaa_5d4b7fe4",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33533,6 +33865,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4320",
       "source_work": "Tuntematon sotilas",
       "source_work_key": "mnemosyne.fi.work.tuntematon_sotilas",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Sota on kaikkein julmin opettaja",
         "Sota on julmin opettaja",
@@ -33692,6 +34025,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.sillanpaa_miesten_tie_phrases_taivas_varjele_kun_e",
       "id": "fi_literary_reference_taivas_varjele_kun_ei_osaa_olla_yksin_viittaus_f_e_sillanpää_ade51263",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33705,6 +34039,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4436",
       "source_work": "Miehen tie",
       "source_work_key": "mnemosyne.fi.work.miehen_tie",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Taivas varjele, kun ei osaa olla yksin!",
         "Taivas varjele, kun ei osaa olla yksin"
@@ -33716,6 +34051,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_phrases_tapion_metsän_salaisuus_luonon_ja",
       "id": "fi_literary_reference_tapion_metsän_salaisuus_luonon_ja_ihmisen_kohtaaminen_be49a4e8",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33729,6 +34065,7 @@
       "source_url": "https://www.gutenberg.org/files/57313/57313-h/57313-h.htm",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Tapion metsän salaisuus",
         "Tapion metsän salaisuus luonnon ja ihmisen kohtaaminen",
@@ -33901,6 +34238,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.aho_rautatie_phrases_totta_kai_se_on_totta_mutta_k",
       "id": "fi_literary_reference_totta_kai_se_on_totta_mutta_kuka_sen_sanoo_viittaus_juhani_a_fe9d161a",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33914,6 +34252,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4435",
       "source_work": "Rautatie",
       "source_work_key": "mnemosyne.fi.work.rautatie",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Totta kai se on totta, mutta kuka sen sanoo?",
         "Totta kai se on totta, kuka sen sanoo?",
@@ -34029,6 +34368,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.literary_adaptations_tuntematon_sotilas_lauluversi",
       "id": "fi_literary_reference_tuntematon_sotilas_lauluversiona_f3c6813a",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34042,6 +34382,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Tuntematon_sotilas_(romaani)",
       "source_work": "Tuntematon sotilas",
       "source_work_key": "mnemosyne.fi.work.tuntematon_sotilas",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Tuntematon sotilas – lauluversiona",
         "Tuntematon sotilas lauluversiona",
@@ -34085,6 +34426,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/13924",
       "source_work": "Tuomon kirja",
       "source_work_key": "mnemosyne.fi.work.tuomon_kirja",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Tuomon kirja",
         "Tuomon kirjassa",
@@ -34243,6 +34585,7 @@
         "zh": "阿罗·赫拉科斯基的现代主义诗集，1923年芬兰诗歌的开创性作品。"
       },
       "id": "fi_literary_reference_tähtitarha_8554f9fa",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly identifies Aaro Hellaakoski's modernist poetry collection from 1923.",
@@ -34256,6 +34599,7 @@
       "source_url": "https://fi.wikisource.org/wiki/T%C3%A4htitarha",
       "source_work": "Tähtitarha",
       "source_work_key": "mnemosyne.fi.work.tähtitarha",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Tähtitarha",
         "Hellaakosken Tähtitarha",
@@ -34525,6 +34869,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fi.explanation.canth_anna_liisa_phrases_vapaa_on_se_joka_ei_tarvi",
       "id": "fi_literary_reference_vapaa_on_se_joka_ei_tarvitse_ketään_viittaus_minna_canthin_n_5718eeaf",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34538,6 +34883,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4434",
       "source_work": "Anna Liisa",
       "source_work_key": "mnemosyne.fi.work.anna_liisa",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Vapaa on se, joka ei tarvitse ketään!",
         "Vapaa on se, joka ei tarvitse ketään",
@@ -34947,6 +35293,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_phrases_väinämöisen_ikuinen_laulu_runon_j",
       "id": "fi_literary_reference_väinämöisen_ikuinen_laulu_runon_ja_perinteen_säilytys_003dece8",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34960,6 +35307,7 @@
       "source_url": "https://www.gutenberg.org/files/57313/57313-h/57313-h.htm",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Väinämöisen ikuinen laulu",
         "Väinämöisen ikuinen laulu runon ja perinteen säilytys",
@@ -35032,6 +35380,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1665",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "kannel"
       ]
@@ -35369,6 +35718,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_cultural_phrases_väinämöisen_vene_matkan_",
       "id": "fi_literary_reference_väinämöisen_vene_matkan_aloitus_ja_kotiinpaluun_symboli_eb2dacc6",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35382,6 +35732,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Kalevala",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "matkan aloitus veneellä",
         "kotiinpaluun vene",
@@ -35469,6 +35820,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.fi.explanation.poetry_phrases_yksinäinen_metsästys",
       "id": "fi_literary_reference_yksinäinen_metsästys_3432a0b9",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35482,6 +35834,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Helkavirsi%C3%A4",
       "source_work": "Helkavirsiä",
       "source_work_key": "mnemosyne.fi.work.helkavirsiä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Yksinäinen metsästys",
         "Yksinäinen metsästys -runo",
@@ -35498,6 +35851,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.kivi_seitseman_veljesta_phrases_yksinäisyys_on_val",
       "id": "fi_literary_reference_yksinäisyys_on_valinta_eristäytyminen_pakko_viittaus_suomala_5f459467",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35511,6 +35865,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1433",
       "source_work": "Seitsemän veljestä",
       "source_work_key": "mnemosyne.fi.work.seitsemän_veljestä",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Yksinäisyys on valinta, eristäytyminen pakko",
         "Yksinäisyys on valinta, eristäytyminen on pakko",
@@ -35578,6 +35933,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fi.explanation.eino_leino_symbolism_älä_luota_siihen_mikä_näyttää",
       "id": "fi_literary_reference_älä_luota_siihen_mikä_näyttää_kauniilta_sillä_kauneus_on_har_de6f2790",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35591,6 +35947,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Eino_Leino",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Älä luota siihen, mikä näyttää kauniilta",
         "Kauneus on harha",
@@ -35833,6 +36190,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ankkuri laskee",
         "ankkurit laskevat"
@@ -35884,6 +36242,7 @@
       "source_url": "https://sanat.fi/sanat/suomi/proverbit",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Autualla ei ilveleillä",
         "Älä ilvele autualla",
@@ -35910,6 +36269,7 @@
       "source_url": "https://sanat.fi/sanat/suomi/proverbit",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei ilveellä leikitä, kun on kiire töihin",
         "Älä ilvele, kun on kiire töihin",
@@ -36147,6 +36507,7 @@
       "source_url": "https://sanat.fi/sanat/suomi/proverbit",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei kaksin kerrota, mitä yksin ajattelee",
         "Älä kerro kaikkea, mitä ajattelet",
@@ -36586,6 +36947,7 @@
       "source_url": "https://sanat.fi/sanat/suomi/proverbit",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei päivää ilman yötä"
       ]
@@ -36677,6 +37039,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei sanaa sanomalla saada, mutta sanomalla paljon hävittää!",
         "Ei sanaa sanomalla saa, mutta sanomalla paljon häviää!",
@@ -36714,6 +37077,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei savua ilman tulta",
         "savu ilman tulta"
@@ -36794,6 +37158,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei se ole niin yksinkertaista, kuin miltä se näyttää",
         "Se ei ole niin yksinkertaista kuin miltä näyttää",
@@ -37169,6 +37534,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei turhia sanoja, mutta ei myöskään tarpeettomia!",
         "Ei turhia sanoja, eikä myöskään tarpeettomia!",
@@ -37232,6 +37598,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei tämä tässä määrin ollutkaan",
         "Ei tämä ollutkaan tässä määrin",
@@ -37399,6 +37766,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ei ylen määrin ruokaa, ei vähin määrin työtä!",
         "Ei liikaa ruokaa, ei liian vähän työtä!",
@@ -37437,6 +37805,7 @@
       "source_url": "https://sanat.sanakirja.org/fi/halla%20laila",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "halla lailla",
         "halla lailla -",
@@ -37565,6 +37934,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Hyvän sanan kuuleminen on parempi kuin hopean antaminen!",
         "Hyvän sanan kuuleminen on parempi kuin hopean antaminen."
@@ -37774,6 +38144,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Joka kylään tulee, sen tapaan pitää!",
         "Kun kylään tulee, sen tapaan pitää!",
@@ -37799,6 +38170,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Joka laulaen elää, se iloisenakin kuolee",
         "Joka laulaa eläen, se iloisena kuolee",
@@ -37824,6 +38196,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Joka nuorena nälkään näkee, vanhana leipää varoo",
         "Joka nuorena nälkään näkee, vanhana leipää varoo!",
@@ -37875,6 +38248,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Joka sanoo, se vastaa",
         "Joka sanoo, se vastaa!",
@@ -37952,6 +38326,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Joka vanhalle tikulle luottaa, se nuorelta polvelta lankeaa",
         "Vanhalle tikulle luottava lankeaa nuorelta polvelta",
@@ -38143,6 +38518,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Kiven alla kätketty vesi, ihmisen sydämessä kätketty viisaus!",
         "Kiven alla kätketty vesi, sydämessä kätketty viisaus",
@@ -38684,6 +39060,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Kun ei ole muuta, niin pitää olla toivo!",
         "Ei ole muuta, kuin pitää olla toivo",
@@ -38773,6 +39150,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Kun on pahaa, niin hyväkin pääsee pakoon!",
         "Pahaa pääsee pakoon, hyväkin",
@@ -39069,6 +39447,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Kyllä tämäkin vielä kestää",
         "Kyllä tämäkin kestää",
@@ -39330,6 +39709,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Mistä on tullut, sinne myös palaa!",
         "Mistä tullut, sinne palaa",
@@ -39449,6 +39829,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Nälkä on paras maistaja, mutta kuolema on paras ruokkija!",
         "Nälkä paras maistaja, kuolema paras ruokkija",
@@ -39671,6 +40052,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Onni on siinä, että ei osaa odottaa liikaa",
         "Onni on siinä, ettei osaa odottaa liikaa",
@@ -39735,6 +40117,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Pahaa onnea, hyvästäkin ei pidä kiittää",
         "Pahaa onnea, eikä hyvästä pidä kiittää",
@@ -39788,6 +40171,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Pahaa puhetta seuraa huonoa kuulemista",
         "Paha puhe seuraa huonoa kuulemista",
@@ -39878,6 +40262,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Pilkan kirous pysyy pidempään kuin nauranut suu",
         "Pilkan kirous pysyy pidempään kuin naurava suu",
@@ -39968,6 +40353,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Pitkään paistettua, pitkään kestävää",
         "Pitkään paistettu, pitkään kestää",
@@ -40086,6 +40472,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Raha ei kasvata puuta, mutta se voi kaataa metsän",
         "Raha ei kasvata puuta, mutta se kaataa metsän",
@@ -40163,6 +40550,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Sananen sanottu, sananen mennyt, sananen sanomatta, sananen pelastettu",
         "Sananen sanottu, sananen mennyt, sanomaton sananen pelastettu",
@@ -40283,6 +40671,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Suuri puu kaadetaan, kun se on nuori",
         "Nuori puu kaadetaan",
@@ -40536,6 +40925,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Työ tekee vapaaksi, mutta vapaa ei tee työtä",
         "Työ tekee vapaaksi, mutta vapaa ei tee työtä!",
@@ -40561,6 +40951,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Työn jälkeen on lepo, mutta lepoonkin kuuluu työ",
         "Työn jälkeen on lepo, mutta lepoon kuuluu työ",
@@ -40586,6 +40977,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Vanhana opittu, nuorena unohdettu",
         "Vanha opittu, nuorena unohdettu",
@@ -40638,6 +41030,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Vesi virtaa, kivi pysyy – kuka on oikeassa?",
         "Vesi virtaa, kivi pysyy, kuka on oikeassa?"
@@ -40662,6 +41055,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Vesi virtaa, kivi seisoo",
         "Vesi virtaa, kivi pysyy",
@@ -40729,6 +41123,7 @@
       "source_url": "https://sanat.fi/sanat/idiomit/yksin%C3%A4inen-susi-ei-mets%C3%A4st%C3%A4-onnelliseksi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Yksinäinen susi ei metsästä onnelliseksi",
         "Yksinäinen susi ei metsästä onnellista",
@@ -40780,6 +41175,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ystävä tunnetaan hätätilassa",
         "Ystävä tunnetaan hätätilassa!",
@@ -40805,6 +41201,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Älä heitä nuijaa kaivoon, josta vettä juot",
         "Älä heitä nuijaa kaivoon, josta vettä juotte",

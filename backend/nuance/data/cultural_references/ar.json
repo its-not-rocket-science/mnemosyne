@@ -18,6 +18,7 @@
       "source_license": "public_domain",
       "source_work": "Various (Sufi and ascetic literature)",
       "source_work_key": "mnemosyne.ar.work.various_sufi_and_ascetic_literature",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "السلامة من الدنيا فما فيها",
         "سلامتكم من الدنيا فما فيها"
@@ -1161,6 +1162,7 @@
       "source_url": "https://sunnah.com/bukhari/78/612",
       "source_work": "Sahih al-Bukhari",
       "source_work_key": "mnemosyne.ar.work.sahih_al_bukhari",
+      "subcategory": "hadith",
       "surface_patterns": [
         "إذا لم تستحِ فاصنع ما شئت"
       ]
@@ -1576,6 +1578,7 @@
       "source_url": "https://sunnah.com",
       "source_work": "الحديث النبوي",
       "source_work_key": "mnemosyne.ar.work.الحديث_النبوي",
+      "subcategory": "null",
       "surface_patterns": [
         "إنما نحن عبيد الله",
         "نحن عبيد الله",
@@ -2101,6 +2104,7 @@
       "source_url": "https://archive.org/details/alsiratannabawia",
       "source_work": "السيرة النبوية",
       "source_work_key": "mnemosyne.ar.work.السيرة_النبوية",
+      "subcategory": "hadith",
       "surface_patterns": [
         "حرام بن ملحان",
         "حرام بن ملحان الأنصاري",
@@ -2184,6 +2188,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D9%88%D8%B7%D8%B3/",
       "source_work": "Lisan al-Arab",
       "source_work_key": "mnemosyne.ar.work.lisan_al_arab",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الآن حمى الوطيس",
         "حمي الوطيس الآن",
@@ -2824,6 +2829,7 @@
       "source_url": "https://sunnah.com/muslim/1/165",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "hadith",
       "surface_patterns": [
         "التواضع رأس كل خير",
         "التواضع رأس كل خيرها",
@@ -2863,6 +2869,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "hadith",
       "surface_patterns": [
         "التأني من الرحمن",
         "العجلة من الشيطان",
@@ -3202,6 +3209,7 @@
       "source_url": "https://sunnah.com/muslim/1/55",
       "source_work": "Sahih Muslim",
       "source_work_key": "mnemosyne.ar.work.sahih_muslim",
+      "subcategory": "hadith",
       "surface_patterns": [
         "الدين النصيحة",
         "الدين النصيحة والدنيا المصلحة"
@@ -3746,6 +3754,7 @@
       "source_url": "https://sunnah.com/bukhari/18/33",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "hadith",
       "surface_patterns": [
         "الصبر عند أول صدمة",
         "الصبر عند أول مصيبة",
@@ -3773,6 +3782,7 @@
       "source_url": "https://dorar.net/hadith/sharh/2601",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "hadith",
       "surface_patterns": [
         "الصلاة عماد الدين",
         "الصلاة عماد الدينه",
@@ -3815,6 +3825,7 @@
       "source_url": "https://archive.org/details/alsihah",
       "source_work": "الصحاح في اللغة",
       "source_work_key": "mnemosyne.ar.work.الصحاح_في_اللغة",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الصحاح للجوهري",
         "الصحاح للجوهري في اللغة",
@@ -4131,6 +4142,7 @@
       "source_url": "https://sunnah.com/bukhari/65/10",
       "source_work": "Various (Hadith collections)",
       "source_work_key": "mnemosyne.ar.work.various_hadith_collections",
+      "subcategory": "hadith",
       "surface_patterns": [
         "اللهم صل على محمد وعلى آل محمد",
         "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ",
@@ -4335,6 +4347,7 @@
       "source_url": "https://quran.com/2/156",
       "source_work": "Quran",
       "source_work_key": "mnemosyne.ar.work.quran",
+      "subcategory": "quranic",
       "surface_patterns": [
         "الموت حق",
         "الموت حق لا محالة"
@@ -4398,6 +4411,7 @@
       "source_url": "https://quran.com/3/169",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "الموت في سبيل الله",
         "الموت في سبيل الله تعالى",
@@ -5127,6 +5141,7 @@
       "source_url": "https://sunnah.com/bukhari/25/11",
       "source_work": "الحديث النبوي",
       "source_work_key": "mnemosyne.ar.work.الحديث_النبوي",
+      "subcategory": "hadith",
       "surface_patterns": [
         "حجة الوداع",
         "حجة النبي صلى الله عليه وسلم",
@@ -5369,6 +5384,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "حيث لا يعلم إلا الله",
         "حيث لا يعلم إلا الله تعالى",
@@ -5595,6 +5611,7 @@
       "source_url": "https://www.alwaraq.net",
       "source_work": "السيرة النبوية",
       "source_work_key": "mnemosyne.ar.work.السيرة_النبوية",
+      "subcategory": "null",
       "surface_patterns": [
         "رسول الله يوم حنين",
         "يوم حنين",
@@ -6861,6 +6878,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "لا تتبع إلا الحق ولو كان قليلاً",
         "اتبع الحق ولو كان قليلاً",
@@ -7011,6 +7029,7 @@
         "zh": "这句谚语归功于先知穆罕默德，意思是明智的信徒不会两次犯同样的错误。它强调从经验中学习，在阿拉伯语中广泛用作对重复错误的警示。"
       },
       "id": "ar_classical_or_scriptural_allusion_لا_يلدغ_المؤمن_من_جحر_مرتين_5f29104c",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This is an authentic hadith found in Sahih al-Bukhari and Sahih Muslim, correctly attributed to the Prophet Muhammad.",
@@ -7024,6 +7043,7 @@
       "source_url": "https://sunnah.com/bukhari/6133",
       "source_work": "Sahih al-Bukhari, Sahih Muslim",
       "source_work_key": "mnemosyne.ar.work.sahih_al_bukhari_sahih_muslim",
+      "subcategory": "hadith",
       "surface_patterns": [
         "لا يلدغ المؤمن من جحر مرتين",
         "لا يلدغ المؤمن من جحر واحد مرتين",
@@ -7230,6 +7250,7 @@
       "source_url": "https://sunnah.com/muslim/1/121",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "hadith",
       "surface_patterns": [
         "ما نزلت آية في القرآن إلا وأنا أعلم أين نزلت",
         "ما نزلت آية إلا وأنا أعلم أين نزلت",
@@ -7288,6 +7309,7 @@
       "source_url": "https://archive.org/details/BadaiAlZuhur",
       "source_work": "التاريخ الإسلامي",
       "source_work_key": "mnemosyne.ar.work.التاريخ_الإسلامي",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "معركة مرج دابق",
         "مرج دابق",
@@ -7373,6 +7395,7 @@
       "source_url": "https://sunnah.com/bukhari/67/1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "hadith",
       "surface_patterns": [
         "من أحيى سنة من سنتي فعليه من الأجر مثل أجر من عمل بها",
         "من أحيى سنة من سنتي فله أجر من عمل بها",
@@ -7429,6 +7452,7 @@
       "source_url": "https://sunnah.com/muslim/35/64",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "hadith",
       "surface_patterns": [
         "من سلك طريقا يلتمس فيه علما سهل الله له طريقا الى الجنة",
         "من سلك طريقا يلتمس فيه علما سهل الله له طريقه الى الجنه",
@@ -7631,6 +7655,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE_%D8%A7%D9%84%D8%B1%D8%B3%D9%84_%D9%88%D8%A7%D9%84%D9%85%D9%84%D9%88%D9%83/%D8%A7%D9%84%D8%AC%D8%B2%D8%A1_%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB",
       "source_work": "تاريخ الطبري",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الطبري",
+      "subcategory": "null",
       "surface_patterns": [
         "معركة القادسية",
         "القادسية",
@@ -9198,6 +9223,7 @@
       "source_url": "https://ar.wikisource.org/wiki/تاريخ_الطبري/الجزء_الرابع/مقتل_الحسين",
       "source_work": "Various (e.g., تاريخ الطبري)",
       "source_work_key": "mnemosyne.ar.work.various_e_g_تاريخ_الطبري",
+      "subcategory": "hadith",
       "surface_patterns": [
         "واقعة كربلاء",
         "معركة كربلاء",
@@ -9262,6 +9288,7 @@
       "source_url": "https://ar.wikisource.org/wiki/تاريخ_الطبري/الجزء_الخامس/وقعة_صفين",
       "source_work": "تاريخ الطبري",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الطبري",
+      "subcategory": "classical",
       "surface_patterns": [
         "وقعة صفين",
         "معركة صفين",
@@ -9739,6 +9766,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "السلامة من الدنيا وما فيها",
         "سلامتك من الدنيا وما فيها",
@@ -9765,6 +9793,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "السلامة يا قومي وداعا",
         "السلامة يا قوم وداعا",
@@ -9791,6 +9820,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "سلام من يومنا ذاك",
         "السلام من يومنا ذاك",
@@ -9816,6 +9846,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "سلام من يومنا هذا",
         "السلام من يومنا هذا",
@@ -10016,6 +10047,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/%D8%A3%D9%8A%D8%A7%D9%85_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "أيام العرب",
         "في أيام العرب",
@@ -10496,6 +10528,7 @@
       "source_url": "https://quran.com/15/9",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "القرآن كلام الله",
         "القرآن كلام اللهه",
@@ -10569,6 +10602,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الأدب الأندلسي",
         "أدب الأندلس",
@@ -10608,6 +10642,7 @@
       "source_url": "https://archive.org/details/alalam",
       "source_work": "الأعلام",
       "source_work_key": "mnemosyne.ar.work.الأعلام",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الأعلام للزركلي",
         "معجم الأعلام للزركلي",
@@ -10674,6 +10709,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/الأمويون_في_الأندلس",
       "source_work": "تاريخ الأندلس",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الأندلس",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الأمويون في الأندلس",
         "الدولة الأموية في الأندلس",
@@ -10712,6 +10748,7 @@
       "source_url": "https://archive.org/details/aldurar_altamin",
       "source_work": " Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الأنواء",
         "الأنواء في الجاهلية",
@@ -10924,6 +10961,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الثقافة العربية في الأندلس",
         "الثقافة الأندلسية",
@@ -10963,6 +11001,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الجزيرة الخضراء",
         "جزيرة خضراء",
@@ -11149,6 +11188,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الحلم العربي",
         "الحلم العربيّ",
@@ -11187,6 +11227,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الحلم الفلسطيني",
         "حلم الفلسطينيّين"
@@ -11211,6 +11252,7 @@
       "source_license": "not_required",
       "source_work": "Various Sufi texts",
       "source_work_key": "mnemosyne.ar.work.various_sufi_texts",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الخانقاه",
         "خانقاه",
@@ -11373,6 +11415,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/هارون_الرشيد",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الرشيد والعصر الذهبي",
         "عصر هارون الرشيد",
@@ -11416,6 +11459,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الزهاوي",
         "زهاوي",
@@ -11681,6 +11725,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Jahili_poetry",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الشعراء في العصر الجاهلي",
         "شعراء العصر الجاهلي",
@@ -11706,6 +11751,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%A7%D9%84%D8%B5%D8%AF%D9%8A%D9%82_%D9%88%D9%82%D8%AA_%D8%A7%D9%84%D8%B6%D9%8A%D9%82",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الصديق وقت الضيق"
       ]
@@ -11742,6 +11788,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الضربة القاضية",
         "ضربة قاضية"
@@ -11779,6 +11826,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "العصر الجاهلي",
         "الجاهلية",
@@ -11871,6 +11919,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%A7%D9%84%D8%BA%D8%A7%D9%8A%D8%A9_%D8%AA%D8%A8%D8%B1%D8%B1_%D8%A7%D9%84%D9%88%D8%B3%D9%8A%D9%84%D8%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الغاية تبرر الوسيلة"
       ]
@@ -11981,6 +12030,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الفارس العربي",
         "فارس عربي",
@@ -12217,6 +12267,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%82%D9%8A%D8%B1%D9%88%D8%A7%D9%86",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "القيروان وأهميتها",
         "أهمية القيروان",
@@ -12271,6 +12322,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "hadith",
       "surface_patterns": [
         "اللهم بارك لنا في يومنا هذا",
         "اللهم بارك لنا في يومنا ده",
@@ -12386,6 +12438,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال ولا نفس ولا أصل ولا فصل ولا له جمل ولا له كعكة",
         "اللي ما له同日 ما له عدله ولا له صدقه ولا له حاله ولا له ماله ولا نفسه ولا أصلة ولا فصله ولا له جمله ولا له كعكته",
@@ -12505,6 +12558,7 @@
       "source_url": "https://www.wikisource.org/wiki/Category:Arabic_epics",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الملحمة العربية",
         "ملحمة عربية",
@@ -12638,6 +12692,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "النار شريكة كل من عصى",
         "ناره شريكة كل من عصاه",
@@ -12744,6 +12799,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%A3%D9%86%D8%A7_%D8%A7%D9%84%D8%BA%D8%B1%D9%8A%D9%82_%D9%81%D9%85%D8%A7_%D8%AE%D9%88%D9%81%D9%8A_%D9%85%D9%86_%D8%A7%D9%84%D8%A8%D9%84%D9%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "أنا الغريق فما خوفي من البلل"
       ]
@@ -13262,6 +13318,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%AB%D8%A8%D8%AA_%D8%A7%D9%84%D8%B9%D8%B1%D8%B4_%D8%AB%D9%85_%D8%A7%D9%86%D9%82%D8%B4",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "ثبت العرش ثم انقش"
       ]
@@ -13308,6 +13365,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/ثورة_الزنج",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "ثورة العبيد الزنج",
         "ثورة الزنج في البصرة",
@@ -13372,6 +13430,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/القرامطة",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "ثورة القرامطة",
         "ثورات القرامطة",
@@ -13778,6 +13837,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "حنين إلى الماضي",
         "الحنين إلى الماضي",
@@ -13821,6 +13881,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "خالد بن الوليد",
         "خالد",
@@ -13883,6 +13944,7 @@
       "source_url": "https://www.islamweb.net/ar/library/index.php?page=bookcontents&ID=1&bk_no=1",
       "source_work": "تاريخ الطبري",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الطبري",
+      "subcategory": "null",
       "surface_patterns": [
         "خلافة عمر بن الخطاب",
         "عمر بن الخطاب",
@@ -13956,6 +14018,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/دولة_الأمويين_في_الأندلس",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "دولة الأمويين في الأندلس",
         "دولة بني أمية في الأندلس",
@@ -13984,6 +14047,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Fatimid_Caliphate",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "دولة الفاطميين",
         "الدولة الفاطمية",
@@ -14013,6 +14077,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/دولة_المماليك",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "دولة المماليك البحرية",
         "دولة المماليك البرجية",
@@ -14042,6 +14107,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Almohad_Caliphate",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "دولة الموحدين",
         "الدولة الموحدية",
@@ -14273,6 +14339,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B1%D8%B6%D8%A7_%D8%A7%D9%84%D9%86%D8%A7%D8%B3_%D8%BA%D8%A7%D9%8A%D8%A9_%D9%84%D8%A7_%D8%AA%D8%AF%D8%B1%D9%83",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "رضا الناس غاية لا تدرك"
       ]
@@ -14413,6 +14480,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/سقوط_الأندلس",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "سقوط الأندلس",
         "fall of Al-Andalus",
@@ -14440,6 +14508,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Siege_of_Baghdad_(1258)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "سقوط بغداد على يد المغول",
         "سقوط بغداد ده",
@@ -14467,6 +14536,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B3%D9%84%D8%A7%D9%85%D8%A9_%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86_%D9%81%D9%8A_%D8%AD%D9%81%D8%B8_%D8%A7%D9%84%D9%84%D8%B3%D8%A7%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "سلامة الإنسان في حفظ اللسان"
       ]
@@ -14502,6 +14572,7 @@
       "source_license": "public_domain",
       "source_work": "تاريخ الدولة العثمانية",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الدولة_العثمانية",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "سليم الأول",
         "السلطان سليم الأول",
@@ -14626,6 +14697,7 @@
       "source_url": "https://ar.wikisource.org/wiki/سيرة_سيف_بن_ذي_يزن",
       "source_work": "سيرة سيف بن ذي يزن",
       "source_work_key": "mnemosyne.ar.work.سيرة_سيف_بن_ذي_يزن",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "سيف بن ذي يزن",
         "سيف بن ذي يزن الحميري",
@@ -15055,6 +15127,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B9%D8%AF%D9%88_%D8%B9%D8%AF%D9%88%D9%8A_%D8%B5%D8%AF%D9%8A%D9%82%D9%8A",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "عدو عدوي صديقي"
       ]
@@ -15202,6 +15275,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/عمر_بن_عبد_العزيز",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "على عهد الخليفة عمر بن عبد العزيز",
         "في عهد عمر بن عبد العزيز",
@@ -15279,6 +15353,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B9%D9%8A%D9%86_%D8%A7%D9%84%D8%B1%D8%B6%D8%A7_%D8%B9%D9%86_%D9%83%D9%84_%D8%B9%D9%8A%D8%A8_%D9%83%D9%84%D9%8A%D9%84%D8%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "عين الرضا عن كل عيب كليلة"
       ]
@@ -15416,6 +15491,7 @@
       "source_dataset": "ar_historical_events",
       "source_license": "not_required",
       "source_work_key": "mnemosyne.ar.work.unknown",
+      "subcategory": "null",
       "surface_patterns": [
         "فتح القسطنطينية",
         "الفتح العثماني للقسطنطينية",
@@ -15469,6 +15545,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/صلاح_الدين_الأيوبي",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "فتوحات صلاح الدين الأيوبي",
         "فتوحات صلاح الدين",
@@ -15600,6 +15677,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "قصة الأمير بندر"
       ]
@@ -15623,6 +15701,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "قصة الأمير سعد"
       ]
@@ -15646,6 +15725,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "قصة الأمير شاكر"
       ]
@@ -15669,6 +15749,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "قصة الأمير عثمان"
       ]
@@ -15692,6 +15773,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "قصة الأمير مجاهد"
       ]
@@ -15830,6 +15912,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%83%D9%84_%D9%8A%D8%A8%D9%83%D9%8A_%D8%B9%D9%84%D9%89_%D9%84%D9%8A%D9%84%D8%A7%D9%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "كل يبكي على ليلاه"
       ]
@@ -15905,6 +15988,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D8%AA%D8%AC%D8%B9%D9%84_%D8%A7%D9%84%D8%AD%D8%A8%D8%A9_%D9%82%D8%A8%D8%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "لا تجعل الحبة قبة"
       ]
@@ -15928,6 +16012,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D8%AD%D9%8A%D8%A7%D8%A1_%D9%81%D9%8A_%D8%A7%D9%84%D8%AF%D9%8A%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "لا حياء في الدين"
       ]
@@ -16159,6 +16244,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%84%D9%83%D9%84_%D9%82%D8%A7%D8%B9%D8%AF%D8%A9_%D8%B4%D9%88%D8%A7%D8%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "لكل قاعدة شواذ"
       ]
@@ -16405,6 +16491,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D8%A7_%D8%AD%D9%83_%D8%AC%D9%84%D8%AF%D9%83_%D9%85%D8%AB%D9%84_%D8%B8%D9%81%D8%B1%D9%83",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "ما حك جلدك مثل ظفرك"
       ]
@@ -16428,6 +16515,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D8%A7_%D9%81%D8%A7%D8%AA_%D9%82%D8%AF_%D9%85%D8%A7%D8%AA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "ما فات قد مات"
       ]
@@ -16451,6 +16539,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D8%A7_%D9%87%D9%83%D8%B0%D8%A7_%D9%8A%D8%A7_%D8%B3%D8%B9%D8%AF_%D8%AA%D9%88%D8%B1%D8%AF_%D8%A7%D9%84%D8%A5%D8%A8%D9%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "ما هكذا يا سعد تورد الإبل"
       ]
@@ -16486,6 +16575,7 @@
       "source_license": "public_domain",
       "source_work": "تاريخ الدولة العثمانية",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الدولة_العثمانية",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "محمد الفاتح",
         "السلطان محمد الفاتح",
@@ -16543,6 +16633,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D8%B5%D8%A7%D8%A6%D8%A8_%D9%82%D9%88%D9%85_%D8%B9%D9%86%D8%AF_%D9%82%D9%88%D9%85_%D9%81%D9%88%D8%A7%D8%A6%D8%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "مصائب قوم عند قوم فوائد"
       ]
@@ -16616,6 +16707,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "معركة اليرموك",
         "اليرموك",
@@ -16679,6 +16771,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/معركة_حطين",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "معركة حطين 1187",
         "حطين ٥٨٣ هـ"
@@ -16715,6 +16808,7 @@
       "source_license": "public_domain",
       "source_work": "تاريخ الدولة العثمانية",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الدولة_العثمانية",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "معركة دابق",
         "دابق",
@@ -16753,6 +16847,7 @@
       "source_url": "https://ar.wikisource.org/wiki/تاريخ_الطبري/الجزء_الثالث",
       "source_work": "تاريخ الطبري",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الطبري",
+      "subcategory": "null",
       "surface_patterns": [
         "معركة ذات الصواري",
         "ذات الصواري",
@@ -16778,6 +16873,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D9%86_%D8%A7%D8%A8%D8%AA%D8%B9%D8%AF_%D8%B9%D9%86_%D8%A7%D9%84%D9%88%D8%B3%D8%A7%D8%AF%D8%A9_%D8%A7%D9%82%D8%AA%D8%B1%D8%A8%D8%AA_%D9%84%D9%87_%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AF%D8%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من ابتعد عن الوسادة اقتربت له السيادة"
       ]
@@ -16801,6 +16897,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D9%86_%D8%A7%D8%BA%D8%AA%D8%B1_%D8%A8%D8%A7%D9%84%D8%A3%D9%85%D9%84_%D8%AA%D8%B1%D9%83_%D8%A7%D9%84%D8%B9%D9%85%D9%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من اغتر بالأمل ترك العمل"
       ]
@@ -16824,6 +16921,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D9%86_%D8%A3%D9%83%D8%AB%D8%B1_%D8%A7%D9%84%D9%86%D9%88%D9%85_%D8%B3%D8%A8%D9%82%D9%87_%D8%A7%D9%84%D9%82%D9%88%D9%85",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من أكثر النوم سبقه القوم"
       ]
@@ -16847,6 +16945,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D9%86_%D8%A7%D9%84%D9%85%D9%87%D8%AF_%D8%A5%D9%84%D9%89_%D8%A7%D9%84%D9%84%D8%AD%D8%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من المهد إلى اللحد"
       ]
@@ -16870,6 +16969,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D9%86_%D8%B3%D8%A7%D8%A8%D8%B9_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AD%D9%8A%D9%84%D8%A7%D8%AA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من سابع المستحيلات"
       ]
@@ -16893,6 +16993,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D9%86_%D9%84%D8%B2%D9%85_%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D8%AF_%D8%AD%D8%B1%D9%85_%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D8%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من لزم الرقاد حرم المراد"
       ]
@@ -16955,6 +17056,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%86%D8%A7%D9%82%D9%84_%D8%A7%D9%84%D9%83%D9%81%D8%B1_%D9%84%D9%8A%D8%B3_%D8%A8%D9%83%D8%A7%D9%81%D8%B1",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "ناقل الكفر ليس بكافر"
       ]
@@ -17073,6 +17175,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%88%D8%B1%D8%A7%D8%A1_%D9%83%D9%84_%D8%B1%D8%AC%D9%84_%D8%B9%D8%B8%D9%8A%D9%85_%D8%A7%D9%85%D8%B1%D8%A3%D8%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "وراء كل رجل عظيم امرأة"
       ]
@@ -17096,6 +17199,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%88%D8%B6%D8%B9%D8%AA_%D8%A7%D9%84%D8%AD%D8%B1%D8%A8_%D8%A3%D9%88%D8%B2%D8%A7%D8%B1%D9%87%D8%A7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "وضعت الحرب أوزارها"
       ]
@@ -17158,6 +17262,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%88%D9%84%D8%A7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "ولا"
       ]
@@ -17181,6 +17286,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%88%D9%87%D9%84%D9%85_%D8%AC%D8%B1%D8%A7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "وهلم جرا"
       ]
@@ -17272,6 +17378,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%8A%D8%A7_%D8%B7%D8%A8%D9%8A%D8%A8_%D8%B7%D8%A8_%D9%84%D9%86%D9%81%D8%B3%D9%83",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "يا طبيب طب لنفسك"
       ]
@@ -17328,6 +17435,7 @@
       "source_url": "https://archive.org/details/TareekhAlTabari",
       "source_work": "تاريخ الرسل والملوك",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الرسل_والملوك",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "يوم الجمل",
         "اليوم الجمل",
@@ -17436,6 +17544,7 @@
       "source_url": "https://archive.org/details/TareekhAlTabari",
       "source_work": "تاريخ الرسل والملوك",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الرسل_والملوك",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "يوم النهروان",
         "اليوم النهروان",
@@ -17620,6 +17729,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "يوم حطينه",
         "يوم حطين في استعادة القدس",
@@ -17706,6 +17816,7 @@
       "source_url": "https://archive.org/details/TareekhAlTabari",
       "source_work": "تاريخ الرسل والملوك",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الرسل_والملوك",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "يوم ذات الصواري",
         "اليوم ذات الصواري",
@@ -17838,6 +17949,7 @@
       "source_url": "https://archive.org/details/TareekhAlTabari",
       "source_work": "تاريخ الرسل والملوك",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الرسل_والملوك",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "يوم صفين",
         "اليوم صفين",
@@ -18273,6 +18385,7 @@
       "source_url": "https://archive.org/details/FutuhAlBuldan",
       "source_work": "فتوح البلدان",
       "source_work_key": "mnemosyne.ar.work.فتوح_البلدان",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "يوم واقصة",
         "اليوم واقصة",
@@ -18845,6 +18958,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ar.explanation.pre_islamic_muallaqat_أتت_هند_أمست_بعلا_من_معلقة_ا",
       "id": "ar_literary_reference_أتت_هند_أمست_بعلا_من_معلقة_امرئ_القيس_0d04f2d4",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18858,6 +18972,7 @@
       "source_url": "https://www.alwaraq.net/library/index.php/book/100",
       "source_work": "المعلقة",
       "source_work_key": "mnemosyne.ar.work.المعلقة",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "أتت هند أمست بعلا",
         "أتت هند أمست بعلها",
@@ -18950,6 +19065,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ar.explanation.ar_jarir_rithaa_phrases_أداروا_الرحي_من_أديم_الثرى",
       "id": "ar_literary_reference_أداروا_الرحي_من_أديم_الثرى_من_قصيدة_الرثاء_لجرير_e0312172",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18963,6 +19079,7 @@
       "source_url": "https://shamela.ws/browse.php/book-1001#page-1234",
       "source_work": "الرثاء",
       "source_work_key": "mnemosyne.ar.work.الرثاء",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "اداروا الرحى من اديم الثرى",
         "اداروا الرحى من تراب الأرض",
@@ -19603,6 +19720,7 @@
         "zh": "伊姆鲁·盖斯的《悬诗》开篇，呼唤女子醒来并带来美酒。它体现了前伊斯兰时代贝都因诗歌中关于爱情和饮酒的主题传统。"
       },
       "id": "ar_literary_reference_ألا_هبي_بصحنك_فاصبحينا_e41f6ab0",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of Imru' al-Qais's Mu'allaqah with correct attribution and surface patterns.",
@@ -19617,6 +19735,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D8%A7%D9%85%D8%B1%D8%A6_%D8%A7%D9%84%D9%82%D9%8A%D8%B3",
       "source_work": "معلقة امرئ القيس",
       "source_work_key": "mnemosyne.ar.work.معلقة_امرئ_القيس",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "ألا هبي بصحنك فاصبحينا",
         "ألا هبي بصحنك",
@@ -19668,6 +19787,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ar.explanation.classical_arabic_laments_ألا_يا_عين_ويحك_ما_جفاك_م",
       "id": "ar_literary_reference_ألا_يا_عين_ويحك_ما_جفاك_من_قصيدة_الرثاء_للخنساء_6ea265f8",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19681,6 +19801,7 @@
       "source_url": "https://archive.org/details/aldywan",
       "source_work": "الرثاء",
       "source_work_key": "mnemosyne.ar.work.الرثاء",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "ألا يا عين ويحك ما جفاك",
         "ألا يا عين ويحك ما جفاها",
@@ -19734,6 +19855,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ar.explanation.prophetic_praise_poetry_أما_والذي_أبكى_وأضحك_والذي",
       "id": "ar_literary_reference_أما_والذي_أبكى_وأضحك_والذي_من_قصيدة_المديح_النبوي_لكعب_بن_زه_0dc64f1a",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19747,6 +19869,7 @@
       "source_url": "https://alwaraq.net/library/index.php/book/111",
       "source_work": "المديح النبوي",
       "source_work_key": "mnemosyne.ar.work.المديح_النبوي",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "أما والذي أبكى وأضحك والذي",
         "أما والذي أبكى وأضحك والذي أمات وأحيا",
@@ -19887,6 +20010,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ar.explanation.ar_ibn_zuraq_ghazal_phrases_أنت_الحبيبة_التي_ما_مث",
       "id": "ar_literary_reference_أنت_الحبيبة_التي_ما_مثلها_من_قصيدة_الغزل_لابن_زريق_البغدادي_00ffdbce",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19900,6 +20024,7 @@
       "source_url": "https://www.adab.com/book.php?gid=2041101",
       "source_work": "الغزل",
       "source_work_key": "mnemosyne.ar.work.الغزل",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "انت الحبيبه اللي ما مثلها",
         "أنتِ الحبيبة التي لا مثيل لها",
@@ -20286,6 +20411,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.ar.explanation.ar_shabbi_matar_phrases_إذا_ما_جئت_يا_مطر_من_قصيدة",
       "id": "ar_literary_reference_إذا_ما_جئت_يا_مطر_من_قصيدة_المطر_لأبو_القاسم_الشابي_338a4598",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -20299,6 +20425,7 @@
       "source_url": "https://www.adab.com/book.php?gid=2041102",
       "source_work": "المطر",
       "source_work_key": "mnemosyne.ar.work.المطر",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "اذا ما جئت يا مطر",
         "إذا ما جئت يا مطر",
@@ -20532,6 +20659,7 @@
         "zh": "一句经典的阿拉伯谚语式短语，用于在表面上对另一个人说话时间接地针对某人，通常是为了在不直接对抗的情况下传达信息。"
       },
       "id": "ar_literary_reference_إياك_أعني_واسمعي_يا_جارة_43ef1e8a",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-known classical Arabic expression, often attributed to the poet Al-Mutanabbi or used proverbially.",
@@ -20620,6 +20748,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D9%85%D9%82%D8%AF%D9%85%D8%A9_%D8%A7%D8%A8%D9%86_%D8%AE%D9%84%D8%AF%D9%88%D9%86",
       "source_work": "المقدمة",
       "source_work_key": "mnemosyne.ar.work.المقدمة",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "مقدمة ابن خلدون",
         "كتاب المقدمة",
@@ -20736,6 +20865,7 @@
       "source_url": "https://archive.org/details/AlMashahidAlMakkiya",
       "source_work": "المشاهدات المكية",
       "source_work_key": "mnemosyne.ar.work.المشاهدات_المكية",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "ابن عربي والمشاهدات المكية",
         "المشاهدات المكية لابن عربي",
@@ -21221,6 +21351,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.ibn_miskawayh_reason_ignorance_phrases_ال_ع_ق_ل_س_",
       "id": "ar_literary_reference_ال_ع_ق_ل_س_ل_ط_ان_و_ال_ج_ه_ل_ع_د_و_لابن_مسكويه_1fbe167a",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21234,6 +21365,7 @@
       "source_url": "https://archive.org/details/tahdhib-al-akhlaq",
       "source_work": "Tahdhib al-Akhlāq",
       "source_work_key": "mnemosyne.ar.work.tahdhib_al_akhlāq",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "العقل سلطان والجهل عدو",
         "العقل سلطان والجهل عدوه",
@@ -21389,6 +21521,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ar.explanation.mawardi_knowledge_phrases_ال_ع_ل_م_ف_ي_الص_غ_ر_ك_ن",
       "id": "ar_literary_reference_ال_ع_ل_م_ف_ي_الص_غ_ر_ك_ن_ق_ش_ع_ل_ى_ال_ح_ج_ر_من_أقوال_أبي_علي_5166b449",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21402,6 +21535,7 @@
       "source_url": "https://archive.org/details/waq1987",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "العلم في الصغر كنقش على الحجر",
         "العلم في صغره كنقش على الحجره",
@@ -21498,6 +21632,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ar.explanation.ghazali_knowledge_wisdom_phrases_ال_ع_ل_م_ف_يه_ا_ك",
       "id": "ar_literary_reference_ال_ع_ل_م_ف_يه_ا_ك_ن_ق_ش_ع_ل_ى_ال_م_اء_و_ال_ح_ك_م_ة_ف_يه_ا_ك__e32cbabf",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21511,6 +21646,7 @@
       "source_url": "https://archive.org/details/ihya-ulum-al-din",
       "source_work": "Ihya Ulum al-Din",
       "source_work_key": "mnemosyne.ar.work.ihya_ulum_al_din",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "العلم فيها كنقش على الماء والحكمة فيها كنبات لا ثمر له",
         "العلم فيها كنقش على الما والحكمة فيها كنبات ما له ثمر",
@@ -21807,6 +21943,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ar.explanation.pre_islamic_arabic_poetry_phrases_ال_م_ؤ_م_ن_س_ل_ا",
       "id": "ar_literary_reference_ال_م_ؤ_م_ن_س_ل_ام_ل_ك_ل_ن_اس_من_message_لحسان_بن_ثابت_7cf7fad4",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21820,6 +21957,7 @@
       "source_url": "https://www.alim.org/library/author/Hassan_ibn_Thabit/poem/1",
       "source_work": "رسالة",
       "source_work_key": "mnemosyne.ar.work.رسالة",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "المؤمن سلام لكل الناس",
         "المؤمن سلام للناس",
@@ -21834,6 +21972,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ar.explanation.classical_arabic_poetry_phrases_ال_م_ح_ب_م_ن_ي_ح_م",
       "id": "ar_literary_reference_ال_م_ح_ب_م_ن_ي_ح_م_ل_ال_أ_ذ_ى_من_message_لعمر_بن_أبي_ربيعة_44712609",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21847,6 +21986,7 @@
       "source_url": "https://archive.org/details/0655-1",
       "source_work": "رسالة عمر بن أبي ربيعة",
       "source_work_key": "mnemosyne.ar.work.رسالة_عمر_بن_أبي_ربيعة",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "المحب من يحمل الأذى",
         "المحب من يحمل أذاه",
@@ -21863,6 +22003,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ar.explanation.ar_maarri_message_phrases_ال_م_ع_ج_م_ة_ت_ح_د_ث_ع_ن",
       "id": "ar_literary_reference_ال_م_ع_ج_م_ة_ت_ح_د_ث_ع_ن_س_ر_ير_ت_ه_ا_من_message_لأبي_العلاء_1c8daedf",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21876,6 +22017,7 @@
       "source_url": "https://archive.org/details/risalat-alghufran",
       "source_work": "رسالة الغفران",
       "source_work_key": "mnemosyne.ar.work.رسالة_الغفران",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "المعجمه تحدث عن سريرها",
         "المعجمه تحدثت عن سريرها",
@@ -21889,6 +22031,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ar.explanation.classical_arabic_poetry_phrases_ال_م_ع_ج_م_ه_و_ال_",
       "id": "ar_literary_reference_ال_م_ع_ج_م_ه_و_ال_ج_ن_ة_من_message_للمتنبي_fb867c07",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21902,6 +22045,7 @@
       "source_url": "https://www.adab.com/modules.php?name=Sh3er&doWhat=shqas&qid=10002",
       "source_work": "رسالة",
       "source_work_key": "mnemosyne.ar.work.رسالة",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "المعجم جنة المرء",
         "المعجم جنة الإنسان",
@@ -21914,6 +22058,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.mutanabbi_phrases_ال_م_ع_ج_م_ه_و_ال_ج_ن_ة_من_كتاب_",
       "id": "ar_literary_reference_ال_م_ع_ج_م_ه_و_ال_ج_ن_ة_من_كتاب_للمتنبي_9c6c6b92",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21928,6 +22073,7 @@
       "source_url": "https://archive.org/details/diwan-almutanabbi",
       "source_work": "كتاب",
       "source_work_key": "mnemosyne.ar.work.كتاب",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "المعجم هو الجنة",
         "المعجم جنة"
@@ -21965,6 +22111,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.ar.explanation.shawqi_phrases_ال_م_ع_و_ل_ع_ل_ى_ال_ح_ظ_من_message_",
       "id": "ar_literary_reference_ال_م_ع_و_ل_ع_ل_ى_ال_ح_ظ_من_message_لأحمد_شوقي_1b363871",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21979,6 +22126,7 @@
       "source_url": "https://archive.org/details/diwan-ahmed-shawqi",
       "source_work": "Message",
       "source_work_key": "mnemosyne.ar.work.message",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "المعول على الحظ",
         "المعول عليه الحظ",
@@ -21992,6 +22140,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.ar_hamadhani_maqamat_phrases_ال_م_ق_ام_ة_ت_ح_ي_ي_ا",
       "id": "ar_literary_reference_ال_م_ق_ام_ة_ت_ح_ي_ي_ال_أ_ح_ز_ان_من_message_للهمداني_1ccbde3a",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22005,6 +22154,7 @@
       "source_url": "https://archive.org/details/almaqamat-alhamdhaniyya",
       "source_work": "المقامات",
       "source_work_key": "mnemosyne.ar.work.المقامات",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "المقامه تحيي الأحزان",
         "المقامه تهيج الأحزان",
@@ -22019,6 +22169,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ar.explanation.hamadhani_maqamat_phrases_ال_م_ق_ام_ة_ت_ح_ي_ي_ال_أ",
       "id": "ar_literary_reference_ال_م_ق_ام_ة_ت_ح_ي_ي_ال_أ_ح_ز_ان_من_المقامات_للهمداني_ad26a01e",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22033,6 +22184,7 @@
       "source_url": "https://archive.org/details/maqamat-alhamadhani",
       "source_work": "المقامات",
       "source_work_key": "mnemosyne.ar.work.المقامات",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "المقامة تحيي الأحزان",
         "المقامة تحيي أحزانه",
@@ -22046,6 +22198,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.ar.explanation.modern_arabic_poetry_phrases_ال_م_ق_د_ار_ي_ج_ر_ي_ب",
       "id": "ar_literary_reference_ال_م_ق_د_ار_ي_ج_ر_ي_ب_م_ا_ق_ض_ى_ال_ق_د_ر_من_message_لأحمد_شو_fe84cc61",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22059,6 +22212,7 @@
       "source_url": "https://www.adab.com/modules.php?name=Sh3er&doWhat=shqas&qid=10001",
       "source_work": "رسالة",
       "source_work_key": "mnemosyne.ar.work.رسالة",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "المقدار يجري بما قضى القدر",
         "المقدار يجري بقضاء القدر",
@@ -22074,6 +22228,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ar.explanation.mutanabbi_message_phrases_ال_م_ق_ل_ة_ت_ح_د_ث_ع_ن_س",
       "id": "ar_literary_reference_ال_م_ق_ل_ة_ت_ح_د_ث_ع_ن_س_ر_ير_ت_ه_ا_من_message_للمتنبي_ab2f03cb",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22088,6 +22243,7 @@
       "source_url": "https://archive.org/details/diwan-almutanabbi",
       "source_work": "Message",
       "source_work_key": "mnemosyne.ar.work.message",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "المقلة تحدث عن سريرتها",
         "مقلة تحدث عن سريرتها"
@@ -22099,6 +22255,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.modern_arabic_poetry_phrases_ال_م_ل_ك_ي_ؤ_ث_ر_ب_ال",
       "id": "ar_literary_reference_ال_م_ل_ك_ي_ؤ_ث_ر_ب_ال_ق_و_ة_من_message_لأحمد_شوقي_4f0c4a30",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22112,6 +22269,7 @@
       "source_url": "https://www.adab.com/modules.php?name=Sh3er&doWhat=shqas&qid=10001",
       "source_work": "رسالة",
       "source_work_key": "mnemosyne.ar.work.رسالة",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الملك يؤثر بالقوة",
         "الملك يؤثر بقوته",
@@ -22204,6 +22362,7 @@
       "source_url": "https://archive.org/details/AlAasarAlBaqiya",
       "source_work": "الآثار الباقية عن القرون الخالية",
       "source_work_key": "mnemosyne.ar.work.الآثار_الباقية_عن_القرون_الخالية",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الآثار الباقية عن القرون الخالية",
         "الآثار الباقية",
@@ -22280,6 +22439,7 @@
       "source_url": "https://archive.org/details/AlBustanPoetry",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الأخطل الصغير",
         "شاعر الأخطل الصغير",
@@ -22318,6 +22478,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الأدبيات الجاهلية",
         "الأدب الجاهلي",
@@ -22544,6 +22705,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86_%D9%88%D8%A7%D9%84%D8%AA%D8%A8%D9%8A%D9%8A%D9%86",
       "source_work": "البيان والتبيين",
       "source_work_key": "mnemosyne.ar.work.البيان_والتبيين",
+      "subcategory": "null",
       "surface_patterns": [
         "البيان والتبيين",
         "كتاب البيان والتبيين",
@@ -22638,6 +22800,7 @@
       "source_url": "https://archive.org/details/AlTawheedeeAlMuqabasat",
       "source_work": "المقابسات",
       "source_work_key": "mnemosyne.ar.work.المقابسات",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "التوحيدي في المقابسات",
         "المقابسات للتوحيدي",
@@ -22817,6 +22980,7 @@
       "source_url": "https://archive.org/details/AlHamasah",
       "source_work": "الحماسة",
       "source_work_key": "mnemosyne.ar.work.الحماسة",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الحماسة لأبي تمام",
         "ديوان الحماسة",
@@ -22856,6 +23020,7 @@
       "source_url": "https://archive.org/details/AlHayawan",
       "source_work": "كتاب الحيوان",
       "source_work_key": "mnemosyne.ar.work.كتاب_الحيوان",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الحيوان للجاحظ",
         "كتاب الحيوان",
@@ -23118,6 +23283,7 @@
         "zh": "埃及作家塔哈·侯赛因的小说，探讨20世纪初埃及的记忆、失落与时光流逝主题。象征着对过去的怀念与不可挽回的失去。"
       },
       "id": "ar_literary_reference_الزمن_الضائع_ef862063",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The novel's title, author (Taha Hussein), and thematic significance are accurately represented and verifiable.",
@@ -23131,6 +23297,7 @@
       "source_url": "https://archive.org/details/TahaHusseinAlZamanAlDaa3",
       "source_work": "الزمن الضائع",
       "source_work_key": "mnemosyne.ar.work.الزمن_الضائع",
+      "subcategory": "null",
       "surface_patterns": [
         "الزمن الضائع",
         "زمن ضائع"
@@ -23252,6 +23419,7 @@
         "zh": "指代阿拉伯诗歌中‘狮子’（al-sabʿ）的意象，象征勇敢、力量或掠夺性。狮子在前伊斯兰和古典阿拉伯诗歌中反复出现，常用作勇士或诗才的隐喻。"
       },
       "id": "ar_literary_reference_السبع_في_الشعر_العربي_c5c26733",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and genuinely useful for learners.",
@@ -23265,6 +23433,7 @@
       "source_license": "not_required",
       "source_work": "Various (pre-Islamic and classical poetry)",
       "source_work_key": "mnemosyne.ar.work.various_pre_islamic_and_classical_poetry",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "السبع في الشعر العربي",
         "السبع في الشعر الجاهلي",
@@ -23446,6 +23615,7 @@
       "source_url": "https://archive.org/details/alyam_202308",
       "source_work": "الأيام",
       "source_work_key": "mnemosyne.ar.work.الأيام",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "السيرة الذاتية: طه حسين",
         "الأيام: طه حسين",
@@ -23603,6 +23773,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ar.explanation.ahmed_shawqi_poetry_الشوقيات_أحمد_شوقي",
       "id": "ar_literary_reference_الشوقيات_أحمد_شوقي_563369ce",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate, verifiable, and surface patterns are correct.",
@@ -23617,6 +23788,7 @@
       "source_url": "https://archive.org/details/alshuqayat_202308",
       "source_work": "الشوقيات",
       "source_work_key": "mnemosyne.ar.work.الشوقيات",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الشوقيات",
         "ديوان الشوقيات",
@@ -23649,6 +23821,7 @@
       "source_url": "https://archive.org/details/MaqatilAlTalibin",
       "source_work": "مقاتل الطالبيين",
       "source_work_key": "mnemosyne.ar.work.مقاتل_الطالبيين",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "شيطان",
         "الشيطان",
@@ -23715,6 +23888,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical and biographical works",
       "source_work_key": "mnemosyne.ar.work.various_historical_and_biographical_works",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الصاحب بن عباد",
         "ابن عباد",
@@ -23786,6 +23960,7 @@
         "zh": "指伊斯兰前阿拉伯半岛上生活在部落结构之外的不法之徒、流浪者或自由不羁之人。他们的独立精神和对社会规范的蔑视在诗歌中被颂扬。"
       },
       "id": "ar_literary_reference_الصعاليك_في_الجاهلية_3acac9c7",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The term and its literary significance are well-documented in pre-Islamic poetry, including the Mu'allaqat.",
@@ -23799,6 +23974,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Mu%27allaq%C4%81t",
       "source_work": "Mu'allaqat",
       "source_work_key": "mnemosyne.ar.work.mu_allaqat",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الصعاليك",
         "صعاليك",
@@ -23951,6 +24127,7 @@
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
       "source_work": "Tarikh al-Rusul wa al-Muluk; Tafsir al-Tabari",
       "source_work_key": "mnemosyne.ar.work.tarikh_al_rusul_wa_al_muluk_tafsir_al_tabari",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الطبري",
         "ابن جرير الطبري",
@@ -24037,6 +24214,7 @@
         "zh": "源自古典阿拉伯诗歌和散文的一个短语，常用作比喻，形容某人对真相视而不见或故意忽视。源于泥土遮蔽视线的意象。"
       },
       "id": "ar_literary_reference_الطين_في_العيون_c0c47c00",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is well-attested in classical Arabic poetry and prose, including works like Diwan al-Hamasa.",
@@ -24050,6 +24228,7 @@
       "source_url": "https://archive.org/details/diwan-alhamasa",
       "source_work": "Diwan al-Hamasa",
       "source_work_key": "mnemosyne.ar.work.diwan_al_hamasa",
+      "subcategory": "null",
       "surface_patterns": [
         "الطين في العيون",
         "طين في العيون",
@@ -24101,6 +24280,7 @@
         "zh": "伊斯兰前（贾希利叶时期）诗歌中的一个术语，指骆驼轿或乘坐其中的女子，象征高贵、美丽与沙漠生活的优雅。常见于卡西达（颂诗）中。"
       },
       "id": "ar_literary_reference_الظعينة_في_الشعر_الجاهلي_cf62b76d",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The term is accurately described and frequently appears in Jahili poetry, particularly in qasida traditions.",
@@ -24114,6 +24294,7 @@
       "source_license": "not_required",
       "source_work": "Various (Jahili poetry)",
       "source_work_key": "mnemosyne.ar.work.various_jahili_poetry",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الظعينة",
         "ظعينة",
@@ -24591,6 +24772,7 @@
       "source_url": "https://archive.org/details/AlAghani",
       "source_work": "الأغاني",
       "source_work_key": "mnemosyne.ar.work.الأغاني",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "غولها",
         "غولك"
@@ -24657,6 +24839,7 @@
       "source_url": "https://www.al-islam.org/al-madina-al-fadila",
       "source_work": "آراء أهل المدينة الفاضلة (The Virtuous City)",
       "source_work_key": "mnemosyne.ar.work.آراء_أهل_المدينة_الفاضلة_the_virtuous_city",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الفارابي",
         "أبو نصر الفارابي",
@@ -24999,6 +25182,7 @@
       "source_license": "public_domain",
       "source_work": "إبراهيم الكاتب (Ibrahim al-Katib)",
       "source_work_key": "mnemosyne.ar.work.إبراهيم_الكاتب_ibrahim_al_katib",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "المازني",
         "إبراهيم المازني",
@@ -25109,6 +25293,7 @@
         "zh": "意为“贤明之城”或“乌托邦”的术语，源自柏拉图的《理想国》，后被伊斯兰哲学（如阿尔-法拉比的《贤明城》）所采用。代表一个由理性与正义治理的理想社会。"
       },
       "id": "ar_literary_reference_المدينة_الفاضلة_54f9a375",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Direct adaptation of Plato’s Republic in Arabic philosophical tradition (Al-Farabi, etc.).",
@@ -25123,6 +25308,7 @@
       "source_url": "https://archive.org/details/alfarabi-almadina-alfadila",
       "source_work": "جمهورية أفلاطون",
       "source_work_key": "mnemosyne.ar.work.جمهورية_أفلاطون",
+      "subcategory": "null",
       "surface_patterns": [
         "المدينة الفاضلة",
         "مدينة فاضلة",
@@ -25792,6 +25978,7 @@
         "zh": "阿拉伯著名诗句，表达思念与离别，源自伊斯兰前诗人盖斯·伊本·穆拉瓦赫对莱拉的爱情诗。象征着单相思与情感痛苦。"
       },
       "id": "ar_literary_reference_بانت_ليلى_4f0ba6ba",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Qays ibn al-Mulawwah and the Mu'allaqah is accurate and verifiable.",
@@ -25805,6 +25992,7 @@
       "source_url": "https://archive.org/details/aldywan-alarabia",
       "source_work": "المعلقة المشهورة (المعلقة السابعة)",
       "source_work_key": "mnemosyne.ar.work.المعلقة_المشهورة_المعلقة_السابعة",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "بانت ليلى",
         "بان ليلى"
@@ -26062,6 +26250,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.ar.explanation.prophetic_praise_poetry_تبارك_من_ملك_الملوك_من_قصي",
       "id": "ar_literary_reference_تبارك_من_ملك_الملوك_من_قصيدة_المديح_النبوي_للبوصيري_aeb3e6ee",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26075,6 +26264,7 @@
       "source_url": "https://alwaraq.net/library/index.php/book/112",
       "source_work": "المديح النبوي",
       "source_work_key": "mnemosyne.ar.work.المديح_النبوي",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "تبارك من ملك الملوك",
         "تبارك من ملك الملوك تبارك",
@@ -26589,6 +26779,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ar.explanation.ar_farazdaq_poetry_حي_المنازل_من_قصيدة_النسئ_للفرز",
       "id": "ar_literary_reference_حي_المنازل_من_قصيدة_النسئ_للفرزدق_d923942a",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26602,6 +26793,7 @@
       "source_url": "https://archive.org/details/aldywan",
       "source_work": "النسئ",
       "source_work_key": "mnemosyne.ar.work.النسئ",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "حي المنازل",
         "حي المنازلَ",
@@ -26744,6 +26936,7 @@
         "zh": "安塔拉·本·沙达德的《悬诗》开篇，对两位同伴说话，让他们经过乌姆·金德布的营地。它反映了前伊斯兰诗歌的骑士精神和浪漫主题。"
       },
       "id": "ar_literary_reference_خليلي_مرا_بي_على_أم_جندب_78f53a64",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of 'Antarah ibn Shaddad's Mu'allaqah with correct attribution and surface patterns.",
@@ -26758,6 +26951,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D8%B9%D9%86%D8%AA%D8%B1%D8%A9_%D8%A8%D9%86_%D8%B4%D8%AF%D8%A7%D8%AF",
       "source_work": "معلقة عنترة بن شداد",
       "source_work_key": "mnemosyne.ar.work.معلقة_عنترة_بن_شداد",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "خليلي مرا بي على أم جندب",
         "خليلي مرا بي",
@@ -27230,6 +27424,7 @@
       "source_url": "https://ar.wikisource.org/wiki/رسالة_التوابع_والزوابع",
       "source_work": "رسالة التوابع والزوابع",
       "source_work_key": "mnemosyne.ar.work.رسالة_التوابع_والزوابع",
+      "subcategory": "null",
       "surface_patterns": [
         "رسالة التوابع والزوابع",
         "التوابع والزوابع",
@@ -27502,6 +27697,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "سقراط في الأدب العربي",
         "سقراط والأدب العربي",
@@ -28043,6 +28239,7 @@
         "zh": "莱比德·本·拉比亚的《悬诗》开篇，描绘了废弃营地的遗迹。它体现了阿拉伯诗歌中“驻足废墟”（الوقوف على الأطلال）的主题。"
       },
       "id": "ar_literary_reference_عفت_الديار_محلها_فمقامها_4746f780",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of Labid ibn Rabi'ah's Mu'allaqah with correct attribution and surface patterns.",
@@ -28057,6 +28254,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D9%84%D8%A8%D9%8A%D8%AF_%D8%A8%D9%86_%D8%B1%D8%A8%D9%8A%D8%B9%D8%A9",
       "source_work": "معلقة لبيد بن ربيعة",
       "source_work_key": "mnemosyne.ar.work.معلقة_لبيد_بن_ربيعة",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "عفت الديار محلها فمقامها",
         "عفت الديار",
@@ -28721,6 +28919,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "قصة الأمير خالد",
         "قصة الأمير خالد بن الوليد",
@@ -28780,6 +28979,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "قصة الأمير عمر",
         "قصة الأمير عمر بن الخطاب",
@@ -28841,6 +29041,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "قصة الأمير منصور",
         "قصة الأمير منصور بن نوح",
@@ -28871,6 +29072,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "قصة الأمير ناصر",
         "قصة الأمير ناصر بن أحمد",
@@ -28898,6 +29100,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "قصة الأمير نصر",
         "قصة الأمير الناصر",
@@ -30499,6 +30702,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ar.explanation.ibn_sina_knowledge_phrases_م_ن_ل_م_ي_ح_ت_ف_ظ_ب_ال_",
       "id": "ar_literary_reference_م_ن_ل_م_ي_ح_ت_ف_ظ_ب_ال_ع_ل_م_ف_ي_ص_غ_ر_ه_ف_ل_ا_ي_ح_ت_ف_ظ_ب_ه_5a673b7a",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -30512,6 +30716,7 @@
       "source_url": "https://archive.org/details/ibn-sina-canon-of-medicine",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "من لم يحفظ العلم في صغره فلا يحفظه فيما بعد",
         "من لم يحفظ العلم في صغره فلا يحفظه بعد ذلك",
@@ -30746,6 +30951,7 @@
         "zh": "伊姆鲁·卡伊斯的穆阿拉卡是最著名的前伊斯兰阿拉伯颂诗之一，以生动的意象和情感深度著称，被视为阿拉伯诗歌的杰作。"
       },
       "id": "ar_literary_reference_معلقة_امرئ_القيس_a7391324",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly attributes and describes the Mu'allaqa of Imru' al-Qays, with appropriate surface patterns.",
@@ -30759,6 +30965,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D8%A7%D9%85%D8%B1%D8%A6_%D8%A7%D9%84%D9%82%D9%8A%D8%B3",
       "source_work": "معلقة امرئ القيس",
       "source_work_key": "mnemosyne.ar.work.معلقة_امرئ_القيس",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "معلقة امرئ القيس",
         "معلقة الملك الضليل",
@@ -30785,6 +30992,7 @@
         "zh": "这是七大穆阿拉卡特之一，由祖海尔·伊本·阿比·苏尔玛创作。以其智慧、道德反思和精炼的语言著称，常被视为伊斯兰前阿拉伯诗歌的典范。"
       },
       "id": "ar_literary_reference_معلقة_زهير_بن_أبي_سلمى_c6d87692",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution and surface patterns are correct; the explanation matches the well-known status of Zuhayr's Mu'allaqa.",
@@ -30798,6 +31006,7 @@
       "source_url": "https://ar.wikisource.org/wiki/معلقة_زهير_بن_أبي_سلمى",
       "source_work": "معلقة زهير بن أبي سلمى",
       "source_work_key": "mnemosyne.ar.work.معلقة_زهير_بن_أبي_سلمى",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "معلقة زهير بن أبي سلمى",
         "معلقة زهير",
@@ -30829,6 +31038,7 @@
         "zh": "这是著名的伊斯兰前阿拉伯长诗（穆阿拉卡特）之一，由诗人塔拉法·伊本·阿卜杜创作。以其雄辩和对生活、命运及个人反思的生动描写而著称。"
       },
       "id": "ar_literary_reference_معلقة_طرفة_بن_العبد_ad7e934d",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution, surface patterns, and explanation are accurate and verifiable as one of the canonical Mu'allaqat by Tarafa ibn al-Abd.",
@@ -30842,6 +31052,7 @@
       "source_url": "https://ar.wikisource.org/wiki/معلقة_طرفة_بن_العبد",
       "source_work": "معلقة طرفة بن العبد",
       "source_work_key": "mnemosyne.ar.work.معلقة_طرفة_بن_العبد",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "معلقة طرفة بن العبد",
         "معلقة طرفة",
@@ -31027,6 +31238,7 @@
         "zh": "祖海尔·本·阿比·苏勒马的《悬诗》开篇，质疑诗人是否留有任何独创空间。它反映了前伊斯兰诗歌的竞争性。"
       },
       "id": "ar_literary_reference_هل_غادر_الشعراء_من_متردم_3f616855",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of Zuhayr ibn Abi Sulma's Mu'allaqah with correct attribution and surface patterns.",
@@ -31041,6 +31253,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D8%B2%D9%87%D9%8A%D8%B1_%D8%A8%D9%86_%D8%A3%D8%A8%D9%8A_%D8%B3%D9%84%D9%85%D9%89",
       "source_work": "معلقة زهير بن أبي سلمى",
       "source_work_key": "mnemosyne.ar.work.معلقة_زهير_بن_أبي_سلمى",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "هل غادر الشعراء من متردم",
         "هل غادر الشعراء",
@@ -31386,6 +31599,7 @@
         "zh": "这句话的意思是“一个不被上帝包容的人确实是有缺陷的”，是前伊斯兰诗歌中的一行，常被引用以表达没有神恩时人类的局限性。"
       },
       "id": "ar_literary_reference_وإن_امرأ_لم_يحوه_الله_ليقصر_5324dfc2",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Line is correctly attributed to pre-Islamic poetry, specifically Al-Nabigha al-Dhubyani, and is a known reference.",
@@ -31398,6 +31612,7 @@
       "source_license": "public_domain",
       "source_work": "الشعر الجاهلي (Pre-Islamic poetry)",
       "source_work_key": "mnemosyne.ar.work.الشعر_الجاهلي_pre_islamic_poetry",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "إن امرأ لم يحوه الله ليقصر",
         "وإن امرأ لم يحوه الله لقصر",
@@ -31423,6 +31638,7 @@
         "zh": "这一短语是著名的阿拉伯文学感叹语，意为“哦，伊斯兰！”，常在危机时刻呼吁援助或捍卫信仰。它因阿里·艾哈迈德·巴卡西尔的历史小说《哇伊斯拉玛》而广为人知，讲述了蒙古入侵。"
       },
       "id": "ar_literary_reference_واإسلاماه_8d3d5955",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Ali Ahmad Bakathir's novel is accurate, the phrase is correctly explained, and the surface patterns match common usage.",
@@ -31436,6 +31652,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D9%88%D8%A7_%D8%A5%D8%B3%D9%84%D8%A7%D9%85%D8%A7%D9%87",
       "source_work": "واإسلاماه",
       "source_work_key": "mnemosyne.ar.work.واإسلاماه",
+      "subcategory": "null",
       "surface_patterns": [
         "واإسلاماه",
         "وا إسلاماه",
@@ -31530,6 +31747,7 @@
         "zh": "拉比德《悬诗》中的一句，意思是‘向胡赖拉告别吧，商队即将启程。’这是前伊斯兰诗歌中关于离别和生命无常主题的经典例子。"
       },
       "id": "ar_literary_reference_ودع_هريرة_إن_الركب_مرتحل_ffeb29f9",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and useful for learners.",
@@ -31543,6 +31761,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%82%D8%A7%D8%AA",
       "source_work": "المعلقة (Mu'allaqat Labīd)",
       "source_work_key": "mnemosyne.ar.work.المعلقة_mu_allaqat_labīd",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "ودع هريرة إن الركب مرتحل",
         "وداع هريرة إن الركب مرتحل",
@@ -31954,6 +32173,7 @@
         "zh": "纳比加·祖布亚尼的《悬诗》开篇，对高地中玛雅的居所倾诉。它体现了怀旧的“驻足废墟”主题。"
       },
       "id": "ar_literary_reference_يا_دار_مية_بالعلياء_فالسند_117fe3d3",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate opening line of Al-Nabigha al-Dhubyani's Mu'allaqah, though inclusion of his poem among the Mu'allaqat is sometimes debated. Attribution and text are correct.",
@@ -31968,6 +32188,7 @@
       "source_url": "https://ar.wikisource.org/wiki/%D9%85%D8%B9%D9%84%D9%82%D8%A9_%D8%A7%D9%84%D9%86%D8%A7%D8%A8%D8%BA%D8%A9_%D8%A7%D9%84%D8%B0%D8%A8%D9%8A%D8%A7%D9%86%D9%8A",
       "source_work": "معلقة النابغة الذبياني",
       "source_work_key": "mnemosyne.ar.work.معلقة_النابغة_الذبياني",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "يا دار مية بالعلياء فالسند",
         "يا دار مية",
@@ -32346,6 +32567,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "أحلى من العسل",
         "أحلى من العسل في ...",
@@ -32424,6 +32646,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%A3%D8%B1%D8%B6%20%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D8%A7%D8%B3%D8%B9%D8%A9/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "أرض الله واسعة",
         "الأرض واسعة",
@@ -32462,6 +32685,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "أسرع من البرق",
         "أسرع من البرق في ...",
@@ -32501,6 +32725,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "أشد من قارورة الحجاج",
         "أقوى من قارورة الحجاج",
@@ -32540,6 +32765,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "أطول من الليل",
         "أطول من الليل في ...",
@@ -32578,6 +32804,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "أعز من الذهب",
         "أغلى من الذهب",
@@ -32645,6 +32872,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "أفضل الناس من نفع الناس",
         "خير الناس من نفع الناس",
@@ -32683,6 +32911,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "أكبر من الجبل",
         "أكبر من جبل",
@@ -32774,6 +33003,7 @@
       "source_license": "not_required",
       "source_work": "Various classical Arabic sources",
       "source_work_key": "mnemosyne.ar.work.various_classical_arabic_sources",
+      "subcategory": "null",
       "surface_patterns": [
         "ألا أيها الواشي لقد بلغ السيل الزبى",
         "قد بلغ السيل الزبى",
@@ -32812,6 +33042,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "hadith",
       "surface_patterns": [
         "أماوية إن المال غاد ورائح",
         "أماوية المال غاد ورائح",
@@ -32862,6 +33093,7 @@
         "zh": "一句常见的阿拉伯谚语，意为“第一场雨始于一滴水”，用于强调伟大的事物始于微小。"
       },
       "id": "ar_proverb_tradition_أول_الغيث_قطرة_900a37c0",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Common Arabic proverb, accurately described.",
@@ -32928,6 +33160,7 @@
         "zh": "这句谚语的意思是‘当水存在时，土净（干洗）就无效了’，表明当基本手段可用时，替代品不再有效。它被用作隐喻来强调优先性和相关性。"
       },
       "id": "ar_proverb_tradition_إذا_حضر_الماء_بطل_التيمم_294d061d",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Recognized Islamic legal maxim, correctly labeled as oral tradition.",
@@ -32941,6 +33174,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition / Islamic legal maxim",
       "source_work_key": "mnemosyne.ar.work.oral_tradition_islamic_legal_maxim",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "إذا حضر الماء بطل التيمم",
         "عند حضور الماء يبطل التيمم",
@@ -33032,6 +33266,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%AD/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "hadith",
       "surface_patterns": [
         "إذا هبت الرياح بما لا تشتهي",
         "إذا هبت الريح بما لا تشتهي",
@@ -33074,6 +33309,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "إياك والظلم فإن الظلم مرتعه وخيم",
         "إياك والظلم",
@@ -33120,6 +33356,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_classical_ال_ب_ح_ر_ي_ح_س_ن_م_ا_ي_ل",
       "id": "ar_proverb_tradition_ال_ب_ح_ر_ي_ح_س_ن_م_ا_ي_ل_ق_ى_ف_يه_من_الأمثال_العربية_مثل_شعب_eace39cd",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33133,6 +33370,7 @@
       "source_url": "https://archive.org/details/alamtal_202108",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "البحر يحسن ما يلقى فيه",
         "بحر يحسن ما يلقى فيه",
@@ -33145,6 +33383,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_phrases_ال_ح_ج_ر_ال_م_ن_ح_وت_ل_ا_ي",
       "id": "ar_proverb_tradition_ال_ح_ج_ر_ال_م_ن_ح_وت_ل_ا_ي_ز_يد_ع_ل_ى_م_ن_ح_وت_ه_من_الأمثال__2850ee32",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33159,6 +33398,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%A7%D9%84%D8%AD%D8%AC%D8%B1%20%D8%A7%D9%84%D9%85%D9%86%D8%AD%D9%88%D8%AA/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الحجر المنحوت لا يزيد على منحوته",
         "الحجر المنحوت ما يزيدش على منحوته",
@@ -33201,6 +33441,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_phrases_ال_ح_مار_لا_ي_ح_س_ن_إ_ل_ا_",
       "id": "ar_proverb_tradition_ال_ح_مار_لا_ي_ح_س_ن_إ_ل_ا_ب_ح_ي_اس_ه_من_الأمثال_العربية_مثل__1fe0cf1f",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33215,6 +33456,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D8%B1%20%D9%84%D8%A7%20%D9%8A%D8%AD%D8%B3%D9%86/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الحمار لا يحسن إلا بحياسه",
         "الحمار ما يحسنش إلا بحياسه",
@@ -33228,6 +33470,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_phrases_ال_خ_ي_ر_ي_ؤ_ت_ى_و_ل_ا_ي_أ",
       "id": "ar_proverb_tradition_ال_خ_ي_ر_ي_ؤ_ت_ى_و_ل_ا_ي_أ_ت_ي_من_الأمثال_العربية_مثل_شعبي_dc475fe0",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33242,6 +33485,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%20%D9%8A%D8%A4%D8%AA%D9%89/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الخير يؤتى ولا يأتي",
         "الخير يؤتى ولا يجيء",
@@ -33254,6 +33498,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_collection_ال_ع_ار_ض_ي_ج_ر_ي_و_ال_",
       "id": "ar_proverb_tradition_ال_ع_ار_ض_ي_ج_ر_ي_و_ال_ق_ل_يل_ي_ك_ف_ي_من_الأمثال_العربية_مثل_1b1d5723",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33268,6 +33513,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%B9%D8%A7%D8%B1%D8%B6/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "العارض يجري والقليل يكفي",
         "العارض يجري والقليل يكفينا",
@@ -33362,6 +33608,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_classical_ال_غ_ر_اب_ي_ن_ع_ق_و_ال_ح",
       "id": "ar_proverb_tradition_ال_غ_ر_اب_ي_ن_ع_ق_و_ال_ح_مام_ة_ت_ط_ير_من_الأمثال_العربية_مثل_ca7796c8",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33375,6 +33622,7 @@
       "source_url": "https://archive.org/details/alamtal_202108",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الغراب ينعق والحمامة تطير",
         "غراب ينعق وحمامة تطير",
@@ -33387,6 +33635,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_classical_ال_ك_ل_ب_ي_ح_ف_ظ_م_ن_ح_ف",
       "id": "ar_proverb_tradition_ال_ك_ل_ب_ي_ح_ف_ظ_م_ن_ح_ف_ظ_ه_من_الأمثال_العربية_مثل_شعبي_1ee642c5",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33401,6 +33650,7 @@
       "source_url": "https://www.almaany.com/ar/proverb/100000000000000000000000000000000000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الكلب يحفظ من حفظه",
         "كلب يحفظ من حفظه",
@@ -33438,6 +33688,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_classical_ال_و_ل_د_ل_ل_و_ال_د_من_ا",
       "id": "ar_proverb_tradition_ال_و_ل_د_ل_ل_و_ال_د_من_الأمثال_العربية_مثل_شعبي_75515fa1",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33452,6 +33703,7 @@
       "source_url": "https://www.almaany.com/ar/proverb/100000000000000000000000000000000000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الولد للوالد",
         "ولد للوالد",
@@ -33490,6 +33742,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الأبيضان: الليل والنهار",
         "الأبيضان (الليل والنهار)",
@@ -33528,6 +33781,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_classical_الت_ف_ر_يط_ي_ف_س_د_ال_ع_",
       "id": "ar_proverb_tradition_الت_ف_ر_يط_ي_ف_س_د_ال_ع_ق_د_ة_من_الأمثال_العربية_مثل_شعبي_f0b046e4",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33542,6 +33796,7 @@
       "source_url": "https://www.almaany.com/ar/proverb/100000000000000000000000000000000000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "التفريط يفسد العقدة",
         "تفريط يفسد العقدة",
@@ -33567,6 +33822,7 @@
         "zh": "意思是'为你的兄弟寻找借口'，鼓励给予他人怀疑的好处并原谅他们的错误。这是一个在阿拉伯文化中广泛使用的谚语，倡导宽容。"
       },
       "id": "ar_proverb_tradition_التمس_لأخيك_عذرا_0d397fb9",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-known Arabic proverb, accurate attribution to oral tradition.",
@@ -33580,6 +33836,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "التمس لأخيك عذرا",
         "التمس لأخيك العذر",
@@ -33609,6 +33866,7 @@
         "zh": "这句阿拉伯谚语的意思是“谁努力，谁就能找到（成功）”。它强调了努力和毅力的价值，常被用作励志格言。"
       },
       "id": "ar_proverb_tradition_التنبيه_من_جد_وجد_a5841b6f",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The proverb 'من جد وجد' is a well-known Arabic saying, and the explanation is accurate.",
@@ -33671,6 +33929,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الخير حيثما كانت الدنيا والشر حيثما كان المال",
         "خيره حيثما كانت دنياه وشره حيثما كان ماله",
@@ -33709,6 +33968,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_phrases_الد_ج_اج_ة_ت_ح_م_ي_و_ل_د_ه",
       "id": "ar_proverb_tradition_الد_ج_اج_ة_ت_ح_م_ي_و_ل_د_ه_ا_من_الأمثال_العربية_مثل_شعبي_eca8214d",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33723,6 +33983,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%A7%D9%84%D8%AF%D8%AC%D8%A7%D8%AC%D8%A9%20%D8%AA%D8%AD%D9%85%D9%8A/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الدجاجة تحمي ولدها",
         "الدجاجة تحمي فراخها",
@@ -33749,6 +34010,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الدال على الخير كفعله",
         "الدال على الخير كفاعله (مصري)",
@@ -33765,6 +34027,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_phrases_الر_ج_ل_ع_ل_ى_ق_د_ر_ه_م_ت_",
       "id": "ar_proverb_tradition_الر_ج_ل_ع_ل_ى_ق_د_ر_ه_م_ت_ه_من_الأمثال_العربية_مثل_شعبي_4b0448c9",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33779,6 +34042,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%A7%D9%84%D8%B1%D8%AC%D9%84%20%D8%B9%D9%84%D9%89%20%D9%82%D8%AF%D8%B1/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الرجل على قدر همته",
         "الراجل على قدر همته"
@@ -33816,6 +34080,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الزمان غدار",
         "الدهر غدار",
@@ -33828,6 +34093,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_common_الس_ع_يد_م_ن_و_ع_ظ_ب_غ_ي_ر_",
       "id": "ar_proverb_tradition_الس_ع_يد_م_ن_و_ع_ظ_ب_غ_ي_ر_ه_من_الأمثال_العربية_مثل_شعبي_fe1d46d1",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33841,6 +34107,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "السعيد من وعظ بغيره",
         "الفلاح من وعظ بغيره",
@@ -33866,6 +34133,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "السيف أصدق أنباء من الكتب",
         "سيفه أصدق أنباء من كتبه",
@@ -33892,6 +34160,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الشمس تشرق على الكل",
         "الشمس تشرق علينا جميعا",
@@ -33932,6 +34201,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الشعر شعري",
         "الشعر شعريّ",
@@ -34021,6 +34291,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الصبر جميل ما لم تأت ذنباً",
         "الصبر جميل إلا إذا أتت ذنباً",
@@ -34046,6 +34317,7 @@
         "zh": "一句常见的阿拉伯谚语，意为‘忍耐是解脱的关键’，表示忍受苦难最终会带来轻松；深深植根于伊斯兰文化。"
       },
       "id": "ar_proverb_tradition_الصبر_مفتاح_الفرج_dca3b1c4",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This is a widely recognized Arabic proverb rooted in Islamic culture, correctly quoted.",
@@ -34059,6 +34331,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "الصبر مفتاح الفرج",
         "الصبر مفتاح كل فرج"
@@ -34083,6 +34356,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "صبره مفتاح فرجه",
         "الصبر مفتاح الفرج في اللغة",
@@ -34121,6 +34395,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الصدق نجاة"
       ]
@@ -34198,6 +34473,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "العلم في الشباب كالنقش على الماء",
         "العلم في الشباب كالنقش على الماءِ",
@@ -34237,6 +34513,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "العلم في الصغر كالنقش على الحجر"
       ]
@@ -34260,6 +34537,7 @@
       "source_url": "https://archive.org/details/aldurar_202101/details",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "العلم في الصغر كالنقش عليه",
         "العلم بالصغر كالنقش على الحجر",
@@ -34285,6 +34563,7 @@
         "zh": "一句经典格言，意为'知识是光明，无知是黑暗'，常用于强调教育的重要性。常被归因于伊斯兰传统，但在世俗语境中也广泛使用。"
       },
       "id": "ar_proverb_tradition_العلم_نور_والجهل_ظلام_0e3246db",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Widely recognized saying with correct patterns and suitable confidence.",
@@ -34298,6 +34577,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "العلم نور والجهل ظلام",
         "العلم نور و الجهل ظلام",
@@ -34336,6 +34616,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الغد أفضل",
         "الغد خير",
@@ -34428,6 +34709,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الغنم في ظلي والذئب حيث تقضى المنية",
         "الغنم في ظلي والذئب حيث تقضى منيته",
@@ -34495,6 +34777,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "القلم أحد اللسانين",
         "قلمه أحد اللسانين",
@@ -34536,6 +34819,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%A7%D9%84%D9%82%D9%84%D9%85%20%D8%A7%D8%AD%D8%AF%20%D9%84%D8%B3%D8%A7%D9%86%D9%8A%D9%86/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "القلم أحد لسانين",
         "القلم لسانان",
@@ -34561,6 +34845,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الكذب منج إلى الفضيحة",
         "كذبه منج إلى فضيحته",
@@ -35050,6 +35335,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما له ذُو يَوْمٍ ما له عدلُه ولا صدقُه",
         "ما له ذُو يَوْمٍ ما له عدلُها ولا صدقُها",
@@ -35075,6 +35361,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال",
         "اللي ما له يومه ما له عدل ولا له صدق ولا له حال ولا له مال",
@@ -35103,6 +35390,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس",
         "اللي ما له يومه ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس",
@@ -35131,6 +35419,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس ولا له أصل",
         "اللي ما له يومه ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس ولا له أصل",
@@ -35159,6 +35448,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس ولا له أصل ولا له فصل",
         "اللي ما له يومه ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس ولا له أصل ولا له فصل",
@@ -35187,6 +35477,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال ولا نفس ولا أصل ولا فصل ولا له جمل",
         "اللي ما له同日 ما له عدله ولا له صدقه ولا له حاله ولا له ماله ولا نفسه ولا أصلة ولا فصله ولا له جمله",
@@ -35213,6 +35504,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما له ذُو يَوْمٍ ما له عدلُه وما له صدقُه",
         "ما له ذُو يَوْمٍ ما له عدلُه وما له صدقُه",
@@ -35239,6 +35531,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل وما له صدق ولا له حال",
         "اللي ما له يومه ما له عدل وما له صدق ولا له حال",
@@ -35498,6 +35791,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_common_اللي_ما_يخاف_من_الظلم_ما_يع",
       "id": "ar_proverb_tradition_اللي_ما_يخاف_من_الظلم_ما_يعرف_حقه_9689227d",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35511,6 +35805,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما يخاف من الظلم ما يعرف حقه",
         "اللي ما تخاف من الظلم ما تعرف حقها",
@@ -35525,6 +35820,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_common_اللي_ما_يخاف_من_الغش_ما_يعر",
       "id": "ar_proverb_tradition_اللي_ما_يخاف_من_الغش_ما_يعرف_خيانة_290ee33e",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35538,6 +35834,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما يخاف من الغش ما يعرف خيانة",
         "اللي ما يخاف من الغش ما يعرف خيانتها",
@@ -35609,6 +35906,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_common_اللي_ما_يخاف_من_الليل_ما_يع",
       "id": "ar_proverb_tradition_اللي_ما_يخاف_من_الليل_ما_يعرف_فجره_3a94cf35",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35622,6 +35920,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما يخاف من الليل ما يعرف فجره",
         "اللي ما تخاف من الليل ما تعرف فجرها",
@@ -35663,6 +35962,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_common_اللي_ما_يخاف_من_الما_ما_يعر",
       "id": "ar_proverb_tradition_اللي_ما_يخاف_من_الما_ما_يعرف_غرقه_d4ca011a",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35676,6 +35976,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما يخاف من الما ما يعرف غرقه",
         "اللي ما يخاف من الماء ما يعرف غرقه",
@@ -35746,6 +36047,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_common_اللي_ما_يخاف_من_الموت_ما_يع",
       "id": "ar_proverb_tradition_اللي_ما_يخاف_من_الموت_ما_يعرف_حياته_ce017c8e",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35759,6 +36061,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما يخاف من الموت ما يعرف حياته",
         "اللي ما تخاف من الموت ما تعرف حياتك",
@@ -35798,6 +36101,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_common_اللي_ما_يخاف_من_النار_ما_يع",
       "id": "ar_proverb_tradition_اللي_ما_يخاف_من_النار_ما_يعرف_حرقها_421f86fa",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35811,6 +36115,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "اللي ما يخاف من النار ما يعرف حرقها",
         "اللي ما تخاف من النار ما تعرف حرقها",
@@ -36952,6 +37257,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "المال كالداء والشهرة كالدواء",
         "المال كالمرض والشهرة كالدواء",
@@ -37049,6 +37355,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "الهدية تهدي القلوب قبل الأكف",
         "هديته تهدي القلوب قبل الأيادي",
@@ -37150,6 +37457,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الوفاء فضيلة",
         "الوفاء من الفضائل",
@@ -37247,6 +37555,7 @@
       "source_url": "https://www.almaany.com/proverb/ar/10000000000000000000000000000000000000000000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "تعددت الأسباب والموت واحد"
       ]
@@ -37393,6 +37702,7 @@
         "zh": "一句阿拉伯谚语，意为“谎言的绳子很短”，即谎言很快会被揭穿。它告诫人们不要不诚实。"
       },
       "id": "ar_proverb_tradition_حبل_الكذب_قصير_7b4e9b0b",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-known Arabic proverb with consistent usage; no specific source needed.",
@@ -37506,6 +37816,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "حلاوة العمر غبطة وندامة",
         "حلاوة العمر غبطة وندامه",
@@ -37625,6 +37936,7 @@
         "zh": "一句阿拉伯谚语，意为“最好的事物是其中间”，倡导凡事适度，遵循中庸之道。"
       },
       "id": "ar_proverb_tradition_خير_الأمور_أوسطها_e342a60a",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Common Arabic proverb advocating moderation; widely accepted as traditional.",
@@ -37674,6 +37986,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "خير الكلام ما قل ودل",
         "خير الكلام ما قل ودلّ",
@@ -37713,6 +38026,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "خير جليس في الزمان كتاب",
         "خير جليس في الزمان كتابٌ",
@@ -37788,6 +38102,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_collection_ذ_ن_ب_الس_ن_جاب_لا_ي_ن_",
       "id": "ar_proverb_tradition_ذ_ن_ب_الس_ن_جاب_لا_ي_ن_م_و_من_الأمثال_العربية_مثل_شعبي_8e6c539b",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37802,6 +38117,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%B0%D9%86%D8%A8%20%D8%A7%D9%84%D8%B3%D9%86%D8%AC%D8%A7%D8%A8/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "ذنب السنجاب لا ينمو",
         "الذنب السنجاب لا ينمو",
@@ -37860,6 +38176,7 @@
         "zh": "一句古典阿拉伯谚语，意为“也许你母亲未生的兄弟（即密友）比亲兄弟更好”。它强调选择友谊胜过血缘关系。"
       },
       "id": "ar_proverb_tradition_رب_أخ_لك_لم_تلده_أمك_cc668128",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-attested classical proverb, correctly attributed to al-Maydani's collection.",
@@ -37898,6 +38215,7 @@
         "zh": "一句经典的阿拉伯谚语，意思是‘许多箭射自非弓箭手’，强调技能并非成功的必要条件；常用于突出意想不到的结果。"
       },
       "id": "ar_proverb_tradition_رب_رمية_من_غير_رام_4d581ac9",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This is a well-known classical Arabic proverb, accurately cited with common surface patterns.",
@@ -37911,6 +38229,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "رب رمية من غير رام",
         "رب رمية من غير رامٍ",
@@ -37949,6 +38268,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "null",
       "surface_patterns": [
         "رب ساع لما يضره",
         "ساعٍ لما يضره",
@@ -37993,6 +38313,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "null",
       "surface_patterns": [
         "رب كلمة سلبت نعمة",
         "رب كلمة تزيل نعمة",
@@ -38031,6 +38352,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "سقط المتاع",
         "سقط المتاعُ",
@@ -38074,6 +38396,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "سقط المتاع وذهب الدهر",
         "ذهب الدهر وسقط المتاع",
@@ -38158,6 +38481,7 @@
         "zh": "一句谚语，描述有人冤枉你，然后装成受害者，抢先向别人诉苦。它突出了不公和虚伪。"
       },
       "id": "ar_proverb_tradition_ضربني_وبكى_وسبقني_واشتكى_5ea7170d",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Well-known Arabic proverb, accurately described.",
@@ -38181,6 +38505,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.ar.explanation.arabic_proverbs_eyes_ع_ين_ا_ك_ح_ب_الديك_من_الأمثال",
       "id": "ar_proverb_tradition_ع_ين_ا_ك_ح_ب_الديك_من_الأمثال_العربية_مثل_شعبي_ff39926e",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "A1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38194,6 +38519,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "عينان كحبي الديك",
         "عيناه كحبي الديك",
@@ -38234,6 +38560,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "عش ما شئت فإنك ميت",
         "عش ما شئت فأنت ميت",
@@ -38273,6 +38600,7 @@
       "source_url": "https://www.almaany.com/ar/proverb/12345",
       "source_work": " Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "عليك بالصدق وإن كان مرًّا",
         "الصدق مرٌّ",
@@ -38391,6 +38719,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "لا تصالح من لا يغضب لظلمك",
         "من لا يغضب لظلمك فلا تصالحه",
@@ -38456,6 +38785,7 @@
         "zh": "一个传统的阿拉伯道歉与安抚表达，意为‘我道歉直到你满意’，用于表示极度的尊重。"
       },
       "id": "ar_proverb_tradition_لك_العتبى_حتى_ترضى_bd44e179",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Common traditional Arabic expression of apology, correctly marked as oral tradition.",
@@ -38469,6 +38799,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "لك العتبى حتى ترضى",
         "العتبى لك حتى ترضى",
@@ -38564,6 +38895,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D9%85%D9%86%20%D8%B2%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B1%D9%8A%D8%AD%20%D8%AD%D8%B5%D8%AF%20%D8%A7%D9%84%D8%B2%D9%88%D8%A8%D8%B9%D8%A9/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "مَن زرع الريح حصد الزوبعة",
         "من زرع الريح حصد الزوبعة",
@@ -38604,6 +38936,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D9%85%D8%A7%20%D8%AE%D9%8A%D8%B1%20%D9%81%D9%8A%20%D9%82%D9%88%D9%85%20%D9%84%D8%A7%20%D8%AA%D8%A3%D9%85%D9%86%20%D8%B4%D8%B1%D9%87%D9%85/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "ما خير في قوم لا تأمن شرهم"
       ]
@@ -38681,6 +39014,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D9%85%D9%86%20%D8%A3%D8%B1%D8%A7%D8%AF%20%D8%A7%D9%84%D8%AF%D9%86%D9%8A%D8%A7%20%D9%81%D9%84%D8%A7%20%D8%A8%D8%AF%20%D8%A3%D9%86%20%D9%8A%D8%A8%D9%8A%D8%B9%20%D8%A2%D8%AE%D8%B1%D8%AA%D9%87/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من أراد الدنيا فلا بد أن يبيع آخرته",
         "من أراد الدنيا فليبع آخرته",
@@ -38759,6 +39093,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "null",
       "surface_patterns": [
         "من استشار السفيه شاركه عقله",
         "استشارة السفيه مشاركة في عقله",
@@ -38801,6 +39136,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من الخبر ما قتل",
         "من الخبر ما يقتل",
@@ -38840,6 +39176,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من حفر حفرة لأخيه وقع فيها",
         "من حفر حفيرة لأخيه وقع فيها",
@@ -38865,6 +39202,7 @@
         "zh": "一句谚语，意为'谁忍耐，谁就成功/胜利'，强调耐心的美德。在阿拉伯语文化中经常用于鼓励坚持不懈。"
       },
       "id": "ar_proverb_tradition_من_صبر_ظفر_63666877",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Commonly used authentic proverb with correct patterns and appropriate confidence.",
@@ -38878,6 +39216,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "من صبر ظفر",
         "ومن صبر ظفر",
@@ -38916,6 +39255,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من طلب العلا سهر الليالي",
         "من طلب العلا سهر الليال",
@@ -38982,6 +39322,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من ظن بك خيراً فصدقه",
         "من ظن بك خيراً فصدقهُ",
@@ -39021,6 +39362,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "من عاش بالكرامة مات بالكرامة",
         "من عاش كريما مات كريما",
@@ -39046,6 +39388,7 @@
         "zh": "一句谚语，意思是外表或表面的品质无法弥补内在的力量或真正的能力。强调真正美德而非外在表象的重要性。"
       },
       "id": "ar_proverb_tradition_من_لم_يجد_في_نفسه_قوة_الأسد_لا_يغني_عنه_جلد_النمر_c17de274",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Proverb is well-attested in Arabic oral tradition with multiple documented variants; explanation is accurate.",
@@ -39059,6 +39402,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "من لم يجد في نفسه قوة الأسد لا يغني عنه جلد النمر",
         "من لم يجد في نفسه قوة الأسد لم يغن عنه جلد نمر",
@@ -39097,6 +39441,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "من لم يجز خيراً بخير لم يجز شراً بشر",
         "من لم يجز الخير بالخير لم يجز الشر بالشر",
@@ -39135,6 +39480,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "من لم يحتمل أذى الزمان لم ينل مراداً",
         "من لم يحتمل أذى الدهر لم ينل مراده",
@@ -39173,6 +39519,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من لم يحتمل جوع يوم لم ترض عنه نفسه",
         "من لم يحتمل جوع يوم لم ترض نفسه عنه",
@@ -39211,6 +39558,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "من لم يخش لومة لائم لم يفلح",
         "من لم يخش لوم اللائم لم يفلح",
@@ -39249,6 +39597,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "من لم يستفد من تجارب من سبقه كان كالميت في قبره",
         "من لم يستفد من تجارب من قبله كان كالميت في قبره",
@@ -39287,6 +39636,7 @@
       "source_url": "https://sunnah.com/muslim/1/14",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "من لم يشكر الناس لم يشكر الله",
         "من لم يشكر الناس لم يشكر ربه",
@@ -39325,6 +39675,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "من لم يعش بغير بلده عاش أسيرا",
         "من لم يعش بغير وطنه عاش أسيرا",
@@ -39363,6 +39714,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "من لم يعظم الحق في نفسه لم يصن عرضه",
         "من لم يعظم الحق لم يصن عرضه",
@@ -39405,6 +39757,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "من لم يكن له في الماضي عبر لم يكن له في المستقبل أمل",
         "من لم يستفد من ماضيه لم يكن له مستقبل",
@@ -39443,6 +39796,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "من لم يكن له في الناس أمل لم يكن له في الله أمل",
         "من لم يكن له أمل في الناس لم يكن له أمل في الله",
@@ -39481,6 +39835,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "من لم يكن له من نفسه واعظ لم يجد له من غيره ناصح",
         "من لم يكن له واعظ من نفسه لم يجد ناصحاً غيره",
@@ -39519,6 +39874,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من وعظ أخاه سراً فقد نصحه",
         "من وعظ أخاه سراً فقد نصحه في السر",
@@ -39558,6 +39914,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "من يتتبع جاهداً يجد مطلباً",
         "من يتتبع جاهداً يجد مطلب",
@@ -39750,6 +40107,7 @@
         "zh": "谚语，意思是“啊，山，没有风能动摇你”，用来形容坚定、不可动摇的人。"
       },
       "id": "ar_proverb_tradition_يا_جبل_ما_يهزك_ريح_5d870b1f",
+      "is_poetic_citation": true,
       "language": "ar",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Recognized proverb with accurate surface patterns.",
@@ -39763,6 +40121,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "muallaqat",
       "surface_patterns": [
         "يا جبل ما يهزك ريح",
         "جبل ما يهزك ريح",
@@ -39831,6 +40190,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "يد الله مع الجماعة",
         "إن يد الله مع الجماعة",

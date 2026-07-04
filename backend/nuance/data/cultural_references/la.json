@@ -230,6 +230,7 @@
       "source_url": "https://www.biblegateway.com/versions/Latin-Vulgate-VULGATE/",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Abraham credidit Deo",
         "credidit Abraham Deo",
@@ -314,6 +315,7 @@
       "source_url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_genesim_lt.html",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Abraham patriarca",
         "Abraham pater",
@@ -580,6 +582,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0043:text=Inv.:book=1:chapter=6",
       "source_work": "De Inventione",
       "source_work_key": "mnemosyne.la.work.de_inventione",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "actio prima",
         "actio prima est",
@@ -763,6 +766,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.la.explanation.latin_classical_phrases_adonis_pulcherrimus_inter_",
       "id": "la_classical_or_scriptural_allusion_adonis_pulcherrimus_inter_mortales_bb92130c",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -777,6 +781,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0028%3Abook%3D10%3Acard%3D500",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Adonis pulcherrimus inter mortales",
         "Adonis pulcherrimus",
@@ -1048,6 +1053,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Aetnae flammae",
         "flammae Aetnae",
@@ -1316,6 +1322,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_alcmena_iovis_coniunx",
       "id": "la_classical_or_scriptural_allusion_alcmena_iovis_coniunx_5c69d46e",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1330,6 +1337,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:book=9:card=273",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Alcmena",
         "Alcmenae coniunx",
@@ -1357,6 +1365,7 @@
       "source_url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_apocalypsin_lt.html",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Aleph et Tav",
         "Aleph et Tau",
@@ -1400,6 +1409,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0135:book=10:chapter=10",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "historical_allusion",
       "surface_patterns": [
         "Alexander Magnus in Babylone moritur",
         "Alexander Magnus Babylonem moriturus",
@@ -1510,6 +1520,7 @@
       "source_license": "not_required",
       "source_work": "Various (Liturgical texts)",
       "source_work_key": "mnemosyne.la.work.various_liturgical_texts",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Alleluia Christus resurrexit",
         "Alleluia! Christus resurrexit!",
@@ -1652,6 +1663,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0019:text=Lael.:text=20",
       "source_work": "Laelius de Amicitia",
       "source_work_key": "mnemosyne.la.work.laelius_de_amicitia",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "alter idem",
         "alterum idem",
@@ -1813,6 +1825,7 @@
       "source_url": "https://www.biblegateway.com/versions/Latin-Vulgate-VULGATE/",
       "source_work": "Novum Testamentum Graece et Latine",
       "source_work_key": "mnemosyne.la.work.novum_testamentum_graece_et_latine",
+      "subcategory": "biblical",
       "surface_patterns": [
         "non excedet hic genera haec",
         "Amen, dico vobis, non praeteribit",
@@ -1851,6 +1864,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.la.explanation.neoplatonic_theological_phrases_amor_numinis_est_a",
       "id": "la_classical_or_scriptural_allusion_amor_numinis_est_aeternus_273dd8f0",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1864,6 +1878,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Amor numinis aeternus est",
         "Amor numinis est aeternus",
@@ -1962,6 +1977,7 @@
       "source_url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_lucam_lt.html",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Angeli gloria in excelsis Deo",
         "Gloria in altissimis Deo"
@@ -2054,6 +2070,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "ante Christum natum",
         "a.C.n.",
@@ -2107,6 +2124,7 @@
       "source_url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_proverbio_lt.html#8",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "ante luciferum genui te",
         "ante luciferum te genui",
@@ -2266,6 +2284,7 @@
       "source_url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_evangelium-iohannis_lt.html#3",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "aquae et spiritus",
         "aqua et spiritus",
@@ -2359,6 +2378,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.la.explanation.greek_myth_argus_argus_centum_oculos_habens",
       "id": "la_classical_or_scriptural_allusion_argus_centum_oculos_habens_5caec828",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2372,6 +2392,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0138:card=1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Argus",
         "Argus centum oculos",
@@ -2479,6 +2500,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0048%3Abook%3D1%3Asection%3D77",
       "source_work": "De Officiis",
       "source_work_key": "mnemosyne.la.work.de_officiis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Arma togae cedant",
         "Arma cedant togae",
@@ -2572,6 +2594,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0062:text%3DSatires%3Abook%3D1%3Achapter%3D10",
       "source_work": "Sermones",
       "source_work_key": "mnemosyne.la.work.sermones",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Asinus ad lyram",
         "Asinus ad lyram aptare",
@@ -2597,6 +2620,7 @@
         "zh": "神亲自帮助勇敢的人。古典格言（维吉尔）表达了勇气会得到神恩回报的理念。"
       },
       "id": "la_classical_or_scriptural_allusion_audentes_deus_ipse_iuvat_7a1829eb",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to Virgil's Aeneid 10.284; surface patterns and confidence are correct.",
@@ -2611,6 +2635,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0055%3Abook%3D10%3Acard%3D280",
       "source_work": "Aeneid",
       "source_work_key": "mnemosyne.la.work.aeneid",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "audentes deus ipse iuvat",
         "audentes deus adiuvat",
@@ -2678,6 +2703,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Auditorium tacere debet",
         "Auditorium taceat",
@@ -3088,6 +3114,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0047:book=1:chapter=43",
       "source_work": "De Officiis",
       "source_work_key": "mnemosyne.la.work.de_officiis",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Beatus qui prodest quibus potest",
         "Beatus est qui prodest quibus potest",
@@ -3159,6 +3186,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.homer_iliad_phrases_bellerophonti_pegasus",
       "id": "la_classical_or_scriptural_allusion_bellerophonti_pegasus_1521c28c",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3173,6 +3201,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133",
       "source_work": "Ilias",
       "source_work_key": "mnemosyne.la.work.ilias",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Bellerophontis Pegasus",
         "Pegasus Bellerophonti",
@@ -3185,6 +3214,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.la.explanation.homer_iliad_allusions_bellerophontis_in_caelum_vol",
       "id": "la_classical_or_scriptural_allusion_bellerophontis_in_caelum_volatus_8f0b574b",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3198,6 +3228,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133",
       "source_work": "Ilias",
       "source_work_key": "mnemosyne.la.work.ilias",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Bellerophontis in caelum volatus",
         "volatus Bellerophontis in caelum",
@@ -3318,6 +3349,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0226%3Abook%3D1%3Asection%3D1",
       "source_work": "Aphorismi",
       "source_work_key": "mnemosyne.la.work.aphorismi",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Bene diagnoscitur, bene curatur",
         "bene diagnosticum, bene curatur",
@@ -3384,6 +3416,7 @@
       "source_url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_vt_psalmorum_lt.html#117",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Benedictus qui venit in nomine Dei",
         "benedictus qui venit in nomine"
@@ -3462,6 +3495,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_phrases_boreas_rapax_et_violens",
       "id": "la_classical_or_scriptural_allusion_boreas_rapax_et_violens_004a24a5",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3476,6 +3510,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0023:book=1:card=60",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Boreas rapax et violens",
         "Boreas violens et rapax",
@@ -3652,6 +3687,7 @@
       "source_url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_VT_Psalmi_18-19_lt.html",
       "source_work": "Psalmi",
       "source_work_key": "mnemosyne.la.work.psalmi",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Caeli enarrant gloriam Dei",
         "Caeli enarrant Dei gloriam",
@@ -3678,6 +3714,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+24%3A35&version=VULGATE",
       "source_work": "Novum Testamentum Graece",
       "source_work_key": "mnemosyne.la.work.novum_testamentum_graece",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Caelum et terra transibunt"
       ]
@@ -3837,6 +3874,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0132:text=Ep.:book=71:card=3",
       "source_work": "Epistulae Morales",
       "source_work_key": "mnemosyne.la.work.epistulae_morales",
+      "subcategory": "proverb",
       "surface_patterns": [
         "calamitas virtutis occasio est",
         "calamitas virtutis est occasio",
@@ -3875,6 +3913,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_allusions_callistus_in_ursam_co",
       "id": "la_classical_or_scriptural_allusion_callistus_in_ursam_conversa_9c3f258f",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3889,6 +3928,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0022:book=2:card=401",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Callistus in ursam conversa",
         "Callisto in ursam conversa",
@@ -4008,6 +4048,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0131:text=Ling.:book=5:chapter=100",
       "source_work": "De Lingua Latina",
       "source_work_key": "mnemosyne.la.work.de_lingua_latina",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Canis a non canendo",
         "Canis non canendo",
@@ -4121,6 +4162,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.aeschylus_agamemnon_phrases_cassandra_vaticinans",
       "id": "la_classical_or_scriptural_allusion_cassandra_vaticinans_0123f15f",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4135,6 +4177,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0005",
       "source_work": "Agamemnon",
       "source_work_key": "mnemosyne.la.work.agamemnon",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Cassandra vaticinans",
         "Cassandra vaticinantis",
@@ -4213,6 +4256,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.la.explanation.aeschylus_agamemnon_allusions_cassandrae_vaticinat",
       "id": "la_classical_or_scriptural_allusion_cassandrae_vaticinatio_numquam_credita_6440942a",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4226,6 +4270,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0003",
       "source_work": "Agamemnon",
       "source_work_key": "mnemosyne.la.work.agamemnon",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Cassandrae vaticinatio numquam credita",
         "vaticinatio Cassandrae numquam credita",
@@ -4568,6 +4613,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_allusions_centaurorum_rabies_in",
       "id": "la_classical_or_scriptural_allusion_centaurorum_rabies_in_lapithis_170e54d0",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4582,6 +4628,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0022:book=12:card=210",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Centaurorum rabies in Lapithis",
         "rabies Centaurorum in Lapithis",
@@ -4648,6 +4695,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.vergil_aeneid_allusions_cerberus_ianitor_orci",
       "id": "la_classical_or_scriptural_allusion_cerberus_ianitor_orci_93d9d32e",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4662,6 +4710,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0054:book=6:card=417",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Cerberus ianitor Orci",
         "Cerberus Orci ianitor",
@@ -4950,6 +4999,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.homer_iliad_phrases_chimaerae_triplex_imago",
       "id": "la_classical_or_scriptural_allusion_chimaerae_triplex_imago_cb911ec2",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4964,6 +5014,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0133%3Abook%3D6%3Acard%3D179",
       "source_work": "Ilias",
       "source_work_key": "mnemosyne.la.work.ilias",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Chimaerae triplex imago",
         "Chimaerae triplicis imago",
@@ -4991,6 +5042,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133",
       "source_work": "Ilias",
       "source_work_key": "mnemosyne.la.work.ilias",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Chimera horrendum monstrum",
         "Chimera horrendum",
@@ -5044,6 +5096,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0153",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cincinnatus",
         "Lucius Quinctius Cincinnatus",
@@ -5071,6 +5124,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0146:book=3",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cincinnatus dictator ad aratrum redit",
         "Cincinnatus ad aratrum redit",
@@ -5319,6 +5373,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0003:book=1",
       "source_work": "De Bello Alexandrino",
       "source_work_key": "mnemosyne.la.work.de_bello_alexandrino",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cleopatra VII et Antonius in Aegypto moriuntur",
         "Cleopatra et Antonius moriuntur",
@@ -5415,6 +5470,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Know_thyself",
       "source_work": "Delphic Oracle (attributed to Chilon of Sparta)",
       "source_work_key": "mnemosyne.la.work.delphic_oracle_attributed_to_chilon_of_sparta",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Cognosce te ipsum",
         "gnothi seauton",
@@ -5508,6 +5564,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "confer",
         "cf.",
@@ -5535,6 +5592,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0174",
       "source_work": "Vita Constantini",
       "source_work_key": "mnemosyne.la.work.vita_constantini",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Constantine's vision",
         "the vision of Constantine",
@@ -5589,6 +5647,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0170:text%3Dvit.%20const.",
       "source_work": "Vita Constantini",
       "source_work_key": "mnemosyne.la.work.vita_constantini",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Constantinus victor ad pontem Milvium",
         "Constantinus ad pontem Milvium victor",
@@ -5821,6 +5880,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=1+Corinthians+15%3A33&version=VULGATE",
       "source_work": "Novum Testamentum Graece",
       "source_work_key": "mnemosyne.la.work.novum_testamentum_graece",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Corrumpunt mores bonos colloquia prava",
         "Corrumpunt mores colloquia prava",
@@ -5985,6 +6045,7 @@
       "source_url": "https://www.gutenberg.org/files/41427/41427-h/41427-h.htm#page-1",
       "source_work": "Proslogion",
       "source_work_key": "mnemosyne.la.work.proslogion",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Credo ut intelligam",
         "Credo, ut intelligam",
@@ -6189,6 +6250,7 @@
       "source_url": "https://www.bible.com/bible/160/1CO.1.18.NIV",
       "source_work": "Epistula ad Corinthios I",
       "source_work_key": "mnemosyne.la.work.epistula_ad_corinthios_i",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Crux Christi virtus",
         "Crux Christi est virtus",
@@ -6269,6 +6331,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Psalm+43%3A6&version=VULGATE",
       "source_work": "Vulgata",
       "source_work_key": "mnemosyne.la.work.vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Cum Deo proelia vincuntur",
         "Cum Deo proelia vincere",
@@ -6445,6 +6508,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0153",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "the Curiatii brothers",
         "the Horatii and Curiatii",
@@ -6592,6 +6656,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.homer_odyssey_phrases_cyclopis_oculus_unus_erat",
       "id": "la_classical_or_scriptural_allusion_cyclopis_oculus_unus_erat_b8b65cf6",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6606,6 +6671,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0134%3Abook%3D9%3Acard%3D371",
       "source_work": "Odyssea",
       "source_work_key": "mnemosyne.la.work.odyssea",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Cyclopis oculus unus erat",
         "Cyclopis unus oculus erat",
@@ -6660,6 +6726,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_phrases_danaides_aquam_in_doliu",
       "id": "la_classical_or_scriptural_allusion_danaides_aquam_in_dolium_effundentes_1669c895",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6674,6 +6741,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:book=4:card=459",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Danaides aquam in dolium effundentes",
         "Danaidum dolium",
@@ -6786,6 +6854,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Psalm+130&version=VULGATE",
       "source_work": "Psalmi",
       "source_work_key": "mnemosyne.la.work.psalmi",
+      "subcategory": "biblical",
       "surface_patterns": [
         "De profundis",
         "de profundis clamavi"
@@ -7011,6 +7080,7 @@
       "source_url": "https://www.vatican.va/archive/bible/nova_vulgata/documents/nova-vulgata_nt_epist-rom_1-t.html",
       "source_work": "Vulgata",
       "source_work_key": "mnemosyne.la.work.vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Deo gratias",
         "Deo gratias agere",
@@ -7382,6 +7452,7 @@
       "source_url": "https://www.bible.com/bible/160/AMO.5.18-20.NIV",
       "source_work": "Various (Biblical)",
       "source_work_key": "mnemosyne.la.work.various_biblical",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Dies Domini",
         "Dies Dominicus",
@@ -7654,6 +7725,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Psalm+109%3A1&version=VULGATE",
       "source_work": "Liber Psalmorum",
       "source_work_key": "mnemosyne.la.work.liber_psalmorum",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Dixit Dominus Domino meo: Sede a dextris meis",
         "Dixit Dominus Domino meo: Sede ad dexteram meam"
@@ -7775,6 +7847,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Psalm+27%3A1&version=VULGATE",
       "source_work": "Psalmi",
       "source_work_key": "mnemosyne.la.work.psalmi",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Dominus illuminatio mea",
         "Dominus illuminatio mea et salus mea",
@@ -7964,6 +8037,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+11%3A10&version=VULGATE",
       "source_work": "Novum Testamentum Graece",
       "source_work_key": "mnemosyne.la.work.novum_testamentum_graece",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Ecce autem praecursor venit",
         "Ecce praecursor venit"
@@ -8068,6 +8142,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0206",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Epaminondas' battle formation",
         "the oblique order of Epaminondas",
@@ -8145,6 +8220,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+28%3A20&version=VULGATE",
       "source_work": "Novum Testamentum Graece",
       "source_work_key": "mnemosyne.la.work.novum_testamentum_graece",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Et ecce ego vobiscum sum omnibus diebus",
         "Ecce ego vobiscum sum omnibus diebus"
@@ -8383,6 +8459,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:text=Met.:book=2",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Europa a love rapta",
         "Europa rapta a love",
@@ -8408,6 +8485,7 @@
       "source_url": "https://en.wiktionary.org/wiki/ex_cathedra",
       "source_work": "Various (Roman administrative and ecclesiastical Latin)",
       "source_work_key": "mnemosyne.la.work.various_roman_administrative_and_ecclesiastical_la",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "ex cathedra",
         "ex-cathedra",
@@ -8500,6 +8578,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0131:text=Lucr.",
       "source_work": "De Rerum Natura",
       "source_work_key": "mnemosyne.la.work.de_rerum_natura",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Ex nihilo nihil fit",
         "Ex nihilo nihil fit.",
@@ -8567,6 +8646,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Psalm+35&version=VULGATE",
       "source_work": "Psalmi",
       "source_work_key": "mnemosyne.la.work.psalmi",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Exsurge Domine, adiuva nos",
         "Exsurge, Domine, adiuva nos",
@@ -8700,6 +8780,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0055:text=Verg.:book=7",
       "source_work": "Aeneid",
       "source_work_key": "mnemosyne.la.work.aeneid",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Faunus silvarum dominus",
         "Faunus dominus silvarum",
@@ -8727,6 +8808,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0095:text=Fasti:book=4:card=132",
       "source_work": "Fasti",
       "source_work_key": "mnemosyne.la.work.fasti",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Favete linguis!",
         "favete linguis"
@@ -8906,6 +8988,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+6%3A10&version=VULGATE",
       "source_work": "Evangelium secundum Matthaeum",
       "source_work_key": "mnemosyne.la.work.evangelium_secundum_matthaeum",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Fiat voluntas tua, sicut in caelo et in terra",
         "Fiat voluntas tua sicut in caelo et in terra",
@@ -9225,6 +9308,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=1+Timothy+2%3A15&version=VULGATE",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Glorificetur Deus in omnibus",
         "Glorificetur Dominus in omnibus",
@@ -9279,6 +9363,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:text=Met.:book=4",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Gorgon Medusae caput horrendum",
         "Medusae caput horrendum",
@@ -9698,6 +9783,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Hercules duodecim labores"
       ]
@@ -9776,6 +9862,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=John+6%3A51&version=VULGATE",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Hic est panis quem dedit Dominus",
         "Hic est panis qui de caelo descendit",
@@ -9843,6 +9930,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=John+6&version=VULGATE",
       "source_work": "Novum Testamentum Graece",
       "source_work_key": "mnemosyne.la.work.novum_testamentum_graece",
+      "subcategory": "biblical",
       "surface_patterns": [
         "hic panis qui de caelo descendit",
         "panis qui de caelo descendit"
@@ -9908,6 +9996,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Project_Gutenberg_EBook_of_Aesop%27s_Fables",
       "source_work": "Aesop's Fables",
       "source_work_key": "mnemosyne.la.work.aesop_s_fables",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Hic Rhodus, hic salta",
         "Hic Rhodus, hic saltare",
@@ -10199,6 +10288,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0107:text=HF",
       "source_work": "Hercules Furens",
       "source_work_key": "mnemosyne.la.work.hercules_furens",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Hydra Lernaea capita renascentia",
         "Hydra capita renascentia",
@@ -10280,6 +10370,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Ignoramus_et_ignorabimus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Ignoramus et ignorabimus",
         "Ignoramus, ignorabimus",
@@ -10319,6 +10410,7 @@
       "source_url": "https://droitromain.univ-grenoble-alpes.fr/Anglica/Digesta22.htm",
       "source_work": "Digestum",
       "source_work_key": "mnemosyne.la.work.digestum",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Ignorantia legis neminem excusat",
         "Ignorantia legis non excusat",
@@ -10506,6 +10598,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Psalm+31%3A2&version=VULGATE",
       "source_work": "Psalmi",
       "source_work_key": "mnemosyne.la.work.psalmi",
+      "subcategory": "biblical",
       "surface_patterns": [
         "In te Domine speravi, non confundar in aeternum",
         "In te, Domine, speravi non confundar in aeternum",
@@ -10876,6 +10969,7 @@
       "source_url": "https://avalon.law.yale.edu/ancient/hamframe.asp",
       "source_work": "Code of Hammurabi",
       "source_work_key": "mnemosyne.la.work.code_of_hammurabi",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "lex talionis",
         "lex talionis est",
@@ -11093,6 +11187,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Genesis+39%3A16&version=VULGATE",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Mane, Tecum sumus",
         "mane tecum sumus"
@@ -11144,6 +11239,7 @@
       "source_license": "public_domain",
       "source_work": "De Bello Cimbrico",
       "source_work_key": "mnemosyne.la.work.de_bello_cimbrico",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "contra Cimbros",
         "bellum contra Cimbros",
@@ -11196,6 +11292,7 @@
       "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/secondary/SMIGRA*/Bellum_Civile.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Marius et Sulla",
         "Bellum Civile inter Marium et Sullam",
@@ -11317,6 +11414,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Luke+4%3A23&version=VULGATE",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Medice, cura te ipsum",
         "Medice cura te ipsum",
@@ -11344,6 +11442,7 @@
       "source_url": "http://www.usccb.org/prayer-and-worship/liturgy-and-worship/liturgical-year/lent/ash-wednesday.cfm",
       "source_work": "Missale Romanum",
       "source_work_key": "mnemosyne.la.work.missale_romanum",
+      "subcategory": "biblical",
       "surface_patterns": [
         "memento, quia pulvis es"
       ]
@@ -11800,6 +11899,7 @@
       "source_url": "https://www.leibniz-edition.de/editionen/correspondence-with-christian-goldbach/letter.htm?id=17120417",
       "source_work": "Letter to Christian Goldbach",
       "source_work_key": "mnemosyne.la.work.letter_to_christian_goldbach",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Musica est exercitium arithmeticae occultum nescientis animi",
         "Musica est exercitium arithmeticae occultum ignorantis animi"
@@ -12038,6 +12138,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0129",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Nero fiddens",
         "Nero Romae incensus",
@@ -12091,6 +12192,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0078:text%3DAnn.%253A15",
       "source_work": "Annales",
       "source_work_key": "mnemosyne.la.work.annales",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Nero incendium Romae non prohibuit",
         "Nero incendium non restinxit",
@@ -12326,6 +12428,7 @@
       "source_url": "https://droitromain.upmf-grenoble.fr/Anglica/Digesta44.htm",
       "source_work": "Digest of Justinian",
       "source_work_key": "mnemosyne.la.work.digest_of_justinian",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Non bis in idem",
         "non bis in idem (legal principle)",
@@ -12535,6 +12638,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.vulgate_lamentations_phrases_o_vos_omnes_qui_trans",
       "id": "la_classical_or_scriptural_allusion_o_vos_omnes_qui_transitis_per_viam_attendite_et_videte_si_es_cd1fa01d",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12549,6 +12653,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Lamentations+1%3A12&version=VULGATE",
       "source_work": "Liber Lamentationum",
       "source_work_key": "mnemosyne.la.work.liber_lamentationum",
+      "subcategory": "biblical",
       "surface_patterns": [
         "O vos omnes qui transitis per viam, attendite et videte si est dolor sicut dolor meus",
         "O vos omnes qui transitis per viam, attendite et videte si est dolor sicut dolor meus.",
@@ -12710,6 +12815,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+6%3A11&version=VULGATE",
       "source_work": "Novum Testamentum",
       "source_work_key": "mnemosyne.la.work.novum_testamentum",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Panem nostrum quotidianum da nobis hodie",
         "Panem nostrum quotidianum da nobis hodie.",
@@ -12846,6 +12952,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+6%3A9&version=VULGATE",
       "source_work": "Novum Testamentum",
       "source_work_key": "mnemosyne.la.work.novum_testamentum",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Pater noster, qui es in caelis, sanctificetur nomen tuum",
         "Pater noster, qui es in caelis, sanctificetur nomen tuum.",
@@ -13009,6 +13116,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:2008.01.0537:text=Inst.:book=3:chapter=8",
       "source_work": "Institutio Oratoria",
       "source_work_key": "mnemosyne.la.work.institutio_oratoria",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "performans",
         "actio performans",
@@ -13035,6 +13143,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0072%3Abook%3D2%3Achapter%3D35",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Pericles atheniense aureum saeculum",
         "Pericles et aureum saeculum Atheniense",
@@ -13061,6 +13170,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "persona grata",
         "personae gratiae",
@@ -13099,6 +13209,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Persona_non_grata",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Persona non grata",
         "Personae non gratae",
@@ -13166,6 +13277,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0138%3Abook%3D7",
       "source_work": "Pharsalia",
       "source_work_key": "mnemosyne.la.work.pharsalia",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Pharsaliae clades pompeiana",
         "clades Pharsaliae Pompeiana",
@@ -13233,6 +13345,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0120",
       "source_work": "Epistulae",
       "source_work_key": "mnemosyne.la.work.epistulae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Clades Pompeiana",
         "Pompeii clades",
@@ -13401,6 +13514,7 @@
       "source_url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Curtius/7*.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Victoria Pyrrhi",
         "Pyrrhi victoria",
@@ -13427,6 +13541,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0073",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Pyrrhus victoriam Pyrrhicam reportavit"
       ]
@@ -13489,6 +13604,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.terence_andria_quem_di_diligunt_adolescens_moritur",
       "id": "la_classical_or_scriptural_allusion_quem_di_diligunt_adolescens_moritur_1b02d854",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -13503,6 +13619,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0134:text=And.:ch=5:sc=4",
       "source_work": "Andria",
       "source_work_key": "mnemosyne.la.work.andria",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "quem di diligunt adolescens moritur",
         "quem di diligunt moritur adolescens",
@@ -13665,6 +13782,7 @@
       "source_license": "public_domain",
       "source_work": "Elementa",
       "source_work_key": "mnemosyne.la.work.elementa",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "quod erat demonstrandum",
         "QED",
@@ -13758,6 +13876,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0237:text=Stob.:Anth.Prose",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Quos deus vult perdere, prius dementat",
         "Quos deus vult perdere, prius demens facit",
@@ -13835,6 +13954,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0113",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Regulus in carcerem mittitur",
         "Regulus mittitur in carcerem",
@@ -13862,6 +13982,7 @@
       "source_url": "http://www.introibo.fr/Requiem-aeternam-dona-eis",
       "source_work": "Missale Romanum",
       "source_work_key": "mnemosyne.la.work.missale_romanum",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Requiem aeternam dona eis Domine",
         "Requiem aeternam dona eis Domine.",
@@ -13930,6 +14051,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0145",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "regnum Tarquinii Superbi"
       ]
@@ -13987,6 +14109,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0018",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Romulus ac Remus",
         "Romuli Remique",
@@ -14119,6 +14242,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Hor.+Ep.+1.2.40",
       "source_work": "Epistulae",
       "source_work_key": "mnemosyne.la.work.epistulae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "sapere aude",
         "dare to know",
@@ -14172,6 +14296,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0152",
       "source_work": "De Agri Cultura",
       "source_work_key": "mnemosyne.la.work.de_agri_cultura",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Carthaginem delere",
         "Scipio Africanus Carthaginem delevit"
@@ -14224,6 +14349,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0010",
       "source_work": "De Viris Illustribus",
       "source_work_key": "mnemosyne.la.work.de_viris_illustribus",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Scipio Nasica optimus vir appellatur",
         "Scipio Nasica optimus dicitur",
@@ -14250,6 +14376,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=1+John+1%3A9&version=VULGATE",
       "source_work": "Novum Testamentum",
       "source_work_key": "mnemosyne.la.work.novum_testamentum",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Si peccasse confessus fueris, dimittetur tibi",
         "Si peccasse confessus fueris, dimittetur tibi.",
@@ -14375,6 +14502,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0151",
       "source_work": "De Bello Civili",
       "source_work_key": "mnemosyne.la.work.de_bello_civili",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "bellum Spartacum",
         "Spartaci bellum servile",
@@ -14467,6 +14595,7 @@
       "source_license": "public_domain",
       "source_work": "Res Gestae Divi Augusti",
       "source_work_key": "mnemosyne.la.work.res_gestae_divi_augusti",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Sulla dictator",
         "Lucius Cornelius Sulla",
@@ -14492,6 +14621,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0068",
       "source_work": "Res Gestae Divi Augusti",
       "source_work_key": "mnemosyne.la.work.res_gestae_divi_augusti",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Sulla dictator leges Corneliae ferre iubet",
         "Sulla leges Corneliae ferre iubet",
@@ -14518,6 +14648,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0104",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Sulla dictator leges novas tulit"
       ]
@@ -14634,6 +14765,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0103",
       "source_work": "Commentarii rerum gestarum",
       "source_work_key": "mnemosyne.la.work.commentarii_rerum_gestarum",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Sylla saevus et crudelis",
         "Sylla saevus",
@@ -14760,6 +14892,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0234",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "auxilium Pyrrhi",
         "Tarentini auxilium petiverunt",
@@ -14786,6 +14919,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0145",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Tarquinio Superbo regnante",
         "regnante Tarquinio Superbo",
@@ -14812,6 +14946,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0018",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "expulsio Tarquiniorum",
         "regum expulsio",
@@ -15026,6 +15161,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0126:book=8:chapter=52",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Themistoclis muri",
         "Themistoclea moenia",
@@ -15218,6 +15354,7 @@
       "source_url": "https://www.biblegateway.com/passage/?search=Matthew+16%3A23&version=VULGATE",
       "source_work": "Biblia Sacra Vulgata",
       "source_work_key": "mnemosyne.la.work.biblia_sacra_vulgata",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Vade retro"
       ]
@@ -15455,6 +15592,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0001:book=7:chapter=68",
       "source_work": "Commentarii de Bello Gallico",
       "source_work_key": "mnemosyne.la.work.commentarii_de_bello_gallico",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "obsidio Alesiae",
         "obsidio Vercingetorigis",
@@ -15895,6 +16033,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0145:book=1:chapter=3",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "historical_allusion",
       "surface_patterns": [
         "Alba Longa condita",
         "Alba Longa condita est",
@@ -16028,6 +16167,7 @@
       "source_url": "https://www.unibo.it/en/university/who-we-are/history-and-identity",
       "source_work": "University of Bologna",
       "source_work_key": "mnemosyne.la.work.university_of_bologna",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Alma mater studiorum"
       ]
@@ -16118,6 +16258,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0153:text=1",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "historical_allusion",
       "surface_patterns": [
         "Ancus Marcius pontem sublicium facit",
         "pontem sublicium Ancus Marcius facit",
@@ -16246,6 +16387,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Apostolorum doctores",
         "doctores Apostolorum",
@@ -16309,6 +16451,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0051:text=RGDA",
       "source_work": "Res Gestae Divi Augusti",
       "source_work_key": "mnemosyne.la.work.res_gestae_divi_augusti",
+      "subcategory": "historical_allusion",
       "surface_patterns": [
         "Ara Pacis Augustae dedicata",
         "Ara Pacis Augustae",
@@ -16465,6 +16608,7 @@
       "source_url": "https://en.wikisource.org/wiki/Res_Gestae_Divi_Augusti",
       "source_work": "Res Gestae Divi Augusti",
       "source_work_key": "mnemosyne.la.work.res_gestae_divi_augusti",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Augustus pontem fecit",
         "pontem fecit Augustus",
@@ -16543,6 +16687,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Avete, actores!",
         "Avete, actores",
@@ -16649,6 +16794,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Bene merenti",
         "Bene merentibus",
@@ -16857,6 +17003,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cato censor",
         "Cato ille censor",
@@ -16882,6 +17029,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cato Censorinusque",
         "Cato et Censorinus",
@@ -17072,6 +17220,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Publius_Clodius_Pulcher",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Clodius et Milo",
         "Clodius and Milo",
@@ -17203,6 +17352,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Cornelia_Africana",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Cornelia mater Gracchorum",
         "Cornelia mater Gracchorum fuit",
@@ -17266,6 +17416,7 @@
       "source_url": "https://www.newadvent.org/cathen/04390a.htm",
       "source_work": "Various (Liturgical texts)",
       "source_work_key": "mnemosyne.la.work.various_liturgical_texts",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Corpus Christi",
         "Feast of Corpus Christi"
@@ -17303,6 +17454,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Battle_of_Carrhae",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Crassus Parthis apud Carrhas cecidit",
         "Crassus in pugna apud Carrhas cecidit",
@@ -17717,6 +17869,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Twelve_Tables",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Decemviri legibus scribendis",
         "Decemviri leges scribere iussi sunt",
@@ -17840,6 +17993,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Divae theatri gloria",
         "divae theatri gloriae",
@@ -17903,6 +18057,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "dramatis personae",
         "dramatis personae (list)",
@@ -18082,6 +18237,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "exempli gratia",
         "e.g.",
@@ -18108,6 +18264,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0026:book=22:chapter=11",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Fabii Maximi cunctator",
         "Fabius Maximus Cunctator",
@@ -18254,6 +18411,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0026:book=22:chapter=4",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Flaminius consul ad Trasumennum lacum vincitur",
         "Flaminius ad Trasumennum lacum vincitur",
@@ -18403,6 +18561,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Gracchi fratres agrariam legem defendunt",
         "Gracchi agrariam legem defendunt",
@@ -18555,6 +18714,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Horas non numero nisi serenas",
         "Horas non numero nisi serenas,",
@@ -18585,6 +18745,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0026:book=2:chapter=10",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Horatius Cocles pontem servat",
         "Horatius ad pontem",
@@ -18688,6 +18849,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "In absentia",
         "In absentia (legal)",
@@ -18851,6 +19013,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0026:book=44:chapter=41",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "L. Aemilius Paullus ad Pydnam vincitur",
         "Paullus ad Pydnam vincitur",
@@ -18879,6 +19042,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0026:book=2:chapter=1",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "L. Junius Brutus reges expellit",
         "Brutus reges expellit",
@@ -18947,6 +19111,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Lapsus linguae",
         "Lapsus",
@@ -19183,6 +19348,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Magnum_opus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "magnum opus",
         "magnum opus meum",
@@ -19238,6 +19404,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0017:text%3Dmarius",
       "source_work": "De Viris Illustribus",
       "source_work_key": "mnemosyne.la.work.de_viris_illustribus",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Marius septies consul factus est",
         "Marius septies consul creatus est",
@@ -19500,6 +19667,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0151:text%3DGesta",
       "source_work": "Res Gestae Divi Augusti",
       "source_work_key": "mnemosyne.la.work.res_gestae_divi_augusti",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Octavianus Aegyptum vicit",
         "Octavianus in Aegypto triumphavit",
@@ -19553,6 +19721,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0144:text%3D30",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Scipio Africanus Zama vicit",
         "Scipio Zama superavit",
@@ -19845,6 +20014,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0176:text%3DPyrrh.%253A1",
       "source_work": "Parallel Lives",
       "source_work_key": "mnemosyne.la.work.parallel_lives",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "rex Pyrrhus",
         "Pyrrhus rex Epiri",
@@ -20150,6 +20320,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Status_quo",
       "source_work": "In Extenso",
       "source_work_key": "mnemosyne.la.work.in_extenso",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "status quo",
         "status quo ante",
@@ -20307,6 +20478,7 @@
       "source_url": "https://www.newadvent.org/cathen/13615b.htm",
       "source_work": "Pange Lingua Gloriosi Corporis Mysterium",
       "source_work_key": "mnemosyne.la.work.pange_lingua_gloriosi_corporis_mysterium",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Tantum ergo sacramentum veneremur cernui"
       ]
@@ -20524,6 +20696,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Virtute et armis"
       ]
@@ -20752,6 +20925,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.la.explanation.vergil_aeneid_phrases_acherontem_illacrimabilem_tr",
       "id": "la_literary_reference_acherontem_illacrimabilem_transire_0f8abadd",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -20766,6 +20940,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0055%3Abook%3D6%3Acard%3D290",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Acherontem illacrimabilem transire",
         "Acherontem transire",
@@ -21061,6 +21236,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.la.explanation.statius_achilleid_aeacidae_dolus",
       "id": "la_literary_reference_aeacidae_dolus_352d6e6d",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21075,6 +21251,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0120:book=1:card=645",
       "source_work": "Achilleid",
       "source_work_key": "mnemosyne.la.work.achilleid",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aeacidae dolus",
         "dolus Aeacidae",
@@ -21087,6 +21264,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_phrases_aegei_maris_fluctibus_o",
       "id": "la_literary_reference_aegei_maris_fluctibus_obrui_c2e6beca",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21101,6 +21279,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0028%3Abook%3D7%3Acard%3D440",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aegei maris fluctibus obrui",
         "Aegei maris fluctibus obruere",
@@ -21245,6 +21424,7 @@
         "zh": "拉丁语短语，意为“埃涅阿斯后裔的母亲”，指罗马神话中的维纳斯。出自维吉尔的《埃涅伊德》，强调她在罗马建国中神圣而母性的角色。"
       },
       "id": "la_literary_reference_aeneadum_genetrix_0ca70d16",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Virgil's *Aeneid* is accurate and verifiable; the phrase is a well-documented epithet for Venus.",
@@ -21259,6 +21439,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0054:text%3DAen.%3Abook%3D1",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aeneadum genetrix",
         "Aeneadum genetrix, hominum divumque",
@@ -21591,6 +21772,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.latin_classical_phrases_aeneas_pius_et_longanimis",
       "id": "la_literary_reference_aeneas_pius_et_longanimis_14f7f014",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21605,6 +21787,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0054%3Abook%3D1%3Acard%3D378",
       "source_work": "Aeneid",
       "source_work_key": "mnemosyne.la.work.aeneid",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aeneas pius et longanimis",
         "Aeneas pius",
@@ -21671,6 +21854,7 @@
         "zh": "一个比喻性短语，意为“待耕的海洋”，象征航行或征服的挑战。源自罗马史诗，体现人类与自然的英雄斗争。"
       },
       "id": "la_literary_reference_aequor_arandum_012fb25c",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase 'aequor arandum' is a valid Virgilian metaphor from Aeneid 1.35, accurately cited.",
@@ -21685,6 +21869,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0054:text=1",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "aequor arandum",
         "arandum aequor",
@@ -21777,6 +21962,7 @@
         "zh": "一个短语，意为“三重青铜”，象征坚不可摧的勇气或韧性。源自贺拉斯，用于描述士兵或英雄坚定不移的心。"
       },
       "id": "la_literary_reference_aes_triplex_a3c344c6",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Horace's 'aes triplex' (Odes 3.3.11) is a well-attested phrase symbolizing resilience, correctly sourced.",
@@ -21791,6 +21977,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0063:text=3.3",
       "source_work": "Carmina (Odes)",
       "source_work_key": "mnemosyne.la.work.carmina_odes",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "aes triplex",
         "triplex aes",
@@ -21803,6 +21990,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_phrases_aesonius_iuventa_redint",
       "id": "la_literary_reference_aesonius_iuventa_redintegrata_843dfe55",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21817,6 +22005,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0028%3Abook%3D7%3Acard%3D280",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aesonius iuventa redintegrata",
         "Aesonis iuventa redintegrata",
@@ -21905,6 +22094,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.aesop_fabulae_aesopus_auctor_litterarius",
       "id": "la_literary_reference_aesopus_auctor_litterarius_7b2f9243",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21918,6 +22108,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/113",
       "source_work": "Fabulae",
       "source_work_key": "mnemosyne.la.work.fabulae",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aesopus",
         "Aesopi fabulae",
@@ -22153,6 +22344,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.la.explanation.homer_iliad_phrases_aiacis_iracundia",
       "id": "la_literary_reference_aiacis_iracundia_39c75b69",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22167,6 +22359,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0133",
       "source_work": "Ilias",
       "source_work_key": "mnemosyne.la.work.ilias",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aiacis iracundia",
         "Aiacis ira",
@@ -22180,6 +22373,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.la.explanation.classical_heroic_phrases_aiacis_telum_invictum",
       "id": "la_literary_reference_aiacis_telum_invictum_e11bac5f",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22193,6 +22387,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aiacis telum invictum",
         "telum Aiacis invictum",
@@ -22218,6 +22413,7 @@
         "zh": "来自普劳图斯喜剧《波伊努卢斯》的一句诙谐拉丁语，意为“我说你在罗马享乐”。常被引为罗马机智的早期典范。"
       },
       "id": "la_literary_reference_aio_te_romae_esse_leporum_9f06e2d5",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to Plautus' 'Poenulus' and correct surface patterns.",
@@ -22232,6 +22428,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0129:text=Poen.:act=5",
       "source_work": "Poenulus",
       "source_work_key": "mnemosyne.la.work.poenulus",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aio te Romae esse leporum",
         "Aio te Romae esse leporum, Publio?"
@@ -22297,6 +22494,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.euripides_alcestis_phrases_alcesti_pro_marito_mori",
       "id": "la_literary_reference_alcesti_pro_marito_mori_f4719a50",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22311,6 +22509,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0084:text=Alcestis",
       "source_work": "Alcestis",
       "source_work_key": "mnemosyne.la.work.alcestis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Alcestis pro marito mori",
         "Alcestem pro marito mori",
@@ -22405,6 +22604,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.tacitus_historiae_references_alcibiadis_cupido",
       "id": "la_literary_reference_alcibiadis_cupido_79b60418",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22419,6 +22619,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0080",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Alcibiadis cupido",
         "cupido Alcibiadis",
@@ -22472,6 +22673,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.la.explanation.classical_epithets_hercules_alcides_famosus",
       "id": "la_literary_reference_alcides_famosus_ee09de4c",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22486,6 +22688,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0021",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Alcides famosus",
         "Alcides clarus",
@@ -22594,6 +22797,7 @@
         "zh": "一切因愿望而发生的都是陌生的。塞涅卡《致卢奇利乌斯书》中的一句话，告诫不要抱有不切实际的期望。"
       },
       "id": "la_literary_reference_alienum_est_omne_quicquid_optando_evenit_0b7345d9",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to Seneca's 'Epistulae Morales' and correct surface patterns.",
@@ -22608,6 +22812,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0132:text=Ep.:book=1:letter=7",
       "source_work": "Epistulae Morales ad Lucilium",
       "source_work_key": "mnemosyne.la.work.epistulae_morales_ad_lucilium",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Alienum est omne quicquid optando evenit",
         "Omne quicquid optando evenit alienum est",
@@ -22646,6 +22851,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.lucretius_de_rerum_natura_alma_venus_caeli_subter_",
       "id": "la_literary_reference_alma_venus_caeli_subter_labentia_signa_dbb1583c",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22660,6 +22866,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0082:text=1",
       "source_work": "De Rerum Natura",
       "source_work_key": "mnemosyne.la.work.de_rerum_natura",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Alma Venus, caeli subter labentia signa",
         "Alma Venus caeli subter labentia signa",
@@ -22685,6 +22892,7 @@
         "zh": "对维纳斯的诗意祈祷，她是爱与美的女神，兼具滋养与神性，常与创造和生育相关。该短语出自卢克莱修的哲学诗《物性论》，其中维纳斯被拟人化为宇宙力量。"
       },
       "id": "la_literary_reference_alma_venus_diva_606fb795",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution, surface patterns, and explanation are accurate and verifiable in Lucretius' De Rerum Natura.",
@@ -22699,6 +22907,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0082:text=1",
       "source_work": "De Rerum Natura",
       "source_work_key": "mnemosyne.la.work.de_rerum_natura",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Alma Venus diva",
         "Alma Venus",
@@ -23018,6 +23227,7 @@
         "zh": "意为“爱情既是蜜糖也是苦胆”，出自奥维德《爱经》的这句名言描绘了爱情的双重性——甜蜜与苦涩。它反映了浪漫关系的情感复杂性。"
       },
       "id": "la_literary_reference_amore_et_melle_et_felle_28f4ad2f",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is accurately sourced from Ovid's 'Amores' Book 1, Elegy 9, Line 1, and the explanation is correct.",
@@ -23032,6 +23242,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0055:text%3DAmores:text%3D1:text%3D9",
       "source_work": "Amores",
       "source_work_key": "mnemosyne.la.work.amores",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Amore et melle et felle",
         "amore melle et felle",
@@ -23128,6 +23339,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_phrases_andromedae_servatae_gra",
       "id": "la_literary_reference_andromedae_servatae_gratia_9b89eba8",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23142,6 +23354,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:text=Met.:book=4:card=663",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Andromedae servatae gratia",
         "gratia Andromedae servatae",
@@ -23197,6 +23410,7 @@
         "zh": "恋人之间有一个灵魂。这句话表达了真爱将两个人合为一个精神整体的理念，这一概念在古典和中世纪文学中被广泛探讨。"
       },
       "id": "la_literary_reference_anima_in_amantibus_una_59b8f9a6",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to Cicero's De Amicitia, Chapter 20, with correct surface patterns.",
@@ -23211,6 +23425,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0044:text=Lael.:book=1:chapter=20",
       "source_work": "De Amicitia",
       "source_work_key": "mnemosyne.la.work.de_amicitia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Anima in amantibus una",
         "Anima una in amantibus",
@@ -23305,6 +23520,7 @@
         "zh": "拉丁语短语“黎明前起身”，常用于描述勤奋与勤劳。出现在罗马文学中，尤以小普林尼的作品为代表，他描述了自己早起工作的习惯。"
       },
       "id": "la_literary_reference_ante_lucem_surgo_bda4f2f6",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution, surface patterns, and explanation are accurate and verifiable in Pliny the Younger's Epistulae.",
@@ -23319,6 +23535,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0101:text=Ep.9.36",
       "source_work": "Epistulae",
       "source_work_key": "mnemosyne.la.work.epistulae",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ante lucem surgo",
         "Ante lucem surgere",
@@ -23373,6 +23590,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0137",
       "source_work": "Naturalis Historia",
       "source_work_key": "mnemosyne.la.work.naturalis_historia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Apellis manus",
         "manus Apellis",
@@ -23484,6 +23702,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_myth_arachne_telas_texens",
       "id": "la_literary_reference_arachne_telas_texens_a595bd86",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23498,6 +23717,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0021",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Arachne telas texens",
         "Arachne tela texens",
@@ -23511,6 +23731,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_phrases_arachne_textrix",
       "id": "la_literary_reference_arachne_textrix_769d2d93",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23525,6 +23746,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0021%3Abook%3D6%3Acard%3D1",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Arachne texit",
         "Arachne aranea",
@@ -23537,6 +23759,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_arachnes_ars_insolens",
       "id": "la_literary_reference_arachnes_ars_insolens_27de3348",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23551,6 +23774,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:book=6:card=1",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Arachne",
         "Arachnae ars",
@@ -23591,6 +23815,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.la.explanation.apollonius_rhodius_argonautica_phrases_argo_navis_",
       "id": "la_literary_reference_argo_navis_prima_fabricata_8f39a07d",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23605,6 +23830,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0188:text=Arg.:book=1:card=1",
       "source_work": "Argonautica",
       "source_work_key": "mnemosyne.la.work.argonautica",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Argo prima navis fabricata est",
         "Argo prima fabricata",
@@ -23648,6 +23874,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.mythological_labyrinth_phrases_ariadnae_filum_in_l",
       "id": "la_literary_reference_ariadnae_filum_in_labyrintho_8451aac7",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -23661,6 +23888,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0028:text=Met.:book=8:card=172",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ariadnae filum in labyrintho",
         "Ariadnae filum tenens",
@@ -24285,6 +24513,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0019",
       "source_work": "Epistulae ad Atticum",
       "source_work_key": "mnemosyne.la.work.epistulae_ad_atticum",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Atticus Ciceroni familiaris",
         "Atticus familiaris Ciceronis",
@@ -24325,6 +24554,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.la.explanation.horace_epistles_phrases_audax_nimium_qui_timor_omn",
       "id": "la_literary_reference_audax_nimium_qui_timor_omnem_a36bc663",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to Horace, correct text, and valid explanation.",
@@ -24339,6 +24569,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0069:book=1:epistle=2:card=40",
       "source_work": "Epistulae",
       "source_work_key": "mnemosyne.la.work.epistulae",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Audax nimium qui timor omnem",
         "Audax nimium qui timor omnem sentit"
@@ -24487,6 +24718,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.la.explanation.homer_iliad_aurora_roseis_digitis",
       "id": "la_literary_reference_aurora_roseis_digitis_bb946679",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24501,6 +24733,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133:book=2:card=486",
       "source_work": "Iliad",
       "source_work_key": "mnemosyne.la.work.iliad",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aurora",
         "Aurorae digitis",
@@ -24646,6 +24879,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Bacchus cum tigribus iunctus",
         "Bacchus tigribus iunctus",
@@ -24963,6 +25197,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.homer_iliad_phrases_bellerophontis_inanis_gloria",
       "id": "la_literary_reference_bellerophontis_inanis_gloria_6786b135",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24977,6 +25212,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133:book=6:card=155",
       "source_work": "Ilias",
       "source_work_key": "mnemosyne.la.work.ilias",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Bellerophontis inanis gloria",
         "inanis gloria Bellerophontis",
@@ -25425,6 +25661,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_phrases_calliope_carmina_canens",
       "id": "la_literary_reference_calliope_carmina_canens_fe375e02",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25439,6 +25676,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0063",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Calliope carmina canens",
         "Calliope carmina canentem",
@@ -25695,6 +25933,7 @@
         "סטירות": "(6.221) שפירושה 'הטבע מעניק לנשים צנועות ערך של מאסר'. משקפת את הביקורת הסאטירית של יובנאל על צניעות נשית, ונזכרת לעיתים קרובות בדיונים על עמדות רומיות כלפי מגדר ומוסר."
       },
       "id": "la_literary_reference_carcere_dignos_praebet_natura_pudicos_c751b49a",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Verified as Juvenal, *Satires* 6.221, with accurate surface patterns and explanation.",
@@ -25709,6 +25948,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0132%3Asatire%3D6%3Aline%3D221",
       "source_work": "Satires",
       "source_work_key": "mnemosyne.la.work.satires",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Carcere dignos praebet natura pudicos",
         "Natura pudicos carcere dignos praebet",
@@ -25896,6 +26136,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0019:book=5:card=13",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Carthaginem esse delendam censeo",
         "Carthago delenda est censeo",
@@ -25947,6 +26188,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0054:book=2:line=246",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Cassandra vates incassum",
         "Cassandra vates frustra",
@@ -26046,6 +26288,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.la.explanation.latin_hymns_ambrose_casta_est_lucis_aeternae",
       "id": "la_literary_reference_casta_est_lucis_aeternae_a48f0c44",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26060,6 +26303,7 @@
       "source_url": "https://www.hymnary.org/text/lucis_creator_optime",
       "source_work": "Lucis Creator Optime",
       "source_work_key": "mnemosyne.la.work.lucis_creator_optime",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Casta est lucis aeternae",
         "Casta est lux aeterna",
@@ -26084,6 +26328,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Castor et Pollux sidera facti",
         "Castor Polluxque sidera facti",
@@ -26282,6 +26527,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0055:book=6:line=417",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cerberus triceps ianitor",
         "Cerberus triceps ianitor Orci",
@@ -26376,6 +26622,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0133:book=6:line=181",
       "source_work": "Ilias",
       "source_work_key": "mnemosyne.la.work.ilias",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Chimaera igni spirans",
         "Chimaera igne spirans",
@@ -26465,6 +26712,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0013",
       "source_work": "Brutus",
       "source_work_key": "mnemosyne.la.work.brutus",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cicero eloquentiae lumen",
         "Cicero lumen eloquentiae",
@@ -26492,6 +26740,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0019:text=Dom.",
       "source_work": "Pro Domo Sua",
       "source_work_key": "mnemosyne.la.work.pro_domo_sua",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cicero pro domo sua dixit",
         "pro domo sua dixit",
@@ -26519,6 +26768,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0154:text=Mil.",
       "source_work": "Pro Milone",
       "source_work_key": "mnemosyne.la.work.pro_milone",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cicero pro Milone",
         "pro Milone",
@@ -26546,6 +26796,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0153:text=Deiot.",
       "source_work": "Pro rege Deiotaro",
       "source_work_key": "mnemosyne.la.work.pro_rege_deiotaro",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cicero pro rege Deiotaro",
         "pro rege Deiotaro",
@@ -26626,6 +26877,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0156",
       "source_work": "Orationes in Catilinam",
       "source_work_key": "mnemosyne.la.work.orationes_in_catilinam",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cicero's Catilinarians",
         "Catilinarian orations",
@@ -26667,6 +26919,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.la.explanation.homer_odyssey_phrases_circae_poculum_mutavit_socio",
       "id": "la_literary_reference_circae_poculum_mutavit_socios_a1b52e99",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26681,6 +26934,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0134%3Abook%3D10%3Acard%3D233",
       "source_work": "Odyssea",
       "source_work_key": "mnemosyne.la.work.odyssea",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Circae poculum mutavit socios",
         "Circae poculum socios mutavit",
@@ -26736,6 +26990,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0134:book=10:line=210",
       "source_work": "Odyssea",
       "source_work_key": "mnemosyne.la.work.odyssea",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Circe herbis potentibus",
         "Circe potens herbis",
@@ -27293,6 +27548,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0126:text%3DHdt.%201.86",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Croesus rex dives ad eandem flammam cadit",
         "Croesus dives ad eandem flammam cadit",
@@ -27660,6 +27916,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0204:text%3DCyr.",
       "source_work": "Cyropaedia",
       "source_work_key": "mnemosyne.la.work.cyropaedia",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Cyrus Magnus imperium Persicum condit",
         "Cyrus imperium Persicum condit",
@@ -27745,6 +28002,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.la.explanation.ovid_metamorphoses_phrases_daedali_labyrinthus_ine",
       "id": "la_literary_reference_daedali_labyrinthus_inextricabilis_d6d5d3ea",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27759,6 +28017,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0028%3Abook%3D8%3Acard%3D159",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Daedali labyrinthus inextricabilis",
         "labyrinthus Daedali inextricabilis",
@@ -27899,6 +28158,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0021:book=4:line=458",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.la.work.metamorphoses",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Danaides in vasibus sine fundo",
         "Danaides vasibus sine fundo",
@@ -28162,6 +28422,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.01.0203:text%3DArr.%20Anab.",
       "source_work": "Anabasis Alexandri",
       "source_work_key": "mnemosyne.la.work.anabasis_alexandri",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Darius rex ad Issum vincitur",
         "Darius ad Issum vincitur",
@@ -28242,6 +28503,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0001",
       "source_work": "Commentarii de Bello Gallico",
       "source_work_key": "mnemosyne.la.work.commentarii_de_bello_gallico",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "De Bello Gallico",
         "Commentarii de Bello Gallico",
@@ -28336,6 +28598,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0155:text%3DLiv.+8.9",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Decius Mus se devoveat",
         "Decius Mus se devovet",
@@ -28516,6 +28779,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0054:text=1",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Dido Carthaginem condidit",
         "Dido condidit Carthaginem",
@@ -28543,6 +28807,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0055",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Dido et Aeneas",
         "Dido Aeneasque",
@@ -29501,6 +29766,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.la.explanation.latin_classical_phrases_et_in_arcadia_ego",
       "id": "la_literary_reference_et_in_arcadia_ego_6e52094a",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -29515,6 +29781,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0055",
       "source_work": "Et in Arcadia ego",
       "source_work_key": "mnemosyne.la.work.et_in_arcadia_ego",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Et in arcadia ego",
         "Et ego in Arcadia",
@@ -30003,6 +30270,7 @@
         "zh": "谣言是最快的恶。维吉尔《埃涅阿斯纪》中的诗句，描述了流言无法控制的传播。"
       },
       "id": "la_literary_reference_fama_malum_qua_non_aliud_velocius_6ba098c9",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to Virgil’s *Aeneid* IV.174 with correct surface patterns and explanation.",
@@ -30017,6 +30285,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0055%3Abook%3D4%3Acard%3D174",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Fama malum qua non aliud velocius",
         "Fama malum est, qua non aliud velocius",
@@ -30350,6 +30619,7 @@
         "zh": "这句话可译为“美貌是易逝的财富”，强调了外在美的短暂与脆弱。常在讨论世俗享乐的短暂性及内在美德重要性时被引用。"
       },
       "id": "la_literary_reference_forma_bonum_fragile_est_ee50fb0f",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Lucretius, De rerum natura 4.1131.",
@@ -30364,6 +30634,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0132%3Abook%3D4%3Acard%3D1129",
       "source_work": "De rerum natura",
       "source_work_key": "mnemosyne.la.work.de_rerum_natura",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Forma bonum fragile est",
         "Forma bonum fragilis est",
@@ -30605,6 +30876,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0145:text=5",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Gallos ab urbe Roma avertit Camillus",
         "Camillus Gallos ab urbe Roma avertit",
@@ -30818,6 +31090,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0127:book=2:chapter=3",
       "source_work": "Historia Romana",
       "source_work_key": "mnemosyne.la.work.historia_romana",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "saeculum Gracchorum",
         "saeculum Gracchianum",
@@ -30844,6 +31117,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0103:book=3",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Gracchorum seditio",
         "seditio Gracchorum",
@@ -30912,6 +31186,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0026:book=21:chapter=32",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Hannibalis iter per Alpes",
         "iter Hannibalis per Alpes",
@@ -31362,6 +31637,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0193:text=Heaut.:play=1",
       "source_work": "Heauton Timorumenos",
       "source_work_key": "mnemosyne.la.work.heauton_timorumenos",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Homo sum, humani nihil a me alienum puto",
         "Homo sum, humani nil a me alienum puto",
@@ -31442,6 +31718,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0026:book=1:chapter=24",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Horatii et Curiatii duellum",
         "duellum Horatiorum et Curiatorum",
@@ -31470,6 +31747,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0145:text=2",
       "source_work": "Ab Urbe Condita",
       "source_work_key": "mnemosyne.la.work.ab_urbe_condita",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Horatius Cocles pontem defendit",
         "Horatius Cocles pontem servavit",
@@ -31496,6 +31774,7 @@
         "zh": "表达恐惧或惊骇的短语，维吉尔用它描述埃涅阿斯看到冥界时的反应。"
       },
       "id": "la_literary_reference_horresco_referens_a0ec5505",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Virgil's 'Aeneis' 6.297 is accurate and verifiable.",
@@ -31510,6 +31789,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0054%3Abook%3D6%3Acard%3D297",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "horresco referens",
         "horresco referens,"
@@ -31964,6 +32244,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0103:book=1",
       "source_work": "Bellum Iugurthinum",
       "source_work_key": "mnemosyne.la.work.bellum_iugurthinum",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Iugurthae bellum",
         "bellum Iugurthinum",
@@ -32236,6 +32517,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.la.explanation.ovid_ars_amatoria_liviae_ars_amatoria",
       "id": "la_literary_reference_liviae_ars_amatoria_a9a4b7a9",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -32250,6 +32532,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0024",
       "source_work": "Ars Amatoria",
       "source_work_key": "mnemosyne.la.work.ars_amatoria",
+      "subcategory": "shakespearean",
       "surface_patterns": [
         "Ars Amatoriae",
         "Ars Amatoriam",
@@ -33380,6 +33663,7 @@
         "zh": "古罗马诗人贺拉斯《颂歌》中的拉丁语成语，意为“我不会完全死去”，表达诗人希望通过诗歌获得永生的愿望。"
       },
       "id": "la_literary_reference_non_omnis_moriar_19abd4e9",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Horace's *Odes* 3.30.6 is accurate and verifiable.",
@@ -33394,6 +33678,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0067%3Abook%3D3%3Apoem%3D30",
       "source_work": "Carmina (Odes)",
       "source_work_key": "mnemosyne.la.work.carmina_odes",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "non omnis moriar",
         "non omnis moriar multa pars mei"
@@ -33569,6 +33854,7 @@
         "zh": "对社会道德沦丧的愤慨或哀叹，常被认为源自西塞罗对罗马政治腐败的抨击。"
       },
       "id": "la_literary_reference_o_tempora_o_mores_38d0bee2",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Cicero's 'In Catilinam' is accurate and verifiable.",
@@ -33583,6 +33869,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0019%3Atext%3DCatil.%3Asection%3D1",
       "source_work": "In Catilinam",
       "source_work_key": "mnemosyne.la.work.in_catilinam",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "O tempora, o mores!",
         "O tempora, o mores",
@@ -34083,6 +34370,7 @@
         "zh": "贺拉斯《诗艺》中的一句，讽刺华而不实的承诺或努力只能产生微不足道的结果。批评夸大其词的修辞或未能达成期望的项目。"
       },
       "id": "la_literary_reference_parturiunt_montes_nascetur_ridiculus_mus_95618d75",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to Horace's Ars Poetica lines 139–140, with minor variant in verb form but essentially correct.",
@@ -34097,6 +34385,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0069:card=34",
       "source_work": "Ars Poetica",
       "source_work_key": "mnemosyne.la.work.ars_poetica",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Parturiunt montes, nascetur ridiculus mus",
         "Parturient montes, nascetur ridiculus mus",
@@ -34215,6 +34504,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "personam gerere",
         "personam agere",
@@ -34434,6 +34724,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0073:text=5:ch=7",
       "source_work": "De Architectura",
       "source_work_key": "mnemosyne.la.work.de_architectura",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "proscenium intrare",
         "in proscenium intrare",
@@ -35381,6 +35672,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "scaena mutatur",
         "scaena mutata est",
@@ -35543,6 +35835,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0103",
       "source_work": "Historiae",
       "source_work_key": "mnemosyne.la.work.historiae",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "bellum Sertorianum",
         "Sertorii bellum civile",
@@ -36719,6 +37012,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0054",
       "source_work": "Aeneis",
       "source_work_key": "mnemosyne.la.work.aeneis",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aeneidos finis",
         "Aeneidis finis",
@@ -37504,6 +37798,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ad impossibilia nemo tenetur",
         "Ad impossibilia nemo tenetur.",
@@ -37632,6 +37927,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "aeternum silentium",
         "silentium aeternum",
@@ -38274,6 +38570,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Auditur et altera pars",
         "Audiatur et altera pars",
@@ -38498,6 +38795,7 @@
       "source_location": "null",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avarus animus nullo satiatur lucro",
         "avarus animus nullo satiatur lucro,"
@@ -39058,6 +39356,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "ceteris paribus",
         "caeteris paribus",
@@ -39122,6 +39421,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Condicio sine qua non",
         "Condicio sine qua non est",
@@ -39686,6 +39986,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "De mortuis nil nisi bonum",
         "De mortuis nil nisi bonum dicendum est",
@@ -39858,6 +40159,7 @@
       "source_location": "null",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "docendo discimus",
         "docendo discimus,"
@@ -40932,6 +41234,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "in aqua scribere",
         "in aqua scribunt",
@@ -41289,6 +41592,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "mutatis mutandis in versione",
         "mutatis mutandis (with changes)"
@@ -41352,6 +41656,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0131:book=1:card=328",
       "source_work": "De rerum natura",
       "source_work_key": "mnemosyne.la.work.de_rerum_natura",
+      "subcategory": "proverb",
       "surface_patterns": [
         "natura abhorret vacuum"
       ]
@@ -41415,6 +41720,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Nec plus ultra",
         "Non plus ultra",
@@ -41748,6 +42054,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Plenus venter non studet libenter",
         "Plenus venter non libenter studet",
@@ -41799,6 +42106,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "pulchrum est paucorum hominum",
         "pulchrum est paucis hominibus",
@@ -41917,6 +42225,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Qui bene amat, bene castigat",
         "Qui bene amat, bene corrigit"
@@ -42075,6 +42384,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.03.0078:book=50:title=17:card=12",
       "source_work": "Digestum",
       "source_work_key": "mnemosyne.la.work.digestum",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Qui tacet consentire videtur",
         "Qui tacet, consentire videtur, nisi ubi loqui non possit aut debeat"
@@ -42209,6 +42519,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "quod licet Iovi non licet bovi in ludo",
         "quod Iovi licet bovi non licet"
@@ -42376,6 +42687,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Spartam nactus es; hanc orna!",
         "Spartam nactus es, hanc orna",
@@ -42811,6 +43123,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.la.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "volens nolens",
         "volens-nolens",

@@ -31,6 +31,7 @@
       "source_license": "public_domain",
       "source_work": "Upanishads",
       "source_work_key": "mnemosyne.hi.work.upanishads",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अक्षर ब्रह्म",
         "अक्षर ब्रह्मा"
@@ -56,6 +57,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rvsan/rv01001.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि की",
         "अग्नि को",
@@ -146,6 +148,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8B%E0%A4%B0%E0%A5%8D%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि और जल",
         "अग्नि तथा जल",
@@ -262,6 +265,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%BE%E0%A4%A6%E0%A4%B6%E0%A4%A4%E0%A4%95%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि की उपासना करना",
         "अग्नि की उपासना में",
@@ -278,6 +282,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.vedic_philosophy_fire_अग_न_क_ज_ञ_न",
       "id": "hi_classical_or_scriptural_allusion_अग_न_क_ज_ञ_न_8305b6c0",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -291,6 +296,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D%E0%A4%B8%E0%A4%82",
       "source_work": "उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.उपन_षद",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि का ज्ञान",
         "अग्नि के ज्ञान का",
@@ -440,6 +446,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%A8%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%BF",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि का धर्म",
         "अग्नि के धर्म का",
@@ -559,6 +566,7 @@
       "source_url": "https://sa.wikisource.org/wiki/ऋग्वेदः",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि की महिमा",
         "अग्नि की महिमा का",
@@ -649,6 +657,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%85%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3",
       "source_work": "अग्नि पुराण",
       "source_work_key": "mnemosyne.hi.work.अग_न_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि की शुद्धि",
         "अग्नि को शुद्ध करना",
@@ -740,6 +749,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rigveda/rv01001.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि के साक्षी हैं",
         "अग्नि के साक्षी हुए",
@@ -769,6 +779,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A5%80%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि का सिद्धांत",
         "अग्नि के सिद्धांत",
@@ -929,6 +940,7 @@
       "source_url": "https://www.sacred-texts.com/hin/yv/yv01.htm",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि ज्योति",
         "अग्नि की ज्योति",
@@ -1020,6 +1032,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/shiva-purana",
       "source_work": "शिवपुराण",
       "source_work_key": "mnemosyne.hi.work.श_वप_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि तनु",
         "अग्नि की तनु",
@@ -1050,6 +1063,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "null",
       "surface_patterns": [
         "अग्नि देवता",
         "अग्नि देव को पूजना",
@@ -1845,6 +1859,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/comp/agni-purana",
       "source_work": "अग्नि पुराण",
       "source_work_key": "mnemosyne.hi.work.अग_न_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि पुराण",
         "अग्नि पुराण में",
@@ -1906,6 +1921,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rvsan/rv01001.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि प्रकाश",
         "अग्नि के प्रकाश",
@@ -2239,6 +2255,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "null",
       "surface_patterns": [
         "अग्नि यज्ञ",
         "अग्नि-यज्ञ करना",
@@ -2352,6 +2369,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि विग्रह",
         "अग्नि का विग्रह",
@@ -2561,6 +2579,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A4%9C%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि से आहुति",
         "अग्नि में आहुति",
@@ -3211,6 +3230,7 @@
         "zh": "一个指向克里希纳神的奉献咏叹调或咒语，强调他的神圣属性。它常在祈祷和精神聚会中诵读。"
       },
       "id": "hi_classical_or_scriptural_allusion_अच_य_तम_क_शवम_d7a3ce7e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Lord Krishna and its use in prayers is accurate and verifiable.",
@@ -3225,6 +3245,7 @@
       "source_url": "https://www.wikisource.org/wiki/Bhagavad_Gita",
       "source_work": "Bhagavad Gita",
       "source_work_key": "mnemosyne.hi.work.bhagavad_gita",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अच्युतम केशवम",
         "अच्युत केशव"
@@ -3408,6 +3429,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%85%E0%A4%AD%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8_%E0%A4%B6%E0%A4%BE%E0%A4%95%E0%A5%81%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%B2%E0%A4%AE%E0%A5%8D",
       "source_work": "अभिज्ञान शाकुंतलम्",
       "source_work_key": "mnemosyne.hi.work.अभ_ज_ञ_न_श_क_तलम",
+      "subcategory": "null",
       "surface_patterns": [
         "अभिज्ञान शाकुंतलम्",
         "अभिज्ञान शाकुंतलम् का",
@@ -3537,6 +3559,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%85%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%AE%E0%A4%A5%E0%A4%A8",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "null",
       "surface_patterns": [
         "अमृतमंथन",
         "अमृतमंथन का",
@@ -3648,6 +3671,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_vedic_phrases_अर_ण_दय",
       "id": "hi_classical_or_scriptural_allusion_अर_ण_दय_7e0faf04",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3662,6 +3686,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A5%80%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "null",
       "surface_patterns": [
         "अरुणोदय",
         "अरुणोदय का समय",
@@ -3802,6 +3827,7 @@
         "zh": "在印度哲学中，'Avadhut'是一个超越世俗依附的人，通常被视为精神导师。"
       },
       "id": "hi_classical_or_scriptural_allusion_अवध_त_a3051654",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The definition aligns well with Hindu philosophy and accurately describes the concept of an Avadhut.",
@@ -4542,6 +4568,7 @@
       "source_license": "public_domain",
       "source_work": "आदिपुराण",
       "source_work_key": "mnemosyne.hi.work.आद_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "आदिपुराण",
         "आदिपुराणम्"
@@ -4607,6 +4634,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A5%80%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "null",
       "surface_patterns": [
         "इंद्र का वज्र",
         "इंद्र के वज्र",
@@ -4637,6 +4665,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A4%A5%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "null",
       "surface_patterns": [
         "इंद्र लोक",
         "इंद्र लोक में",
@@ -4745,6 +4774,7 @@
       "source_license": "public_domain",
       "source_work": "ईशोपनिषद",
       "source_work_key": "mnemosyne.hi.work.ईश_पन_षद",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "ईशोपनिषद",
         "ईश उपनिषद"
@@ -5169,6 +5199,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%A8%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%BF",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "null",
       "surface_patterns": [
         "एवं सति",
         "एवं सति में",
@@ -5376,6 +5407,7 @@
       "source_url": "https://archive.org/details/KamasutraOfVatsayanaEnglishTranslation",
       "source_work": "कामसूत्र",
       "source_work_key": "mnemosyne.hi.work.क_मस_त_र",
+      "subcategory": "panchatantra",
       "surface_patterns": [
         "कामदेव के पाँच बाण",
         "कामदेव के पाँच बाण हैं",
@@ -5890,6 +5922,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/the-bhagavata-purana/d/doc112658.html",
       "source_work": "भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण-सुदामा मित्रता",
         "कृष्ण और सुदामा की मित्रता",
@@ -6414,6 +6447,7 @@
       "source_url": "https://www.wikisource.org/wiki/Bhagavad_Gita",
       "source_work": "Bhagavad Gita",
       "source_work_key": "mnemosyne.hi.work.bhagavad_gita",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कर्मण्येवाधिकारस्ते",
         "तुम्हारा अधिकार केवल कर्म में है"
@@ -9234,6 +9268,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.puranas_devasura_sangram_द_व_स_र_स_ग_र_म",
       "id": "hi_classical_or_scriptural_allusion_द_व_स_र_स_ग_र_म_3fb7d07b",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9247,6 +9282,7 @@
       "source_url": "https://hi.wikisource.org/wiki/पुराण",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "panchatantra",
       "surface_patterns": [
         "देवासुर संग्राम",
         "देवासुर संग्राम में",
@@ -9692,6 +9728,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.puranas_naga_garuda_न_ग_और_गर_ड",
       "id": "hi_classical_or_scriptural_allusion_न_ग_और_गर_ड_afa63ce8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9705,6 +9742,7 @@
       "source_url": "https://hi.wikisource.org/wiki/पुराण",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "panchatantra",
       "surface_patterns": [
         "नाग और गरुड़",
         "नाग तथा गरुड़",
@@ -10672,6 +10710,7 @@
       "source_url": "https://www.wikisource.org/wiki/Bhagavata_Purana",
       "source_work": "Bhagavata Purana",
       "source_work_key": "mnemosyne.hi.work.bhagavata_purana",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "नरसिंह अवतार",
         "नरसिंह का अवतार",
@@ -11233,6 +11272,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%82",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "परशुराम का फरसा",
         "परशुराम के फरसे",
@@ -11764,6 +11804,7 @@
       "source_url": "https://www.wikisource.org/wiki/भागवत_पुराण/स्कंध_8",
       "source_work": "भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "बलि का वचन",
         "राजा बलि का वचन",
@@ -11821,6 +11862,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A5%8D_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "भगवद पुराण",
       "source_work_key": "mnemosyne.hi.work.भगवद_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "बलि राजा का दान",
         "बलि राजा के दान",
@@ -13608,6 +13650,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "मृग तृष्णा",
         "मृग की तृष्णा",
@@ -15811,6 +15854,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A5%8D_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "भगवद पुराण",
       "source_work_key": "mnemosyne.hi.work.भगवद_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "विष्णु के दस अवतार",
         "विष्णु के दश अवतार",
@@ -15944,6 +15988,7 @@
         "zh": "指的是在迦梨陀娑剧作中对沙恭达罗的诅咒，使得杜尚塔国王忘记她，象征着印度文学中的悲剧性分离与命运。"
       },
       "id": "hi_classical_or_scriptural_allusion_श_क_तल_क_अभ_श_प_9dcc4cdf",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference accurately describes the curse motif in Kalidasa's 'अभिज्ञानशाकुंतलम्', with correct surface patterns and source details.",
@@ -15990,6 +16035,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/srimad-bhagavatam",
       "source_work": "Bhagavata Purana",
       "source_work_key": "mnemosyne.hi.work.bhagavata_purana",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "श्रीकृष्ण माखन चोर",
         "कृष्ण माखन चोर",
@@ -16289,6 +16335,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "शिवजी का तांडव",
         "शिवजी के तांडव",
@@ -16330,6 +16377,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3",
       "source_work": "शिवपुराण",
       "source_work_key": "mnemosyne.hi.work.श_वप_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "शिवपुराण",
         "शिव पुराण"
@@ -16717,6 +16765,7 @@
         "zh": "指《博伽梵往世书》中苏达玛与克里希那之间深厚无私的友谊，象征超越财富和地位的真正友谊。"
       },
       "id": "hi_classical_or_scriptural_allusion_स_द_म_क_म_त_रत_c8fc14ba",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly alludes to the friendship between Sudama and Krishna as described in the Bhagavata Purana, with accurate surface patterns and explanation.",
@@ -16731,6 +16780,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%E0%A4%A6%E0%A5%8D_%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A4%AE_%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%A8%E0%A5%8D%E0%A4%A7_10",
       "source_work": "भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "सुदामा की मित्रता",
         "कृष्ण-सुदामा की मित्रता",
@@ -17184,6 +17234,7 @@
         "zh": "指毗湿奴化身那罗辛哈击杀恶魔王希兰亚卡西普，象征印度神话中善战胜恶。"
       },
       "id": "hi_classical_or_scriptural_allusion_ह_रण_यकश_यप_वध_9f299702",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to भागवत पुराण and the description of the episode are accurate and verifiable; surface patterns are correct.",
@@ -17198,6 +17249,7 @@
       "source_url": "https://sa.wikisource.org/wiki/भागवतपुराणम्/स्कन्धः_७/अध्यायः_८",
       "source_work": "भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "हिरण्यकश्यप वध",
         "हिरण्यकश्यप का वध",
@@ -17479,6 +17531,7 @@
       "reference_type": "classical_or_scriptural_allusion",
       "register": "religious",
       "short_explanation": "Spiritual/philosophical teaching on duty and action.",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गीता",
         "भगवद्गीता"
@@ -17654,6 +17707,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%82%E0%A4%A7%E0%A5%87_%E0%A4%95%E0%A5%87_%E0%A4%B9%E0%A4%BE%E0%A4%A5_%E0%A4%AC%E0%A4%9F%E0%A5%87%E0%A4%B0_%E0%A4%B2%E0%A4%97%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अंधे के हाथ बटेर लगना"
       ]
@@ -17677,6 +17731,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%82%E0%A4%A7%E0%A5%87%E0%A4%B0_%E0%A4%A8%E0%A4%97%E0%A4%B0%E0%A5%80_%E0%A4%9A%E0%A5%8C%E0%A4%AA%E0%A4%9F_%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अंधेर नगरी चौपट राजा"
       ]
@@ -17687,6 +17742,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_common_phrases_अ_ध_र_म_र_शन_क_तल_श",
       "id": "hi_cultural_reference_अ_ध_र_म_र_शन_क_तल_श_94a3384d",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17776,6 +17832,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "filmi",
       "surface_patterns": [
         "अक्षय कुमार",
         "अक्षय",
@@ -18119,6 +18176,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%95%E0%A4%BC%E0%A5%8D%E0%A4%B2_%E0%A4%95%E0%A4%BE_%E0%A4%A6%E0%A5%81%E0%A4%B6%E0%A5%8D%E0%A4%AE%E0%A4%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अक़्ल का दुश्मन"
       ]
@@ -18142,6 +18200,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%95%E0%A4%BC%E0%A5%8D%E0%A4%B2_%E0%A4%AC%E0%A4%A1%E0%A4%BC%E0%A5%80_%E0%A4%AF%E0%A4%BE_%E0%A4%AD%E0%A5%88%E0%A4%82%E0%A4%B8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अक़्ल बड़ी या भैंस"
       ]
@@ -18395,6 +18454,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.hindi_cultural_phrases_अग_न_क_ठ_क_अग_न_म_लय",
       "id": "hi_cultural_reference_अग_न_क_ठ_क_अग_न_म_लय_03e00bd2",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18478,6 +18538,7 @@
       "confidence": 0.76,
       "explanation_key": "mnemosyne.hi.explanation.hindi_cultural_phrases_अग_न_क_ठ_क_अग_न_म_व_ल_न_कर_",
       "id": "hi_cultural_reference_अग_न_क_ठ_क_अग_न_म_व_ल_न_कर_ल_न_fd11d8fe",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18558,6 +18619,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_cultural_phrases_अग_न_क_ठ_क_अग_न_म_व_लय",
       "id": "hi_cultural_reference_अग_न_क_ठ_क_अग_न_म_व_लय_1c55a709",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18696,6 +18758,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.hindi_cultural_phrases_अग_न_क_ठ_क_अग_न_म_सम_ह_त",
       "id": "hi_cultural_reference_अग_न_क_ठ_क_अग_न_म_सम_ह_त_a3b70f49",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19806,6 +19869,7 @@
       "source_license": "public_domain",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि संस्कृति",
         "अग्नि संस्कृति में",
@@ -20018,6 +20082,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%A3%E0%A5%8D%E0%A4%A1%E0%A4%95_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6",
       "source_work": "मुण्डक उपनिषद",
       "source_work_key": "mnemosyne.hi.work.म_ण_डक_उपन_षद",
+      "subcategory": "null",
       "surface_patterns": [
         "सत्यमेव जयते कहते हैं",
         "सत्यमेव जयते का अर्थ",
@@ -20208,6 +20273,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%A7%E0%A4%9C%E0%A4%B2_%E0%A4%97%E0%A4%97%E0%A4%B0%E0%A5%80_%E0%A4%9B%E0%A4%B2%E0%A4%95%E0%A4%A4_%E0%A4%9C%E0%A4%BE%E0%A4%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अधजल गगरी छलकत जाय"
       ]
@@ -20231,6 +20297,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%AA%E0%A4%A8%E0%A4%BE_%E0%A4%89%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A5%82_%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE_%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अपना उल्लू सीधा करना"
       ]
@@ -20254,6 +20321,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%AA%E0%A4%A8%E0%A5%80_%E0%A4%97%E0%A4%B2%E0%A5%80_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%95%E0%A5%81%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BE_%E0%A4%AD%E0%A5%80_%E0%A4%B6%E0%A5%87%E0%A4%B0_%E0%A4%B9%E0%A5%8B%E0%A4%A4%E0%A4%BE_%E0%A4%B9%E0%A5%88",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अपनी गली में कुत्ता भी शेर होता है"
       ]
@@ -20433,6 +20501,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "अर्वाचीन",
         "अर्वाचीन काल",
@@ -20954,6 +21023,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आठवाँ सरदार",
         "आठवें सरदार",
@@ -21309,6 +21379,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "आर्याभिवादन",
         "आर्याभिवादन करना",
@@ -21864,6 +21935,7 @@
         "zh": "乌莎是印度神话中黎明的拟人化，象征着新的开始和希望。"
       },
       "id": "hi_cultural_reference_उष_a7ea109d",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; Usha is indeed the personification of dawn in Hindu mythology.",
@@ -21955,6 +22027,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "एक और",
         "और एक",
@@ -23769,6 +23842,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Three_wise_monkeys",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.hi.work.oral_tradition",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "गांधीजी की तीन बंदर",
         "गांधीजी के तीन बंदर",
@@ -23859,6 +23933,7 @@
         "zh": "戈杜利·维拉指的是黄昏时分，牛群回家的时刻，象征着和平和印度乡村生活的美丽。它常用于诗歌和歌曲中。"
       },
       "id": "hi_cultural_reference_ग_ध_ल_व_ल_574ca119",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly represent the cultural context of this term in Indian poetry and songs.",
@@ -23871,6 +23946,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "गोधूलि वेला",
         "गोधूलि का समय"
@@ -23980,6 +24056,7 @@
       "source_url": "https://www.wikisource.org/wiki/Bhagavata_Purana",
       "source_work": "Bhagavata Purana",
       "source_work_key": "mnemosyne.hi.work.bhagavata_purana",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "गोपियाँ",
         "गोपियों",
@@ -24217,6 +24294,7 @@
         "zh": "这个短语描绘了奴隶制的场景或状态，常用于历史和社会背景中讨论压迫和争取自由的斗争。在关于印度殖民主义的讨论中具有重要的文化意义。"
       },
       "id": "hi_cultural_reference_ग_ल_म_क_म_जर_c91d26a2",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase accurately reflects the historical context of slavery and its cultural significance in discussions about colonialism in India.",
@@ -24366,6 +24444,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "गणेश जी का मोदक",
         "गणेश जी के मोदक",
@@ -25028,6 +25107,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%9A%E0%A4%BF%E0%A4%B0%E0%A4%BE%E0%A4%97%E0%A4%BC_%E0%A4%A4%E0%A4%B2%E0%A5%87_%E0%A4%85%E0%A4%81%E0%A4%A7%E0%A5%87%E0%A4%B0%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चिराग़ तले अँधेरा"
       ]
@@ -25076,6 +25156,7 @@
       "source_url": "https://indiankanoon.org/doc/121803/",
       "source_work": "Indian Penal Code",
       "source_work_key": "mnemosyne.hi.work.indian_penal_code",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चार सौ बीस",
         "चार सौ बीस का खेल",
@@ -26485,6 +26566,7 @@
         "zh": "‘झाँसी की रानी’指的是贾坎西女王拉克什米拜，她在1857年印度起义中成为反抗和勇敢的象征。"
       },
       "id": "hi_cultural_reference_झ_स_क_र_न_1b247342",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately references Rani Lakshmibai as 'झाँसी की रानी' and the surface patterns and explanation are correct.",
@@ -26720,6 +26802,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ठन ठन गोपाल है",
         "ठन ठन गोपाल बजता है",
@@ -28285,6 +28368,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "नाटक के बाहर",
         "नाटक बाहर",
@@ -30153,6 +30237,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "बड़े घर की बेटी",
         "बड़े घर की लड़की",
@@ -30389,6 +30474,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "भाग्यविधाता",
         "भाग्य के विधाता",
@@ -31256,6 +31342,7 @@
         "zh": "指16世纪圣女诗人米拉拜的虔诚信仰与诗歌，以对克里希纳的坚定奉献著称，代表印度的巴克提运动。"
       },
       "id": "hi_cultural_reference_म_र_ब_ई_क_भक_त_3403c934",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately describes Mirabai's devotional poetry and her role in the Bhakti movement; surface patterns are suitable.",
@@ -31514,6 +31601,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A4%95%E0%A5%8D%E0%A4%96%E0%A5%80%E0%A4%9A%E0%A5%82%E0%A4%B8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मक्खीचूस"
       ]
@@ -31668,6 +31756,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मर्दाना दिल",
         "मर्दाना दिल वाला",
@@ -32083,6 +32172,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "राजा भोज तथा गंगू तेली",
         "राजा भोज और गंगू तेली की कहानी",
@@ -32594,6 +32684,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "रामायण बनना",
         "रामायण बन गई",
@@ -32972,6 +33063,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B2%E0%A4%BE%E0%A4%B2%E0%A4%AB%E0%A4%BC%E0%A5%80%E0%A4%A4%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "लालफ़ीता"
       ]
@@ -33723,6 +33815,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B6%E0%A4%AC%E0%A5%8D%E0%A4%A6_%E0%A4%9A%E0%A5%8B%E0%A4%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "शब्द चोर"
       ]
@@ -33798,6 +33891,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%82%E0%A4%97_%E0%A4%97%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "संग गाना"
       ]
@@ -33924,6 +34018,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%BE%E0%A4%81%E0%A4%9A_%E0%A4%95%E0%A5%8B_%E0%A4%86%E0%A4%81%E0%A4%9A_%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "साँच को आँच नहीं"
       ]
@@ -33947,6 +34042,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%BE%E0%A4%82%E0%A4%9A_%E0%A4%95%E0%A5%8B_%E0%A4%86%E0%A4%82%E0%A4%9A_%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सांच को आंच नहीं"
       ]
@@ -34007,6 +34103,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%BF%E0%A4%9F%E0%A5%8D%E0%A4%9F%E0%A5%80%E0%A4%AA%E0%A4%BF%E0%A4%9F%E0%A5%8D%E0%A4%9F%E0%A5%80_%E0%A4%97%E0%A5%81%E0%A4%AE_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सिट्टीपिट्टी गुम होना"
       ]
@@ -34030,6 +34127,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%87_%E0%A4%AA%E0%A4%B0_%E0%A4%AA%E0%A4%BE%E0%A4%A0%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "साठे पर पाठा"
       ]
@@ -34040,6 +34138,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_kabir_references_स_त_कब_र_क_मगहर",
       "id": "hi_cultural_reference_स_त_कब_र_क_मगहर_6aaa1374",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34053,6 +34152,7 @@
       "source_url": "https://www.srigranth.org/servlet/gurbani.gurbani?Action=Page&Param=1&g=1",
       "source_work": "Granth Sahib",
       "source_work_key": "mnemosyne.hi.work.granth_sahib",
+      "subcategory": "doha_kabir",
       "surface_patterns": [
         "संत कबीर",
         "कबीर साहिब",
@@ -34106,6 +34206,7 @@
         "zh": "指15世纪著名的巴克提圣人和诗人圣拉维达斯，以宣扬平等和虔诚著称。他的诗句是北印度宗教传统的重要组成部分。"
       },
       "id": "hi_cultural_reference_स_त_र_द_स_83534a97",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Sant Ravidas (also known as रैदास) is a well-documented Bhakti saint and poet, and the surface patterns reflect common usage.",
@@ -34149,6 +34250,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%BE%E0%A4%A5_%E0%A4%97%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "साथ गाना"
       ]
@@ -34209,6 +34311,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A5%80_%E0%A4%89%E0%A4%82%E0%A4%97%E0%A4%B2%E0%A5%80_%E0%A4%B8%E0%A5%87_%E0%A4%98%E0%A5%80_%E0%A4%A8%E0%A4%B9%E0%A5%80%E0%A4%82_%E0%A4%A8%E0%A4%BF%E0%A4%95%E0%A4%B2%E0%A4%A4%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सीधी उंगली से घी नहीं निकलता"
       ]
@@ -34232,6 +34335,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A5%80%E0%A4%A8%E0%A4%BE_%E0%A4%9A%E0%A5%8C%E0%A4%A1%E0%A4%BC%E0%A4%BE_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सीना चौड़ा होना"
       ]
@@ -34255,6 +34359,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A5%82%E0%A4%AA_%E0%A4%AC%E0%A5%8B%E0%A4%B2%E0%A5%87_%E0%A4%A4%E0%A5%8B_%E0%A4%AC%E0%A5%8B%E0%A4%B2%E0%A5%87_%E0%A4%9B%E0%A4%B2%E0%A4%A8%E0%A5%80_%E0%A4%AD%E0%A5%80_%E0%A4%AC%E0%A5%8B%E0%A4%B2%E0%A5%87_%E0%A4%9C%E0%A4%BF%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%AC%E0%A4%B9%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%B0_%E0%A4%9B%E0%A5%87%E0%A4%A6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "सूप बोले तो बोले छलनी भी बोले जिसमें बहत्तर छेद"
       ]
@@ -34517,6 +34622,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%BE%E0%A4%AE_%E0%A4%A6%E0%A4%BE%E0%A4%AE_%E0%A4%A6%E0%A4%82%E0%A4%A1%E0%A4%BC_%E0%A4%AD%E0%A5%87%E0%A4%A6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "साम दाम दंड़ भेद"
       ]
@@ -34605,6 +34711,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A5%8B%E0%A4%B2%E0%A4%B9_%E0%A4%86%E0%A4%A8%E0%A5%87_%E0%A4%B8%E0%A4%9A",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सोलह आने सच"
       ]
@@ -35131,6 +35238,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%B0_%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सर खाना"
       ]
@@ -35191,6 +35299,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%B0_%E0%A4%B8%E0%A4%B2%E0%A4%BE%E0%A4%AE%E0%A4%A4_%E0%A4%A4%E0%A5%8B_%E0%A4%AA%E0%A4%97%E0%A4%A1%E0%A4%BC%E0%A5%80_%E0%A4%B9%E0%A4%9C%E0%A4%BC%E0%A4%BE%E0%A4%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सर सलामत तो पगड़ी हज़ार"
       ]
@@ -35214,6 +35323,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%B0_%E0%A4%B9%E0%A4%BF%E0%A4%B2%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सर हिलाना"
       ]
@@ -35237,6 +35347,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%B0%E0%A4%95%E0%A4%BE%E0%A4%B0_%E0%A4%95%E0%A4%BE_%E0%A4%A6%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%A6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सरकार का दामाद"
       ]
@@ -35357,6 +35468,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B9%E0%A4%BE%E0%A4%A5%E0%A5%80_%E0%A4%95%E0%A5%87_%E0%A4%A6%E0%A4%BE%E0%A4%82%E0%A4%A4_%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A5%87_%E0%A4%95%E0%A5%87_%E0%A4%94%E0%A4%B0_%E0%A4%A6%E0%A4%BF%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A5%87_%E0%A4%95%E0%A5%87_%E0%A4%94%E0%A4%B0",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "हाथी के दांत खाने के और दिखाने के और"
       ]
@@ -35380,6 +35492,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B9%E0%A4%BE%E0%A4%A5_%E0%A4%9C%E0%A5%8B%E0%A4%A1%E0%A4%BC%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "हाथ जोड़ना"
       ]
@@ -35403,6 +35516,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B9%E0%A4%BE%E0%A4%A5_%E0%A4%AA%E0%A4%BE%E0%A4%81%E0%A4%B5_%E0%A4%9A%E0%A4%B2%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "हाथ पाँव चलना"
       ]
@@ -35426,6 +35540,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B9%E0%A4%BE%E0%A4%A5_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "हाथ में होना"
       ]
@@ -35556,6 +35671,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B9%E0%A4%BE%E0%A4%81_%E0%A4%AE%E0%A5%87%E0%A4%82_%E0%A4%B9%E0%A4%BE%E0%A4%81_%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "हाँ में हाँ मिलाना"
       ]
@@ -35630,6 +35746,7 @@
       "source_url": "https://www.wikisource.org/wiki/Harishchandra",
       "source_work": "मार्कण्डेय पुराण (सहित अन्य)",
       "source_work_key": "mnemosyne.hi.work.म_र_कण_ड_य_प_र_ण_सह_त_अन_य",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "हरिश्चंद्र का सत्य",
         "हरिश्चंद्र की सत्यनिष्ठा",
@@ -35720,6 +35837,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_works_अ_ध_य_ग",
       "id": "hi_literary_reference_अ_ध_य_ग_ecc75897",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35971,6 +36089,7 @@
         "zh": "指与火（अग्नि）相关的黎明（उषा），象征新时代的开始或觉醒。常在诗歌和文学中比喻使用。"
       },
       "id": "hi_literary_reference_अग_न_क_उष_99fcdbf5",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Referenced phrase appears in Kamayani's Shraddha section.",
@@ -35997,6 +36116,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_fire_phrases_अग_न_क_कह_न",
       "id": "hi_literary_reference_अग_न_क_कह_न_72513c7f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36117,6 +36237,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_vedic_phrases_अग_न_क_प_रत_क_ष",
       "id": "hi_literary_reference_अग_न_क_प_रत_क_ष_d7efbda8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36146,6 +36267,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_fire_phrases_अग_न_क_र_ख",
       "id": "hi_literary_reference_अग_न_क_र_ख_8a1d8672",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36175,6 +36297,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_अग_न_क_र_ग",
       "id": "hi_literary_reference_अग_न_क_र_ग_93647a0b",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36204,6 +36327,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.hindi_modern_poetry_अग_न_क_र_ह",
       "id": "hi_literary_reference_अग_न_क_र_ह_0ae37589",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36265,6 +36389,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_kamayani_phrases_अग_न_क_ल_ल",
       "id": "hi_literary_reference_अग_न_क_ल_ल_cfe4907f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36328,6 +36453,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_अग_न_क_स_रज",
       "id": "hi_literary_reference_अग_न_क_स_रज_21529a6e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36355,6 +36481,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_अग_न_न_टक",
       "id": "hi_literary_reference_अग_न_न_टक_6cf001a3",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36385,6 +36512,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.hi.explanation.modern_hindi_poetry_terms_अग_न_प_थ",
       "id": "hi_literary_reference_अग_न_प_थ_6d3a8ef7",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36830,6 +36958,7 @@
       "source_url": "https://www.wikisource.org/wiki/बिहारी_सतसई",
       "source_work": "बिहारी सतसई",
       "source_work_key": "mnemosyne.hi.work.ब_ह_र_सतसई",
+      "subcategory": "bihari_satsai",
       "surface_patterns": [
         "अग्नि सदृश्य",
         "अग्नि के सदृश्य",
@@ -36897,6 +37026,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "null",
       "surface_patterns": [
         "अद्भुत आख्यान",
         "अद्भुत आख्यान लिखना",
@@ -37039,6 +37169,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_terms_अभ_म_न_न",
       "id": "hi_literary_reference_अभ_म_न_न_99bd352b",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37052,6 +37183,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "अभिमानिनी",
         "अभिमानिनी का",
@@ -37069,6 +37201,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_terms_अभ_म_नमर_दन",
       "id": "hi_literary_reference_अभ_म_नमर_दन_db434759",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37082,6 +37215,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "अभिमानमर्दन",
         "अभिमानमर्दन का",
@@ -37534,6 +37668,7 @@
         "zh": "आनंद सुरभि 是一部著名的印地文学作品，探讨生活中的快乐和美丽主题。它因其诗意表达而受到赞誉。"
       },
       "id": "hi_literary_reference_आन_द_स_रभ_667fb53b",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to सूर्यकांत त्रिपाठी 'निराला' is accurate, and the themes described align well with the text.",
@@ -37546,6 +37681,7 @@
       "source_license": "public_domain",
       "source_work": "आनंद सुरभि",
       "source_work_key": "mnemosyne.hi.work.आन_द_स_रभ",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "आनंद सुरभि",
         "आनंदसुरभि"
@@ -37696,6 +37832,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_works_आष_ढ_क_एक_द_न",
       "id": "hi_literary_reference_आष_ढ_क_एक_द_न_19faa8e4",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38319,6 +38456,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.jaishankar_prasad_works_क_म_यन_क_म_घद_त",
       "id": "hi_literary_reference_क_म_यन_क_म_घद_त_59d99eec",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38363,6 +38501,7 @@
         "zh": "Kumarasambhava是卡利达萨的一首史诗，叙述了湿婆和帕尔瓦蒂之子卡尔提凯亚的出生，象征着神圣与世俗之爱的结合。"
       },
       "id": "hi_literary_reference_क_म_रस_भव_cf89c5ca",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the work is a significant epic poem by Kalidasa.",
@@ -38617,6 +38756,7 @@
         "zh": "指的是迦梨陀娑著名的梵文抒情诗《云使》，讲述夜叉通过云向远方爱人传信，以生动意象和情感深度著称。"
       },
       "id": "hi_literary_reference_क_ल_द_स_क_म_घद_त_545c3a61",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly references Kalidasa's 'Meghaduta' with appropriate surface patterns and explanation, making it accurate and useful.",
@@ -38739,6 +38879,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "काला नाग और सोन बरा",
         "काले नाग और सोन बरे",
@@ -39120,6 +39261,7 @@
         "zh": "卡比尔是15世纪的诗人圣人，他的诗句表达了深刻的精神洞察，并批评宗教正统。他的诗歌是巴克提运动的基础，强调个人的奉献。"
       },
       "id": "hi_literary_reference_कब_र_d2ebb6e6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and genuinely useful for learners.",
@@ -39132,6 +39274,7 @@
       "source_license": "public_domain",
       "source_work": "बीजक",
       "source_work_key": "mnemosyne.hi.work.ब_जक",
+      "subcategory": "doha_kabir",
       "surface_patterns": [
         "कबीर",
         "कबीर दास",
@@ -39196,6 +39339,7 @@
         "zh": "卡比尔的萨基指的是诗人圣人卡比尔的诗句或格言，传达深刻的精神真理和对宗教正统的批评。"
       },
       "id": "hi_literary_reference_कब_र_क_स_ख_454be96f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly represent the essence of Kabir's teachings.",
@@ -39208,6 +39352,7 @@
       "source_license": "public_domain",
       "source_work": "साखी",
       "source_work_key": "mnemosyne.hi.work.स_ख",
+      "subcategory": "doha_kabir",
       "surface_patterns": [
         "कबीर का साखी",
         "साखी",
@@ -39549,6 +39694,7 @@
         "zh": "कविता指的是印地文学中的诗歌，这在印度社会中是一种重要的艺术表达和文化反映形式。"
       },
       "id": "hi_literary_reference_कव_त_7be92e89",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference accurately describes poetry in Hindi literature, which is a significant cultural form.",
@@ -39561,6 +39707,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "kavita",
       "surface_patterns": [
         "कविता",
         "कविताएँ",
@@ -39573,6 +39720,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_agyeya_kavita_ke_naye_pratiman_कव_त_क_नए_प_र",
       "id": "hi_literary_reference_कव_त_क_नए_प_रत_म_न_84dd77d6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39646,6 +39794,7 @@
         "zh": "这个短语指的是诗歌的本质或情感深度，突显其美学价值。在讨论印地文学中的文学批评和欣赏时具有重要意义。"
       },
       "id": "hi_literary_reference_कव_त_क_रस_ec77a032",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly reflect the concept of the essence of poetry in Hindi literature.",
@@ -39710,6 +39859,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_कव_न_र_ल_क_उप_क_ष",
       "id": "hi_literary_reference_कव_न_र_ल_क_उप_क_ष_e81c14c5",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39862,6 +40012,7 @@
         "zh": "《吉特·戈温德》是12世纪贾耶德瓦创作的梵文诗，庆祝拉达与克里希纳之间的爱，象征着神圣的爱与奉献。"
       },
       "id": "hi_literary_reference_ग_त_ग_व_द_8549ae63",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Jayadeva's 'Geet Govind' is accurate and the surface patterns are correct.",
@@ -39977,6 +40128,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.hi_dharmi_vir_bharati_gunahon_ka_devta_ग_न_ह_क_द_व",
       "id": "hi_literary_reference_ग_न_ह_क_द_वत_4d385999",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40411,6 +40563,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चौदहवीं का चाँद",
         "चाँद चौदहवीं का"
@@ -40476,6 +40629,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hi_classical_literature_चन_द_र_वल",
       "id": "hi_literary_reference_चन_द_र_वल_9e5b4399",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40555,6 +40709,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जासूस लालू",
         "जासूस लालू का",
@@ -40616,6 +40771,7 @@
         "zh": "《कामायनी》是贾伊尚卡尔·普拉萨德创作的著名印地语史诗，通过神话寓言探讨哲学和心理主题，是印地语文学Chhayavaad（浪漫主义）的基石。"
       },
       "id": "hi_literary_reference_जयश_कर_प_रस_द_क_क_म_यन_c59931ad",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution, explanation, and surface patterns are accurate and verifiable for this major work of Hindi literature.",
@@ -40675,6 +40831,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_ट_टत_त_र",
       "id": "hi_literary_reference_ट_टत_त_र_6e648ad3",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40705,6 +40862,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_references_ठ_क_र_क_क_आ",
       "id": "hi_literary_reference_ठ_क_र_क_क_आ_6287e60f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40734,6 +40892,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_ठ_ड_ल_ह",
       "id": "hi_literary_reference_ठ_ड_ल_ह_4450e008",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40877,6 +41036,7 @@
         "zh": "《拉姆·查里特·马纳斯》是图尔西达斯创作的一首史诗，叙述了拉玛神的生平，被认为是印地语文学的伟大作品之一。"
       },
       "id": "hi_literary_reference_त_लस_क_र_म_चर_त_म_नस_433da137",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly describe the literary work.",
@@ -40890,6 +41050,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%AE_%E0%A4%9A%E0%A4%B0%E0%A4%BF%E0%A4%A4_%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A4%B8",
       "source_work": "राम चरित मानस",
       "source_work_key": "mnemosyne.hi.work.र_म_चर_त_म_नस",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राम चरित मानस",
         "तुलसीदास की राम चरित मानस"
@@ -41015,6 +41176,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_त_सर_कसम",
       "id": "hi_literary_reference_त_सर_कसम_ae4dd3ad",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -41721,6 +41883,7 @@
         "zh": "一部归于钱德·巴尔代的史诗，讲述普里特维拉吉·乔汉国王的生平与事迹，是印地文学和拉杰普特英勇传统中的早期重要作品。"
       },
       "id": "hi_literary_reference_प_थ_व_र_ज_र_स_7c21e0da",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to चंदबरदाई and the description of 'पृथ्वीराज रासो' are accurate and widely accepted in Hindi literary scholarship.",
@@ -41902,6 +42065,7 @@
         "zh": "《帕德玛瓦特》是马利克·穆罕默德·贾亚西创作的史诗诗，讲述了女王帕德米尼及其勇气的故事。它在印度文学和民间传说中具有重要的文化意义。"
       },
       "id": "hi_literary_reference_पद_म_वत_218875db",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; the surface patterns correctly reflect the text's content and significance.",
@@ -42423,6 +42587,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_literary_phrases_म_ट_ट_क_महक",
       "id": "hi_literary_reference_म_ट_ट_क_महक_3bb562c9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42483,6 +42648,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hi_literary_phrases_म_त_रत_म_म_ध_र_य",
       "id": "hi_literary_reference_म_त_रत_म_म_ध_र_य_8bb15911",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42648,6 +42814,7 @@
         "zh": "米拉拜是16世纪的拉杰普特公主和女诗人，以其献给克里希纳神的奉献歌曲而闻名。她因其坚定的奉献精神而受到赞誉，是巴克提运动的关键人物。"
       },
       "id": "hi_literary_reference_म_र_ब_ई_833f8d7c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns are correct and genuinely useful for learners.",
@@ -42716,6 +42883,7 @@
         "zh": "指16世纪诗人圣女米拉拜创作的献身性歌曲，以对克里希纳的热忱信仰著称。她的颂歌是巴克提运动的核心，在印度广为传唱。"
       },
       "id": "hi_literary_reference_म_र_ब_ई_क_भजन_b71d5e1f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Mirabai is correctly identified as the author of devotional bhajans central to the Bhakti movement, and the surface patterns are suitable.",
@@ -42742,6 +42910,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hi_mahadevi_verma_bachpan_म_र_बचपन",
       "id": "hi_literary_reference_म_र_बचपन_828d85ff",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42873,6 +43042,7 @@
         "zh": "《Madhushala》是哈里文什·拉伊·巴克昌创作的著名印地语诗，以酒馆为隐喻探讨人生、哲学与存在主义主题。"
       },
       "id": "hi_literary_reference_मध_श_ल_0ecf11b5",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution of 'Madhushala' to Harivansh Rai Bachchan and its metaphorical themes is accurate and well-established.",
@@ -42916,6 +43086,7 @@
         "zh": "《नीरजा》是印地语Chhayavaad代表人物玛哈德维·瓦尔玛的诗集，以抒情地表达渴望、痛苦和精神追求而著称。"
       },
       "id": "hi_literary_reference_मह_द_व_वर_म_क_न_रज_d0aed404",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference correctly attributes 'नीरजा' to Mahadevi Varma and the explanation matches its literary significance.",
@@ -43193,6 +43364,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hi_manto_roza_र_ज",
       "id": "hi_literary_reference_र_ज_894500ae",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43334,6 +43506,7 @@
         "zh": "《罗阇王朝》是迦梨陀娑创作的梵文史诗，叙述了罗阇王朝的世系及罗摩的生平，以其诗意和理想君主形象在印度文学中享有盛誉。"
       },
       "id": "hi_literary_reference_रघ_व_श_f49bffe9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Kalidasa and description of the epic poem are accurate and verifiable; surface patterns are correct.",
@@ -43532,6 +43705,7 @@
         "zh": "指著名诗人维迪亚帕提的抒情诗（Padavali），他用迈蒂利语创作的情歌在中世纪印地和迈蒂利文学中备受推崇。"
       },
       "id": "hi_literary_reference_व_द_य_पत_क_पद_वल_29241d40",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to विद्यापति and reference to his पदावली is accurate; surface patterns and explanation are correct.",
@@ -43571,6 +43745,7 @@
         "zh": "指中世纪迈蒂利语诗人维迪亚帕提创作的爱情与奉爱歌曲，以描写拉达与克里希纳著称，并影响了后来的奉爱诗人。"
       },
       "id": "hi_literary_reference_व_द_य_पत_ग_त_da72cb48",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Vidyapati's love and devotional songs is accurate, surface patterns are correct, and explanation is verifiable.",
@@ -43700,6 +43875,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.hi.explanation.hi_literary_phrases_pathbandhu_वह_पथ_ब_ध_थ",
       "id": "hi_literary_reference_वह_पथ_ब_ध_थ_34550075",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43850,6 +44026,7 @@
         "zh": "指迦梨陀娑剧作《沙恭达罗》的女主角，象征爱情、离别与重逢，是梵剧和印度文学的经典。"
       },
       "id": "hi_literary_reference_शक_न_तल_a1e1ccc9",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference to Kalidasa's 'Abhijnanasakuntalam' and its themes is accurate and the surface patterns are appropriate.",
@@ -43889,6 +44066,7 @@
         "zh": "'Shabdon ka Jadoo'这个短语翻译为'语言的魔力'，突显了语言和文学唤起情感和创造生动意象的力量。"
       },
       "id": "hi_literary_reference_शब_द_क_ज_द_7247b5ca",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and the surface patterns correctly convey the phrase's meaning and relevance in literature.",
@@ -44022,6 +44200,7 @@
         "zh": "Sūbhāṣita指的是一种以格言和道德性质为特征的梵文诗歌类型。在印度文学中，它作为智慧和伦理指导的来源具有文化意义。"
       },
       "id": "hi_literary_reference_स_भ_ष_त_4fb660b6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly reflect the genre's characteristics.",
@@ -44034,6 +44213,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "subhashita",
       "surface_patterns": [
         "सुभाषित",
         "सुभाषितम्",
@@ -44059,6 +44239,7 @@
         "zh": "苏巴德拉·库玛丽·乔汉是著名的印地语诗人，以爱国诗《贾恩西女王》最为著名。她的诗歌因民族主义激情和情感深度而备受推崇。"
       },
       "id": "hi_literary_reference_स_भद_र_क_म_र_च_ह_न_क_कव_त_91455584",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution and explanation are accurate, and the surface patterns correctly reference her most famous work.",
@@ -44244,6 +44425,7 @@
         "zh": "这是指16世纪诗圣苏尔达斯的克里希纳奉爱诗歌，他的诗句表达了对克里希纳的深厚爱与虔诚。苏尔达斯的作品是巴克提运动的核心，对印地语宗教文学影响深远。"
       },
       "id": "hi_literary_reference_स_रद_स_क_क_ष_ण_भक_त_ebba507c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly attributes devotional poetry about Krishna to Surdas and notes its significance in the Bhakti movement.",
@@ -44283,6 +44465,7 @@
         "zh": "指16世纪诗圣苏尔达斯创作的献给克里希纳的奉爱诗歌（pada），是印地语奉爱文学的核心。"
       },
       "id": "hi_literary_reference_स_रद_स_क_पद_वल_78a88107",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Surdas and his devotional poetry is accurate, surface patterns are correct, and explanation is verifiable.",
@@ -44536,6 +44719,7 @@
         "zh": "围绕维克拉玛迪亚王的王座的32个民间故事集，每个故事由一尊雕像讲述。代表了印地语文学中的道德与冒险叙事。"
       },
       "id": "hi_literary_reference_स_ह_सन_बत_त_स_46fdf5e8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate description of the folk tale collection.",
@@ -44725,6 +44909,7 @@
       "source_url": "https://archive.org/details/godan-premchand",
       "source_work": "गोदान",
       "source_work_key": "mnemosyne.hi.work.ग_द_न",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "होरी को खेती में कर्जा, कंगाली में आटा गीला",
         "होरी के खेती में कर्जा, कंगाली में आटा गीला",
@@ -44912,6 +45097,7 @@
       "reference_type": "literary_reference",
       "register": "literary",
       "short_explanation": "Animal fables teaching practical wisdom.",
+      "subcategory": "panchatantra",
       "surface_patterns": [
         "पंचतंत्र"
       ]
@@ -44964,6 +45150,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अंधा बनिया",
         "अंधे बनिये",
@@ -45173,6 +45360,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अग्नि की निशानी",
         "अग्नि का चिह्न",
@@ -45335,6 +45523,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "अतिथि देवो भव",
         "अतिथि देवो भवः"
@@ -45743,6 +45932,7 @@
         "zh": "'आशा की किरण'意为'希望之光'，通常用于在困难情况下表达乐观。"
       },
       "id": "hi_proverb_tradition_आश_क_क_रण_0d27d9c8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and the phrase is widely recognized in expressing optimism.",
@@ -45755,6 +45945,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "आशा की किरण",
         "किरण आशा की"
@@ -46372,6 +46563,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "कलियुग में भी चलेगी पंच परमेश्वर की बात",
         "कलियुग में भी पंच परमेश्वर की बात चलेगी",
@@ -46486,6 +46678,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "गोदान से गंगा",
         "गोदान से गंगा मिलती है",
@@ -46884,6 +47077,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "जैसी को तैसी",
         "जैसी तैसी"
@@ -47636,6 +47830,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "टूटा-फूटा काम चलाना",
         "टूटा-फूटा काम चल रहा है",
@@ -47863,6 +48058,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_proverbs_desert_धरत_ध_र_र",
       "id": "hi_proverb_tradition_धरत_ध_र_र_1e0c5df1",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -47876,6 +48072,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "धरती धोराँ री",
         "धरती धोराँ री की",
@@ -48549,6 +48746,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "भीतर खाये बाहर लगाये",
         "भीतर खाता है बाहर लगाता है",
@@ -48844,6 +49042,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "मूर्खों की संगत से ज्ञान नहीं आता",
         "मूर्खों की संगति से ज्ञान नहीं आता",
@@ -49201,6 +49400,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "वह मुँह देखना जिससे पैसे लेंगे",
         "उस मुँह को देखना जिससे पैसे लेंगे",
@@ -49362,6 +49562,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "साँप सूझा न लाठी सूझी"
       ]
@@ -49427,6 +49628,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सत्य का पालन",
         "सत्य पालन",
@@ -49504,6 +49706,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%AA%E0%A4%A6%E0%A5%87%E0%A4%B6",
       "source_work": "हितोपदेश",
       "source_work_key": "mnemosyne.hi.work.ह_त_पद_श",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "हितोपदेश",
         "हितोपदेश की कहानी",
@@ -49727,6 +49930,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "हाथी निकल गया पर दुम रह गयी"
       ]
@@ -49750,6 +49954,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "होनहार बिरवान के होत चीकने पात"
       ]
@@ -49852,6 +50057,7 @@
       "reference_type": "proverb_tradition",
       "register": "proverbial",
       "short_explanation": "Too little for a large need.",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "ऊँट के मुँह में जीरा"
       ]
@@ -49866,6 +50072,7 @@
       "reference_type": "proverb_tradition",
       "register": "proverbial",
       "short_explanation": "Familiar things are undervalued.",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "घर की मुर्गी दाल बराबर"
       ]
@@ -49880,6 +50087,7 @@
       "reference_type": "proverb_tradition",
       "register": "proverbial",
       "short_explanation": "Blaming circumstances for one’s own incompetence.",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "नाच न जाने आँगन टेढ़ा"
       ]

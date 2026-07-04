@@ -10,6 +10,7 @@
       "reference_type": "classical_or_scriptural_allusion",
       "register": "classical",
       "short_explanation": "A hidden threat inside something apparently benign.",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "cheval de Troie"
       ]
@@ -34,6 +35,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Les_Burgraves",
       "source_work": "Les Burgraves",
       "source_work_key": "mnemosyne.fr.work.les_burgraves",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Ad augusta per angusta"
       ]
@@ -127,6 +129,7 @@
       "source_url": "https://fr.wikisource.org/wiki/%C3%89n%C3%A9ide/Livre_I",
       "source_work": "Énéide",
       "source_work_key": "mnemosyne.fr.work.énéide",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Aeolus comme chef des Vents",
         "Éole comme chef des Vents",
@@ -343,6 +346,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0153%3Abook%3D3%3Achapter%3D11",
       "source_work": "Commentarii de Bello Civili",
       "source_work_key": "mnemosyne.fr.work.commentarii_de_bello_civili",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Alea jacta est",
         "L'alea jacta est"
@@ -573,6 +577,7 @@
       "source_url": "https://www.cnrtl.fr/definition/alma+mater",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Alma mater",
         "l'Alma mater",
@@ -626,6 +631,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Amor_fati",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Amor fati",
         "l'amor fati",
@@ -845,6 +851,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.classical_mythology_phrases_avoir_l_éternel_retour",
       "id": "fr_classical_or_scriptural_allusion_avoir_l_éternel_retour_comme_sisyphe_1987283b",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -858,6 +865,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0069",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "éternel retour comme Sisyphe",
         "comme Sisyphe",
@@ -870,6 +878,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.greek_mythology_phrases_avoir_la_beauté_d_aphrodit",
       "id": "fr_classical_or_scriptural_allusion_avoir_la_beauté_d_aphrodite_48845d70",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -884,6 +893,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Th%C3%A9ogonie",
       "source_work": "Théogonie",
       "source_work_key": "mnemosyne.fr.work.théogonie",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "la beauté d’Aphrodite",
         "beau comme Aphrodite",
@@ -1015,6 +1025,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fr.explanation.greek_mythology_phrases_avoir_le_destin_de_narciss",
       "id": "fr_classical_or_scriptural_allusion_avoir_le_destin_de_narcisse_5b3bff68",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1029,6 +1040,7 @@
       "source_url": "https://fr.wikisource.org/wiki/M%C3%A9tamorphoses_(Ovide)/Livre_III",
       "source_work": "Métamorphoses",
       "source_work_key": "mnemosyne.fr.work.métamorphoses",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "le destin de Narcisse",
         "tomber dans le narcissisme",
@@ -1859,6 +1871,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fr.explanation.classical_allusions_fr_ce_souper_était_digne_d_apo",
       "id": "fr_classical_or_scriptural_allusion_ce_souper_était_digne_d_apollon_f398b61f",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1873,6 +1886,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Lettres_de_Pline_le_Jeune/Livre_2",
       "source_work": "Les Fêtes de Pline (Les Belles Lettres edition)",
       "source_work_key": "mnemosyne.fr.work.les_fêtes_de_pline_les_belles_lettres_edition",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Ce souper était digne d'Apollon",
         "Un repas digne d'Apollon",
@@ -2206,6 +2220,7 @@
       "source_url": "https://fr.wikisource.org/wiki/M%C3%A9tamorphoses_(Ovide)/Livre_XV",
       "source_work": "Métamorphoses",
       "source_work_key": "mnemosyne.fr.work.métamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "comme un phénix renaissant de ses cendres",
         "renaître de ses cendres comme un phénix",
@@ -2649,6 +2664,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Naissance_de_la_trag%C3%A9die/Chapitre_12",
       "source_work": "La Naissance de la tragédie",
       "source_work_key": "mnemosyne.fr.work.la_naissance_de_la_tragédie",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Dieu est mort !",
         "Dieu est mort..."
@@ -3304,6 +3320,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Luc",
       "source_work": "Évangile selon saint Luc",
       "source_work_key": "mnemosyne.fr.work.évangile_selon_saint_luc",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Gloire à Dieu au plus haut des cieux",
         "Gloire à Dieu dans les cieux",
@@ -3374,6 +3391,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Honi_soit_qui_mal_y_pense",
       "source_work": "Various (medieval heraldry)",
       "source_work_key": "mnemosyne.fr.work.various_medieval_heraldry",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Honi soit qui mal y pense !"
       ]
@@ -3450,6 +3468,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Matthieu",
       "source_work": "Évangile selon saint Matthieu",
       "source_work_key": "mnemosyne.fr.work.évangile_selon_saint_matthieu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Hosanna au plus haut des cieux",
         "Hosanna dans les cieux",
@@ -3632,6 +3651,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Symbole_des_ap%C3%B4tres",
       "source_work": "Symbole des apôtres",
       "source_work_key": "mnemosyne.fr.work.symbole_des_apôtres",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Je crois en Dieu",
         "Je crois en Dieu le Père tout-puissant",
@@ -3702,6 +3722,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Luc",
       "source_work": "Évangile selon saint Luc",
       "source_work_key": "mnemosyne.fr.work.évangile_selon_saint_luc",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Je vous salue Marie",
         "Je vous salue Marie, pleine de grâce"
@@ -3871,6 +3892,7 @@
       "source_license": "public_domain",
       "source_work": "Liturgie chrétienne",
       "source_work_key": "mnemosyne.fr.work.liturgie_chrétienne",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Kyrie eleison",
         "Kyrie, eleison",
@@ -5030,6 +5052,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Aphorismes_de_Hippocrate",
       "source_work": "Aphorismi",
       "source_work_key": "mnemosyne.fr.work.aphorismi",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "La vie est courte, l'art est long",
         "La vie est brève, l'art est long"
@@ -6471,6 +6494,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A2008.01.0001%3Achapter%3D18",
       "source_work": "Life of Alexander",
       "source_work_key": "mnemosyne.fr.work.life_of_alexander",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "le nœud gordien",
         "trancher le nœud gordien",
@@ -7409,6 +7433,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Histoire_des_Francs/Livre_2",
       "source_work": "Histoire des Francs",
       "source_work_key": "mnemosyne.fr.work.histoire_des_francs",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "le vase de Soissons",
         "le vase de Soissons et le coup de hache",
@@ -7676,6 +7701,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "les Champs Élysées",
         "Champs-Élysées"
@@ -7849,6 +7875,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Ov.+Met.+1.625",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.fr.work.metamorphoses",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "les yeux d'Argus",
         "des yeux d'Argus"
@@ -8022,6 +8049,7 @@
       "source_url": "https://la.wikisource.org/wiki/Biblia_Sacra_Vulgata_(Stuttgartensia)/Psalmi#Psalmus_51",
       "source_work": "Biblia Sacra Vulgata (Psalm 51)",
       "source_work_key": "mnemosyne.fr.work.biblia_sacra_vulgata_psalm_51",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Miserere",
         "Miserere mei, Deus",
@@ -8061,6 +8089,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bible_Segond_1910/Matthieu",
       "source_work": "Évangile selon saint Matthieu",
       "source_work_key": "mnemosyne.fr.work.évangile_selon_saint_matthieu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Notre Père qui êtes aux cieux",
         "Notre Père qui es aux cieux",
@@ -8704,6 +8733,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Sainte Marie, Mère de Dieu",
         "Sainte Marie",
@@ -8810,6 +8840,7 @@
       "source_url": "https://fr.wikisource.org/wiki/M%C3%A9tamorphoses_(trad._Moreau)/Livre_IX",
       "source_work": "Métamorphoses",
       "source_work_key": "mnemosyne.fr.work.métamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "se croire sorti de la cuisse de Jupiter",
         "sorti de la cuisse de Jupiter",
@@ -9283,6 +9314,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Ad_hominem",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "un argument ad hominem",
         "des arguments ad hominem",
@@ -10441,6 +10473,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.greek_mythology_phrases_être_comme_un_nouveau_tant",
       "id": "fr_classical_or_scriptural_allusion_être_comme_un_nouveau_tantale_6df916c6",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10454,6 +10487,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Tantale_(mythologie)",
       "source_work": "Various (Greek mythology)",
       "source_work_key": "mnemosyne.fr.work.various_greek_mythology",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "comme un nouveau Tantale",
         "être un nouveau Tantale",
@@ -10629,6 +10663,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0028%3Abook%3D11%3Acard%3D588",
       "source_work": "Metamorphoses",
       "source_work_key": "mnemosyne.fr.work.metamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "dans les bras de Morphée",
         "les bras de Morphée",
@@ -11153,6 +11188,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.greek_mythology_phrases_être_plus_fier_qu_agamemno",
       "id": "fr_classical_or_scriptural_allusion_être_plus_fier_qu_agamemnon_ddb6e8a0",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11167,6 +11203,7 @@
       "source_url": "https://fr.wikisource.org/wiki/L%E2%80%99Iliade",
       "source_work": "L'Iliade",
       "source_work_key": "mnemosyne.fr.work.l_iliade",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "plus fier qu’Agamemnon",
         "fier comme Agamemnon",
@@ -11759,6 +11796,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.greek_mythology_phrases_être_un_nouveau_orphée",
       "id": "fr_classical_or_scriptural_allusion_être_un_nouveau_orphée_a9a42127",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11772,6 +11810,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Orph%C3%A9e",
       "source_work": "Various (Greek mythology)",
       "source_work_key": "mnemosyne.fr.work.various_greek_mythology",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "un nouveau Orphée",
         "comme Orphée",
@@ -11785,6 +11824,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.classical_mythology_phrases_être_un_nouveau_promét",
       "id": "fr_classical_or_scriptural_allusion_être_un_nouveau_prométhée_146a3be1",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11798,6 +11838,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0069",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "être un nouveau Prométhée",
         "prométhéen"
@@ -12165,6 +12206,7 @@
       "reference_type": "classical_or_scriptural_allusion",
       "register": "classical",
       "short_explanation": "A vulnerable point.",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "talon d’Achille"
       ]
@@ -12179,6 +12221,7 @@
       "reference_type": "cultural_reference",
       "register": "common",
       "short_explanation": "Indifference to consequences after one has gone.",
+      "subcategory": "proverb",
       "surface_patterns": [
         "après moi, le déluge"
       ]
@@ -12193,6 +12236,7 @@
       "reference_type": "cultural_reference",
       "register": "common",
       "short_explanation": "A final decisive blow.",
+      "subcategory": "proverb",
       "surface_patterns": [
         "coup de grâce"
       ]
@@ -12207,6 +12251,7 @@
       "reference_type": "cultural_reference",
       "register": "common",
       "short_explanation": "Thinking of the perfect reply too late.",
+      "subcategory": "proverb",
       "surface_patterns": [
         "esprit de l’escalier"
       ]
@@ -12943,6 +12988,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "aller en pèlerinage",
         "faire un pèlerinage",
@@ -13112,6 +13158,7 @@
       "source_dataset": "oral_french_phrases",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "apercevoir la lumière au bout du tunnel",
         "voir la lumière au bout du tunnel",
@@ -13154,6 +13201,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "apercevoir le bout du tunnel",
         "voir le bout du tunnel",
@@ -13315,6 +13363,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Les_Carabiniers_(Offenbach)",
       "source_work": "Les Carabiniers",
       "source_work_key": "mnemosyne.fr.work.les_carabiniers",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Arriver comme les carabiniers",
         "Venir comme les carabiniers",
@@ -13471,6 +13520,7 @@
       "source_dataset": "french_idioms",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "au petit bonheur",
         "au petit bonheur la chance",
@@ -13807,6 +13857,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avoir des doigts de fée",
         "des doigts de fée",
@@ -14027,6 +14078,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avoir la chair de poule",
         "avoir la chair qui se hérisse",
@@ -14423,6 +14475,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avoir le feu sacré",
         "le feu sacré",
@@ -14530,6 +14583,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/avoir_les_dents_longues",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avoir les dents longues",
         "il a les dents longues",
@@ -14650,6 +14704,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avoir un cœur d’artichaut",
         "être un cœur d’artichaut",
@@ -15068,6 +15123,7 @@
       "source_url": "https://en.wiktionary.org/wiki/bien_tard_venu_pour_n%C3%A9ant_tenu",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "bien tard venu pour néant tenu"
       ]
@@ -15129,6 +15185,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "boire du petit-lait",
         "boire son petit-lait"
@@ -15459,6 +15516,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "bête comme chou",
         "bête comme un chou"
@@ -15507,6 +15565,7 @@
       "source_url": "https://en.wiktionary.org/wiki/c%27est_au_fruit_que_l%27on_conna%C3%AEt_l%27arbre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "c'est au fruit que l'on connaît l'arbre"
       ]
@@ -15530,6 +15589,7 @@
       "source_url": "https://en.wiktionary.org/wiki/c%27est_dans_le_besoin_qu%27on_reconna%C3%AEt_ses_vrais_amis",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "c'est dans le besoin qu'on reconnaît ses vrais amis"
       ]
@@ -15614,6 +15674,7 @@
       "source_url": "https://www.larousse.fr/dictionnaires/francais/propre/64554",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C’est du propre !",
         "C’est pas du propre !",
@@ -15639,6 +15700,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est du propre !",
         "C'est du propre, ça !",
@@ -15688,6 +15750,7 @@
       "source_url": "https://en.wiktionary.org/wiki/c%27est_l%27intention_qui_compte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "c'est l'intention qui compte"
       ]
@@ -15809,6 +15872,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "la fin des haricots"
       ]
@@ -16021,6 +16085,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/C%E2%80%99est_le_bouquet",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C’est le bouquet !",
         "C'est le bouquet !",
@@ -16047,6 +16112,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Voilà le bouquet !",
         "C'est le bouquet, ça !"
@@ -16071,6 +16137,7 @@
       "source_url": "https://en.wiktionary.org/wiki/c%27est_le_geste_qui_compte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "c'est le geste qui compte"
       ]
@@ -16119,6 +16186,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est mon boulot",
         "C'est mon boulot !",
@@ -16183,6 +16251,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "c’est pas le Pérou",
         "ce n’est pas le Pérou",
@@ -16221,6 +16290,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/C%27est_pas_le_P%C3%A9rou",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est pas le Pérou",
         "Ce n'est pas le Pérou",
@@ -16247,6 +16317,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est pas une raison de faire un drame",
         "ce n'est pas une raison de faire un drame",
@@ -16364,6 +16435,7 @@
       "source_url": "https://en.wiktionary.org/wiki/c%27est_quand_le_jeu_devient_dur_que_les_durs_commencent_%C3%A0_jouer",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "c'est quand le jeu devient dur que les durs commencent à jouer"
       ]
@@ -16387,6 +16459,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "c'est râpé",
         "c’est râpé",
@@ -16436,6 +16509,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "C’est tout un poème !",
         "C’est un vrai poème !",
@@ -16461,6 +16535,7 @@
       "source_license": "not_required",
       "source_work": "Various (media and political discourse)",
       "source_work_key": "mnemosyne.fr.work.various_media_and_political_discourse",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C’est un peu léger pour la gravité du moment",
         "C’est un peu léger, vu la gravité du moment",
@@ -16486,6 +16561,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est une autre paire de manches",
         "C'est une autre paire de manches, ça !",
@@ -16511,6 +16587,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est une histoire sans fin",
         "C'est une histoire qui n'a pas de fin",
@@ -16536,6 +16613,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est une pièce montée",
         "C'est une vraie pièce montée !"
@@ -16560,6 +16638,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est une scène de ménage",
         "Il y a une scène de ménage",
@@ -16585,6 +16664,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Une tragédie moderne",
         "C'est une tragédie d'aujourd'hui"
@@ -16731,6 +16811,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ce n'est pas un spectacle pour enfants",
         "Ce n'est pas un spectacle enfantin",
@@ -16843,6 +16924,7 @@
       "source_url": "https://en.wiktionary.org/wiki/ce_qui_est_fait_n%27est_plus_%C3%A0_faire",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ce qui est fait n'est plus à faire"
       ]
@@ -16866,6 +16948,7 @@
       "source_url": "https://en.wiktionary.org/wiki/ce_qui_ne_tue_pas_rend_plus_fort",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ce qui ne tue pas rend plus fort"
       ]
@@ -16937,6 +17020,7 @@
       "source_url": "https://en.wiktionary.org/wiki/chacun_est_l%27artisan_de_sa_fortune",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "chacun est l'artisan de sa fortune"
       ]
@@ -16960,6 +17044,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Champagne !",
         "À la champagne !",
@@ -17035,6 +17120,7 @@
       "source_url": "https://en.wiktionary.org/wiki/chaque_chose_en_son_temps",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "chaque chose en son temps"
       ]
@@ -17058,6 +17144,7 @@
       "source_url": "https://en.wiktionary.org/wiki/charbonnier_est_ma%C3%AEtre_chez_soi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "charbonnier est maître chez soi"
       ]
@@ -17081,6 +17168,7 @@
       "source_url": "https://en.wiktionary.org/wiki/charbonnier_est_ma%C3%AEtre_en_sa_demeure",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "charbonnier est maître en sa demeure"
       ]
@@ -17177,6 +17265,7 @@
       "source_url": "https://en.wiktionary.org/wiki/chien_hargneux_a_toujours_l%27oreille_d%C3%A9chir%C3%A9e",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "chien hargneux a toujours l'oreille déchirée"
       ]
@@ -17200,6 +17289,7 @@
       "source_url": "https://en.wiktionary.org/wiki/chien_qui_aboie_ne_mord_pas",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "chien qui aboie ne mord pas"
       ]
@@ -17223,6 +17313,7 @@
       "source_url": "https://en.wiktionary.org/wiki/choisir_c%27est_renoncer",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "choisir c'est renoncer"
       ]
@@ -17391,6 +17482,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "comme un air de déjà vu",
         "un air de déjà vu",
@@ -17430,6 +17522,7 @@
       "source_url": "https://www.dictionnaire-academie.fr/article/A9C0415",
       "source_work": "Dictionnaire de l'Académie française",
       "source_work_key": "mnemosyne.fr.work.dictionnaire_de_l_académie_française",
+      "subcategory": "proverb",
       "surface_patterns": [
         "comme un coq en pâte",
         "vivre comme un coq en pâte",
@@ -17595,6 +17688,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "couleur locale",
         "couleurs locales",
@@ -17748,6 +17842,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/d%C3%A9rat%C3%A9#Adjectif",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "courir comme un dératé",
         "il court comme un dératé",
@@ -17791,6 +17886,7 @@
       "source_url": "https://www.dictionnaire-academie.fr/article/A9G0855",
       "source_work": "Dictionnaire de l'Académie française",
       "source_work_key": "mnemosyne.fr.work.dictionnaire_de_l_académie_française",
+      "subcategory": "proverb",
       "surface_patterns": [
         "courir le guilledou",
         "faire le guilledou",
@@ -17829,6 +17925,7 @@
       "source_url": "https://www.linternaute.fr/expression/langue-francaise/10739/courir-le-jupon/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "courir le jupon",
         "il court le jupon",
@@ -18161,6 +18258,7 @@
       "source_url": "https://en.wiktionary.org/wiki/de_deux_maux%2C_il_faut_choisir_le_moindre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "de deux maux, il faut choisir le moindre"
       ]
@@ -18196,6 +18294,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "de haute lutte",
         "gagner de haute lutte",
@@ -18308,6 +18407,7 @@
       "source_url": "https://en.wiktionary.org/wiki/demain_est_un_autre_jour",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "demain est un autre jour"
       ]
@@ -18357,6 +18457,7 @@
       "source_url": "https://en.wiktionary.org/wiki/des_go%C3%BBts_et_des_couleurs%2C_on_ne_discute_pas",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "des goûts et des couleurs, on ne discute pas"
       ]
@@ -18380,6 +18481,7 @@
       "source_url": "https://en.wiktionary.org/wiki/deux_avis_valent_mieux_qu%27un",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "deux avis valent mieux qu'un"
       ]
@@ -18403,6 +18505,7 @@
       "source_url": "https://en.wiktionary.org/wiki/deux_pr%C3%A9cautions_valent_mieux_qu%27une",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "deux précautions valent mieux qu'une"
       ]
@@ -18426,6 +18529,7 @@
       "source_url": "https://en.wiktionary.org/wiki/deux_t%C3%AAtes_valent_mieux_qu%27une",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "deux têtes valent mieux qu'une"
       ]
@@ -18497,6 +18601,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dis-moi_qui_tu_fr%C3%A9quentes_et_je_te_dirai_qui_tu_es",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "dis-moi qui tu fréquentes et je te dirai qui tu es"
       ]
@@ -18520,6 +18625,7 @@
       "source_url": "https://en.wiktionary.org/wiki/donner_c%27est_donner%2C_reprendre_c%27est_voler",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "donner c'est donner, reprendre c'est voler"
       ]
@@ -18567,6 +18673,7 @@
       "source_url": "https://en.wiktionary.org/wiki/donner_et_retenir_ne_vaut",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "donner et retenir ne vaut"
       ]
@@ -18873,6 +18980,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "en avoir gros sur la patate",
         "avoir gros sur la patate",
@@ -18946,6 +19054,7 @@
       "source_url": "https://en.wiktionary.org/wiki/en_avril_ne_te_d%C3%A9couvre_pas_d%27un_fil%2C_en_mai_fais_ce_qu%27il_te_pla%C3%AEt",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "en avril ne te découvre pas d'un fil, en mai fais ce qu'il te plaît"
       ]
@@ -19112,6 +19221,7 @@
       "source_url": "https://fr.wikisource.org/wiki/L%27Encyclop%C3%A9die",
       "source_work": "Encyclopédie ou Dictionnaire raisonné des sciences, des arts et des métiers",
       "source_work_key": "mnemosyne.fr.work.encyclopédie_ou_dictionnaire_raisonné_des_sciences",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Encyclopédie",
         "Encyclopédie de Diderot et d'Alembert",
@@ -19148,6 +19258,7 @@
       "source_dataset": "fr_social_terms",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Enfant gâté",
         "Un enfant gâté",
@@ -19203,6 +19314,7 @@
       "source_url": "https://en.wiktionary.org/wiki/entre_chien_et_loup",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "entre chien et loup"
       ]
@@ -19249,6 +19361,7 @@
       "source_url": "https://en.wiktionary.org/wiki/entre_deux_maux%2C_il_faut_choisir_le_moindre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "entre deux maux, il faut choisir le moindre"
       ]
@@ -19344,6 +19457,7 @@
       "source_url": "https://en.wiktionary.org/wiki/et_ainsi_de_suite",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "et ainsi de suite"
       ]
@@ -19413,6 +19527,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%AAtre_au_four_et_au_moulin",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "être au four et au moulin"
       ]
@@ -19517,6 +19632,7 @@
       "source_license": "public_domain",
       "source_work": "Roman Missal",
       "source_work_key": "mnemosyne.fr.work.roman_missal",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Exsultet",
         "l'Exsultet"
@@ -19610,6 +19726,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire la pige à quelqu'un",
         "lui faire la pige",
@@ -19658,6 +19775,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Bonnet_phrygien",
       "source_work": "Various revolutionary texts and artworks",
       "source_work_key": "mnemosyne.fr.work.various_revolutionary_texts_and_artworks",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "faire le bonnet rouge et la plume blanche",
         "porter le bonnet rouge et la plume blanche",
@@ -19802,6 +19920,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire le poids",
         "ne pas faire le poids",
@@ -19873,6 +19992,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Faire mouche",
         "Il a fait mouche",
@@ -19995,6 +20115,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire sonner les cloches",
         "faire sonner la cloche",
@@ -20048,6 +20169,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire un four",
         "faire un bide",
@@ -20073,6 +20195,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire un pas de deux",
         "danser un pas de deux",
@@ -20100,6 +20223,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire un tabac",
         "faire un tabac à",
@@ -20129,6 +20253,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_une_belle_jambe",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire une belle jambe"
       ]
@@ -20152,6 +20277,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fais_ce_que_je_dis%2C_pas_ce_que_je_fais",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "fais ce que je dis, pas ce que je fais"
       ]
@@ -20175,6 +20301,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faites_ce_que_je_dis%2C_pas_ce_que_je_fais",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faites ce que je dis, pas ce que je fais"
       ]
@@ -20198,6 +20325,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faites_l%27amour%2C_pas_la_guerre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faites l'amour, pas la guerre"
       ]
@@ -20244,6 +20372,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faute_avou%C3%A9e_est_%C3%A0_moiti%C3%A9_pardonn%C3%A9e",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faute avouée est à moitié pardonnée"
       ]
@@ -20267,6 +20396,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faute_de_grives_on_mange_des_merles",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faute de grives on mange des merles"
       ]
@@ -20290,6 +20420,7 @@
       "source_url": "https://en.wiktionary.org/wiki/femme_au_volant%2C_mort_au_tournant",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "femme au volant, mort au tournant"
       ]
@@ -20339,6 +20470,7 @@
       "source_url": "https://en.wiktionary.org/wiki/femme_qui_rit%2C_%C3%A0_moiti%C3%A9_dans_ton_lit",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "femme qui rit, à moitié dans ton lit"
       ]
@@ -20680,6 +20812,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "gens de peu",
         "les gens de peu"
@@ -21008,6 +21141,7 @@
       "source_url": "https://en.wiktionary.org/wiki/il_faut_de_tout_pour_faire_un_monde",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il faut de tout pour faire un monde"
       ]
@@ -21031,6 +21165,7 @@
       "source_url": "https://en.wiktionary.org/wiki/il_faut_le_voir_pour_le_croire",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il faut le voir pour le croire"
       ]
@@ -21054,6 +21189,7 @@
       "source_url": "https://en.wiktionary.org/wiki/il_faut_se_m%C3%A9fier_de_l%27eau_qui_dort",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il faut se méfier de l'eau qui dort"
       ]
@@ -21077,6 +21213,7 @@
       "source_url": "https://en.wiktionary.org/wiki/il_n%27est_pire_aveugle_que_celui_qui_ne_veut_pas_voir",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il n'est pire aveugle que celui qui ne veut pas voir"
       ]
@@ -21292,6 +21429,7 @@
       "source_url": "https://en.wiktionary.org/wiki/il_ne_fallait_pas",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il ne fallait pas"
       ]
@@ -21315,6 +21453,7 @@
       "source_url": "https://en.wiktionary.org/wiki/il_ne_faut_jamais_dire_jamais",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il ne faut jamais dire jamais"
       ]
@@ -21338,6 +21477,7 @@
       "source_url": "https://en.wiktionary.org/wiki/il_ne_faut_pas_abuser_des_bonnes_choses",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il ne faut pas abuser des bonnes choses"
       ]
@@ -21361,6 +21501,7 @@
       "source_url": "https://en.wiktionary.org/wiki/il_ne_faut_pas_dire%2C_fontaine%2C_je_ne_boirai_pas_de_ton_eau",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il ne faut pas dire, fontaine, je ne boirai pas de ton eau"
       ]
@@ -21384,6 +21525,7 @@
       "source_url": "https://en.wiktionary.org/wiki/il_ne_faut_pas_vendre_la_peau_de_l%27ours_avant_de_l%27avoir_tu%C3%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il ne faut pas vendre la peau de l'ours avant de l'avoir tué"
       ]
@@ -21527,6 +21669,7 @@
       "source_url": "https://www.musee-orsay.fr/en/collections/works-in-focus/impression-sunrise-3118",
       "source_work": "Impression, soleil levant",
       "source_work_key": "mnemosyne.fr.work.impression_soleil_levant",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Impression, soleil levant",
         "Un Impression, soleil levant",
@@ -21640,6 +21783,7 @@
       "source_license": "not_required",
       "source_work": "Speech of 30 May 1968",
       "source_work_key": "mnemosyne.fr.work.speech_of_30_may_1968",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Je vous ai compris",
         "Je vous ai compris !"
@@ -21664,6 +21808,7 @@
       "source_url": "https://en.wiktionary.org/wiki/jeter_de_l%27huile_sur_le_feu",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "jeter de l'huile sur le feu"
       ]
@@ -21711,6 +21856,7 @@
       "source_url": "https://en.wiktionary.org/wiki/jeter_le_gant",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "jeter le gant"
       ]
@@ -21781,6 +21927,7 @@
       "source_url": "https://en.wiktionary.org/wiki/jouer_avec_le_feu",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "jouer avec le feu"
       ]
@@ -22459,6 +22606,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fr.explanation.fr_19th_century_literature_l_exil_de_victor_hugo",
       "id": "fr_cultural_reference_l_exil_de_victor_hugo_eea2d6dc",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22472,6 +22620,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Les_Contemplations",
       "source_work": "Les Contemplations",
       "source_work_key": "mnemosyne.fr.work.les_contemplations",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "l'exil de Victor Hugo",
         "l'exil de Hugo",
@@ -22661,6 +22810,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition / attributed to Louis XIV",
       "source_work_key": "mnemosyne.fr.work.oral_tradition_attributed_to_louis_xiv",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "L'État, c'est moi",
         "L'état c'est moi"
@@ -22685,6 +22835,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "C'est moi l'État"
       ]
@@ -22879,6 +23030,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fr.work.oral_tradition",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "La bête du Gévaudan",
         "bête du Gévaudan"
@@ -23237,6 +23389,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition and adaptations",
       "source_work_key": "mnemosyne.fr.work.oral_tradition_and_adaptations",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "la fée Carabosse",
         "Carabosse",
@@ -23312,6 +23465,7 @@
       "source_url": "https://fr.wikisource.org/wiki/M%C3%A9moires_de_Richelieu",
       "source_work": "Mémoires de Richelieu",
       "source_work_key": "mnemosyne.fr.work.mémoires_de_richelieu",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "la journée des Dupes",
         "journée des Dupes de 1630",
@@ -23755,6 +23909,7 @@
       "source_license": "not_required",
       "source_work": "Historical promise / attributed to Henri IV",
       "source_work_key": "mnemosyne.fr.work.historical_promise_attributed_to_henri_iv",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "poule au pot",
         "la poule au pot"
@@ -23976,6 +24131,7 @@
       "source_license": "public_domain",
       "source_work": "Various (historical period)",
       "source_work_key": "mnemosyne.fr.work.various_historical_period",
+      "subcategory": "historical_allusion",
       "surface_patterns": [
         "La Terreur",
         "Terreur"
@@ -24193,6 +24349,7 @@
       "source_url": "https://en.wiktionary.org/wiki/laisser_couler",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "laisser couler"
       ]
@@ -24216,6 +24373,7 @@
       "source_url": "https://en.wiktionary.org/wiki/laisser_en_paix",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "laisser en paix"
       ]
@@ -24239,6 +24397,7 @@
       "source_url": "https://en.wiktionary.org/wiki/laisser_pisser",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "laisser pisser"
       ]
@@ -24651,6 +24810,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "le coup de foudre",
         "un coup de foudre",
@@ -24690,6 +24850,7 @@
       "source_url": "https://www.dictionnaire-academie.fr/article/A1C0103",
       "source_work": "Dictionnaire de l'Académie française",
       "source_work_key": "mnemosyne.fr.work.dictionnaire_de_l_académie_française",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "le coup de grâce",
         "un coup de grâce",
@@ -24722,6 +24883,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Histoire_de_la_Maison_de_Chabot",
       "source_work": "Histoire de la Maison de Chabot",
       "source_work_key": "mnemosyne.fr.work.histoire_de_la_maison_de_chabot",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "le coup de Jarnac",
         "un coup de Jarnac",
@@ -25071,6 +25233,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Pens%C3%A9es_de_Pascal",
       "source_work": "Pensées",
       "source_work_key": "mnemosyne.fr.work.pensées",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "le nez de Cléopâtre",
         "si le nez de Cléopâtre eût été plus court",
@@ -25515,6 +25678,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Syndrome_de_Stockholm",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "le syndrome de Stockholm",
         "syndrome de Stockholm"
@@ -25860,6 +26024,7 @@
       "source_license": "public_domain",
       "source_work": "Various (Chrétien de Troyes, etc.)",
       "source_work_key": "mnemosyne.fr.work.various_chrétien_de_troyes_etc",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Les chevaliers de la Table ronde",
         "chevaliers de la Table ronde",
@@ -26104,6 +26269,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Quatre_Sergents_de_La_Rochelle",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "les quatre sergents de La Rochelle",
         "les sergents de La Rochelle"
@@ -26297,6 +26463,7 @@
       "source_license": "not_required",
       "source_work": "Various (national motto)",
       "source_work_key": "mnemosyne.fr.work.various_national_motto",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Liberté, égalité, fraternité",
         "liberté égalité fraternité"
@@ -26948,6 +27115,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mot_juste",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "mot juste"
       ]
@@ -27722,6 +27890,7 @@
       "source_license": "not_required",
       "source_work": "Historical anecdote / attributed to Henri IV",
       "source_work_key": "mnemosyne.fr.work.historical_anecdote_attributed_to_henri_iv",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Paris vaut bien une messe"
       ]
@@ -28032,6 +28201,7 @@
       "source_url": "https://www.ina.fr/ina-eclaire-actu/video/caf9303117/la-vie-en-rose",
       "source_work": "Chanson *La Vie en rose*",
       "source_work_key": "mnemosyne.fr.work.chanson_la_vie_en_rose",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "peindre la vie en rose"
       ]
@@ -28540,6 +28710,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "pousser à la consommation",
         "pousser les gens à la consommation",
@@ -28761,6 +28932,7 @@
       "source_license": "public_domain",
       "source_work": "Various (historical event)",
       "source_work_key": "mnemosyne.fr.work.various_historical_event",
+      "subcategory": "historical_allusion",
       "surface_patterns": [
         "Prise de la Bastille",
         "la prise de la Bastille"
@@ -28796,6 +28968,7 @@
       "confidence": 0.7,
       "explanation_key": "mnemosyne.en.explanation.fr_wiktionary_idioms.prunelle_de_ses_yeux",
       "id": "fr_cultural_reference_prunelle_de_ses_yeux_c49f9817",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.",
@@ -28809,6 +28982,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prunelle_de_ses_yeux",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "biblical",
       "surface_patterns": [
         "prunelle de ses yeux"
       ]
@@ -29348,6 +29522,7 @@
       "confidence": 0.7,
       "explanation_key": "mnemosyne.en.explanation.fr_wiktionary_idioms.recoudre_les_morceaux",
       "id": "fr_cultural_reference_recoudre_les_morceaux_2bdb5107",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.",
@@ -29361,6 +29536,7 @@
       "source_url": "https://en.wiktionary.org/wiki/recoudre_les_morceaux",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "recoudre les morceaux"
       ]
@@ -29394,6 +29570,7 @@
       "confidence": 0.7,
       "explanation_key": "mnemosyne.en.explanation.fr_wiktionary_idioms.rendre_l_ame",
       "id": "fr_cultural_reference_rendre_l_ame_a12acc20",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.",
@@ -29407,6 +29584,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rendre_l%27%C3%A2me",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "biblical",
       "surface_patterns": [
         "rendre l'âme"
       ]
@@ -29417,6 +29595,7 @@
       "confidence": 0.7,
       "explanation_key": "mnemosyne.en.explanation.fr_wiktionary_idioms.rendre_son_ame_a_dieu",
       "id": "fr_cultural_reference_rendre_son_ame_a_dieu_dac928d3",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.",
@@ -29430,6 +29609,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rendre_son_%C3%A2me_%C3%A0_Dieu",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "biblical",
       "surface_patterns": [
         "rendre son âme à Dieu"
       ]
@@ -29440,6 +29620,7 @@
       "confidence": 0.7,
       "explanation_key": "mnemosyne.en.explanation.fr_wiktionary_idioms.rendre_son_ame_au_bon_dieu",
       "id": "fr_cultural_reference_rendre_son_ame_au_bon_dieu_53a3fdef",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.",
@@ -29453,6 +29634,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rendre_son_%C3%A2me_au_bon_Dieu",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "biblical",
       "surface_patterns": [
         "rendre son âme au bon Dieu"
       ]
@@ -29742,6 +29924,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/La_Vie_en_rose",
       "source_work": "La Vie en rose",
       "source_work_key": "mnemosyne.fr.work.la_vie_en_rose",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "savoir voir la vie en rose"
       ]
@@ -30091,6 +30274,7 @@
       "source_license": "public_domain",
       "source_work": "Prière de saint François (Peace Prayer)",
       "source_work_key": "mnemosyne.fr.work.prière_de_saint_françois_peace_prayer",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Fais de moi un instrument de ta paix",
         "Seigneur, fais de moi un instrument de ta paix",
@@ -30174,6 +30358,7 @@
       "source_license": "public_domain",
       "source_work": "Various (historical event)",
       "source_work_key": "mnemosyne.fr.work.various_historical_event",
+      "subcategory": "historical_allusion",
       "surface_patterns": [
         "Serment du Jeu de Paume",
         "le Serment du Jeu de Paume"
@@ -30198,6 +30383,7 @@
       "source_url": "https://en.wiktionary.org/wiki/si_jeunesse_savait%2C_si_vieillesse_pouvait",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "si jeunesse savait, si vieillesse pouvait"
       ]
@@ -30221,6 +30407,7 @@
       "source_url": "https://en.wiktionary.org/wiki/si_la_montagne_ne_va_pas_%C3%A0_toi%2C_va_%C3%A0_la_montagne",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "si la montagne ne va pas à toi, va à la montagne"
       ]
@@ -30244,6 +30431,7 @@
       "source_url": "https://en.wiktionary.org/wiki/si_ma_tante_en_avait%2C_on_l%27appellerait_mon_oncle",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "si ma tante en avait, on l'appellerait mon oncle"
       ]
@@ -30267,6 +30455,7 @@
       "source_url": "https://en.wiktionary.org/wiki/si_tu_veux_la_paix_pr%C3%A9pare_la_guerre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "si tu veux la paix prépare la guerre"
       ]
@@ -30313,6 +30502,7 @@
       "source_url": "https://en.wiktionary.org/wiki/souvent_femme_varie%2C_bien_fol_est_qui_s%27y_fie",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "souvent femme varie, bien fol est qui s'y fie"
       ]
@@ -30474,6 +30664,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tant_va_la_cruche_%C3%A0_l%27eau_qu%27%C3%A0_la_fin_elle_se_casse",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tant va la cruche à l'eau qu'à la fin elle se casse"
       ]
@@ -30497,6 +30688,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tel_qui_rit_vendredi%2C_dimanche_pleurera",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tel qui rit vendredi, dimanche pleurera"
       ]
@@ -30520,6 +30712,7 @@
       "source_url": "https://en.wiktionary.org/wiki/telle_m%C3%A8re%2C_telle_fille",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "telle mère, telle fille"
       ]
@@ -30612,6 +30805,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Tirer_%C3%A0_boulets_rouges",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tirer à boulets rouges",
         "tirer des boulets rouges",
@@ -30730,6 +30924,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tous_les_chemins_m%C3%A8nent_%C3%A0_Rome",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tous les chemins mènent à Rome"
       ]
@@ -30753,6 +30948,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tous_les_go%C3%BBts_sont_dans_la_nature",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tous les goûts sont dans la nature"
       ]
@@ -30776,6 +30972,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tout_ce_qui_brille_n%27est_pas_or",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tout ce qui brille n'est pas or"
       ]
@@ -30809,6 +31006,7 @@
       "confidence": 0.7,
       "explanation_key": "mnemosyne.en.explanation.fr_wiktionary_idioms.tout_est_bien_qui_finit_bien",
       "id": "fr_cultural_reference_tout_est_bien_qui_finit_bien_a8a33524",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.",
@@ -30822,6 +31020,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tout_est_bien_qui_finit_bien",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "tout est bien qui finit bien"
       ]
@@ -30845,6 +31044,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tout_est_bon_dans_le_cochon",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tout est bon dans le cochon"
       ]
@@ -30868,6 +31068,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tout_travail_m%C3%A9rite_salaire",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tout travail mérite salaire"
       ]
@@ -30891,6 +31092,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tout_vient_%C3%A0_point_%C3%A0_qui_sait_attendre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tout vient à point à qui sait attendre"
       ]
@@ -30914,6 +31116,7 @@
       "source_url": "https://en.wiktionary.org/wiki/toutes_les_bonnes_choses_ont_une_fin",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "toutes les bonnes choses ont une fin"
       ]
@@ -31053,6 +31256,7 @@
       "source_url": "https://en.wiktionary.org/wiki/un_homme_averti_en_vaut_deux",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "un homme averti en vaut deux"
       ]
@@ -31076,6 +31280,7 @@
       "source_url": "https://en.wiktionary.org/wiki/un_malheur_n%27arrive_jamais_seul",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "un malheur n'arrive jamais seul"
       ]
@@ -31099,6 +31304,7 @@
       "source_url": "https://en.wiktionary.org/wiki/un_malheur_ne_vient_jamais_seul",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "un malheur ne vient jamais seul"
       ]
@@ -31145,6 +31351,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "un pas de plus vers la gloire",
         "faire un pas de plus vers la gloire",
@@ -31218,6 +31425,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "un trait de génie",
         "avoir un trait de génie",
@@ -31573,6 +31781,7 @@
       "source_license": "not_required",
       "source_work": "Speech at Montreal City Hall",
       "source_work_key": "mnemosyne.fr.work.speech_at_montreal_city_hall",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Vive le Québec libre!",
         "Vive le Québec libre !",
@@ -31621,6 +31830,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "voir la vie en noir",
         "voir la vie en noir et blanc",
@@ -31740,6 +31950,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "à cor et à cri",
         "à cor et cri",
@@ -31776,6 +31987,7 @@
       "source_dataset": "fr_phrases_culturelles",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "à l’anglaise",
         "partir à l’anglaise",
@@ -31838,6 +32050,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "À l’estomac",
         "avoir l’estomac solide",
@@ -31900,6 +32113,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "à l’épreuve des balles",
         "résister à l’épreuve des balles",
@@ -31936,6 +32150,7 @@
       "source_dataset": "fr_phrases_culturelles",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "à la bonne franquette",
         "dîner à la bonne franquette",
@@ -32089,6 +32304,7 @@
       "source_license": "not_required",
       "source_work": "Various (French political tradition)",
       "source_work_key": "mnemosyne.fr.work.various_french_political_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "À la volonté du peuple",
         "volonté du peuple"
@@ -32113,6 +32329,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "à livre ouvert",
         "jouer à livre ouvert",
@@ -32201,6 +32418,7 @@
       "source_dataset": "fr_phrases_culturelles",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "boire à tire-larigot",
         "fumer à tire-larigot",
@@ -32304,6 +32522,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/%C3%89pop%C3%A9e_napol%C3%A9onienne",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "l'épopée napoléonienne",
         "l'épopée de Napoléon",
@@ -32356,6 +32575,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "être au septième ciel",
         "au septième ciel",
@@ -32381,6 +32601,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "être au sommet de son art",
         "il est au sommet de son art",
@@ -32406,6 +32627,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "être dans le collimateur",
         "être dans son collimateur",
@@ -32443,6 +32665,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "être dans les nuages",
         "être dans la lune",
@@ -32468,6 +32691,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "être la muse d’un artiste",
         "être la muse d’un peintre",
@@ -32537,6 +32761,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "être pris comme un rat",
         "être pris au piège comme un rat",
@@ -32574,6 +32799,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "être tiré à quatre épingles",
         "tiré à quatre épingles",
@@ -32824,6 +33050,7 @@
       "short_explanation": "A call to practical action rather than abstract speculation.",
       "source_author": "Voltaire",
       "source_work": "Candide",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Candide",
         "il faut cultiver notre jardin"
@@ -33059,6 +33286,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.fr_moliere_amphitryon_allons_mes_bons_amis_levons_",
       "id": "fr_literary_reference_allons_mes_bons_amis_levons_nous_tôt_a2c76eea",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33073,6 +33301,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Amphitryon_(Molière)/Acte_I",
       "source_work": "Amphitryon",
       "source_work_key": "mnemosyne.fr.work.amphitryon",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Allons, mes bons amis, levons-nous tôt !",
         "Allons, mes bons amis, levons-nous de bonne heure !",
@@ -33166,6 +33395,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Fables_de_La_Fontaine_-_Livre_6#Le_Vent_et_le_Soleil",
       "source_work": "Fables",
       "source_work_key": "mnemosyne.fr.work.fables",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aquilon et Borée",
         "l'Aquilon et Borée",
@@ -33318,6 +33548,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Gargantua_et_Pantagruel",
       "source_work": "Gargantua et Pantagruel",
       "source_work_key": "mnemosyne.fr.work.gargantua_et_pantagruel",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "avoir un appétit de Pantagruel",
         "un appétit pantagruélique",
@@ -33371,6 +33602,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Chanson_de_Roland",
       "source_work": "La Chanson de Roland",
       "source_work_key": "mnemosyne.fr.work.la_chanson_de_roland",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "un cœur de lion comme Roland",
         "courageux comme Roland"
@@ -33395,6 +33627,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Vie_très_horrifique_du_grand_Gargantua",
       "source_work": "La Vie très horrifique du grand Gargantua, père de Pantagruel",
       "source_work_key": "mnemosyne.fr.work.la_vie_très_horrifique_du_grand_gargantua_père_de_",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "avoir une mémoire d’éléphant comme Pantagruel",
         "une mémoire d’éléphant à la Pantagruel",
@@ -33460,6 +33693,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Barbe-Bleue",
       "source_work": "Histoires ou contes du temps passé",
       "source_work_key": "mnemosyne.fr.work.histoires_ou_contes_du_temps_passé",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Barbe-Bleue",
         "la Barbe-Bleue",
@@ -33603,6 +33837,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Contes_de_fées_(Perrault,_1697)",
       "source_work": "Le Petit Chaperon rouge et autres contes",
       "source_work_key": "mnemosyne.fr.work.le_petit_chaperon_rouge_et_autres_contes",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Boucle d'Or et les Trois Ours",
         "Boucle d'Or",
@@ -33950,6 +34185,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "C'est une tragédie moderne",
         "C'est une tragédie bien moderne",
@@ -34022,6 +34258,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Candide_ou_l%27Optimisme",
       "source_work": "Candide ou l'Optimisme",
       "source_work_key": "mnemosyne.fr.work.candide_ou_l_optimisme",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Candide ou l'Optimisme",
         "l'optimisme de Candide",
@@ -34075,6 +34312,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Les_Mis%C3%A9rables/Tome_5/1/3",
       "source_work": "Les Misérables",
       "source_work_key": "mnemosyne.fr.work.les_misérables",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ces gens-là sont des saltimbanques",
         "Ils sont des saltimbanques",
@@ -34260,6 +34498,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/1030",
       "source_work": "Der Ring des Nibelungen",
       "source_work_key": "mnemosyne.fr.work.der_ring_des_nibelungen",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "chercher l'or du Rhin comme dans les Nibelungen",
         "chercher l'or du Rhin, comme dans les Nibelungen",
@@ -34272,6 +34511,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.virgil_bucoliques_chercher_l_étoile_du_berger_comm",
       "id": "fr_literary_reference_chercher_l_étoile_du_berger_comme_dans_les_bucoliques_43916fdf",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34286,6 +34526,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Bucoliques",
       "source_work": "Bucoliques",
       "source_work_key": "mnemosyne.fr.work.bucoliques",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "chercher l'étoile du Berger",
         "comme l'étoile du Berger",
@@ -34418,6 +34659,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.beaumarchais_mariage_figaro_phrases_comment_on_m_a",
       "id": "fr_literary_reference_comment_on_m_assassine_cfdba4df",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34432,6 +34674,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Mariage_de_Figaro_(1784)/Acte_I",
       "source_work": "Le Mariage de Figaro",
       "source_work_key": "mnemosyne.fr.work.le_mariage_de_figaro",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Comment ! On m'assassine !",
         "Comment ! On m'assassine ?"
@@ -34518,6 +34761,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.la_fontaine_fables_crier_au_loup_comme_dans_la_fab",
       "id": "fr_literary_reference_crier_au_loup_comme_dans_la_fable_94727f12",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34532,6 +34776,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Fables_de_La_Fontaine_(1668)/Livre_1_-_Fable_10",
       "source_work": "Fables",
       "source_work_key": "mnemosyne.fr.work.fables",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "crier au loup",
         "crier 'au loup!'",
@@ -34571,6 +34816,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Fables_de_La_Fontaine/Livre_7#Le_Loup_et_l%E2%80%99%C3%82ne",
       "source_work": "Fables",
       "source_work_key": "mnemosyne.fr.work.fables",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Crier haro sur le baudet",
         "Crier haro sur l’âne",
@@ -34655,6 +34901,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Cyrano_de_Bergerac_(Rostand)",
       "source_work": "Cyrano de Bergerac",
       "source_work_key": "mnemosyne.fr.work.cyrano_de_bergerac",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Cyrano de Bergerac",
         "le Cyrano de Bergerac",
@@ -34768,6 +35015,7 @@
       "source_url": "https://fr.wikisource.org/wiki/De_l%27Allemagne",
       "source_work": "De l'Allemagne",
       "source_work_key": "mnemosyne.fr.work.de_l_allemagne",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "De l'Allemagne",
         "De l'Allemagne (1810)",
@@ -34834,6 +35082,7 @@
       "source_url": "https://es.wikisource.org/wiki/El_burlador_de_Sevilla_y_convidado_de_piedra",
       "source_work": "El burlador de Sevilla y convidado de piedra",
       "source_work_key": "mnemosyne.fr.work.el_burlador_de_sevilla_y_convidado_de_piedra",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Don Juan",
         "Don Giovanni",
@@ -34885,6 +35134,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Le_D%C3%A9sert_des_Tartares",
       "source_work": "Il deserto dei Tartari",
       "source_work_key": "mnemosyne.fr.work.il_deserto_dei_tartari",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Désert des Tartares",
         "le Désert des Tartares",
@@ -34978,6 +35228,7 @@
       "source_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006436209/",
       "source_work": "Code civil français",
       "source_work_key": "mnemosyne.fr.work.code_civil_français",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "En bon père de famille",
         "Comme un bon père de famille",
@@ -35149,6 +35400,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Orlando_furioso_(trad._Dufief)",
       "source_work": "Orlando Furioso",
       "source_work_key": "mnemosyne.fr.work.orlando_furioso",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "faire le fier comme Astolphe",
         "se comporter comme Astolphe",
@@ -35174,6 +35426,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Clarissa_Harlowe",
       "source_work": "Clarissa",
       "source_work_key": "mnemosyne.fr.work.clarissa",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "faire le joli cœur comme un Lovelace",
         "être un Lovelace",
@@ -35227,6 +35480,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Cid",
       "source_work": "Le Cid",
       "source_work_key": "mnemosyne.fr.work.le_cid",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "faire le malin comme un Matamore",
         "jouer les Matamore",
@@ -35334,6 +35588,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Les_Faux-monnayeurs",
       "source_work": "Les Faux-monnayeurs",
       "source_work_key": "mnemosyne.fr.work.les_faux_monnayeurs",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Les Faux-monnayeurs",
         "Les Faux-monnayeurs d'André Gide"
@@ -35358,6 +35613,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Gargantua_(Rabelais)",
       "source_work": "La Vie très horrifique du grand Gargantua",
       "source_work_key": "mnemosyne.fr.work.la_vie_très_horrifique_du_grand_gargantua",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Gargantua",
         "le Gargantua",
@@ -35422,6 +35678,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Guerre_et_Paix",
       "source_work": "Война и мир",
       "source_work_key": "mnemosyne.fr.work.война_и_мир",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Guerre et paix",
         "La guerre et la paix"
@@ -35654,6 +35911,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Il_ne_faut_jurer_de_rien",
       "source_work": "Il ne faut jurer de rien",
       "source_work_key": "mnemosyne.fr.work.il_ne_faut_jurer_de_rien",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Il ne faut jurer de rien",
         "Il ne faut pas jurer de rien"
@@ -35707,6 +35965,7 @@
       "source_url": "https://fr.wikisource.org/wiki/L%27Imaginaire",
       "source_work": "L'Imaginaire",
       "source_work_key": "mnemosyne.fr.work.l_imaginaire",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "l'imaginaire",
         "théorie de l'imaginaire",
@@ -35994,6 +36253,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "les jours de notre vie",
         "les jours de la vie",
@@ -36778,6 +37038,7 @@
       "source_url": "https://fr.wikisource.org/wiki/L%E2%80%99Honn%C3%AAte_Homme_ou_l%E2%80%99Art_de_plaire_%C3%A0_la_Cour",
       "source_work": "L'Honnête Homme ou l'Art de plaire à la Cour",
       "source_work_key": "mnemosyne.fr.work.l_honnête_homme_ou_l_art_de_plaire_à_la_cour",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "L'honnête homme est un homme de bien",
         "L'honnête homme est un homme bon",
@@ -37100,6 +37361,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/17292",
       "source_work": "Histoires ou contes du temps passé",
       "source_work_key": "mnemosyne.fr.work.histoires_ou_contes_du_temps_passé",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "La Belle au bois dormant",
         "Belle au bois dormant"
@@ -37539,6 +37801,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/La_Modification",
       "source_work": "La Modification",
       "source_work_key": "mnemosyne.fr.work.la_modification",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "La Modification",
         "modification",
@@ -37996,6 +38259,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fr.explanation.life_as_dream_actors_la_vie_est_un_rêve_dont_nous_",
       "id": "fr_literary_reference_la_vie_est_un_rêve_dont_nous_sommes_les_acteurs_dcea3980",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38009,6 +38273,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "La vie est un rêve dont nous sommes les acteurs",
         "la vie est un rêve dont nous sommes acteurs",
@@ -38061,6 +38326,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Lac_aux_f%C3%A9es",
       "source_work": "Le Lac aux fées",
       "source_work_key": "mnemosyne.fr.work.le_lac_aux_fées",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "le lac aux fées",
         "le lac des fées",
@@ -38187,6 +38453,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/17292",
       "source_work": "Histoires ou contes du temps passé",
       "source_work_key": "mnemosyne.fr.work.histoires_ou_contes_du_temps_passé",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Le Chat botté",
         "Chat botté"
@@ -38226,6 +38493,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.corneille_le_cid_phrases_le_cid_campe_sur_nos_plan",
       "id": "fr_literary_reference_le_cid_campe_sur_nos_planches_4b3d5204",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38239,6 +38507,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Cid",
       "source_work": "Le Cid",
       "source_work_key": "mnemosyne.fr.work.le_cid",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Le Cid campe sur nos planches",
         "Le Cid campe sur la scène",
@@ -38338,6 +38607,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fr.explanation.fr_literary_michaux_lune_noire_le_cycle_de_la_lune",
       "id": "fr_literary_reference_le_cycle_de_la_lune_noire_de_henri_michaux_7cf3239a",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38351,6 +38621,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Henri_Michaux#Le_Cycle_de_la_lune_noire",
       "source_work": "Le Cycle de la lune noire",
       "source_work_key": "mnemosyne.fr.work.le_cycle_de_la_lune_noire",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Le Cycle de la lune noire",
         "Cycle de la lune noire",
@@ -38943,6 +39214,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Petit_Poucet",
       "source_work": "Histoires ou contes du temps passé",
       "source_work_key": "mnemosyne.fr.work.histoires_ou_contes_du_temps_passé",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Le Petit Poucet",
         "Petit Poucet"
@@ -39042,6 +39314,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Petit_Soldat",
       "source_work": "Le Petit Soldat",
       "source_work_key": "mnemosyne.fr.work.le_petit_soldat",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Le Petit Soldat",
         "Petit Soldat"
@@ -39227,6 +39500,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Le_Ravissement_de_Lol_V._Stein",
       "source_work": "Le Ravissement de Lol V. Stein",
       "source_work_key": "mnemosyne.fr.work.le_ravissement_de_lol_v_stein",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Le Ravissement de Lol V. Stein",
         "Lol V. Stein",
@@ -39239,6 +39513,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.fr.explanation.theatrical_destiny_metaphor_le_rideau_se_lève_sur_",
       "id": "fr_literary_reference_le_rideau_se_lève_sur_notre_destin_18da4e01",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39252,6 +39527,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Le rideau se lève sur notre destin",
         "le rideau se lève sur le destin",
@@ -39432,6 +39708,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Discours_sur_le_style",
       "source_work": "Discours sur le style",
       "source_work_key": "mnemosyne.fr.work.discours_sur_le_style",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Le style, c'est l'homme même",
         "Le style, c'est l'homme",
@@ -39702,6 +39979,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Les_Choses_(roman)",
       "source_work": "Les Choses",
       "source_work_key": "mnemosyne.fr.work.les_choses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Les Choses",
         "Les Choses de Georges Perec"
@@ -39830,6 +40108,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Les_Gommes",
       "source_work": "Les Gommes",
       "source_work_key": "mnemosyne.fr.work.les_gommes",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Les Gommes",
         "Gommes"
@@ -40062,6 +40341,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Les_Mots_(Sartre)",
       "source_work": "Les Mots",
       "source_work_key": "mnemosyne.fr.work.les_mots",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Les Mots",
         "Les Mots de Jean-Paul Sartre"
@@ -40365,6 +40645,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Roman_de_Merlin",
       "source_work": "Le Roman de Merlin",
       "source_work_key": "mnemosyne.fr.work.le_roman_de_merlin",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Merlin l'enchanteur",
         "Merlin",
@@ -40440,6 +40721,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Les_Mis%C3%A9rables/Tome_5/1",
       "source_work": "Les Misérables",
       "source_work_key": "mnemosyne.fr.work.les_misérables",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "mourir dans l'âme",
         "mort dans l'âme",
@@ -40506,6 +40788,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Roman_de_M%C3%A9lusine",
       "source_work": "Le Roman de Mélusine",
       "source_work_key": "mnemosyne.fr.work.le_roman_de_mélusine",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Mélusine",
         "la fée Mélusine",
@@ -40532,6 +40815,7 @@
       "source_url": "https://fr.wikisource.org/wiki/M%C3%A9tamorphoses",
       "source_work": "Métamorphoses",
       "source_work_key": "mnemosyne.fr.work.métamorphoses",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "une métamorphose",
         "les métamorphoses"
@@ -40556,6 +40840,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Naus%C3%A9e",
       "source_work": "La Nausée",
       "source_work_key": "mnemosyne.fr.work.la_nausée",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "une nausée",
         "avoir la nausée"
@@ -40606,6 +40891,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Nouveau_Roman",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Nouveau Roman",
         "le Nouveau Roman",
@@ -40791,6 +41077,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Fables_de_La_Fontaine/Livre_2/Le_Lion_et_le_Rat",
       "source_work": "Fables",
       "source_work_key": "mnemosyne.fr.work.fables",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Patience et longueur de temps font plus que force ni que rage",
         "Patience et longueur de temps font plus que force ou rage",
@@ -40830,6 +41117,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Peau_d'âne",
       "source_work": "Histoires ou contes du temps passé",
       "source_work_key": "mnemosyne.fr.work.histoires_ou_contes_du_temps_passé",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Peau d'âne",
         "la Peau d'âne",
@@ -40855,6 +41143,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Peste",
       "source_work": "La Peste",
       "source_work_key": "mnemosyne.fr.work.la_peste",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "une peste",
         "comme la peste"
@@ -41138,6 +41427,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Discours_sur_le_style",
       "source_work": "Discours sur le style",
       "source_work_key": "mnemosyne.fr.work.discours_sur_le_style",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Rien de grand ne s'est fait dans le monde sans passion",
         "Rien de grand ne s'est accompli sans passion",
@@ -41245,6 +41535,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.fr.explanation.literary_actor_metaphor_sous_les_yeux_de_tous_comm",
       "id": "fr_literary_reference_sous_les_yeux_de_tous_comme_un_acteur_en_scène_0f7ff8a3",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -41258,6 +41549,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Sous les yeux de tous, comme un acteur en scène",
         "sous les yeux de tous, tel un acteur en scène",
@@ -41270,6 +41562,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.fr_baudelaire_spleen_spleen_de_paris",
       "id": "fr_literary_reference_spleen_de_paris_e131dbe1",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -41283,6 +41576,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Spleen_de_Paris",
       "source_work": "Le Spleen de Paris",
       "source_work_key": "mnemosyne.fr.work.le_spleen_de_paris",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Le Spleen de Paris",
         "spleen de Paris",
@@ -41549,6 +41843,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.racine_berenice_phrases_un_sot_projet_a_pour_père_",
       "id": "fr_literary_reference_un_sot_projet_a_pour_père_un_roi_ae49c525",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -41563,6 +41858,7 @@
       "source_url": "https://fr.wikisource.org/wiki/B%C3%A9r%C3%A9nice",
       "source_work": "Bérénice",
       "source_work_key": "mnemosyne.fr.work.bérénice",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Un sot projet a pour père un roi",
         "Un sot projet a pour père un roi.",
@@ -41858,6 +42154,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "à la merci du vent",
         "être à la merci du vent",
@@ -41909,6 +42206,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "à la suite de",
         "à la suite de [quelqu'un/quelque chose]",
@@ -42049,6 +42347,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "à son corps défendant",
         "à corps défendant"
@@ -42144,6 +42443,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/L%27%C3%89tranger",
       "source_work": "L'Étranger",
       "source_work_key": "mnemosyne.fr.work.l_étranger",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Meursault"
       ]
@@ -42209,6 +42509,7 @@
       "source_url": "https://www.dictionnaire-academie.fr/article/A9E1213",
       "source_work": "Dictionnaire de l'Académie française",
       "source_work_key": "mnemosyne.fr.work.dictionnaire_de_l_académie_française",
+      "subcategory": "proverb",
       "surface_patterns": [
         "être dans l’expectative",
         "rester dans l’expectative",
@@ -42807,6 +43108,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Les_Fourberies_de_Scapin",
       "source_work": "Les Fourberies de Scapin",
       "source_work_key": "mnemosyne.fr.work.les_fourberies_de_scapin",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "être un Scapin en jupons",
         "faire le Scapin en jupons",
@@ -43010,6 +43312,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Les_Misérables",
       "source_work": "Les Misérables",
       "source_work_key": "mnemosyne.fr.work.les_misérables",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "être un vrai Gavroche",
         "faire le Gavroche",
@@ -43035,6 +43338,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Contes_de_Perrault/Cendrillon",
       "source_work": "Cendrillon ou la Petite Pantoufle de verre",
       "source_work_key": "mnemosyne.fr.work.cendrillon_ou_la_petite_pantoufle_de_verre",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "être une Cendrillon",
         "une vraie Cendrillon",
@@ -43089,6 +43393,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.fr.explanation.lamartine_meditations_poetiques_lac_ô_temps_suspen",
       "id": "fr_literary_reference_ô_temps_suspends_ton_vol_31f3cfd5",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43103,6 +43408,7 @@
       "source_url": "https://fr.wikisource.org/wiki/M%C3%A9ditations_po%C3%A9tiques_(Lamartine)/Le_Lac",
       "source_work": "Méditations poétiques",
       "source_work_key": "mnemosyne.fr.work.méditations_poétiques",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ô temps, suspends ton vol !",
         "Ô temps, suspends ton vol, et vous, heures propices, suspendez votre cours !",
@@ -43162,6 +43468,7 @@
       "short_explanation": "A phrase associated with social judgement and existential confinement.",
       "source_author": "Jean-Paul Sartre",
       "source_work": "Huis clos",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "l’enfer, c’est les autres"
       ]
@@ -43178,6 +43485,7 @@
       "short_explanation": "A sensory trigger that evokes involuntary memory.",
       "source_author": "Marcel Proust",
       "source_work": "À la recherche du temps perdu",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "madeleine de Proust"
       ]
@@ -43192,6 +43500,7 @@
       "reference_type": "proverb_tradition",
       "register": "proverbial",
       "short_explanation": "Looking for something impossibly rare or over-specific.",
+      "subcategory": "proverb",
       "surface_patterns": [
         "chercher le mouton à cinq pattes"
       ]
@@ -43228,6 +43537,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/acheter_chat_en_poche",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "acheter chat en poche",
         "vendre chat en poche",
@@ -43293,6 +43603,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Advienne que pourra",
         "advienne que pourra !"
@@ -43317,6 +43628,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/age_quod_agis",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "Age quod agis",
         "Age quod agis!",
@@ -43329,6 +43641,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.fr.explanation.french_proverbs_common_ah_que_le_monde_est_petit",
       "id": "fr_proverb_tradition_ah_que_le_monde_est_petit_d73d0619",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43343,6 +43656,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/le_monde_est_petit",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ah ! que le monde est petit !",
         "Que le monde est petit !",
@@ -43524,6 +43838,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "aller comme un gant",
         "cela lui va comme un gant",
@@ -43565,6 +43880,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "Aller se faire voir chez les Grecs",
         "Va te faire voir chez les Grecs",
@@ -43642,6 +43958,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Allons donc !",
         "Allons donc",
@@ -43811,6 +44128,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "arriver comme un cheveu sur la soupe",
         "tomber comme un cheveu sur la soupe"
@@ -44030,6 +44348,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avoir des yeux de lynx",
         "des yeux de lynx",
@@ -44068,6 +44387,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/avoir_du_pain_et_du_vin",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avoir du pain et du vin",
         "vivre de pain et de vin",
@@ -44130,6 +44450,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avoir la dent dure",
         "avoir une dent dure",
@@ -44181,6 +44502,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avoir le cœur gros",
         "avoir un cœur gros",
@@ -44348,6 +44670,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "avoir une mémoire d’éléphant",
         "avoir la mémoire d’un éléphant",
@@ -44384,6 +44707,7 @@
       "source_dataset": "fr_proverbs_tradition",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "battre le fer pendant qu'il est chaud",
         "battre le fer tant qu'il est chaud",
@@ -44560,6 +44884,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "boire comme un trou",
         "boit comme un trou",
@@ -44679,6 +45004,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "bête comme ses pieds",
         "stupide comme ses pieds",
@@ -44716,6 +45042,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "bête comme un âne",
         "stupide comme un âne",
@@ -44742,6 +45069,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/b%C3%AAte_comme_un_%C3%A2ne_%C3%A0_l%27%C3%A9cole",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Bête comme un âne à l'école",
         "Stupide comme un âne à l'école"
@@ -44917,6 +45245,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est dans les vieux pots qu'on fait les meilleures soupes",
         "C'est dans les vieux pots qu'on fait la meilleure soupe",
@@ -45096,6 +45425,7 @@
       "source_dataset": "fr_proverbs_phrases",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est la fin des haricots",
         "C'était la fin des haricots",
@@ -45172,6 +45502,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "la moutarde qui monte au nez",
         "c’est la moutarde qui monte au nez",
@@ -45439,6 +45770,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "c'est pour ainsi dire",
         "pour ainsi dire",
@@ -45501,6 +45833,7 @@
       "source_dataset": "fr_proverbs_common",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C’est toujours la même chanson",
         "C’est toujours la même rengaine",
@@ -45539,6 +45872,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "c’est toujours ça de gagné",
         "c’est toujours ça de pris",
@@ -45564,6 +45898,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "c'est tout comme",
         "c’est tout comme",
@@ -45808,6 +46143,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "C'est écrit",
         "C’est écrit que..."
@@ -45858,6 +46194,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ce n'est pas de refus !",
         "Pas de refus"
@@ -45958,6 +46295,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ce n'est pas la mer à boire",
         "Ce n'est pas la mer à avaler",
@@ -46022,6 +46360,7 @@
       "source_url": "https://www.dictionnaire-academie.fr/article/A1S1300",
       "source_work": "Dictionnaire de l'Académie française (1st edition, 1694)",
       "source_work_key": "mnemosyne.fr.work.dictionnaire_de_l_académie_française_1st_edition_1",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ce n'est pas une sinécure",
         "Ce n'est pas une sinécure, ça",
@@ -46094,6 +46433,7 @@
       "source_dataset": "fr_proverbs_common",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ce qui est fait est fait",
         "Ce qui est fait, est fait",
@@ -46145,6 +46485,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/%C3%A7a_se_voit_comme_le_nez_au_milieu_de_la_figures",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Cela se voit comme le nez au milieu de la figure",
         "Ça se voit comme le nez au milieu de la figure",
@@ -46374,6 +46715,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Chassez le naturel, il revient au galop",
         "Le naturel revient au galop",
@@ -46481,6 +46823,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/chercher_une_aiguille_dans_une_botte_de_foin",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "chercher une aiguille dans une botte de foin",
         "chercher une aiguille dans un tas de foin",
@@ -46837,6 +47180,7 @@
       "source_dataset": "fr_proverbs_phrases",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Courir comme un lièvre",
         "Il court comme un lièvre",
@@ -47060,6 +47404,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/d%E2%80%99une_pierre_deux_coups",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire d’une pierre deux coups",
         "d’une pierre deux coups",
@@ -47110,6 +47455,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "dans de beaux draps",
         "se retrouver dans de beaux draps",
@@ -47190,6 +47536,7 @@
       "source_url": "https://www.dictionnaire-academie.fr/article/A9B1010",
       "source_work": "Dictionnaire de l'Académie française",
       "source_work_key": "mnemosyne.fr.work.dictionnaire_de_l_académie_française",
+      "subcategory": "proverb",
       "surface_patterns": [
         "de but en blanc",
         "passer de but en blanc",
@@ -47266,6 +47613,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "de deux maux il faut choisir le moindre",
         "entre deux maux il faut choisir le moindre",
@@ -47305,6 +47653,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/de_fil_en_aiguille",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "de fil en aiguille",
         "passer de fil en aiguille",
@@ -47474,6 +47823,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Dieu seul sait",
         "Dieu seul le sait",
@@ -47550,6 +47900,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/dormir_comme_un_loir",
       "source_work": "Dictionnaire des proverbes français",
       "source_work_key": "mnemosyne.fr.work.dictionnaire_des_proverbes_français",
+      "subcategory": "proverb",
       "surface_patterns": [
         "dormir comme un loir",
         "dormir comme un vieux loir",
@@ -47575,6 +47926,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "dormir sur ses deux oreilles",
         "pouvoir dormir sur ses deux oreilles"
@@ -47611,6 +47963,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "en avoir le cœur net",
         "avoir le cœur net",
@@ -47800,6 +48153,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Entre nous soit dit",
         "entre nous soit-il dit"
@@ -47863,6 +48217,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Faire flèche de tout bois",
         "On peut faire flèche de tout bois",
@@ -47888,6 +48243,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Faire l'âne pour avoir du son",
         "Faire l'âne pour avoir du son de cloche",
@@ -47949,6 +48305,7 @@
       "source_dataset": "fr_proverbs_cul_de_poule",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire la bouche en cul de poule",
         "faire une bouche en cul de poule",
@@ -48024,6 +48381,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire la planche",
         "il fait la planche",
@@ -48102,6 +48460,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/faire_la_sourde_oreille",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire la sourde oreille",
         "faire la sourde oreille à",
@@ -48140,6 +48499,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire le jeu de quelqu’un",
         "faire le jeu de qqn",
@@ -48177,6 +48537,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire long feu",
         "ça a fait long feu",
@@ -48289,6 +48650,7 @@
       "source_dataset": "fr_proverbs_pied_de_nez",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "faire un pied de nez",
         "faire un pied-de-nez",
@@ -48717,6 +49079,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/Il_n%E2%80%99y_a_pas_de_fum%C3%A9e_sans_feu",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il n'y a pas de fumée sans feu",
         "où il y a de la fumée, il y a du feu",
@@ -48897,6 +49260,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/Il_ne_faut_pas_mettre_la_charrue_avant_les_b%C5%93ufs",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "mettre la charrue avant les bœufs",
         "ne pas mettre la charrue avant les bœufs",
@@ -48974,6 +49338,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il ne faut pas vendre la peau de l’ours avant de l’avoir tué",
         "ne pas vendre la peau de l’ours avant de l’avoir tué",
@@ -49011,6 +49376,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "il vaut mieux tard que jamais",
         "mieux vaut tard que jamais",
@@ -49049,6 +49415,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/Il_y_a_anguille_sous_roche",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Il y a anguille sous roche",
         "Il y a une anguille sous la roche",
@@ -49128,6 +49495,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "jamais deux sans trois",
         "jamais deux sans trois, jamais trois sans quatre",
@@ -49164,6 +49532,7 @@
       "source_dataset": "fr_proverbs_argent_fenetres",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "jeter l’argent par les fenêtres",
         "jeter son argent par les fenêtres",
@@ -49241,6 +49610,7 @@
       "source_url": "https://www.linternaute.fr/proverbe/10000/jeter-le-manche-apres-la-cognee/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Jeter le manche après la cognée"
       ]
@@ -49330,6 +49700,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/L%E2%80%99argent_ne_fait_pas_le_bonheur",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "l'argent ne fait pas le bonheur",
         "l'argent ne fait pas le bonheur, mais il y contribue",
@@ -49684,6 +50055,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/La_nuit_porte_conseil",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "La nuit porte conseil"
       ]
@@ -49720,6 +50092,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/la_nuit_tous_les_chats_sont_gris",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "La nuit, tous les chats sont gris",
         "La nuit tous les chats sont gris",
@@ -49868,6 +50241,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/le_jeu_n%E2%80%99en_vaut_pas_la_chandelle",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "le jeu n'en vaut pas la chandelle",
         "le jeu n'en vaut pas la peine",
@@ -49961,6 +50335,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Le modèle doit être comme un miroir",
         "Un modèle doit être comme un miroir",
@@ -50116,6 +50491,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Le_roi_est_mort,_vive_le_roi!",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Le roi est mort, vive le roi !",
         "Le roi est mort, vive la reine !",
@@ -50141,6 +50517,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Le temps est un grand maître",
         "Le temps est un maître",
@@ -50219,6 +50596,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/les_chiens_aboient,_la_caravane_passe",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "les chiens aboient, la caravane passe",
         "les chiens aboient, la caravane continue",
@@ -50255,6 +50633,7 @@
       "source_dataset": "fr_proverbs_murs_oreilles",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "les murs ont des oreilles",
         "les murs ont des oreilles, les arbres ont des yeux",
@@ -50330,6 +50709,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/mettre_de_l%E2%80%99eau_dans_son_vin",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "mettre de l’eau dans son vin",
         "mettre de l'eau dans son vin",
@@ -50395,6 +50775,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "mettre le feu aux poudres",
         "met le feu aux poudres",
@@ -50471,6 +50852,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "mettre sa main au feu",
         "mets ta main au feu",
@@ -50593,6 +50975,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "monter sur ses grands chevaux",
         "monter sur ses grands chevaux pour",
@@ -50631,6 +51014,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Méfiez-vous de l’eau qui dort",
         "Se méfier de l’eau qui dort",
@@ -50711,6 +51095,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "n’avoir ni queue ni tête",
         "n’a ni queue ni tête",
@@ -50955,6 +51340,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "On ne prête qu’aux riches",
         "Ne prête qu’aux riches",
@@ -50980,6 +51366,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "parler à bâtons rompus",
         "il parle à bâtons rompus",
@@ -51005,6 +51392,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "passer pour un saint",
         "faire passer pour un saint",
@@ -51606,6 +51994,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Qui vivra verra",
         "On verra bien qui vivra",
@@ -51915,6 +52304,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Fables_de_La_Fontaine/Livre_9/Le_Singe_et_le_Chat",
       "source_work": "Fables",
       "source_work_key": "mnemosyne.fr.work.fables",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tirer les marrons du feu",
         "tirer les marrons du feu pour quelqu'un",
@@ -51979,6 +52369,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tomber dans le panneau",
         "il est tombé dans le panneau",
@@ -52211,6 +52602,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/ventre_affam%C3%A9_n%E2%80%99a_point_d%E2%80%99oreilles",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ventre affamé n’a point d’oreilles",
         "ventre affamé n'a point d'oreilles",
@@ -52336,6 +52728,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "À bon entendeur salut",
         "À bon entendeur, salut !",
@@ -52373,6 +52766,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "À chacun son métier, les vaches seront bien gardées",
         "À chacun son métier, les vaches seront bien gardées.",
@@ -52527,6 +52921,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "À l'estomac, l'œil",
         "À l'estomac, l'œil veut sa part",
@@ -52616,6 +53011,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "À l'œuvre on connaît l'ouvrier",
         "C'est à l'œuvre qu'on connaît l'ouvrier",
@@ -52653,6 +53049,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "À la bonne heure !",
         "À la bonne heure",
@@ -52690,6 +53087,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "À la guerre comme à la guerre",
         "À la guerre comme à la guerre !",
@@ -52968,6 +53366,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/%C3%A0_quelque_chose_malheur_est_bon",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "À quelque chose malheur est bon",
         "Un malheur est bon à quelque chose",
@@ -53095,6 +53494,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "à tort ou à raison",
         "à tort ou à raison, il a agi ainsi",
@@ -53159,6 +53559,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/%C3%A0_tout_seigneur_tout_honneur",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "À tout seigneur tout honneur",
         "À tout seigneur, tout honneur",

@@ -161,6 +161,7 @@
       "source_url": "https://ja.wikisource.org/wiki/方丈記",
       "source_work": "方丈記",
       "source_work_key": "mnemosyne.ja.work.方丈記",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "ゆく河の流れは絶えずして",
         "行く河の流れは絶えずして",
@@ -339,6 +340,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "三世の因果",
         "三世の因果を説く",
@@ -388,6 +390,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.three_jewels_devotion_vow_三宝の帰依_を誓う",
       "id": "ja_classical_or_scriptural_allusion_三宝の帰依_を誓う_ad0188a8",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -474,6 +477,7 @@
       "source_url": "https://ja.wikisource.org/wiki/法華経",
       "source_work": "法華経",
       "source_work_key": "mnemosyne.ja.work.法華経",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "三悪道",
         "三悪趣",
@@ -500,6 +504,7 @@
       "source_url": "https://www.wisdomlib.org/buddhism/book/dhammapada/d/doc7325.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "三毒を持つ",
         "三毒に陥る",
@@ -525,6 +530,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "三毒の煩悩",
         "三毒",
@@ -552,6 +558,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E4%B8%89%E6%B3%95%E5%8D%B0",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "三法印を説く",
         "三法印を示す",
@@ -595,6 +602,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.fudo_myooh_gosanze_samaya_不動明王の降三世三昧耶形_を祀る",
       "id": "ja_classical_or_scriptural_allusion_不動明王の降三世三昧耶形_を祀る_9e3ee3da",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -691,6 +699,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.doctrine_of_mean_phrases_中庸_ちゅうよう",
       "id": "ja_classical_or_scriptural_allusion_中庸_ちゅうよう_c1ed6112",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -732,6 +741,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E4%B8%AD%E8%AB%96",
       "source_work": "中論",
       "source_work_key": "mnemosyne.ja.work.中論",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "中論を読む",
         "中論の教え",
@@ -760,6 +770,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "仏教経典",
       "source_work_key": "mnemosyne.ja.work.仏教経典",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "中道",
         "中道を歩む",
@@ -933,6 +944,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%85%88%E6%84%9B",
       "source_work": "仏教経典",
       "source_work_key": "mnemosyne.ja.work.仏教経典",
+      "subcategory": "null",
       "surface_patterns": [
         "仏の慈悲の心",
         "仏の慈悲",
@@ -1177,6 +1189,7 @@
       "source_url": "https://ja.wikisource.org/wiki/仏陀の説法",
       "source_work": "仏陀の説法 (Buddha's discourses)",
       "source_work_key": "mnemosyne.ja.work.仏陀の説法_buddha_s_discourses",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "八正道",
         "八正道の",
@@ -1542,6 +1555,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%B5%9C%E5%9C%B0%E4%B8%89%E9%83%A8%E7%B6%93",
       "source_work": "浄土三部経",
       "source_work_key": "mnemosyne.ja.work.浄土三部経",
+      "subcategory": "null",
       "surface_patterns": [
         "南無阿弥陀仏と唱える",
         "南無阿弥陀仏と唱えて",
@@ -1652,6 +1666,7 @@
         "zh": "这一短语指的是著名的吉野雪山，是日本和歌中的经典诗意意象，象征纯洁、无常与自然之美。"
       },
       "id": "ja_classical_or_scriptural_allusion_吉野の山の白雪に_bd8b56d0",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly identifies a classical poetic motif from the Kokin Wakashū with accurate patterns and explanation.",
@@ -1760,6 +1775,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%94%AF%E8%AD%98",
       "source_work": "Various (Yogācāra texts)",
       "source_work_key": "mnemosyne.ja.work.various_yogācāra_texts",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "唯識を学ぶ",
         "唯識の理論",
@@ -1878,6 +1894,7 @@
       "source_url": "https://www.wisdomlib.org/buddhism/book/saddharma-pundarika-sutra/d/doc6277.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "四聖諦",
         "四聖諦を説く",
@@ -1918,6 +1935,7 @@
       "source_url": "https://japaneseclass.jp/text/kojiki/2020-01-01-1-2-1",
       "source_work": "古事記",
       "source_work_key": "mnemosyne.ja.work.古事記",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "因幡の白兎",
         "因幡白兎",
@@ -1958,6 +1976,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.kojiki_allusions_因幡の白兎の皮を剥がれる",
       "id": "ja_classical_or_scriptural_allusion_因幡の白兎の皮を剥がれる_20754be0",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1990,6 +2009,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.kojiki_myths_因幡の白兎神話",
       "id": "ja_classical_or_scriptural_allusion_因幡の白兎神話_1c31a09e",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2379,6 +2399,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.jizo_ten_kings_scroll_dedication_地蔵十王図_を奉納する",
       "id": "ja_classical_or_scriptural_allusion_地蔵十王図_を奉納する_c887d6c6",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2796,6 +2817,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%91%A9%E8%A8%98%E6%AD%A2%E8%A6%B3",
       "source_work": "摩訶止観 (まかしかん)",
       "source_work_key": "mnemosyne.ja.work.摩訶止観_まかしかん",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "一念三千 (いちねんさんぜん)",
         "一念三千を理解する (いちねんさんぜんをりかいする)",
@@ -2809,6 +2831,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.tendai_buddhism_concepts_天台智顗の一念三千_を理解する",
       "id": "ja_classical_or_scriptural_allusion_天台智顗の一念三千_を理解する_f3beafaf",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2851,6 +2874,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%91%A9%E8%A8%98%E6%AD%A2%E8%A6%B3",
       "source_work": "摩訶止観",
       "source_work_key": "mnemosyne.ja.work.摩訶止観",
+      "subcategory": "null",
       "surface_patterns": [
         "止観をする",
         "止観をして",
@@ -2973,6 +2997,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.confucian_texts_phrases_孔子の_仁_じん",
       "id": "ja_classical_or_scriptural_allusion_孔子の_仁_じん_bd1cb44d",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3034,6 +3059,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.mencius_phrases_孟子の_四端の心_しのこころ",
       "id": "ja_classical_or_scriptural_allusion_孟子の_四端の心_しのこころ_b2c183a8",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3103,6 +3129,7 @@
         "zh": "这句出自《万叶集》的诗句描绘了富士山顶降雪的景象，象征美丽、无常和日本的自然美学。"
       },
       "id": "ja_classical_or_scriptural_allusion_富士の高嶺に雪は降りつつ_00ac35f8",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This phrase is correctly attributed to the Manyoshu and Yamabe no Akahito, with accurate surface patterns and explanation.",
@@ -3308,6 +3335,7 @@
         "zh": "指的是武僧弁庆与少年源义经（牛若丸）在五条桥上的传奇相遇，是日本民间传说中象征忠诚与英雄相会的故事。"
       },
       "id": "ja_classical_or_scriptural_allusion_弁慶と牛若丸_efbc27e6",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The reference, surface patterns, and explanation are accurate and verifiable in classical Japanese literature.",
@@ -3507,6 +3535,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.ja.explanation.zen_phrase_tatakeba_hibike_敲_たた_けば響_ひび_け_我_われ_以外_い",
       "id": "ja_classical_or_scriptural_allusion_敲_たた_けば響_ひび_け_我_われ_以外_いがい_のすべて_2cfd0410",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3520,6 +3549,7 @@
       "source_license": "not_required",
       "source_work": "Various (Zen tradition)",
       "source_work_key": "mnemosyne.ja.work.various_zen_tradition",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "敲けば響け我以外のすべて",
         "敲けば響け我以外の全て",
@@ -3546,6 +3576,7 @@
         "zh": "这是鸭长明《方丈记》的著名开头，以河流不断流动比喻人生无常，是日本文学中佛教无常观的经典表达。"
       },
       "id": "ja_classical_or_scriptural_allusion_方丈記の_ゆく川の流れは絶えずして_f2d75f0a",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately references the famous opening of Hōjōki, with correct attribution and surface patterns.",
@@ -3578,6 +3609,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.yijing_phrases_易経の_天人合一_てんじんごういつ",
       "id": "ja_classical_or_scriptural_allusion_易経の_天人合一_てんじんごういつ_4ede0b40",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3673,6 +3705,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E4%B8%80%E4%B9%97%E6%80%9D%E6%83%B3",
       "source_work": "法華秀句",
       "source_work_key": "mnemosyne.ja.work.法華秀句",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "一乗思想を説く",
         "一乗思想に基づく",
@@ -3910,6 +3943,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E9%81%B8%E6%8B%A9%E6%9C%AC%E9%A1%98%E5%BF%B5%E4%BB%A3%E7%89%B9%E9%9B%86",
       "source_work": "選択本願念仏集",
       "source_work_key": "mnemosyne.ja.work.選択本願念仏集",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "選択本願念仏集（せんちゃくほんがんねんぶつしゅう）",
         "選択本願念仏集を読む",
@@ -3966,6 +4000,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%B3%95%E8%8F%96%E7%B6%93",
       "source_work": "法華経",
       "source_work_key": "mnemosyne.ja.work.法華経",
+      "subcategory": "null",
       "surface_patterns": [
         "如来寿量品という",
         "如来寿量品で",
@@ -4168,6 +4203,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.nihonshoki_allusions_浦島太郎の玉手箱",
       "id": "ja_classical_or_scriptural_allusion_浦島太郎の玉手箱_403c8a6c",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4302,6 +4338,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%B6%85%E6%A7%83%E7%B6%93",
       "source_work": "涅槃経",
       "source_work_key": "mnemosyne.ja.work.涅槃経",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "涅槃経を読む",
         "涅槃経の教え",
@@ -4479,6 +4516,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_phrases_無常迅速の諸行無常",
       "id": "ja_classical_or_scriptural_allusion_無常迅速の諸行無常_c56239cc",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4493,6 +4531,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%B3%95%E5%8F%A5%E7%B5%8C",
       "source_work": "法句経（ダンマパダ）",
       "source_work_key": "mnemosyne.ja.work.法句経_ダンマパダ",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "無常迅速",
         "諸行無常なり",
@@ -4681,6 +4720,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.daoist_texts_phrases_無為自然_むいしぜん",
       "id": "ja_classical_or_scriptural_allusion_無為自然_むいしぜん_6052c20a",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5024,6 +5064,7 @@
         "zh": "这是《小仓百人一首》第12首（僧正遍昭作）的开头，借天风关闭云路来隐喻隐藏内心情感，是日本古典诗歌细腻表达的典范。"
       },
       "id": "ja_classical_or_scriptural_allusion_百人一首の_天つ風雲の通ひ路吹きとぢよ_e53ba510",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This is an accurate reference to poem 12 of the Ogura Hyakunin Isshu, with correct attribution, surface patterns, and explanation.",
@@ -5038,6 +5079,7 @@
       "source_url": "https://www.ogurasansou.co.jp/hyakunin/poem/12/",
       "source_work": "小倉百人一首",
       "source_work_key": "mnemosyne.ja.work.小倉百人一首",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "天つ風雲の通ひ路吹きとぢよ",
         "天つ風",
@@ -5068,6 +5110,7 @@
         "zh": "这是小仓百人一首中山部赤人的著名和歌开头，描写了从田子之浦眺望富士山白雪的景象，象征着美丽与无常。"
       },
       "id": "ja_classical_or_scriptural_allusion_百人一首の_田子の浦にうち出でてみれば白妙の_4e5f5c36",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This is a well-known poem by Yamabe no Akahito in the Ogura Hyakunin Isshu, and the explanation and surface patterns are accurate.",
@@ -5082,6 +5125,7 @@
       "source_url": "https://ja.wikisource.org/wiki/小倉百人一首/6",
       "source_work": "小倉百人一首",
       "source_work_key": "mnemosyne.ja.work.小倉百人一首",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "田子の浦にうち出でてみれば白妙の",
         "百人一首 田子の浦にうち出でてみれば",
@@ -5156,6 +5200,7 @@
       "source_url": "https://en.wikisource.org/wiki/Code_of_Hammurabi",
       "source_work": "Code of Hammurabi",
       "source_work_key": "mnemosyne.ja.work.code_of_hammurabi",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "目には目を歯には歯を",
         "目には目を、歯には歯を",
@@ -5170,6 +5215,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.shingon_eight_patriarchs_lineage_真言八祖伝_に列する",
       "id": "ja_classical_or_scriptural_allusion_真言八祖伝_に列する_1a9066b7",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5226,6 +5272,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_rituals_jp_真言行者の護摩供養_を行う",
       "id": "ja_classical_or_scriptural_allusion_真言行者の護摩供養_を行う_a27cb7c8",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5374,6 +5421,7 @@
       "source_url": "https://ja.wikisource.org/wiki/中論",
       "source_work": "中論 (Mūlamadhyamakakārikā)",
       "source_work_key": "mnemosyne.ja.work.中論_mūlamadhyamakakārikā",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "空",
         "空である",
@@ -5494,6 +5542,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%8D%B3%E8%BA%AB%E6%88%90%E4%BB%8F",
       "source_work": "即身成仏義",
       "source_work_key": "mnemosyne.ja.work.即身成仏義",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "即身成仏しない",
         "即身成仏した"
@@ -5616,6 +5665,7 @@
         "zh": "纪贯之（紀貫之）是平安时代著名的诗人和朝臣，以主编《古今和歌集》和撰写假名序闻名，对日本诗歌和文学风格有深远影响。"
       },
       "id": "ja_classical_or_scriptural_allusion_紀貫之_38e85652",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Ki no Tsurayuki's role as compiler of the Kokin Wakashū and his literary influence are accurately described, with correct surface patterns.",
@@ -5629,6 +5679,7 @@
       "source_url": "https://ja.wikisource.org/wiki/古今和歌集",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "紀貫之",
         "貫之",
@@ -5696,6 +5747,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E5%BF%83%E7%B6%93",
       "source_work": "仏教経典",
       "source_work_key": "mnemosyne.ja.work.仏教経典",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "縁起",
         "縁起が良い",
@@ -5742,6 +5794,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.ja.explanation.daoist_philosophy_phrases_老荘思想_ろうそうしそう",
       "id": "ja_classical_or_scriptural_allusion_老荘思想_ろうそうしそう_473646ee",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6112,6 +6165,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%88%AC%E8%8B%A5%E6%B3%A2%E8%8E%89%E8%9C%9C%E5%A4%9A%E5%BF%83%E7%B6%93",
       "source_work": "般若波羅蜜多心経",
       "source_work_key": "mnemosyne.ja.work.般若波羅蜜多心経",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "般若波羅蜜多心経を読む",
         "般若波羅蜜多心経を唱える",
@@ -6167,6 +6221,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/良寛",
       "source_work": "Various (oral tradition, attributed to Ryōkan)",
       "source_work_key": "mnemosyne.ja.work.various_oral_tradition_attributed_to_ryōkan",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "無為の境地",
         "無為の境地である",
@@ -6291,6 +6346,7 @@
         "zh": "这是小野小町著名和歌的开头，表达了美丽与生命的短暂，经常被视为日本美学的典范。"
       },
       "id": "ja_classical_or_scriptural_allusion_花の色は移りにけりないたづらに_25cafb7d",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurately attributed to Ono no Komachi's poem in the Hyakunin Isshu with correct explanation and patterns.",
@@ -6317,6 +6373,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.xunzi_phrases_荀子の_性悪説_せいあくせつ",
       "id": "ja_classical_or_scriptural_allusion_荀子の_性悪説_せいあくせつ_e5c9cd58",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6358,6 +6415,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%8F%A9%E6%8F%90%E5%BF%83",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "菩提心を起こす",
         "菩提心を持つ",
@@ -6491,6 +6549,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E9%9F%93%E9%9D%9C%E5%AD%90/%E5%86%85%E5%84%B2%E8%AA%AC%E4%B8%8A%E4%B8%83%E8%A1%93%E7%AC%AC%E4%B8%89%E5%8D%81",
       "source_work": "韓非子",
       "source_work_key": "mnemosyne.ja.work.韓非子",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "虎の威を借る狐",
         "虎の威を借りる狐",
@@ -6620,6 +6679,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.analects_phrases_論語の_己の欲せざる所_人に施すこと勿かれ",
       "id": "ja_classical_or_scriptural_allusion_論語の_己の欲せざる所_人に施すこと勿かれ_ad05e2bf",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6785,6 +6845,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%BC%89%E5%BB%BB",
       "source_work": "仏教経典",
       "source_work_key": "mnemosyne.ja.work.仏教経典",
+      "subcategory": "null",
       "surface_patterns": [
         "業の法則",
         "業を積む",
@@ -7285,6 +7346,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.buddhist_scriptures_jp_阿弥陀如来の西方浄土_を望む",
       "id": "ja_classical_or_scriptural_allusion_阿弥陀如来の西方浄土_を望む_eb8b02b8",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7450,6 +7512,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%B2%E8%A8%98%E5%8D%B7070",
       "source_work": "史記 (Shiki)",
       "source_work_key": "mnemosyne.ja.work.史記_shiki",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鶏口となるも牛後となるなかれ",
         "鶏口牛後"
@@ -7461,6 +7524,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.folktale_allusions_鶴の恩返しの紡ぎ糸",
       "id": "ja_classical_or_scriptural_allusion_鶴の恩返しの紡ぎ糸_59c20785",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -7743,6 +7807,7 @@
         "zh": "おしら様是东北地区民间信仰中的家宅神，常与养蚕和农业繁荣相关联。"
       },
       "id": "ja_cultural_reference_おしら様_7d793aff",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Oshira-sama is accurately described as a household deity from Tōhoku folk religion associated with silkworms and agriculture.",
@@ -7757,6 +7822,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E3%81%8A%E3%81%97%E3%82%89%E6%A7%98",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "おしら様",
         "オシラサマ",
@@ -7789,6 +7855,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E3%81%8A%E3%81%A1%E3%82%83%E3%81%AE%E3%81%93%E3%81%95%E3%81%84%E3%81%95%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "おちゃのこさいさい"
       ]
@@ -7923,6 +7990,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E3%81%8A%E8%8C%B6%E3%82%92%E6%8C%BD%E3%81%8F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "お茶を挽く"
       ]
@@ -7946,6 +8014,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E3%81%8A%E8%8C%B6%E3%82%92%E6%BF%81%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "お茶を濁す"
       ]
@@ -8075,6 +8144,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E3%81%93%E3%81%A1%E3%82%89%E3%81%93%E3%81%9D",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "こちらこそ"
       ]
@@ -8098,6 +8168,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E3%81%95%E3%81%98%E3%82%92%E3%81%AA%E3%81%92%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "さじをなげる"
       ]
@@ -8166,6 +8237,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E3%81%96%E3%82%8B%E3%82%92%E5%BE%97%E3%81%AA%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "ざるを得ない"
       ]
@@ -8564,6 +8636,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E3%81%B9%E3%81%9D%E3%82%92%E4%BD%9C%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "べそを作る"
       ]
@@ -9082,6 +9155,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%80%E5%88%BB%E3%82%82%E6%97%A9%E3%81%8F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "一刻も早く"
       ]
@@ -9341,6 +9415,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%80%E6%9D%AF%E9%A3%9F%E3%82%8F%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "一杯食わす"
       ]
@@ -9604,6 +9679,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E4%B8%80%E9%80%94%E3%82%92%E8%BE%BF%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "一途を辿る"
       ]
@@ -9654,6 +9730,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/一遍",
       "source_work": "Various (oral tradition, attributed to Ippen)",
       "source_work_key": "mnemosyne.ja.work.various_oral_tradition_attributed_to_ippen",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "踊り念仏",
         "踊り念仏する",
@@ -10491,6 +10568,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E4%BA%94%E8%89%B2%E3%81%AE%E7%B3%B8",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "五色の糸が",
         "五色の糸で",
@@ -11468,6 +11546,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ja.explanation.shugendo_doctrines_修験道の本地垂迹説_を知る",
       "id": "ja_cultural_reference_修験道の本地垂迹説_を知る_521ee834",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12439,6 +12518,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%8D%81%E6%8A%8A%E4%B8%80%E7%B5%A1%E3%81%92",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "十把一絡げ"
       ]
@@ -12462,6 +12542,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%8D%81%E7%95%8C%E4%BA%92%E5%85%B7%E3%81%AE%E6%B3%95%E9%96%80",
       "source_work": "法華経要義",
       "source_work_key": "mnemosyne.ja.work.法華経要義",
+      "subcategory": "null",
       "surface_patterns": [
         "十界互具の法門",
         "十界互具の法門を説く",
@@ -12738,6 +12819,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.nichiren_lotus_sutra_phrases_南無妙法蓮華経_と唱題する",
       "id": "ja_cultural_reference_南無妙法蓮華経_と唱題する_c2ecbca6",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -13093,6 +13175,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%90%8C%E3%81%98%E7%A9%B4%E3%81%AE%E7%8B%A2",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "同じ穴の狢"
       ]
@@ -13814,6 +13897,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%8F%A4%E4%BA%8B%E8%A8%98",
       "source_work": "古事記",
       "source_work_key": "mnemosyne.ja.work.古事記",
+      "subcategory": "null",
       "surface_patterns": [
         "白兎が助けられた",
         "因幡の国",
@@ -13863,6 +13947,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%9B%BA%E5%94%BE%E3%82%92%E5%91%91%E3%82%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "固唾を呑む"
       ]
@@ -14061,6 +14146,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%9C%B0%E7%8D%84%E6%A5%B5%E6%A5%BD",
       "source_work": "Various (folklore and Buddhist texts)",
       "source_work_key": "mnemosyne.ja.work.various_folklore_and_buddhist_texts",
+      "subcategory": "null",
       "surface_patterns": [
         "地獄極楽の往生譚",
         "地獄極楽の往生譚を語る",
@@ -14258,6 +14344,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%A1%B5%E3%82%82%E7%A9%8D%E3%82%82%E3%82%8C%E3%81%B0%E5%B1%B1%E3%81%A8%E3%81%AA%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "塵も積もれば山となる"
       ]
@@ -14624,6 +14711,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%A4%9C%E3%81%AE%E8%A1%A3%E3%82%92%E8%BF%94%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "夜の衣を返す"
       ]
@@ -14791,6 +14879,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%83%8E%E8%94%B5%E7%95%8C%E6%9B%BC%E8%97%A4%E5%8D%8A",
       "source_work": "Various (Shingon Buddhist texts)",
       "source_work_key": "mnemosyne.ja.work.various_shingon_buddhist_texts",
+      "subcategory": "null",
       "surface_patterns": [
         "大日如来の胎蔵界曼荼羅",
         "胎蔵界曼荼羅",
@@ -14869,6 +14958,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%8F%A4%E4%BA%8B%E8%A8%98",
       "source_work": "古事記",
       "source_work_key": "mnemosyne.ja.work.古事記",
+      "subcategory": "null",
       "surface_patterns": [
         "岩戸を開く",
         "岩戸に隠れる",
@@ -15321,6 +15411,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%A4%B1%E6%95%97%E3%81%AF%E6%88%90%E5%8A%9F%E3%81%AE%E5%85%83",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "失敗は成功の元"
       ]
@@ -15344,6 +15435,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%A4%B1%E6%95%97%E3%81%AF%E6%88%90%E5%8A%9F%E3%81%AE%E6%AF%8D",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "失敗は成功の母"
       ]
@@ -15406,6 +15498,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%A5%B3%E3%81%AB%E3%81%AA%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "女になる"
       ]
@@ -16171,6 +16264,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%B0%BB%E5%B0%BE%E3%82%92%E5%87%BA%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "尻尾を出す"
       ]
@@ -16218,6 +16312,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%B0%BB%E5%B0%BE%E3%82%92%E6%8C%AF%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "尻尾を振る"
       ]
@@ -16241,6 +16336,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%B0%BB%E5%B0%BE%E3%82%92%E6%8E%B4%E3%82%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "尻尾を掴む"
       ]
@@ -16504,6 +16600,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%B8%B0%E3%82%89%E3%81%AC%E4%BA%BA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "帰らぬ人"
       ]
@@ -16633,6 +16730,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.ja.explanation.shinto_revivalism_平田篤胤の_復古神道_ふっこしんとう",
       "id": "ja_cultural_reference_平田篤胤の_復古神道_ふっこしんとう_7da5fbe2",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17372,6 +17470,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%BD%B1%E3%82%82%E5%BD%A2%E3%82%82%E3%81%AA%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "影も形もない"
       ]
@@ -17828,6 +17927,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E5%BF%83%E3%82%92%E9%AC%BC%E3%81%AB%E3%81%99%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "心を鬼にする"
       ]
@@ -17992,6 +18092,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%80%92%E3%82%8A%E3%82%92%E9%81%B7%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "怒りを遷す"
       ]
@@ -18135,6 +18236,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%81%A8%E3%81%BF%E3%82%92%E6%99%B4%E3%82%89%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "恨みを晴らす"
       ]
@@ -18158,6 +18260,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%81%A9%E3%82%92%E4%BB%87%E3%81%A7%E8%BF%94%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "恩を仇で返す"
       ]
@@ -18181,6 +18284,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%81%AF%E3%82%92%E5%88%87%E3%82%89%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "息を切らす"
       ]
@@ -18204,6 +18308,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%81%AF%E3%82%92%E5%BC%95%E3%81%8D%E5%8F%96%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "息を引き取る"
       ]
@@ -18473,6 +18578,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%84%8F%E3%81%AB%E4%BB%8B%E3%81%99%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "意に介する"
       ]
@@ -19232,6 +19338,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "打ち出の小槌が出る",
         "打ち出の小槌ではない"
@@ -19389,6 +19496,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%8A%98%E3%81%AB%E8%A7%A6%E3%82%8C%E3%81%A6",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "折に触れて"
       ]
@@ -19460,6 +19568,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%8C%87%E5%88%87%E3%82%8A%E6%8B%B3%E4%B8%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "指切り拳万"
       ]
@@ -19679,6 +19788,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%8E%9B%E3%81%91%E6%9B%BF%E3%81%88%E3%81%AE%E3%81%AA%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "掛け替えのない"
       ]
@@ -19702,6 +19812,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%8F%90%E7%81%AF%E3%81%AB%E9%87%A3%E9%90%98",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "提灯に釣鐘"
       ]
@@ -19958,6 +20069,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%8C%85%E5%8E%9F%E4%BC%9D%E6%8E%88%E6%89%8B%E7%B7%B4%E9%91%91",
       "source_work": "菅原伝授手習鑑",
       "source_work_key": "mnemosyne.ja.work.菅原伝授手習鑑",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "菅原伝授手習鑑",
         "菅原伝授手習鑑を演じる",
@@ -20126,6 +20238,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "文楽の人形操り",
         "文楽の人形を操る",
@@ -20934,6 +21047,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "明鏡止水",
         "明鏡止水の",
@@ -21271,6 +21385,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%9C%88%E3%81%A8%E9%BC%88",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "月と鼈"
       ]
@@ -21345,6 +21460,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%9C%89%E7%84%A1%E3%82%92%E8%A8%80%E3%82%8F%E3%81%95%E3%81%9A",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "有無を言わさず"
       ]
@@ -21598,6 +21714,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BA%8B%E8%A8%98%E4%BC%9D",
       "source_work": "古事記伝",
       "source_work_key": "mnemosyne.ja.work.古事記伝",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "もののあはれだ",
         "もののあはれで",
@@ -21669,6 +21786,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.neo_confucian_terms_朱子学の_格物致知_かくぶつちち",
       "id": "ja_cultural_reference_朱子学の_格物致知_かくぶつちち_49c588dc",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21925,6 +22043,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000081/files/456_14913.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "不易流行",
         "不易流行する",
@@ -22347,6 +22466,7 @@
         "zh": "这个短语指的是樱花盛开的季节，在日本文化中象征着生命的美丽与短暂，并与新学期等新开始相关联。"
       },
       "id": "ja_cultural_reference_桜の花の咲く頃_ca8fc937",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly explains the cultural symbolism of cherry blossoms and their association with new beginnings in Japan.",
@@ -22361,6 +22481,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%A1%9C",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "桜の花の咲く頃",
         "桜咲く頃",
@@ -22922,6 +23043,7 @@
       "source_url": "https://www.ntj.jac.go.jp/unesco/kabuki/play/kanadehon_chushingura.html",
       "source_work": "仮名手本忠臣蔵",
       "source_work_key": "mnemosyne.ja.work.仮名手本忠臣蔵",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "仮名手本忠臣蔵を上演する",
         "仮名手本忠臣蔵を上演して",
@@ -22949,6 +23071,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E4%BC%BD%E8%8E%B1%E5%85%88%E4%BB%A3%E8%90%A9",
       "source_work": "伽羅先代萩",
       "source_work_key": "mnemosyne.ja.work.伽羅先代萩",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "伽羅先代萩",
         "伽羅先代萩の場面",
@@ -22999,6 +23122,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%8A%A9%E5%85%AD%E7%94%B1%E7%B8%81%E6%B1%9F%E6%88%B8%E6%A0%B9",
       "source_work": "助六由縁江戸桜",
       "source_work_key": "mnemosyne.ja.work.助六由縁江戸桜",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "助六由縁江戸桜",
         "助六由縁江戸桜を演じる",
@@ -23094,6 +23218,7 @@
       "source_url": "https://www.kabuki-za.co.jp/play/",
       "source_work": "Various kabuki adaptations",
       "source_work_key": "mnemosyne.ja.work.various_kabuki_adaptations",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "忠臣蔵を演じる",
         "忠臣蔵を演じて",
@@ -23497,6 +23622,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%AD%A3%E6%B3%95%E3%83%BB%E5%83%8F%E6%B3%95%E3%83%BB%E6%9C%AB%E6%B3%95",
       "source_work": "法華経",
       "source_work_key": "mnemosyne.ja.work.法華経",
+      "subcategory": "null",
       "surface_patterns": [
         "正法・像法・末法の三時",
         "正法像法末法の三時",
@@ -24457,6 +24583,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%B1%9F%E6%88%B8%E3%81%97%E3%81%90%E3%81%95",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "江戸しぐさ",
         "江戸のしぐさ",
@@ -24582,6 +24709,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%B2%B3%E5%B2%B8%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "河岸を変える"
       ]
@@ -24664,6 +24792,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.nichiren_practices_法華八講_を開催する",
       "id": "ja_cultural_reference_法華八講_を開催する_2898eaab",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24707,6 +24836,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%B3%95%E8%8F%96%E5%85%AB%E8%AC%9B",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "法華八講をする",
         "法華八講をして",
@@ -24825,6 +24955,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.pure_land_sutras_phrases_浄土三部経_を拝読する",
       "id": "ja_cultural_reference_浄土三部経_を拝読する_d8b5c503",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24865,6 +24996,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%B5%84%E5%9C%9F%E5%BE%80%E7%94%9F%E3%81%AE%E9%A1%98",
       "source_work": "無量寿経",
       "source_work_key": "mnemosyne.ja.work.無量寿経",
+      "subcategory": "null",
       "surface_patterns": [
         "浄土往生の願",
         "浄土往生の願を立てる",
@@ -24878,6 +25010,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.jodo_shinshu_cultural_refs_浄土真宗の本願寺教団_に属する",
       "id": "ja_cultural_reference_浄土真宗の本願寺教団_に属する_a762cd9f",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25482,6 +25615,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%B5%B7%E8%80%81%E3%81%A7%E9%AF%9B%E3%82%92%E9%87%A3%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "海老で鯛を釣る"
       ]
@@ -25505,6 +25639,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%B5%B7%E8%80%81%E3%81%AE%E9%AF%9B%E4%BA%A4%E3%81%98%E3%82%8A",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "海老の鯛交じり"
       ]
@@ -25528,6 +25663,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%B5%B7%E8%80%81%E9%AF%9B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "海老鯛"
       ]
@@ -25584,6 +25720,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%B8%9B%E3%82%8B%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E3%81%AA%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "減るもんじゃない"
       ]
@@ -25818,6 +25955,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E6%BB%85%E7%9B%B8%E3%82%82%E3%81%AA%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "滅相もない"
       ]
@@ -26129,6 +26267,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "無常観がある",
         "無常観を持って",
@@ -26313,6 +26452,7 @@
       "confidence": 0.7,
       "explanation_key": "mnemosyne.en.explanation.ja_wiktionary_idioms.燎原の火",
       "id": "ja_cultural_reference_燎原の火_d7d46f20",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.",
@@ -26326,6 +26466,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%87%8E%E5%8E%9F%E3%81%AE%E7%81%AB",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "燎原の火"
       ]
@@ -26373,6 +26514,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%88%AA%E3%81%AB%E7%81%AB%E3%82%92%E7%81%AF%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "爪に火を灯す"
       ]
@@ -26396,6 +26538,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%88%AA%E3%81%AB%E7%81%AB%E3%82%92%E7%82%B9%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "爪に火を点す"
       ]
@@ -26419,6 +26562,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%88%AA%E3%81%AE%E5%9E%A2%E3%82%92%E7%85%8E%E3%81%98%E3%81%A6%E9%A3%B2%E3%82%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "爪の垢を煎じて飲む"
       ]
@@ -26442,6 +26586,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%89%87%E6%A3%92%E3%82%92%E6%8B%85%E3%81%90",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "片棒を担ぐ"
       ]
@@ -26628,6 +26773,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%9C%AB%E5%B9%BF%E3%81%8C%E3%82%8A",
       "source_work": "末広がり",
       "source_work_key": "mnemosyne.ja.work.末広がり",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "末広がり",
         "末広がりする",
@@ -26657,6 +26803,7 @@
       "source_url": "https://www.kyogen.jp/kyogen_list.html",
       "source_work": "Various kyōgen scripts",
       "source_work_key": "mnemosyne.ja.work.various_kyōgen_scripts",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "花子が出る",
         "花子が出て",
@@ -26684,6 +26831,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "狂言のとぼけ役",
         "狂言のとぼけ役を演じる",
@@ -26711,6 +26859,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E4%B8%89%E7%95%AA%E5%8F%9F",
       "source_work": "Various (Kyōgen tradition)",
       "source_work_key": "mnemosyne.ja.work.various_kyōgen_tradition",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "三番叟",
         "三番叟を演じる",
@@ -26824,6 +26973,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E7%8B%90%E3%81%AE%E5%AB%B0%E5%85%A5%E3%82%8A",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "狐の嫁入り",
         "狐の嫁入りの話",
@@ -27194,6 +27344,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%8C%BF%E3%81%AE%E5%B0%BB%E7%AC%91%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "猿の尻笑い"
       ]
@@ -27436,6 +27587,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%93%9C%E4%BA%8C%E3%81%A4",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "瓜二つ"
       ]
@@ -27459,6 +27611,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%93%9C%E7%94%B0%E3%81%AB%E5%B1%A5%E3%82%92%E7%B4%8D%E3%82%8C%E3%81%9A%E3%80%81%E6%9D%8E%E4%B8%8B%E3%81%AB%E5%86%A0%E3%82%92%E6%AD%A3%E3%81%95%E3%81%9A",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "瓜田に履を納れず、李下に冠を正さず"
       ]
@@ -27605,6 +27758,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "疎開の歌を歌う",
         "疎開の歌を歌って",
@@ -27731,6 +27885,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%97%9B%E3%81%8F%E3%82%82%E7%97%92%E3%81%8F%E3%82%82%E3%81%AA%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "痛くも痒くもない"
       ]
@@ -27778,6 +27933,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%99%87%E3%81%AB%E9%9A%9C%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "癇に障る"
       ]
@@ -28378,6 +28534,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%9B%AE%E9%A0%AD%E3%81%8C%E7%86%B1%E3%81%8F%E3%81%AA%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "目頭が熱くなる"
       ]
@@ -28555,6 +28712,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.ja.explanation.shingon_rituals_真言密教の胎蔵曼荼羅_を拝する",
       "id": "ja_cultural_reference_真言密教の胎蔵曼荼羅_を拝する_85d94980",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -28740,6 +28898,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%A0%82%E4%B8%8A%E3%81%AE%E6%A5%BC%E9%96%A3",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "砂上の楼閣"
       ]
@@ -29485,6 +29644,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E7%B8%81%E8%B5%B7%E3%81%A7%E3%82%82%E3%81%AA%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "縁起でもない"
       ]
@@ -29988,6 +30148,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%82%A9%E3%82%92%E6%8C%81%E3%81%A4",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "肩を持つ"
       ]
@@ -30011,6 +30172,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%82%A9%E8%BA%AB%E3%81%8C%E7%8B%AD%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "肩身が狭い"
       ]
@@ -30034,6 +30196,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%82%A9%E9%80%8F%E3%81%8B%E3%81%97%E3%82%92%E9%A3%9F%E3%82%8F%E3%81%9B%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "肩透かしを食わせる"
       ]
@@ -30664,6 +30827,7 @@
       "source_url": "https://ja.wikisource.org/wiki/羽衣_(能)",
       "source_work": "羽衣",
       "source_work_key": "mnemosyne.ja.work.羽衣",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "能の「羽衣」",
         "羽衣",
@@ -30727,6 +30891,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E5%B1%85%E5%A3%AB",
       "source_work": "自然居士",
       "source_work_key": "mnemosyne.ja.work.自然居士",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "自然居士",
         "自然居士を演じる",
@@ -30800,6 +30965,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.noh_plays_masks_能の_隅田川_の_幽霊の面",
       "id": "ja_cultural_reference_能の_隅田川_の_幽霊の面_85f8390d",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -30838,6 +31004,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E9%90%B5%E9%A6%AC%E5%A4%A9%E7%8B%97",
       "source_work": "鞍馬天狗",
       "source_work_key": "mnemosyne.ja.work.鞍馬天狗",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鞍馬天狗",
         "鞍馬天狗を演じる",
@@ -31013,6 +31180,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%83%BD%E9%9D%A2",
       "source_work": "Various (Noh tradition)",
       "source_work_key": "mnemosyne.ja.work.various_noh_tradition",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "能の面",
         "能面をつける",
@@ -31154,6 +31322,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.noh_plays_phrases_能楽_の_隅田川",
       "id": "ja_cultural_reference_能楽_の_隅田川_81fdae22",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -31418,6 +31587,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%B0%8F%E9%9D%A2",
       "source_work": "Various (Noh tradition)",
       "source_work_key": "mnemosyne.ja.work.various_noh_tradition",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "小面の面",
         "小面をつける",
@@ -31867,6 +32037,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "腹が立つ",
         "腹が立った",
@@ -31892,6 +32063,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "腹が立って",
         "腹が立たない",
@@ -31917,6 +32089,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "腹に一物",
         "腹に一物ある",
@@ -31978,6 +32151,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "腹を割って",
         "腹を割った",
@@ -32095,6 +32269,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "腹を決める",
         "腹を決めた"
@@ -32156,6 +32331,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "腹黒い",
         "腹黒い人",
@@ -32182,6 +32358,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%87%8D%E3%82%92%E5%99%9B%E3%82%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "臍を噛む"
       ]
@@ -32205,6 +32382,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%87%8D%E3%82%92%E6%9B%B2%E3%81%92%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "臍を曲げる"
       ]
@@ -32465,6 +32643,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%88%B5%E3%82%92%E5%88%87%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "舵を切る"
       ]
@@ -32900,6 +33079,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.edo_literary_schools_荻生徂徠の_古文辞学_こぶんしがく",
       "id": "ja_cultural_reference_荻生徂徠の_古文辞学_こぶんしがく_5a583792",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -32970,6 +33150,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%8F%AF%E3%82%92%E5%8E%BB%E3%82%8A%E5%AE%9F%E3%81%AB%E5%B0%B1%E3%81%8F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "華を去り実に就く"
       ]
@@ -33294,6 +33475,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%9A%8A%E5%B8%B3%E3%81%AE%E5%A4%96",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "蚊帳の外"
       ]
@@ -33453,6 +33635,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%9D%A6%E3%81%A7%E9%AF%9B%E3%82%92%E9%87%A3%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "蝦で鯛を釣る"
       ]
@@ -33647,6 +33830,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%A2%82%E3%82%92%E5%88%86%E3%81%8B%E3%81%A4",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "袂を分かつ"
       ]
@@ -34030,6 +34214,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%A6%9A%E6%82%9F%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "覚悟を決める"
       ]
@@ -34066,6 +34251,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "観音様の千手",
         "千手観音",
@@ -34116,6 +34302,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%A8%80%E3%81%86%E3%81%BE%E3%81%A7%E3%82%82%E7%84%A1%E3%81%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "言うまでも無い"
       ]
@@ -34321,6 +34508,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%AA%9E%E3%82%8B%E3%81%AB%E8%90%BD%E3%81%A1%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "語るに落ちる"
       ]
@@ -34402,6 +34590,7 @@
       "confidence": 0.7,
       "explanation_key": "mnemosyne.en.explanation.ja_wiktionary_idioms.警句を吐く",
       "id": "ja_cultural_reference_警句を吐く_d17a2094",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.",
@@ -34415,6 +34604,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%AD%A6%E5%8F%A5%E3%82%92%E5%90%90%E3%81%8F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "警句を吐く"
       ]
@@ -34550,6 +34740,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%B2%A0%E3%81%86%E3%81%9F%E5%AD%90%E3%81%AB%E6%95%99%E3%81%88%E3%82%89%E3%82%8C%E3%81%A6%E6%B5%85%E7%80%AC%E3%82%92%E6%B8%A1%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "負うた子に教えられて浅瀬を渡る"
       ]
@@ -34597,6 +34788,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%B2%B7%E3%81%84%E8%A2%AB%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "買い被る"
       ]
@@ -35083,6 +35275,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E8%B8%B5%E3%82%92%E8%BF%94%E3%81%99",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "踵を返す"
       ]
@@ -35466,6 +35659,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%81%8B%E3%81%8C%E9%96%8B%E3%81%91%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "運が開ける"
       ]
@@ -35833,6 +36027,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E9%87%91%E5%A4%AA%E9%83%8E",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "金太郎",
         "金太郎の話",
@@ -36042,6 +36237,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.ginkakuji_kangetsu_references_銀閣寺_の_観月台_の幽玄",
       "id": "ja_cultural_reference_銀閣寺_の_観月台_の幽玄_72882859",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36055,6 +36251,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E9%8A%80%E5%AE%A4%E5%AF%BA",
       "source_work": "銀閣寺",
       "source_work_key": "mnemosyne.ja.work.銀閣寺",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "観月台が幽玄だ",
         "観月台が幽玄で",
@@ -36082,6 +36279,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%8D%B5%E3%82%92%E6%8F%A1%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鍵を握る"
       ]
@@ -36646,6 +36844,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.pure_land_art_阿弥陀三尊来迎図_を信仰する",
       "id": "ja_cultural_reference_阿弥陀三尊来迎図_を信仰する_6131936b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36675,6 +36874,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.pure_land_sutra_phrases_阿弥陀如来の四十八願_を説く",
       "id": "ja_cultural_reference_阿弥陀如来の四十八願_を説く_168bce3a",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36807,6 +37007,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.neo_confucian_terms_陽明学の_知行合一_ちこうごういつ",
       "id": "ja_cultural_reference_陽明学の_知行合一_ちこうごういつ_1fca1b5b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37041,6 +37242,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%9B%81%E9%A6%96%E3%82%92%E6%8F%83%E3%81%88%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "雁首を揃える"
       ]
@@ -37373,6 +37575,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%9B%91%E9%AD%9A%E3%81%AE%E9%AD%9A%E4%BA%A4%E3%81%98%E3%82%8A",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "雑魚の魚交じり"
       ]
@@ -37434,6 +37637,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%9B%B2%E6%B3%A5%E3%81%AE%E5%B7%AE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "雲泥の差"
       ]
@@ -37599,6 +37803,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%A0%AC%E3%81%8C%E8%90%BD%E3%81%A1%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "頬が落ちる"
       ]
@@ -37622,6 +37827,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%A0%AC%E3%81%A3%E8%BE%BA%E3%81%8C%E8%90%BD%E3%81%A1%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "頬っ辺が落ちる"
       ]
@@ -37933,6 +38139,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%A1%94%E3%81%AE%E9%81%93%E5%85%B7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "顔の道具"
       ]
@@ -37956,6 +38163,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%A1%94%E3%82%92%E5%90%88%E3%82%8F%E3%81%9B%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "顔を合わせる"
       ]
@@ -38192,6 +38400,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%A2%A8%E9%82%AA%E3%82%92%E5%BC%95%E3%81%8F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "風邪を引く"
       ]
@@ -38287,6 +38496,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "首が回らない",
         "首が回らないほど",
@@ -38316,6 +38526,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "首をひねる (くびをひねる)",
         "首をひねって (くびをひねって)",
@@ -38367,6 +38578,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "首を切る (くびをきる)",
         "首を切って (くびをきって)",
@@ -38398,6 +38610,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "首を横に振る (くびをよこにふる)",
         "首を横に振って (くびをよこにふって)",
@@ -38472,6 +38685,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "首を縦に振る (くびをたてにふる)",
         "首を縦に振って (くびをたてにふって)",
@@ -38499,6 +38713,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "首を長くする",
         "首を長くして待つ",
@@ -38693,6 +38908,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%AA%B8%E9%AA%A8%E3%82%92%E4%B9%9E%E3%81%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "骸骨を乞う"
       ]
@@ -38865,6 +39081,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%AF%96%E3%82%92%E8%AA%AD%E3%82%80",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鯖を読む"
       ]
@@ -39093,6 +39310,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%B4%A8%E3%81%8C%E8%91%B1%E3%82%92%E8%83%8C%E8%B2%A0%E3%81%A3%E3%81%A6%E6%9D%A5%E3%82%8B",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鴨が葱を背負って来る"
       ]
@@ -39199,6 +39417,7 @@
       "confidence": 0.7,
       "explanation_key": "mnemosyne.en.explanation.ja_wiktionary_idioms.鶴九皐に鳴き声天に聞こゆ",
       "id": "ja_cultural_reference_鶴九皐に鳴き声天に聞こゆ_0155dc53",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "Auto-imported from Wiktionary. Verify explanation and surface_patterns before promotion.",
@@ -39212,6 +39431,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E9%B6%B4%E4%B9%9D%E7%9A%90%E3%81%AB%E9%B3%B4%E3%81%8D%E5%A3%B0%E5%A4%A9%E3%81%AB%E8%81%9E%E3%81%93%E3%82%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鶴九皐に鳴き声天に聞こゆ"
       ]
@@ -39352,6 +39572,7 @@
       "reference_type": "cultural_reference",
       "register": "common",
       "short_explanation": "Folk hero associated with courage and companions.",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "桃太郎"
       ]
@@ -39377,6 +39598,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ja.explanation.kimi_yo_umare_izuru_nare_be_as_you_are_phrases_كما",
       "id": "ja_literary_reference_كما_أنت_の_断片的思考_d83f2117",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39517,6 +39739,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%85%AD",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "あづさ弓はるばると射る矢の音",
         "あづさ弓はるばると射る矢の音がする",
@@ -39657,6 +39880,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%9B%B8%E9%9B%86/%E5%8D%B7%E5%8D%81%E5%85%AD",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "あらざりければ",
         "あらざらぬ"
@@ -39668,6 +39892,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.shinkokin_waka_phrases_あらざらむ此の世のほかの思ひ出にいまひとたびの逢ふこと",
       "id": "ja_literary_reference_あらざらむ此の世のほかの思ひ出にいまひとたびの逢ふこともがな_38f64dae",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39752,6 +39977,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%B8%80",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "いたづらに吹きすさぶ風の身の上は",
         "いたづらに吹きすさぶ風の身の上",
@@ -39766,6 +39992,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.shui_wakashu_poems_いづこも同じ秋風の音を聞けば_我が身世にふるながめせしまに",
       "id": "ja_literary_reference_いづこも同じ秋風の音を聞けば_我が身世にふるながめせしまに_49d2411e",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39780,6 +40007,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%8B%BE%E9%81%BA%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B75",
       "source_work": "拾遺和歌集",
       "source_work_key": "mnemosyne.ja.work.拾遺和歌集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "いづこも同じ秋風の音を聞けば 我が身世にふるながめせしまに"
       ]
@@ -39805,6 +40033,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E4%B8%80",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "いにしへの奈良の都の八重桜けふ九重に匂ひぬるかな",
         "いにしへの奈良の都の八重桜がけふ九重に匂ふ",
@@ -40045,6 +40274,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000129/files/45641_23976.html",
       "source_work": "日本昔話集",
       "source_work_key": "mnemosyne.ja.work.日本昔話集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "わらしべ長者",
         "わらしべ長者の話",
@@ -40077,6 +40307,7 @@
         "zh": "日本民间故事，讲述一位好心的老人救了一只舌头被割断的麻雀，并得到麻雀一家的回报，而他贪婪的邻居则受到惩罚。教人善良与贪婪的教训。"
       },
       "id": "ja_literary_reference_おとぎ話の_舌切り雀_e14c0437",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate and well-known Japanese folktale, surface patterns correct.",
@@ -40090,6 +40321,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000129/files/45641_23976.html",
       "source_work": "日本昔話集",
       "source_work_key": "mnemosyne.ja.work.日本昔話集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "舌切り雀",
         "舌切り雀のお話",
@@ -40178,6 +40410,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.ja.explanation.shinkokin_wakashu_phrases_かくばかり恋ひむとは思はざりけり",
       "id": "ja_literary_reference_かくばかり恋ひむとは思はざりけり_d8526b40",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40192,6 +40425,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%9B%B8%E9%9B%86/%E5%8D%B7%E5%8D%81%E5%85%AD",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "かくばかり恋ひむとは思はず",
         "かくばかり恋ひむとは思はぬ",
@@ -40675,6 +40909,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.ja.explanation.manyoshu_waka_phrases_さればこそ花を恋ふれども見えず我が心こそ風になびけ",
       "id": "ja_literary_reference_さればこそ花を恋ふれども見えず我が心こそ風になびけ_c06a93eb",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40960,6 +41195,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.kokin_wakashu_phrases_ちはやぶる神代も聞かず竜田川_からくれなゐに水くくるとは",
       "id": "ja_literary_reference_ちはやぶる神代も聞かず竜田川_からくれなゐに水くくるとは_e16471f4",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -40974,6 +41210,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86_%E5%8D%B7%E7%AC%AC%E5%9B%9B",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "聞く",
         "聞いて",
@@ -41003,6 +41240,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E7%8F%BE%E5%92%8C%E6%AD%8C%E9%9B%86",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "聞かず",
         "聞きません",
@@ -41087,6 +41325,7 @@
         "zh": "这句话出现在古典和歌中，描绘凝望杜鹃（hototogisu）鸣叫方向的情景，象征着思念与美的短暂。"
       },
       "id": "ja_literary_reference_ほととぎす鳴きつる方をながむれば_682bd286",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This phrase appears as a waka in the Kokin Wakashū (no. 167, anonymous), and the explanation and patterns are accurate.",
@@ -41155,6 +41394,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.manyoshu_poems_みちのくの忍ぶもぢずりたれゆゑに乱れむ思ひそでにける",
       "id": "ja_literary_reference_みちのくの忍ぶもぢずりたれゆゑに乱れむ思ひそでにける_c5c2e6c0",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -41298,6 +41538,7 @@
         "zh": "一种诗意表达，意指因爱或思念而心神不宁或疯狂，常用于古典和歌中表现情感的动荡。"
       },
       "id": "ja_literary_reference_ものくるるこころ_cd20bd8b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase and its poetic meaning are correctly attributed to the kana preface of 'Kokin Wakashū', with appropriate surface patterns.",
@@ -41312,6 +41553,7 @@
       "source_url": "https://ja.wikisource.org/wiki/古今和歌集",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "ものくるるこころ",
         "物狂ふ心",
@@ -41435,6 +41677,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000057/files/457_14940.html",
       "source_work": "方丈記",
       "source_work_key": "mnemosyne.ja.work.方丈記",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "わが庵は都の辻",
         "わが庵は都の辻なり"
@@ -41462,6 +41705,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%B1%B1%E5%AE%B6%E9%9B%86",
       "source_work": "山家集",
       "source_work_key": "mnemosyne.ja.work.山家集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "なり",
         "なります",
@@ -41522,6 +41766,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E7%8F%BE%E5%92%8C%E6%AD%8C%E9%9B%86",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "知りません"
       ]
@@ -41532,6 +41777,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.kokinwakashu_waka_phrases_わが衣袖は潮干にみえぬとも_都のわたりは忘れやは",
       "id": "ja_literary_reference_わが衣袖は潮干にみえぬとも_都のわたりは忘れやはする_a4bb8863",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -41546,6 +41792,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%BA%94",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "忘れる",
         "忘れず",
@@ -41601,6 +41848,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.kokin_wakashu_phrases_わたの原八十島かけて漕ぎ出でぬと_人には告げよ海人の釣舟",
       "id": "ja_literary_reference_わたの原八十島かけて漕ぎ出でぬと_人には告げよ海人の釣舟_48e85ff9",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -41615,6 +41863,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86_%E5%8D%B7%E7%AC%AC%E4%B8%89",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "告げる",
         "告げて",
@@ -42060,6 +42309,7 @@
         "zh": "“东歌”是《万叶集》中的一组诗歌，反映了奈良时代日本东部的方言、文化和情感，以其地域特色和历史价值而著称。"
       },
       "id": "ja_literary_reference_万葉集の_東歌_a661885b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution, explanation, and surface patterns accurately reflect the Manyoshu's Azuma-uta poems and their cultural significance.",
@@ -42074,6 +42324,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86",
       "source_work": "万葉集",
       "source_work_key": "mnemosyne.ja.work.万葉集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "万葉集の東歌",
         "東歌",
@@ -42306,6 +42557,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.yosano_akiko_midaregami_与謝野晶子の_みだれ髪_の_情熱と解放",
       "id": "ja_literary_reference_与謝野晶子の_みだれ髪_の_情熱と解放_6f5baf44",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42320,6 +42572,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000004/files/455_14946.html",
       "source_work": "みだれ髪",
       "source_work_key": "mnemosyne.ja.work.みだれ髪",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "情熱的な",
         "情熱で",
@@ -42367,6 +42620,7 @@
       "source_url": "https://ja.wikisource.org/wiki/君死にたまふことなかれ",
       "source_work": "君死にたまふことなかれ",
       "source_work_key": "mnemosyne.ja.work.君死にたまふことなかれ",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "君死にたまふことなかれ",
         "与謝野晶子 君死にたまふことなかれ",
@@ -42381,6 +42635,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.yosano_akiko_kimi_shinitamau_koto_nakare_与謝野晶子の_君死",
       "id": "ja_literary_reference_与謝野晶子の_君死にたまふことなかれ_発表_6b8a73b5",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42394,6 +42649,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000004/card187.html",
       "source_work": "君死にたまふことなかれ",
       "source_work_key": "mnemosyne.ja.work.君死にたまふことなかれ",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "死ぬ",
         "死んで",
@@ -42479,6 +42735,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.kokin_wakashu_phrases_世の中にたえて桜のなかりせば",
       "id": "ja_literary_reference_世の中にたえて桜のなかりせば_bd939162",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42493,6 +42750,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E4%BA%8C",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "世の中に絶えて桜のなかりせば",
         "世の中に桜のなかりせば",
@@ -42522,6 +42780,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E7%AC%AC%E4%BA%8C",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "絶えれば",
         "絶えた",
@@ -42746,6 +43005,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.kokin_wakashu_phrases_人はいさ心も知らずふるさとは_花ぞ昔の香ににほひける",
       "id": "ja_literary_reference_人はいさ心も知らずふるさとは_花ぞ昔の香ににほひける_e84dc0b6",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42760,6 +43020,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86_%E5%8D%B7%E4%BA%8C",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "知らず",
         "知れない",
@@ -42773,6 +43034,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.manyoshu_waka_phrases_人はいさ心も知らずふるさとは花ぞ昔の香ににほひける",
       "id": "ja_literary_reference_人はいさ心も知らずふるさとは花ぞ昔の香ににほひける_8b026b77",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42847,6 +43109,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E7%8F%BE%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E5%8D%81%E5%85%AD",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "宿る",
         "宿り",
@@ -42913,6 +43176,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000035/files/174_14917.html",
       "source_work": "人間失格",
       "source_work_key": "mnemosyne.ja.work.人間失格",
+      "subcategory": "null",
       "surface_patterns": [
         "恥の多い生涯を送った",
         "恥の多い生涯を送る",
@@ -42984,6 +43248,7 @@
       "source_url": "https://ja.wikisource.org/wiki/宇治拾遺物語",
       "source_work": "宇治拾遺物語",
       "source_work_key": "mnemosyne.ja.work.宇治拾遺物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "仁和寺にある法師",
         "仁和寺の法師",
@@ -43035,6 +43300,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.mishima_confessions_of_a_mask_仮面の告白",
       "id": "ja_literary_reference_仮面の告白_f797c419",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43091,6 +43357,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.misima_kamen_no_kokuhaku_仮面の告白_の_自叙伝的告白",
       "id": "ja_literary_reference_仮面の告白_の_自叙伝的告白_271371e1",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43133,6 +43400,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000184/files/45644_23991.html",
       "source_work": "仮面の告白",
       "source_work_key": "mnemosyne.ja.work.仮面の告白",
+      "subcategory": "null",
       "surface_patterns": [
         "する",
         "して",
@@ -43244,6 +43512,7 @@
         "zh": "《伊势物语》的开头语，介绍了无名主人公，为一系列浪漫和诗意的故事定下基调，是日本叙事传统的基础。"
       },
       "id": "ja_literary_reference_伊勢物語の_昔男ありけり_8f45ad4b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is the authentic opening of Ise Monogatari, with correct explanation, plausible surface patterns, and standard attribution.",
@@ -43258,6 +43527,7 @@
       "source_url": "https://ja.wikisource.org/wiki/伊勢物語",
       "source_work": "伊勢物語",
       "source_work_key": "mnemosyne.ja.work.伊勢物語",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "昔男ありけり",
         "伊勢物語 昔男ありけり",
@@ -43283,6 +43553,7 @@
         "zh": "《伊势物语》中的“东下行”是著名的旅行与诗意反思的故事，象征着身体和心灵的双重旅程。"
       },
       "id": "ja_literary_reference_伊勢物語の_東下り_737e7302",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The '東下り' episode is a central narrative in 伊勢物語, and the attribution, explanation, and patterns are appropriate.",
@@ -43346,6 +43617,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.kawabata_yasunari_works_伊豆の踊子",
       "id": "ja_literary_reference_伊豆の踊子_0fece95a",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43456,6 +43728,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8F%A3%E7%AC%AC139",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "寄る",
         "寄せる",
@@ -43470,6 +43743,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.shui_wakashu_poems_住の江の岸による浪のよるさへや_夢の通ひ路人目よくらむ",
       "id": "ja_literary_reference_住の江の岸による浪のよるさへや_夢の通ひ路人目よくらむ_d1de860a",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43484,6 +43758,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%8B%BE%E9%81%BA%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B714",
       "source_work": "拾遺和歌集",
       "source_work_key": "mnemosyne.ja.work.拾遺和歌集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "住の江の岸による浪のよるさへや 夢の通ひ路人目よくらむ"
       ]
@@ -43599,6 +43874,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000035/card3566.html",
       "source_work": "俳諧七部集",
       "source_work_key": "mnemosyne.ja.work.俳諧七部集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "俳諧七部集",
         "七部集",
@@ -43659,6 +43935,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.classical_mythology_japan_八岐大蛇の尾の抜け殻",
       "id": "ja_literary_reference_八岐大蛇の尾の抜け殻_d1e52289",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43732,6 +44009,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.tuboi_sakae_winter_inn_冬の宿_の_疎開の生活",
       "id": "ja_literary_reference_冬の宿_の_疎開の生活_136e7511",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43786,6 +44064,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.ja.explanation.kawabata_senbazuru_千羽鶴_の_茶道の美意識",
       "id": "ja_literary_reference_千羽鶴_の_茶道の美意識_f583cf75",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -43906,6 +44185,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000029/files/15_14928.html",
       "source_work": "伊勢物語",
       "source_work_key": "mnemosyne.ja.work.伊勢物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "名にし負はばいざ言問はん",
         "名にし負はばいざ問はん",
@@ -43961,6 +44241,7 @@
         "zh": "这是松尾芭蕉的俳句，描写在明月下整夜绕池徘徊，体现了日本诗歌传统中对自然之美与无常的赞颂。"
       },
       "id": "ja_literary_reference_名月や池をめぐりて夜もすがら_ea08f53b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This haiku is correctly attributed to Matsuo Bashō and appears in 'Oku no Hosomichi' with accurate surface patterns and context.",
@@ -44115,6 +44396,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000148/files/753_14946.html",
       "source_work": "吾輩は猫である",
       "source_work_key": "mnemosyne.ja.work.吾輩は猫である",
+      "subcategory": "null",
       "surface_patterns": [
         "吾輩は猫だ",
         "吾輩は猫であること",
@@ -44173,6 +44455,7 @@
         "zh": "和泉式部所著的10世纪宫廷日记，记录其与敦道亲王的恋情。平安时代文学的杰作，以情感深度和诗意散文著称。"
       },
       "id": "ja_literary_reference_和泉式部日記_9a5bfff7",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Izumi Shikibu, a Heian-period court diary with accurate surface patterns.",
@@ -44186,6 +44469,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%92%8C%E6%B3%89%E5%BC%8F%E9%83%A8%E6%97%A5%E8%A8%98",
       "source_work": "和泉式部日記",
       "source_work_key": "mnemosyne.ja.work.和泉式部日記",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "和泉式部日記",
         "いづみしきぶのにっき",
@@ -44198,6 +44482,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.watsuji_tetsuro_aidagara_和辻哲郎の_間柄的存在_あいだがらてきそんざい",
       "id": "ja_literary_reference_和辻哲郎の_間柄的存在_あいだがらてきそんざい_fed844cd",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44345,6 +44630,7 @@
         "zh": "《土佐日记》的著名开头强调了一位男性（纪贯之）用假名写日记的新颖性，这种文体当时被认为是女性专用，挑战了平安文学的性别规范。"
       },
       "id": "ja_literary_reference_土佐日記の_男もすなる日記_b7608979",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The phrase is the well-known opening of Tosa Nikki, with accurate explanation and correct attribution to Ki no Tsurayuki.",
@@ -44359,6 +44645,7 @@
       "source_url": "https://ja.wikisource.org/wiki/土佐日記",
       "source_work": "土佐日記",
       "source_work_key": "mnemosyne.ja.work.土佐日記",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "男もすなる日記",
         "土佐日記 男もすなる日記",
@@ -44423,6 +44710,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000087/files/492_14949.html",
       "source_work": "地獄変",
       "source_work_key": "mnemosyne.ja.work.地獄変",
+      "subcategory": "null",
       "surface_patterns": [
         "地獄変を読む",
         "地獄変で描かれる",
@@ -44468,6 +44756,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.sakaguchi_anko_dazaron_phrases_坂口安吾の_堕落論_の_不条理な生",
       "id": "ja_literary_reference_坂口安吾の_堕落論_の_不条理な生_07a1d0ab",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44548,6 +44837,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000148/files/752_14945.html",
       "source_work": "坊っちゃん",
       "source_work_key": "mnemosyne.ja.work.坊っちゃん",
+      "subcategory": "null",
       "surface_patterns": [
         "親譲りの無鉄砲",
         "無鉄砲な",
@@ -44565,6 +44855,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.horiguchi_daigaku_poetry_phrases_堀口大学訳の_月下の一群",
       "id": "ja_literary_reference_堀口大学訳の_月下の一群_86a253fd",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44650,6 +44941,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%8C%B8%E5%A1%9A%E7%8E%8B",
       "source_work": "菅原伝授手習鑑",
       "source_work_key": "mnemosyne.ja.work.菅原伝授手習鑑",
+      "subcategory": "null",
       "surface_patterns": [
         "塵塚王が",
         "塵塚王だった",
@@ -44663,6 +44955,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ja.explanation.ooka_shohei_grave_house_墓のまえの家_の_家庭の崩壊",
       "id": "ja_literary_reference_墓のまえの家_の_家庭の崩壊_0373e291",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44815,6 +45108,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.natsume_souseki_botchan_夏目漱石の_坊っちゃん_発表",
       "id": "ja_literary_reference_夏目漱石の_坊っちゃん_発表_a46814fd",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -44828,6 +45122,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000148/card789.html",
       "source_work": "坊っちゃん",
       "source_work_key": "mnemosyne.ja.work.坊っちゃん",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "坊っちゃんと",
         "坊っちゃんが",
@@ -45056,6 +45351,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.oe_kenzaburo_shiiku_phrases_大江健三郎の_飼育_の_戦後日本の暗部",
       "id": "ja_literary_reference_大江健三郎の_飼育_の_戦後日本の暗部_0eee5f23",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -45184,6 +45480,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.manyoshu_waka_phrases_天の原ふりさけ見れば春日なる_三笠の山にいでし月かも",
       "id": "ja_literary_reference_天の原ふりさけ見れば春日なる_三笠の山にいでし月かも_f8e7c112",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -45198,6 +45495,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%90%AC%E8%91%89%E9%9B%86/%E5%8D%B7%E7%AC%AC%E4%B8%89",
       "source_work": "万葉集",
       "source_work_key": "mnemosyne.ja.work.万葉集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "見る",
         "見れば",
@@ -45297,6 +45595,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000085/files/476_14945.html",
       "source_work": "天網島",
       "source_work_key": "mnemosyne.ja.work.天網島",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "天の網島",
         "天網島",
@@ -45432,6 +45731,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.ja.explanation.dazai_ningen_shikkaku_themes_太宰治の_人間失格_の_自暴自棄な生",
       "id": "ja_literary_reference_太宰治の_人間失格_の_自暴自棄な生_186f2588",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -45655,6 +45955,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%BA%94",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "契りきな形見に袖をしぼりつつ",
         "契りきな形見に袖をしぼる",
@@ -45723,6 +46024,7 @@
         "zh": "这是松尾芭蕉在《奥之细道》中的著名俳句，通过蝉鸣渗入岩石，唤起大自然的深邃静谧，象征无常与宁静。"
       },
       "id": "ja_literary_reference_奥の細道の_閑さや岩にしみ入る蝉の声_bf1273dd",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The haiku and its attribution to Bashō's 'Oku no Hosomichi' are accurate, with appropriate surface patterns and explanation.",
@@ -45737,6 +46039,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000035/files/301_14912.html",
       "source_work": "奥の細道",
       "source_work_key": "mnemosyne.ja.work.奥の細道",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "奥の細道の「閑さや岩にしみ入る蝉の声」",
         "閑さや岩にしみ入る蝉の声",
@@ -45890,6 +46193,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000142/files/778_14949.html",
       "source_work": "女ごころ",
       "source_work_key": "mnemosyne.ja.work.女ごころ",
+      "subcategory": "null",
       "surface_patterns": [
         "女ごころを読む",
         "女ごころで描かれる",
@@ -45908,6 +46212,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.ja.explanation.hayashi_fumiko_onna_no_issho_女の一生",
       "id": "ja_literary_reference_女の一生_6d0894e9",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -46188,6 +46493,7 @@
       "source_url": "https://ja.wikisource.org/wiki/宇治拾遺物語",
       "source_work": "宇治拾遺物語",
       "source_work_key": "mnemosyne.ja.work.宇治拾遺物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "こぶ取り爺さん",
         "宇治拾遺物語のこぶ取り爺さん",
@@ -46403,6 +46709,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.shimazaki_toson_ie_家_の_家制度の崩壊",
       "id": "ja_literary_reference_家_の_家制度の崩壊_028d5a42",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -46416,6 +46723,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000008/files/457_14950.html",
       "source_work": "家",
       "source_work_key": "mnemosyne.ja.work.家",
+      "subcategory": "null",
       "surface_patterns": [
         "家制度の崩壊を描く",
         "家制度の崩壊を描いた",
@@ -46470,6 +46778,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.yamanooto_sound_of_mountain_phrases_山の音_の_家族の崩壊",
       "id": "ja_literary_reference_山の音_の_家族の崩壊_11e7ed0c",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -46511,6 +46820,7 @@
         "zh": "《山家集》是平安末至镰仓初著名僧侣诗人西行的和歌集，以自然意象和佛教主题著称。"
       },
       "id": "ja_literary_reference_山家集_be711b28",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correct attribution to Saigyō's '山家集' with accurate description and surface patterns.",
@@ -46524,6 +46834,7 @@
       "source_url": "https://ja.wikisource.org/wiki/山家集",
       "source_work": "山家集",
       "source_work_key": "mnemosyne.ja.work.山家集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "山家集",
         "山家集（さんかしゅう）",
@@ -46709,6 +47020,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000158/files/531_19871.html",
       "source_work": "初恋",
       "source_work_key": "mnemosyne.ja.work.初恋",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "初恋",
         "島崎藤村の初恋",
@@ -46829,6 +47141,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.kawabata_yukiguni_themes_川端康成の_雪国_の_幽玄の美",
       "id": "ja_literary_reference_川端康成の_雪国_の_幽玄の美_5a5c2716",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -46871,6 +47184,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%BE%8C%E6%92%B2%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%B8%80#%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%B8%80%E3%83%BB%E7%A7%8B%E4%B8%8B%E3%83%BB1042",
       "source_work": "後撰和歌集",
       "source_work_key": "mnemosyne.ja.work.後撰和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "幣も取らず手で採って携えず手向山八重紅葉を手向けましょう",
         "幣も取らず手で採って携えず手向山八重紅葉を手向けない",
@@ -47010,6 +47324,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%8B%BE%E9%81%BA%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%81%E4%B9%9D",
       "source_work": "拾遺和歌集",
       "source_work_key": "mnemosyne.ja.work.拾遺和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "たける",
         "たけて",
@@ -47147,6 +47462,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.ja.explanation.zuihitsu_classics_徒然草_の_花は盛りに_の思想",
       "id": "ja_literary_reference_徒然草_の_花は盛りに_の思想_868330d5",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -47284,6 +47600,7 @@
       "source_url": "https://ja.wikisource.org/wiki/徒然草",
       "source_work": "徒然草",
       "source_work_key": "mnemosyne.ja.work.徒然草",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "高名の木登り",
         "徒然草の高名の木登り",
@@ -47329,6 +47646,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.hyakunin_isshu_poems_心あてに折らばや折らむ初霜の置きまどはせる白菊の花",
       "id": "ja_literary_reference_心あてに折らばや折らむ初霜の置きまどはせる白菊の花_9c80d25b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -47422,6 +47740,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.kokin_wakashu_phrases_忍ぶれど色に出でにけり",
       "id": "ja_literary_reference_忍ぶれど色に出でにけり_922fb311",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -47436,6 +47755,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%BA%94",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "忍ぶれど色に出でけり",
         "忍ぶれど色に出でで"
@@ -47504,6 +47824,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%81%E5%9B%9B",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "忍んだ",
         "出る",
@@ -47589,6 +47910,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.kokinshu_waka_phrases_忘れな草苗に植ゑたりわが恋は色に出でにけり我が身世にふる",
       "id": "ja_literary_reference_忘れな草苗に植ゑたりわが恋は色に出でにけり我が身世にふる_c1fbb0ab",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -47663,6 +47985,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%B9%9D",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "忘れ草が生ふる宿のわびぬれば",
         "忘れ草生ふる宿のわびぬれば",
@@ -47724,6 +48047,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%BA%94",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "忘れ貝の我が思ふ人はありやなしやと",
         "忘れ貝の我が思ふ人はありやなし",
@@ -47809,6 +48133,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.goshuishu_waka_phrases_思ひわびさても命はあるものを_憂きに堪へぬは涙なりけり",
       "id": "ja_literary_reference_思ひわびさても命はあるものを_憂きに堪へぬは涙なりけり_9705e613",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -47823,6 +48148,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%BE%8C%E6%8B%BE%E9%81%BA%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%B8%80",
       "source_work": "後拾遺和歌集",
       "source_work_key": "mnemosyne.ja.work.後拾遺和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "思う",
         "思えば",
@@ -47912,6 +48238,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%BA%94",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "恋草が生い出でて枯れぬ間もがな",
         "恋草の生ひ出でて枯れぬ間もがな",
@@ -47955,6 +48282,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.kokin_wakashu_phrases_我が庵は都の辰巳しかぞ住む_世をうぢ山と人はいふなり",
       "id": "ja_literary_reference_我が庵は都の辰巳しかぞ住む_世をうぢ山と人はいふなり_471d8c49",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -47969,6 +48297,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86_%E5%8D%B7%E5%8D%81%E5%85%AB",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "住む",
         "住んで",
@@ -47983,6 +48312,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.hyakunin_isshu_poems_我が庵は都の辻のとまをあらみ末の松山風吹きわたる",
       "id": "ja_literary_reference_我が庵は都の辻のとまをあらみ末の松山風吹きわたる_1e6d9698",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -48057,6 +48387,7 @@
       "source_location": "Multiple occurrences in classical anthologies",
       "source_work": "Various (Heian to Edo period waka collections)",
       "source_work_key": "mnemosyne.ja.work.various_heian_to_edo_period_waka_collections",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "我が思ふ人はありやとなしや",
         "我が思ふ人はありや否や",
@@ -48085,6 +48416,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%90%AC%E8%91%89%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E5%9B%9B",
       "source_work": "万葉集",
       "source_work_key": "mnemosyne.ja.work.万葉集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "我が思ふ人はありやなしやと思う",
         "我が思ふ人はありやなしやと",
@@ -48115,6 +48447,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E7%8F%BE%E5%92%8C%E6%AD%8C%E9%9B%86",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "生ふる",
         "生えます",
@@ -48157,6 +48490,7 @@
       "confidence": 0.84,
       "explanation_key": "mnemosyne.ja.explanation.shinkokin_wakashu_phrases_我が恋は空の行衛知らずして",
       "id": "ja_literary_reference_我が恋は空の行衛知らずして_c8c9133b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -48171,6 +48505,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%9B%B8%E9%9B%86/%E5%8D%B7%E5%8D%81%E5%85%AD",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "我が恋は空の行衛知らず",
         "我が恋は空の行衛知らずして",
@@ -48199,6 +48534,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E4%B9%9D#%E5%8D%B7%E7%AC%AC%E4%B9%9D%E3%83%BB%E6%81%92%E6%AD%8C%E5%9B%9B%E3%83%BB859",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "我が恋は空の行方知らずして雲居の月に我は惑う",
         "我が恋は空の行方知らずして雲居の月に我は惑わない",
@@ -48226,6 +48562,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E8%90%AC%E8%91%89%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E5%9B%9B",
       "source_work": "万葉集",
       "source_work_key": "mnemosyne.ja.work.万葉集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "我が背子と二三重の山を越えて来た",
         "我が背子と二三重の山を越え来ぬ",
@@ -48434,6 +48771,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E5%8D%81%E5%85%AD#%E5%8D%B7%E7%AC%AC%E5%8D%81%E5%85%AD%E3%83%BB%E9%9B%91%E4%B8%8B%E3%83%BB1556",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "我が身世に降る長雨をながめる間に年月は百代の過客となる",
         "我が身世に降る長雨をながめない間に年月は百代の過客とならない",
@@ -48482,6 +48820,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.ja.explanation.kokin_wakashu_poems_我が身世にふるながめせし間に春の野に出て若菜摘みつつ",
       "id": "ja_literary_reference_我が身世にふるながめせし間に春の野に出て若菜摘みつつ_24819582",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -48496,6 +48835,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E4%BA%8C",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "ふらず",
         "ふりて",
@@ -48579,6 +48919,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000008/files/456_14949.html",
       "source_work": "或る女",
       "source_work_key": "mnemosyne.ja.work.或る女",
+      "subcategory": "null",
       "surface_patterns": [
         "女性の孤独を描く",
         "女性の孤独を描いた",
@@ -48592,6 +48933,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.arishima_aru_onna_或る女_の_独立した女性像",
       "id": "ja_literary_reference_或る女_の_独立した女性像_badb5960",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -48633,6 +48975,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000142/files/777_14949.html",
       "source_work": "挿話",
       "source_work_key": "mnemosyne.ja.work.挿話",
+      "subcategory": "null",
       "surface_patterns": [
         "挿話を読む",
         "挿話で描かれる",
@@ -48667,6 +49010,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%8B%BE%E9%81%BA%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%81%E4%B8%83",
       "source_work": "拾遺和歌集",
       "source_work_key": "mnemosyne.ja.work.拾遺和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "飾る",
         "飾れば",
@@ -48814,6 +49158,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.bunraku_plays_文楽の_一谷嫩軍記",
       "id": "ja_literary_reference_文楽の_一谷嫩軍記_397d89f3",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -48840,6 +49185,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.chikamatsu_sonezaki_文楽の_三段目_の_曽根崎心中",
       "id": "ja_literary_reference_文楽の_三段目_の_曽根崎心中_a338cc95",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -48962,6 +49308,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E6%9C%AC%E6%9C%9D%E5%BB%BF%E5%9B%9B%E5%AD%9D",
       "source_work": "本朝廿四孝",
       "source_work_key": "mnemosyne.ja.work.本朝廿四孝",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "本朝廿四孝",
         "本朝廿四孝を演じる",
@@ -48989,6 +49336,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E7%BE%A9%E7%B5%8C%E5%8D%83%E6%9C%AC%E6%A0%91",
       "source_work": "義経千本桜",
       "source_work_key": "mnemosyne.ja.work.義経千本桜",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "義経千本桜を演じる",
         "義経千本桜を演じて",
@@ -49122,6 +49470,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000035/files/175_14918.html",
       "source_work": "斜陽",
       "source_work_key": "mnemosyne.ja.work.斜陽",
+      "subcategory": "null",
       "surface_patterns": [
         "日本の没落",
         "日本の没落する",
@@ -49166,6 +49515,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.dazai_shayou_斜陽_の_没落華族の哀愁",
       "id": "ja_literary_reference_斜陽_の_没落華族の哀愁_5c5d3de7",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -49336,6 +49686,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.nichiren_literature_日蓮の立正安国論_を読む",
       "id": "ja_literary_reference_日蓮の立正安国論_を読む_0d7ab415",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -49437,6 +49788,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.kokin_wakashu_poems_春の夜の夢ばかりなる手枕にかひなく立たせ酒のまくら",
       "id": "ja_literary_reference_春の夜の夢ばかりなる手枕にかひなく立たせ酒のまくら_a96d3ac0",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -49451,6 +49803,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E4%BA%8C",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "立てば",
         "立たせる",
@@ -49480,6 +49833,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E7%8F%BE%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E5%8D%81%E5%85%AD",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "掛ける",
         "掛け",
@@ -49600,6 +49954,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000070/files/565_14948.html",
       "source_work": "春琴抄",
       "source_work_key": "mnemosyne.ja.work.春琴抄",
+      "subcategory": "null",
       "surface_patterns": [
         "春琴抄で描かれる",
         "春琴抄とした",
@@ -49733,6 +50088,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.ja.explanation.shimazaki_toson_anya_kōro_暗夜行路_の_青年と老年の対比",
       "id": "ja_literary_reference_暗夜行路_の_青年と老年の対比_f577ce7a",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -49746,6 +50102,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000008/files/458_14951.html",
       "source_work": "暗夜行路",
       "source_work_key": "mnemosyne.ja.work.暗夜行路",
+      "subcategory": "null",
       "surface_patterns": [
         "青年と老年の対比を示す",
         "青年と老年の対比を示した",
@@ -49965,6 +50322,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000074/files/455_14938.html",
       "source_work": "奥の細道",
       "source_work_key": "mnemosyne.ja.work.奥の細道",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "月日は百代の過客なり"
       ]
@@ -49989,6 +50347,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000081/files/456_14945.html",
       "source_work": "おくのほそ道",
       "source_work_key": "mnemosyne.ja.work.おくのほそ道",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "月日は百代の過客であって",
         "月日は百代の過客ではない",
@@ -50001,6 +50360,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.kokin_wakashu_poems_月見ればちぢに物こそ悲しけれわが身ひとつの秋にはあらねど",
       "id": "ja_literary_reference_月見ればちぢに物こそ悲しけれわが身ひとつの秋にはあらねど_17262246",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -50454,6 +50814,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.heian_literary_classics_枕草子_の_春はあけぼの_の文章",
       "id": "ja_literary_reference_枕草子_の_春はあけぼの_の文章_bd0334a3",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -50468,6 +50829,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000072/files/127_15000.html",
       "source_work": "枕草子",
       "source_work_key": "mnemosyne.ja.work.枕草子",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "春は明け方",
         "春はあけぼのの文",
@@ -50496,6 +50858,7 @@
         "zh": "在《枕草子》中，“うつくしきもの”（美丽的事物）是清少纳言列举她觉得可爱的事物的著名章节，体现了平安时代的美学与感性。"
       },
       "id": "ja_literary_reference_枕草子の_うつくしきもの_7347f888",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Makura no Sōshi and the description of the 'Utsukushiki Mono' section are accurate and correctly referenced.",
@@ -50510,6 +50873,7 @@
       "source_url": "https://ja.wikisource.org/wiki/枕草子",
       "source_work": "枕草子",
       "source_work_key": "mnemosyne.ja.work.枕草子",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "うつくしきもの",
         "枕草子のうつくしきもの",
@@ -50570,6 +50934,7 @@
         "zh": "柿本人麻吕是飞鸟时代著名的诗人，被尊为《万叶集》的重要贡献者，后世视其为诗神。"
       },
       "id": "ja_literary_reference_柿本人麻呂_7a8b0278",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- All details about Kakinomoto no Hitomaro, his era, contributions to the Man'yōshū, and later veneration are accurate and verifiable.",
@@ -50583,6 +50948,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E4%B8%87%E8%91%89%E9%9B%86",
       "source_work": "万葉集",
       "source_work_key": "mnemosyne.ja.work.万葉集",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "柿本人麻呂",
         "人麻呂",
@@ -50696,6 +51062,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%BE%8C%E6%92%B0%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%BE%8C%E6%92%B0%E5%92%8C%E6%AD%8C%E9%9B%86_%E5%B7%BB%E7%AC%AC12#%E5%8F%A3%E7%AC%AC1098",
       "source_work": "後撰和歌集",
       "source_work_key": "mnemosyne.ja.work.後撰和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "振り立てる",
         "振り立てて",
@@ -50818,6 +51185,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ja.explanation.namiki_sukeroku_歌舞伎の_助六_の_恋女房の由縁",
       "id": "ja_literary_reference_歌舞伎の_助六_の_恋女房の由縁_01bf5e1b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -50943,6 +51311,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%A6%B9%E8%83%8C%E5%B1%B1%E5%A9%A6%E5%A5%B3%E5%BA%AD%E8%A8%93",
       "source_work": "妹背山婦女庭訓",
       "source_work_key": "mnemosyne.ja.work.妹背山婦女庭訓",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "妹背山婦女庭訓",
         "妹背山を演じる",
@@ -50984,6 +51353,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ja.explanation.kabuki_plays_歌舞伎の_花見奥の寛養",
       "id": "ja_literary_reference_歌舞伎の_花見奥の寛養_630b7666",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -51080,6 +51450,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.endo_shusaku_chinmoku_沈黙",
       "id": "ja_literary_reference_沈黙_1b7ac5f8",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -51210,6 +51581,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.pure_land_buddhism_texts_法然の選択本願念仏集_を学ぶ",
       "id": "ja_literary_reference_法然の選択本願念仏集_を学ぶ_6c366f6d",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -51461,6 +51833,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.bunraku_classics_浄瑠璃の_仮名手本忠臣蔵_の_大星由良之助",
       "id": "ja_literary_reference_浄瑠璃の_仮名手本忠臣蔵_の_大星由良之助_6c2d018a",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -51891,6 +52264,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.umibe_no_kōkei_landscapes_of_sea_phrases_海辺の光景_の_戦",
       "id": "ja_literary_reference_海辺の光景_の_戦後の平和像_a4b1c88d",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -52211,6 +52585,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.hyakunin_isshu_poems_瀬を早み岩にせかるる滝川のわれても末にあはむとぞ思ふ",
       "id": "ja_literary_reference_瀬を早み岩にせかるる滝川のわれても末にあはむとぞ思ふ_12d494f4",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -52530,6 +52905,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%88%9F%E5%BC%81%E8%B3%9E",
       "source_work": "舟弁慶",
       "source_work_key": "mnemosyne.ja.work.舟弁慶",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "舟弁慶を演じる",
         "舟弁慶を演じて",
@@ -52581,6 +52957,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.kyogen_plays_phrases_狂言の_鬼山伏",
       "id": "ja_literary_reference_狂言の_鬼山伏_9695af20",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -52720,6 +53097,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E7%93%9C%E5%AD%90%E5%A7%AB",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "瓜子姫が",
         "瓜子姫だった",
@@ -52891,6 +53269,7 @@
         "zh": "小野小町是《百人一首》中著名的女诗人，以美貌和描写爱情与无常的感人诗歌著称。"
       },
       "id": "ja_literary_reference_百人一首の小野小町_3d1cfd80",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Ono no Komachi is correctly identified as the author of poem 9 in 'Hyakunin Isshu,' and the patterns and explanation are accurate.",
@@ -52905,6 +53284,7 @@
       "source_url": "https://ja.wikisource.org/wiki/小倉百人一首",
       "source_work": "小倉百人一首",
       "source_work_key": "mnemosyne.ja.work.小倉百人一首",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "百人一首 小野小町",
         "小野小町の歌",
@@ -52931,6 +53311,7 @@
         "zh": "藤原定家是著名的诗人和学者，编纂了《小仓百人一首》，这本收录100首日本古典诗歌的选集对日本文学传统和歌牌游戏卡鲁塔具有重要影响。"
       },
       "id": "ja_literary_reference_百人一首の藤原定家_873b0b75",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Fujiwara no Teika's role in compiling the Ogura Hyakunin Isshu and his literary significance are accurately described.",
@@ -52944,6 +53325,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%B0%8F%E5%80%89%E7%99%BE%E4%BA%BA%E4%B8%80%E9%A6%96",
       "source_work": "小倉百人一首",
       "source_work_key": "mnemosyne.ja.work.小倉百人一首",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "百人一首の藤原定家",
         "藤原定家",
@@ -53001,6 +53383,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/001091/files/492_15675.html",
       "source_work": "真空地帯",
       "source_work_key": "mnemosyne.ja.work.真空地帯",
+      "subcategory": "null",
       "surface_patterns": [
         "満州開拓団の悲劇を描く",
         "満州開拓団の悲劇を描いて",
@@ -53057,6 +53440,7 @@
       "confidence": 0.86,
       "explanation_key": "mnemosyne.ja.explanation.ishikawa_takuboku_ippaku_no_suna_石川啄木の_一握の砂_の_貧困と詩",
       "id": "ja_literary_reference_石川啄木の_一握の砂_の_貧困と詩歌_dbeab876",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -53071,6 +53455,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000003/files/391_14944.html",
       "source_work": "一握の砂",
       "source_work_key": "mnemosyne.ja.work.一握の砂",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "貧困な",
         "貧困で",
@@ -53091,6 +53476,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.ishikawa_takuboku_ichi_aku_no_suna_石川啄木の_一握の砂_刊行",
       "id": "ja_literary_reference_石川啄木の_一握の砂_刊行_50a3b19b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -53104,6 +53490,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000081/card12.html",
       "source_work": "一握の砂",
       "source_work_key": "mnemosyne.ja.work.一握の砂",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "一握の砂を",
         "一握の砂が",
@@ -53198,6 +53585,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.shimazaki_toson_hakai_破戒_の_部落差別の告発",
       "id": "ja_literary_reference_破戒_の_部落差別の告発_567b1d8b",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -53211,6 +53599,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000008/files/455_14948.html",
       "source_work": "破戒",
       "source_work_key": "mnemosyne.ja.work.破戒",
+      "subcategory": "null",
       "surface_patterns": [
         "部落差別を告発する",
         "部落差別を告発した",
@@ -53266,6 +53655,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E7%8F%BE%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E5%8D%81%E5%85%AD",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "分かる",
         "分かり",
@@ -53280,6 +53670,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.manyoshu_waka_phrases_秋の田のかりほの庵の苫をあらみ我が衣手は露にぬれつつ",
       "id": "ja_literary_reference_秋の田のかりほの庵の苫をあらみ我が衣手は露にぬれつつ_1bb1e251",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -53362,6 +53753,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8F%A3%E7%AC%AC25",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "来て",
         "来た"
@@ -53434,6 +53826,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.shingon_buddhism_texts_空海の三教指帰_を解く",
       "id": "ja_literary_reference_空海の三教指帰_を解く_c8c7ea1f",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -53763,6 +54156,7 @@
         "zh": "《紫式部日记》是《源氏物语》作者在平安时代所写的日记，珍贵地记录了宫廷生活、习俗及作者的个人感受。"
       },
       "id": "ja_literary_reference_紫式部日記_a573d342",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry correctly attributes the diary to Murasaki Shikibu and provides an accurate summary and surface patterns.",
@@ -53776,6 +54170,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E7%B4%AB%E5%BC%8F%E9%83%A8%E6%97%A5%E8%A8%98",
       "source_work": "紫式部日記",
       "source_work_key": "mnemosyne.ja.work.紫式部日記",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "紫式部日記",
         "Murasaki Shikibu Nikki",
@@ -53790,6 +54185,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.tanizaki_junichiro_works_細雪",
       "id": "ja_literary_reference_細雪_4ee130af",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -53816,6 +54212,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.tanizaki_tanizaki_細雪_の_上方の風俗描写",
       "id": "ja_literary_reference_細雪_の_上方の風俗描写_2ab445f7",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -53857,6 +54254,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000070/files/566_14949.html",
       "source_work": "細雪",
       "source_work_key": "mnemosyne.ja.work.細雪",
+      "subcategory": "null",
       "surface_patterns": [
         "細雪を読む",
         "細雪で描かれる",
@@ -53950,6 +54348,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000879/files/456_14913.html",
       "source_work": "羅生門",
       "source_work_key": "mnemosyne.ja.work.羅生門",
+      "subcategory": "null",
       "surface_patterns": [
         "下人の選択をする",
         "下人の選択をして",
@@ -53996,6 +54395,7 @@
       "confidence": 0.75,
       "explanation_key": "mnemosyne.ja.explanation.hori_tatsuo_beautiful_village_美しい村_の_純粋美への憧れ",
       "id": "ja_literary_reference_美しい村_の_純粋美への憧れ_24d0c6e2",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -54314,6 +54714,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.noh_plays_phrases_能の_三人吉三",
       "id": "ja_literary_reference_能の_三人吉三_9b2731a9",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -54354,6 +54755,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%AE%89%E5%AE%B6_(%E8%83%BD)",
       "source_work": "安宅",
       "source_work_key": "mnemosyne.ja.work.安宅",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "安宅を演じる",
         "安宅を演じて",
@@ -54502,6 +54904,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E8%91%B5%E4%B8%8A_(%E8%83%BD)",
       "source_work": "葵上",
       "source_work_key": "mnemosyne.ja.work.葵上",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "葵上を演じる",
         "葵上を演じて",
@@ -54624,6 +55027,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E9%AB%98%E7%A0%82_(%E8%83%BD)",
       "source_work": "高砂",
       "source_work_key": "mnemosyne.ja.work.高砂",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "高砂を演じる",
         "高砂を演じて",
@@ -54660,6 +55064,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E9%B4%BB%E6%B1%A0_(%E8%83%BD)",
       "source_work": "鴻池",
       "source_work_key": "mnemosyne.ja.work.鴻池",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鴻池",
         "鴻池を演じる",
@@ -54910,6 +55315,7 @@
         "zh": "松尾芭蕉著名的俳句，描写了因初夏梅雨而湍急的最上川，以生动意象和季节感著称。"
       },
       "id": "ja_literary_reference_芭蕉の_五月雨をあつめて早し最上川_1ced0c23",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The haiku is correctly attributed to Bashō and the explanation, surface patterns, and source details are accurate and verifiable.",
@@ -54924,6 +55330,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%A5%A5%E3%81%AE%E7%B4%B0%E9%81%93/%E6%9C%80%E4%B8%8A%E5%B7%9D%E3%81%AE%E6%AE%B5",
       "source_work": "奥の細道",
       "source_work_key": "mnemosyne.ja.work.奥の細道",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "五月雨をあつめて早し最上川",
         "さみだれをあつめてはやしもがみがわ",
@@ -55034,6 +55441,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E7%AC%AC%E4%BA%8C",
       "source_work": "古今和歌集",
       "source_work_key": "mnemosyne.ja.work.古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "花の色は移りにけり",
         "花の色は移らず",
@@ -55087,6 +55495,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E4%BC%8A%E5%8F%B0%E7%89%A9%E8%AA%9E/%E7%AC%AC5%E6%AE%B5",
       "source_work": "伊勢物語",
       "source_work_key": "mnemosyne.ja.work.伊勢物語",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "移る",
         "移り",
@@ -55163,6 +55572,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.ja.explanation.whitman_leaves_of_grass_japanese_草の葉_の_自然への回帰",
       "id": "ja_literary_reference_草の葉_の_自然への回帰_15525437",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -55206,6 +55616,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E7%8F%BE%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%B7%E5%8D%81%E5%85%AD",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "置く",
         "置き",
@@ -55278,6 +55689,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E3%81%8A%E3%81%8F%E3%81%AE%E3%81%BB%E3%81%9D%E9%81%93",
       "source_work": "おくのほそ道",
       "source_work_key": "mnemosyne.ja.work.おくのほそ道",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "荒海や佐渡に横たふ天の川",
         "荒海が佐渡に横たわる天の川",
@@ -55418,6 +55830,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E5%BE%A1%E6%96%87%E7%AB%A0",
       "source_work": "御文章",
       "source_work_key": "mnemosyne.ja.work.御文章",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "御文章（ごぶんしょう）",
         "御文章を読む",
@@ -55484,6 +55897,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000879/files/454_14911.html",
       "source_work": "藪の中",
       "source_work_key": "mnemosyne.ja.work.藪の中",
+      "subcategory": "null",
       "surface_patterns": [
         "七人の侍の証言をする",
         "七人の侍の証言をして",
@@ -55819,6 +56233,7 @@
         "zh": "这是松尾芭蕉的俳句，意为“春天逝去，鸟儿啼鸣，鱼眼含泪”，表现了春天的短暂和变化带来的忧伤。"
       },
       "id": "ja_literary_reference_行く春や鳥啼き魚の目は泪_e82390b3",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Bashō's '奥の細道' with accurate explanation and appropriate surface patterns.",
@@ -55833,6 +56248,7 @@
       "source_url": "https://ja.wikisource.org/wiki/奥の細道",
       "source_work": "奥の細道",
       "source_work_key": "mnemosyne.ja.work.奥の細道",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "行く春や鳥啼き魚の目は泪",
         "行く春や、鳥啼き魚の目は泪",
@@ -55902,6 +56318,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.nishida_kitaro_pure_experience_西田幾多郎の_純粋経験_じゅんすいけい",
       "id": "ja_literary_reference_西田幾多郎の_純粋経験_じゅんすいけいけん_0a691b6f",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -55946,6 +56363,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%8B%BE%E9%81%BA%E5%92%8C%E6%AD%8C%E9%9B%86/%E5%8D%81%E5%85%AD",
       "source_work": "拾遺和歌集",
       "source_work_key": "mnemosyne.ja.work.拾遺和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "見た",
         "見ない",
@@ -56149,6 +56567,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000035/files/1035_14881.html",
       "source_work": "走れメロス",
       "source_work_key": "mnemosyne.ja.work.走れメロス",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "走れメロスと叫ぶ",
         "走れメロスのように",
@@ -56306,6 +56725,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.ja.explanation.kokin_wakashu_poems_逢ふことの絶えてしなくばいかにせむ我が身世にふるながめせし間",
       "id": "ja_literary_reference_逢ふことの絶えてしなくばいかにせむ我が身世にふるながめせし間に_60698d4a",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -56348,6 +56768,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%9B%B8%E9%9B%86/%E5%8D%B7%E5%8D%81%E5%85%AD",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "逢ふことの絶えず",
         "逢ふことの絶えてし",
@@ -56500,6 +56921,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%AD%A3%E6%B3%95%E7%9C%BC%E8%94%B5",
       "source_work": "正法眼蔵",
       "source_work_key": "mnemosyne.ja.work.正法眼蔵",
+      "subcategory": "zen_koan",
       "surface_patterns": [
         "読む",
         "読んで",
@@ -56519,6 +56941,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.ja.explanation.dazai_osamu_postwar_absurdity_邪魔者は殺せ_の_戦後社会の不条理",
       "id": "ja_literary_reference_邪魔者は殺せ_の_戦後社会の不条理_5aebdd12",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -56757,6 +57180,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ja.explanation.suzuki_dt_zen_japanese_culture_鈴木大拙の_禅と日本文化",
       "id": "ja_literary_reference_鈴木大拙の_禅と日本文化_6b2a6f32",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -56848,6 +57272,7 @@
       "confidence": 0.84,
       "explanation_key": "mnemosyne.ja.explanation.tanizaki_kagi_鍵_の_性の葛藤",
       "id": "ja_literary_reference_鍵_の_性の葛藤_0173a2a7",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -56990,6 +57415,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E7%8F%BE%E5%92%8C%E6%AD%8C%E9%9B%86",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "祈る",
         "祈ります",
@@ -57230,6 +57656,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.ja.explanation.seinen_no_wa_youth_ring_phrases_青年の環_の_若者の不安",
       "id": "ja_literary_reference_青年の環_の_若者の不安_ff57d503",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -57379,6 +57806,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ja.explanation.japanese_literary_phrases_風と共に去りぬ",
       "id": "ja_literary_reference_風と共に去りぬ_6af1195c",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -57421,6 +57849,7 @@
       "source_url": "https://ja.wikisource.org/wiki/%E6%96%B0%E5%8F%A4%E7%8F%BE%E5%92%8C%E6%AD%8C%E9%9B%86",
       "source_work": "新古今和歌集",
       "source_work_key": "mnemosyne.ja.work.新古今和歌集",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "風にそよぐ楢の葉を見ても",
         "風にそよぐ楢の葉を見る",
@@ -57665,6 +58094,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ja.explanation.takamura_chieko_poetry_高村光太郎の_智恵子抄_の_愛と芸術",
       "id": "ja_literary_reference_高村光太郎の_智恵子抄_の_愛と芸術_b9a4855d",
+      "is_poetic_citation": true,
       "language": "ja",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -57678,6 +58108,7 @@
       "source_url": "https://www.aozora.gr.jp/cards/000043/files/1337_14949.html",
       "source_work": "智恵子抄",
       "source_work_key": "mnemosyne.ja.work.智恵子抄",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "愛と芸術",
         "愛と芸術を",
@@ -57994,6 +58425,7 @@
       "short_explanation": "Ambiguous testimony or conflicting perspectives.",
       "source_author": "Akutagawa Ryūnosuke",
       "source_work": "Rashōmon",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "羅生門"
       ]
@@ -58084,6 +58516,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ja.work.oral_tradition",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "たけやぶやけた",
         "竹藪焼けた",
@@ -58109,6 +58542,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "なかったことにする",
         "なかったことにしない",
@@ -58359,6 +58793,7 @@
       "source_url": "https://kotobank.jp/word/%E4%B8%89%E4%BA%BA%E5%AF%84%E3%82%8C%E3%81%B0%E6%96%87%E7%A5%9E%E3%81%AE%E7%9F%A5%E6%84%88-152925",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "三人寄れば文殊の知恵だ",
         "三人寄れば文殊の知恵だろう",
@@ -58483,6 +58918,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "亀の甲より年の功",
         "亀の甲より年の功という",
@@ -58563,6 +58999,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "二階から目薬",
         "二階から目薬をさす"
@@ -58729,6 +59166,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "兎と狐の因果",
         "兎と狐の物語",
@@ -58757,6 +59195,7 @@
       "source_url": "https://kotobank.jp/word/%E5%85%90%E3%81%AE%E5%85%88%E8%B5%B0%E3%82%8A-122334",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "兎の先走り",
         "兎が先走る",
@@ -58786,6 +59225,7 @@
       "source_url": "https://kotobank.jp/word/%E5%85%90%E3%82%82%E8%A7%92%E3%82%82-122335",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "兎も角も",
         "兎角",
@@ -58814,6 +59254,7 @@
       "source_url": "https://kotobank.jp/word/%E5%87%BA%E3%82%8B%E6%9D%89%E3%81%AF%E6%89%93%E3%81%9F%E3%82%8C%E3%82%8B-152926",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "出る杭は打たれない",
         "出る杭は打たれるだろう",
@@ -59412,6 +59853,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "天狗の隠れ蓑（てんぐのかくれみの）",
         "天狗の隠れ蓑を着る（てんぐのかくれみのをきる）",
@@ -59821,6 +60263,7 @@
       "source_url": "https://kotobank.jp/word/情けは人のためならず-561537",
       "source_work": "Various (Oral tradition)",
       "source_work_key": "mnemosyne.ja.work.various_oral_tradition",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "情けをかける",
         "情けをかけない",
@@ -59885,6 +60328,7 @@
       "source_url": "https://kotobank.jp/word/%E6%83%85%E3%81%8B%E3%81%AF%E4%BA%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AA%E3%82%89%E3%81%9A-44942",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "情けは人のためにあらず",
         "情けは人のためならぬ",
@@ -59914,6 +60358,7 @@
       "source_url": "https://kotobank.jp/word/%E6%95%B5%E3%81%AB%E5%A1%A9%E3%82%92%E9%80%81%E3%82%8B-44941",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "敵に塩を送る",
         "敵に塩を送った",
@@ -60028,6 +60473,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ja.work.oral_tradition",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "時と場合による",
         "時と場合により",
@@ -60268,6 +60714,7 @@
       "source_url": "https://kotobank.jp/word/%E6%A3%9A%E3%81%BC%E3%81%9F%E9%A4%85-152927",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "棚ぼた餅",
         "棚ぼた餅だ",
@@ -60611,6 +61058,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "河童の川流れ（かっぱのかわながれ）",
         "河童の川流れになる（かっぱのかわながれになる）",
@@ -60806,6 +61254,7 @@
       "source_url": "https://kotobank.jp/word/火中の栗を拾う-57870",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "火中の栗を拾う",
         "火中の栗を拾った",
@@ -60906,6 +61355,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "烏の行水",
         "烏の行水のように"
@@ -60968,6 +61418,7 @@
       "source_url": "https://kotobank.jp/word/%E7%89%9B%E3%81%AB%E5%BC%95%E3%81%8B%E3%82%8C%E3%81%A6%E5%96%84%E5%85%89%E5%AF%BA%E5%8F%82%E3%82%8A-122336",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "牛に引かれて善光寺参り",
         "牛に引かれて参る",
@@ -61090,6 +61541,7 @@
       "source_url": "https://kotobank.jp/word/猫の手も借りたい-57871",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "猫の手も借りて",
         "猫の手も借りない",
@@ -61116,6 +61568,7 @@
       "source_url": "https://kotobank.jp/word/%E7%8C%AB%E3%81%AE%E6%89%8B%E3%82%82%E5%80%9F%E3%82%8A%E3%81%9F%E3%81%84-44944",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "猫の手も借りたかった",
         "猫の手も借りられない",
@@ -61155,6 +61608,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "猫の手も借りたい",
         "猫の手も借りたいほど忙しい",
@@ -61209,6 +61663,7 @@
       "source_url": "https://kotobank.jp/word/%E7%8C%BF%E3%82%82%E6%9C%A8%E3%81%8B%E3%82%89%E8%90%BD%E3%81%A1%E3%82%8B-152923",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "猿も木から落ちなかった",
         "猿も木から落ちられない",
@@ -61267,6 +61722,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "猿も木から落ちない",
         "猿も木から落ちた",
@@ -61500,6 +61956,7 @@
       "source_url": "https://kotobank.jp/word/%E7%9F%A5%E3%82%89%E3%81%AC%E3%81%8C%E4%BB%8F-44943",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "知らぬが仏だ",
         "知らぬが仏であった",
@@ -61553,6 +62010,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "知足安分",
         "知足安分たる",
@@ -61685,6 +62143,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "立て板に水",
         "立て板に水の如し"
@@ -62106,6 +62565,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "腹の虫がおさまらない",
         "腹の虫がおさまらぬ",
@@ -62463,6 +62923,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "腹を割る",
         "腹を割って話す"
@@ -62713,6 +63174,7 @@
       "source_url": "https://ja.wikipedia.org/wiki/%E4%B8%80%E6%9C%9F%E4%B8%80%E5%92%8C",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "一期一会ができる"
       ]
@@ -62813,6 +63275,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "蛇の道は蛇",
         "蛇の道は蛇という",
@@ -62839,6 +63302,7 @@
       "source_url": "https://kotobank.jp/word/%E8%9B%99%E3%81%AE%E5%AD%90%E3%81%AF%E8%9B%99-152924",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "蛙の子は蛙でない",
         "蛙の子は蛙だろう",
@@ -62908,6 +63372,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "蛙の子は蛙だ",
         "蛙の子は蛙ではない"
@@ -63209,6 +63674,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "豚に真珠だ",
         "豚に真珠で",
@@ -63461,6 +63927,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "雉も鳴かずば撃たれまい",
         "雉も鳴かずば撃たれる",
@@ -63606,6 +64073,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kanyoku",
       "surface_patterns": [
         "雪の朝二の字二の字の下駄の跡",
         "雪の朝二の字の下駄の跡",
@@ -63685,6 +64153,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "飼い犬に手を噛まれる",
         "飼い犬に手をかまれる",
@@ -63790,6 +64259,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鬼に金棒だ",
         "鬼に金棒で",
@@ -63856,6 +64326,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鰯の頭も信心からだ",
         "鰯の頭も信心からである",
@@ -63962,6 +64433,7 @@
       "source_url": "https://kotobank.jp/word/%E9%B3%A5%E3%81%AE%E7%9B%AE%E9%B7%B9%E3%81%AE%E7%9B%AE-677098",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "yojijukugo",
       "surface_patterns": [
         "鵜の目鷹の目で探す",
         "鵜の目鷹の目になる",
@@ -63989,6 +64461,7 @@
       "source_url": "https://kotobank.jp/word/%E9%B3%A5%E3%81%AE%E7%9C%9F%E4%BC%BC%E3%82%92%E3%81%99%E3%82%8B%E7%83%8F-122333",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鵜の真似をする烏",
         "鵜の真似をした烏",
@@ -64033,6 +64506,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ja.work.various",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鶴の一声",
         "鶴一声"
@@ -64070,6 +64544,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ja.work.oral_tradition",
+      "subcategory": "kotowaza",
       "surface_patterns": [
         "鶴は千年亀は万年",
         "鶴千年亀万年",
