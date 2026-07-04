@@ -30,7 +30,8 @@ Full subcategory backfill complete. Two passes:
 | en | 12,033 | 2,661 | 22% |
 | **TOTAL** | **52,441** | **34,957** | **66.7%** |
 
-Pass 3 (second LLM run with retry/backoff): +6,810 entries. Highlights: grc 100%, la 99%, he 96%, zh 95%, ru 88%. en remains lowest at 27% (~8,759 unclassified — large entry count, diverse sources).
+Pass 3 (second LLM run with retry/backoff): +6,810 entries. Highlights: grc 100%, la 99%, he 96%, zh 95%, ru 88%.
+Pass 4 (en-only targeted run): +362 entries. en at 30% (3,636/12,033). Remaining ~8,397 en entries lack classifiable source signals — practical floor for rule+LLM approach. Total: **35,319 / 52,441 (67.3%)**.
 
 ### Quality-gate implementation (Session 3) and false-positive removal, and wiring of Hindi/Turkish/Finnish plugins (Session 1)
 
