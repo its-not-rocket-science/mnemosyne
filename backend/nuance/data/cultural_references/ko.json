@@ -129,6 +129,7 @@
       "source_url": "https://sillok.history.go.kr/front/page/view.do?pageGubun=02&pageNum=1&leftPageNum=1&leftPageGubun=02&main_page=Y&sillokGubun=01&sillokId=001&studyType=01",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "historical",
       "surface_patterns": [
         "거칠부와 이차돈",
         "거칠부와 이차돈이 순교하다",
@@ -200,6 +201,7 @@
       "source_location": "Chapter 1 (경문)",
       "source_work": "대학 (Great Learning)",
       "source_work_key": "mnemosyne.ko.work.대학_great_learning",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "격물치지",
         "격물치지(格物致知)",
@@ -266,6 +268,7 @@
       "source_url": "https://sillok.history.go.kr/main/main.do",
       "source_work": "경국대전",
       "source_work_key": "mnemosyne.ko.work.경국대전",
+      "subcategory": "historical",
       "surface_patterns": [
         "경국대전",
         "경국대전(은) ~",
@@ -336,6 +339,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%A7%A4%EC%9E%90/%EC%96%91%ED%98%88%EC%99%95%EC%9E%AC",
       "source_work": "맹자 (Mencius)",
       "source_work_key": "mnemosyne.ko.work.맹자_mencius",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "경세제민",
         "경세제민하다",
@@ -422,6 +426,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0/%EA%B6%8C47",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "계백의 결의",
         "계백 장군의 결의",
@@ -519,6 +524,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110000",
       "source_work": "고사십이효",
       "source_work_key": "mnemosyne.ko.work.고사십이효",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "고사십이효",
         "고사십이효(는) ~",
@@ -590,6 +596,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E8%AB%96%E8%A9%B1",
       "source_work": "논어 (Lunyu, Analects)",
       "source_work_key": "mnemosyne.ko.work.논어_lunyu_analects",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "공자",
         "孔子",
@@ -622,6 +629,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "공자 перед孔子也",
         "공자 перед孔子也 하다",
@@ -678,6 +686,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4",
       "source_work": "논어",
       "source_work_key": "mnemosyne.ko.work.논어",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "공자님의 말씀",
         "공자님의 말씀이시다",
@@ -706,6 +715,7 @@
       "source_url": "https://en.wikisource.org/wiki/Confucian_Analects",
       "source_work": "춘추",
       "source_work_key": "mnemosyne.ko.work.춘추",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "공자의 춘추를 읽다",
         "공자의 춘추가 역사서로 알려지다",
@@ -803,6 +813,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Avalokite%C5%9Bvara",
       "source_work": "법화경 (Lotus Sutra)",
       "source_work_key": "mnemosyne.ko.work.법화경_lotus_sutra",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "관음보살의 자비",
         "관음보살의 자비심",
@@ -845,6 +856,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E7%AE%A1%E5%AD%90",
       "source_work": "管子",
       "source_work_key": "mnemosyne.ko.work.管子",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "관자",
         "Guanzǐ",
@@ -885,6 +897,7 @@
       "source_url": "https://ko.wikisource.org/wiki/사기",
       "source_work": "사기 (Records of the Grand Historian)",
       "source_work_key": "mnemosyne.ko.work.사기_records_of_the_grand_historian",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "관포지교",
         "관포지교를 나누다",
@@ -915,6 +928,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%E3%85%81%E3%85%81%E3%85%81%E3%85%81",
       "source_work": "《삼국유사》",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "광한선",
         "광한선에서 놀다",
@@ -944,6 +958,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E8%AB%96%E8%AA%9E",
       "source_work": "논어 (Analects)",
       "source_work_key": "mnemosyne.ko.work.논어_analects",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "교언영색",
         "교언영색(은) ~",
@@ -1000,6 +1015,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4/%EC%95%88%EC%97%B0%ED%8E%B8",
       "source_work": "논어 (論語)",
       "source_work_key": "mnemosyne.ko.work.논어_論語",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "구관쌍절",
         "구관쌍절을 하다",
@@ -1128,6 +1144,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1112548",
       "source_work": "불교대관(佛敎大觀)",
       "source_work_key": "mnemosyne.ko.work.불교대관_佛敎大觀",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "구체관음",
         "구체관음보살",
@@ -1201,6 +1218,7 @@
       "source_license": "public_domain",
       "source_work": "논어 (Analects)",
       "source_work_key": "mnemosyne.ko.work.논어_analects",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "군자",
         "군자다운"
@@ -1326,6 +1344,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Amit%C4%81bha",
       "source_work": "무량수경",
       "source_work_key": "mnemosyne.ko.work.무량수경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "극락세계",
         "극락세계에 가다",
@@ -1366,6 +1385,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EA%B8%88%EA%B0%95%EA%B2%BD",
       "source_work": "금강반야바라밀경 (金剛般若波羅蜜經)",
       "source_work_key": "mnemosyne.ko.work.금강반야바라밀경_金剛般若波羅蜜經",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "금강경",
         "Diamond Sutra",
@@ -1393,6 +1413,7 @@
       "source_url": "https://sutra.tripitaka.net/board/read.php?board=geumgang&no=1",
       "source_work": "반야바라밀다경(金剛般若波羅蜜經)",
       "source_work_key": "mnemosyne.ko.work.반야바라밀다경_金剛般若波羅蜜經",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "반야게송",
         "반야게송을 읽다",
@@ -1420,6 +1441,7 @@
       "source_license": "public_domain",
       "source_work": "반야바라밀다경 (Diamond Sutra)",
       "source_work_key": "mnemosyne.ko.work.반야바라밀다경_diamond_sutra",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "금강경의 반야경",
         "금강경 반야경",
@@ -1448,6 +1470,7 @@
       "source_url": "https://sutra.tripitaka.net/board/read.php?board=geumgang&no=1",
       "source_work": "반야바라밀다경(金剛般若波羅蜜經)",
       "source_work_key": "mnemosyne.ko.work.반야바라밀다경_金剛般若波羅蜜經",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "반야념",
         "반야념을 하다",
@@ -1475,6 +1498,7 @@
       "source_license": "public_domain",
       "source_work": "반야바라밀다경 (Diamond Sutra)",
       "source_work_key": "mnemosyne.ko.work.반야바라밀다경_diamond_sutra",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "금강경의 반야문",
         "금강경 반야문",
@@ -1503,6 +1527,7 @@
       "source_url": "https://suttacentral.net/ko/ks2",
       "source_work": "금강반야바라밀경",
       "source_work_key": "mnemosyne.ko.work.금강반야바라밀경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "금강경의 반야송",
         "반야송을 읽다",
@@ -1532,6 +1557,7 @@
       "source_url": "https://en.wikisource.org/wiki/Diamond_Sutra",
       "source_work": "금강반야바라밀경 (Diamond Sutra)",
       "source_work_key": "mnemosyne.ko.work.금강반야바라밀경_diamond_sutra",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "금강경의 반야심경",
         "반야심경은 금강경의 일부이다",
@@ -1561,6 +1587,7 @@
       "source_url": "https://sutra.tripitaka.net/board/read.php?board=geumgang&no=26",
       "source_work": "반야바라밀다경(金剛般若波羅蜜經)",
       "source_work_key": "mnemosyne.ko.work.반야바라밀다경_金剛般若波羅蜜經",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "반야주",
         "반야주를 외우다",
@@ -1590,6 +1617,7 @@
       "source_url": "https://db.it.go.kr/kbsp/view.do?key=11&bible_key=1001",
       "source_work": "금강반야바라밀경",
       "source_work_key": "mnemosyne.ko.work.금강반야바라밀경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "금강경의 반야파",
         "반야파를 연구하다",
@@ -1617,6 +1645,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Diamond_Sutra#Teachings",
       "source_work": "금강반야바라밀경",
       "source_work_key": "mnemosyne.ko.work.금강반야바라밀경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "불립문자론",
         "불립문자의 가르침",
@@ -1645,6 +1674,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Diamond_Sutra",
       "source_work": "금강반야바라밀경",
       "source_work_key": "mnemosyne.ko.work.금강반야바라밀경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "금강반야경",
         "금강경의 가르침",
@@ -1674,6 +1704,7 @@
       "source_url": "https://en.wikisource.org/wiki/Category:Buddhist_texts",
       "source_work": "Various Buddhist scriptures",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_scriptures",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "금강산의 불설법문",
         "불설법문은 부처님의 가르침이다",
@@ -1731,6 +1762,7 @@
       "source_license": "public_domain",
       "source_work": "《삼국사기》",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "금지옥엽",
         "금지옥엽이다",
@@ -1827,6 +1859,7 @@
       "source_license": "public_domain",
       "source_work": "주역 (周易)",
       "source_work_key": "mnemosyne.ko.work.주역_周易",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "기일원론",
         "기일원론이다",
@@ -1855,6 +1888,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1105543&cid=40942&categoryId=32217",
       "source_work": "성리학의 논리",
       "source_work_key": "mnemosyne.ko.work.성리학의_논리",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "기호론",
         "기호의 이론",
@@ -1969,6 +2003,7 @@
       "source_license": "not_required",
       "source_work": "Various Buddhist sutras",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_sutras",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "나무아미타불",
         "나무아미타불이라",
@@ -1998,6 +2033,7 @@
       "source_url": "https://en.wikisource.org/wiki/Selections_of_Refined_Literature",
       "source_work": "문선 (文選)",
       "source_work_key": "mnemosyne.ko.work.문선_文選",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "낙화유수",
         "낙화유수라",
@@ -2119,6 +2155,7 @@
       "source_url": "https://ko.wikisource.org/wiki/노자",
       "source_work": "노자",
       "source_work_key": "mnemosyne.ko.work.노자",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "노자",
         "노자에 나오는",
@@ -2152,6 +2189,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%8F%84%EB%8D%95%EA%B2%BD",
       "source_work": "도덕경",
       "source_work_key": "mnemosyne.ko.work.도덕경",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "도는 가상의 가가 없다",
         "도는 가상의 가가 없었다",
@@ -2192,6 +2230,7 @@
       "source_url": "https://ko.wikisource.org/wiki/논어",
       "source_work": "논어",
       "source_work_key": "mnemosyne.ko.work.논어",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "논어",
         "논어에 나오는",
@@ -2223,6 +2262,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4",
       "source_work": "논어",
       "source_work_key": "mnemosyne.ko.work.논어",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "군자는 기를 세우고 소인은 이익을 세운다",
         "군자는 기를 세우고 소인은 이익을 세운다네",
@@ -2279,6 +2319,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4",
       "source_work": "논어",
       "source_work_key": "mnemosyne.ko.work.논어",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "논어의 맹자",
         "맹자의 논어",
@@ -2307,6 +2348,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4/%EC%9C%84%EC%A0%95",
       "source_work": "논어",
       "source_work_key": "mnemosyne.ko.work.논어",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "위정편",
         "위정의 편",
@@ -2335,6 +2377,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/논어",
       "source_work": "논어",
       "source_work_key": "mnemosyne.ko.work.논어",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "논어의 인",
         "인(仁)을 행하다",
@@ -2420,6 +2463,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "늑대와 일곱 어린 양",
         "늑대가 일곱 어린 양을",
@@ -2448,6 +2492,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Lotus_Sutra",
       "source_work": "법화경",
       "source_work_key": "mnemosyne.ko.work.법화경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "능엄경",
         "능엄경의",
@@ -2474,6 +2519,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "다정다감하다",
         "다정다감한",
@@ -2532,6 +2578,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "단군이 환웅이다",
         "단군의 환웅",
@@ -2560,6 +2607,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Bodhidharma",
       "source_work": "Various (Buddhist scriptures)",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_scriptures",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "달마대사의 벽동관법",
         "달마대사가 벽동관법을 전수하다",
@@ -2658,6 +2706,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Tao_Te_Ching",
       "source_work": "도덕경",
       "source_work_key": "mnemosyne.ko.work.도덕경",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "도가 있다",
         "도를 얻다",
@@ -2685,6 +2734,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Taoism_in_Korea",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "도교의",
         "도교에서",
@@ -2712,6 +2762,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Taoism_in_Korea",
       "source_work": "도장경",
       "source_work_key": "mnemosyne.ko.work.도장경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "선도사상",
         "선도사상을 따르다",
@@ -2741,6 +2792,7 @@
       "source_url": "https://ko.wikisource.org/wiki/도덕경_(四部叢刊本)/第一章",
       "source_work": "도덕경",
       "source_work_key": "mnemosyne.ko.work.도덕경",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "도",
         "도를 따르다",
@@ -2810,6 +2862,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%8F%99%EA%B2%BD%EB%8C%80%EC%A0%84",
       "source_work": "동경대전",
       "source_work_key": "mnemosyne.ko.work.동경대전",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "동경대전",
         "Donggyeong Daejeon",
@@ -2850,6 +2903,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0/%EA%B6%8C13",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "동명성왕 신화",
         "동명성왕의 신화",
@@ -2920,6 +2974,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E5%8F%B2%E8%A8%98/%E5%8D%B7126",
       "source_work": "사기 (Shiji)",
       "source_work_key": "mnemosyne.ko.work.사기_shiji",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "동방삭",
         "동방삭(東方朔)",
@@ -2968,6 +3023,7 @@
       "source_url": "https://ko.wiktionary.org/wiki/%EB%8F%99%EC%84%9C%EA%B3%A0%EA%B8%88",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "동서고금",
         "동서 고금",
@@ -2994,6 +3050,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1111100",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "동양의 오행",
         "오행 사상",
@@ -3034,6 +3091,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%8F%99%EC%9D%98%EB%B3%B4%EA%B0%90",
       "source_work": "동의보감",
       "source_work_key": "mnemosyne.ko.work.동의보감",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "동의보감",
         "Donguibogam",
@@ -3127,6 +3185,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Du_Fu",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "두보시",
         "두보가 지었다",
@@ -3182,6 +3241,7 @@
       "source_license": "public_domain",
       "source_work": "주역 (周易)",
       "source_work_key": "mnemosyne.ko.work.주역_周易",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "리기일원론",
         "리기일원론이다",
@@ -3210,6 +3270,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "마고할미의 꿈",
         "마고할미 꿈",
@@ -3288,6 +3349,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC/%EA%B6%8C%EC%A0%9C2",
       "source_work": "삼국유사(三國遺事)",
       "source_work_key": "mnemosyne.ko.work.삼국유사_三國遺事",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "만파식적",
         "만파식적의 피리",
@@ -3368,6 +3430,7 @@
       "source_url": "https://ko.wikisource.org/wiki/맹자",
       "source_work": "맹자",
       "source_work_key": "mnemosyne.ko.work.맹자",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "맹자",
         "맹자에 나오는",
@@ -3397,6 +3460,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%A7%9D%EC%9E%90",
       "source_work": "맹자",
       "source_work_key": "mnemosyne.ko.work.맹자",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "맹자님의 말씀",
         "맹자님의 가르침",
@@ -3425,6 +3489,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%A7%9D%EC%9E%90/%EC%96%91%ED%98%88%EC%99%95%EC%83%81",
       "source_work": "맹자",
       "source_work_key": "mnemosyne.ko.work.맹자",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "양혜왕상",
         "양혜왕에게",
@@ -3453,6 +3518,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%A7%81%EC%9E%AC/%EB%A7%81%EC%9E%AC_%ED%95%9C%EA%B5%AD%EA%B5%90%EC%9C%A1%EC%9B%90%EB%AC%B8",
       "source_work": "맹자",
       "source_work_key": "mnemosyne.ko.work.맹자",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "맹자의 양호유전",
         "양호유전",
@@ -3513,6 +3579,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%AA%85%EC%8B%AC%EB%B3%B4%EA%B0%90",
       "source_work": "명심보감",
       "source_work_key": "mnemosyne.ko.work.명심보감",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "명심보감의 인용구",
         "명심보감의 구절",
@@ -3567,6 +3634,7 @@
       "source_license": "public_domain",
       "source_work": "불교어록",
       "source_work_key": "mnemosyne.ko.work.불교어록",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "무소부지",
         "무소부지의",
@@ -3635,6 +3703,7 @@
       "source_license": "public_domain",
       "source_work": "Various Buddhist scriptures",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_scriptures",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "무아",
         "무아사상",
@@ -3690,6 +3759,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9E%A5%EC%9E%90/%EB%AC%B8%EA%B5%AD%EC%A0%84/%EC%A0%9C4%EC%9E%A5_%EC%B2%9C%EC%9A%B4",
       "source_work": "장자",
       "source_work_key": "mnemosyne.ko.work.장자",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "무위이화",
         "무위이화하다",
@@ -3730,6 +3800,7 @@
       "source_license": "public_domain",
       "source_work": "도덕경 (Tao Te Ching) and 장자 (Zhuangzi)",
       "source_work_key": "mnemosyne.ko.work.도덕경_tao_te_ching_and_장자_zhuangzi",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "무위자연의 삶",
         "무위자연을 추구하다",
@@ -3757,6 +3828,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%AC%B4%EC%9E%90/%EC%83%81%ED%8E%B8/%EA%B2%AC%EC%95%A0",
       "source_work": "墨子",
       "source_work_key": "mnemosyne.ko.work.墨子",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "겸애",
         "겸애를 실천하다",
@@ -3786,6 +3858,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%AC%B4%EC%9E%90/%EC%83%81%ED%8E%B8/%EB%B9%84%EA%B3%B5",
       "source_work": "墨子",
       "source_work_key": "mnemosyne.ko.work.墨子",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "비공론",
         "비공론을 주장하다",
@@ -3815,6 +3888,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%AC%B4%EC%9E%90/%EC%83%81%ED%8E%B8/%EC%B2%9C%EC%A7%80",
       "source_work": "墨子",
       "source_work_key": "mnemosyne.ko.work.墨子",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "천지대용",
         "천지대용의 원칙",
@@ -3856,6 +3930,7 @@
       "source_license": "public_domain",
       "source_work": "Maitreyavyakarana (various Buddhist sutras)",
       "source_work_key": "mnemosyne.ko.work.maitreyavyakarana_various_buddhist_sutras",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "미륵",
         "미륵부처님",
@@ -3882,6 +3957,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Heart_Sutra",
       "source_work": "반야심경",
       "source_work_key": "mnemosyne.ko.work.반야심경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "반야심경",
         "반야심경을 읽다",
@@ -4032,6 +4108,7 @@
       "source_license": "public_domain",
       "source_work": "Various Buddhist sutras (e.g., Avatamsaka Sutra, Mahā-prajñāpāramitā-śāstra)",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_sutras_e_g_avatamsaka_sutra_mahā_",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "백팔번뇌",
         "백팔번뇌(百八煩惱)",
@@ -4057,6 +4134,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "봉래산",
         "봉래산은",
@@ -4115,6 +4193,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Avatamsaka_Sutra",
       "source_work": "불경 (Buddhist sutras)",
       "source_work_key": "mnemosyne.ko.work.불경_buddhist_sutras",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "일체 유위법은 인연소생이다",
         "일체 유위법은 인연으로 소생한다",
@@ -4143,6 +4222,7 @@
       "source_url": "https://suttacentral.net/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "연기설을 설하다",
         "연기설을 설한",
@@ -4169,6 +4249,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Pratītyasamutpāda",
       "source_work": "불경 (Buddhist sutras)",
       "source_work_key": "mnemosyne.ko.work.불경_buddhist_sutras",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "연기설에 따른 인연의 법칙",
         "연기설은 인연의 법칙을 설명한다",
@@ -4197,6 +4278,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9C%A1%EC%A1%B0%EB%8B%A8%EA%B2%BD",
       "source_work": "육조단경",
       "source_work_key": "mnemosyne.ko.work.육조단경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "불립문자",
         "불립문자를 주장하다",
@@ -4225,6 +4307,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Lotus_Sutra",
       "source_work": "법화경",
       "source_work_key": "mnemosyne.ko.work.법화경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "불생불멸",
         "불생불멸의",
@@ -4361,6 +4444,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%82%AC%EB%8B%A8%EC%B9%9C%EC%A0%95",
       "source_work": "성리학의 대관(大觀)",
       "source_work_key": "mnemosyne.ko.work.성리학의_대관_大觀",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "사단칠정",
         "사단의 칠정",
@@ -4485,6 +4569,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%82%AC%EC%84%9C%EC%82%BC%EA%B2%BD",
       "source_work": "사서삼경",
       "source_work_key": "mnemosyne.ko.work.사서삼경",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "사서삼경",
         "사서삼경의",
@@ -4513,6 +4598,7 @@
       "source_url": "https://en.wikisource.org/wiki/Category:Confucian_classics",
       "source_work": "Various (Confucian canon)",
       "source_work_key": "mnemosyne.ko.work.various_confucian_canon",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "사서오경(四書五經)",
         "사서오경의 경전(經典)",
@@ -4553,6 +4639,7 @@
       "source_license": "public_domain",
       "source_work": "초전법륜경 (Dhammacakkappavattana Sutta)",
       "source_work_key": "mnemosyne.ko.work.초전법륜경_dhammacakkappavattana_sutta",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "사성제",
         "네 가지 진리",
@@ -4591,6 +4678,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%82%AC%EC%9C%A1%EC%8B%A0",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "사육신",
         "Sayuksin",
@@ -4709,6 +4797,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B0%95%ED%96%89%EC%8B%A4%EB%8F%84",
       "source_work": "삼강행실도",
       "source_work_key": "mnemosyne.ko.work.삼강행실도",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "삼강행실도",
         "삼강행실",
@@ -4734,6 +4823,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "삼국유사의 유례",
         "삼국유사의 유례가 있다",
@@ -4806,6 +4896,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%A7%80/%EC%9C%84%EC%84%9C/%EB%8F%99%EC%9D%B4%EC%A0%84",
       "source_work": "삼국지 위서 동이전",
       "source_work_key": "mnemosyne.ko.work.삼국지_위서_동이전",
+      "subcategory": "historical",
       "surface_patterns": [
         "삼한",
         "삼한 시대",
@@ -4903,6 +4994,7 @@
       "source_url": "https://ko.wikisource.org/wiki/반야심경",
       "source_work": "반야심경 (Heart Sutra)",
       "source_work_key": "mnemosyne.ko.work.반야심경_heart_sutra",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "색즉시공 공즉시색",
         "색이 곧 공이요 공이 곧 색",
@@ -4959,6 +5051,7 @@
       "source_url": "https://en.wikisource.org/wiki/Book_of_Documents",
       "source_work": "書經",
       "source_work_key": "mnemosyne.ko.work.書經",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "서경(書經)",
         "서경의 경(經)",
@@ -5000,6 +5093,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E8%A5%BF%E9%81%8A%E8%A8%98",
       "source_work": "西遊記 (서유기)",
       "source_work_key": "mnemosyne.ko.work.西遊記_서유기",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "서유기",
         "Journey to the West",
@@ -5027,6 +5121,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "선",
         "선이다",
@@ -5054,6 +5149,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "선문답",
         "선문답을 하다",
@@ -5082,6 +5178,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110604&cid=40942&categoryId=32214",
       "source_work": "선문정로",
       "source_work_key": "mnemosyne.ko.work.선문정로",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "선문정로",
         "선문정로를 걷다",
@@ -5110,6 +5207,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%84%A0%EC%9A%B0%ED%9B%84%EB%9E%99",
       "source_work": "論語",
       "source_work_key": "mnemosyne.ko.work.論語",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "선우후락",
         "선우후락을 하다",
@@ -5139,6 +5237,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "선종",
         "선종이다",
@@ -5238,6 +5337,7 @@
       "source_location": "Chapter 1 (경문)",
       "source_work": "대학 (Great Learning)",
       "source_work_key": "mnemosyne.ko.work.대학_great_learning",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "성의정심",
         "성의정심(誠意正心)",
@@ -5263,6 +5363,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EC%A7%81%EB%A6%AC",
       "source_work": "주역(周易)",
       "source_work_key": "mnemosyne.ko.work.주역_周易",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "성즉리",
         "성은 곧 이다",
@@ -5303,6 +5404,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Ten_Diagrams_on_Sage_Learning",
       "source_work": "성학십도",
       "source_work_key": "mnemosyne.ko.work.성학십도",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "성학십도",
         "성학십도(聖學十圖)",
@@ -5332,6 +5434,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%A3%BC%EC%9E%90%EA%B0%80%EB%A0%88/%EA%B0%80%EB%A0%88%EB%AC%B8%EB%8B%B5",
       "source_work": "주자가례",
       "source_work_key": "mnemosyne.ko.work.주자가례",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "세속오계",
         "세속오계의",
@@ -5360,6 +5463,7 @@
       "source_license": "public_domain",
       "source_work": "논어 (Analects)",
       "source_work_key": "mnemosyne.ko.work.논어_analects",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "소인",
         "소인배"
@@ -5398,6 +5502,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E5%B0%8F%E5%AD%B8",
       "source_work": "小學",
       "source_work_key": "mnemosyne.ko.work.小學",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "소학",
         "小學",
@@ -5453,6 +5558,7 @@
       "source_license": "public_domain",
       "source_work": "대학 (Great Learning)",
       "source_work_key": "mnemosyne.ko.work.대학_great_learning",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "수신제가치국평천하",
         "수신제가",
@@ -5543,6 +5649,7 @@
       "source_url": "https://en.wikisource.org/wiki/Book_of_Odes",
       "source_work": "詩經",
       "source_work_key": "mnemosyne.ko.work.詩經",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "시경(詩經)",
         "시경의 시(詩)",
@@ -5630,6 +5737,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Guanyin#Korean_representations",
       "source_work": "Various (Buddhist art and literature)",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_art_and_literature",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "신수관음",
         "신수관음상",
@@ -5658,6 +5766,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110604&cid=40942&categoryId=32214",
       "source_work": "Various (Neo-Confucian and Buddhist texts)",
       "source_work_key": "mnemosyne.ko.work.various_neo_confucian_and_buddhist_texts",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "심신일여",
         "심신이 일여하다",
@@ -5856,6 +5965,7 @@
       "source_url": "https://ko.wikisource.org/wiki/전국책",
       "source_work": "전국책 (Strategies of the Warring States)",
       "source_work_key": "mnemosyne.ko.work.전국책_strategies_of_the_warring_states",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "어부지리",
         "어부지리를 보다",
@@ -5898,6 +6008,7 @@
       "source_license": "public_domain",
       "source_work": "불교 경전 (Various sutras)",
       "source_work_key": "mnemosyne.ko.work.불교_경전_various_sutras",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "업보",
         "카르마의 결과",
@@ -5966,6 +6077,7 @@
       "source_location": "Chapter 1, Tale of Yeonorang and Seonyeo",
       "source_work": "Samguk Yusa",
       "source_work_key": "mnemosyne.ko.work.samguk_yusa",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "연오랑과 세오녀",
         "연오랑 세오녀",
@@ -6004,6 +6116,7 @@
       "source_license": "public_domain",
       "source_work": "Various Confucian texts (e.g., Guanzi, Book of Rites)",
       "source_work_key": "mnemosyne.ko.work.various_confucian_texts_e_g_guanzi_book_of_rites",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "예의염치",
         "예의염치(禮義廉恥)",
@@ -6110,6 +6223,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC/%EA%B6%8C%EC%A0%9C1",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "웅녀",
         "웅녀는",
@@ -6138,6 +6252,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Avatamsaka_Sutra",
       "source_work": "원각경 (Avataṃsaka Sūtra)",
       "source_work_key": "mnemosyne.ko.work.원각경_avataṃsaka_sūtra",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "원각경 정신",
         "원각경의 정신",
@@ -6195,6 +6310,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Chinese_cultural_deities#Yuelao",
       "source_work": "Various (oral tradition)",
       "source_work_key": "mnemosyne.ko.work.various_oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "월하노인",
         "월하노인이",
@@ -6293,6 +6409,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9C%A0%EA%B5%90%EA%B2%BD%EC%A0%84",
       "source_work": "논어, 맹자, 시경 등",
       "source_work_key": "mnemosyne.ko.work.논어_맹자_시경_등",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "유교경전",
         "유교의 경전",
@@ -6324,6 +6441,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4/%ED%95%99%EC%9D%B4",
       "source_work": "논어",
       "source_work_key": "mnemosyne.ko.work.논어",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "유교의 삼강오륜",
         "삼강오륜의",
@@ -6351,6 +6469,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4",
       "source_work": "논어",
       "source_work_key": "mnemosyne.ko.work.논어",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "유교의 인의예지",
         "인의예지",
@@ -6380,6 +6499,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110198&cid=40942&categoryId=32272",
       "source_work": "맹자 (Mencius)",
       "source_work_key": "mnemosyne.ko.work.맹자_mencius",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "효는 인의 근본이다",
         "효는 인의 근본이라는 말",
@@ -6420,6 +6540,7 @@
       "source_license": "public_domain",
       "source_work": "불교 경전 (Various sutras)",
       "source_work_key": "mnemosyne.ko.work.불교_경전_various_sutras",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "윤회",
         "생사의 윤회",
@@ -6446,6 +6567,7 @@
       "source_url": "https://sillok.history.go.kr/front/search/searchDetail.do?levelId=bs_001",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "기러기 편지",
         "기러기 편지를 보내다",
@@ -6474,6 +6596,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Yin_and_yang",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "음양오행의",
         "음양오행론",
@@ -6516,6 +6639,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC/%EA%B6%8C%EC%A0%84%EC%9D%98%EC%83%81",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "의상대사",
         "의상",
@@ -6542,6 +6666,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Nirvana",
       "source_work": "Various Buddhist scriptures",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_scriptures",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "의지해탈",
         "의지해탈을 이루다",
@@ -6569,6 +6694,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1105544&cid=40942&categoryId=32217",
       "source_work": "성리학의 기본원리",
       "source_work_key": "mnemosyne.ko.work.성리학의_기본원리",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "이기론",
         "이와 기",
@@ -6638,6 +6764,7 @@
       "source_license": "public_domain",
       "source_work": "Various Buddhist scriptures",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_scriptures",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "인과응보",
         "인과응보는 있다",
@@ -6663,6 +6790,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Cheondoism",
       "source_work": "Donghak Gyeongjeon",
       "source_work_key": "mnemosyne.ko.work.donghak_gyeongjeon",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "인내천",
         "인내천이다",
@@ -6690,6 +6818,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1105542&cid=40942&categoryId=32217",
       "source_work": "성학십도(聖學十圖)",
       "source_work_key": "mnemosyne.ko.work.성학십도_聖學十圖",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "인심도심",
         "인심과 도심",
@@ -6818,6 +6947,7 @@
       "source_license": "public_domain",
       "source_work": "화엄경 (Avatamsaka Sutra)",
       "source_work_key": "mnemosyne.ko.work.화엄경_avatamsaka_sutra",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "일체유심조",
         "일체가 유심조",
@@ -6844,6 +6974,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4",
       "source_work": "논어 (論語)",
       "source_work_key": "mnemosyne.ko.work.논어_論語",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "입신양명",
         "입신양명하다",
@@ -6999,6 +7130,7 @@
       "source_url": "https://ko.wikisource.org/wiki/장자",
       "source_work": "장자",
       "source_work_key": "mnemosyne.ko.work.장자",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "장자",
         "장자에 나오는",
@@ -7028,6 +7160,7 @@
       "source_url": "https://en.wikisource.org/wiki/Zhuangzi",
       "source_work": "장자 Zhuangzi",
       "source_work_key": "mnemosyne.ko.work.장자_zhuangzi",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "장자 사상",
         "장자의 사상",
@@ -7057,6 +7190,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9E%A5%EC%9E%90/%EB%82%B4%ED%8E%B8/%EC%9E%AC%EC%9A%A9%EC%9C%BC%EB%A1%9C_%EA%B2%83%EC%9D%84_%EC%9C%84%ED%95%9C_%EB%AC%B8%EC%9E%AC",
       "source_work": "장자",
       "source_work_key": "mnemosyne.ko.work.장자",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "적선설",
         "적선설을 주장하다",
@@ -7086,6 +7220,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9E%A5%EC%9E%90",
       "source_work": "장자 (莊子)",
       "source_work_key": "mnemosyne.ko.work.장자_莊子",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "장자의 호접몽",
         "호접몽을 꾸다",
@@ -7115,6 +7250,7 @@
       "source_url": "https://ko.wikisource.org/wiki/장자_(四部叢刊本)/養生主",
       "source_work": "장자",
       "source_work_key": "mnemosyne.ko.work.장자",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "호치지",
         "호치지를 하다",
@@ -7144,6 +7280,7 @@
       "source_url": "https://en.wikipedia.org/wiki/%C5%8Cm",
       "source_work": "Various (Buddhist scriptures)",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_scriptures",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "절대무",
         "절대무는",
@@ -7185,6 +7322,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%A0%95%EA%B0%90%EB%A1%9D",
       "source_work": "정감록",
       "source_work_key": "mnemosyne.ko.work.정감록",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "정감록",
         "Jeonggamnok",
@@ -7212,6 +7350,7 @@
       "source_url": "https://sillok.history.go.kr/front/inspection/inspectionDetail.do?levelId=ssg_10010010",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "조선의 건국신화",
         "조선의 건국신화는",
@@ -7254,6 +7393,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%A1%B0%EC%8B%A0%EC%A0%84",
       "source_work": "조신전 (調信傳)",
       "source_work_key": "mnemosyne.ko.work.조신전_調信傳",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "조신의 꿈",
         "조신 꿈",
@@ -7281,6 +7421,7 @@
       "source_url": "https://sillok.history.go.kr/front/inspection/inspectionDetail.do?inspId=00001",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "주몽신화",
         "주몽신화는",
@@ -7321,6 +7462,7 @@
       "source_license": "public_domain",
       "source_work": "주역 (I Ching)",
       "source_work_key": "mnemosyne.ko.work.주역_i_ching",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "주역",
         "주역을 공부하다",
@@ -7375,6 +7517,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Madhyamaka",
       "source_work": "Mūlamadhyamakakārikā (根本中論)",
       "source_work_key": "mnemosyne.ko.work.mūlamadhyamakakārikā_根本中論",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "중관학파",
         "중관 학파는",
@@ -7403,6 +7546,7 @@
       "source_license": "public_domain",
       "source_work": "중용 (Doctrine of the Mean)",
       "source_work_key": "mnemosyne.ko.work.중용_doctrine_of_the_mean",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "중용",
         "중용의 도"
@@ -7485,6 +7629,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110201&cid=40942&categoryId=32272",
       "source_work": "동경대전 (Donggyeong Daejeon)",
       "source_work_key": "mnemosyne.ko.work.동경대전_donggyeong_daejeon",
+      "subcategory": "religious",
       "surface_patterns": [
         "인내천을 믿다",
         "인내천의 뜻",
@@ -7557,6 +7702,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Tiantai",
       "source_work": "법화경 Lotus Sutra",
       "source_work_key": "mnemosyne.ko.work.법화경_lotus_sutra",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "천태종 교리",
         "천태종의 교리",
@@ -7682,6 +7828,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E6%98%A5%E7%A7%8B",
       "source_work": "춘추 (春秋, Spring and Autumn Annals)",
       "source_work_key": "mnemosyne.ko.work.춘추_春秋_spring_and_autumn_annals",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "춘추필법",
         "Chunchu Pilbeop",
@@ -7823,6 +7970,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E5%8F%B2%E8%A8%98/%E5%8D%B703",
       "source_work": "史記 (Records of the Grand Historian)",
       "source_work_key": "mnemosyne.ko.work.史記_records_of_the_grand_historian",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "토끼의 간을 요구하다",
         "토끼의 간을 요구한다",
@@ -7909,6 +8057,7 @@
       "source_url": "https://ko.wikisource.org/wiki/진서",
       "source_work": "진서 (Book of Jin)",
       "source_work_key": "mnemosyne.ko.work.진서_book_of_jin",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "파죽지세",
         "파죽지세로 나아가다",
@@ -7950,6 +8099,7 @@
       "source_license": "public_domain",
       "source_work": "초전법륜경 (Dhammacakkappavattana Sutta)",
       "source_work_key": "mnemosyne.ko.work.초전법륜경_dhammacakkappavattana_sutta",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "팔정도",
         "여덟 가지 올바른 길",
@@ -7976,6 +8126,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%95%9C%EB%B9%84%EC%9E%90/%EB%82%9C%EC%8B%A0%EC%B2%A9",
       "source_work": "한비자",
       "source_work_key": "mnemosyne.ko.work.한비자",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "난신첩",
         "난신한",
@@ -8004,6 +8155,7 @@
       "source_url": "https://ko.wikisource.org/wiki/한비자_(四部叢刊本)/五蠹",
       "source_work": "한비자",
       "source_work_key": "mnemosyne.ko.work.한비자",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "법가사상",
         "법가 사상을 따르다",
@@ -8034,6 +8186,7 @@
       "source_url": "https://www.nl.go.kr/collection/folk",
       "source_work": "조선민속총서",
       "source_work_key": "mnemosyne.ko.work.조선민속총서",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "해와 달이 된 오누이 신화",
         "해와 달이 된 오누이에서",
@@ -8072,6 +8225,7 @@
       "source_license": "public_domain",
       "source_work": "불교 경전 (Various sutras)",
       "source_work_key": "mnemosyne.ko.work.불교_경전_various_sutras",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "해탈",
         "열반",
@@ -8097,6 +8251,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Heart_Sutra",
       "source_work": "대반야바라밀경",
       "source_work_key": "mnemosyne.ko.work.대반야바라밀경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "허공장",
         "허공장을 얻다",
@@ -8137,6 +8292,7 @@
       "source_location": "Chapter 1, Silla foundation myth",
       "source_work": "Samguk Yusa",
       "source_work_key": "mnemosyne.ko.work.samguk_yusa",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "혁거세",
         "혁거세 거서간",
@@ -8220,6 +8376,7 @@
       "source_location": "제2편 제물론 (On Leveling All Things)",
       "source_work": "장자 (Zhuangzi)",
       "source_work_key": "mnemosyne.ko.work.장자_zhuangzi",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "호접지몽의 교훈",
         "호접지몽을 이야기하다",
@@ -8288,6 +8445,7 @@
       "source_url": "https://ko.wikisource.org/wiki/역대명화기",
       "source_work": "역대명화기 (Records of Famous Paintings through the Ages)",
       "source_work_key": "mnemosyne.ko.work.역대명화기_records_of_famous_paintings_through_the_ages",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "화룡점정",
         "화룡점정을 찍다",
@@ -8330,6 +8488,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%8C%80%EB%B0%A9%EA%B4%91%EB%B6%88%ED%99%94%EC%97%84%EA%B2%BD",
       "source_work": "대방광불화엄경 (Avatamsaka Sutra)",
       "source_work_key": "mnemosyne.ko.work.대방광불화엄경_avatamsaka_sutra",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "화엄경",
         "대방광불화엄경",
@@ -8356,6 +8515,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Avatamsaka_Sutra",
       "source_work": "화엄경",
       "source_work_key": "mnemosyne.ko.work.화엄경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "화엄경 사상",
         "화엄경의 사상",
@@ -8383,6 +8543,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "환골탈태",
         "환골탈태하다",
@@ -8411,6 +8572,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "환생하다",
         "환생한",
@@ -8438,6 +8600,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Huangdi_Neijing",
       "source_work": "황제내경",
       "source_work_key": "mnemosyne.ko.work.황제내경",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "황제내경",
         "황제내경의 내용",
@@ -8467,6 +8630,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4/%EA%B5%AC%EC%96%91%EC%9E%AC",
       "source_work": "논어 (Analects)",
       "source_work_key": "mnemosyne.ko.work.논어_analects",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "효시",
         "효시가 되다",
@@ -8507,6 +8671,7 @@
       "source_license": "public_domain",
       "source_work": "Various Confucian classics (Analects, Mencius, etc.)",
       "source_work_key": "mnemosyne.ko.work.various_confucian_classics_analects_mencius_etc",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "효제충신",
         "효제충신(孝悌忠信)",
@@ -8536,6 +8701,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/3·1운동",
       "source_work": "3·1 운동 선언문",
       "source_work_key": "mnemosyne.ko.work.3_1_운동_선언문",
+      "subcategory": "historical",
       "surface_patterns": [
         "3·1 운동",
         "삼일 운동",
@@ -8577,6 +8743,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "4.19혁명",
         "4·19 혁명",
@@ -8614,6 +8781,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "5.18광주민주화운동",
         "5·18 광주 민주화 운동",
@@ -8651,6 +8819,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "6.25전쟁",
         "한국전쟁",
@@ -8676,6 +8845,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/6%EC%9B%94_29%EC%9D%BC_%EC%84%A0%EC%96%B8",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "6·29선언",
         "6·29 선언을 발표하다",
@@ -8704,6 +8874,7 @@
       "source_url": "https://en.wikipedia.org/wiki/July_4_Statement",
       "source_work": "7·4남북 공동성명",
       "source_work_key": "mnemosyne.ko.work.7_4남북_공동성명",
+      "subcategory": "historical",
       "surface_patterns": [
         "7·4남북 공동성명",
         "7·4 공동성명",
@@ -8759,6 +8930,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "이웃집 문 두드리기",
         "이웃집에 소금 달라고 문 두드리기",
@@ -8809,6 +8981,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%EA%B0%95%EC%9B%90%EB%8F%84_%ED%8F%AC%EC%88%98",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "강원도 포수"
       ]
@@ -8855,6 +9028,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%EA%B5%90%ED%95%98%EC%A7%88%EC%89%AC",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "교하질쉬"
       ]
@@ -8878,6 +9052,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%EA%B8%B0%EC%B0%A8_%EB%96%A0%EB%82%98%EA%B3%A0_%EC%86%90_%ED%9D%94%EB%93%A4%EB%8B%A4",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "기차 떠나고 손 흔들다"
       ]
@@ -9467,6 +9642,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%EC%82%AC%EB%AA%85%EB%8B%B9%EC%9D%98_%EC%82%AC%EC%B2%AB%EB%B0%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "사명당의 사첫방"
       ]
@@ -10236,6 +10412,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "가락의 유파",
         "가락의 유파를 잇다",
@@ -10264,6 +10441,7 @@
       "source_license": "not_required",
       "source_work": "탈춤 (Mask Dance)",
       "source_work_key": "mnemosyne.ko.work.탈춤_mask_dance",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "가면극의 가면 뒤집기",
         "가면 뒤집기",
@@ -10290,6 +10468,7 @@
       "source_license": "not_required",
       "source_work": "탈춤 (Mask Dance)",
       "source_work_key": "mnemosyne.ko.work.탈춤_mask_dance",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "가면극의 가면 벗기",
         "가면 벗기",
@@ -10317,6 +10496,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "가면극의 가면극",
         "가면극은 가면극의 한 형태이다",
@@ -10383,6 +10563,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110100&cid=40942&categoryId=32104",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "가야금 산조의 곡조",
         "가야금 산조 곡조",
@@ -10423,6 +10604,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "간장 공장 공장장",
         "간장 공장 공장장은"
@@ -10447,6 +10629,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "갈매기",
         "갈매기는",
@@ -10515,6 +10698,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "갑신정변",
         "갑신정변 사건",
@@ -10540,6 +10724,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1107356&cid=40942&categoryId=32274",
       "source_work": "Various (Korean shamanic rituals)",
       "source_work_key": "mnemosyne.ko.work.various_korean_shamanic_rituals",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "강림도령",
         "강림도령이 오다",
@@ -10605,6 +10790,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EA%B3%A0%EB%A0%A4%EC%82%AC",
       "source_work": "고려사",
       "source_work_key": "mnemosyne.ko.work.고려사",
+      "subcategory": "historical",
       "surface_patterns": [
         "귀주대첩",
         "거란의 3차 침입",
@@ -10660,6 +10846,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "검은머리 White Horse",
         "검은머리 화이트 호스",
@@ -10758,6 +10945,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "계명구도의 법칙",
         "계명구도의 법칙을 따르다",
@@ -10783,6 +10971,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "계명구의 기",
         "계명구의 기운",
@@ -10825,6 +11014,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0/%EA%B6%8C47",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "계백 장군",
         "General Gyebaek",
@@ -10852,6 +11042,7 @@
       "source_url": "https://sillok.history.go.kr/front/search/searchDetail.do?levelId=bs_001",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "황산벌 전투",
         "계백 장군의 최후",
@@ -10966,6 +11157,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "천리장성",
         "천리장성을 쌓다",
@@ -11007,6 +11199,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "고려 건국",
         "고려의 건국",
@@ -11046,6 +11239,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "고려청자",
         "청자",
@@ -11135,6 +11329,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "고슴도치 새끼 예뻐",
         "고슴도치 새끼 예뻐해",
@@ -11161,6 +11356,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "고슴도치 새끼가 예쁘네요",
         "고슴도치 새끼가 예뻐요",
@@ -11186,6 +11382,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "고슴도치의 새끼 사랑",
         "고슴도치 새끼 사랑",
@@ -11299,6 +11496,7 @@
       "source_license": "not_required",
       "source_work": "Various classical novels",
       "source_work_key": "mnemosyne.ko.work.various_classical_novels",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "고전소설의 가무극",
         "가무극으로 각색하다",
@@ -11327,6 +11525,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "갑신정변으로",
         "갑신정변은",
@@ -11354,6 +11553,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "을미사변으로",
         "을미사변은",
@@ -11461,6 +11661,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "골계미의 상징으로 여겨지다",
         "골계미가 웃음을 자아내다",
@@ -11547,6 +11748,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Korean_folklore",
       "source_work": "Various (Korean folktales)",
       "source_work_key": "mnemosyne.ko.work.various_korean_folktales",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "곰과 호랑이",
         "곰이 호랑이를 낳다",
@@ -11576,6 +11778,7 @@
       "source_url": "https://sillok.history.go.kr/front/main.do",
       "source_work": "고려사",
       "source_work_key": "mnemosyne.ko.work.고려사",
+      "subcategory": "historical",
       "surface_patterns": [
         "공민왕의 반원정책",
         "공민왕이 원나라에 반기를 들었다",
@@ -11617,6 +11820,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/관동팔경",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "관동팔경",
         "관동팔경의 경치",
@@ -11643,6 +11847,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "관현악곡",
         "관현악곡을 연주하다",
@@ -11723,6 +11928,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EA%B4%91%EA%B0%9C%ED%86%A0%EC%99%95%EB%A6%89%EB%B9%84",
       "source_work": "광개토왕릉비",
       "source_work_key": "mnemosyne.ko.work.광개토왕릉비",
+      "subcategory": "historical",
       "surface_patterns": [
         "광개토왕릉비",
         "광개토대왕비",
@@ -11749,6 +11955,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "광대놀이의 신장수",
         "신장수 광대놀이",
@@ -11894,6 +12101,7 @@
       "source_license": "not_required",
       "source_work": "Various (oral tradition)",
       "source_work_key": "mnemosyne.ko.work.various_oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "광대의 눈물",
         "광대의 눈물을 흘리다",
@@ -12085,6 +12293,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B4%91%EB%B3%B5%EA%B5%B0",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "광복군",
         "대한민국 임시정부 광복군",
@@ -12124,6 +12333,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B4%91%EB%B3%B5%EC%A0%88",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "광복절",
         "8.15 광복절",
@@ -12164,6 +12374,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B4%91%EC%A3%BC_%ED%95%99%EC%83%9D_%EC%9A%B4%EB%8F%99",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "광주학생운동",
         "광주 학생 항일운동",
@@ -12202,6 +12413,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%B6%98%ED%96%A5%EC%A0%84",
       "source_work": "춘향전",
       "source_work_key": "mnemosyne.ko.work.춘향전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "광한루",
         "Gwanghallu",
@@ -12271,6 +12483,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B4%91%ED%95%B4%EA%B5%B0",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "광해군",
         "King Gwanghaegun",
@@ -12301,6 +12514,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "Various (historical records)",
       "source_work_key": "mnemosyne.ko.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "광해군의 왕권 강화",
         "광해군의 권력 강화",
@@ -12329,6 +12543,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "광해군일기",
       "source_work_key": "mnemosyne.ko.work.광해군일기",
+      "subcategory": "historical",
       "surface_patterns": [
         "광해군의 중립 외교",
         "광해군의 외교 정책",
@@ -12357,6 +12572,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "광화문의 거위",
         "광화문 거위",
@@ -12455,6 +12671,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "구미호",
         "구미호 전설",
@@ -12480,6 +12697,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "구미호의 변신",
         "구미호가 변신하다",
@@ -12508,6 +12726,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "구중궁궐",
         "구중궁궐의",
@@ -12535,6 +12754,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "국화 옆의 대나무",
         "국화 옆 대나무",
@@ -12563,6 +12783,7 @@
       "source_license": "not_required",
       "source_work": "Various (folklore)",
       "source_work_key": "mnemosyne.ko.work.various_folklore",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "그림 속의 물고기",
         "그림 속의 물고기가 살아 움직이다",
@@ -12618,6 +12839,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "금강산",
         "금강산은",
@@ -12672,6 +12894,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "금강산의 관음굴",
         "관음굴은 금강산의 동굴이다",
@@ -12700,6 +12923,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "금강산의 관음봉",
         "관음봉은 금강산의 봉우리이다",
@@ -12785,6 +13009,7 @@
       "source_url": "https://encykorea.aks.ac.kr/Article/EK100000000000000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "관음전",
         "관음전이다",
@@ -12840,6 +13065,7 @@
       "source_license": "public_domain",
       "source_work": "Various Korean cultural texts",
       "source_work_key": "mnemosyne.ko.work.various_korean_cultural_texts",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "금강산의 이름은 금강에서 유래하였다",
         "금강산의 금강은 부처의 삼신에서 유래하였다",
@@ -12893,6 +13119,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "금강산의 수양산",
         "수양산은 금강산의 산봉우리이다",
@@ -12921,6 +13148,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "금관가악",
         "금관가악을 연주하다",
@@ -12950,6 +13178,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/악학궤범",
       "source_work": "악학궤범",
       "source_work_key": "mnemosyne.ko.work.악학궤범",
+      "subcategory": "music",
       "surface_patterns": [
         "금관가야금을 연주하다",
         "금관가야금 소리가 아름답다",
@@ -12979,6 +13208,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "금관과 옥관",
         "금관과 옥관의 조화",
@@ -13007,6 +13237,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "금관옥관의 조화",
         "금관옥관의 조화로운 모습",
@@ -13090,6 +13321,7 @@
       "source_url": "https://sillok.history.go.kr/main/main.do",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "금관옥관의 조화로운 전통",
         "금관옥관의 조화로운 전통이",
@@ -13119,6 +13351,7 @@
       "source_url": "https://sillok.history.go.kr/main/main.do",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "historical",
       "surface_patterns": [
         "금관옥관의 조화로운 전통 예술",
         "금관옥관의 조화로운 전통 예술이",
@@ -13147,6 +13380,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "금관옥관의 조화로운 전통 예술적 아름다움",
         "금관옥관의 조화로운 전통의 예술적 아름다움",
@@ -13305,6 +13539,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "기우제를 지내다",
         "기우제를 하다",
@@ -13361,6 +13596,7 @@
       "source_url": "https://sillok.history.go.kr/front/search/searchView.do?classId=01&termId=00000022",
       "source_work": "선조실록",
       "source_work_key": "mnemosyne.ko.work.선조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "기축옥사",
         "기축옥사가 일어나다",
@@ -13416,6 +13652,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "길쌈신령을 모시다",
         "길쌈신령에게 빌다",
@@ -13457,6 +13694,7 @@
       "source_license": "not_required",
       "source_work": "Various historical records",
       "source_work_key": "mnemosyne.ko.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "김구",
         "김구 선생님",
@@ -13511,6 +13749,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "까치설날",
         "까치설날에",
@@ -13624,6 +13863,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "꼭두각시의 장단",
         "꼭두각시의 장단을 맞추다",
@@ -13682,6 +13922,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "나룻배를 타다",
         "나룻배를 타고 가다",
@@ -13737,6 +13978,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110300&cid=40942&categoryId=31003",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "나주댁의 사랑",
         "나주댁의 사랑은",
@@ -13764,6 +14006,7 @@
       "source_license": "not_required",
       "source_work": "Various Buddhist texts",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_texts",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "십팔나한상",
         "나한 십팔나한",
@@ -13835,6 +14078,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%82%A8%EB%AA%85%EC%A7%91",
       "source_work": "남명집 (南冥集)",
       "source_work_key": "mnemosyne.ko.work.남명집_南冥集",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "남명 조식",
         "조식",
@@ -13873,6 +14117,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical records",
       "source_work_key": "mnemosyne.ko.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "남이 장군",
         "남이 장군님",
@@ -13912,6 +14157,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%82%A8%ED%95%9C%EC%82%B0%EC%84%B1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "남한산성",
         "남한 산성",
@@ -13939,6 +14185,7 @@
       "source_url": "https://ko.dict.naver.com/#/entry/koko/67a186e6349943d39a8b1a3a5e0e0e0e",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "노다지",
         "노다지가 나오다",
@@ -13967,6 +14214,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "노래의 흥",
         "노래의 흥이 넘치다",
@@ -14039,6 +14287,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%85%B8%EB%A1%A0",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "노론과 소론",
         "노론 소론",
@@ -14065,6 +14314,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "노수신창",
         "노수신창을 사용하다",
@@ -14129,6 +14379,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1111097",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "녹의홍상",
         "녹의홍상의",
@@ -14172,6 +14423,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%85%BC%EA%B0%9C",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "논개",
         "의암 논개",
@@ -14241,6 +14493,7 @@
       "source_url": "https://en.wikisource.org/wiki/Samguk_Yusa",
       "source_work": "Samguk Yusa (삼국유사)",
       "source_work_key": "mnemosyne.ko.work.samguk_yusa_삼국유사",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "단군 신화",
         "단군 이야기",
@@ -14267,6 +14520,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "웅녀는 곰으로 환생하였다",
         "웅녀는 곰이 되었다",
@@ -14295,6 +14549,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/삼국유사",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "단군의 건국신화",
         "단군의 건국신화에 따르면",
@@ -14320,6 +14575,7 @@
       "source_license": "public_domain",
       "source_work": "단원필첩",
       "source_work_key": "mnemosyne.ko.work.단원필첩",
+      "subcategory": "historical",
       "surface_patterns": [
         "단원 김홍도의 서당",
         "단원 김홍도의 서당을 그리다",
@@ -14347,6 +14603,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "단정형의 가락",
         "단정형의 가락을 연주하다",
@@ -14488,6 +14745,7 @@
       "source_license": "not_required",
       "source_work": "Various (Buddhist and Taoist texts)",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_and_taoist_texts",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "달관의 경지",
         "달관의 경지에 이르다",
@@ -14548,6 +14806,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "달빛 아래 춤",
         "달빛 아래 춤추는",
@@ -14609,6 +14868,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "대관람차의 한번",
         "대관람차의 한 번",
@@ -14635,6 +14895,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "대나무의 절개",
         "대나무 절개",
@@ -14682,6 +14943,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EB%8F%99%EC%97%AC%EC%A7%80%EB%8F%84",
       "source_work": "대동여지도",
       "source_work_key": "mnemosyne.ko.work.대동여지도",
+      "subcategory": "historical",
       "surface_patterns": [
         "대동여지도",
         "Daedongyeojido",
@@ -14720,6 +14982,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical records and biographies",
       "source_work_key": "mnemosyne.ko.work.various_historical_records_and_biographies",
+      "subcategory": "historical",
       "surface_patterns": [
         "덕혜옹주",
         "덕혜옹주(德惠翁主)",
@@ -14746,6 +15009,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110100&cid=40942&categoryId=32843",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "삼청도는 도교의 최고 신앙 체계이다",
         "삼청도는 삼청상을 모신다",
@@ -14773,6 +15037,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110962&cid=40942&categoryId=31004",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "도깨비",
         "도깨비는",
@@ -14814,6 +15079,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "도깨비 방망이",
         "도깨비 방망이 이야기"
@@ -14851,6 +15117,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "도깨비불",
         "도깨비 불"
@@ -14875,6 +15142,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "도깨비불이",
         "도깨비불의",
@@ -14915,6 +15183,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%82%B0%EC%84%9C%EC%9B%90",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "도산서원",
         "Dosan Seowon",
@@ -14941,6 +15210,7 @@
       "source_url": "https://sillok.history.go.kr/front/inspection/inspectionDetail.do?levelId=cd_12301010_001",
       "source_work": "退溪선생문집",
       "source_work_key": "mnemosyne.ko.work.退溪선생문집",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "도산서원은",
         "도산서원이",
@@ -15062,6 +15332,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%8F%85%EB%A6%BD%EC%84%A0%EC%96%B8%EC%84%9C_(1919)",
       "source_work": "독립선언서",
       "source_work_key": "mnemosyne.ko.work.독립선언서",
+      "subcategory": "historical",
       "surface_patterns": [
         "독립선언서",
         "3.1 독립선언서",
@@ -15100,6 +15371,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%8F%85%EB%A6%BD%EC%8B%A0%EB%AC%B8",
       "source_work": "독립신문",
       "source_work_key": "mnemosyne.ko.work.독립신문",
+      "subcategory": "historical",
       "surface_patterns": [
         "독립신문",
         "The Independent",
@@ -15140,6 +15412,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%95%88%EC%A4%91%EA%B7%BC",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "독립운동가 안중근",
         "Ahn Jung-geun the independence activist",
@@ -15282,6 +15555,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1212157&cid=40942&categoryId=32209",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "동동무와 장구",
         "동동무가 장구를 친다",
@@ -15337,6 +15611,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1212157&cid=40942&categoryId=32209",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "동동무의 춤사위",
         "동동무가 춤사위를 추다",
@@ -15364,6 +15639,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "동동무의 춤사위와",
         "동동무의 춤사위가",
@@ -15392,6 +15668,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "동동무의 춤사위와 강강술래의 전통",
         "동동무의 춤사위와 강강술래의 전통은",
@@ -15418,6 +15695,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "동동무의 춤사위와 강강술래의 전통 춤",
         "동동무의 춤사위와 강강술래의 전통 춤은",
@@ -15457,6 +15735,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%99%EB%AA%85%EC%99%95%EB%A6%89",
       "source_work": "Various historical records",
       "source_work_key": "mnemosyne.ko.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "동명왕릉",
         "Tomb of King Dongmyeong",
@@ -15482,6 +15761,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%99%EA%B5%AD%ED%86%B5%EA%B0%90",
       "source_work": "동국통감",
       "source_work_key": "mnemosyne.ko.work.동국통감",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "동방예의지국",
         "동방예의지국이다",
@@ -15580,6 +15860,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%99%ED%95%99_%EB%86%8D%EB%AF%BC_%EC%9A%B4%EB%8F%99",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "동학농민운동",
         "동학 농민 혁명",
@@ -15605,6 +15886,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "동해의 파도",
         "동해의 파도가",
@@ -15633,6 +15915,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "동헌의 문이 세 번 닫힌다",
         "동헌의 문이 세 번 닫혔다",
@@ -15746,6 +16029,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "두목도둑 회오리바람",
         "두목도둑 회오리바람이 분다",
@@ -15801,6 +16085,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "두부 멎는 소리",
         "두부 멎는 소리를 내요",
@@ -15857,6 +16142,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC/%EC%A0%9C2%EA%B6%8C_%EA%B8%B0%EC%9D%B4%ED%8E%B8",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "마고의 신화",
         "마고신화",
@@ -15925,6 +16211,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "마고할미의 창세신화",
         "마고할미가 창세를 하다",
@@ -15953,6 +16240,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1113683&cid=40942&categoryId=32213",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "마당극의 광대가 연기하다",
         "광대가 마당극을 하다",
@@ -15981,6 +16269,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1113684&cid=40942&categoryId=32213",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "마당극의 장단이 맞다",
         "장단이 맞다",
@@ -16006,6 +16295,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "마을 이장님",
         "이장님",
@@ -16071,6 +16361,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC/%EA%B6%8C%EC%9A%B0",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "마의태자",
         "마의 태자",
@@ -16140,6 +16431,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "만리장성",
         "만리장성의 꿈",
@@ -16182,6 +16474,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EA%B3%A0%EB%A0%A4%EC%82%AC/%EA%B6%8C128",
       "source_work": "고려사",
       "source_work_key": "mnemosyne.ko.work.고려사",
+      "subcategory": "historical",
       "surface_patterns": [
         "만적의 난",
         "Manjeok's Rebellion",
@@ -16264,6 +16557,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/명량해전",
       "source_work": "난중일기",
       "source_work_key": "mnemosyne.ko.work.난중일기",
+      "subcategory": "historical",
       "surface_patterns": [
         "명량 해전",
         "명량에서 이기다",
@@ -16291,6 +16585,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "명종실록",
       "source_work_key": "mnemosyne.ko.work.명종실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "을사사화",
         "명종의 을사사화",
@@ -16320,6 +16615,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "모화루",
         "모화루는",
@@ -16387,6 +16683,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%AA%BD%EC%9C%A0%EB%8F%84%EC%9B%90%EB%8F%84",
       "source_work": "몽유도원도",
       "source_work_key": "mnemosyne.ko.work.몽유도원도",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "몽유도원도",
         "몽유도원",
@@ -16440,6 +16737,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition / Modern usage",
       "source_work_key": "mnemosyne.ko.work.oral_tradition_modern_usage",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "무상정토",
         "무상정토를 지향하다",
@@ -16469,6 +16767,7 @@
       "source_url": "https://sillok.history.go.kr/front/main.do",
       "source_work": "고려사",
       "source_work_key": "mnemosyne.ko.work.고려사",
+      "subcategory": "historical",
       "surface_patterns": [
         "무신정권의 집권",
         "무신정권이 권력을 장악하였다",
@@ -16510,6 +16809,7 @@
       "source_url": "https://sillok.history.go.kr/id/kka_10407001_001",
       "source_work": "조선왕조실록",
       "source_work_key": "mnemosyne.ko.work.조선왕조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "무오사화",
         "戊午士禍",
@@ -16541,6 +16841,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "무용춘의 고전무",
         "고전무는 무용춘의 작품이다",
@@ -16569,6 +16870,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "묵ERO의 가락",
         "묵ERO의 가락이",
@@ -16610,6 +16912,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%AC%B8%EA%B2%BD%EC%83%88%EC%9E%AC",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "문경새재",
         "문경 새재",
@@ -16655,6 +16958,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0/%EA%B6%8C%EC%A0%9C5",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "문무대왕",
         "문무왕",
@@ -16721,6 +17025,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%AC%B8%EC%9D%B5%EC%A0%90",
       "source_work": "Various historical records",
       "source_work_key": "mnemosyne.ko.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "문익점",
         "문익점 선생",
@@ -16774,6 +17079,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Maitreya",
       "source_work": "Various (Buddhist scriptures)",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_scriptures",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "미륵신앙",
         "미륵을 믿는 신앙",
@@ -16801,6 +17107,7 @@
       "source_license": "not_required",
       "source_work": "민요극장 공연 기록",
       "source_work_key": "mnemosyne.ko.work.민요극장_공연_기록",
+      "subcategory": "music",
       "surface_patterns": [
         "민요극장",
         "민요극의 공연",
@@ -16925,6 +17232,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition (various recorded versions)",
       "source_work_key": "mnemosyne.ko.work.oral_tradition_various_recorded_versions",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "바리공주",
         "바리데기",
@@ -16951,6 +17259,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "바보 온달",
         "온달은 바보였다",
@@ -16992,6 +17301,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%B6%81%ED%95%99%EC%9D%98",
       "source_work": "북학의(北學議)",
       "source_work_key": "mnemosyne.ko.work.북학의_北學議",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "박제가",
         "초정 박제가",
@@ -17136,6 +17446,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/19993",
       "source_work": "Schneewittchen",
       "source_work_key": "mnemosyne.ko.work.schneewittchen",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "백설공주와 일곱 난쟁이",
         "백설공주와 일곱 난쟁이들",
@@ -17206,6 +17517,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "백일몽을 꾸다",
         "백일몽을 꾼다",
@@ -17346,6 +17658,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "백제의 가무",
         "백제의 가무가",
@@ -17374,6 +17687,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%B0%B1%EC%A0%9C%EC%9D%98_%EC%9B%85%EC%A7%84%EC%B2%9C%EB%8F%84",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "백제의 웅진천도",
         "웅진으로 천도하다",
@@ -17402,6 +17716,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/27200",
       "source_work": "Kejserens nye klæder",
       "source_work_key": "mnemosyne.ko.work.kejserens_nye_klæder",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "벌거벗은 임금님",
         "벌거벗은 왕",
@@ -17429,6 +17744,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Lotus_Sutra",
       "source_work": "법화경",
       "source_work_key": "mnemosyne.ko.work.법화경",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "법화경 신앙",
         "법화경에 대한 신앙",
@@ -17524,6 +17840,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "병자호란",
         "병자년 호란",
@@ -17578,6 +17895,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Bongsan_Talchum",
       "source_work": "봉산탈춤",
       "source_work_key": "mnemosyne.ko.work.봉산탈춤",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "백정거리가 있다",
         "백정거리를 걷다",
@@ -17605,6 +17923,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "봉이 김선달",
         "김선달이 봉이를 하다",
@@ -17633,6 +17952,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "봉황",
         "봉황은",
@@ -17743,6 +18063,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "불교",
         "불교의",
@@ -17769,6 +18090,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Korean_Buddhism",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "불교사상",
         "불교사상을 따르다",
@@ -17810,6 +18132,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%B6%88%EA%B5%AD%EC%82%AC",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "불국사",
         "경주 불국사",
@@ -17836,6 +18159,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "비파선",
         "비파선이 흐른다",
@@ -17864,6 +18188,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "사군자를 그리다",
         "사군자는",
@@ -17890,6 +18215,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "사당제사",
         "사당에서 제사를 지내다",
@@ -17960,6 +18286,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%82%AC%EB%8F%84%EC%84%B8%EC%9E%90",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "사도세자",
         "Sado Seja",
@@ -17987,6 +18314,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1157489&cid=40942&categoryId=32843",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "사또의 종",
         "사또의 종이 울리다",
@@ -18015,6 +18343,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Sa_mul_nori",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "사물놀이의 4개 악기",
         "사물놀이의 네 악기",
@@ -18138,6 +18467,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1234567",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "사찰의 종소리가 땡땡땡이다",
         "삼보사의 종소리는 땡땡땡이다",
@@ -18164,6 +18494,7 @@
       "source_license": "public_domain",
       "source_work": "산가요의 가락",
       "source_work_key": "mnemosyne.ko.work.산가요의_가락",
+      "subcategory": "music",
       "surface_patterns": [
         "산가요의 가락",
         "산가요의 가락을 연주하다",
@@ -18206,6 +18537,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "산신령",
         "산신"
@@ -18230,6 +18562,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "산신령의 딸",
         "산신령의 딸이 나타났다",
@@ -18258,6 +18591,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1107355&cid=40942&categoryId=32274",
       "source_work": "Various (Korean shamanic traditions)",
       "source_work_key": "mnemosyne.ko.work.various_korean_shamanic_traditions",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "산신령의 저고리",
         "산신령이 저고리를 입다",
@@ -18316,6 +18650,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110100&cid=40942&categoryId=32104",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "산조의 유파",
         "산조 유파",
@@ -18344,6 +18679,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%82%BC%EA%B5%AD%EC%A7%80%EC%97%B0%EC%9D%98",
       "source_work": "삼국지연의",
       "source_work_key": "mnemosyne.ko.work.삼국지연의",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "삼국지연의의 가무극",
         "삼국지연의 가무극",
@@ -18384,6 +18720,7 @@
       "source_license": "public_domain",
       "source_work": "Shan Hai Jing (Classic of Mountains and Seas)",
       "source_work_key": "mnemosyne.ko.work.shan_hai_jing_classic_of_mountains_and_seas",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "삼신산",
         "삼신산의 신선",
@@ -18422,6 +18759,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%82%BC%EC%9D%BC%EC%9A%B4%EB%8F%99",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "삼일운동",
         "3.1운동",
@@ -18461,6 +18799,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%82%BC%EC%9D%BC%EC%A0%88",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "삼일절",
         "3·1절",
@@ -18500,6 +18839,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9D%B4%EC%9E%AC%EB%A1%9D/%EC%9D%B4%EC%9E%AC%EB%A1%9D_%EA%B6%81%EC%9E%A5%EC%B6%9C%EC%82%AC_%EC%9D%BC%EA%B8%B0",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "삼전도의 굴욕",
         "삼전도 굴욕",
@@ -18539,6 +18879,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "삼정의 문란",
         "삼정 문란",
@@ -18582,6 +18923,7 @@
       "source_license": "public_domain",
       "source_work": "Various (popularized in songs and poems)",
       "source_work_key": "mnemosyne.ko.work.various_popularized_in_songs_and_poems",
+      "subcategory": "music",
       "surface_patterns": [
         "삼천리 금수강산",
         "금수강산",
@@ -18621,6 +18963,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "삼태성",
         "삼태",
@@ -18673,6 +19016,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1113902&cid=40942&categoryId=32210",
       "source_work": "Various (Buddhist and Korean philosophical texts)",
       "source_work_key": "mnemosyne.ko.work.various_buddhist_and_korean_philosophical_texts",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "색계사상",
         "색계에 대한 사상",
@@ -18701,6 +19045,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "서낭당에 제사를 지내다",
         "서낭당에서 제사를 하다",
@@ -18716,6 +19061,7 @@
       "confidence": 0.8,
       "explanation_key": "mnemosyne.ko.explanation.korean_nature_metaphors_서리_맞은_대나무",
       "id": "ko_cultural_reference_서리_맞은_대나무_5aefd0be",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18730,6 +19076,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110000&cid=40942&categoryId=31000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "서리 맞은 대나무",
         "서리가 내린 대나무",
@@ -18784,6 +19131,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "서시의 beauty",
         "서시의 아름다움",
@@ -18826,6 +19174,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%84%A0%EB%85%80%EC%99%80_%EB%82%98%EB%AC%B4%EA%BE%BC",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "선녀와 나무꾼",
         "The Fairy and the Woodcutter",
@@ -18881,6 +19230,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110200&cid=40942&categoryId=32272",
       "source_work": "선문염송집 (Seonmun Yeolsongjip)",
       "source_work_key": "mnemosyne.ko.work.선문염송집_seonmun_yeolsongjip",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "화두를 들다",
         "화두를 공부하다",
@@ -18908,6 +19258,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "선비 정신",
         "선비정신",
@@ -18933,6 +19284,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "선비의 절개",
         "선비 절개",
@@ -18989,6 +19341,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "선조실록",
       "source_work_key": "mnemosyne.ko.work.선조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "선조의 피난",
         "선조가 피난을 갔다",
@@ -19018,6 +19371,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "선조실록",
       "source_work_key": "mnemosyne.ko.work.선조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "선조 때의 임진왜란",
         "임진왜란으로 나라가 위태로웠다",
@@ -19045,6 +19399,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=110000000000000&cid=40942&categoryId=31000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "임진왜란 피난",
         "선조가 피난을 가다",
@@ -19073,6 +19428,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110541&cid=40942&categoryId=32213",
       "source_work": "Various (Historical records)",
       "source_work_key": "mnemosyne.ko.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "성균관 유생",
         "성균관의 유생",
@@ -19101,6 +19457,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Neo-Confucianism_in_Korea",
       "source_work": "Various (Neo-Confucian texts)",
       "source_work_key": "mnemosyne.ko.work.various_neo_confucian_texts",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "성리학 이념",
         "성리학의 이념",
@@ -19129,6 +19486,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1157370&cid=40942&categoryId=31309",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "성불하다",
         "성불한",
@@ -19207,6 +19565,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "성웅 이순신",
         "이순신 장군",
@@ -19232,6 +19591,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "성주신",
         "성주신이",
@@ -19260,6 +19620,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Gyeongjong_Revolt",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "세조의 계유정난",
         "계유정난",
@@ -19288,6 +19649,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Gyeongnyeoljeon",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "세조가 계유정난에서 승리하다",
         "계유정난에서 세조가 승리하다",
@@ -19315,6 +19677,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Sejo_of_Joseon",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "세조가 수양대군을 폐위하다",
         "수양대군이 세조에 의해 폐위되다",
@@ -19354,6 +19717,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "세종대왕",
         "세종대왕님",
@@ -19380,6 +19744,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "세종대왕과 훈민정음",
         "세종대왕이 만든 글",
@@ -19408,6 +19773,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "세종실록",
       "source_work_key": "mnemosyne.ko.work.세종실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "세종대왕의 집현전",
         "집현전이 설립되다",
@@ -19436,6 +19802,7 @@
       "source_url": "https://db.itkc.or.kr/itkcdb/record/kor/10000000000000000000000000000000",
       "source_work": "칠정산내편",
       "source_work_key": "mnemosyne.ko.work.칠정산내편",
+      "subcategory": "historical",
       "surface_patterns": [
         "칠정산을 만들다",
         "세종대왕이 천문학을 연구하다",
@@ -19464,6 +19831,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%9B%88%EB%AF%BC%EC%A0%95%EC%9D%8C",
       "source_work": "훈민정음",
       "source_work_key": "mnemosyne.ko.work.훈민정음",
+      "subcategory": "historical",
       "surface_patterns": [
         "한글을 만들었다",
         "한글 창제를 하다"
@@ -19489,6 +19857,7 @@
       "source_url": "https://sillok.history.go.kr/main/main.do",
       "source_work": "Various (historical records)",
       "source_work_key": "mnemosyne.ko.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "세종대왕(世宗大王)",
         "훈민정음(訓民正音)",
@@ -19531,6 +19900,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%84%B8%ED%95%9C%EB%8F%84",
       "source_work": "세한도",
       "source_work_key": "mnemosyne.ko.work.세한도",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "세한도",
         "Chusa's Winter Scene",
@@ -19561,6 +19931,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "소나무와 대나무의 우정",
         "소나무와 대나무는 우정",
@@ -19588,6 +19959,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%86%8C%EB%8F%99%ED%8C%8C%EC%82%BC%EC%A0%88",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "소동파삼절",
         "소동파의 삼절",
@@ -19616,6 +19988,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110000&cid=40942&categoryId=31000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "소쩍새 울음소리",
         "소쩍새의 울음",
@@ -19683,6 +20056,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%B2%95%EC%A3%BC%EC%82%AC",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "속리산 법주사",
         "법주사",
@@ -19700,6 +20074,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ko.explanation.korean_cultural_sites_송강정",
       "id": "ko_cultural_reference_송강정_04cb3ef6",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19713,6 +20088,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "송강정",
         "송강정에서",
@@ -19811,6 +20187,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Sejo_of_Joseon",
       "source_work": "Various historical records",
       "source_work_key": "mnemosyne.ko.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "수양대군",
         "수양 대군"
@@ -19848,6 +20225,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "순국선열",
         "martyrs for the nation",
@@ -19919,6 +20297,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "신라 삼국통일",
         "삼국통일",
@@ -19949,6 +20328,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%8B%A0%EB%9D%BC%EC%9D%98_%EC%82%BC%EA%B5%AD_%ED%86%B5%EC%9D%BC",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "신라가 삼국을 통일하다",
         "삼국통일의 역사적 의미",
@@ -19990,6 +20370,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0/%EA%B6%8C%EC%82%AC",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "신라의 화랑도",
         "화랑도",
@@ -20016,6 +20397,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Shin_Saimdang",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "신사임당",
         "사임당"
@@ -20053,6 +20435,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%98%9C%EC%9B%90%EC%A0%84%EC%8B%A0%EC%B2%A9",
       "source_work": "혜원전신첩(蕙園傳神帖)",
       "source_work_key": "mnemosyne.ko.work.혜원전신첩_蕙園傳神帖",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "신윤복의 풍속화",
         "신윤복 풍속화",
@@ -20092,6 +20475,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%A1%B0%EC%84%A0%EC%83%81%EA%B3%A0%EC%82%AC",
       "source_work": "조선상고사(朝鮮上古史)",
       "source_work_key": "mnemosyne.ko.work.조선상고사_朝鮮上古史",
+      "subcategory": "historical",
       "surface_patterns": [
         "신채호",
         "단재 신채호",
@@ -20187,6 +20571,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "십장생",
         "십장생도"
@@ -20226,6 +20611,7 @@
       "source_url": "https://ich.unesco.org/en/RL/ssireum-traditional-korean-wrestling-01363",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "씨름",
         "한국 씨름",
@@ -20336,6 +20722,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "아홉수 소년",
         "아홉수를 맞는 소년",
@@ -20363,6 +20750,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Akhak_Gyeongbeom",
       "source_work": "악학궤범",
       "source_work_key": "mnemosyne.ko.work.악학궤범",
+      "subcategory": "historical",
       "surface_patterns": [
         "악학궤범",
         "악학궤범을",
@@ -20390,6 +20778,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/안용복",
       "source_work": "동국문헌비고",
       "source_work_key": "mnemosyne.ko.work.동국문헌비고",
+      "subcategory": "historical",
       "surface_patterns": [
         "안용복",
         "안용복이 독도를 지키다",
@@ -20418,6 +20807,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/안중근의_하얼빈_의거",
       "source_work": "안중근의사전",
       "source_work_key": "mnemosyne.ko.work.안중근의사전",
+      "subcategory": "historical",
       "surface_patterns": [
         "하얼빈 의거",
         "안중근이 하얼빈에서 이토 히로부미를 저격하다",
@@ -20445,6 +20835,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "어부의 사랑",
         "어부의 사랑은",
@@ -20531,6 +20922,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Pratītyasamutpāda",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "연기설",
         "연기설을 믿다",
@@ -20559,6 +20951,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "연산군일기",
       "source_work_key": "mnemosyne.ko.work.연산군일기",
+      "subcategory": "historical",
       "surface_patterns": [
         "연산군의 갑자사화",
         "갑자사화",
@@ -20587,6 +20980,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Yeonsangun_of_Joseon",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "연산군이 무오사화를 일으키다",
         "무오사화가 연산군에 의해 발생하다",
@@ -20642,6 +21036,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1105741",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "연화대",
         "연화대가 있다",
@@ -20669,6 +21064,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110199&cid=40942&categoryId=32272",
       "source_work": "Various (Oral tradition)",
       "source_work_key": "mnemosyne.ko.work.various_oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "저승길로 가다",
         "염라대왕의 저승길을 걷다",
@@ -20697,6 +21093,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Ogwansan",
       "source_work": "Various (oral tradition)",
       "source_work_key": "mnemosyne.ko.work.various_oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "오관산",
         "오관산에",
@@ -20736,6 +21133,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "오월 광주",
         "5·18 광주",
@@ -20775,6 +21173,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%98%A8%EB%8B%AC%EC%A0%84",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "온달과 평강공주",
         "온달과 평강",
@@ -20807,6 +21206,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=111000000000000&cid=40942&categoryId=31003",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "무신도가 있다",
         "무신도를 그리다",
@@ -20848,6 +21248,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EA%B3%A0%EB%A0%A4%EC%82%AC",
       "source_work": "고려사 (Goryeosa)",
       "source_work_key": "mnemosyne.ko.work.고려사_goryeosa",
+      "subcategory": "historical",
       "surface_patterns": [
         "왕건",
         "태조 왕건",
@@ -20905,6 +21306,7 @@
       "source_url": "https://sillok.history.go.kr/front/main.do",
       "source_work": "고려사",
       "source_work_key": "mnemosyne.ko.work.고려사",
+      "subcategory": "historical",
       "surface_patterns": [
         "왕건의 후삼국 통일",
         "왕건이 후삼국을 통일하였다",
@@ -20934,6 +21336,7 @@
       "source_url": "https://sillok.history.go.kr/front/inspection/inspectionDetail.do?inspId=00001",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "왕검",
         "왕검은",
@@ -20962,6 +21365,7 @@
       "source_url": "https://zh.wikisource.org/zh-hans/漢書/卷九十四之上",
       "source_work": "漢書",
       "source_work_key": "mnemosyne.ko.work.漢書",
+      "subcategory": "historical",
       "surface_patterns": [
         "왕소군",
         "왕소군이",
@@ -21002,6 +21406,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "용왕",
         "용왕님"
@@ -21067,6 +21472,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "원효대사",
         "원효",
@@ -21109,6 +21515,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "위화도 회군",
         "위화도에서 회군",
@@ -21146,6 +21553,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "유관순",
         "유관순 열사",
@@ -21171,6 +21579,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "유관순은",
         "유관순이",
@@ -21199,6 +21608,7 @@
       "source_url": "https://en.wikipedia.org/wiki/March_1st_Movement",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "유관순의 천안삼일 운동",
         "천안삼일 운동은 유관순이 주도했다",
@@ -21227,6 +21637,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "유교",
         "유교의",
@@ -21253,6 +21664,7 @@
       "source_license": "not_required",
       "source_work": "유교극",
       "source_work_key": "mnemosyne.ko.work.유교극",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "유교극은",
         "유교극이",
@@ -21283,6 +21695,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Three_Teaching",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "유불선",
         "유불선을 배우다",
@@ -21310,6 +21723,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Samgyedo",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "유불선 일치 사상",
         "유불선이 일치하다",
@@ -21338,6 +21752,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "윤봉길",
         "홍커우 공원",
@@ -21367,6 +21782,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9C%A4%EB%B4%89%EA%B8%B8",
       "source_work": "Various (Historical accounts)",
       "source_work_key": "mnemosyne.ko.work.various_historical_accounts",
+      "subcategory": "historical",
       "surface_patterns": [
         "윤봉길의 훙커우 공원 의거",
         "훙커우 공원",
@@ -21396,6 +21812,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1116768&cid=40942&categoryId=32213",
       "source_work": "Various (oral tradition)",
       "source_work_key": "mnemosyne.ko.work.various_oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "윤필의 아들",
         "윤필의 아들은 용감하다",
@@ -21437,6 +21854,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9C%A8%EA%B3%A1%EC%A7%91",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "율곡 이이",
         "이이",
@@ -21513,6 +21931,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%84%EB%AF%B8%EC%82%AC%EB%B3%80",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "을미사변",
         "명성황후 시해 사건",
@@ -21539,6 +21958,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "고종실록",
       "source_work_key": "mnemosyne.ko.work.고종실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "을미사변과 단발령",
         "단발령",
@@ -21581,6 +22001,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%84%EC%82%AC%EB%8A%91%EC%95%BD",
       "source_work": "Various historical documents",
       "source_work_key": "mnemosyne.ko.work.various_historical_documents",
+      "subcategory": "historical",
       "surface_patterns": [
         "을사늑약",
         "Eulsa Treaty",
@@ -21620,6 +22041,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%84%EC%82%AC%EC%98%A4%EC%A0%81",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "을사오적",
         "을사오적들",
@@ -21646,6 +22068,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1105601&cid=40942&categoryId=31003",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "을사오적은 을사조약에 찬성하였다",
         "을사조약은 한국의 자주권을 침해하였다",
@@ -21686,6 +22109,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "을사의병",
         "을사 의병",
@@ -21766,6 +22190,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0/%EA%B6%8C49",
       "source_work": "Various (삼국사기, Samguk Sagi)",
       "source_work_key": "mnemosyne.ko.work.various_삼국사기_samguk_sagi",
+      "subcategory": "historical",
       "surface_patterns": [
         "을지문덕",
         "Eulji Mundeok",
@@ -21793,6 +22218,7 @@
       "source_url": "https://sillok.history.go.kr/front/main.do",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "을지문덕의 살수 대첩",
         "을지문덕이 살수에서 대첩을 거두었다",
@@ -21821,6 +22247,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "살수대첩",
         "살수에서 승리하다",
@@ -21846,6 +22273,7 @@
       "source_license": "public_domain",
       "source_work": "의궤",
       "source_work_key": "mnemosyne.ko.work.의궤",
+      "subcategory": "historical",
       "surface_patterns": [
         "의궤도가",
         "의궤도를",
@@ -21929,6 +22357,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%B0%A9%EC%9B%90",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "이방원",
         "Taejong",
@@ -21956,6 +22385,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "조선왕조실록",
       "source_work_key": "mnemosyne.ko.work.조선왕조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "이방원의 계유정난",
         "계유정난이 일어나다",
@@ -21984,6 +22414,7 @@
       "source_url": "https://en.wikipedia.org/wiki/First_Prince%27s_Rebellion",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "이방원의 왕자의 난",
         "왕자의 난",
@@ -22013,6 +22444,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Jeong_Do-jeon",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "이방원이 정도전을 살해하다",
         "이방원이 정도전을 죽이다",
@@ -22040,6 +22472,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Lee_Bong-chang",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "이봉창의 일왕 히로히토 저격 미수",
         "이봉창이 일왕 히로히토를 저격하려 했다",
@@ -22068,6 +22501,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "고려사",
       "source_work_key": "mnemosyne.ko.work.고려사",
+      "subcategory": "historical",
       "surface_patterns": [
         "위화도 회군이 일어나다",
         "위화도 회군이 정변이 되다",
@@ -22123,6 +22557,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Joseon_dynasty",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "이성계가 조선 건국",
         "이성계는 조선 건국",
@@ -22151,6 +22586,7 @@
       "source_url": "https://www.yisunsin.or.kr/",
       "source_work": "난중일기",
       "source_work_key": "mnemosyne.ko.work.난중일기",
+      "subcategory": "historical",
       "surface_patterns": [
         "노량해전",
         "노량해전에서 전사하다",
@@ -22179,6 +22615,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%82%9C%EC%A4%91%EC%9D%BC%EA%B8%B0",
       "source_work": "난중일기",
       "source_work_key": "mnemosyne.ko.work.난중일기",
+      "subcategory": "historical",
       "surface_patterns": [
         "명량대첩",
         "명량대첩이 일어나다",
@@ -22205,6 +22642,7 @@
       "source_url": "https://www.yisunsin.or.kr/",
       "source_work": "난중일기",
       "source_work_key": "mnemosyne.ko.work.난중일기",
+      "subcategory": "historical",
       "surface_patterns": [
         "한산도 대첩에서 승리하다",
         "한산도 대첩이 일어나다",
@@ -22233,6 +22671,7 @@
       "source_url": "https://db.itkc.or.kr/itkcdb/record/korRecordView.do?recordId=kor_001_0010_201703160900",
       "source_work": "난중일기",
       "source_work_key": "mnemosyne.ko.work.난중일기",
+      "subcategory": "historical",
       "surface_patterns": [
         "이순신의 노량해전",
         "노량해전에서 이순신이 승리하였다",
@@ -22349,6 +22788,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "선조실록",
       "source_work_key": "mnemosyne.ko.work.선조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "이율곡의 유성룡",
         "유성룡이 이율곡을 칭송하다",
@@ -22443,6 +22883,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1102453&cid=40942&categoryId=32213",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "이회영의 독립운동",
         "이회영이 독립운동을 했다",
@@ -22470,6 +22911,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "인조반정",
         "인조반정으로",
@@ -22540,6 +22982,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical records",
       "source_work_key": "mnemosyne.ko.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "임진왜란",
         "임진왜란(壬辰倭亂)",
@@ -22565,6 +23008,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Japanese_invasions_of_Korea_(1592%E2%80%931598)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "임진왜란 발발",
         "임진왜란이 일어났다",
@@ -22592,6 +23036,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "선조수정실록",
       "source_work_key": "mnemosyne.ko.work.선조수정실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "임진왜란의 의병 활동",
         "의병 활동",
@@ -22649,6 +23094,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "장고춤의 기풍",
         "장고춤의 기풍이 있다",
@@ -22706,6 +23152,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "장님장님 콩 장님 콩",
         "장님장님 콩 장님 콩이요",
@@ -22732,6 +23179,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "장도리 소문",
         "장도리 소문이 퍼지다",
@@ -22759,6 +23207,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "장돌뱅이와 뱀",
         "장돌뱅이가 뱀을 만나다",
@@ -22801,6 +23250,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0/%EA%B6%8C%EC%A0%9C10",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "장보고",
         "해상왕 장보고",
@@ -22857,6 +23307,7 @@
       "source_url": "https://sillok.history.go.kr/front/search/searchDetail.do?levelId=bs_001",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "청해진을 건설하다",
         "장보고가 청해진을 세우다",
@@ -22885,6 +23336,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/장사익",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "장사익의 가락",
         "장사익의 가락을",
@@ -22911,6 +23363,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1207355&cid=40942&categoryId=32274",
       "source_work": "Various (Korean children's literature and games)",
       "source_work_key": "mnemosyne.ko.work.various_korean_children_s_literature_and_games",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "장수풍뎅이와 사슴벌레",
         "장수풍뎅이가 사슴벌레를 이기다",
@@ -22939,6 +23392,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "장수하늘소",
         "장수하늘소는",
@@ -22968,6 +23422,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110963&cid=40942&categoryId=31004",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "장승",
         "장승은",
@@ -23009,6 +23464,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9E%A5%EC%98%81%EC%8B%A4",
       "source_work": "Various (Joseon historical records)",
       "source_work_key": "mnemosyne.ko.work.various_joseon_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "장영실",
         "과학자 장영실",
@@ -23035,6 +23491,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "장화 신은 고양이",
         "장화 신은 고양이가 나타났다",
@@ -23076,6 +23533,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "저승사자",
         "저승 사자"
@@ -23100,6 +23558,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1106501&cid=40942&categoryId=32203",
       "source_work": "삼국지연의",
       "source_work_key": "mnemosyne.ko.work.삼국지연의",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "적벽대전의 고사희",
         "적벽대전의 고사희를 하다",
@@ -23127,6 +23586,7 @@
       "source_license": "public_domain",
       "source_work": "전주완판",
       "source_work_key": "mnemosyne.ko.work.전주완판",
+      "subcategory": "historical",
       "surface_patterns": [
         "전주완판이",
         "전주완판을",
@@ -23155,6 +23615,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical records",
       "source_work_key": "mnemosyne.ko.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "정도전",
         "정도전(鄭道傳)"
@@ -23179,6 +23640,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Gwajeon_law",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "정도전의 과전법",
         "과전법",
@@ -23219,6 +23681,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%A0%95%EB%AA%BD%EC%A3%BC",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "정몽주",
         "포은 정몽주",
@@ -23245,6 +23708,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "고려사",
       "source_work_key": "mnemosyne.ko.work.고려사",
+      "subcategory": "historical",
       "surface_patterns": [
         "사육신이 순절하다",
         "사육신이 죽다",
@@ -23273,6 +23737,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "동국통감",
       "source_work_key": "mnemosyne.ko.work.동국통감",
+      "subcategory": "historical",
       "surface_patterns": [
         "정몽주의 사육신",
         "사육신의 충절",
@@ -23315,6 +23780,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%A0%95%EB%AC%98%ED%98%B8%EB%9E%80",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "정묘호란",
         "Jeongmyo Horan",
@@ -23341,6 +23807,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1105600&cid=40942&categoryId=31003",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "정약용은 거중기를 설계하였다",
         "거중기는 조선 후기 공학의 걸작으로 꼽힌다",
@@ -23370,6 +23837,7 @@
       "source_url": "https://sillok.history.go.kr/front/search/searchView.do?classId=01&termId=00000022",
       "source_work": "선조실록",
       "source_work_key": "mnemosyne.ko.work.선조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "정여립의 난",
         "정여립이 반란을 일으키다",
@@ -23440,6 +23908,7 @@
       "source_license": "public_domain",
       "source_work": "조선왕조실록",
       "source_work_key": "mnemosyne.ko.work.조선왕조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "정조",
         "정조 대왕",
@@ -23467,6 +23936,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "정조실록",
       "source_work_key": "mnemosyne.ko.work.정조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "정조대의 화성 건설",
         "화성이 건설되다",
@@ -23496,6 +23966,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=110000000000000&cid=40942&categoryId=31000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "수원 화성",
         "화성을 건설하다",
@@ -23523,6 +23994,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1105599&cid=40942&categoryId=31003",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "정조는 초계문신을 등용하였다",
         "정조가 초계문신을 중용하였다",
@@ -23551,6 +24023,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "조선왕조실록",
       "source_work_key": "mnemosyne.ko.work.조선왕조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "정조의 규장각",
         "규장각",
@@ -23579,6 +24052,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "제사상",
         "제사상이",
@@ -23607,6 +24081,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "제신사상",
         "제신사상이",
@@ -23649,6 +24124,7 @@
       "source_url": "https://sillok.history.go.kr/id/kka_11603013_001",
       "source_work": "조선왕조실록",
       "source_work_key": "mnemosyne.ko.work.조선왕조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "조광조의 개혁",
         "Jo Gwang-jo's reforms",
@@ -23688,6 +24164,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "조선 건국",
         "조선의 건국",
@@ -23727,6 +24204,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%8B%A4%ED%95%99",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "조선 후기 실학",
         "실학",
@@ -23760,6 +24238,7 @@
       "source_url": "https://sillok.history.go.kr/",
       "source_work": "조선왕조실록",
       "source_work_key": "mnemosyne.ko.work.조선왕조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "조선왕조실록",
         "조선왕조실록(朝鮮王朝實錄)",
@@ -23788,6 +24267,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Joseon_court_music_and_dance",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "조선왕조 궁중극",
         "궁중극은 조선왕조의",
@@ -23814,6 +24294,7 @@
       "source_license": "public_domain",
       "source_work": "조선왕조실록",
       "source_work_key": "mnemosyne.ko.work.조선왕조실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "조선왕조의 궁중무용",
         "궁중무용을 공연하다",
@@ -23843,6 +24324,7 @@
       "source_url": "https://sillok.history.go.kr/front/inspection/inspectionDetail.do?levelId=ssg_10300030",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "조선의 삼국통일",
         "삼국을 통일하다",
@@ -23942,6 +24424,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0/%EA%B3%A0%EA%B5%AC%EB%A0%A4%EB%B3%B8%EA%B8%B0",
       "source_work": "삼국사기 (Samguk Sagi), 삼국유사 (Samguk Yusa)",
       "source_work_key": "mnemosyne.ko.work.삼국사기_samguk_sagi_삼국유사_samguk_yusa",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "주몽",
         "Jumong",
@@ -23982,6 +24465,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/죽서루",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "죽서루",
         "삼척 죽서루",
@@ -24008,6 +24492,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "지신막",
         "지신막이",
@@ -24077,6 +24562,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E5%8F%B2%E8%AE%80/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%B8%80",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "진시황",
         "진시황제",
@@ -24117,6 +24603,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%84%EC%A3%BC%EC%84%B1_%EC%A0%84%ED%88%AC",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "진주성 전투",
         "Battle of Jinju",
@@ -24157,6 +24644,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0/%EA%B6%8C%EC%A0%9C4",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "진평왕",
         "King Jinpyeong",
@@ -24241,6 +24729,7 @@
       "source_license": "not_required",
       "source_work": "흥보전",
       "source_work_key": "mnemosyne.ko.work.흥보전",
+      "subcategory": "pansori",
       "surface_patterns": [
         "창극의 흥보가",
         "흥보가는 창극의 한 작품이다",
@@ -24351,6 +24840,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "천리마",
         "천리마 운동",
@@ -24376,6 +24866,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Korean_shamanism",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "천지신명",
         "천지신명을 믿다",
@@ -24416,6 +24907,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%B2%AD%EC%82%B0%EB%A6%AC_%EB%8C%80%EC%B2%A9",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "청산리 대첩",
         "Battle of Cheongsanri",
@@ -24457,6 +24949,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%B5%9C%EC%98%81",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "최영 장군",
         "최영",
@@ -24513,6 +25006,7 @@
       "source_url": "https://sillok.history.go.kr/front/search/searchDetail.do?levelId=kg_001",
       "source_work": "고려사",
       "source_work_key": "mnemosyne.ko.work.고려사",
+      "subcategory": "historical",
       "surface_patterns": [
         "요동정벌을 하다",
         "최영이 원정을 가다",
@@ -24582,6 +25076,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "충효사상",
         "충효사상이",
@@ -24610,6 +25105,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "취타의 장단",
         "취타 장단을 치다",
@@ -24638,6 +25134,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Seven_Gods_of_Fortune",
       "source_work": "Various (folklore)",
       "source_work_key": "mnemosyne.ko.work.various_folklore",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "칠복신",
         "칠복신의",
@@ -24667,6 +25164,7 @@
       "source_url": "https://sillok.history.go.kr/main.do",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "살수대첩이 있다",
         "살수대첩을 기념하다",
@@ -24708,6 +25206,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "칠성신",
         "칠성",
@@ -24746,6 +25245,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%B9%A0%EC%A7%80%EB%8F%84",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "칠지도",
         "七支刀",
@@ -24814,6 +25314,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "탈춤의 도깨비춤",
         "도깨비춤은 탈춤의 한 종류이다",
@@ -24880,6 +25381,7 @@
       "source_license": "public_domain",
       "source_work": "Various philosophical writings",
       "source_work_key": "mnemosyne.ko.work.various_philosophical_writings",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "퇴계 이황",
         "퇴계",
@@ -25019,6 +25521,7 @@
       "source_license": "public_domain",
       "source_work": "Tripitaka Koreana",
       "source_work_key": "mnemosyne.ko.work.tripitaka_koreana",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "팔만대장경",
         "팔만 대장경",
@@ -25045,6 +25548,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1107450&cid=40942&categoryId=32204",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "팔상도",
         "팔상도를 그리다",
@@ -25084,6 +25588,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "표리부동한 사람",
         "표리부동의 태도",
@@ -25141,6 +25646,7 @@
       "source_license": "not_required",
       "source_work": "Various (Folklore and religious texts)",
       "source_work_key": "mnemosyne.ko.work.various_folklore_and_religious_texts",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "하늘의 문",
         "하늘의 문이 열리다",
@@ -25219,6 +25725,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B0%95_%EC%9D%B4%EB%82%A8%EC%9D%98_8%EC%9B%94_%ED%94%BC%EB%82%B8",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "한강 이남의 8월 피난",
         "8월 피난",
@@ -25247,6 +25754,7 @@
       "source_license": "not_required",
       "source_work": "한국 전통예술 개론",
       "source_work_key": "mnemosyne.ko.work.한국_전통예술_개론",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "한국 전통예술의 극",
         "전통예술극을 감상하다",
@@ -25302,6 +25810,7 @@
       "source_license": "public_domain",
       "source_work": "한국의 전통음악",
       "source_work_key": "mnemosyne.ko.work.한국의_전통음악",
+      "subcategory": "music",
       "surface_patterns": [
         "장단의 특징",
         "장단은 ~이다",
@@ -25357,6 +25866,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B8%80",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "한글을 창제하다",
         "한글을 만들다",
@@ -25386,6 +25896,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%9B%88%EB%AF%BC%EC%A0%95%EC%9D%8C",
       "source_work": "훈민정음",
       "source_work_key": "mnemosyne.ko.work.훈민정음",
+      "subcategory": "historical",
       "surface_patterns": [
         "훈민정음은",
         "훈민정음으로",
@@ -25424,6 +25935,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "한글날",
         "한글날에",
@@ -25462,6 +25974,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%9B%88%EB%AF%BC%EC%A0%95%EC%9D%8C",
       "source_work": "훈민정음",
       "source_work_key": "mnemosyne.ko.work.훈민정음",
+      "subcategory": "historical",
       "surface_patterns": [
         "한글창제",
         "훈민정음 창제",
@@ -25488,6 +26001,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1106497&cid=40942&categoryId=32203",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "한량질의 광대춤",
         "한량질의 광대춤을 추다",
@@ -25517,6 +26031,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=110000000000000&cid=40942&categoryId=31000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "단종복위운동",
         "단종을 복위시키려는 운동",
@@ -25544,6 +26059,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Battle_of_Hansan_Island",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "한산도 대첩",
         "한산도에서 일어난 전투",
@@ -25571,6 +26087,7 @@
       "source_license": "not_required",
       "source_work": "한양무삼 기록",
       "source_work_key": "mnemosyne.ko.work.한양무삼_기록",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "한양무삼",
         "한양무삼을 공연하다",
@@ -25599,6 +26116,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/3%C2%B71%EB%AC%B8%ED%96%89_%EB%8F%85%EB%A6%BD%EC%84%A0%EC%96%B8%EC%84%9C",
       "source_work": "독립선언서",
       "source_work_key": "mnemosyne.ko.work.독립선언서",
+      "subcategory": "historical",
       "surface_patterns": [
         "한용운의 3·1운동 독립 선언서",
         "독립 선언서",
@@ -25627,6 +26145,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "한우충동",
         "한우충(의)",
@@ -25668,6 +26187,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "해님과 달님",
         "해와 달이 된 오누이"
@@ -25721,6 +26241,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "향토의 노래",
         "향토의 노래를 부르다",
@@ -25778,6 +26299,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1100000000000000000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "척사운동",
         "척사운동으로",
@@ -25806,6 +26328,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "호랑이 담배 피우는 그림",
         "호랑이가 담배를 피우는 그림",
@@ -25833,6 +26356,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "호랑이 담배피우던 시절",
         "호랑이가 담배를 피우던 시절",
@@ -25860,6 +26384,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%ED%99%8D%EA%B2%BD%EB%9E%98%EC%9D%98_%EB%82%9C",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "홍경래의 난이 일어나다",
         "홍경래의 난이 발생하다",
@@ -25902,6 +26427,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC/%EA%B6%8C%EC%A0%9C1",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "홍익인간",
         "홍익인간의 이념",
@@ -25930,6 +26456,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0/%EC%8B%A0%EB%9D%BC%EB%B3%B8%EA%B8%B0",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "화랑은",
         "화랑이",
@@ -25958,6 +26485,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1107453&cid=40942&categoryId=32204",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "환생 개념",
         "환생을 믿다",
@@ -26030,6 +26558,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%ED%99%A9%EC%A7%84%EC%9D%B4",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "황진이",
         "Hwang Jini",
@@ -26056,6 +26585,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1100000000000000000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "북벌론",
         "북벌론으로",
@@ -26084,6 +26614,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "효행사",
         "효행사를 하다",
@@ -26113,6 +26644,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4",
       "source_work": "논어",
       "source_work_key": "mnemosyne.ko.work.논어",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "후생가외",
         "후생가(의)",
@@ -26154,6 +26686,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%9B%88%EB%AF%BC%EC%A0%95%EC%9D%8C",
       "source_work": "훈민정음",
       "source_work_key": "mnemosyne.ko.work.훈민정음",
+      "subcategory": "historical",
       "surface_patterns": [
         "훈민정음",
         "訓民正音",
@@ -26179,6 +26712,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1106498&cid=40942&categoryId=32203",
       "source_work": "흥보전",
       "source_work_key": "mnemosyne.ko.work.흥보전",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "흥보전의 마당놀이",
         "흥보전의 마당놀이를 하다",
@@ -26267,6 +26801,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=3460153&cid=40942&categoryId=39804",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "흰 종이배",
         "흰 종이배를 띄우다",
@@ -26315,6 +26850,7 @@
       "reference_type": "cultural_reference",
       "register": "common",
       "short_explanation": "The hare and the tortoise; persistence over arrogance.",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "토끼와 거북이"
       ]
@@ -26329,6 +26865,7 @@
       "reference_type": "cultural_reference",
       "register": "common",
       "short_explanation": "Folk-tale contrast between generosity and greed.",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "흥부와 놀부"
       ]
@@ -26431,6 +26968,7 @@
       "source_url": "https://www.hymnal.net/ko/hymns",
       "source_work": "성가 (Hymns)",
       "source_work_key": "mnemosyne.ko.work.성가_hymns",
+      "subcategory": "music",
       "surface_patterns": [
         "거룩한 밤",
         "거룩한 밤이여",
@@ -26518,6 +27056,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%85%BC%EC%96%B4_(%EC%9C%A0%ED%83%9D%EB%B2%88%EC%A0%84)",
       "source_work": "논어",
       "source_work_key": "mnemosyne.ko.work.논어",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "견마지로",
         "견마지로를 다하다",
@@ -26559,6 +27098,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Gyeongse_yupyo",
       "source_work": "경세유표",
       "source_work_key": "mnemosyne.ko.work.경세유표",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "경세유표",
         "경세유표(經世遺表)",
@@ -26630,6 +27170,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EA%B3%A0%EB%A0%A4%EC%82%AC",
       "source_work": "고려사",
       "source_work_key": "mnemosyne.ko.work.고려사",
+      "subcategory": "historical",
       "surface_patterns": [
         "고려사",
         "Goryeosa",
@@ -26885,6 +27426,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Cloud_Dream_of_the_Nine",
       "source_work": "구운몽",
       "source_work_key": "mnemosyne.ko.work.구운몽",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "구운몽",
         "구운몽(九雲夢)",
@@ -26944,6 +27486,7 @@
       "source_url": "https://archive.org/details/chrysanthemumswo0000bened",
       "source_work": "The Chrysanthemum and the Sword",
       "source_work_key": "mnemosyne.ko.work.the_chrysanthemum_and_the_sword",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "국화와 칼",
         "국화와 칼의",
@@ -27039,6 +27582,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1112549",
       "source_work": "동국여지승람(東國輿地勝覽)",
       "source_work_key": "mnemosyne.ko.work.동국여지승람_東國輿地勝覽",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "금강산신풍",
         "금강산의 신풍",
@@ -27069,6 +27613,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Dongguk_Yeoji_Seungnam",
       "source_work": "동국여지승람",
       "source_work_key": "mnemosyne.ko.work.동국여지승람",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "금강산의 구름과 물",
         "금강산 구름과 물",
@@ -27096,6 +27641,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B8%88%EB%8F%84%EA%B9%8C%EC%9D%B4_%EC%9D%80%EB%8F%84%EA%B9%8C%EC%9D%B4",
       "source_work": "금도끼 은도끼",
       "source_work_key": "mnemosyne.ko.work.금도끼_은도끼",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "금도끼 은도끼",
         "금도끼와 은도끼",
@@ -27124,6 +27670,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/금성야화",
       "source_work": "금성야화",
       "source_work_key": "mnemosyne.ko.work.금성야화",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "금성야화",
         "금성야화는",
@@ -27189,6 +27736,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B8%88%EC%98%A4%EC%8B%A0%ED%99%94",
       "source_work": "금오신화",
       "source_work_key": "mnemosyne.ko.work.금오신화",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "금오신화의 연화",
         "금오신화 연화",
@@ -27247,6 +27795,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "기생의 눈물",
         "기생의 눈물이 흐르다",
@@ -27274,6 +27823,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%B0%B1%EB%B2%98%EC%9D%BC%EC%A7%80",
       "source_work": "백범일지",
       "source_work_key": "mnemosyne.ko.work.백범일지",
+      "subcategory": "historical",
       "surface_patterns": [
         "백범일지를 읽다",
         "백범일지를 쓰다",
@@ -27362,6 +27912,7 @@
       "source_url": "https://ko.wikisource.org/wiki/감자",
       "source_work": "감자",
       "source_work_key": "mnemosyne.ko.work.감자",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "감자",
         "감자를 먹다",
@@ -27390,6 +27941,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B0%90%EC%9E%90_(%EC%86%90%EB%AC%B8)",
       "source_work": "감자",
       "source_work_key": "mnemosyne.ko.work.감자",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "김동인의 '감자'",
         "김동인의 감자",
@@ -27448,6 +28000,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%B2%99%EC%96%B4%EB%A6%AC_%EC%82%BC%EB%A3%A1%EC%9D%B4",
       "source_work": "벙어리 삼룡이",
       "source_work_key": "mnemosyne.ko.work.벙어리_삼룡이",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "벙어리 삼룡이",
         "벙어리 삼룡이가 되다",
@@ -27475,6 +28028,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%AC%B4%EC%A7%84%EA%B8%B0%ED%96%89",
       "source_work": "무진기행",
       "source_work_key": "mnemosyne.ko.work.무진기행",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "무진기행",
         "무진을 기행하다",
@@ -27609,6 +28163,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%B4%84%EB%B4%84_(%EC%86%8C%EC%84%A4)",
       "source_work": "봄봄",
       "source_work_key": "mnemosyne.ko.work.봄봄",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "봄봄을 기다리다",
         "봄봄을 맞이하다",
@@ -27634,6 +28189,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%86%8C%EB%82%99%EB%B9%84",
       "source_work": "소낙비",
       "source_work_key": "mnemosyne.ko.work.소낙비",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "김유정의 '소낙비'",
         "김유정의 소설 '소낙비'",
@@ -27807,6 +28363,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "나비의 꿈",
         "나비의 꿈을 꾸다",
@@ -27847,6 +28404,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "낙락장송",
         "락락장송",
@@ -27873,6 +28431,7 @@
       "source_location": "晉代 (진나라 시대)",
       "source_work": "蘭亭序 (난정서)",
       "source_work_key": "mnemosyne.ko.work.蘭亭序_난정서",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "난정서원의 전설",
         "난정서원의 시문",
@@ -27914,6 +28473,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%82%9C%EC%A4%91%EC%9D%BC%EA%B8%B0",
       "source_work": "난중일기 (Nanjung Ilgi)",
       "source_work_key": "mnemosyne.ko.work.난중일기_nanjung_ilgi",
+      "subcategory": "historical",
       "surface_patterns": [
         "난중일기",
         "이순신 난중일기",
@@ -28338,6 +28898,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/동경잡기",
       "source_work": "동경잡기",
       "source_work_key": "mnemosyne.ko.work.동경잡기",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "동경잡기",
         "동경잡기의",
@@ -28366,6 +28927,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%8F%99%EA%B5%AD%EC%9D%B4%EC%83%81%EA%B5%AD%EC%84%A0%EC%83%9D%EB%AC%B8%EC%A7%91",
       "source_work": "동국이상국선생문집",
       "source_work_key": "mnemosyne.ko.work.동국이상국선생문집",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "산은 산이요 물은 물이로다",
         "산은 산이요 물은 물이로다 하였다",
@@ -28405,6 +28967,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%8F%99%EA%B5%AD%ED%86%B5%EA%B0%90",
       "source_work": "동국통감",
       "source_work_key": "mnemosyne.ko.work.동국통감",
+      "subcategory": "historical",
       "surface_patterns": [
         "동국통감",
         "東國通鑑",
@@ -28431,6 +28994,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "동동",
         "동동 춤추다",
@@ -28459,6 +29023,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1106160&cid=40942&categoryId=32209",
       "source_work": "동동무 (전래동요)",
       "source_work_key": "mnemosyne.ko.work.동동무_전래동요",
+      "subcategory": "music",
       "surface_patterns": [
         "동동무",
         "동동무가 왔다",
@@ -28500,6 +29065,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%8F%99%EB%AC%B8%EC%84%A0",
       "source_work": "동문선 (東文選)",
       "source_work_key": "mnemosyne.ko.work.동문선_東文選",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "동문선",
         "東文選",
@@ -28602,6 +29168,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "두견새",
         "두견새가 울어대다",
@@ -28628,6 +29195,7 @@
         "zh": "指杜甫的诗作，这位唐代著名诗人以其深度和社会评论著称，其诗歌在中韩文学传统中备受推崇。"
       },
       "id": "ko_literary_reference_두보의_시_06ec6818",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to Du Fu and the reference to his poetry are accurate, and the surface patterns correctly reflect common Korean and Chinese renderings.",
@@ -28641,6 +29209,7 @@
       "source_url": "https://zh.wikisource.org/wiki/杜工部集",
       "source_work": "杜工部集",
       "source_work_key": "mnemosyne.ko.work.杜工部集",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "두보의 시",
         "두보 시",
@@ -28744,6 +29313,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%A7%A4%EC%B2%9C%EC%95%BC%EB%A1%9D",
       "source_work": "매천야록",
       "source_work_key": "mnemosyne.ko.work.매천야록",
+      "subcategory": "historical",
       "surface_patterns": [
         "매천야록",
         "Maechon Yarok",
@@ -28888,6 +29458,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Mongmin_simseo",
       "source_work": "목민심서",
       "source_work_key": "mnemosyne.ko.work.목민심서",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "목민심서",
         "목민심서(牧民心書)",
@@ -28987,6 +29558,7 @@
       "source_url": "https://en.wikisource.org/wiki/Mujeong",
       "source_work": "무정",
       "source_work_key": "mnemosyne.ko.work.무정",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "무정",
         "무정 소설"
@@ -29071,6 +29643,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "바리공주 설화",
         "바리공주가 ~하다",
@@ -29177,6 +29750,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%ED%86%A0%EC%A7%80_(%EC%86%8C%EC%84%A4)",
       "source_work": "토지",
       "source_work_key": "mnemosyne.ko.work.토지",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "토지가 되다",
         "토지를 잃다",
@@ -29217,6 +29791,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%97%B4%ED%95%98%EC%9D%BC%EA%B8%B0",
       "source_work": "열하일기",
       "source_work_key": "mnemosyne.ko.work.열하일기",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "박지원",
         "연암 박지원",
@@ -29417,6 +29992,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "벌거숭이 임금님",
         "벌거숭이 임금님은",
@@ -29497,6 +30073,7 @@
       "source_license": "public_domain",
       "source_work": "별주부전",
       "source_work_key": "mnemosyne.ko.work.별주부전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "별주부전",
         "별주부전(별주부傳)",
@@ -29527,6 +30104,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%B6%84%EB%A0%88%EA%B8%B0",
       "source_work": "분례기",
       "source_work_key": "mnemosyne.ko.work.분례기",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "분례기",
         "분례기는",
@@ -29555,6 +30133,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "비형신과 장화홍련",
         "비형신과 장화홍련의 이야기",
@@ -29582,6 +30161,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%AC%EB%9E%91_%EC%86%90%EB%8B%9B%EA%B3%BC_%EC%96%B4%EB%A9%80%EB%8B%88",
       "source_work": "사랑 손님과 어머니",
       "source_work_key": "mnemosyne.ko.work.사랑_손님과_어머니",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "사랑 손님과 어머니",
         "사랑 손님이 오다",
@@ -29609,6 +30189,7 @@
       "source_license": "public_domain",
       "source_work": "사랑손님과 어머니",
       "source_work_key": "mnemosyne.ko.work.사랑손님과_어머니",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "사랑손님과 어머니",
         "사랑손님",
@@ -29686,6 +30267,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Story_of_Madam_Sa",
       "source_work": "사씨남정기",
       "source_work_key": "mnemosyne.ko.work.사씨남정기",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "사씨남정기",
         "사씨남정기(謝氏南征記)",
@@ -29783,6 +30365,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%82%AC%EA%B8%B0",
       "source_work": "삼국사기",
       "source_work_key": "mnemosyne.ko.work.삼국사기",
+      "subcategory": "historical",
       "surface_patterns": [
         "삼국사기",
         "三國史記",
@@ -29821,6 +30404,7 @@
       "source_url": "https://ko.wikisource.org/wiki/삼국유사",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "historical",
       "surface_patterns": [
         "삼국유사",
         "삼국유사에 나오는",
@@ -29892,6 +30476,7 @@
       "source_url": "https://ko.wikisource.org/wiki/삼국지연의",
       "source_work": "삼국지연의 (三國志演義)",
       "source_work_key": "mnemosyne.ko.work.삼국지연의_三國志演義",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "삼국지",
         "삼국지 이야기",
@@ -29971,6 +30556,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%83%81%EB%A1%9D%EC%88%98",
       "source_work": "상록수",
       "source_work_key": "mnemosyne.ko.work.상록수",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "상록수",
         "상록수 소설",
@@ -30183,6 +30769,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%99%80%EA%B8%B8%EB%8F%99%EC%A0%84",
       "source_work": "홍길동전",
       "source_work_key": "mnemosyne.ko.work.홍길동전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "서화담",
         "서화담이",
@@ -30292,6 +30879,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%86%8C%EB%82%98%EA%B8%B0",
       "source_work": "소나기",
       "source_work_key": "mnemosyne.ko.work.소나기",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "소나기",
         "소나기 소설"
@@ -30345,6 +30933,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%B0%9C%EA%B0%80%EB%9D%BD%EC%9D%B4_%EB%8B%9E%EC%95%84%EB%8B%A4",
       "source_work": "발가락이 닮았다",
       "source_work_key": "mnemosyne.ko.work.발가락이_닮았다",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "발가락이 닮았다고 하다",
         "발가락이 닮았다는 말",
@@ -30371,6 +30960,7 @@
       "source_url": "https://db.itkc.or.kr/itkcdb/record/kor/00000000000000000000000000000000",
       "source_work": "退溪全書",
       "source_work_key": "mnemosyne.ko.work.退溪全書",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "소화의 혈맥",
         "소화의 혈맥을 잇다",
@@ -30525,6 +31115,7 @@
       "source_url": "https://zh.wikisource.org/wiki/%E6%B0%B4%E6%BB%B8%E5%82%B3",
       "source_work": "水滸傳",
       "source_work_key": "mnemosyne.ko.work.水滸傳",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "수호지",
         "水滸傳",
@@ -30565,6 +31156,7 @@
       "source_url": "https://ko.wikisource.org/wiki/숙향전",
       "source_work": "숙향전",
       "source_work_key": "mnemosyne.ko.work.숙향전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "숙향전",
         "숙향",
@@ -30831,6 +31423,7 @@
       "source_url": "https://en.wikisource.org/wiki/Simcheongjeon",
       "source_work": "심청전",
       "source_work_key": "mnemosyne.ko.work.심청전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "심청은 효녀이다",
         "심청이 아버지를 구하다",
@@ -30859,6 +31452,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%8B%AC%EC%B2%AD%EC%A0%84",
       "source_work": "심청전",
       "source_work_key": "mnemosyne.ko.work.심청전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "원님",
         "원님은",
@@ -30887,6 +31481,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%83%81%EB%A1%9D%EC%88%98_(%EC%8B%AC%ED%9B%88)",
       "source_work": "상록수",
       "source_work_key": "mnemosyne.ko.work.상록수",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "상록수를 심다",
         "상록수가 자라다",
@@ -30914,6 +31509,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "아기장수 우투리",
         "아기장수 우투리는",
@@ -30954,6 +31550,7 @@
       "source_license": "public_domain",
       "source_work": "아언각비",
       "source_work_key": "mnemosyne.ko.work.아언각비",
+      "subcategory": "confucian_text",
       "surface_patterns": [
         "아언각비",
         "아언각비(雅言覺非)",
@@ -31058,6 +31655,7 @@
       "source_license": "public_domain",
       "source_work": "안창호의 저서 및 연설문",
       "source_work_key": "mnemosyne.ko.work.안창호의_저서_및_연설문",
+      "subcategory": "historical",
       "surface_patterns": [
         "대동단결",
         "대동단결을 선언하다",
@@ -31221,6 +31819,7 @@
       "source_url": "https://ko.wikisource.org/wiki/저자:이광수",
       "source_work": "어진이시대",
       "source_work_key": "mnemosyne.ko.work.어진이시대",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "어진이시대",
         "어진이시대의",
@@ -31260,6 +31859,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%97%B4%ED%95%98%EC%9D%BC%EA%B8%B0",
       "source_work": "열하일기",
       "source_work_key": "mnemosyne.ko.work.열하일기",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "열하일기",
         "Yeolha Ilgi",
@@ -31286,6 +31886,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%A7%8C%EC%84%B8%EC%A0%84",
       "source_work": "만세전",
       "source_work_key": "mnemosyne.ko.work.만세전",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "만세전",
         "만세전을 기다리다",
@@ -31344,6 +31945,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%99%84%EC%83%81%EC%A0%84",
       "source_work": "완상전",
       "source_work_key": "mnemosyne.ko.work.완상전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "완상전",
         "완상전을",
@@ -31484,6 +32086,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9A%B4%EC%88%98_%EC%A2%8B%EC%9D%80_%EB%82%A0",
       "source_work": "운수 좋은 날",
       "source_work_key": "mnemosyne.ko.work.운수_좋은_날",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "운수 좋은 날",
         "운수 좋은 날에",
@@ -31523,6 +32126,7 @@
       "source_url": "https://ko.wikisource.org/wiki/운영전",
       "source_work": "운영전",
       "source_work_key": "mnemosyne.ko.work.운영전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "운영전",
         "운영",
@@ -31589,6 +32193,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9B%94%EC%9D%B8%EC%84%9D%EB%B3%B4",
       "source_work": "월인석보",
       "source_work_key": "mnemosyne.ko.work.월인석보",
+      "subcategory": "buddhist_text",
       "surface_patterns": [
         "월인석보",
         "月印釋譜",
@@ -31694,6 +32299,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9C%A0%EC%B6%A9%EB%A0%AC%EC%A0%84",
       "source_work": "유충렬전",
       "source_work_key": "mnemosyne.ko.work.유충렬전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "유충렬전",
         "유충렬전에서",
@@ -31792,6 +32398,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%AC%B4%EC%A0%95_(%EC%86%8C%EC%84%A4)",
       "source_work": "무정",
       "source_work_key": "mnemosyne.ko.work.무정",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "무정을 느끼다",
         "무정이 들다",
@@ -31820,6 +32427,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%ED%96%89_(%EC%86%8C%EC%84%A4)",
       "source_work": "고향",
       "source_work_key": "mnemosyne.ko.work.고향",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "고향",
         "고향을 그리워하다",
@@ -31960,6 +32568,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B4%80%EC%B4%8C%EC%88%98%ED%95%84",
       "source_work": "관촌수필",
       "source_work_key": "mnemosyne.ko.work.관촌수필",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "관촌수필",
         "관촌에서 수필을 쓰다",
@@ -32057,6 +32666,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%9A%A9%EC%9D%B8",
       "source_work": "미쳐야 산다",
       "source_work_key": "mnemosyne.ko.work.미쳐야_산다",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "미쳐야 산다",
         "미치면 산다",
@@ -32291,6 +32901,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%B2%AD%EC%A4%80",
       "source_work": "벌레 이야기",
       "source_work_key": "mnemosyne.ko.work.벌레_이야기",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "벌레 이야기",
         "벌레에 대한 이야기",
@@ -32379,6 +32990,7 @@
       "source_url": "https://ko.wikisource.org/wiki/봄봄",
       "source_work": "봄봄",
       "source_work_key": "mnemosyne.ko.work.봄봄",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "봄봄",
         "봄봄을 그리다",
@@ -32468,6 +33080,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9E%84%EA%BA%BD%EC%A0%95%EC%A0%84",
       "source_work": "임꺽정전",
       "source_work_key": "mnemosyne.ko.work.임꺽정전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "임꺽정의 반란",
         "임꺽정의 난",
@@ -32508,6 +33121,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%9E%90%EC%82%B0%EC%96%B4%EB%B3%B4",
       "source_work": "자산어보",
       "source_work_key": "mnemosyne.ko.work.자산어보",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "자산어보",
         "Jasan Eobo",
@@ -32573,6 +33187,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC",
       "source_work": "삼국유사 (三國遺事)",
       "source_work_key": "mnemosyne.ko.work.삼국유사_三國遺事",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "장삼이사",
         "장삼이사들",
@@ -32599,6 +33214,7 @@
       "source_license": "public_domain",
       "source_work": "장생전",
       "source_work_key": "mnemosyne.ko.work.장생전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "장생전을 읽다",
         "장생전이 유명하다",
@@ -32628,6 +33244,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%ED%94%BC%EC%9D%98_%ED%84%B0%EB%84%90",
       "source_work": "피의 터널",
       "source_work_key": "mnemosyne.ko.work.피의_터널",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "장준하의 피의 터널",
         "피의 터널을 지나다",
@@ -32668,6 +33285,7 @@
       "source_url": "https://ko.wikisource.org/wiki/장화홍련전",
       "source_work": "장화홍련전",
       "source_work_key": "mnemosyne.ko.work.장화홍련전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "장화홍련전",
         "장화홍련",
@@ -32761,6 +33379,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/전생록",
       "source_work": "전생록",
       "source_work_key": "mnemosyne.ko.work.전생록",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "전생록",
         "전생록을",
@@ -32788,6 +33407,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "정과정",
         "정과정은",
@@ -33205,6 +33825,7 @@
       "source_url": "https://sillok.history.go.kr/id/kja_11711023_001",
       "source_work": "중종실록",
       "source_work_key": "mnemosyne.ko.work.중종실록",
+      "subcategory": "historical",
       "surface_patterns": [
         "조광조",
         "정암 조광조",
@@ -33250,6 +33871,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%A7%80%EB%B4%89%EC%9C%A0%EC%84%A4",
       "source_work": "지봉유설 (芝峰類說)",
       "source_work_key": "mnemosyne.ko.work.지봉유설_芝峰類說",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "지봉유설",
         "芝峰類說",
@@ -33330,6 +33952,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%A7%95%EB%B9%84%EB%A1%9D",
       "source_work": "징비록",
       "source_work_key": "mnemosyne.ko.work.징비록",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "징비록",
         "류성룡의 징비록",
@@ -33395,6 +34018,7 @@
       "source_url": "https://ko.wikisource.org/wiki/태평천하",
       "source_work": "태평천하",
       "source_work_key": "mnemosyne.ko.work.태평천하",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "태평천하",
         "태평천하가 오다",
@@ -33630,6 +34254,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%ED%98%88%EC%9D%98_%EB%88%84",
       "source_work": "혈의 누",
       "source_work_key": "mnemosyne.ko.work.혈의_누",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "혈의 누가 되다",
         "혈의 누를 흘리다",
@@ -33730,6 +34355,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%AC%B4%EC%A0%95",
       "source_work": "무정",
       "source_work_key": "mnemosyne.ko.work.무정",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "춘원 이광수",
         "이광수",
@@ -33757,6 +34383,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%86%8C%EB%85%84_(%EC%9D%B4%EA%B4%91%EC%88%98)",
       "source_work": "소년",
       "source_work_key": "mnemosyne.ko.work.소년",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "인생은 마차바퀴다",
         "인생은 마차바퀴와 같다",
@@ -33901,6 +34528,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%BD%A9%EC%A5%B4_%ED%8C%A5%EC%A5%B4",
       "source_work": "콩쥐 팥쥐",
       "source_work_key": "mnemosyne.ko.work.콩쥐_팥쥐",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "콩쥐 팥쥐",
         "콩쥐는 팥쥐를",
@@ -33941,6 +34569,7 @@
       "source_license": "public_domain",
       "source_work": "토끼전",
       "source_work_key": "mnemosyne.ko.work.토끼전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "토끼전",
         "토끼전(토끼傳)",
@@ -33984,6 +34613,7 @@
       "source_license": "public_domain",
       "source_work": "토지",
       "source_work_key": "mnemosyne.ko.work.토지",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "토지",
         "토지 소설"
@@ -34079,6 +34709,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "피리부는 사나이",
         "피리부는 사나이는",
@@ -34107,6 +34738,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/필원잡기",
       "source_work": "필원잡기",
       "source_work_key": "mnemosyne.ko.work.필원잡기",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "필원잡기",
         "필원잡기의",
@@ -34186,6 +34818,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%95%98%EB%A9%9C_%ED%91%9C%EB%A5%98%EA%B8%B0",
       "source_work": "하멜 표류기",
       "source_work_key": "mnemosyne.ko.work.하멜_표류기",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "하멜 표류기",
         "하멜의 표류기",
@@ -34312,6 +34945,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%95%9C%EB%B9%84%EC%9E%90/%EC%84%B8%EC%86%8D%ED%8E%B8",
       "source_work": "한비자",
       "source_work_key": "mnemosyne.ko.work.한비자",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "세속론",
         "세속을 논하다",
@@ -34340,6 +34974,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%95%9C%EB%B9%84%EC%9E%90/%EC%A3%BC%EA%B0%9D%ED%8E%B8",
       "source_work": "한비자",
       "source_work_key": "mnemosyne.ko.work.한비자",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "주객전론",
         "주객을 전하다",
@@ -34578,6 +35213,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%95%9C%EC%A4%91%EB%A1%9D",
       "source_work": "한중록",
       "source_work_key": "mnemosyne.ko.work.한중록",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "한중록",
         "혜경궁 홍씨 한중록",
@@ -34603,6 +35239,7 @@
       "source_license": "not_required",
       "source_work": "해님 달님",
       "source_work_key": "mnemosyne.ko.work.해님_달님",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "해님 달님",
         "해님이 달님을 쫓아다니다",
@@ -34907,6 +35544,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%ED%97%88%EC%83%9D%EC%A0%84",
       "source_work": "허생전",
       "source_work_key": "mnemosyne.ko.work.허생전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "허생전의 허생",
         "허생이",
@@ -34936,6 +35574,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%97%88%EC%83%9D%EC%A0%84",
       "source_work": "허생전",
       "source_work_key": "mnemosyne.ko.work.허생전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "허자",
         "허(의)",
@@ -34965,6 +35604,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9A%B4%EC%88%98_%EC%A2%8B%EC%9D%80_%EB%82%A0",
       "source_work": "운수 좋은 날",
       "source_work_key": "mnemosyne.ko.work.운수_좋은_날",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "운수가 좋은 날",
         "운수가 좋은 날이네요",
@@ -35072,6 +35712,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Tale_of_Hong_Gildong",
       "source_work": "홍길동전",
       "source_work_key": "mnemosyne.ko.work.홍길동전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "홍길동전",
         "홍길동전(洪吉童傳)",
@@ -35100,6 +35741,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%9E%84%EA%BA%BD%EC%A0%95_(%EC%86%8C%EC%84%A4)",
       "source_work": "임꺽정",
       "source_work_key": "mnemosyne.ko.work.임꺽정",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "임꺽정",
         "임꺽정이 나타나다",
@@ -35270,6 +35912,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%ED%9D%A5%EB%B6%80%EC%A0%84",
       "source_work": "흥부전",
       "source_work_key": "mnemosyne.ko.work.흥부전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "놀부",
         "놀부는",
@@ -35300,6 +35943,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%ED%9D%A5%EB%B6%80%EC%A0%84",
       "source_work": "흥부전",
       "source_work_key": "mnemosyne.ko.work.흥부전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "흥부",
         "흥부는",
@@ -35320,6 +35964,7 @@
       "reference_type": "literary_reference",
       "register": "literary",
       "short_explanation": "Filial piety and sacrifice in Korean classical fiction.",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "심청전"
       ]
@@ -35334,6 +35979,7 @@
       "reference_type": "literary_reference",
       "register": "literary",
       "short_explanation": "Love, loyalty, and resistance to corrupt authority.",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "춘향전"
       ]
@@ -35349,6 +35995,7 @@
       "register": "literary",
       "short_explanation": "Heroic outlaw figure associated with justice and social constraint.",
       "source_work": "홍길동전",
+      "subcategory": "classical_literature",
       "surface_patterns": [
         "홍길동"
       ]
@@ -37830,6 +38477,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "까치밥 먹듯 하다",
         "까치밥을 먹듯 하다",
@@ -40628,6 +41276,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "소나무와 대나무에 원숭이",
         "소나무와 대나무에 원숭이가",

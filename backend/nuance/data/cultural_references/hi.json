@@ -118,6 +118,7 @@
       "source_url": "https://www.sacred-texts.com/hin/yv/",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि उपासना",
         "अग्नि की उपासना",
@@ -208,6 +209,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rigveda/",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि की अग्नि",
         "अग्नि की अग्नि में",
@@ -329,6 +331,7 @@
       "source_url": "https://sa.wikisource.org/wiki/ऋग्वेदः",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि का ज्ञानयोग",
         "अग्नि के ज्ञानयोग",
@@ -359,6 +362,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/rigveda-samhita",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि कुंड का",
         "अग्नि कुंड में",
@@ -388,6 +392,7 @@
       "source_url": "https://sa.wikisource.org/wiki/उपनिषद्",
       "source_work": "उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.उपन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि का तत्वमीमांसा",
         "अग्नि के तत्वमीमांसा",
@@ -479,6 +484,7 @@
       "source_url": "https://sa.wikisource.org/wiki/न्याय_सूत्र",
       "source_work": "न्याय सूत्र",
       "source_work_key": "mnemosyne.hi.work.न_य_य_स_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि का न्याय दर्शन",
         "अग्नि के न्याय दर्शन",
@@ -600,6 +606,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A4%9C%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि का विलय",
         "अग्नि के विलय",
@@ -630,6 +637,7 @@
       "source_url": "https://sa.wikisource.org/wiki/वैशेषिक_सूत्र",
       "source_work": "वैशेषिक सूत्र",
       "source_work_key": "mnemosyne.hi.work.व_श_ष_क_स_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि का वैशेषिक सिद्धांत",
         "अग्नि के वैशेषिक सिद्धांत",
@@ -723,6 +731,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%A8%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%BF",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "historical",
       "surface_patterns": [
         "अग्नि क्षत्रिय",
         "अग्नि क्षत्रिय का",
@@ -814,6 +823,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%B6%E0%A4%BF%E0%A4%B5_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि का संहार",
         "अग्नि के संहार",
@@ -858,6 +868,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8B%E0%A4%B0%E0%A5%8D%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि के समान",
         "अग्नि समान",
@@ -883,6 +894,7 @@
       "source_license": "public_domain",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-कल्प",
         "अग्नि-कल्प का",
@@ -912,6 +924,7 @@
       "source_location": "ऋग्वेद 10.129",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि गर्भ",
         "अग्नि गर्भ में",
@@ -974,6 +987,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rvsan/rv01.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-त्राता",
         "अग्नि-त्राता के",
@@ -1004,6 +1018,7 @@
       "source_location": "सांख्यकारिका 1.45",
       "source_work": "सांख्य दर्शन",
       "source_work_key": "mnemosyne.hi.work.स_ख_य_दर_शन",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि तत्व",
         "अग्नि तत्व में",
@@ -1094,6 +1109,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rvsan/rv01.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-देव",
         "अग्नि-देव के",
@@ -1124,6 +1140,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/agni-purana",
       "source_work": "अग्नि पुराण",
       "source_work_key": "mnemosyne.hi.work.अग_न_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि देव की अग्नि",
         "अग्नि देव की अग्नि का",
@@ -1168,6 +1185,7 @@
       "source_url": "https://www.sacred-texts.com/hin/yv/index.htm",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-यज्ञ",
         "अग्नि देव का यज्ञ",
@@ -1237,6 +1255,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A5%80%E0%A4%AF_%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि देव की जन्म कथा",
         "अग्नि देव जन्म कथा",
@@ -1280,6 +1299,7 @@
       "source_url": "https://www.sacred-texts.com/hin/aindex.htm",
       "source_work": "ऐतरेय ब्राह्मण",
       "source_work_key": "mnemosyne.hi.work.ऐतर_य_ब_र_ह_मण",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्निदेव का तेज",
         "अग्नि देव के तेज",
@@ -1306,6 +1326,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rigveda/rv01001.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि देव का मुख",
         "अग्नि देव के मुख",
@@ -1350,6 +1371,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A5%80%E0%A4%AF_%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि देव का वाहन",
         "अग्नि देव वाहन",
@@ -1376,6 +1398,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि देव का वाहन मयूर",
         "अग्नि देव के वाहन मयूर",
@@ -1407,6 +1430,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%A8%E0%A5%8D%E0%A4%A6_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि देव का वाहन शुक",
         "अग्नि देव के वाहन शुक",
@@ -1450,6 +1474,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rigveda/",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि देव",
         "अग्निदेव",
@@ -1476,6 +1501,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%BE%E0%A4%A6%E0%A4%B6%E0%A4%A4%E0%A4%95%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि द्विज",
         "अग्नि द्विज का",
@@ -1505,6 +1531,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rvsan/rv01001.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि देवता का",
         "अग्नि देवता के",
@@ -1534,6 +1561,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AC%E0%A5%83%E0%A4%B9%E0%A4%A4%E0%A5%8D%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%B6%E0%A4%B0%E0%A4%B9%E0%A5%8B%E0%A4%B0%E0%A4%BE%E0%A4%B6%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "बृहत्पाराशरहोराशास्त्रम्",
       "source_work_key": "mnemosyne.hi.work.ब_हत_प_र_शरह_र_श_स_त_रम",
+      "subcategory": "historical",
       "surface_patterns": [
         "अग्नि दशा",
         "अग्नि दशा में",
@@ -1562,6 +1590,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A4%9C%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि धूम",
         "अग्नि धूम का",
@@ -1592,6 +1621,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नीध्र",
         "अग्नीध्र देव",
@@ -1621,6 +1651,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%AE%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि धारिणी",
         "अग्नि धारिणी का",
@@ -1683,6 +1714,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rigveda/rv01001.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि ने क्रोध किया",
         "अग्नि क्रोध करता है",
@@ -1713,6 +1745,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%85%E0%A4%A5%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "अथर्ववेद",
       "source_work_key": "mnemosyne.hi.work.अथर_वव_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि नक्षत्र",
         "अग्नि नक्षत्र का",
@@ -1743,6 +1776,7 @@
       "source_url": "https://www.sacred-texts.com/hin/purana.htm",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि-पुत्र",
         "अग्नि-पुत्र का",
@@ -1774,6 +1808,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rigveda/",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि पुत्र",
         "अग्नि पुत्र का",
@@ -1804,6 +1839,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि पुत्रिका",
         "अग्नि पुत्रिका का",
@@ -1834,6 +1870,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%85%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3",
       "source_work": "अग्निपुराण",
       "source_work_key": "mnemosyne.hi.work.अग_न_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्निपुराण",
         "अग्निपुराण का",
@@ -1895,6 +1932,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%85%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "अग्निपुराण",
       "source_work_key": "mnemosyne.hi.work.अग_न_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्निपुराण में वर्णित",
         "अग्निपुराण में वर्णित है",
@@ -1957,6 +1995,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rvsan/rv01.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि प्रज्वलित",
         "अग्नि को प्रज्वलित करना",
@@ -2016,6 +2055,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अग्नि-परीक्षा देना",
         "अग्नि-परीक्षा लेना",
@@ -2080,6 +2120,7 @@
       "source_url": "https://sa.wikisource.org/wiki/वेद",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि ब्राह्मण",
         "अग्नि ब्राह्मण का",
@@ -2110,6 +2151,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/compilation/brihadaranyaka-upanishad",
       "source_work": "बृहदारण्यक उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.ब_हद_रण_यक_उपन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि ब्रह्म",
         "अग्नि ब्रह्म है",
@@ -2171,6 +2213,7 @@
       "source_url": "https://www.sacred-texts.com/hin/sbe25/sbe2501.htm",
       "source_work": "श्रौतसूत्र",
       "source_work_key": "mnemosyne.hi.work.श_र_तस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि मंडल",
         "अग्नि का मंडल",
@@ -2201,6 +2244,7 @@
       "source_url": "https://www.sacred-texts.com/hin/upn/",
       "source_work": "उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.उपन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि मार्ग",
         "अग्नि मार्ग का",
@@ -2231,6 +2275,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/yajurveda-samhita",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि यज्ञ का",
         "अग्नि यज्ञ में",
@@ -2290,6 +2335,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A4%9C%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%83",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्निहोत्र का",
         "अग्निहोत्र में",
@@ -2316,6 +2362,7 @@
       "source_license": "public_domain",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि-लोक",
         "अग्नि-लोक का",
@@ -2345,6 +2392,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%BE%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF%E0%A4%95_%E0%A4%B8%E0%A5%82%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%A8%E0%A4%BF",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि लोहित",
         "अग्नि के लोहित",
@@ -2406,6 +2454,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%BE%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF%E0%A4%95_%E0%A4%B8%E0%A5%82%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%A8%E0%A4%BF",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-वाणी",
         "अग्नि-वाणी का",
@@ -2436,6 +2485,7 @@
       "source_url": "https://www.sacred-texts.com/hin/sbe30/index.htm",
       "source_work": "ऐतरेय ब्राह्मण",
       "source_work_key": "mnemosyne.hi.work.ऐतर_य_ब_र_ह_मण",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-वृत्त",
         "अग्नि-वृत्त का",
@@ -2465,6 +2515,7 @@
       "source_url": "https://www.sacred-texts.com/hin/purana.htm",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि शिखा",
         "अग्नि शिखा का",
@@ -2556,6 +2607,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%AE%E0%A5%8D%E0%A4%A5%E0%A4%95%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्निशिखा-यज्ञ",
         "अग्निशिखा-यज्ञ का",
@@ -2617,6 +2669,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%A8%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%BF",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-साक्षी का",
         "अग्नि-साक्षी लेना",
@@ -2658,6 +2711,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/manusmriti-with-the-commentary-of-medhatithi/d/doc114738.html",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-साक्षी",
         "अग्नि का साक्षी",
@@ -2671,6 +2725,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.vedic_hymns_phrases_अग_न_स_त_त",
       "id": "hi_classical_or_scriptural_allusion_अग_न_स_त_त_10ceeac6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2684,6 +2739,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/rigveda-samhita",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि स्तुति",
         "अग्नि स्तुति का",
@@ -2714,6 +2770,7 @@
         "zh": "指吠陀文献中献给火神阿格尼的赞美诗或祈祷（stuti）。这些赞歌颂扬阿格尼作为净化者、使者和保护者的角色。"
       },
       "id": "hi_classical_or_scriptural_allusion_अग_न_स_त_त_877f0bad",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate description of hymns to Agni in the Rigveda.",
@@ -2728,6 +2785,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rvsan/rv01001.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-स्तुति",
         "अग्नि की स्तुति",
@@ -2753,6 +2811,7 @@
       "source_license": "public_domain",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि-स्तम्भ",
         "अग्नि-स्तम्भ का",
@@ -2782,6 +2841,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rigveda/",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि सिद्धांत",
         "अग्नि सिद्धांतों",
@@ -2816,6 +2876,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A4%9C%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%83",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि संदीपन",
         "अग्नि संदीपन करना",
@@ -2847,6 +2908,7 @@
       "source_url": "https://www.sacred-texts.com/hin/yv/yv01.htm",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि संदीपन से",
         "अग्नि संदीपन करने वाला"
@@ -2871,6 +2933,7 @@
       "source_location": "यजुर्वेद 1.1",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि संधान",
         "अग्नि संधान करना",
@@ -2901,6 +2964,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rigveda/",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-सोम",
         "अग्नि-सोम में",
@@ -2931,6 +2995,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rvsan/rv01.htm",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि स्वरूप",
         "अग्नि के स्वरूप",
@@ -2960,6 +3025,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%AE%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%AF%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%8D%E0%A4%AE%E0%A4%A3%E0%A4%87",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-स्वरूपिणी",
         "अग्नि-स्वरूपिणी के",
@@ -3004,6 +3070,7 @@
       "source_url": "https://www.sacred-texts.com/hin/yv/index.htm",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-समिध",
         "अग्नि की समिध",
@@ -3030,6 +3097,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%97%E0%A5%83%E0%A4%B9%E0%A5%8D%E0%A4%AF%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%A8%E0%A4%BF",
       "source_work": "गृह्यसूत्र",
       "source_work_key": "mnemosyne.hi.work.ग_ह_यस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्निहोत्र किया",
         "अग्निहोत्र करने वाला",
@@ -3055,6 +3123,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/yajurveda-samhita",
       "source_work": "यजुर्वेद",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि होत्र",
         "अग्नि होत्र का",
@@ -3086,6 +3155,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B6%E0%A4%A4%E0%A4%AA%E0%A4%A5%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%8D%E0%A4%AE%E0%A4%A3%E0%A4%87",
       "source_work": "शतपथ ब्राह्मण",
       "source_work_key": "mnemosyne.hi.work.शतपथ_ब_र_ह_मण",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-होत्री",
         "अग्नि-होत्री के",
@@ -3117,6 +3187,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%A4%E0%A5%88%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%B0%E0%A5%80%E0%A4%AF%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%8D%E0%A4%AE%E0%A4%A3%E0%A4%87",
       "source_work": "तैत्तिरीय ब्राह्मण",
       "source_work_key": "mnemosyne.hi.work.त_त_त_र_य_ब_र_ह_मण",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-होत्रिक",
         "अग्नि-होत्रिक के",
@@ -3148,6 +3219,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%A4%E0%A4%B0%E0%A5%87%E0%A4%AF%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B9%E0%A5%8D%E0%A4%AE%E0%A4%A3%E0%A4%87",
       "source_work": "ऐतरेय ब्राह्मण",
       "source_work_key": "mnemosyne.hi.work.ऐतर_य_ब_र_ह_मण",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-होत्रिणी",
         "अग्नि-होत्रिणी के",
@@ -3179,6 +3251,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%BE%E0%A4%A7%E0%A4%B5%E0%A5%80%E0%A4%AF%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%8C%E0%A4%A4%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "माधविय-श्रौतसूत्र",
       "source_work_key": "mnemosyne.hi.work.म_धव_य_श_र_तस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-होत्रोपजीवी",
         "अग्नि-होत्रोपजीवी के",
@@ -3209,6 +3282,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%BE%E0%A4%A6%E0%A4%B6%E0%A4%A4%E0%A4%95%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि हस्त",
         "अग्नि हस्त में",
@@ -3305,6 +3379,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%B9%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "ब्रह्मसूत्र",
       "source_work_key": "mnemosyne.hi.work.ब_रह_मस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अद्वैतवाद",
         "अद्वैतवाद का",
@@ -3412,6 +3487,7 @@
       "source_dataset": "hindu_deities",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अनंत चतुर्भुज",
         "अनंत चतुर्भुज भगवान"
@@ -3773,6 +3849,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अर्धनारीश्वर",
         "अर्धनारी",
@@ -3874,6 +3951,7 @@
       "source_url": "https://www.wisdomlib.org/history/compilation/ashokan-edicts",
       "source_work": "अशोक के शिलालेख",
       "source_work_key": "mnemosyne.hi.work.अश_क_क_श_ल_ल_ख",
+      "subcategory": "historical",
       "surface_patterns": [
         "कलिंग युद्ध",
         "कलिंग युद्ध का",
@@ -3905,6 +3983,7 @@
       "source_url": "https://sa.wikisource.org/wiki/अशोकावदानम्",
       "source_work": "अशोकावदानम्",
       "source_work_key": "mnemosyne.hi.work.अश_क_वद_नम",
+      "subcategory": "historical",
       "surface_patterns": [
         "अशोक का कलिंग युद्ध",
         "कलिंग युद्ध के पश्चात् अशोक का परिवर्तन",
@@ -4089,6 +4168,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "असुरों का वध",
         "असुरों का नाश"
@@ -4113,6 +4193,7 @@
         "zh": "这个短语翻译为“我就是梵”，意味着在印度哲学中，特别是在《奥义书》中自我作为终极现实的实现。"
       },
       "id": "hi_classical_or_scriptural_allusion_अह_ब_रह_म_स_म_5311aac8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to the Brihadaranyaka Upanishad is accurate and the surface patterns correctly reflect the phrase's meaning.",
@@ -4127,6 +4208,7 @@
       "source_url": "https://www.wikisource.org/wiki/Brihadaranyaka_Upanishad",
       "source_work": "Brihadaranyaka Upanishad",
       "source_work_key": "mnemosyne.hi.work.brihadaranyaka_upanishad",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अहं ब्रह्मास्मि",
         "मैं ब्रह्म हूँ"
@@ -4194,6 +4276,7 @@
         "zh": "这句话翻译为“非暴力是最高的责任”，是耆那教和佛教的基本信条，倡导和平和非暴力作为生活中的基本美德。"
       },
       "id": "hi_classical_or_scriptural_allusion_अह_स_परम_धर_म_8fd5ef64",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns correctly represent its significance in Jainism and Buddhism.",
@@ -4206,6 +4289,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अहिंसा परमो धर्मः",
         "अहिंसा",
@@ -4264,6 +4348,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A5%8B%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "महोपनिषद्",
       "source_work_key": "mnemosyne.hi.work.मह_पन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अहिंसा परमो धर्मः परमो ब्रह्म",
         "अहिंसायाः परमः धर्मः परमः ब्रह्म",
@@ -4322,6 +4407,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/compilation/upanishads",
       "source_work": "Isha Upanishad",
       "source_work_key": "mnemosyne.hi.work.isha_upanishad",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अहिंसा सत्यमक्रोधस्त्यागः शान्ति अपरिग्रहः",
         "अहिंसा सत्यमक्रोधस्त्यागः शान्ति अपरिग्रहः है",
@@ -4450,6 +4536,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%A5%E0%A4%B6%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0",
       "source_work": "अर्थशास्त्र",
       "source_work_key": "mnemosyne.hi.work.अर_थश_स_त_र",
+      "subcategory": "historical",
       "surface_patterns": [
         "आचार्य चाणक्य",
         "चाणक्य",
@@ -4476,6 +4563,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%9A%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8B%E0%A4%97%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.उपन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "आत्मा अनात्मा विवेक",
         "आत्मा और अनात्मा का विवेक",
@@ -4506,6 +4594,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/compilation/upanishads",
       "source_work": "Upanishads",
       "source_work_key": "mnemosyne.hi.work.upanishads",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "आत्मा ब्रह्म",
         "आत्मा ब्रह्म है",
@@ -4538,6 +4627,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AC%E0%A5%83%E0%A4%B9%E0%A4%A6%E0%A4%BE%E0%A4%B0%E0%A4%A3%E0%A5%8D%E0%A4%AF%E0%A4%95_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "बृहदारण्यक उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.ब_हद_रण_यक_उपन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "आत्मा वा अरे द्रष्टव्यः",
         "आत्मनः वा अरे द्रष्टव्यः",
@@ -4716,6 +4806,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "इन्द्र का आसन",
         "इन्द्र का सिंहासन",
@@ -4742,6 +4833,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%BE%E0%A4%B9%E0%A5%8D",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "इन्द्र का मद",
         "इन्द्र के मद से",
@@ -4811,6 +4903,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/compilation/upanishads",
       "source_work": "Isha Upanishad",
       "source_work_key": "mnemosyne.hi.work.isha_upanishad",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "ईशावास्यम् इदं सर्वम्",
         "ईशावास्यम् इदं सर्वम् है",
@@ -4841,6 +4934,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%B9%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0",
       "source_work": "ब्रह्मसूत्र",
       "source_work_key": "mnemosyne.hi.work.ब_रह_मस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "उत्तर मीमांसा",
         "उत्तर मीमांसा का",
@@ -4918,6 +5012,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "उपनिषद",
         "उपनिषदों",
@@ -4994,6 +5089,7 @@
       "source_url": "https://www.sacred-texts.com/hin/index.htm#upanishads",
       "source_work": "उपनिषद् (Various)",
       "source_work_key": "mnemosyne.hi.work.उपन_षद_various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "उपनिषदों की वाणी",
         "उपनिषद् वचन",
@@ -5034,6 +5130,7 @@
       "source_url": "https://www.sacred-texts.com/hin/rigveda/rv01092.htm",
       "source_work": "Rigveda",
       "source_work_key": "mnemosyne.hi.work.rigveda",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "उषा का समय",
         "उषा की बेला",
@@ -5073,6 +5170,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%8B%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "ऋग्वेद",
         "ऋग वेद"
@@ -5186,6 +5284,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%9B%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8B%E0%A4%97%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "छान्दोग्योपनिषद्",
       "source_work_key": "mnemosyne.hi.work.छ_न_द_ग_य_पन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "एतद्धि सत्यं",
         "एतत् हि सत्यं",
@@ -5329,6 +5428,7 @@
       "source_dataset": "hindu_goddesses",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कात्यायनी",
         "कात्यायनी देवी"
@@ -5365,6 +5465,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कुबेर",
         "कुबेर देवता"
@@ -5493,6 +5594,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%95%E0%A4%BE%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%82%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%83",
       "source_work": "काव्यालंकार, ध्वन्यालोक",
       "source_work_key": "mnemosyne.hi.work.क_व_य_ल_क_र_ध_वन_य_ल_क",
+      "subcategory": "historical",
       "surface_patterns": [
         "काव्य के नियम",
         "काव्य के नियमों",
@@ -5680,6 +5782,7 @@
       "source_url": "https://www.wikisource.org/wiki/Bhagavata_Purana",
       "source_work": "Bhagavata Purana",
       "source_work_key": "mnemosyne.hi.work.bhagavata_purana",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कृष्ण की बंसी",
         "बंसी कृष्ण की"
@@ -5795,6 +5898,7 @@
       "source_location": "Canto 10",
       "source_work": "Bhagavata Purana",
       "source_work_key": "mnemosyne.hi.work.bhagavata_purana",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कृष्ण का रास",
         "रास लीला",
@@ -5860,6 +5964,7 @@
       "source_url": "https://wikisource.org/wiki/गीत_गोविन्द",
       "source_work": "गीत गोविन्द, ब्रजभाषा साहित्य",
       "source_work_key": "mnemosyne.hi.work.ग_त_ग_व_न_द_ब_रजभ_ष_स_ह_त_य",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कृष्ण और राधा का मिलन",
         "कृष्ण-राधा का मिलन",
@@ -5979,6 +6084,7 @@
       "source_url": "https://www.wikisource.org/wiki/Bhagavata_Purana",
       "source_work": "Bhagavata Purana",
       "source_work_key": "mnemosyne.hi.work.bhagavata_purana",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कृष्णलीला",
         "कृष्ण की लीला",
@@ -6067,6 +6173,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A5%8D_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%82",
       "source_work": "भगवद पुराण",
       "source_work_key": "mnemosyne.hi.work.भगवद_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कंस का वध करना",
         "कंस का वध किया गया",
@@ -6114,6 +6221,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_upanishads_कठ_पन_षद",
       "id": "hi_classical_or_scriptural_allusion_कठ_पन_षद_96c73dee",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6127,6 +6235,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%95%E0%A4%A0%E0%A5%8B%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "कठोपनिषद",
       "source_work_key": "mnemosyne.hi.work.कठ_पन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "कठोपनिषद",
         "कठोपनिषद में",
@@ -6599,6 +6708,7 @@
       "source_url": "https://hi.wikisource.org/wiki/पुराण",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कला धनुष",
         "कला धनुष का",
@@ -7085,6 +7195,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%97%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6",
       "source_work": "गीत गोविन्द",
       "source_work_key": "mnemosyne.hi.work.ग_त_ग_व_न_द",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "गीत गोविन्द का पद",
         "गीत गोविन्द के पद",
@@ -7802,6 +7913,7 @@
       "source_url": "https://www.wisdomlib.org/hindi/book/gopicand-raja-ki-katha",
       "source_work": "गोपीचंद राजा की कथा",
       "source_work_key": "mnemosyne.hi.work.ग_प_च_द_र_ज_क_कथ",
+      "subcategory": "mythology",
       "surface_patterns": [
         "गोपीचंद का त्याग",
         "गोपीचंद त्याग",
@@ -7920,6 +8032,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%97%E0%A4%BE%E0%A4%AF%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80_%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "गायत्री मंत्र",
         "गायत्री"
@@ -8014,6 +8127,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AE%E0%A4%A6%E0%A5%8D%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "गणेश का जन्म",
         "गणेश के जन्म की कथा",
@@ -8044,6 +8158,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%83",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "गणेश जन्म कथा",
         "गणेश जी के जन्म की कथा",
@@ -8136,6 +8251,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%83",
       "source_work": "योगसूत्र",
       "source_work_key": "mnemosyne.hi.work.य_गस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "चित्तवृत्ति निरोध",
         "चित्तवृत्ति निरोधः",
@@ -8206,6 +8322,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "चैतन्य महाप्रभु",
         "महाप्रभु चैतन्य"
@@ -8231,6 +8348,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%A8%E0%A5%8D%E0%A4%A6_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "चंद्रमा का कलंक",
         "चंद्रमा के कलंक",
@@ -8356,6 +8474,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/mundaka-upanishad",
       "source_work": "Mundaka Upanishad",
       "source_work_key": "mnemosyne.hi.work.mundaka_upanishad",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "ज्ञानं ब्रह्म",
         "ज्ञानं ब्रह्मः",
@@ -8461,6 +8580,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AC%E0%A5%83%E0%A4%B9%E0%A4%A6%E0%A4%BE%E0%A4%B0%E0%A4%A3%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A5%8B%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "बृहदारण्यकोपनिषद्",
       "source_work_key": "mnemosyne.hi.work.ब_हद_रण_यक_पन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "जीवो ब्रह्मैव नापरः",
         "जीवः ब्रह्मैव नापरः",
@@ -8486,6 +8606,7 @@
       "source_url": "https://sa.wikisource.org/wiki/बृहदारण्यक_उपनिषद्",
       "source_work": "अद्वैत वेदान्त",
       "source_work_key": "mnemosyne.hi.work.अद_व_त_व_द_न_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "जीवन मुक्त",
         "जीवन मुक्त व्यक्ति",
@@ -8515,6 +8636,7 @@
       "source_url": "https://sa.wikisource.org/wiki/ईशोपनिषद्",
       "source_work": "अद्वैत वेदान्त",
       "source_work_key": "mnemosyne.hi.work.अद_व_त_व_द_न_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "जगत् मिथ्या",
         "जगत् की मिथ्या",
@@ -8635,6 +8757,7 @@
       "source_license": "public_domain",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "जन्मांतरैर्नरकात्",
         "जन्मांतरैः नरकात्"
@@ -8985,6 +9108,7 @@
       "source_url": "https://www.wikisource.org/wiki/Upanishads",
       "source_work": "Upanishads",
       "source_work_key": "mnemosyne.hi.work.upanishads",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "तत्त्व ज्ञान",
         "ज्ञान तत्त्व"
@@ -9040,6 +9164,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%9B%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8B%E0%A4%97%E0%A5%8D%E0%A4%AF_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "छान्दोग्य उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.छ_न_द_ग_य_उपन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "तत्त्वमसि",
         "तत्त्वमसि है",
@@ -9403,6 +9528,7 @@
       "source_dataset": "hindu_philosophy",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "दशावतार",
         "दशावतारों",
@@ -9543,6 +9669,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AC%E0%A5%83%E0%A4%B9%E0%A4%A6%E0%A4%BE%E0%A4%B0%E0%A4%A3%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A5%8B%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "बृहदारण्यकोपनिषद्",
       "source_work_key": "mnemosyne.hi.work.ब_हद_रण_यक_पन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "ध्यानं ब्रह्म",
         "ध्यानं ब्रह्मः",
@@ -9572,6 +9699,7 @@
       "source_url": "https://www.sacred-texts.com/hin/vp/index.htm",
       "source_work": "विष्णु पुराण",
       "source_work_key": "mnemosyne.hi.work.व_ष_ण_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "ध्रुव की तपस्या",
         "ध्रुव की तपस्या करना",
@@ -9603,6 +9731,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%A8%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%BF",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "धर्म, अर्थ, काम और मोक्ष",
         "धर्मार्थकाममोक्षानाम्",
@@ -9644,6 +9773,7 @@
       "source_location": "Anushasana Parva",
       "source_work": "Mahabharata",
       "source_work_key": "mnemosyne.hi.work.mahabharata",
+      "subcategory": "mahabharata",
       "surface_patterns": [
         "धर्म और अधर्म",
         "धर्म अधर्म"
@@ -10093,6 +10223,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%A8%E0%A4%BE%E0%A4%9F%E0%A5%8D%E0%A4%AF%E0%A4%B6%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "नाट्यशास्त्र",
       "source_work_key": "mnemosyne.hi.work.न_ट_यश_स_त_र",
+      "subcategory": "historical",
       "surface_patterns": [
         "नाट्यशास्त्र का रस सिद्धांत",
         "नाट्यशास्त्र के अनुसार रस सिद्धांत",
@@ -10322,6 +10453,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/nyaya-sutras-of-akshapada",
       "source_work": "न्यायदर्शन",
       "source_work_key": "mnemosyne.hi.work.न_य_यदर_शन",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "न्याय दर्शन",
         "न्याय-दर्शन",
@@ -10424,6 +10556,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%AE%E0%A5%8D",
       "source_work": "निरुक्त",
       "source_work_key": "mnemosyne.hi.work.न_र_क_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "निरुक्त निराश्रित",
         "निरुक्तं निराश्रितम्",
@@ -10453,6 +10586,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AA%E0%A4%B6%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A4%BE%E0%A4%82",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "नारद का वाद-विवाद",
         "नारद का वाद-विवाद करना",
@@ -10524,6 +10658,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "नारद मुनि",
         "Narada Muni"
@@ -10549,6 +10684,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%83",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "नारद मुनि का मंत्र",
         "नारद जी का मंत्र",
@@ -10591,6 +10727,7 @@
       "source_license": "public_domain",
       "source_work": "Puranas",
       "source_work_key": "mnemosyne.hi.work.puranas",
+      "subcategory": "mythology",
       "surface_patterns": [
         "नीलकंठ",
         "neelkanth"
@@ -10687,6 +10824,7 @@
       "source_url": "https://www.sacred-texts.com/hin/siva/index.htm",
       "source_work": "Various (Hindu scriptures and iconography)",
       "source_work_key": "mnemosyne.hi.work.various_hindu_scriptures_and_iconography",
+      "subcategory": "mythology",
       "surface_patterns": [
         "नटराज के नृत्य में",
         "नटराज के नृत्य से",
@@ -11003,6 +11141,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/yoga-sutras-of-patanjali",
       "source_work": "योग सूत्र",
       "source_work_key": "mnemosyne.hi.work.य_ग_स_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "प्राणायाम",
         "योग में प्राणायाम",
@@ -11028,6 +11167,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AA%E0%A5%82%E0%A4%B0%E0%A5%8D%E0%A4%B5_%E0%A4%AE%E0%A5%80%E0%A4%AE%E0%A4%BE%E0%A4%82%E0%A4%B8%E0%A4%BE_%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0",
       "source_work": "पूर्व मीमांसा सूत्र",
       "source_work_key": "mnemosyne.hi.work.प_र_व_म_म_स_स_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "पूर्व मीमांसा",
         "पूर्व मीमांसा का",
@@ -11058,6 +11198,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%A8%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%BF",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "पुरुषार्थ चतुष्टय",
         "पुरुषार्थ चतुष्टय में",
@@ -11228,6 +11369,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AC%E0%A5%83%E0%A4%B9%E0%A4%A6%E0%A4%BE%E0%A4%B0%E0%A4%A3%E0%A5%8D%E0%A4%AF%E0%A4%95_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "बृहदारण्यक उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.ब_हद_रण_यक_उपन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "परमात्मा परमात्मिक",
         "परमात्मा परमात्मिक है",
@@ -11267,6 +11409,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "परशुराम",
         "Parashurama"
@@ -11415,6 +11558,7 @@
       "source_url": "https://hi.wikisource.org/wiki/बुद्ध_चारित",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "बुद्ध की कथा",
         "बुद्ध की कहानी",
@@ -11444,6 +11588,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%9A%E0%A4%95%E0%A5%8D%E0%A4%B0_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%A8_%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0",
       "source_work": "धर्मचक्र प्रवर्तन सूत्र",
       "source_work_key": "mnemosyne.hi.work.धर_मचक_र_प_रवर_तन_स_त_र",
+      "subcategory": "historical",
       "surface_patterns": [
         "बुद्ध का धर्मचक्र",
         "बुद्ध के धर्मचक्र",
@@ -11525,6 +11670,7 @@
       "source_url": "https://www.wisdomlib.org/buddhism/book/vinaya-pitaka-pli",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "महापरिनिर्वाण",
         "बुद्ध का महापरिनिर्वाण",
@@ -11553,6 +11699,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%B5%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%81",
       "source_work": "Various (Buddhist scriptures)",
       "source_work_key": "mnemosyne.hi.work.various_buddhist_scriptures",
+      "subcategory": "mythology",
       "surface_patterns": [
         "बुद्ध का महाभिनिष्क्रमण",
         "बुद्ध के महाभिनिष्क्रमण",
@@ -11635,6 +11782,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/the-brahmanda-purana",
       "source_work": "ब्रह्मांड पुराण",
       "source_work_key": "mnemosyne.hi.work.ब_रह_म_ड_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "ब्रह्मांड पुराण",
         "ब्रह्मांड पुराण का वर्णन",
@@ -11647,6 +11795,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hi_upanishad_phrases_ब_रह_म_सत_य_जगत_म_थ_य",
       "id": "hi_classical_or_scriptural_allusion_ब_रह_म_सत_य_जगत_म_थ_य_23e12772",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11661,6 +11810,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/compilation/brahma-sutra",
       "source_work": "उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.उपन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "ब्रह्म सत्यं जगत् मिथ्या",
         "ब्रह्म सत्यं जगत् मिथ्याः",
@@ -11692,6 +11842,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%9A%E0%A4%BF%E0%A4%A4",
       "source_work": "अद्वैत वेदान्त",
       "source_work_key": "mnemosyne.hi.work.अद_व_त_व_द_न_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "ब्रह्म सत्यं जगन्मिथ्या",
         "ब्रह्मस्य सत्यं जगन्मिथ्या",
@@ -11720,6 +11871,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%9B%E0%A4%BE%E0%A4%82%E0%A4%A6%E0%A5%8B%E0%A4%97%E0%A5%8D%E0%A4%AF_%E0%A5%A4%E0%A5%A6_%E0%A5%A8_%E0%A5%A4_%E0%A5%A8",
       "source_work": "छांदोग्य उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.छ_द_ग_य_उपन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "ब्रह्म सत्यम्",
         "ब्रह्म सत्यम् है",
@@ -11854,6 +12006,7 @@
       "source_url": "https://sa.wikisource.org/wiki/वामनपुराण",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "बलि राजा का त्याग",
         "बलि राजा ने त्याग किया",
@@ -12254,6 +12407,7 @@
       "source_url": "https://hi.wikisource.org/wiki/पुराण",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भक्त प्रहलाद",
         "भक्त प्रहलाद का",
@@ -12288,6 +12442,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान की कृपा",
         "भगवान की कृपा से",
@@ -12316,6 +12471,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान का खेल",
         "भगवान का खेल है",
@@ -12345,6 +12501,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान का नाम",
         "भगवान का नाम लेना",
@@ -12471,6 +12628,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A5%8D_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "भगवद् पुराण",
       "source_work_key": "mnemosyne.hi.work.भगवद_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान कृष्ण का रासलीला करना",
         "भगवान कृष्ण रासलीला करते हैं",
@@ -12534,6 +12692,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान का स्मरण",
         "भगवान का स्मरण करना",
@@ -12563,6 +12722,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/गणेश",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान गणेश एकदंत हैं",
         "भगवान गणेश के एकदंत होने की कथा",
@@ -12592,6 +12752,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/दुर्गा_पूजा",
       "source_work": "देवी महात्म्य",
       "source_work_key": "mnemosyne.hi.work.द_व_मह_त_म_य",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान दुर्गा ने महिषासुर का वध किया",
         "भगवान दुर्गा का महिषासुर वध",
@@ -12620,6 +12781,7 @@
       "source_license": "public_domain",
       "source_work": "Puranas",
       "source_work_key": "mnemosyne.hi.work.puranas",
+      "subcategory": "mythology",
       "surface_patterns": [
         "नारायण भगवान",
         "भगवान नारायण जी",
@@ -12682,6 +12844,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/ब्रह्मा",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान ब्रह्मा कमण्डलु धारण करते हैं",
         "भगवान ब्रह्मा का कमण्डलु",
@@ -12872,6 +13035,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान विष्णु",
         "भगवान विष्णु का",
@@ -12939,6 +13103,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3",
       "source_work": "भगवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भगवत_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान विष्णु का वामन अवतार",
         "भगवान विष्णु के वामन अवतार",
@@ -12970,6 +13135,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A5%8D_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "भगवद् पुराण",
       "source_work_key": "mnemosyne.hi.work.भगवद_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान विष्णु का शेषशायी रूप",
         "भगवान विष्णु के शेषशायी रूप",
@@ -13131,6 +13297,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान शिव",
         "भगवान शिव का",
@@ -13167,6 +13334,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/कैलाश_पर्वत",
       "source_work": "शिव पुराण",
       "source_work_key": "mnemosyne.hi.work.श_व_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान शिव कैलाश पर्वत पर निवास करते हैं",
         "भगवान शिव का कैलाश पर्वत पर निवास",
@@ -13196,6 +13364,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान शिव गंगाधर रूप में",
         "गंगाधर शिव की मूर्ति",
@@ -13227,6 +13396,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%B6%E0%A4%BF%E0%A4%B5_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3",
       "source_work": "Various (Puranas, Shaiva Agamas)",
       "source_work_key": "mnemosyne.hi.work.various_puranas_shaiva_agamas",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान शिव का तांडव नृत्य",
         "भगवान शिव के तांडव नृत्य",
@@ -13258,6 +13428,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B6%E0%A4%BF%E0%A4%B5_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "शिव पुराण",
       "source_work_key": "mnemosyne.hi.work.श_व_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान शिव का त्रिशूल धारण करना",
         "भगवान शिव त्रिशूल धारण करते हैं",
@@ -13288,6 +13459,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/shiva-purana",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान शिव का नटराज स्वरूप",
         "भगवान शिव के नटराज स्वरूप",
@@ -13318,6 +13490,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/shiva-purana",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान शिव का पंचाक्षर मंत्र 'ओम नमः शिवाय'",
         "भगवान शिव के पंचाक्षर मंत्र 'ओम नमः शिवाय'",
@@ -13349,6 +13522,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A4%9C%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "यजुर्वेद (कृष्ण यजुर्वेद)",
       "source_work_key": "mnemosyne.hi.work.यज_र_व_द_क_ष_ण_यज_र_व_द",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान शिव का पशुपति रूप",
         "भगवान शिव पशुपति के रूप में",
@@ -13379,6 +13553,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान शिव को भोलेनाथ कहना",
         "भोलेनाथ की पूजा करना",
@@ -13442,6 +13617,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान विष्णु का नरसिंह अवतार",
         "भगवान विष्णु के नरसिंह अवतार",
@@ -13621,6 +13797,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%A8%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%BF",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "मोक्षः परमः पुरुषार्थः",
         "मोक्षस्य परमः पुरुषार्थः",
@@ -13710,6 +13887,7 @@
       "source_url": "https://sa.wikisource.org/wiki/केनोपनिषद्",
       "source_work": "अद्वैत वेदान्त",
       "source_work_key": "mnemosyne.hi.work.अद_व_त_व_द_न_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "माया का आवरण",
         "माया के आवरण",
@@ -13854,6 +14032,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "महाभूत",
         "महाभूत तत्व"
@@ -14095,6 +14274,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%83",
       "source_work": "योगसूत्र",
       "source_work_key": "mnemosyne.hi.work.य_गस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "योग का अष्टांग",
         "अष्टांग योग",
@@ -14181,6 +14361,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/yoga-vasistha",
       "source_work": "योगसूत्र",
       "source_work_key": "mnemosyne.hi.work.य_गस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "योग दर्शन",
         "योग-दर्शन",
@@ -14243,6 +14424,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0",
       "source_work": "योगसूत्र",
       "source_work_key": "mnemosyne.hi.work.य_गस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "योगसूत्र",
         "योगसूत्र का",
@@ -14416,6 +14598,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "यक्षिणी का श्राप",
         "यक्षिणी के श्राप",
@@ -14554,6 +14737,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/राजा_भोज",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.hi.work.oral_tradition",
+      "subcategory": "historical",
       "surface_patterns": [
         "राजा भोज",
         "राजा भोज की सभा",
@@ -14621,6 +14805,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%97%E0%A5%8B%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8D",
       "source_work": "गीत गोविन्द",
       "source_work_key": "mnemosyne.hi.work.ग_त_ग_व_न_द",
+      "subcategory": "mythology",
       "surface_patterns": [
         "राधा-कृष्ण मिलन",
         "राधा-कृष्ण मिलन में",
@@ -15273,6 +15458,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "लक्ष्मी",
         "माता लक्ष्मी",
@@ -15298,6 +15484,7 @@
       "source_url": "https://hi.wikisource.org/wiki/पुराण",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "लक्ष्मी का वरदान",
         "लक्ष्मी का आशीर्वाद",
@@ -15376,6 +15563,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "वाग्देवी",
         "वाग्देवी की पूजा",
@@ -15413,6 +15601,7 @@
       "source_license": "public_domain",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "वेद",
         "वेदों",
@@ -15451,6 +15640,7 @@
       "source_url": "https://www.wikisource.org/wiki/Upanishads",
       "source_work": "Upanishads",
       "source_work_key": "mnemosyne.hi.work.upanishads",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "वेदांत",
         "वेदान्त"
@@ -15646,6 +15836,7 @@
       "source_url": "https://hi.wikisource.org/wiki/पुराण",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "वामन अवतार",
         "वामन भगवान",
@@ -15781,6 +15972,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/vaisheshika-sutra",
       "source_work": "वैशेषिकसूत्र",
       "source_work_key": "mnemosyne.hi.work.व_श_ष_कस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "वैशेषिक दर्शन",
         "वैशेषिक-दर्शन",
@@ -15823,6 +16015,7 @@
       "source_license": "public_domain",
       "source_work": "Various Puranas",
       "source_work_key": "mnemosyne.hi.work.various_puranas",
+      "subcategory": "mythology",
       "surface_patterns": [
         "विष्णु का अवतार",
         "अवतार विष्णु का"
@@ -15923,6 +16116,7 @@
       "source_license": "public_domain",
       "source_work": "Vishnu Purana",
       "source_work_key": "mnemosyne.hi.work.vishnu_purana",
+      "subcategory": "mythology",
       "surface_patterns": [
         "विष्णु पुराण",
         "विष्णु पुराण में",
@@ -16216,6 +16410,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B6%E0%A4%BF%E0%A4%B5_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "शिव की तांडव नृत्य",
         "शिव का तांडव नृत्य",
@@ -16259,6 +16454,7 @@
       "source_license": "public_domain",
       "source_work": "Shiva Tandava Stotra",
       "source_work_key": "mnemosyne.hi.work.shiva_tandava_stotra",
+      "subcategory": "mythology",
       "surface_patterns": [
         "शिव तांडव",
         "तांडव",
@@ -16297,6 +16493,7 @@
       "source_license": "public_domain",
       "source_work": "Various Puranas",
       "source_work_key": "mnemosyne.hi.work.various_puranas",
+      "subcategory": "mythology",
       "surface_patterns": [
         "शिव",
         "पार्वती",
@@ -16336,6 +16533,7 @@
       "source_url": "https://sa.wikisource.org/wiki/शिवपुराणम्/रुद्रसंहिता",
       "source_work": "शिव पुराण",
       "source_work_key": "mnemosyne.hi.work.श_व_प_र_ण",
+      "subcategory": "mythology",
       "surface_patterns": [
         "शिव पार्वती विवाह",
         "शिव-पार्वती विवाह",
@@ -16430,6 +16628,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%87%E0%A4%B6%E0%A5%8B%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "उपनिषद्",
       "source_work_key": "mnemosyne.hi.work.उपन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "शाश्वत सत्य",
         "शाश्वत सत्यं",
@@ -16541,6 +16740,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/sankhya-karika",
       "source_work": "सांख्यकारिका",
       "source_work_key": "mnemosyne.hi.work.स_ख_यक_र_क",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "सांख्य दर्शन",
         "सांख्य-दर्शन",
@@ -17012,6 +17212,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%B9%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "ब्रह्मसूत्र",
       "source_work_key": "mnemosyne.hi.work.ब_रह_मस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "संसारं जीवात्मा",
         "संसारे जीवात्मा",
@@ -17038,6 +17239,7 @@
       "source_url": "https://sa.wikisource.org/wiki/तैत्तिरीय_उपनिषद्",
       "source_work": "अद्वैत वेदान्त",
       "source_work_key": "mnemosyne.hi.work.अद_व_त_व_द_न_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "सत् चित् आनंद",
         "सत् चित् आनंद का",
@@ -17069,6 +17271,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%A4%E0%A5%88%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%B0%E0%A5%80%E0%A4%AF%E0%A5%8B%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6%E0%A5%8D",
       "source_work": "तैत्तिरीयोपनिषद्",
       "source_work_key": "mnemosyne.hi.work.त_त_त_र_य_पन_षद",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "सत्यं ब्रह्म",
         "सत्येन ब्रह्म"
@@ -17093,6 +17296,7 @@
         "zh": "这个短语的意思是“这一切确实是梵”，反映了阿德瓦伊塔·韦丹塔的非二元哲学，强调所有存在的统一性。"
       },
       "id": "hi_classical_or_scriptural_allusion_सर_व_खल_व_द_ब_रह_म_b14ea76d",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution to the Chandogya Upanishad is accurate and the surface patterns correctly convey the phrase's essence.",
@@ -17107,6 +17311,7 @@
       "source_url": "https://www.wikisource.org/wiki/Chandogya_Upanishad",
       "source_work": "Chandogya Upanishad",
       "source_work_key": "mnemosyne.hi.work.chandogya_upanishad",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "सर्वं खल्विदं ब्रह्म",
         "यह सब ब्रह्म है"
@@ -17160,6 +17365,7 @@
         "zh": "这句话翻译为“愿所有人幸福”，源自古代印度经典，强调普遍的幸福和同情。它常在祈祷和精神聚会上诵读。"
       },
       "id": "hi_classical_or_scriptural_allusion_सर_व_भव_त_स_ख_न_da19366c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable; surface patterns correctly reflect its usage in spiritual contexts.",
@@ -17172,6 +17378,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "सर्वे भवंतु सुखिनः",
         "सर्वे सुखिनः",
@@ -17184,6 +17391,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hi_vedic_prayers_सर_व_भवन_त_स_ख_न",
       "id": "hi_classical_or_scriptural_allusion_सर_व_भवन_त_स_ख_न_e977b8ec",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17198,6 +17406,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/taittiriya-upanishad",
       "source_work": "वेदान्तसार",
       "source_work_key": "mnemosyne.hi.work.व_द_न_तस_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "सर्वे भवन्तु सुखिनः",
         "सर्वे भवन्तु सुखिनः सन्तु",
@@ -17422,6 +17631,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_devotional_texts_हन_म_न_च_ल_स",
       "id": "hi_classical_or_scriptural_allusion_हन_म_न_च_ल_स_34e02d2f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17436,6 +17646,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%B9%E0%A4%A8%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%A8_%E0%A4%9A%E0%A4%BE%E0%A4%B2%E0%A5%80%E0%A4%B8%E0%A4%BE",
       "source_work": "हनुमान चालीसा",
       "source_work_key": "mnemosyne.hi.work.हन_म_न_च_ल_स",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "हनुमान चालीसा का पाठ",
         "हनुमान चालीसा पढ़ना",
@@ -17531,6 +17742,7 @@
       "register": "religious",
       "short_explanation": "Archer-warrior figure associated with skill and moral hesitation.",
       "source_work": "Mahabharata",
+      "subcategory": "mahabharata",
       "surface_patterns": [
         "अर्जुन"
       ]
@@ -17547,6 +17759,7 @@
       "register": "religious",
       "short_explanation": "Divine counsellor, strategist, or beloved deity depending on context.",
       "source_work": "Mahabharata / Bhagavad Gita",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण"
       ]
@@ -17579,6 +17792,7 @@
       "register": "classical",
       "short_explanation": "Epic reference to conflict, duty, family, and moral complexity.",
       "source_work": "Mahabharata",
+      "subcategory": "mahabharata",
       "surface_patterns": [
         "महाभारत"
       ]
@@ -17594,6 +17808,7 @@
       "register": "classical",
       "short_explanation": "Epic reference to duty, exile, devotion, and conflict.",
       "source_work": "Ramayana",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रामायण"
       ]
@@ -17630,6 +17845,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/1857_%E0%A4%95%E0%A4%BE_%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%B9",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "1857 का विद्रोह",
         "स्वतंत्रता संग्राम 1857",
@@ -17657,6 +17873,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अंग्रेजों के नाटक",
         "अंग्रेजों का नाटक",
@@ -17686,6 +17903,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/बंगाल_का_विभाजन_(1905)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अंग्रेजों का बंगाल विभाजन",
         "बंगाल विभाजन का विरोध",
@@ -17938,6 +18156,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अकबर बीरबल की कहानियाँ",
         "अकबर और बीरबल",
@@ -17963,6 +18182,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE-%E0%A4%8F-%E0%A4%87%E0%A4%B2%E0%A4%BE%E0%A4%B9%E0%A5%80",
       "source_work": "Akbarnama",
       "source_work_key": "mnemosyne.hi.work.akbarnama",
+      "subcategory": "historical",
       "surface_patterns": [
         "अकबर का धर्म-ए-इलाही",
         "अकबर के धर्म-ए-इलाही",
@@ -17993,6 +18213,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE-%E0%A4%8F-%E0%A4%87%E0%A4%B2%E0%A4%BE%E0%A4%B9%E0%A5%80",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "धर्म-ए-इलाही",
         "धर्म-ए-इलाही त्यागना",
@@ -18023,6 +18244,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अकबर का नाटक",
         "अकबर के नाटक",
@@ -18052,6 +18274,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%85%E0%A4%95%E0%A4%AC%E0%A4%B0_%E0%A4%95%E0%A5%87_%E0%A4%A8%E0%A4%B5%E0%A4%B0%E0%A4%A4%E0%A5%8D%E0%A4%A8",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अकबर का नवरत्न",
         "अकबर के नवरत्न",
@@ -18080,6 +18303,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/अकबर_के_नवरत्न",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अकबर का नवरत्नों का समूह",
         "नवरत्नों में शामिल",
@@ -18108,6 +18332,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अकबर का राजसिंहासन",
         "अकबर के राजसिंहासन",
@@ -18293,6 +18518,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A5%80%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि",
         "अग्नि में",
@@ -18351,6 +18577,7 @@
       "source_license": "public_domain",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि की अग्नि-पूजा",
         "अग्नि-पूजा में",
@@ -18844,6 +19071,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि कुंड",
         "अग्निकुंड",
@@ -18930,6 +19158,7 @@
       "source_license": "public_domain",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि की पुकार",
         "अग्नि की पुकार में",
@@ -18973,6 +19202,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि को पूजना",
         "अग्नि की पूजा",
@@ -19011,6 +19241,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि को प्रणाम",
         "अग्नि को प्रणाम करें",
@@ -19168,6 +19399,7 @@
       "source_url": "https://hi.wikisource.org/wiki/मनुस्मृति",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "historical",
       "surface_patterns": [
         "अग्नि की सजा",
         "अग्नि की सजा मिलना",
@@ -19210,6 +19442,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि के हवाले करना",
         "अग्नि को हवाले करना",
@@ -19295,6 +19528,7 @@
       "source_url": "https://www.britannica.com/topic/Tandava",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि तांडव",
         "अग्नि का तांडव",
@@ -19325,6 +19559,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-दीक्षा",
         "अग्नि-दीक्षा में",
@@ -19355,6 +19590,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-दान",
         "अग्नि-दान करना",
@@ -19399,6 +19635,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%AE%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि देव की पूजा",
         "अग्निदेव की पूजा",
@@ -19453,6 +19690,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-पूजा",
         "अग्नि-पूजा करना",
@@ -19636,6 +19874,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-रात्रि",
         "अग्नि-रात्रि का",
@@ -19724,6 +19963,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि वेष",
         "अग्नि वेष में",
@@ -19878,6 +20118,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%85%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF_%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%82%E0%A4%AD",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अग्नि-स्तंभ",
         "अग्नि-स्तंभ का",
@@ -19938,6 +20179,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%85%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF_%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-संस्कार",
         "अग्नि-संस्कार का",
@@ -19967,6 +20209,7 @@
       "source_license": "public_domain",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि संस्कार",
         "अग्नि संस्कार में",
@@ -20010,6 +20253,7 @@
       "source_url": "https://sa.wikisource.org/wiki/ऋग्वेदः",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-होत्र",
         "अग्निहोत्र",
@@ -20035,6 +20279,7 @@
       "source_license": "public_domain",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-होत्रोपासक",
         "अग्नि-होत्रोपासक का",
@@ -20062,6 +20307,7 @@
       "source_license": "public_domain",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि-होत्रोपासन",
         "अग्नि-होत्रोपासन का",
@@ -20089,6 +20335,7 @@
       "source_license": "public_domain",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि होम",
         "अग्नि होम में",
@@ -20246,6 +20493,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%AA%E0%A5%8B%E0%A4%96%E0%A4%B0%E0%A4%A3_%E0%A4%AA%E0%A4%B0%E0%A4%AE%E0%A4%BE%E0%A4%A3%E0%A5%81_%E0%A4%AA%E0%A4%B0%E0%A5%80%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अटल बिहारी वाजपेयी",
         "अटल बिहारी वाजपेयी का",
@@ -20514,6 +20762,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "अयोध्या",
         "अयोध्या नगरी",
@@ -20650,6 +20899,7 @@
       "source_url": "https://www.sacred-texts.com/bud/ashoka.htm",
       "source_work": "Various (Edicts of Ashoka)",
       "source_work_key": "mnemosyne.hi.work.various_edicts_of_ashoka",
+      "subcategory": "historical",
       "surface_patterns": [
         "अशोक का धम्म",
         "धम्म नीति",
@@ -20688,6 +20938,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अशोक शिलालेख",
         "शिलालेख अशोक",
@@ -20713,6 +20964,7 @@
       "source_url": "https://www.wikidata.org/wiki/Q1151334",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अशोक स्तंभ",
         "अशोक स्तंभ का",
@@ -20809,6 +21061,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/असहयोग_आंदोलन",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "असहयोग आंदोलन",
         "असहयोग आंदोलन में",
@@ -20938,6 +21191,7 @@
       "source_url": "https://www.wikisource.org/wiki/Ramayana",
       "source_work": "Ramayana",
       "source_work_key": "mnemosyne.hi.work.ramayana",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "आग्नि-परिक्षा",
         "आग्नि परीक्षा"
@@ -21561,6 +21815,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%86%E0%A4%AA%E0%A4%A4%E0%A4%95%E0%A4%BE%E0%A4%B2",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "आपातकाल",
         "आपातकाल का",
@@ -21990,6 +22245,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "उषा",
         "उषा का अर्थ",
@@ -22223,6 +22479,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%AB%E0%A4%A4%E0%A4%B5%E0%A4%BE-%E0%A4%8F-%E0%A4%86%E0%A4%B2%E0%A4%AE%E0%A4%97%E0%A5%80%E0%A4%B0%E0%A5%80",
       "source_work": "Fatwa-e-Alamgiri",
       "source_work_key": "mnemosyne.hi.work.fatwa_e_alamgiri",
+      "subcategory": "historical",
       "surface_patterns": [
         "औरंगज़ेब का फ़तवा-ए-आलमगीरी",
         "औरंगज़ेब के फ़तवा-ए-आलमगीरी",
@@ -22254,6 +22511,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%86%E0%A4%89%E0%A4%B0%E0%A4%99%E0%A5%8D%E0%A4%97%E0%A4%9C%E0%A5%87%E0%A4%AC",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "औरंगज़ेब का फ़रमान",
         "औरंगज़ेब के फ़रमान",
@@ -22283,6 +22541,7 @@
       "source_url": "https://archive.org/details/in.ernet.dli.2015.507430",
       "source_work": "Various (historical texts)",
       "source_work_key": "mnemosyne.hi.work.various_historical_texts",
+      "subcategory": "historical",
       "surface_patterns": [
         "औरंगज़ेब की बेगम",
         "औरंगज़ेब की बेगमें",
@@ -22313,6 +22572,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "औरंगजेब",
         "औरंगजेब का राजसिंहासन",
@@ -22343,6 +22603,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "औरत होना आसान नहीं",
         "औरत का होना आसान नहीं",
@@ -22420,6 +22681,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%95%E0%A4%BE%E0%A4%95%E0%A5%8B%E0%A4%B0%E0%A5%80_%E0%A4%95%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%9F",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "काकोरी कांड",
         "काकोरी कांड में",
@@ -22646,6 +22908,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कामिनी-कांचन त्याग",
         "कामिनी-कांचन त्याग करना",
@@ -22931,6 +23194,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कृष्ण की बांसुरी",
         "बांसुरी कृष्ण की",
@@ -23258,6 +23522,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Qawwali",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "कव्वाली के तराने",
         "कव्वाली के तरानों",
@@ -23430,6 +23695,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/खिलाफत_आंदोलन",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "खिलाफत आंदोलन",
         "खिलाफत आंदोलन में",
@@ -23629,6 +23895,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "गंगा-जमुना",
         "गंगा और जमुना"
@@ -23653,6 +23920,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "गंगा जमुनी संस्कृति",
         "गंगा जमुनी संस्कृतियाँ",
@@ -23917,6 +24185,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%A6%E0%A4%BE%E0%A4%A3%E0%A5%8D%E0%A4%A1%E0%A5%80_%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%9A",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "दांडी मार्च में",
         "दांडी मार्च का आयोजन",
@@ -23957,6 +24226,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "गांधीजी का सत्याग्रह",
         "सत्याग्रह of गांधीजी"
@@ -24143,6 +24413,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%96%E0%A4%BE%E0%A4%B2%E0%A4%B8%E0%A4%BE_%E0%A4%AA%E0%A4%A8%E0%A5%8D%E0%A4%A5",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "खालसा पंथ",
         "गुरु गोविंद सिंह",
@@ -24282,6 +24553,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "गौरी-शंकर",
         "गौरी शंकर"
@@ -24355,6 +24627,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "गुलामी का मंजर",
         "मंजर of गुलामी"
@@ -24403,6 +24676,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/गोवा_मुक्ति_संग्राम",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "गोवा मुक्ति संग्राम",
         "गोवा मुक्ति आंदोलन",
@@ -24468,6 +24742,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "गृहस्थ आश्रम",
         "गृहस्थ आश्रम का जीवन"
@@ -24523,6 +24798,7 @@
       "source_url": "https://www.india.gov.in/india-at-glance/national-symbols",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "गणतंत्र दिवस 1950",
         "1950 का गणतंत्र दिवस",
@@ -24672,6 +24948,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "चिड़िया की आँख",
         "चिड़िया की आँखें",
@@ -24700,6 +24977,7 @@
       "source_url": "https://archive.org/details/Padmavat",
       "source_work": "Padmavat",
       "source_work_key": "mnemosyne.hi.work.padmavat",
+      "subcategory": "historical",
       "surface_patterns": [
         "चित्तौड़गढ़ की रानी पद्मिनी",
         "चित्तौड़गढ़ की रानी पद्मिनी का",
@@ -24730,6 +25008,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/विजय_स्तम्भ",
       "source_work": "चित्तौड़गढ़ दुर्ग का इतिहास",
       "source_work_key": "mnemosyne.hi.work.च_त_त_ड_गढ_द_र_ग_क_इत_ह_स",
+      "subcategory": "historical",
       "surface_patterns": [
         "चित्तौड़गढ़ का विजय स्तम्भ",
         "विजय स्तम्भ",
@@ -24863,6 +25142,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%97%E0%A5%81%E0%A4%AA%E0%A5%8D%E0%A4%A4_%E0%A4%AE%E0%A5%8C%E0%A4%B0%E0%A5%8D%E0%A4%AF",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "चंद्रगुप्त मौर्य",
         "सम्राट चंद्रगुप्त",
@@ -24890,6 +25170,7 @@
       "source_url": "https://hi.wikisource.org/wiki/अर्थशास्त्र",
       "source_work": "अर्थशास्त्र",
       "source_work_key": "mnemosyne.hi.work.अर_थश_स_त_र",
+      "subcategory": "historical",
       "surface_patterns": [
         "चंद्रगुप्त मौर्य कौटिल्य से मिला",
         "चंद्रगुप्त मौर्य कौटिल्य से मिले",
@@ -24932,6 +25213,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "चंद्रगुप्त मौर्य का राज्याभिषेक",
         "चंद्रगुप्त मौर्य का राज्याभिषेक हुआ",
@@ -24958,6 +25240,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%97%E0%A5%81%E0%A4%AA%E0%A5%8D%E0%A4%A4_%E0%A4%AE%E0%A5%8C%E0%A4%B0%E0%A5%8D%E0%A4%AF",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "चंद्रगुप्त मौर्य का साम्राज्य",
         "चंद्रगुप्त मौर्य के साम्राज्य",
@@ -24988,6 +25271,7 @@
       "source_url": "https://www.britannica.com/biography/Chandra-Shekhar-Azad",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "चंद्रशेखर आजाद का अल्फ्रेड पार्क कांड",
         "अल्फ्रेड पार्क में चंद्रशेखर आजाद",
@@ -25018,6 +25302,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%9A%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%B6%E0%A5%87%E0%A4%96%E0%A4%B0_%E0%A4%86%E0%A4%9C%E0%A4%BE%E0%A4%A6",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "चंद्रशेखर आजाद का बलिदान",
         "चंद्रशेखर आजाद की मृत्यु",
@@ -25059,6 +25344,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "चौधरी चरण सिंह",
         "चौधरी साहब"
@@ -25294,6 +25580,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "चक्रवर्ती",
         "चक्रवर्ती सम्राट"
@@ -25341,6 +25628,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "चन्द्रशेखर आजाद का बलिदान",
         "चन्द्रशेखर आजाद के बलिदान",
@@ -25471,6 +25759,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/छत्रपति_शिवाजी_महाराज",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "छत्रपति शिवाजी का रायगढ़ आगमन",
         "छत्रपति शिवाजी के रायगढ़ आगमन",
@@ -25511,6 +25800,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "छत्रपति शिवाजी का स्वराज",
         "शिवाजी का स्वराज",
@@ -25538,6 +25828,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%9C%E0%A5%80",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "छत्रपति शिवाजी का स्वराज्य",
         "छत्रपति शिवाजी के स्वराज्य",
@@ -25877,6 +26168,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "जगजीवन राम",
         "जगजीवन जी"
@@ -25913,6 +26205,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "जगन्नाथ",
         "जगन्नाथ जी"
@@ -25949,6 +26242,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "जगन्नाथ यात्रा",
         "रथ यात्रा"
@@ -26132,6 +26426,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "जयचंद",
         "जयचंद का विश्वासघात",
@@ -26276,6 +26571,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/जलियाँवाला_बाग_हत्याकांड",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "जलियाँवाला बाग हत्याकांड",
         "जलियाँवाला बाग में हत्याकांड",
@@ -26305,6 +26601,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/जलियांवाला_बाग_हत्याकांड",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "जलियांवाला बाग हत्याकांड",
         "जलियांवाला बाग हत्याकांड में",
@@ -26383,6 +26680,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%9C%E0%A4%B5%E0%A4%BE%E0%A4%B9%E0%A4%B0%E0%A4%B2%E0%A4%BE%E0%A4%B2_%E0%A4%A8%E0%A5%87%E0%A4%B9%E0%A5%83%E0%A4%89",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "जवाहरलाल नेहरू",
         "जवाहरलाल नेहरू का",
@@ -26412,6 +26710,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "जहाँगीर का दरबार",
         "जहाँगीर के दरबार में",
@@ -26442,6 +26741,7 @@
       "source_url": "https://hi.wikisource.org/wiki/आईने_अकबरी",
       "source_work": "आईने अकबरी",
       "source_work_key": "mnemosyne.hi.work.आईन_अकबर",
+      "subcategory": "historical",
       "surface_patterns": [
         "जहाँगीर नूरजहाँ पर मुग्ध हुआ",
         "जहाँगीर नूरजहाँ पर मुग्ध है",
@@ -26472,6 +26772,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "जहाँगीर का नूरजहाँ पर मोह",
         "जहाँगीर का नूरजहाँ पर मोह होना",
@@ -26501,6 +26802,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "जहाँगीर का मृत्युदंड देना",
         "जहाँगीर मृत्युदंड देता था",
@@ -26530,6 +26832,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "जहाँगीर का सिंहासन",
         "जहाँगीर के सिंहासन पर बैठना",
@@ -26628,6 +26931,7 @@
       "source_url": "https://www.hindwi.org/kavita/jo-jhansi-ki-rani-thi-subhadra-kumari-chauhan-kavita/",
       "source_work": "Various (Historical accounts, poems)",
       "source_work_key": "mnemosyne.hi.work.various_historical_accounts_poems",
+      "subcategory": "historical",
       "surface_patterns": [
         "झाँसी की रानी",
         "रानी लक्ष्मीबाई",
@@ -26653,6 +26957,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/झाँसी_की_रानी_लक्ष्मीबाई",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "झाँसी की रानी की मृत्यु",
         "झाँसी की रानी युद्ध में मारी गई",
@@ -26682,6 +26987,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/झाँसी_की_रानी_लक्ष्मीबाई",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "झाँसी की रानी लक्ष्मीबाई",
         "लक्ष्मीबाई की वीरता",
@@ -26710,6 +27016,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%A8%E0%A5%80_%E0%A4%B2%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%AC%E0%A4%BE%E0%A4%88",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "लक्ष्मीबाई",
         "लक्ष्मीबाई का विद्रोह",
@@ -26980,6 +27287,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A4%E0%A5%81%E0%A4%97%E0%A4%BC%E0%A4%B2%E0%A4%95%E0%A4%BC",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "historical",
       "surface_patterns": [
         "तुग़लक़"
       ]
@@ -27015,6 +27323,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "ताजमहल का निर्माण",
         "ताजमहल का निर्माण हुआ",
@@ -27109,6 +27418,7 @@
       "source_url": "https://www.britannica.com/biography/Tantia-Tope",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "तात्या टोपे का विद्रोह",
         "तात्या टोपे द्वारा विद्रोह",
@@ -27249,6 +27559,7 @@
       "source_url": "https://www.britannica.com/place/Delhi-sultanate",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "तुर्कों का दिल्ली पर आक्रमण",
         "तुर्कों के आक्रमण",
@@ -27291,6 +27602,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "त्रिशूल",
         "त्रिशूल का प्रतीक"
@@ -27328,6 +27640,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "त्रिशूलधारी शिव",
         "त्रिशूलधारी महादेव",
@@ -27618,6 +27931,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/दिल्ली_दरबार_1911",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "दिल्ली दरबार 1911",
         "1911 का दिल्ली दरबार",
@@ -28023,6 +28337,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "नागिन",
         "नागिन का नृत्य"
@@ -28047,6 +28362,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "नागिन का फन",
         "नागिन के फन",
@@ -28077,6 +28393,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Civil_rights_movement",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "नागरिक अधिकार आंदोलन",
         "नागरिक अधिकार आंदोलन का",
@@ -28665,6 +28982,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "नारायण",
         "भगवान नारायण",
@@ -28752,6 +29070,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%9F_%E0%A4%B5%E0%A4%BF%E0%A4%A5_%E0%A4%A1%E0%A5%87%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%BF%E0%A4%A8%E0%A5%80",
       "source_work": "ट्रिस्ट विद डेस्टिनी",
       "source_work_key": "mnemosyne.hi.work.ट_र_स_ट_व_द_ड_स_ट_न",
+      "subcategory": "historical",
       "surface_patterns": [
         "नेहरू का 'ट्रिस्ट विद डेस्टिनी'",
         "ट्रिस्ट विद डेस्टिनी भाषण",
@@ -28807,6 +29126,7 @@
       "source_url": "https://www.britannica.com/topic/Nataraja",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "नटराज मूर्ति",
         "नटराज मूर्ति में",
@@ -28837,6 +29157,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/नमक_सत्याग्रह",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "नमक सत्याग्रह में",
         "नमक सत्याग्रह के दौरान",
@@ -28902,6 +29223,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "नवजागरण",
         "भारतीय नवजागरण",
@@ -29048,6 +29370,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/brahma-purana",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "पंचायतन पूजा",
         "पंचायतन पूजन",
@@ -29145,6 +29468,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "पृथ्वीराज चौहान",
         "राजा पृथ्वीराज",
@@ -29170,6 +29494,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/पृथ्वीराज_चौहान",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "पृथ्वीराज चौहान का अंतिम युद्ध",
         "पृथ्वीराज चौहान अंतिम युद्ध लड़े",
@@ -29200,6 +29525,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/पानीपत_का_तृतीय_युद्ध",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "पानीपत का तृतीय युद्ध",
         "पानीपत के तृतीय युद्ध में",
@@ -29239,6 +29565,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "पानीपत का तीसरा युद्ध",
         "तीसरा पानीपत युद्ध",
@@ -29265,6 +29592,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "पानीपत की तीसरी लड़ाई",
         "पानीपत की तीसरी लड़ाई में",
@@ -29295,6 +29623,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/पानीपत_का_द्वितीय_युद्ध",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "पानीपत का द्वितीय युद्ध",
         "पानीपत युद्ध",
@@ -29324,6 +29653,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "पानीपत की दूसरी लड़ाई",
         "पानीपत की दूसरी लड़ाई में",
@@ -29354,6 +29684,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/पानीपत_का_प्रथम_युद्ध",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "पानीपत का प्रथम युद्ध",
         "पानीपत के प्रथम युद्ध में",
@@ -29383,6 +29714,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "पानीपत की पहली लड़ाई में",
         "पानीपत की पहली लड़ाई से",
@@ -29448,6 +29780,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "पारिजात",
         "Parijat"
@@ -29509,6 +29842,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/प्लासी_का_युद्ध",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "प्लासी का युद्ध",
         "प्लासी युद्ध",
@@ -29852,6 +30186,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "बाबर का काबुल से कंधार",
         "बाबर के काबुल से कंधार",
@@ -29882,6 +30217,7 @@
       "source_url": "https://hi.wikisource.org/wiki/बाबरनामा",
       "source_work": "बाबरनामा",
       "source_work_key": "mnemosyne.hi.work.ब_बरन_म",
+      "subcategory": "historical",
       "surface_patterns": [
         "बाबर ने दिल्ली पर अधिकार किया",
         "बाबर दिल्ली पर अधिकार करता है",
@@ -29912,6 +30248,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%AA%E0%A4%BE%E0%A4%A8%E0%A5%80%E0%A4%AA%E0%A4%A4_%E0%A4%95%E0%A5%80_%E0%A4%AA%E0%A4%B9%E0%A4%B2%E0%A5%80_%E0%A4%B2%E0%A4%A1%E0%A4%BC%E0%A4%BE%E0%A4%88",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "पानीपत",
         "पानीपत में",
@@ -29938,6 +30275,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/बाबरी_मस्जिद",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "बाबर का बाबरी प्रवेश",
         "बाबर बाबरी में प्रवेश",
@@ -30033,6 +30371,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "ब्रह्मा",
         "भगवान ब्रह्मा",
@@ -30207,6 +30546,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/बक्सर_का_युद्ध",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "बक्सर का युद्ध",
         "बक्सर युद्ध",
@@ -30235,6 +30575,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "बक्सर की संधि",
         "बक्सर की संधि में",
@@ -30379,6 +30720,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/महात्मा_गाँधी",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "बलिदान दीक्षा बापू की",
         "बापू की बलिदान दीक्षा",
@@ -30407,6 +30749,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "बल्बन की चालीसा व्यवस्था",
         "बल्बन की चालीसा व्यवस्था में",
@@ -30577,6 +30920,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/भारत_छोड़ो_आंदोलन",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "भारत छोड़ो आंदोलन",
         "भारत छोड़ो आंदोलन में",
@@ -30606,6 +30950,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "भारतेंदु हरिश्चंद्र का नाट्य-आन्दोलन",
         "भारतेंदु हरिश्चंद्र के नाट्य-आन्दोलन",
@@ -30636,6 +30981,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Partition_of_India",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "भारत-पाक विभाजन",
         "भारत-पाक विभाजन का",
@@ -30749,6 +31095,7 @@
       "source_url": "https://hi.wikisource.org/wiki/भारतीय_स्वतंत्रता_संग्राम",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "भारतीय स्वतंत्रता संग्राम",
         "स्वतंत्रता संग्राम",
@@ -30775,6 +31122,7 @@
       "source_url": "https://www.britannica.com/biography/Bhagat-Singh",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "भगत सिंह अमर शहीद हुए",
         "भगत सिंह का अमर शहीद होना",
@@ -30801,6 +31149,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/भगत_सिंह",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "भगत सिंह का अमर शहीदत्व",
         "भगत सिंह अमर शहीद हैं",
@@ -30830,6 +31179,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%A4_%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%B9",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "भगत सिंह की फाँसी",
         "भगत सिंह की फाँसी हुई",
@@ -30858,6 +31208,7 @@
       "source_url": "https://www.britannica.com/biography/Bhagat-Singh",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "भगत सिंह की फांसी",
         "फांसी पर चढ़ना",
@@ -30897,6 +31248,7 @@
       "source_url": "https://www.britannica.com/biography/Bhagat-Singh",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "भगत सिंह का बलिदान",
         "भगत सिंह",
@@ -30924,6 +31276,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान की आराधना",
         "भगवान की आराधना करना",
@@ -30953,6 +31306,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान की इच्छा",
         "भगवान की इच्छा से",
@@ -30983,6 +31337,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान की पूजा",
         "भगवान की पूजा करना",
@@ -31012,6 +31367,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान कीर्तन",
         "भगवान का कीर्तन",
@@ -31042,6 +31398,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान का कीर्तन करते हुए",
         "कीर्तन करते हुए भगवान",
@@ -31194,6 +31551,7 @@
       "source_url": "https://www.britannica.com/topic/Mughal-dynasty",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "मुगलों का दिल्ली दरबार",
         "मुगलों के दरबार",
@@ -31223,6 +31581,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "मुगलों का दिल्ली प्रवेश",
         "मुगलों के दिल्ली प्रवेश",
@@ -31319,6 +31678,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "मंत्रोच्चारण",
         "मंत्र उच्चारण",
@@ -31408,6 +31768,7 @@
       "source_url": "https://www.hindisamay.com/contentDetail.aspx?id=14&pageno=1",
       "source_work": "Various (मीराबाई के पद)",
       "source_work_key": "mnemosyne.hi.work.various_म_र_ब_ई_क_पद",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "मीराबाई की भक्ति",
         "मीरा की भक्ति",
@@ -31433,6 +31794,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "मौर्य वंश",
         "मौर्य वंश का",
@@ -31475,6 +31837,7 @@
       "source_url": "https://www.wisdomlib.org/history/compendium-of-ancient-indian-geography/d/doc12345",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "मौर्य साम्राज्य का पतन",
         "मौर्य साम्राज्य",
@@ -31737,6 +32100,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "मधुवाला",
         "मधु वाला"
@@ -31925,6 +32289,7 @@
       "source_url": "https://www.gandhiheritageportal.org/dandi-march",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "दांडी मार्च",
         "नमक सत्याग्रह",
@@ -31964,6 +32329,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "महानिर्वाण",
         "महानिर्वाण का अर्थ",
@@ -31989,6 +32355,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "कुंभलगढ़ दुर्ग",
         "कुंभलगढ़ का दुर्ग",
@@ -32018,6 +32385,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "महाराणा प्रताप का चेतक",
         "महाराणा प्रताप के चेतक",
@@ -32048,6 +32416,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/वीर_विनोद",
       "source_work": "वीर विनोद",
       "source_work_key": "mnemosyne.hi.work.व_र_व_न_द",
+      "subcategory": "historical",
       "surface_patterns": [
         "महाराणा प्रताप का शौर्य",
         "महाराणा प्रताप का शौर्य चित्रण",
@@ -32082,6 +32451,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "महाराणा प्रताप का हल्दीघाटी",
         "महाराणा प्रताप के हल्दीघाटी",
@@ -32285,6 +32655,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "राजा राममोहन राय का ब्रह्म समाज",
         "राजा राममोहन राय के ब्रह्म समाज",
@@ -32327,6 +32698,7 @@
       "source_url": "https://www.britannica.com/biography/Raja-Ram-Mohan-Roy",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "राजा राममोहन राय",
         "राजा राममोहन राय का सुधार",
@@ -32366,6 +32738,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "राजा हरिश्चंद्र",
         "हरिश्चंद्र",
@@ -32516,6 +32889,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/राणा_प्रताप",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "राणा प्रताप चेतक पर सवार हुए",
         "राणा प्रताप चेतक पर सवार है",
@@ -32558,6 +32932,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "राधा-कृष्ण",
         "राधा और कृष्ण"
@@ -32605,6 +32980,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "रानी लक्ष्मीबाई का ग्वालियर अभियान",
         "रानी लक्ष्मीबाई के ग्वालियर अभियान",
@@ -32634,6 +33010,7 @@
       "source_url": "https://www.britannica.com/biography/Lakshmibai",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "रानी लक्ष्मीबाई का झाँसी का युद्ध",
         "रानी लक्ष्मीबाई ने झाँसी का युद्ध लड़ा",
@@ -32712,6 +33089,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "राम बिना सब सूना",
         "राम के बिना सब सूना है",
@@ -32880,6 +33258,7 @@
       "source_location": "Ayodhya Kanda",
       "source_work": "Ramayana",
       "source_work_key": "mnemosyne.hi.work.ramayana",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "रामराज्य",
         "रामराज्य का आदर्श",
@@ -33060,6 +33439,7 @@
       "source_url": "https://whc.unesco.org/en/list/231/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "लाल किले का निर्माण",
         "लाल किले के निर्माण",
@@ -33090,6 +33470,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "लाला लाजपत राय का साइमन कमीशन विरोध",
         "लाला लाजपत राय के साइमन कमीशन विरोध",
@@ -33171,6 +33552,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%B5%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A4%BE%E0%A4%A6%E0%A4%BF%E0%A4%A4%E0%A5%8D%E0%A4%AF",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "विक्रमादित्य का न्याय",
         "विक्रमादित्य के न्याय",
@@ -33243,6 +33625,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "वृंदावन",
         "वृंदावन धाम"
@@ -33362,6 +33745,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "सिंहगढ़ दुर्ग",
         "सिंहगढ़ का दुर्ग",
@@ -33405,6 +33789,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Complete_Works_of_Swami_Vivekananda/Volume_1/Addresses_at_the_Parliament_of_Religions/Chicago",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "विवेकानंद का शिकागो भाषण",
         "शिकागो भाषण",
@@ -33613,6 +33998,7 @@
       "source_license": "public_domain",
       "source_work": "Ramayana",
       "source_work_key": "mnemosyne.hi.work.ramayana",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "श्रीराम",
         "राम",
@@ -33638,6 +34024,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%B6%E0%A5%87%E0%A4%B0%E0%A4%B6%E0%A4%BE%E0%A4%B9_%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A5%80",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "शेरशाह सूरी",
         "शेरशाह सूरी का शासन",
@@ -33680,6 +34067,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "शिव की जटा",
         "जटा",
@@ -33758,6 +34146,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "शिवाजी",
         "छत्रपति शिवाजी"
@@ -33781,6 +34170,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "शिवाजी का रायगढ़ दुर्ग",
         "शिवाजी के रायगढ़ दुर्ग",
@@ -33810,6 +34200,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "शिवाजी का सिंहासनारोहण",
         "शिवाजी के सिंहासनारोहण",
@@ -33840,6 +34231,7 @@
       "source_url": "https://whc.unesco.org/en/list/252/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "शाहजहाँ का ताजमहल निर्माण",
         "शाहजहाँ द्वारा ताजमहल का निर्माण",
@@ -33917,6 +34309,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/सिकंदर",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "सिकंदर का भारत पर आक्रमण",
         "सिकंदर के भारत पर आक्रमण में",
@@ -34133,6 +34526,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "संजीवनी",
         "संजीवनी बूटी",
@@ -34489,6 +34883,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "सुभाष चंद्र बोस",
         "बोस"
@@ -34513,6 +34908,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%86%E0%A4%9C%E0%A4%BE%E0%A4%A6_%E0%A4%B9%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6_%E0%A4%AB%E0%A5%8C%E0%A4%9C",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "आज़ाद हिंद फ़ौज",
         "आज़ाद हिंद फौज",
@@ -34543,6 +34939,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%86%E0%A4%9C%E0%A4%BE%E0%A4%A6_%E0%A4%B9%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6_%E0%A4%AB%E0%A5%8C%E0%A4%9C",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "सुभाष चंद्र बोस का",
         "सुभाष चंद्र बोस के",
@@ -34572,6 +34969,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/सुभाष_चन्द्र_बोस",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "तुम मुझको खून दो",
         "तुम मुझसे खून दो",
@@ -34602,6 +35000,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/सुभाष_चन्द्र_बोस",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "सुभाष चंद्र बोस का 'दिल्ली चलो'",
         "दिल्ली चलो का नारा",
@@ -34863,6 +35262,7 @@
       "source_url": "https://www.ramakrishnavivekananda.info/vivekananda/volume_1/addresses/parliament/1893_09_11.htm",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "शिकागो में भाषण",
         "विवेकानंद का भाषण",
@@ -34889,6 +35289,7 @@
       "source_url": "https://www.india.gov.in/india-at-glance/national-symbols",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "स्वतंत्रता दिवस 1947",
         "1947 का स्वतंत्रता दिवस",
@@ -34931,6 +35332,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "स्वराज्य",
         "स्वराज",
@@ -34968,6 +35370,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "स्वर्णिम काल",
         "स्वर्ण युग"
@@ -35004,6 +35407,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "स्वर्णिम चतुर्भुज",
         "स्वर्णिम चतुर्भुज योजना",
@@ -35065,6 +35469,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "संसार चक्र",
         "संसार चक्र में",
@@ -35122,6 +35527,7 @@
       "source_license": "not_required",
       "source_work": "सिंहासन बत्तीसी",
       "source_work_key": "mnemosyne.hi.work.स_ह_सन_बत_त_स",
+      "subcategory": "mythology",
       "surface_patterns": [
         "सिंहासन बत्तीसी की चित्रकारी",
         "सिंहासन बत्तीसी की चित्रकारी देखना",
@@ -35164,6 +35570,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "सत्य की विजय",
         "विजय सत्य की",
@@ -35201,6 +35608,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "सत्याग्रह",
         "सत्याग्रह का सिद्धांत",
@@ -35263,6 +35671,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%85%E0%A4%B6%E0%A5%8B%E0%A4%95",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "सम्राट अशोक का धर्मचक्र",
         "सम्राट अशोक के धर्मचक्र",
@@ -35426,6 +35835,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "सरदार पटेल का लौह पुरुषत्व",
         "सरदार पटेल के लौह पुरुषत्व",
@@ -35494,6 +35904,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "हाँ जी",
         "नहीं जी",
@@ -35632,6 +36043,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "हैदर अली",
         "मैसूर राज्य",
@@ -35701,6 +36113,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "हुमायूं का दिल्ली पर अधिकार",
         "हुमायूं का दिल्ली पुनः अधिकार",
@@ -35841,6 +36254,7 @@
       "source_url": "https://www.wikisource.org/wiki/हर्षचरितम्",
       "source_work": "Harshacharita",
       "source_work_key": "mnemosyne.hi.work.harshacharita",
+      "subcategory": "historical",
       "surface_patterns": [
         "हर्षवर्धन का युग",
         "हर्षवर्धन युग",
@@ -35880,6 +36294,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "हल्दीघाटी युद्ध",
         "हल्दीघाटी का युद्ध",
@@ -35935,6 +36350,7 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%85%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%87%E0%A4%B0_%E0%A4%A8%E0%A4%97%E0%A4%B0%E0%A5%80",
       "source_work": "अंधेर नगरी",
       "source_work_key": "mnemosyne.hi.work.अ_ध_र_नगर",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अंधेर नगरी का राजा",
         "अंधेर नगरी के राजा",
@@ -36307,6 +36723,7 @@
       "source_license": "public_domain",
       "source_work": "वैदिक साहित्य",
       "source_work_key": "mnemosyne.hi.work.व_द_क_स_ह_त_य",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि की प्रतीक्षा",
         "अग्नि की प्रतीक्षा में",
@@ -36721,6 +37138,7 @@
       "source_license": "public_domain",
       "source_work": "अग्निपथ",
       "source_work_key": "mnemosyne.hi.work.अग_न_पथ",
+      "subcategory": "filmi",
       "surface_patterns": [
         "अग्निपथ",
         "Agneepath",
@@ -36890,6 +37308,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%85%E0%A4%97%E0%A5%8D%E0%A4%A8%E0%A4%BF-%E0%A4%B5%E0%A5%80%E0%A4%A3%E0%A4%BE",
       "source_work": "अग्नि-वीणा",
       "source_work_key": "mnemosyne.hi.work.अग_न_व_ण",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "अग्नि-वीणा",
         "अग्नि वीणा",
@@ -37128,6 +37547,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%85%E0%A4%AD%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%E0%A5%8D_%E0%A4%B6%E0%A4%BE%E0%A4%95%E0%A5%81%E0%A4%82%E0%A4%A4%E0%A4%B2%E0%A4%AE",
       "source_work": "अभिज्ञान शाकुंतलम",
       "source_work_key": "mnemosyne.hi.work.अभ_ज_ञ_न_श_क_तलम",
+      "subcategory": "historical",
       "surface_patterns": [
         "अभिज्ञान शाकुंतलम",
         "अभिज्ञान शाकुंतल",
@@ -37845,6 +38265,7 @@
       "source_license": "public_domain",
       "source_work": "Various Buddhist texts",
       "source_work_key": "mnemosyne.hi.work.various_buddhist_texts",
+      "subcategory": "historical",
       "surface_patterns": [
         "आम्रपाली",
         "आम्रपाली की कहानी"
@@ -38182,6 +38603,7 @@
       "source_location": "Adi Parva",
       "source_work": "Mahabharata",
       "source_work_key": "mnemosyne.hi.work.mahabharata",
+      "subcategory": "mahabharata",
       "surface_patterns": [
         "उर्वशी",
         "उर्वशी का चरित्र",
@@ -38386,6 +38808,7 @@
       "source_url": "https://hi.wikisource.org/wiki/मधुशाला",
       "source_work": "मधुशाला",
       "source_work_key": "mnemosyne.hi.work.मध_श_ल",
+      "subcategory": "filmi",
       "surface_patterns": [
         "कागज की नाव",
         "कागज की नाव का",
@@ -38429,6 +38852,7 @@
       "source_url": "https://en.wikisource.org/wiki/Arthashastra",
       "source_work": "Arthashastra",
       "source_work_key": "mnemosyne.hi.work.arthashastra",
+      "subcategory": "historical",
       "surface_patterns": [
         "कौटिल्य",
         "कौटिल्य का अर्थशास्त्र"
@@ -38575,6 +38999,7 @@
       "source_url": "https://www.wikisource.org/wiki/Kumarasambhava",
       "source_work": "कुमारसंभव",
       "source_work_key": "mnemosyne.hi.work.क_म_रस_भव",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कुमारसंभव",
         "कुमारसंभव का पाठ",
@@ -38857,6 +39282,7 @@
       "source_url": "https://sa.wikisource.org/wiki/मेघदूतम्",
       "source_work": "मेघदूतम्",
       "source_work_key": "mnemosyne.hi.work.म_घद_तम",
+      "subcategory": "historical",
       "surface_patterns": [
         "कालिदास का मेघदूतम्",
         "कालिदास द्वारा रचित मेघदूतम्",
@@ -39484,6 +39910,7 @@
       "source_url": "https://www.wikisource.org/wiki/Mahabharata",
       "source_work": "Mahabharata",
       "source_work_key": "mnemosyne.hi.work.mahabharata",
+      "subcategory": "mahabharata",
       "surface_patterns": [
         "कर्ण का त्याग",
         "कर्ण का बलिदान"
@@ -39656,6 +40083,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BE%E0%A4%AD%E0%A4%B0%E0%A4%A3%E0%A4%AE%E0%A5%8D",
       "source_work": "कर्णाभरण",
       "source_work_key": "mnemosyne.hi.work.कर_ण_भरण",
+      "subcategory": "mahabharata",
       "surface_patterns": [
         "कर्णाभरण",
         "कर्णाभरण का",
@@ -39964,6 +40392,7 @@
       "source_url": "https://sa.wikisource.org/wiki/किरातार्जुनीयम्",
       "source_work": "किरातार्जुनीयम्",
       "source_work_key": "mnemosyne.hi.work.क_र_त_र_ज_न_यम",
+      "subcategory": "historical",
       "surface_patterns": [
         "कवि भारवि का किरातार्जुनीयम्",
         "कवि भारवि के किरातार्जुनीयम्",
@@ -40140,6 +40569,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%97%E0%A5%8B%E0%A4%A6%E0%A4%BE%E0%A4%A8",
       "source_work": "गोदान",
       "source_work_key": "mnemosyne.hi.work.ग_द_न",
+      "subcategory": "historical",
       "surface_patterns": [
         "गोदान का होरी",
         "गोदान में होरी",
@@ -40488,6 +40918,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%9A%E0%A4%82%E0%A4%A1%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE",
       "source_work": "चंडालिका",
       "source_work_key": "mnemosyne.hi.work.च_ड_ल_क",
+      "subcategory": "historical",
       "surface_patterns": [
         "चंडालिका",
         "चंडालिका नाटक"
@@ -40548,6 +40979,7 @@
       "source_location": "लोककथा संग्रह, अध्याय 1-32",
       "source_work": "सिंहासन बत्तीसी",
       "source_work_key": "mnemosyne.hi.work.स_ह_सन_बत_त_स",
+      "subcategory": "historical",
       "surface_patterns": [
         "चंद्रगुप्त का सिंहासन",
         "चंद्रगुप्त के सिंहासन पर बैठना",
@@ -40937,6 +41369,7 @@
       "source_url": "https://hi.wikisource.org/wiki/ठाकुर_का_कुआँ",
       "source_work": "ठाकुर का कुआँ",
       "source_work_key": "mnemosyne.hi.work.ठ_क_र_क_क_आ",
+      "subcategory": "historical",
       "surface_patterns": [
         "ठाकुर का कुआँ",
         "ठाकुर के कुएँ",
@@ -41038,6 +41471,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "filmi",
       "surface_patterns": [
         "तुमने बदल दिया",
         "तुमने बदल दिया है",
@@ -41359,6 +41793,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%A6%E0%A4%B6%E0%A4%95%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%B0_%E0%A4%9A%E0%A4%B0%E0%A4%BF%E0%A4%A4",
       "source_work": "दशकुमार चरित",
       "source_work_key": "mnemosyne.hi.work.दशक_म_र_चर_त",
+      "subcategory": "historical",
       "surface_patterns": [
         "दशकुमार चरित",
         "दशकुमार चरितम्"
@@ -41915,6 +42350,7 @@
       "source_url": "https://archive.org/details/PrithvirajRasoChandbardai",
       "source_work": "पृथ्वीराज रासो",
       "source_work_key": "mnemosyne.hi.work.प_थ_व_र_ज_र_स",
+      "subcategory": "historical",
       "surface_patterns": [
         "पृथ्वीराज का अंतिम युद्ध",
         "पृथ्वीराज के अंतिम युद्ध",
@@ -41959,6 +42395,7 @@
       "source_url": "https://www.hindi-kavita.com/Prithviraj-Raso.php",
       "source_work": "पृथ्वीराज रासो",
       "source_work_key": "mnemosyne.hi.work.प_थ_व_र_ज_र_स",
+      "subcategory": "historical",
       "surface_patterns": [
         "पृथ्वीराज रासो",
         "रासो",
@@ -42140,6 +42577,7 @@
       "source_license": "public_domain",
       "source_work": "पद्मावत",
       "source_work_key": "mnemosyne.hi.work.पद_म_वत",
+      "subcategory": "historical",
       "surface_patterns": [
         "पद्मावत",
         "Padmavat",
@@ -42178,6 +42616,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AA%E0%A4%A6%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%B5%E0%A4%A4",
       "source_work": "पद्मावत",
       "source_work_key": "mnemosyne.hi.work.पद_म_वत",
+      "subcategory": "historical",
       "surface_patterns": [
         "पद्मावती",
         "पद्मावती की कहानी",
@@ -42232,6 +42671,7 @@
       "source_url": "https://sa.wikisource.org/wiki/कादम्बरी",
       "source_work": "कादम्बरी",
       "source_work_key": "mnemosyne.hi.work.क_दम_बर",
+      "subcategory": "historical",
       "surface_patterns": [
         "बाणभट्ट का कादम्बरी",
         "बाणभट्ट द्वारा रचित कादम्बरी",
@@ -42416,6 +42856,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "भगवान को प्यारे",
         "भगवान को प्यारे हैं",
@@ -42890,6 +43331,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "मीराबाई",
         "मीराबाई की भजन",
@@ -42916,6 +43358,7 @@
       "source_url": "https://archive.org/details/mirabai-padavali",
       "source_work": "मीराबाई पदावली",
       "source_work_key": "mnemosyne.hi.work.म_र_ब_ई_पद_वल",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "मीराबाई की पदावली",
         "मीराबाई पदावली",
@@ -43410,6 +43853,7 @@
       "source_url": "https://archive.org/details/diwan-e-ghalib",
       "source_work": "दीवान-ए-गालिब",
       "source_work_key": "mnemosyne.hi.work.द_व_न_ए_ग_ल_ब",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "रंग महल",
         "रंग महल का",
@@ -43483,6 +43927,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "राजा हरिशचंद्र",
         "हरिशचंद्र की कहानी"
@@ -44064,6 +44509,7 @@
       "source_url": "https://sa.wikisource.org/wiki/अभिज्ञानशाकुन्तलम्",
       "source_work": "अभिज्ञानशाकुंतलम्",
       "source_work_key": "mnemosyne.hi.work.अभ_ज_ञ_नश_क_तलम",
+      "subcategory": "mythology",
       "surface_patterns": [
         "शकुंतला और दुष्यंत",
         "शकुंतला-दुष्यंत कथा",
@@ -44142,6 +44588,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "शब्दों का जादू",
         "जादू शब्दों का",
@@ -44208,6 +44655,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "सिद्धार्थ",
         "सिद्धार्थ की कहानी",
@@ -44569,6 +45017,7 @@
       "source_url": "https://hi.wikisource.org/wiki/सूरसागर",
       "source_work": "सूरसागर",
       "source_work_key": "mnemosyne.hi.work.स_रस_गर",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "सूरदास का सूरसागर",
         "सूरदास द्वारा रचित सूरसागर",
@@ -44874,6 +45323,7 @@
       "source_url": "https://www.wikisource.org/wiki/Mahabharata",
       "source_work": "Mahabharata",
       "source_work_key": "mnemosyne.hi.work.mahabharata",
+      "subcategory": "mahabharata",
       "surface_patterns": [
         "सत्यवान-सावित्री",
         "सत्यवान और सावित्री",
@@ -44901,6 +45351,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/प्रयाग_प्रशस्ति",
       "source_work": "प्रयाग प्रशस्ति",
       "source_work_key": "mnemosyne.hi.work.प_रय_ग_प_रशस_त",
+      "subcategory": "historical",
       "surface_patterns": [
         "समुद्रगुप्त का प्रयाग प्रशस्ति",
         "प्रयाग प्रशस्ति में समुद्रगुप्त",
@@ -45038,6 +45489,7 @@
         "zh": "《哈奴曼查利萨》是图尔西达斯为赞颂哈奴曼而作的四十节颂歌，在印度教传统中广泛诵念以求力量、勇气和保护。"
       },
       "id": "hi_literary_reference_हन_म_न_च_ल_स_23971384",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution to Tulsidas and the description of Hanuman Chalisa are correct and widely accepted.",
@@ -49735,6 +50187,7 @@
       "source_url": "https://www.wikisource.org/wiki/Mundaka_Upanishad",
       "source_work": "Mundaka Upanishad",
       "source_work_key": "mnemosyne.hi.work.mundaka_upanishad",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "सत्यमेव जयते",
         "सत्य मेव जयते"

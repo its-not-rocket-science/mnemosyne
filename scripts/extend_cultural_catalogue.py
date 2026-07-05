@@ -1339,18 +1339,50 @@ Notes:
 
 _SUBCATEGORY_VALUES: dict[str, list[str]] = {
     "zh": ["chengyu", "xiehouyu", "suyv", "yanyu"],
-    "ar": ["quranic", "hadith", "muallaqat", "abbasid", "modern_media"],
-    "fa": ["shahnameh", "hafez", "rumi", "saadi", "khayyam", "persian_proverb", "quranic"],
-    "ja": ["yojijukugo", "kanyoku", "kotowaza", "zen_koan"],
-    "ko": ["sajaseong_eo", "pansori", "sijo", "korean_proverb"],
-    "hi": ["doha_kabir", "doha_rahim", "ramcharitmanas", "bhagavad_gita",
-           "panchatantra", "filmi", "hindi_muhavare", "hindi_lokokti"],
-    "tr": ["biblical", "shakespearean", "latin_tag", "greek_tag", "literary_allusion", "proverb"],
-    "fi": ["biblical", "shakespearean", "latin_tag", "greek_tag", "literary_allusion", "proverb"],
-    "ru": ["biblical", "shakespearean", "latin_tag", "greek_tag", "literary_allusion", "proverb"],
+    "ar": ["quranic", "hadith", "muallaqat", "abbasid", "sufi_poetry", "proverb", "modern_media"],
+    "fa": ["shahnameh", "hafez", "rumi", "saadi", "khayyam", "attar", "nizami",
+           "sufi_poetry", "quranic", "historical", "persian_proverb", "modern_literature"],
+    "ja": ["yojijukugo", "kanyoku", "kotowaza", "zen_koan", "classical_literature",
+           "buddhist_text", "mythology", "historical", "modern_literature", "film_tv", "music"],
+    "ko": ["sajaseong_eo", "pansori", "sijo", "korean_proverb", "classical_literature",
+           "buddhist_text", "confucian_text", "historical", "modern_literature", "film_tv",
+           "music", "folk_tale"],
+    "hi": ["doha_kabir", "doha_rahim", "ramcharitmanas", "bhagavad_gita", "mahabharata",
+           "panchatantra", "vedic_scripture", "sufi_poetry", "filmi", "hindi_muhavare",
+           "hindi_lokokti", "historical", "mythology"],
+    "en": ["biblical", "shakespearean", "arthurian", "greek_mythology", "roman_mythology",
+           "norse_mythology", "literary_allusion", "modern_literature", "visual_art",
+           "historical", "film_tv", "music", "proverb", "folk_tale"],
+    "es": ["biblical", "golden_age", "latin_american_literature", "quijote",
+           "greek_mythology", "roman_mythology", "literary_allusion", "modern_literature",
+           "visual_art", "historical", "film_tv", "music", "refran", "folk_tale"],
+    "pt": ["camoniano", "biblical", "roman_mythology", "greek_mythology",
+           "literary_allusion", "brazilian_literature", "modern_literature",
+           "visual_art", "historical", "film_tv", "music", "proverb", "folk_tale"],
+    "fr": ["classical_tragedy", "enlightenment", "biblical", "latin_tag",
+           "greek_mythology", "roman_mythology", "literary_allusion", "modern_literature",
+           "visual_art", "historical", "film_tv", "music", "proverbe", "folk_tale"],
+    "de": ["goethe_schiller", "fairy_tale", "nibelungen", "opera_libretto", "biblical",
+           "latin_tag", "greek_mythology", "norse_mythology", "literary_allusion",
+           "modern_literature", "visual_art", "historical", "film_tv", "music", "sprichwort"],
+    "it": ["dantesque", "opera_libretto", "biblical", "latin_tag", "roman_mythology",
+           "greek_mythology", "renaissance_literature", "literary_allusion",
+           "modern_literature", "visual_art", "historical", "film_tv", "music", "proverbio"],
+    "ru": ["pushkin", "classical_literature", "biblical", "folk_tale",
+           "greek_mythology", "literary_allusion", "modern_literature",
+           "historical", "film_tv", "music", "poslovitsa", "mythology"],
+    "tr": ["ottoman_literature", "divan_poetry", "sufi_poetry", "folk_poetry",
+           "quranic", "greek_mythology", "literary_allusion", "modern_literature",
+           "historical", "film_tv", "music", "atassözü"],
+    "fi": ["kalevala", "biblical", "norse_mythology", "greek_mythology",
+           "literary_allusion", "modern_literature", "historical",
+           "film_tv", "music", "sananlasku", "folk_tale"],
+    "he": ["biblical", "talmudic", "kabbalistic", "liturgical", "modern_hebrew",
+           "literary_allusion", "historical", "proverb"],
 }
-_SUBCATEGORY_DEFAULT = ["biblical", "shakespearean", "latin_tag", "greek_tag",
-                        "literary_allusion", "proverb"]
+_SUBCATEGORY_DEFAULT = ["biblical", "latin_tag", "greek_mythology", "roman_mythology",
+                        "literary_allusion", "modern_literature", "historical",
+                        "film_tv", "music", "proverb", "folk_tale", "visual_art"]
 
 _BACKFILL_SYS = (
     "You are a cultural catalogue specialist. For each entry, assign the most "
@@ -1383,19 +1415,43 @@ def run_backfill_subcategory(
         _SUBCATEGORY_VALUES.get(language, _SUBCATEGORY_DEFAULT)
     )
 
-    try:
-        from ruamel.yaml import YAML as _RY
-        _ryaml = _RY()
-        _ryaml.preserve_quotes = True
-        with open(seed_path, encoding="utf-8") as _f:
-            all_entries = _ryaml.load(_f)
-        _use_ruamel = True
-    except ImportError:
-        import yaml as _pyyaml
-        with open(seed_path, encoding="utf-8") as _f:
-            all_entries = _pyyaml.safe_load(_f)
-        _use_ruamel = False
+    _lock_path = seed_path.with_suffix(".yaml.lock")
 
+    try:
+        from filelock import FileLock as _FileLock
+        _has_filelock = True
+    except ImportError:
+        _has_filelock = False
+
+    def _load_seed():
+        try:
+            from ruamel.yaml import YAML as _RY
+            _ry = _RY()
+            _ry.preserve_quotes = True
+            with open(seed_path, encoding="utf-8") as _f:
+                return _ry.load(_f), True, _ry
+        except ImportError:
+            import yaml as _py
+            with open(seed_path, encoding="utf-8") as _f:
+                return _py.safe_load(_f), False, None
+
+    def _write_seed(entries, use_ruamel, ryaml_instance):
+        if use_ruamel:
+            from ruamel.yaml import YAML as _RY2
+            _ry2 = _RY2()
+            _ry2.preserve_quotes = True
+            _ry2.default_flow_style = False
+            _ry2.width = 10000
+            with open(seed_path, "w", encoding="utf-8") as _f:
+                _ry2.dump(entries, _f)
+        else:
+            import yaml as _py2
+            with open(seed_path, "w", encoding="utf-8") as _f:
+                _py2.dump(entries, _f, allow_unicode=True,
+                          default_flow_style=False, sort_keys=False)
+
+    # Read seed to discover targets (no lock needed — read-only)
+    all_entries, _use_ruamel, _ryaml = _load_seed()
     targets = [
         (i, e) for i, e in enumerate(all_entries)
         if e.get("language") == language
@@ -1407,6 +1463,8 @@ def run_backfill_subcategory(
         print("Nothing to backfill.")
         return
 
+    # Collect API results keyed by canonical_reference (no file I/O during loop)
+    updates: dict[str, dict] = {}  # canonical_reference → {subcategory, is_poetic_citation}
     client = make_client(model)
     total_in = total_out = 0
     batches = [targets[i:i + batch_size] for i in range(0, len(targets), batch_size)]
@@ -1462,13 +1520,14 @@ def run_backfill_subcategory(
             print(f"  batch {b_idx+1}: expected {len(batch)} results, got {len(results)}", file=sys.stderr)
             continue
 
-        for (orig_idx, entry), result in zip(batch, results):
+        for (_, entry), result in zip(batch, results):
+            canon = entry.get("canonical_reference")
+            if not canon:
+                continue
             sub = result.get("subcategory")
             poetic = bool(result.get("is_poetic_citation", False))
-            if sub:
-                entry["subcategory"] = sub
-            if poetic:
-                entry["is_poetic_citation"] = True
+            if sub or poetic:
+                updates[canon] = {"subcategory": sub, "is_poetic_citation": poetic}
 
         print(f"  batch {b_idx+1}/{len(batches)}: processed {len(batch)} entries", flush=True)
 
@@ -1480,20 +1539,20 @@ def run_backfill_subcategory(
     cost = cost_in * price_in + cost_out * price_out
     print(f"\nTokens: {total_in:,} in / {total_out:,} out  ~=  ${cost:.4f}")
 
-    print(f"Writing {seed_path} ...", flush=True)
-    if _use_ruamel:
-        from ruamel.yaml import YAML as _RY2
-        _ryaml2 = _RY2()
-        _ryaml2.preserve_quotes = True
-        _ryaml2.default_flow_style = False
-        _ryaml2.width = 10000
-        with open(seed_path, "w", encoding="utf-8") as _f:
-            _ryaml2.dump(all_entries, _f)
-    else:
-        import yaml as _pyyaml2
-        with open(seed_path, "w", encoding="utf-8") as _f:
-            _pyyaml2.dump(all_entries, _f, allow_unicode=True,
-                          default_flow_style=False, sort_keys=False)
+    if not updates:
+        print("No updates to write.")
+        return
+
+    # Write updates to a small per-language JSON file (atomic, no lock needed).
+    # Run --merge-backfill-updates afterwards to apply all pending updates to seed.
+    updates_path = seed_path.parent / f".backfill_updates_{language}.json"
+    tmp_path = updates_path.with_suffix(".tmp")
+    tmp_path.write_text(
+        _json.dumps(updates, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    tmp_path.replace(updates_path)
+    print(f"Updates staged -> {updates_path}")
+    print("Run --merge-backfill-updates to apply to seed.")
     print("Done.")
 
 
@@ -1513,7 +1572,11 @@ def main() -> None:
                     help="Enrich existing seed entries that lack a subcategory field, "
                          "rather than generating new entries. Reads entries from --seed, "
                          "sends them to the LLM in batches requesting subcategory and "
-                         "is_poetic_citation, and writes results back to the seed.")
+                         "is_poetic_citation, and stages results to a per-language JSON "
+                         "file. Run --merge-backfill-updates to apply all staged updates.")
+    ap.add_argument("--merge-backfill-updates", action="store_true",
+                    help="Apply all staged .backfill_updates_<lang>.json files to the seed "
+                         "in one pass and delete the temp files. Run after --backfill-subcategory.")
     ap.add_argument("--model", "-m",
                     help="Generation + i18n model (overrides CULTURAL_CATALOGUE_MODEL; default: gpt-4o-mini)")
     ap.add_argument("--review-model",
@@ -1556,14 +1619,64 @@ def main() -> None:
         print_cost_estimate(args.target, langs, args.with_i18n, args.with_review)
         return
 
-    if not args.language:
-        ap.error("--language is required (unless --estimate-cost)")
+    if not args.language and not args.merge_backfill_updates:
+        ap.error("--language is required (unless --estimate-cost or --merge-backfill-updates)")
     if args.language not in LANGUAGE_NAMES:
         print(f"Warning: '{args.language}' not in known languages -- proceeding", file=sys.stderr)
         LANGUAGE_NAMES[args.language] = args.language
 
     model        = resolve_model(args.model,        "CULTURAL_CATALOGUE_MODEL",        "gpt-4o-mini")
     review_model = resolve_model(args.review_model, "CULTURAL_CATALOGUE_REVIEW_MODEL", model)
+
+    if args.merge_backfill_updates:
+        import json as _json
+        update_files = sorted(args.seed.parent.glob(".backfill_updates_*.json"))
+        if not update_files:
+            print("No staged update files found.")
+            return
+        all_updates: dict[str, dict] = {}
+        for uf in update_files:
+            data = _json.loads(uf.read_text(encoding="utf-8"))
+            all_updates.update(data)
+            print(f"  loaded {len(data):,} updates from {uf.name}")
+        print(f"Applying {len(all_updates):,} total updates to {args.seed} ...")
+        try:
+            from ruamel.yaml import YAML as _RY
+            _ry = _RY(); _ry.preserve_quotes = True
+            with open(args.seed, encoding="utf-8") as _f:
+                entries = _ry.load(_f)
+            use_ruamel = True
+        except ImportError:
+            import yaml as _py
+            with open(args.seed, encoding="utf-8") as _f:
+                entries = _py.safe_load(_f)
+            use_ruamel = False
+        applied = 0
+        for entry in entries:
+            canon = entry.get("canonical_reference")
+            if canon in all_updates:
+                u = all_updates[canon]
+                if u.get("subcategory"):
+                    entry["subcategory"] = u["subcategory"]
+                if u.get("is_poetic_citation"):
+                    entry["is_poetic_citation"] = True
+                applied += 1
+        print(f"Applied {applied:,} entries. Writing seed ...")
+        if use_ruamel:
+            from ruamel.yaml import YAML as _RY2
+            _ry2 = _RY2(); _ry2.preserve_quotes = True
+            _ry2.default_flow_style = False; _ry2.width = 10000
+            with open(args.seed, "w", encoding="utf-8") as _f:
+                _ry2.dump(entries, _f)
+        else:
+            import yaml as _py2
+            with open(args.seed, "w", encoding="utf-8") as _f:
+                _py2.dump(entries, _f, allow_unicode=True,
+                          default_flow_style=False, sort_keys=False)
+        for uf in update_files:
+            uf.unlink()
+        print(f"Done. Deleted {len(update_files)} temp file(s).")
+        return
 
     if args.backfill_subcategory:
         run_backfill_subcategory(

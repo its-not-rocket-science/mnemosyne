@@ -15435,6 +15435,7 @@
         "zh": "一句拉丁语短语，来自《传道书》的武加大译本，意为'虚空的虚空'，表达了世俗追求的虚妄和转瞬即逝的本质。"
       },
       "id": "la_classical_or_scriptural_allusion_vanitas_vanitatum_df76a500",
+      "is_poetic_citation": true,
       "language": "la",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Correctly attributed to Vulgate Ecclesiastes 1:2.",

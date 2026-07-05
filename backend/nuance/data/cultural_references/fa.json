@@ -20,6 +20,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "آتش دین را در دل خود روشن کردن",
         "آتش دین رو در دل خود روشن کردن",
@@ -667,6 +668,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/اردشیر_بابکان",
       "source_work": "کارنامه اردشیر بابکان",
       "source_work_key": "mnemosyne.fa.work.کارنامه_اردشیر_بابکان",
+      "subcategory": "historical",
       "surface_patterns": [
         "اردشیر بابکان و موبدان",
         "اردشیرِ بابکان و موبدان",
@@ -788,6 +790,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "اسلام و فلسفه"
       ]
@@ -1873,6 +1876,7 @@
       "source_url": "https://www.avesta.org/mp/bundahis.html",
       "source_work": "بندهشن",
       "source_work_key": "mnemosyne.fa.work.بندهشن",
+      "subcategory": "historical",
       "surface_patterns": [
         "داستان جم و تهمورث در بندهشن",
         "جم و تهمورث در بندهشن",
@@ -1910,6 +1914,7 @@
       "source_url": "https://avesta.org/",
       "source_work": "اوستا",
       "source_work_key": "mnemosyne.fa.work.اوستا",
+      "subcategory": "historical",
       "surface_patterns": [
         "جمشید و فره ایزدی",
         "جمشید و فر",
@@ -3718,6 +3723,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/منشور_کوروش",
       "source_work": "منشور کورش",
       "source_work_key": "mnemosyne.fa.work.منشور_کورش",
+      "subcategory": "historical",
       "surface_patterns": [
         "کوروش",
         "کوروش کبیر و منشور آزادی بابل",
@@ -3802,6 +3808,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "آتشکده زرتشت",
         "آتشکده‌ی زرتشت",
@@ -3830,6 +3837,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "آخرین فنجان چای داغ",
         "آخرین فنجان چای داغ خوردن"
@@ -3946,6 +3954,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "آواز بانگ درویش در خانقاه",
         "بانگ درویش در خانقاه",
@@ -3974,6 +3983,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "آواز درویش در شب یلدا",
         "آواز درویش شب یلدا",
@@ -4003,6 +4013,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "آواز دلنواز در شب‌های طولانی زمستان",
         "آواز دلنواز در شب‌های طولانی زمستان است",
@@ -4092,6 +4103,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/دانِشنامه_علایی",
       "source_work": "دانِشنامه علایی",
       "source_work_key": "mnemosyne.fa.work.دان_شنامه_علایی",
+      "subcategory": "historical",
       "surface_patterns": [
         "ابوعلی سینا",
         "ابن سینا",
@@ -4145,6 +4157,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "اردشیر",
         "بنیادگذاری",
@@ -4173,6 +4186,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_History_of_al-Tabari",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "اردشیر پاپکان",
         "اردشیر بابکان",
@@ -4280,6 +4294,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "امیرکبیر",
         "میرزا تقی خان امیرکبیر",
@@ -4309,6 +4324,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "بازگشت امام خمینی",
         "امام خمینی بازگشت",
@@ -4336,6 +4352,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "انقلاب اسلامی",
         "انقلاب اسلامی ۱۳۵۷",
@@ -4388,6 +4405,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1_%D8%B4%D8%A7%D9%85",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "بازار شام"
       ]
@@ -4440,6 +4458,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "باغ خیال",
         "باغ خیال‌ها",
@@ -4523,6 +4542,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "بنیانگذار جمهوری اسلامی",
         "بنیانگذار جمهوری اسلامی امام خمینی",
@@ -4575,6 +4595,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%A8%D9%87_%D8%B3%DB%8C%D9%85_%D8%A2%D8%AE%D8%B1_%D8%B2%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "به سیم آخر زدن"
       ]
@@ -4598,6 +4619,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%A8%DB%8C_%DA%86%D8%B4%D9%85_%D9%88_%D8%B1%D9%88",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "بی چشم و رو"
       ]
@@ -4645,6 +4667,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تأسیس دانشگاه تهران توسط رضاشاه",
         "تأسیس دانشگاه تهران توسط رضا شاه",
@@ -4673,6 +4696,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تئاتر درباری صفوی",
         "تئاتر درباری صفویه",
@@ -4701,6 +4725,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تئاتر سنتی سیستانی",
         "تئاتر سیستانی",
@@ -4730,6 +4755,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تئاتر سنتی یزد",
         "تئاتر یزد",
@@ -4761,6 +4787,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تئاتر عروسکی خیمه شب بازی",
         "تئاتر خیمه شب بازی",
@@ -4789,6 +4816,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تئاتر مذهبی علی اصغر",
         "تئاتر علی اصغر",
@@ -4816,6 +4844,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "موسیقی و کلام",
         "موسیقی و کلام در تئاتر",
@@ -4844,6 +4873,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تاج پادشاهی",
         "تاجِ پادشاهی",
@@ -4903,6 +4933,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Persepolis",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تخت جمشید و گنجینه‌های پنهان",
         "تخت جمشید گنجینه‌های پنهان",
@@ -4931,6 +4962,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%AA%D8%B9%D8%A7%D8%B1%D9%81_%D8%AA%DB%8C%DA%A9%D9%87_%D9%BE%D8%A7%D8%B1%D9%87_%DA%A9%D8%B1%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تعارف تیکه پاره کردن"
       ]
@@ -4954,6 +4986,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو که دلت می‌خواد مگر من باید بگم",
         "تو که دلت می‌خواد مگه من باید می‌گفتم",
@@ -4982,6 +5015,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو که می‌رفتی من که می‌ماندم",
         "تو که می‌رفتی من می‌ماندم",
@@ -5008,6 +5042,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو گفتی من می‌شنوم منم گفتم نمی‌شنوم",
         "تو گفتی من می‌شنوم منم گفتم نشنوم",
@@ -5065,6 +5100,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE_%D8%B9%D8%A7%D9%84%D9%85_%D8%A2%D8%B1%D8%A7%DB%8C_%D8%AA%DB%8C%D9%85%D9%88%D8%B1%DB%8C",
       "source_work": "تاریخ عالم آرای تیموری",
       "source_work_key": "mnemosyne.fa.work.تاریخ_عالم_آرای_تیموری",
+      "subcategory": "historical",
       "surface_patterns": [
         "تیمور لنگ و ویرانی شهر اصفهان",
         "تیمور لنگ و ویرانی اصفهان",
@@ -5118,6 +5154,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "جمال الدین اسدآبادی",
         "جمال‌الدین اسدآبادی",
@@ -5173,6 +5210,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "جنگ ایران و عراق",
         "عملیات بیت‌المقدس",
@@ -5201,6 +5239,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "جنگ تحمیلی",
         "دفاع مقدس",
@@ -5228,6 +5267,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D9%86%D8%A8%D8%B1%D8%AF_%D8%AD%D8%B7%DB%8C%D9%86",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "جنگ‌های صلیبی و نبرد حطین",
         "جنگ‌های صلیبی",
@@ -5411,6 +5451,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خانه دو درب",
         "خونه دو درب",
@@ -5461,6 +5502,7 @@
       "source_url": "https://en.wikisource.org/wiki/Herodotus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "خشایارشا",
         "خشایارشای بزرگ",
@@ -5491,6 +5533,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "خط دیوانی نگارگری کلمات است",
         "خط دیوانی نگارگری کلمه‌ها است",
@@ -5520,6 +5563,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "خط محقق صدای تاریخ است",
         "خط محقق، صدای تاریخ است",
@@ -5550,6 +5594,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خط نستعلیق دختر خط و خواهر شعر است",
         "خط نستعلیق دختر خط و خواهر شعر می‌باشد",
@@ -5578,6 +5623,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/خواجه_نصیرالدین_طوسی",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "خواجه نصیرالدین طوسی",
         "نصیرالدین طوسی",
@@ -5607,6 +5653,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%AE%D9%88%D8%AF%DA%A9%D8%B4%DB%8C_%D8%A7%D8%B2_%D8%AA%D8%B1%D8%B3_%D9%85%D8%B1%DA%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خودکشی از ترس مرگ"
       ]
@@ -5684,6 +5731,7 @@
       "source_url": "https://en.wikisource.org/wiki/Herodotus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "داریوش بزرگ",
         "داریوش کبیر",
@@ -5713,6 +5761,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%DA%A9%D8%AA%DB%8C%D8%A8%D9%87_%D8%A8%DB%8C%D8%B3%D8%AA%D9%88%D9%86",
       "source_work": "کتیبه بیستون",
       "source_work_key": "mnemosyne.fa.work.کتیبه_بیستون",
+      "subcategory": "historical",
       "surface_patterns": [
         "کتیبه بیستون",
         "کتیبهٔ بیستون",
@@ -5744,6 +5793,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "دختری که گلش پرپر می‌زند",
         "دختری که گلش پرپر می‌زنه",
@@ -5909,6 +5959,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%AF%D8%B3%D8%AA_%D9%88_%D9%BE%D8%A7%DB%8C_%D8%AE%D9%88%D8%AF_%D8%B1%D8%A7_%DA%AF%D9%85_%DA%A9%D8%B1%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دست و پای خود را گم کردن"
       ]
@@ -5932,6 +5983,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%AF%D9%84_%D8%A8%D9%87_%D8%AF%D8%B1%DB%8C%D8%A7_%D8%B2%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دل به دریا زدن"
       ]
@@ -5982,6 +6034,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%AF%D9%84_%D8%B1%D8%A7_%D8%A7%D8%B2_%D8%B9%D8%B2%D8%A7_%D8%AF%D8%B1%D8%A2%D9%88%D8%B1%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دل را از عزا درآوردن"
       ]
@@ -6096,6 +6149,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "دنیا برای تو رنگی نمی‌خرید",
         "دنیا برای تو رنگی نمی‌خرد",
@@ -6123,6 +6177,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%AF%D9%88_%D8%AA%D8%A7_%D9%87%D9%86%D8%AF%D9%88%D8%A7%D9%86%D9%87_%D8%B1%D8%A7_%D8%A8%D8%A7_%DB%8C%DA%A9_%D8%AF%D8%B3%D8%AA_%D8%A8%D8%B1%D8%AF%D8%A7%D8%B4%D8%AA%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "دو تا هندوانه را با یک دست برداشتن"
       ]
@@ -6201,6 +6256,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B1%D8%AE_%D8%B9%D9%82%D8%A7%D8%A8_%DA%AF%D8%B1%D9%81%D8%AA%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "رخ عقاب گرفتن"
       ]
@@ -6255,6 +6311,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "کشف حجاب",
         "حجاب برداشتن",
@@ -6285,6 +6342,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "رضاشاه",
         "رضا شاه",
@@ -6344,6 +6402,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "رقص آتش در مراسم زرتشتی",
         "رقص آتش در مراسم زرتشتی است",
@@ -6372,6 +6431,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "رقص روی شیشه",
         "رقصیدن روی شیشه",
@@ -6402,6 +6462,7 @@
       "source_url": "https://www.britannica.com/topic/Sufism",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "رقص سماع کردن",
         "رقص سماع داشتن",
@@ -6431,6 +6492,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "سماع می‌کرد",
         "سماع می‌کنه",
@@ -6490,6 +6552,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "رقص سمندر",
         "رقصِ سمندر",
@@ -6520,6 +6583,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "رقص کولی‌ها در بازارهای قدیم اصفهان",
         "رقص کولی‌ها در اصفهان قدیم",
@@ -6548,6 +6612,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B1%D9%88%D8%B2%DB%8C_%D8%A7%D8%B2_%D8%B1%D9%88%D8%B2%D9%87%D8%A7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "روزی از روزها"
       ]
@@ -6571,6 +6636,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B1%D9%88%D8%B2%DB%8C_%D8%B1%D9%88%D8%B2%DA%AF%D8%A7%D8%B1%DB%8C",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "روزی روزگاری"
       ]
@@ -6594,6 +6660,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B1%D9%88%DB%8C_%D8%B3%DA%AF_%DA%A9%D8%B3%DB%8C_%D8%B1%D8%A7_%D8%A8%D8%A7%D9%84%D8%A7_%D8%A2%D9%88%D8%B1%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "روی سگ کسی را بالا آوردن"
       ]
@@ -6617,6 +6684,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B1%DB%8C%D8%B4%D9%87_%D8%AF%D9%88%D8%A7%D9%86%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "ریشه دواندن"
       ]
@@ -6672,6 +6740,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "زیر پرده نمایش",
         "زیر پرده‌ی نمایش",
@@ -6790,6 +6859,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B3%D8%B1_%DA%A9%DB%8C%D8%B3%D9%87_%D8%B1%D8%A7_%D8%B4%D9%84_%DA%A9%D8%B1%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "سر کیسه را شل کردن"
       ]
@@ -6813,6 +6883,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "سرزمین من",
         "سرزمینِ من",
@@ -6842,6 +6913,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B3%D8%B1%D9%88_%D8%AE%D9%85%DB%8C%D8%AF%D9%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "سرو خمیده"
       ]
@@ -6896,6 +6968,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B3%D9%86%DA%AF_%D8%AA%D9%85%D8%A7%D9%85_%DA%AF%D8%B0%D8%A7%D8%B4%D8%AA%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "سنگ تمام گذاشتن"
       ]
@@ -6919,6 +6992,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B3%D9%88%D8%AE%D8%AA%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "سوختن"
       ]
@@ -6942,6 +7016,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "سید علی خامنه‌ای",
         "سیدعلی خامنه‌ای",
@@ -6969,6 +7044,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%87_%D8%B9%D8%A8%D8%A7%D8%B3_%D8%A7%D9%88%D9%84",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شاه عباس اول انتقال پایتخت به اصفهان را انجام داد",
         "شاه عباس اصفهان رو پایتخت کرد",
@@ -6998,6 +7074,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شاه عباس",
         "شاه عباس کبیر",
@@ -7053,6 +7130,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Naqsh-e_Rustam",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شاپور اول",
         "شاپور یکم",
@@ -7083,6 +7161,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "شب‌های تهران ۱۳۷۵",
         "شب‌های تهران هفتاد و پنج"
@@ -7107,6 +7186,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "شب هزار و یکم"
       ]
@@ -7130,6 +7210,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شبیه خوانی",
         "شبیه خونی",
@@ -7159,6 +7240,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شهید باهنر و جنگ ایران و عراق",
         "شهید باهنر و جنگ تحمیلی",
@@ -7187,6 +7269,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شهید بهشتی",
         "شهید بهشتی و انقلاب فرهنگی",
@@ -7216,6 +7299,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شهید رجایی",
         "شهید رجایی و شوراهای اسلامی",
@@ -7245,6 +7329,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شهید صیاد شیرازی و دفاع مقدس",
         "شهید حسین صیاد شیرازی در جنگ ایران و عراق",
@@ -7272,6 +7357,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شهید مطهری",
         "شهید مطهری و مکتب شهید صدر",
@@ -7301,6 +7387,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شهید چمران و نهضت آزادی‌بخش لبنان",
         "شهید مصطفی چمران و لبنان",
@@ -7329,6 +7416,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شهید وثام در خیزش ۱۵ خرداد",
         "شهید وثام و قیام مردم تهران",
@@ -7386,6 +7474,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/صفویان",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "صفویه",
         "سلسله صفویه",
@@ -7416,6 +7505,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "طبل جنگ داخلی",
         "طبلِ جنگِ داخلی",
@@ -7529,6 +7619,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%B9%D8%A7%D9%84%D9%85%E2%80%8C%D8%A2%D8%B1%D8%A7%DB%8C_%D8%B9%D8%A8%D8%A7%D8%B3%DB%8C",
       "source_work": "عالم‌آرای عباسی",
       "source_work_key": "mnemosyne.fa.work.عالم_آرای_عباسی",
+      "subcategory": "historical",
       "surface_patterns": [
         "عالم‌آرای عباسی",
         "عالم آرای عباسی",
@@ -7587,6 +7678,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "عروسک‌های خیمه‌شب‌بازی",
         "عروسک‌هایِ خیمه‌شب‌بازی",
@@ -7617,6 +7709,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "عروسک متحرک",
         "عروسک‌های متحرک",
@@ -7646,6 +7739,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "عروسکی که جسارت می‌کند",
         "عروسکی جسارت می‌کند"
@@ -7695,6 +7789,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "عهدنامه ترکمنچای",
         "عهدنامه ترکمانچای",
@@ -7785,6 +7880,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D9%81%D8%AA%D8%AD%E2%80%8C%D8%B9%D9%84%DB%8C_%D8%B4%D8%A7%D9%87_%D9%82%D8%A7%D8%AC%D8%A7%D8%B1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "فتحعلی شاه قاجار جنگ‌های ایران و روسیه را آغاز کرد",
         "فتحعلی شاه جنگ روس‌ها رو شروع کرد",
@@ -7815,6 +7911,7 @@
       "source_url": "https://whc.unesco.org/en/list/1422/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "کاخ گلستان",
         "کاخِ گلستان",
@@ -7845,6 +7942,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "فتحعلی شاه",
         "فتحعلی شاه قاجار",
@@ -7873,6 +7971,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "فرش ابریشم و آواز",
         "فرشِ ابریشم و آواز",
@@ -8108,6 +8207,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%82%D9%85%D9%BE%D8%B2_%D8%AF%D8%B1%DA%A9%D8%B1%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "قمپز درکردن"
       ]
@@ -8131,6 +8231,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "قیام تنباکو",
         "جنبش تنباکو",
@@ -8161,6 +8262,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "لحظه اوج آواز",
         "لحظه‌ی اوجِ آواز",
@@ -8191,6 +8293,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%84%DB%8C%D9%84%DB%8C_%D8%B2%D9%86_%D8%A8%D9%88%D8%AF_%DB%8C%D8%A7_%D9%85%D8%B1%D8%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "لیلی زن بود یا مرد"
       ]
@@ -8243,6 +8346,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "ماجرای کلاه قرمزی",
         "ماجرایِ کلاهِ قرمزی",
@@ -8273,6 +8377,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%85%D8%A7%D8%B1_%D8%AF%D8%B1_%D8%A2%D8%B3%D8%AA%DB%8C%D9%86_%D9%BE%D8%B1%D9%88%D8%B1%D8%A7%D9%86%D8%AF%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "مار در آستین پروراندن"
       ]
@@ -8324,6 +8429,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "مجلس ترانه سرایان",
         "مجلسِ ترانه‌سرایان",
@@ -8354,6 +8460,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/کتاب_الحاوی",
       "source_work": "کتاب الحاوی",
       "source_work_key": "mnemosyne.fa.work.کتاب_الحاوی",
+      "subcategory": "historical",
       "surface_patterns": [
         "محمد زکریای رازی",
         "زکریای رازی",
@@ -8383,6 +8490,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "محمدرضا شاه",
         "محمدرضاشاه",
@@ -8412,6 +8520,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D9%85%D8%AD%D9%85%D8%AF_%D8%B9%D9%84%DB%8C_%D8%B4%D8%A7%D9%87",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "محمدعلی شاه مجلس را به توپ بست",
         "محمدعلی شاه مجلس رو بمباران کرد",
@@ -8442,6 +8551,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "مصدق",
         "ملی شدن صنعت نفت",
@@ -8467,6 +8577,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "مظفرالدین شاه",
         "مظفرالدین‌شاه",
@@ -8495,6 +8606,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D9%85%D8%B8%D9%81%D8%B1%D8%A7%D9%84%D8%AF%DB%8C%D9%86_%D8%B4%D8%A7%D9%87",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "مظفرالدین شاه انقلاب مشروطه را آغاز کرد",
         "مظفرالدین شاه مشروطه رو به راه انداخت",
@@ -8525,6 +8637,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/مسجد_امام_(اصفهان)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "مسجد امام اصفهان",
         "مسجد شاه اصفهان",
@@ -8742,6 +8855,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%B3%D9%85%D8%A7%D8%B9",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "موسیقی سماع در مراقد دراویش",
         "سماع دراویش",
@@ -8910,6 +9024,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "موش و گربه نمایش",
         "موش و گربه‌یِ نمایش",
@@ -8940,6 +9055,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "میرزا کوچک خان جنگلی",
         "میرزا کوچک خان",
@@ -8970,6 +9086,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "میرزا کوچک خان در مقابل استعمار",
         "میرزا کوچک خان در جنگل",
@@ -8999,6 +9116,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "مینیاتور برگ‌های فلزی",
         "مینیاتور فلزی",
@@ -9028,6 +9146,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "مینیاتور جهان در یک قطره است",
         "مینیاتور جهان در یک قطره می‌باشد",
@@ -9056,6 +9175,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "مینیاتور قصه‌های کهن در قاب است",
         "مینیاتور قصه‌های کهن در قابی است",
@@ -9084,6 +9204,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نادرشاه",
         "نادرشاه افشار",
@@ -9114,6 +9235,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D9%86%D8%A7%D8%AF%D8%B1%D8%B4%D8%A7%D9%87_%D8%A7%D9%81%D8%B4%D8%A7%D8%B1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نادرشاه افشار در لارستان پیروز شد",
         "نادرشاه لارستان رو فتح کرد",
@@ -9144,6 +9266,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D9%82%D9%84%D8%A7%D8%A8_%D9%85%D8%B4%D8%B1%D9%88%D8%B7%DB%8C%D8%AA",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "انقلاب مشروطه",
         "انقلابِ مشروطه",
@@ -9174,6 +9297,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "نغمه بی‌واکنش",
         "نغمه‌های بی‌واکنش",
@@ -9204,6 +9328,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی باغ شازده ماهان و نگارگری گل و مرغ",
         "نقاشی باغ شازده ماهان و گل و مرغ",
@@ -9231,6 +9356,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی باغ و بهار در مکتب نگارگری اصفهان"
       ]
@@ -9284,6 +9410,7 @@
       "source_url": "https://www.iranicaonline.org/articles/miniature-painting",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی تک چهره در مکتب شیراز",
         "نقاشی تک‌چهره در مکتب شیراز",
@@ -9313,6 +9440,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نقاشی خیال‌پردازی رؤیای هنرمند است",
         "نقاشی خیال‌پردازی، رؤیای هنرمند است",
@@ -9329,6 +9457,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.fa.explanation.persian_art_phrases_نقاشی_خیالی_رویای_هنرمند_است",
       "id": "fa_cultural_reference_نقاشی_خیالی_رویای_هنرمند_است_1e6f17b0",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9342,6 +9471,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نقاشی خیالی رویای هنرمند است",
         "نقاشی خیالی رویای هنرمنده",
@@ -9369,6 +9499,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نقاشی، دنیایی در دل است",
         "نقاشی دنیایی در دل است",
@@ -9384,6 +9515,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_art_history_phrases_نقاشی_دیواری_گویای_تار",
       "id": "fa_cultural_reference_نقاشی_دیواری_گویای_تاریخ_است_9a3b922b",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9397,6 +9529,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نقاشی دیواری گویای تاریخ است",
         "نقاشی دیواری گویای تاریخ می‌باشد",
@@ -9426,6 +9559,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نقاشی، زبان بی‌زبانی است",
         "نقاشی زبان بی‌زبانی است",
@@ -9454,6 +9588,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی زن قشنگ و گل سرخ در مکتب شیراز",
         "نقاشی زن خوشگل و گل سرخ در مکتب شیراز"
@@ -9478,6 +9613,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی شکارگاه جهانگیر از مکتب مغولی هند",
         "نگاره شکارگاه جهانگیر از مکتب مغولی هند",
@@ -9507,6 +9643,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی قاجاری آینه زمان است",
         "نقاشی قاجاری، آینه زمان است",
@@ -9536,6 +9673,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/نقاشی_قهوه‌خانه‌ای",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی قهوه خانه ای",
         "نقاشی قهوه‌خونه‌ای",
@@ -9565,6 +9703,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی قهوه خانه‌ای صدای مردم است",
         "نقاشی قهوه خونه‌ای صدای مردم",
@@ -9591,6 +9730,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی قیچی و کاغذ"
       ]
@@ -9614,6 +9754,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس بزم انوشیروان بر دیوار کاخ تچر",
         "نقاشی بزم انوشیروان در کاخ تچر"
@@ -9638,6 +9779,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس بزم در مکتب اصفهان از رضا عباسی",
         "نقاشی مجلس بزم اصفهان از رضا عباسی"
@@ -9662,6 +9804,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس بزم در مکتب تبریز از جهانگیر",
         "نقاشی مجلس بزم تبریز جهانگیر",
@@ -9689,6 +9832,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس بزم در مکتب شیراز از مصور"
       ]
@@ -9712,6 +9856,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس بزم در مکتب قزوین از سلطان محمد",
         "نقاشی مجلس بزم قزوین از سلطان محمد"
@@ -9736,6 +9881,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس بزم در مکتب قزوین از میرک نقاش",
         "نقاشی مجلس بزم قزوین میرک نقاش",
@@ -9764,6 +9910,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس بزم در مکتب مغولی هند از منصور",
         "نقاشی مجلس بزم مغولی هند از منصور"
@@ -9788,6 +9935,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس بزم در مکتب هرات از عبدالرحمن چشتی",
         "نقاشی مجلس بزم هرات",
@@ -9816,6 +9964,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس بزم در مکتب هرات از میر سید علی",
         "نقاشی مجلس بزم هرات از میر سید علی"
@@ -9840,6 +9989,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس بزم در مکتب هرات از کمال الدین بهزاد",
         "نقاشی مجلس بزم هرات کمال الدین بهزاد",
@@ -9867,6 +10017,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس رجبیه در مکتب شیراز از محمد cross",
         "نقاشی مجلس رجبیه مکتب شیراز محمد cross",
@@ -9894,6 +10045,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس عاشورا در مکتب اصفهان از علی اصغر کمالی",
         "نقاشی مجلس عاشورا اصفهان علی اصغر کمالی",
@@ -9921,6 +10073,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس عروسی در مکتب اصفهان از رضا عباسی",
         "نقاشی مجلس عروسی اصفهان",
@@ -9949,6 +10102,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس عزا در مکتب تبریز از سلطان محمد",
         "نقاشی مجلس عزا تبریز",
@@ -9977,6 +10131,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی مجلس عیش در مکتب قزوین از حسین بهزاد",
         "نقاشی مجلس عیش قزوین",
@@ -10064,6 +10219,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی پرده‌های کاخ چهل‌ستون"
       ]
@@ -10087,6 +10243,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "نقاشی چهره نیما یوشیج با قلم‌موی فرشچیان",
         "نقاشی چهره نیما با قلم‌موی فرشچیان",
@@ -10102,6 +10259,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_art_motifs_نقاشی_گل_و_بلبل_نماد_زندگی_است",
       "id": "fa_cultural_reference_نقاشی_گل_و_بلبل_نماد_زندگی_است_e7e55304",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10115,6 +10273,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نقاشی گل و بلبل نماد زندگی است",
         "نقاشی گل و بلبل نماد زندگیه",
@@ -10143,6 +10302,7 @@
       "source_url": "https://www.iranicaonline.org/articles/gol-o-morgh",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی گل و مرغ",
         "نقاشی گل و مرغ است",
@@ -10173,6 +10333,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نقاشی گل و مرغ، آینه دل است",
         "نقاشی گل و مرغ آینه دل است",
@@ -10202,6 +10363,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقاشی گلزار و بلبل"
       ]
@@ -10226,6 +10388,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقش بوالهوس در بزم اشراف",
         "بوالهوس در بزم اشراف",
@@ -10254,6 +10417,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقش خبیث",
         "نقش خبیثه",
@@ -10283,6 +10447,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نقش ققنوس",
         "ققنوس در منسوجات",
@@ -10312,6 +10477,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نقش نگار، حکایت دل است",
         "نقش نگار حکایت دل است",
@@ -10328,6 +10494,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.fa.explanation.persian_art_phrases_نقش_گل_و_مرغ_نماد_عشق_است",
       "id": "fa_cultural_reference_نقش_گل_و_مرغ_نماد_عشق_است_1f775fa6",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10341,6 +10508,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نقش گل و مرغ نماد عشق است",
         "نقش گل و مرغ نماد عشق می‌باشد",
@@ -10370,6 +10538,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تالوی سیستانی",
         "تالو کردن",
@@ -10396,6 +10565,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تعزیه",
         "نوحه خوانی",
@@ -10425,6 +10595,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "صحنه‌های درگیری تعزیه",
         "تعزیه با صحنه‌های درگیری",
@@ -10453,6 +10624,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "تعزیه خونی",
         "تعزیه خوانی کردن",
@@ -10480,6 +10652,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نمایش تعزیه و عاشورا",
         "تعزیه و عاشورا",
@@ -10538,6 +10711,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "خیمه شب بازی می‌کرد",
         "خیمه شب بازی می‌کنه",
@@ -10563,6 +10737,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نمایش خیمه‌شب‌بازی در روستاهای فارس",
         "خیمه‌شب‌بازی در فارس",
@@ -10591,6 +10766,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نمایش خیمه شب بازی",
         "خیمه شب بازی",
@@ -10620,6 +10796,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "نمایش در آینه"
       ]
@@ -10643,6 +10820,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شبیه‌خوانی",
         "شبیه خوانی با شمشیر و زره",
@@ -10670,6 +10848,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نمایش شیر و عسل",
         "شیر و عسل",
@@ -10700,6 +10879,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نمایش عروس و عقد با عروسک‌های چوبی",
         "نمایش عروس و عقد با عروسک‌های چوبی است",
@@ -10728,6 +10908,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "عروس و عقد",
         "عقد و عروس",
@@ -10756,6 +10937,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نمایش عروس و عقد در عید بزرگ",
         "عروس و عقد در عید بزرگ",
@@ -10786,6 +10968,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "عروسک گردونی",
         "گرداندن عروسک",
@@ -10814,6 +10997,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نمایش معرکه‌گیری در کوچه‌های قدیم تهران",
         "معرکه‌گیری در کوچه‌های تهران قدیم",
@@ -10842,6 +11026,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "پرده خوانی",
         "پرده‌خوانی",
@@ -10872,6 +11057,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نمایش چوبی تعزیه",
         "تعزیه چوبی",
@@ -10900,6 +11086,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "حاجی فیروز",
         "حاجی فیروز بازی کردن",
@@ -10927,6 +11114,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نوا تار و تنبور",
         "نوايِ تار و تنبور",
@@ -10957,6 +11145,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نگارگری ایرانی آیینه تمدن است",
         "نگارگری ایرانی آیینه تمدن است که",
@@ -10986,6 +11175,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نگارگری راز آفرینش است",
         "نگارگری، راز آفرینش است",
@@ -11016,6 +11206,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نگارگری شعر تصویری است",
         "نگارگری شعر تصویری می‌باشد",
@@ -11031,6 +11222,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fa.explanation.persian_miniature_art_phrases_نگارگری_گفتگوی_رنگ_ه",
       "id": "fa_cultural_reference_نگارگری_گفتگوی_رنگ_ها_است_5d86bc7e",
+      "is_poetic_citation": true,
       "language": "fa",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11044,6 +11236,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "نگارگری گفتگوی رنگ‌ها است",
         "نگارگری گفتگوی رنگهاست",
@@ -11070,6 +11263,7 @@
       "source_url": "https://en.wikipedia.org/wiki/True_Cross#Byzantine%E2%80%93Sassanid_War",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "هراکلیوس",
         "هرقل",
@@ -11100,6 +11294,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%87%D8%B1%DA%86%D9%87_%D8%A8%D8%A7%D8%AF%D8%A7_%D8%A8%D8%A7%D8%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هرچه بادا باد"
       ]
@@ -11123,6 +11318,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE_%D8%AC%D9%87%D8%A7%D9%86%DA%AF%D8%B4%D8%A7%DB%8C_%D8%AC%D9%88%DB%8C%D9%86%DB%8C",
       "source_work": "تاریخ جهانگشای جوینی",
       "source_work_key": "mnemosyne.fa.work.تاریخ_جهانگشای_جوینی",
+      "subcategory": "historical",
       "surface_patterns": [
         "هلاکوخان و سقوط بغداد در سال ۶۵۶ هجری",
         "هلاکوخان و سقوط بغداد",
@@ -11153,6 +11349,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "سیاه بازی",
         "سیاه‌بازی",
@@ -11212,6 +11409,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "هنر نقالی",
         "نقالی کردن",
@@ -11241,6 +11439,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "کاشی‌کاری مسجد شیخ لطف‌الله",
         "کاشی‌کاری شیخ لطف‌الله",
@@ -11269,6 +11468,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "هنر کوسه گلین",
         "هنر کوسه‌گلین",
@@ -11298,6 +11498,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%87%D9%88%D8%A7%DB%8C_%DA%A9%D8%B3%DB%8C_%D8%B1%D8%A7_%D8%AF%D8%A7%D8%B4%D8%AA%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "هوای کسی را داشتن"
       ]
@@ -11321,6 +11522,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%88%D9%84%D8%B4_%DA%A9%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "ولش کن"
       ]
@@ -11344,6 +11546,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%BE%D8%A7%DA%A9_%D8%AF%D9%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "پاک دل"
       ]
@@ -11399,6 +11602,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "پرده آخر",
         "پرده‌ی آخر",
@@ -11534,6 +11738,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "چشم انداز کوه دماوند",
         "چشم انداز دماوند",
@@ -11563,6 +11768,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "چشم‌هایم برای تو اشک می‌ریخت",
         "چشم‌های من برای تو اشک می‌ریخت",
@@ -11623,6 +11829,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "چنگ و بربط در مجلس شاعران",
         "چنگ و بربط در مجلس شاعران است",
@@ -11652,6 +11859,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "چنگ و بربط و نی",
         "چنگ و بربط و نیِ",
@@ -11711,6 +11919,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "چهاربازی نقالی می‌کرد",
         "چهاربازی نقالی می‌کنه",
@@ -11738,6 +11947,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "چهره‌ها و نقاب‌ها",
         "چهره ها و نقاب ها",
@@ -11838,6 +12048,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "کبوتر غمگین تئاتر",
         "کبوترِ غمگینِ تئاتر",
@@ -11972,6 +12183,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "کودتای ۱۲۹۹",
         "کودتای سوم اسفند",
@@ -12002,6 +12214,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "کودتای ۲۵ مرداد ۱۳۳۲",
         "کودتای ۲۸ مرداد و سرنگونی دولت مصدق",
@@ -12029,6 +12242,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D9%88%D8%A7%D9%86%D9%87_%DA%A9%D9%88%D8%B1%D9%88%D8%B4",
       "source_work": "استوانه کوروش",
       "source_work_key": "mnemosyne.fa.work.استوانه_کوروش",
+      "subcategory": "historical",
       "surface_patterns": [
         "استوانه کوروش",
         "استوانهٔ کوروش",
@@ -12060,6 +12274,7 @@
       "source_url": "https://en.unesco.org/silkroad/content/cyrus-cylinder",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "کوروش کبیر",
         "کوروش بزرگ",
@@ -12089,6 +12304,7 @@
       "source_url": "https://www.iranicaonline.org/articles/alchemy-i",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "کیمیا",
         "کیمیاگری",
@@ -12115,6 +12331,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "گفت و گو در کافه",
         "گفتگو در کافه",
@@ -12145,6 +12362,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گفتار بی زبانی",
         "گفتارِ بی‌زبانی",
@@ -12204,6 +12422,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گم شدن در نقش",
         "در نقش گم شدن",
@@ -12264,6 +12483,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "گوشه‌نشینی درویش در تکیه",
         "تکیه نشینی درویش",
@@ -12293,6 +12513,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گوشه نشینی",
         "گوشه نشینی کردن",
@@ -12320,6 +12541,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%DA%AF%D9%88%D8%B4%D9%87_%DA%86%D8%B4%D9%85",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "گوشه چشم"
       ]
@@ -12343,6 +12565,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_History_of_al-Tabari",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "یزدگرد سوم",
         "یزدگرد",
@@ -12421,6 +12644,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "۲۸ مرداد ۱۳۳۲",
         "کودتای ۲۸ مرداد",
@@ -12848,6 +13072,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "آخرین نفس‌های شیطان",
         "آخرین نفس شیطان",
@@ -13423,6 +13648,7 @@
       "source_url": "https://ganjoor.net/forough/f/poems/ah/",
       "source_work": "آه! اینجا دیگر کسی صدای ناله ما را نمی‌شنود",
       "source_work_key": "mnemosyne.fa.work.آه_اینجا_دیگر_کسی_صدای_ناله_ما_را_نمی_شنود",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "آه! اینجا دیگر کسی صدای ناله ما را نمی‌شنود",
         "آه! اینجا دیگر کسی صدای ناله‌مان را نمی‌شنود",
@@ -13576,6 +13802,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آینه‌های شکسته",
         "آینه شکسته",
@@ -13672,6 +13899,7 @@
       "source_url": "https://fa.wikisource.org/wiki/اسرار_التوحید_فی_مقامات_شیخ_ابوسعید",
       "source_work": "اسرارالتوحید فی مقامات شیخ ابوسعید",
       "source_work_key": "mnemosyne.fa.work.اسرارالتوحید_فی_مقامات_شیخ_ابوسعید",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "اسرارالتوحید",
         "اسرار التوحید",
@@ -14053,6 +14281,7 @@
       "source_license": "public_domain",
       "source_work": "الاشراف علی حقائق الاغراض",
       "source_work_key": "mnemosyne.fa.work.الاشراف_علی_حقائق_الاغراض",
+      "subcategory": "historical",
       "surface_patterns": [
         "الاشراف علی حقائق الاغراض"
       ]
@@ -14132,6 +14361,7 @@
       "source_url": "https://fa.wikisource.org/wiki/الکیمیای_سعادت",
       "source_work": "الکیمیای سعادت",
       "source_work_key": "mnemosyne.fa.work.الکیمیای_سعادت",
+      "subcategory": "historical",
       "surface_patterns": [
         "الکیمیای سعادت",
         "الکیمیاى سعادت"
@@ -14623,6 +14853,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/بوف_کور",
       "source_work": "بوف کور",
       "source_work_key": "mnemosyne.fa.work.بوف_کور",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "بوف کور",
         "بوف‌های کور",
@@ -14652,6 +14883,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/بوف_کور",
       "source_work": "بوف کور",
       "source_work_key": "mnemosyne.fa.work.بوف_کور",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "بوف کور می‌رقصد",
         "بوف کور می رقصد",
@@ -14832,6 +15064,7 @@
       "source_url": "https://fa.wikisource.org/wiki/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE_%D8%AD%DA%A9%D9%85%D8%AA_%D9%88_%D8%AD%DA%A9%D9%85%D8%A7",
       "source_work": "تاریخ حكمت و حكماء",
       "source_work_key": "mnemosyne.fa.work.تاریخ_حكمت_و_حكماء",
+      "subcategory": "historical",
       "surface_patterns": [
         "تاریخ حكمت و حكماء",
         "تاریخ حكمت و حكما",
@@ -14860,6 +15093,7 @@
       "source_url": "https://fa.wikisource.org/wiki/تعلیقات_فارابی",
       "source_work": "تعلیقات فارابی",
       "source_work_key": "mnemosyne.fa.work.تعلیقات_فارابی",
+      "subcategory": "historical",
       "surface_patterns": [
         "تعلیقات فارابی",
         "تعلیقه فارابی"
@@ -14917,6 +15151,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%AA%D9%86%DA%AF%D8%B3%DB%8C%D8%B1",
       "source_work": "تنگسیر",
       "source_work_key": "mnemosyne.fa.work.تنگسیر",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "تنگسیر",
         "تنگ سیر",
@@ -15100,6 +15335,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو که دنیا را به من فروختی، من تو را به دنیا فروختم",
         "تو دنیا را به من فروختی، من تو را به دنیا فروختم",
@@ -15159,6 +15395,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو که می‌گفتی من را می‌شناسی، من تو را نمی‌شناختم",
         "تو می‌گفتی من را می‌شناسی، من تو را نمی‌شناختم",
@@ -15188,6 +15425,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو که نمی‌دانستی من تو را می‌شناسم، من تو را از اول می‌شناختم",
         "تو نمی‌دانستی من تو را می‌شناسم، من تو را از اول می‌شناختم",
@@ -15373,6 +15611,7 @@
       "source_url": "https://wikisource.org/wiki/%D8%AD%D9%83%D9%85%D8%A9_%D8%A7%D9%84%D8%A7%D8%B4%D8%B1%D8%A7%D9%82",
       "source_work": "حکمة الاشراق",
       "source_work_key": "mnemosyne.fa.work.حکمة_الاشراق",
+      "subcategory": "historical",
       "surface_patterns": [
         "حکمةالاشراق",
         "حکمة الاشراق"
@@ -15397,6 +15636,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%AF%D8%B1%D8%B2%D9%86%D8%A7%D9%85%D9%87_%D9%BE%D9%87%D9%84%D9%88%DB%8C",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "حکمت اندرزنامه‌های پهلوی",
         "حکمت اندرزنامه‌های پهلوی است",
@@ -15487,6 +15727,7 @@
       "source_url": "https://wikisource.org/wiki/%D8%A7%D9%84%D8%AD%D9%83%D9%85%D8%A9_%D8%A7%D9%84%D9%85%D8%AA%D8%B9%D8%A7%D9%84%D9%8A%D8%A9_%D9%81%D9%8A_%D8%A7%D9%84%D8%A7%D8%B3%D9%81%D8%A7%D8%B1_%D8%A7%D9%84%D8%B9%D9%82%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%A3%D8%B1%D8%A8%D8%B9%D8%A9",
       "source_work": "الحكمة المتعالية في الأسفار العقلية الأربعة",
       "source_work_key": "mnemosyne.fa.work.الحكمة_المتعالية_في_الأسفار_العقلية_الأربعة",
+      "subcategory": "historical",
       "surface_patterns": [
         "حکمت در آموزه‌های ملاصدرا",
         "حکمت در آموزه ملاصدرا",
@@ -15517,6 +15758,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%A8%D8%A7%DB%8C%D8%A7%D8%B2%DB%8C%D8%AF_%D8%A8%D8%B3%D8%AA%D8%A7%D9%85%DB%8C",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "حکمت بایزید بسطامی",
         "حکمت بسطامی",
@@ -15546,6 +15788,7 @@
       "source_url": "https://wikisource.org/wiki/%D8%B4%D8%B1%D8%AD_%D9%81%D8%B5%D9%88%D8%B5_%D8%A7%D9%84%D8%AD%D9%83%D9%85",
       "source_work": "شرح فصوص الحکم",
       "source_work_key": "mnemosyne.fa.work.شرح_فصوص_الحکم",
+      "subcategory": "historical",
       "surface_patterns": [
         "حکمت در کلام حکیم جرجانی",
         "حکمت در کلام جرجانی",
@@ -15601,6 +15844,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "حکمت مشاء",
         "حکمت مشائی",
@@ -15630,6 +15874,7 @@
       "source_url": "https://wikisource.org/wiki/%D8%A7%D8%B3%D8%A7%D8%B3_%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%A8%D8%A7%D8%B3",
       "source_work": "اساس الاقتباس",
       "source_work_key": "mnemosyne.fa.work.اساس_الاقتباس",
+      "subcategory": "historical",
       "surface_patterns": [
         "حکمت یونانی",
         "حکمتِ یونانی",
@@ -15939,6 +16184,7 @@
       "source_license": "not_required",
       "source_work": " Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "داستان بیداد فر و پسرش",
         "داستون بیداد فر و پسرش",
@@ -16426,6 +16672,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/دلاوران_سنگی",
       "source_work": "دلاورانِ سنگی",
       "source_work_key": "mnemosyne.fa.work.دلاوران_سنگی",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "دلاورانِ سنگی",
         "دلاوران سنگی",
@@ -16455,6 +16702,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "دلاوری‌های پوران‌دخت",
         "دلاوری پوران‌دخت",
@@ -16516,6 +16764,7 @@
       "source_url": "https://fa.wikisource.org/wiki/%D8%B1%D8%B3%D8%A7%D8%A6%D9%84_%D8%A7%D8%AE%D9%88%D8%A7%D9%86%E2%80%8C%D8%A7%D9%84%D8%B5%D9%81%D8%A7",
       "source_work": "رسائل اخوان‌الصفا",
       "source_work_key": "mnemosyne.fa.work.رسائل_اخوان_الصفا",
+      "subcategory": "historical",
       "surface_patterns": [
         "رسائل اخوان الصفاء",
         "رسائل اخوان‌ الصفاء",
@@ -16541,6 +16790,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "رسالتی در علم اخلاق",
         "رسالتی در علم اخلاقی",
@@ -17146,6 +17396,7 @@
       "source_url": "https://ganjoor.net/mtbahar/chaharmagaleh/",
       "source_work": "چهار مقاله",
       "source_work_key": "mnemosyne.fa.work.چهار_مقاله",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "سایه وقت بر دل‌های خفته می‌گذرد",
         "سایه وقت بر دلهای خفته می‌گذرد",
@@ -17732,6 +17983,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/شازده_احتجاب",
       "source_work": "شازده احتجاب",
       "source_work_key": "mnemosyne.fa.work.شازده_احتجاب",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "شازده احتجاب",
         "شازده‌ی احتجاب",
@@ -17851,6 +18103,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/شبیخون",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "شبیخون",
         "شبیخون زدن",
@@ -17882,6 +18135,7 @@
       "source_url": "https://wikisource.org/wiki/%D8%B4%D8%B1%D8%AD_%D8%A7%D9%84%D8%A7%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA_%D9%88%D8%A7%D9%84%D8%AA%D9%86%D8%A8%D9%8A%D9%87%D8%A7%D8%AA",
       "source_work": "شرح الاشارات والتنبيهات",
       "source_work_key": "mnemosyne.fa.work.شرح_الاشارات_والتنبيهات",
+      "subcategory": "historical",
       "surface_patterns": [
         "شرح اشارات"
       ]
@@ -17932,6 +18186,7 @@
       "source_url": "https://fa.wikisource.org/wiki/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%A7%D9%84%D8%B4%D9%81%D8%A7",
       "source_work": "كتاب الشفاء",
       "source_work_key": "mnemosyne.fa.work.كتاب_الشفاء",
+      "subcategory": "historical",
       "surface_patterns": [
         "كتاب الشفاء",
         "كتاب الشفا",
@@ -18032,6 +18287,7 @@
       "source_location": "Dīvān of Hafez, Golestan of Saadi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "hafez",
       "surface_patterns": [
         "شمع شبانه",
         "شمعِ شبانه",
@@ -18123,6 +18379,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/شیرزن",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "شیرزن",
         "شیرِ زن",
@@ -18209,6 +18466,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Shirin_and_Farhad",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "شیرین و فرهاد داستان عشق بی‌نهایت است",
         "داستان شیرین و فرهاد عشق بی‌نهایتی است",
@@ -18480,6 +18738,7 @@
       "source_location": "Works of Nezami, Sanai",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "عروسک‌های خیال",
         "عروسک‌هایِ خیال",
@@ -18568,6 +18827,7 @@
       "source_url": "https://de.wikipedia.org/wiki/Die_verlorene_Ehre_der_Katharina_Blum",
       "source_work": "Die verlorene Ehre der Katharina Blum oder: Wie Gewalt entstehen und wohin sie führen kann",
       "source_work_key": "mnemosyne.fa.work.die_verlorene_ehre_der_katharina_blum_oder_wie_gew",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "عقاید یک آلمانی",
         "عقاید آلمانی",
@@ -18597,6 +18857,7 @@
       "source_url": "https://en.wikipedia.org/wiki/The_Clown_(novel)",
       "source_work": "Ansichten eines Clowns",
       "source_work_key": "mnemosyne.fa.work.ansichten_eines_clowns",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "عقاید یک دلقک",
         "عقاید دلقک",
@@ -18719,6 +18980,7 @@
       "source_url": "https://wikisource.org/wiki/%D8%AC%D8%A7%D9%85%D8%B9_%D8%A7%D9%84%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1_%D9%88_%D9%85%D9%86%D8%A8%D8%B9_%D8%A7%D9%84%D8%A3%D9%86%D9%88%D8%A7%D8%B1",
       "source_work": "جامع الأسرار و منبع الأنوار",
       "source_work_key": "mnemosyne.fa.work.جامع_الأسرار_و_منبع_الأنوار",
+      "subcategory": "historical",
       "surface_patterns": [
         "عقل و نفس در آثار حکیم آملی",
         "عقل و نفس در آثار آملی",
@@ -18750,6 +19012,7 @@
       "source_url": "https://wikisource.org/wiki/%D9%85%D9%81%D8%A7%D8%AA%D9%8A%D8%AD_%D8%A7%D9%84%D8%BA%D9%8A%D8%A8",
       "source_work": "مفاتيح الغيب",
       "source_work_key": "mnemosyne.fa.work.مفاتيح_الغيب",
+      "subcategory": "historical",
       "surface_patterns": [
         "عقل و نفس در آثار حکیم قونوی",
         "عقل و نفس در آثار قونوی",
@@ -18779,6 +19042,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "عقل و نفس در آثار قاضی سعید قمی",
         "عقل و نفس قاضی سعید قمی",
@@ -18806,6 +19070,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "عقل و نفس در حکمت اشراق",
         "عقل و نفس در حکمت اشراق سهروردی",
@@ -19237,6 +19502,7 @@
       "source_license": "public_domain",
       "source_work": "فنون افلوطین",
       "source_work_key": "mnemosyne.fa.work.فنون_افلوطین",
+      "subcategory": "historical",
       "surface_patterns": [
         "فنون افلوطین",
         "فنون افلاطون",
@@ -19268,6 +19534,7 @@
       "source_url": "https://fa.wikisource.org/wiki/%D9%82%D8%A7%D9%86%D9%88%D9%86_%D9%81%DB%8C_%D8%A7%D9%84%D8%B7%D8%A8",
       "source_work": "قانون في الطب",
       "source_work_key": "mnemosyne.fa.work.قانون_في_الطب",
+      "subcategory": "historical",
       "surface_patterns": [
         "قانون في الطب",
         "قانون الطب",
@@ -19448,6 +19715,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "مرد و سگ",
         "مرد و سگِ",
@@ -19575,6 +19843,7 @@
       "source_url": "https://ganjoor.net/jamalzadeh/",
       "source_work": "مردی که در جستجوی خود بود",
       "source_work_key": "mnemosyne.fa.work.مردی_که_در_جستجوی_خود_بود",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "مردی که در جستجوی خود بود",
         "مردی در جستجوی خود",
@@ -19635,6 +19904,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "مردی که می‌خندید",
         "مردی که می‌خند",
@@ -19669,6 +19939,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "مردی که گم شده بود",
         "مرد گم شده",
@@ -19697,6 +19968,7 @@
       "source_url": "https://fa.wikisource.org/wiki/مقاصد_الفلاسفه",
       "source_work": "مقاصد الفلاسفه",
       "source_work_key": "mnemosyne.fa.work.مقاصد_الفلاسفه",
+      "subcategory": "historical",
       "surface_patterns": [
         "مقاصدالفلاسفه",
         "مقاصد الفلاسفه"
@@ -19870,6 +20142,7 @@
       "source_license": "public_domain",
       "source_work": "مکاتیب عرفا",
       "source_work_key": "mnemosyne.fa.work.مکاتیب_عرفا",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "مکاتیب عرفا"
       ]
@@ -20205,6 +20478,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "نمایش در نقش سلطان مارک و تریستان",
         "نمایش نقش سلطان مارک و تریستان",
@@ -20583,6 +20857,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/پیرمرد_و_دریا",
       "source_work": "The Old Man and the Sea",
       "source_work_key": "mnemosyne.fa.work.the_old_man_and_the_sea",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "پیرمرد و دریا",
         "پیرمرد و دریای",
@@ -20642,6 +20917,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/بوف_کور",
       "source_work": "بوف کور",
       "source_work_key": "mnemosyne.fa.work.بوف_کور",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "چشمهایش",
         "چشمانِ او",
@@ -21275,6 +21551,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "کتاب آقای کافکا",
         "کتاب آقای کافکا را خواندم",
@@ -21309,6 +21586,7 @@
       "source_url": "https://fa.wikisource.org/wiki/کتاب_اخلاق_ناصری",
       "source_work": "کتاب اخلاق ناصری",
       "source_work_key": "mnemosyne.fa.work.کتاب_اخلاق_ناصری",
+      "subcategory": "historical",
       "surface_patterns": [
         "کتاب اخلاق ناصری",
         "اخلاق ناصری",
@@ -22031,6 +22309,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "گنجینه‌های خشم",
         "گنجینه خشم"
@@ -22121,6 +22400,7 @@
       "source_url": "https://ganjoor.net/tarikh-tabari/",
       "source_work": "تاریخ طبری",
       "source_work_key": "mnemosyne.fa.work.تاریخ_طبری",
+      "subcategory": "historical",
       "surface_patterns": [
         "آخرین پادشاه ساسانی",
         "یزدگرد سوم و سقوط امپراتوری ساسانی",
@@ -23309,6 +23589,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "آشی به کف دستت داغ نکن",
         "آشی به کف دست داغ نکن",
@@ -24557,6 +24838,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "برای تو حتی کفش نپوشیدی اما من برای تو کفش دوختم",
         "برای تو حتی کفش نپوشیدی من برای تو کفش دوختم",
@@ -24939,6 +25221,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو که آمدی من که رفتم",
         "تو که اومدی من که رفتم",
@@ -24966,6 +25249,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو که دروغ می‌گفتی من تو را باور کردم",
         "تو دروغ می‌گفتی من تو را باور کردم",
@@ -24994,6 +25278,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو که دروغ می‌گفتی من که راست می‌گفتم",
         "تو دروغ می‌گفتی من راست می‌گفتم",
@@ -25021,6 +25306,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "تو که مرا نخوردی من تو را خوردم",
         "تو منو نخوردی من تو رو خوردم",
@@ -25282,6 +25568,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "خون به جگر داشتن",
         "خون به جگر داشت",
@@ -28248,6 +28535,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fa.work.various",
+      "subcategory": "persian_proverb",
       "surface_patterns": [
         "چشم چپ کسی را زدن",
         "چشم چپ کسیو زدن",

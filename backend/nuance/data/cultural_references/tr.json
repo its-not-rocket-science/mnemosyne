@@ -103,6 +103,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Fasl_al-Maq%C4%81l",
       "source_work": "Fasl al-Maqāl fīmā bayna al-Ḥikma wa-al-Sharīʿa min al-Ittisāl",
       "source_work_key": "mnemosyne.tr.work.fasl_al_maqāl_fīmā_bayna_al_ḥikma_wa_al_sharīʿa_mi",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "akıl nuru",
         "aklın nuru",
@@ -139,6 +140,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "akıl-ı faal",
         "akıl-ı faali kullanmak",
@@ -390,6 +392,7 @@
       "source_url": "https://quran.com/18/23-24",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "Allah'ın izniyle",
         "Allah'ın izniyle olmak",
@@ -677,6 +680,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Aristo'nun etiği",
         "Aristo'nun etik anlayışı",
@@ -977,6 +981,7 @@
       "source_url": "https://www.risaleinurenstitusu.org",
       "source_work": "Risale-i Nur",
       "source_work_key": "mnemosyne.tr.work.risale_i_nur",
+      "subcategory": "historical",
       "surface_patterns": [
         "Risale-i Nur",
         "Risale-i Nur'u",
@@ -1057,6 +1062,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Orkhon_inscriptions",
       "source_work": "Orkhon inscriptions",
       "source_work_key": "mnemosyne.tr.work.orkhon_inscriptions",
+      "subcategory": "historical",
       "surface_patterns": [
         "Bilge Kağan",
         "Bilge Kağan yazıtı"
@@ -1492,6 +1498,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Mesnevi_(Rumi)",
       "source_work": "Mesnevi",
       "source_work_key": "mnemosyne.tr.work.mesnevi",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "Dervişin neyi",
         "Dervişin neyini",
@@ -1605,6 +1612,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical accounts",
       "source_work_key": "mnemosyne.tr.work.various_historical_accounts",
+      "subcategory": "historical",
       "surface_patterns": [
         "Ebu Müslim",
         "Ebu Müslim Horasani",
@@ -1816,6 +1824,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Epicurus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "greek_mythology",
       "surface_patterns": [
         "Epikuros’un hazzın felsefesi",
         "Epikuros’un hazzın felsefesini",
@@ -1946,6 +1955,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Al-Farabi",
       "source_work": "Felsefe Politikası",
       "source_work_key": "mnemosyne.tr.work.felsefe_politikası",
+      "subcategory": "historical",
       "surface_patterns": [
         "Erdemli Devlet",
         "Erdemli Devleti",
@@ -2232,6 +2242,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Dialectic",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Hegel’in diyalektiği",
         "Hegel’in diyalektiğini",
@@ -2914,6 +2925,7 @@
       "source_url": "https://en.wikipedia.org/wiki/The_Canon_of_Medicine",
       "source_work": "The Canon of Medicine",
       "source_work_key": "mnemosyne.tr.work.the_canon_of_medicine",
+      "subcategory": "historical",
       "surface_patterns": [
         "İbni Sina",
         "İbn-i Sina",
@@ -2983,6 +2995,7 @@
       "source_license": "public_domain",
       "source_work": "İhyâ-u Ulûmi'd-Dîn",
       "source_work_key": "mnemosyne.tr.work.i_hyâ_u_ulûmi_d_dîn",
+      "subcategory": "historical",
       "surface_patterns": [
         "İmam Gazali",
         "Gazali",
@@ -3027,6 +3040,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.tr.explanation.sufi_concepts_i_nsan_ı_kâmil_mevlana_celâleddin_i_",
       "id": "tr_classical_or_scriptural_allusion_i_nsan_ı_kâmil_mevlana_celâleddin_i_rûmî_da9827e8",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3040,6 +3054,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Mesnevi",
       "source_work": "Mesnevi",
       "source_work_key": "mnemosyne.tr.work.mesnevi",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "İnsan-ı kâmil",
         "İnsan-ı kâmil olmak",
@@ -3057,6 +3072,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.tr.explanation.mevlana_insan_i_kamil_i_nsan_ı_kâmil_olma_yolunda_",
       "id": "tr_classical_or_scriptural_allusion_i_nsan_ı_kâmil_olma_yolunda_nefsiyle_mücadele_mevlana_nın_me_596a0b7d",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3069,6 +3085,7 @@
       "source_license": "public_domain",
       "source_work": "Mesnevi, Fihi Ma Fih",
       "source_work_key": "mnemosyne.tr.work.mesnevi_fihi_ma_fih",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "insan-ı kâmil",
         "insan-ı kâmil olmak",
@@ -3559,6 +3576,7 @@
       "source_url": "https://quran.com/31",
       "source_work": "Quran (Surah Luqman)",
       "source_work_key": "mnemosyne.tr.work.quran_surah_luqman",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Lokman Hekim",
         "Lokman",
@@ -3602,6 +3620,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.tr.explanation.ibn_sina_kanun_phrases_madde_ve_ruhun_birliği_i_bn",
       "id": "tr_classical_or_scriptural_allusion_madde_ve_ruhun_birliği_i_bn_i_sina_nın_el_kanun_fi_t_tıbb_es_f44e99e8",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3615,6 +3634,7 @@
       "source_url": "https://tr.wikisource.org/wiki/El-Kanun_fi%27t-T%C4%B1bb",
       "source_work": "El-Kanun fi't-Tıbb",
       "source_work_key": "mnemosyne.tr.work.el_kanun_fi_t_tıbb",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "madde ve ruhun birliği",
         "madde ve ruhun birliğini",
@@ -3799,6 +3819,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Seyahatnâme",
       "source_work": "Seyahatnâme",
       "source_work_key": "mnemosyne.tr.work.seyahatnâme",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "Mihracenin nağmesi",
         "Mihracenin nağmesini",
@@ -3945,6 +3966,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.tr.explanation.ghazali_ihya_phrases_nefsin_mertebeleri_gazap_ve_ş",
       "id": "tr_classical_or_scriptural_allusion_nefsin_mertebeleri_gazap_ve_şehvetin_güdümünden_kurtuluş_gaz_5532d0f6",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3958,6 +3980,7 @@
       "source_url": "https://tr.wikisource.org/wiki/%C4%B0hy%C3%A2-u_%C3%9Cl%C3%BBm_id-D%C4%B1n",
       "source_work": "İhya-u Ulumiddin",
       "source_work_key": "mnemosyne.tr.work.i_hya_u_ulumiddin",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "nefsin mertebeleri",
         "nefsin mertebelerini",
@@ -4659,6 +4682,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "teslis",
         "teslisi",
@@ -4965,6 +4989,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "quranic",
       "surface_patterns": [
         "varlık-ı mutlak",
         "varlığın mutlaklığı",
@@ -5174,6 +5199,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.tr.explanation.hallac_manzur_enel_hak_phrases_zaman_ve_mekân_ötes",
       "id": "tr_classical_or_scriptural_allusion_zaman_ve_mekân_ötesi_birlik_hallac_ı_mansur_un_en_el_hak_söz_dc7eaaf3",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5187,6 +5213,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Hallac-ı_Mansur",
       "source_work": "Various (oral tradition)",
       "source_work_key": "mnemosyne.tr.work.various_oral_tradition",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "En-el Hak",
         "En-el Hak'tır",
@@ -5317,6 +5344,7 @@
       "source_url": "https://archive.org/details/avicennas-shifa-1952",
       "source_work": "Al-Shifa (The Cure)",
       "source_work_key": "mnemosyne.tr.work.al_shifa_the_cure",
+      "subcategory": "quranic",
       "surface_patterns": [
         "zorunlu varlık",
         "zorunlu varlığı tanımlamak",
@@ -5409,6 +5437,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "12 Eylül Darbesi",
         "12 Eylül Darbesi’nin",
@@ -5714,6 +5743,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "1960 Askeri Darbesi",
         "27 Mayıs",
@@ -5892,6 +5922,7 @@
       "source_url": "https://tr.wikisource.org/wiki/31_Mart_Vakası",
       "source_work": "Osmanlı Meclis-i Mebusan zabıtları ve gazeteler",
       "source_work_key": "mnemosyne.tr.work.osmanlı_meclis_i_mebusan_zabıtları_ve_gazeteler",
+      "subcategory": "historical",
       "surface_patterns": [
         "31 Mart Vakası bastırılması",
         "31 Mart Vakası'nın bastırılması",
@@ -5927,6 +5958,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/6-7_Eyl%C3%BCl_Olaylar%C4%B1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "6-7 Eylül Olayları",
         "6-7 Eylül Olayları’nı",
@@ -5979,6 +6011,7 @@
       "source_license": "public_domain",
       "source_work": "Various Ottoman state documents",
       "source_work_key": "mnemosyne.tr.work.various_ottoman_state_documents",
+      "subcategory": "historical",
       "surface_patterns": [
         "Abdülhamid",
         "Abdülhamid’in",
@@ -6382,6 +6415,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Tanburi_Cemil_Bey",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "music",
       "surface_patterns": [
         "ahenk içinde olmak",
         "ahenk içinde",
@@ -6802,6 +6836,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.tr.explanation.islamic_prayers_phrases_allah_kabul_etsin_amin",
       "id": "tr_cultural_reference_allah_kabul_etsin_amin_6376e74e",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6815,6 +6850,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Allah kabul etsin, amin",
         "Allah kabul etsin, âmin",
@@ -6915,6 +6951,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.tr.explanation.islamic_phrases_rizasi_allah_rızası_için",
       "id": "tr_cultural_reference_allah_rızası_için_8c201de4",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -6928,6 +6965,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Allah rızası için",
         "Allah rızası için yapmak",
@@ -7239,6 +7277,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Arap atı gibi burun kıvırmak",
         "burun kıvırmak",
@@ -7418,6 +7457,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "aslan yürekli",
         "aslan yüreği",
@@ -7455,6 +7495,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Atatürk",
         "Mustafa Kemal Atatürk",
@@ -7487,6 +7528,7 @@
       "source_url": "https://www.resmigazete.gov.tr/eskiler/1934/06/19340621-1.htm",
       "source_work": "Soyadı Kanunu",
       "source_work_key": "mnemosyne.tr.work.soyadı_kanunu",
+      "subcategory": "historical",
       "surface_patterns": [
         "soyadı almak",
         "Atatürk’ün soyadını alması",
@@ -7650,6 +7692,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Ayasofya",
         "Ayasofya Camii",
@@ -7675,6 +7718,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ayranı ekşi diye",
         "Ayran ekşi diye",
@@ -7714,6 +7758,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ayvayı yemek",
         "ayvayı yedi"
@@ -8473,6 +8518,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Beşiktaşlı Yahya Efendi",
         "Yahya Efendi"
@@ -8892,6 +8938,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Boğaziçi",
         "Boğaziçi Üniversitesi",
@@ -9001,6 +9048,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical chronicles",
       "source_work_key": "mnemosyne.tr.work.various_historical_chronicles",
+      "subcategory": "historical",
       "surface_patterns": [
         "Bursa",
         "Bursa şehri",
@@ -9122,6 +9170,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Büyük Taarruz",
         "Büyük Taarruz’un",
@@ -9206,6 +9255,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Camdan bakıp aynaya geçmek",
         "Camdan bakıp aynaya geçmek metaforu",
@@ -9500,6 +9550,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "atassözü",
       "surface_patterns": [
         "Canım burnuma geldi",
         "Canım burnuma gelmiş",
@@ -9554,6 +9605,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Celali_İsyanları",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Celali İsyanları",
         "Celali İsyanları'nın",
@@ -9583,6 +9635,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "ottoman_literature",
       "surface_patterns": [
         "Cem Sultan",
         "Cem"
@@ -9674,6 +9727,7 @@
       "source_license": "public_domain",
       "source_work": "Cin Ali series",
       "source_work_key": "mnemosyne.tr.work.cin_ali_series",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Cin Ali",
         "Cin Ali kitapları"
@@ -9806,6 +9860,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Cumhuriyet",
         "Cumhuriyet'in",
@@ -9837,6 +9892,7 @@
       "source_url": "https://www.tbmm.gov.tr/kanunlar/k5982.html",
       "source_work": "Türkiye Cumhuriyeti Anayasası",
       "source_work_key": "mnemosyne.tr.work.türkiye_cumhuriyeti_anayasası",
+      "subcategory": "historical",
       "surface_patterns": [
         "Cumhuriyet’in ilan edilmesi",
         "Cumhuriyet’in 29 Ekim 1923 tarihinde ilan edilmesi",
@@ -9864,6 +9920,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/T%C3%BCrkiye_Cumhuriyeti%27nin_kurulu%C5%9Fu",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Cumhuriyet’in ilanı",
         "Cumhuriyet’in ilanını",
@@ -9894,6 +9951,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Cumhuriyet’in sanat dili",
         "Cumhuriyet’in sanat dilini",
@@ -10066,6 +10124,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Hammamizade_%C4%B0smail_Dede_Efendi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Dede Efendi’nin hicaz makamında bestelediği Segâh Peşrev",
         "Dede Efendi’nin Segâh Peşrev’i",
@@ -10095,6 +10154,7 @@
       "source_license": "public_domain",
       "source_work": "Segâh Peşrev",
       "source_work_key": "mnemosyne.tr.work.segâh_peşrev",
+      "subcategory": "music",
       "surface_patterns": [
         "Segâh Peşrev",
         "Segâh Peşrev'i",
@@ -10125,6 +10185,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Karagöz_ve_Hacivat",
       "source_work": "Karagöz ve Hacivat",
       "source_work_key": "mnemosyne.tr.work.karagöz_ve_hacivat",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Deli Dumrul",
         "Deli Dumrul'un",
@@ -10451,6 +10512,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "dolap beygiri",
         "dolap beygiri gibi",
@@ -10635,6 +10697,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Dumlupınar",
         "Dumlupınar'da",
@@ -10736,6 +10799,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "dünyanın direği",
         "dünyanın direği olmak",
@@ -10853,6 +10917,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical chronicles",
       "source_work_key": "mnemosyne.tr.work.various_historical_chronicles",
+      "subcategory": "historical",
       "surface_patterns": [
         "Edirne",
         "Edirne şehri",
@@ -10900,6 +10965,7 @@
       "source_license": "public_domain",
       "source_work": "Keloğlan masalları",
       "source_work_key": "mnemosyne.tr.work.keloğlan_masalları",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "masallarının",
         "tiyatroya uyarlanması",
@@ -10925,6 +10991,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ejderha avcısı",
         "Ejderha avcısı olmak",
@@ -11254,6 +11321,7 @@
       "source_license": "public_domain",
       "source_work": "Quran / Islamic tradition",
       "source_work_key": "mnemosyne.tr.work.quran_islamic_tradition",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Elif",
         "Elif gibi",
@@ -11409,6 +11477,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Ertuğrul Gazi",
         "Ertuğrul Bey",
@@ -11504,6 +11573,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Evliya_%C3%87elebi",
       "source_work": "Seyahatname",
       "source_work_key": "mnemosyne.tr.work.seyahatname",
+      "subcategory": "ottoman_literature",
       "surface_patterns": [
         "Evliya Çelebi",
         "Evliya"
@@ -11552,6 +11622,7 @@
       "source_url": "https://tr.wikisource.org/wiki/T%C3%BCrk_Musiki_Beste_ve_Na%C4%9Fmeleri",
       "source_work": "Türk Musikisi Beste ve Nağmeleri",
       "source_work_key": "mnemosyne.tr.work.türk_musikisi_beste_ve_nağmeleri",
+      "subcategory": "music",
       "surface_patterns": [
         "Türk Musikisi",
         "Türk Musikisini",
@@ -11630,6 +11701,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "Eşrefoğlu Rumi",
         "Eşrefoğlu",
@@ -11678,6 +11750,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/%C4%B0stanbul%27un_Fethi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "29 Mayıs 1453",
         "1453 yılının 29 Mayıs’ı",
@@ -11774,6 +11847,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Fetihnâme-i_Sultan_Mehmed_Han",
       "source_work": "Fetihnâme-i Sultan Mehmed Han",
       "source_work_key": "mnemosyne.tr.work.fetihnâme_i_sultan_mehmed_han",
+      "subcategory": "historical",
       "surface_patterns": [
         "Fatih Sultan Mehmed gemileri karadan yürütmesi",
         "Fatih Sultan Mehmed gemileri karadan yürütür",
@@ -11821,6 +11895,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Fatih Sultan Mehmet",
         "Fatih",
@@ -11847,6 +11922,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Faz%C4%B1l_Ahmed_Pa%C5%9Fa",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Fazıl Ahmed Paşa",
         "Fazıl Ahmed Paşa'nın",
@@ -11878,6 +11954,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Suzidilara Senfonisi bestelemek",
         "Suzidilara Senfonisi'yle tanınmak",
@@ -12066,6 +12143,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Galata Kulesi",
         "Galata Tower",
@@ -12127,6 +12205,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "gel zaman git zaman",
         "gel zaman, git zaman"
@@ -13152,6 +13231,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Gülpınar",
         "Gülpınar’ın",
@@ -13236,6 +13316,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "Hacivat",
         "Hacivat ve Karagöz"
@@ -13260,6 +13341,7 @@
       "source_license": "not_required",
       "source_work": "Karagöz ve Hacivat",
       "source_work_key": "mnemosyne.tr.work.karagöz_ve_hacivat",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Hacivat'ın",
         "Hacivat'a",
@@ -13287,6 +13369,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Hac%C4%B1_Arif_Be",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Hacı Arif Bey",
         "Hacı Arif Bey'in",
@@ -13428,6 +13511,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "haddini bilmek",
         "haddini bil",
@@ -13510,6 +13594,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "Hafız Post",
         "Hafız Post’un",
@@ -13543,6 +13628,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Haf%C4%B1z_Post",
       "source_work": "Nihavend Peşrev",
       "source_work_key": "mnemosyne.tr.work.nihavend_peşrev",
+      "subcategory": "music",
       "surface_patterns": [
         "Nihavend Peşrev",
         "Nihavend Peşrevi",
@@ -13704,6 +13790,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "halk resminin can damarı",
         "halk resminin can damarını",
@@ -14070,6 +14157,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Hünkar beğenmesin mi?",
         "Hünkar beğenmesin",
@@ -14098,6 +14186,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/III._Selim",
       "source_work": "Hünkar’ın Beste’si",
       "source_work_key": "mnemosyne.tr.work.hünkar_ın_beste_si",
+      "subcategory": "music",
       "surface_patterns": [
         "hünkar beğensin",
         "hünkar beğensinler",
@@ -14142,6 +14231,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "iki başlı kartal",
         "çift başlı kartal"
@@ -14217,6 +14307,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "ilkbahar",
         "bahar",
@@ -14309,6 +14400,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "İsmail Dede Efendi",
         "İsmail Dede Efendi’nin",
@@ -14339,6 +14431,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/%C4%B0smet_%C4%B0n%C3%B6n%C3%BC",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "İsmet İnönü",
         "İsmet İnönü'nün",
@@ -14384,6 +14477,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "İstanbul",
         "İstanbul'da",
@@ -14411,6 +14505,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Hoca_Ali_R%C4%B1za",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "İstanbul resimleri",
         "İstanbul resimlerini",
@@ -14452,6 +14547,7 @@
       "source_license": "public_domain",
       "source_work": "Historical fact",
       "source_work_key": "mnemosyne.tr.work.historical_fact",
+      "subcategory": "historical",
       "surface_patterns": [
         "İstanbul'u alan Fatih'tir",
         "Fatih İstanbul'u aldı",
@@ -14489,6 +14585,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "İstanbul'un Fethi",
         "Feth-i İstanbul",
@@ -14518,6 +14615,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Ayasofya'nın camiye çevrilmesi",
         "Ayasofya'nın camiye dönüştürülmesi",
@@ -14641,6 +14739,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "1908 Devrimi",
         "1908 Devrimi'nin sonucu",
@@ -14672,6 +14771,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "İzlenimciliğin Türk yorumu",
         "izlenimciliğin Türk yorumunu",
@@ -14715,6 +14815,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "İzmir'in kızları",
         "İzmir kızları"
@@ -14993,6 +15094,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/II._Mahmut",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "II. Mahmut",
         "II. Mahmut'un",
@@ -15417,6 +15519,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "kabare",
         "kabareler",
@@ -15652,6 +15755,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kahramanmaraş",
         "Maraş",
@@ -15805,6 +15909,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kanuni Sultan Süleyman",
         "Kanuni",
@@ -15831,6 +15936,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Kanuni_Sultan_S%C3%BCleyman",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kanuni Sultan Süleyman’ın saltanatı",
         "1520-1566 yılları",
@@ -15860,6 +15966,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Matrakçı_Nasuh_-_Süleymannâme",
       "source_work": "Matrakçı Nasuh’un *Süleymannâme* ve Osmanlı vakayinameleri",
       "source_work_key": "mnemosyne.tr.work.matrakçı_nasuh_un_süleymannâme_ve_osmanlı_vakayina",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kanuni Sultan Süleyman Macaristan seferleri",
         "Kanuni Sultan Süleyman'ın Macaristan seferleri",
@@ -15926,6 +16033,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Kanunî’nin saltanatında bestelediği",
         "Kanunî’nin bestelediği Hicaz Peşrev",
@@ -15954,6 +16062,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kanunî Sultan Süleyman",
         "Kanunî'yi getirdim",
@@ -16110,6 +16219,7 @@
       "source_license": "not_required",
       "source_work": "Karagöz ve Hacivat",
       "source_work_key": "mnemosyne.tr.work.karagöz_ve_hacivat",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Karagöz",
         "Karagöz'ün",
@@ -16164,6 +16274,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Karag%C3%B6z_ve_Hacivat",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Karagöz’ü",
         "Karagöz’de",
@@ -16237,6 +16348,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kardeş kanı",
         "kardeş kanı dökme",
@@ -16434,6 +16546,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Ortaoyunu",
       "source_work": "Various (Ortaoyunu tradition)",
       "source_work_key": "mnemosyne.tr.work.various_ortaoyunu_tradition",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kavuklu ile Pişekâr",
         "Kavuklu'yu ve Pişekâr'ı",
@@ -16476,6 +16589,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kayseri",
         "Kayseri'de",
@@ -16639,6 +16753,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "olmaz olmaz",
         "olmaz olmaz mantığı",
@@ -16669,6 +16784,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Keloğlan’ın",
         "akıllı",
@@ -16695,6 +16811,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Kelo%C4%9Flan",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "akıllı ve kurnaz",
         "akıllılığı ve kurnazlığı",
@@ -16720,6 +16837,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Keloğlan hayvan dostları",
         "Keloğlan hayvan dostlarını",
@@ -16747,6 +16865,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Keloğlan kadın erkek eşitliği",
         "Keloğlan kadın erkek eşitliğini",
@@ -16775,6 +16894,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "sırtındaki",
         "sırtındaki kambur",
@@ -16802,6 +16922,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Keloğlan zengin olma hayalleri",
         "Keloğlan zengin olma hayallerini",
@@ -16831,6 +16952,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Z%C3%BCb%C3%BCk",
       "source_work": "Zübük",
       "source_work_key": "mnemosyne.tr.work.zübük",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kemal Sunal",
         "Kemal Sunal’ın",
@@ -16988,6 +17110,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "klasik beste",
         "klasik bestemiz",
@@ -17046,6 +17169,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Klasik Türk müziğinin incisi",
         "klasik Türk müziğinin incisini",
@@ -17451,6 +17575,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kurtuluş Savaşı",
         "Kurtuluş Savaşı'nda",
@@ -17476,6 +17601,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Keloğlan tipi"
       ]
@@ -17560,6 +17686,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Kuyruklu_Yıldız_Altında_Bir_İzdivaç",
       "source_work": "Kuyruklu Yıldız Altında Bir İzdivaç",
       "source_work_key": "mnemosyne.tr.work.kuyruklu_yıldız_altında_bir_i_zdivaç",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "kuyruklu yıldız",
         "kuyrukluyıldız",
@@ -17587,6 +17714,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kuş dilini bilenler",
         "kuş dilini bilen",
@@ -17627,6 +17755,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kâtip Çelebi",
         "Katip Çelebi",
@@ -17664,6 +17793,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Köse Mihal",
         "Mihal Bey",
@@ -17701,6 +17831,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Köy Enstitüleri",
         "Köy Enstitüsü"
@@ -17749,6 +17880,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.tr.explanation.esari_kelam_irade_külli_irade_ve_cüz_i_irade_tartı",
       "id": "tr_cultural_reference_külli_irade_ve_cüz_i_irade_tartışması_i_slam_felsefesi_ve_eş_0839510a",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17762,6 +17894,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "külli irade",
         "cüz'i irade",
@@ -17918,6 +18051,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical chronicles",
       "source_work_key": "mnemosyne.tr.work.various_historical_chronicles",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kılıçarslan",
         "Kılıç Arslan",
@@ -17955,6 +18089,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "kırk gün kırk gece",
         "kırk gün kırk gece süren",
@@ -18045,6 +18180,7 @@
       "source_url": "https://www.kirkpinar.gov.tr/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kırkpınar",
         "Kırkpınar yağlı güreşleri",
@@ -18141,6 +18277,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "kısmetin açık olsun",
         "kısmeti açık olsun",
@@ -18202,6 +18339,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kız Kulesi",
         "Maiden's Tower",
@@ -18356,6 +18494,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Lale Devri",
         "Lale Devri (dönem)"
@@ -18416,6 +18555,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Latife_Han%C4%B1m",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Latife Hanım",
         "Latife Hanım'ın",
@@ -18549,6 +18689,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Leyla_Gencer",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Norma operası",
         "Norma operasında",
@@ -18592,6 +18733,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "leylek ömrü",
         "leylek ömrü gibi"
@@ -18615,6 +18757,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "Leyleğin getirdiği bebek",
         "leylekten bebek",
@@ -18654,6 +18797,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Lozan Antlaşması",
         "Lozan Barış Antlaşması",
@@ -18697,6 +18841,7 @@
       "source_license": "public_domain",
       "source_work": "Maden",
       "source_work_key": "mnemosyne.tr.work.maden",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Maden",
         "Maden (roman)"
@@ -18733,6 +18878,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical chronicles",
       "source_work_key": "mnemosyne.tr.work.various_historical_chronicles",
+      "subcategory": "historical",
       "surface_patterns": [
         "Malazgirt",
         "Malazgirt Savaşı",
@@ -18770,6 +18916,7 @@
       "source_license": "public_domain",
       "source_work": "Manas Destanı",
       "source_work_key": "mnemosyne.tr.work.manas_destanı",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Manas",
         "Manas Destanı",
@@ -18850,6 +18997,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mardin",
         "Mardin taşı",
@@ -18866,6 +19014,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.tr.explanation.yunus_emre_haci_bektas_phrases_marifetullah_yolund",
       "id": "tr_cultural_reference_marifetullah_yolunda_aklın_ve_kalbin_dili_yunus_emre_ve_hacı_6dca05df",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18879,6 +19028,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "marifetullah yolunda aklın ve kalbin dili",
         "marifetullah yolunda aklın ve kalbin dilini",
@@ -18908,6 +19058,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "masal padişahı",
         "masal padişahını",
@@ -18937,6 +19088,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "Mavi boncuk motifi",
         "Mavi boncuğun sembolü",
@@ -19098,6 +19250,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Mehmet Akif Ersoy",
         "Mehmet Akif",
@@ -19173,6 +19326,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mermer ustasının dili",
         "mermer ustasının dilini",
@@ -19309,6 +19463,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mimar Sinan",
         "Sinan",
@@ -19427,6 +19582,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "minyatürün altın çağı",
         "minyatürün altın çağını",
@@ -19617,6 +19773,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical accounts",
       "source_work_key": "mnemosyne.tr.work.various_historical_accounts",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mustafa Kemal Atatürk’ün",
         "Mustafa Kemal Atatürk’ü",
@@ -19679,6 +19836,7 @@
       "source_license": "public_domain",
       "source_work": "Nutuk",
       "source_work_key": "mnemosyne.tr.work.nutuk",
+      "subcategory": "historical",
       "surface_patterns": [
         "Nutuk'un anlattıkları",
         "Nutuk'ta Kurtuluş Savaşı",
@@ -19830,6 +19988,7 @@
       "source_license": "public_domain",
       "source_work": "Tarih-i Naima",
       "source_work_key": "mnemosyne.tr.work.tarih_i_naima",
+      "subcategory": "ottoman_literature",
       "surface_patterns": [
         "Naima",
         "Naima tarihi",
@@ -19860,6 +20019,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Na%C5%9Fit",
       "source_work": "Various (Oral tradition)",
       "source_work_key": "mnemosyne.tr.work.various_oral_tradition",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Naşit",
         "Naşit’in",
@@ -19903,6 +20063,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ne oldum delisi olmamak",
         "ne oldum delisi",
@@ -19963,6 +20124,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "nerede kalmıştık",
         "nerede kaldık",
@@ -20000,6 +20162,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Nevşehirli Damat İbrahim Paşa",
         "Damat İbrahim Paşa",
@@ -20024,6 +20187,7 @@
       "source_license": "public_domain",
       "source_work": "Tarih-i Naima",
       "source_work_key": "mnemosyne.tr.work.tarih_i_naima",
+      "subcategory": "historical",
       "surface_patterns": [
         "Damat İbrahim Paşa’nın saray düzenlemeleri",
         "sarayda türk sahnesi",
@@ -20065,6 +20229,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Ney",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "sufi_poetry",
       "surface_patterns": [
         "ney",
         "ney'in",
@@ -20172,6 +20337,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Nihavend",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Nihavend",
         "Nihavend makamı",
@@ -20209,6 +20375,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Nizam-ı Cedid",
         "Nizam-ı Cedid ordusu",
@@ -20334,6 +20501,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ocak sönmesin",
         "ocağın sönmesin",
@@ -20514,6 +20682,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Orkhon_inscriptions",
       "source_work": "Orhun Abideleri",
       "source_work_key": "mnemosyne.tr.work.orhun_abideleri",
+      "subcategory": "historical",
       "surface_patterns": [
         "Orhun Abideleri",
         "Orhun Yazıtları",
@@ -20551,6 +20720,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "orman kanunu",
         "orman kanunları",
@@ -20704,6 +20874,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Osman Gazi",
         "Osman Bey",
@@ -20729,6 +20900,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Tev%C3%A2r%C3%AEh-i_%C3%82l-i_Osman",
       "source_work": "Tevârîh-i Âl-i Osman",
       "source_work_key": "mnemosyne.tr.work.tevârîh_i_âl_i_osman",
+      "subcategory": "historical",
       "surface_patterns": [
         "Osman Gazi’nin Söğüt’teki gazâ meclisi",
         "Osman Gazi’nin gazâ meclisi",
@@ -20814,6 +20986,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Kaplumba%C4%9Fa_Terbiyecisi",
       "source_work": "Kaplumbağa Terbiyecisi",
       "source_work_key": "mnemosyne.tr.work.kaplumbağa_terbiyecisi",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kaplumbağa Terbiyecisi",
         "Kaplumbağa Terbiyecisi tablosu",
@@ -20842,6 +21015,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Kaplumba%C4%9Fa_Terbiyecisi",
       "source_work": "Kaplumbağa Terbiyecisi",
       "source_work_key": "mnemosyne.tr.work.kaplumbağa_terbiyecisi",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Osmanlı ressamının fırçası",
         "Osmanlı ressamının fırçasını",
@@ -20917,6 +21091,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "Padişah kızı kuyuya düştü",
         "Padişah kızının kuyuya düşmesi",
@@ -21036,6 +21211,7 @@
       "source_license": "public_domain",
       "source_work": "Kitab-ı Bahriye",
       "source_work_key": "mnemosyne.tr.work.kitab_ı_bahriye",
+      "subcategory": "historical",
       "surface_patterns": [
         "Piri Reis",
         "Piri Reis'in haritası",
@@ -21162,6 +21338,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Rast makamı",
         "Rast makamını",
@@ -21286,6 +21463,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/%C5%9Eeker_Ahmet_Pa%C5%9Fa",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "gül bahçelerini",
         "gül bahçelerinde",
@@ -21314,6 +21492,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "quranic",
       "surface_patterns": [
         "Ruhun şad olsun",
         "Ruhun şad olsun diyelim",
@@ -21388,6 +21567,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "sabah olsun da gör",
         "sabah olsun da göreceksin",
@@ -21497,6 +21677,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Sakarya",
         "Sakarya'da",
@@ -21522,6 +21703,7 @@
       "source_license": "public_domain",
       "source_work": "Various military histories",
       "source_work_key": "mnemosyne.tr.work.various_military_histories",
+      "subcategory": "historical",
       "surface_patterns": [
         "Sakarya Meydan Savaşı",
         "Sakarya Meydan Savaşı’nın",
@@ -21631,6 +21813,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.tr.explanation.asik_veysel_cultural_references_sazın_dili_halk_oz",
       "id": "tr_cultural_reference_sazın_dili_halk_ozanı_âşık_veysel_in_sazıyla_anlatıma_kazand_42ed79c7",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21644,6 +21827,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/%C3%82%C5%9F%C4%B1k_Veysel",
       "source_work": "Various folk songs and poems",
       "source_work_key": "mnemosyne.tr.work.various_folk_songs_and_poems",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "sazın dili",
         "sazın dilini",
@@ -21804,6 +21988,7 @@
       "source_license": "public_domain",
       "source_work": "Karagöz ve Hacivat",
       "source_work_key": "mnemosyne.tr.work.karagöz_ve_hacivat",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "sihirli ayna",
         "sihirli aynayı",
@@ -21886,6 +22071,7 @@
       "source_license": "public_domain",
       "source_work": "Various Ottoman chronicles",
       "source_work_key": "mnemosyne.tr.work.various_ottoman_chronicles",
+      "subcategory": "historical",
       "surface_patterns": [
         "Sokollu Mehmed Paşa",
         "Sokollu Mehmed Paşa'nın",
@@ -22054,6 +22240,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Sultan Abdülaziz",
         "Abdülaziz",
@@ -22091,6 +22278,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Sultanahmet Camii",
         "Sultanahmet Mosque",
@@ -22116,6 +22304,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Sultanı kaybettik",
         "Sultanı kaybettikler",
@@ -22229,6 +22418,7 @@
       "source_license": "public_domain",
       "source_work": "Various historical chronicles",
       "source_work_key": "mnemosyne.tr.work.various_historical_chronicles",
+      "subcategory": "historical",
       "surface_patterns": [
         "Söğüt",
         "Söğüt ilçesi",
@@ -22509,6 +22699,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Tanburi Cemil Bey",
         "Tanburi Cemil Bey’in",
@@ -22581,6 +22772,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Tanzimat Fermanı",
         "Tanzimat",
@@ -22639,6 +22831,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Tanzimat_Ferman%C4%B1",
       "source_work": "Tanzimat Fermanı metni",
       "source_work_key": "mnemosyne.tr.work.tanzimat_fermanı_metni",
+      "subcategory": "historical",
       "surface_patterns": [
         "Tanzimat Fermanı ilanı",
         "Osmanlı modernleşmesi",
@@ -22792,6 +22985,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "azmin zaferi",
         "azmin zaferini",
@@ -22975,6 +23169,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Tezhip",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Tezhip sanatı",
         "Tezhip sanatını",
@@ -23011,6 +23206,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Tiyatrocuların annesi",
         "Tiyatrocuların annesi olmak",
@@ -23041,6 +23237,7 @@
       "source_url": "https://www.turkedebiyati.org/tiyatro-gelenegi/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Tiyatrocu",
         "Tiyatrocu olmak",
@@ -23083,6 +23280,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Topkapı Sarayı",
         "Topkapı Palace",
@@ -23180,6 +23378,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "tuluat",
         "tuluatçı",
@@ -23221,6 +23420,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Turgut Reis",
         "Turgut",
@@ -23246,6 +23446,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Turgut Özal",
         "ANAP",
@@ -23411,6 +23612,7 @@
       "source_url": "https://www.tdk.gov.tr",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Türk Dil Kurumu",
         "TDK",
@@ -23437,6 +23639,7 @@
       "source_url": "https://tdk.gov.tr/kurum-hakkinda/tarihce/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Türk Dil Kurumu'nun",
         "Türk Dil Kurumu'nda",
@@ -23560,6 +23763,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Leyla Saz Hanım",
         "Leyla Saz Hanım'ın",
@@ -23632,6 +23836,7 @@
       "source_url": "https://www.ttk.gov.tr",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Türk Tarih Kurumu",
         "TTK",
@@ -23681,6 +23886,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Hicaz makamında bestelemek",
         "Hicaz Peşrev besteledi",
@@ -23711,6 +23917,7 @@
       "source_url": "https://www.mfa.gov.tr/turkiyenin-milletler-cemiyetine-uyeligi.tr.mfa",
       "source_work": "Türkiye Cumhuriyeti Dışişleri Bakanlığı Arşivleri",
       "source_work_key": "mnemosyne.tr.work.türkiye_cumhuriyeti_dışişleri_bakanlığı_arşivleri",
+      "subcategory": "historical",
       "surface_patterns": [
         "Milletler Cemiyeti’ne üye olmak",
         "Türkiye’nin Milletler Cemiyeti’ne üye olması",
@@ -23738,6 +23945,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition / Various",
       "source_work_key": "mnemosyne.tr.work.oral_tradition_various",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "tılsımlı yüzük",
         "tılsımlı yüzüğü",
@@ -23777,6 +23985,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tırpanla biçilmiş gibi",
         "tırpanla biçilmiş",
@@ -23818,6 +24027,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ucu ucuna",
         "ucu ucuna yetmek",
@@ -23895,6 +24105,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Usta-çırak ilişkisi",
         "Usta-çırak ilişkisini",
@@ -23970,6 +24181,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "vakıf",
         "vakıflar",
@@ -24007,6 +24219,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Var mı böyle bir şey",
         "Var mı böyle bir şey ya",
@@ -24068,6 +24281,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Ver elini",
         "Ver elini bakalım",
@@ -24273,6 +24487,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "yatıya kalmak",
         "yatıya kalma",
@@ -24302,6 +24517,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Yavuz_Sultan_Selim",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Yavuz Sultan Selim",
         "Mısır’ın fethi",
@@ -24362,6 +24578,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Tarih-i_%C3%82l-i_Osman",
       "source_work": "Tarih-i Âl-i Osman",
       "source_work_key": "mnemosyne.tr.work.tarih_i_âl_i_osman",
+      "subcategory": "historical",
       "surface_patterns": [
         "Yavuz Sultan Selim İran seferi",
         "Yavuz Sultan Selim’in İran seferi",
@@ -24531,6 +24748,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "yere göğe koyamamak",
         "yere göğe koyamıyor",
@@ -25019,6 +25237,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Ahmedî_-_İskendernâme",
       "source_work": "Ahmedî’nin *İskendernâme* ve diğer Osmanlı vakayinameleri",
       "source_work_key": "mnemosyne.tr.work.ahmedî_nin_i_skendernâme_ve_diğer_osmanlı_vakayina",
+      "subcategory": "historical",
       "surface_patterns": [
         "Yıldırım Bayezid Ankara Savaşı'nda yenilmesi",
         "Yıldırım Bayezid Timur'a yenilmesi",
@@ -25055,6 +25274,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Zeki_M%C3%BCren",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Sarıkamış bestesi",
         "Sarıkamış bestesini",
@@ -25085,6 +25305,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Zeybek havası",
         "Zeybek havasını",
@@ -25228,6 +25449,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Zübeyde Hanım",
         "Zübeyde",
@@ -25282,6 +25504,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "gülün kokusunu alabilmek",
         "gülün kokusunu alamamak",
@@ -25354,6 +25577,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Çanakkale",
         "Çanakkale'de",
@@ -25392,6 +25616,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Çanakkale Savaşı",
         "Çanakkale Muharebesi",
@@ -25452,6 +25677,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Çingene",
         "Çingeneler",
@@ -25600,6 +25826,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "divan_poetry",
       "surface_patterns": [
         "Şarkı bestesi",
         "Bir şarkı bestesi",
@@ -25679,6 +25906,7 @@
       "source_license": "public_domain",
       "source_work": "Varidat",
       "source_work_key": "mnemosyne.tr.work.varidat",
+      "subcategory": "historical",
       "surface_patterns": [
         "Şeyh Bedreddin",
         "Şeyh Bedreddin'in",
@@ -25704,6 +25932,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/%C5%9Eeyh_Sait_%C4%B0syan%C4%B1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Şeyh Sait İsyanı",
         "Şeyh Sait İsyanı’nı",
@@ -30827,6 +31056,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Halit_Fahri_Ozansoy",
       "source_work": "Baykuş",
       "source_work_key": "mnemosyne.tr.work.baykuş",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Baykuş",
         "Baykuş’ı",
@@ -31354,6 +31584,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/H%C3%BCseyin_Rahmi_G%C3%BCrp%C4%B1nar",
       "source_work": "Kadın Olan Erkek",
       "source_work_key": "mnemosyne.tr.work.kadın_olan_erkek",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Kadın Olan Erkek’i",
         "Kadın Olan Erkek’te",
@@ -31624,6 +31855,7 @@
       "source_url": "https://tr.wikisource.org/wiki/El-Kanun_fi%27t-T%C4%B1bb",
       "source_work": "El-Kanun fi't-Tıbb",
       "source_work_key": "mnemosyne.tr.work.el_kanun_fi_t_tıbb",
+      "subcategory": "historical",
       "surface_patterns": [
         "Tıbb-ı Kanun",
         "Tıbb-ı Kanun'u",
@@ -31983,6 +32215,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.tr.explanation.mehmet_akif_ersoy_anthem_i_stiklal_marşı_nın_kabul",
       "id": "tr_literary_reference_i_stiklal_marşı_nın_kabulü_ve_mehmet_akif_ersoy_un_milli_şii_1c17c1b5",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -31996,6 +32229,7 @@
       "source_url": "https://tr.wikisource.org/wiki/%C4%B0stiklal_Mar%C5%9F%C4%B1",
       "source_work": "İstiklal Marşı",
       "source_work_key": "mnemosyne.tr.work.i_stiklal_marşı",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "İstiklal Marşı’nı",
         "İstiklal Marşı’nda",
@@ -32383,6 +32617,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Kelo%C4%9Flan",
       "source_work": "Keloğlan Masalları",
       "source_work_key": "mnemosyne.tr.work.keloğlan_masalları",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Keloğlan'ın",
         "Keloğlan'a",
@@ -33110,6 +33345,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Ahlâk-ı_Alâî",
       "source_work": "Ahlâk-ı Alâî",
       "source_work_key": "mnemosyne.tr.work.ahlâk_ı_alâî",
+      "subcategory": "historical",
       "surface_patterns": [
         "Ahlâk-ı Alâî",
         "Ahlâk-ı Alâî'yi",
@@ -33558,6 +33794,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "masal",
         "masal anlatmak",
@@ -33589,6 +33826,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Nasreddin_Hoca",
       "source_work": "Nasreddin Hoca Fıkraları",
       "source_work_key": "mnemosyne.tr.work.nasreddin_hoca_fıkraları",
+      "subcategory": "folk_poetry",
       "surface_patterns": [
         "Mavi boncuk",
         "Mavi boncuğu vermek",
@@ -33765,6 +34003,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.tr.explanation.mehmet_emin_yurdakul_turkce_siirler_mehmet_emin_yu",
       "id": "tr_literary_reference_mehmet_emin_yurdakul_un_türkçe_şiirler_eseriyle_dil_ve_milli_4e560875",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33778,6 +34017,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Mehmet_Emin_Yurdakul",
       "source_work": "Türkçe Şiirler",
       "source_work_key": "mnemosyne.tr.work.türkçe_şiirler",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Türkçe Şiirler",
         "Türkçe Şiirler’i",
@@ -34025,6 +34265,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.tr.explanation.mevlana_mesnevi_binbir_gece_mevlana_nın_mesnevi_si",
       "id": "tr_literary_reference_mevlana_nın_mesnevi_sindeki_binbir_gece_anlatısına_gönderme_3baf37dc",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34038,6 +34279,7 @@
       "source_url": "https://www.wikisource.org/wiki/Mesnevi",
       "source_work": "Mesnevi",
       "source_work_key": "mnemosyne.tr.work.mesnevi",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Mevlana’nın",
         "Mevlana’nın 'Mesnevi'si",
@@ -34829,6 +35071,7 @@
       "confidence": 0.89,
       "explanation_key": "mnemosyne.tr.explanation.turkish_modernist_poetry_nazım_hikmet_in_kerem_gib",
       "id": "tr_literary_reference_nazım_hikmet_in_kerem_gibi_şiirindeki_resim_ve_şiir_buluşmas_4bd2261e",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34843,6 +35086,7 @@
       "source_url": "https://tr.wikipedia.org/wiki/Kerem_Gibi",
       "source_work": "Kerem Gibi",
       "source_work_key": "mnemosyne.tr.work.kerem_gibi",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Kerem Gibi",
         "Kerem Gibi'ni",
@@ -35851,6 +36095,7 @@
       "source_url": "https://www.nobelprize.org/prizes/literature/2006/pamuk/biographical/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.tr.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Nobel Edebiyat Ödülü",
         "Nobel Edebiyat Ödülü’nü",
@@ -36745,6 +36990,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/63563",
       "source_work": "Çalıkuşu",
       "source_work_key": "mnemosyne.tr.work.çalıkuşu",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Çalıkuşu",
         "Reşat Nuri Güntekin'in Çalıkuşu",
@@ -36926,6 +37172,7 @@
       "source_url": "https://archive.org/details/al-mansuri-fi-al-tibb",
       "source_work": "Al-Mansuri fi al-Tibb",
       "source_work_key": "mnemosyne.tr.work.al_mansuri_fi_al_tibb",
+      "subcategory": "historical",
       "surface_patterns": [
         "Râzi",
         "Râzi’nin",
@@ -37942,6 +38189,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.tr.explanation.faraabi_medinetul_fazila_phrases_tanrı_nın_varlığı",
       "id": "tr_literary_reference_tanrı_nın_varlığı_ve_birliği_fârâbî_nin_el_medinetü_l_fâzıla_ca47f953",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37955,6 +38203,7 @@
       "source_url": "https://tr.wikisource.org/wiki/El-Medinetü%27l-F%C3%A2z%C4%B1la",
       "source_work": "El-Medinetü'l-Fâzıla",
       "source_work_key": "mnemosyne.tr.work.el_medinetü_l_fâzıla",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "El-Medinetü'l-Fâzıla",
         "El-Medinetü'l-Fâzıla'nın",
@@ -39615,6 +39864,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.tr.explanation.seyh_bedreddin_varidat_phrases_şeyh_bedreddin_in_v",
       "id": "tr_literary_reference_şeyh_bedreddin_in_varidat_ında_materyalizm_ve_adalet_arayışı_310082c9",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39628,6 +39878,7 @@
       "source_url": "https://tr.wikisource.org/wiki/Varidat",
       "source_work": "Varidat",
       "source_work_key": "mnemosyne.tr.work.varidat",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Varidat",
         "Varidat'ın",
@@ -39685,6 +39936,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.tr.explanation.husn_u_ask_phrases_şeyh_galib_in_hüsn_ü_aşk_ında_a",
       "id": "tr_literary_reference_şeyh_galib_in_hüsn_ü_aşk_ında_akl_u_cânı_birbirine_düşürmüş__21782222",
+      "is_poetic_citation": true,
       "language": "tr",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -39699,6 +39951,7 @@
       "source_url": "https://tr.wikisource.org/wiki/H%C3%BCsn_%C3%BC_A%C5%9Fk",
       "source_work": "Hüsn ü Aşk",
       "source_work_key": "mnemosyne.tr.work.hüsn_ü_aşk",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "akl u cân",
         "akl u cânı",
@@ -40036,6 +40289,7 @@
       "source_license": "public_domain",
       "source_work": "Şair Evlenmesi",
       "source_work_key": "mnemosyne.tr.work.şair_evlenmesi",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Şair Evlenmesi",
         "Şair Evlenmesi'ni",
@@ -40522,6 +40776,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "quranic",
       "surface_patterns": [
         "Allah'a emanet ol",
         "Allah'a emanet olsun",
@@ -40760,6 +41015,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "atassözü",
       "surface_patterns": [
         "Altı üstü bir olmak",
         "Altı üstü bir olmaktır",
@@ -48944,6 +49200,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.tr.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tencere dibi",
         "tencere dibin",

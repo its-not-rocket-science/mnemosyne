@@ -3746,6 +3746,7 @@
       "source_url": "https://www.bible.com/fi/bible/116/ISA.1.NIV",
       "source_work": "Raamattu",
       "source_work_key": "mnemosyne.fi.work.raamattu",
+      "subcategory": "biblical",
       "surface_patterns": [
         "Jesajan evankeliumi",
         "Jesajan evankeliumia",
@@ -10839,6 +10840,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Maalaisliitto",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Agrariliiton perustaminen 1906",
         "Agrariliitto 1906",
@@ -10961,6 +10963,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Aleksis_Kiven_p%C3%A4iv%C3%A4",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Aleksis Kiven päivä",
         "Aleksis Kiven päivänä",
@@ -10987,6 +10990,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Alma-Tadema-vaikutus suomalaisessa historiallisessa taiteessa",
         "Alma-Tademan vaikutus suomalaisessa historiallisessa taiteessa",
@@ -11040,6 +11044,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Amurin katu",
         "Amurin kadulla",
@@ -11170,6 +11175,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Brock",
       "source_work": "Brock",
       "source_work_key": "mnemosyne.fi.work.brock",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Brock's koti",
         "Brockin koti",
@@ -11527,6 +11533,7 @@
       "source_url": "https://www.helsinkibiennale.fi/en/artists/akseli-gallen-kallela/",
       "source_work": "Aino-taru",
       "source_work_key": "mnemosyne.fi.work.aino_taru",
+      "subcategory": "kalevala",
       "surface_patterns": [
         "Aino-taru -sarja",
         "Gallen-Kallelan Aino-taru"
@@ -11605,6 +11612,7 @@
       "source_url": "https://www.finland.fi/culture/sammon-taonta/",
       "source_work": "Sammon taonta",
       "source_work_key": "mnemosyne.fi.work.sammon_taonta",
+      "subcategory": "kalevala",
       "surface_patterns": [
         "Gallen-Kallelan Sammon taonta",
         "Sammon taonta -velho- ja voima-aihe"
@@ -11669,6 +11677,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Havis_Amanda",
       "source_work": "N/A (public artwork)",
       "source_work_key": "mnemosyne.fi.work.n_a_public_artwork",
+      "subcategory": "historical",
       "surface_patterns": [
         "Havis Amanda",
         "Amanda-patsas",
@@ -11802,6 +11811,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Hellas-patsas",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Hellas-patsas",
         "Hellas patsas",
@@ -11880,6 +11890,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Helmikuun_manifesti",
       "source_work": "Helmikuun manifesti",
       "source_work_key": "mnemosyne.fi.work.helmikuun_manifesti",
+      "subcategory": "historical",
       "surface_patterns": [
         "Helmikuun manifesti",
         "Helmikuun manifestin",
@@ -11905,6 +11916,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Helmikuun_manifesti",
       "source_work": "Helmikuun manifesti",
       "source_work_key": "mnemosyne.fi.work.helmikuun_manifesti",
+      "subcategory": "historical",
       "surface_patterns": [
         "Helmikuun manifesti -taideteos",
         "Helmikuun manifestin taideteos",
@@ -12184,6 +12196,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "Hiidenkivi",
         "Hiiden kivi",
@@ -12224,6 +12237,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Kalevala",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "kalevala",
       "surface_patterns": [
         "Hiisi",
         "Hiisi (taruolento)"
@@ -12381,6 +12395,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "härkätaistelu",
         "härkätaistelun",
@@ -12406,6 +12421,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "härmäläinen",
         "härmäläiset"
@@ -12430,6 +12446,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "häät",
         "häiden",
@@ -12564,6 +12581,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Iloisen_tangon_tarina",
       "source_work": "Iloisen tangon tarina",
       "source_work_key": "mnemosyne.fi.work.iloisen_tangon_tarina",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Iloisen tangon tarina",
         "Iloisen tangon tarinaa",
@@ -12603,6 +12621,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Isoviha"
       ]
@@ -12651,6 +12670,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Jatkosota",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Jatkosodan alkaminen 25. kesäkuuta 1941",
         "Jatkosota alkoi 25. kesäkuuta 1941",
@@ -12677,6 +12697,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Finlandia",
       "source_work": "Finlandia",
       "source_work_key": "mnemosyne.fi.work.finlandia",
+      "subcategory": "music",
       "surface_patterns": [
         "'Finlandia' ja kansallisen identiteetin sävel",
         "kansallinen hymni 'Finlandia'",
@@ -12702,6 +12723,7 @@
       "source_url": "https://imslp.org/wiki/Finlandia,_Op.26_(Sibelius,_Jean)",
       "source_work": "Finlandia",
       "source_work_key": "mnemosyne.fi.work.finlandia",
+      "subcategory": "music",
       "surface_patterns": [
         "Jean Sibeliuksen 'Finlandia'",
         "'Finlandia'",
@@ -12727,6 +12749,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Joulupukki",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "Joulupukin vaunut",
         "Joulupukin reki",
@@ -12765,6 +12788,7 @@
       "source_license": "public_domain",
       "source_work": "Various (historical accounts)",
       "source_work_key": "mnemosyne.fi.work.various_historical_accounts",
+      "subcategory": "historical",
       "surface_patterns": [
         "Juhana-herttuan kapina",
         "Juhana-herttuan kapina 1562",
@@ -12830,6 +12854,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "Juhannuksen tuli",
         "juhannustuli",
@@ -12948,6 +12973,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Jääkäriliike",
         "jääkärit"
@@ -12985,6 +13011,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/J%C3%A4%C3%A4merentie",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Jäämeren tie",
         "Jäämerentie",
@@ -13010,6 +13037,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomen_hallitusmuoto_(1919)",
       "source_work": "Suomen hallitusmuoto (1919)",
       "source_work_key": "mnemosyne.fi.work.suomen_hallitusmuoto_1919",
+      "subcategory": "historical",
       "surface_patterns": [
         "K. J. Ståhlbergin perustuslain vahvistaminen 1919",
         "Ståhlbergin perustuslaki",
@@ -13050,6 +13078,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kaarina_Maununtyt%C3%A4r",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kaarina Maununtytär",
         "Kaarina Maununtyttären",
@@ -13114,6 +13143,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kajaanin_linna",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kajaanin linnoitus",
         "Kajaanin linna",
@@ -13312,6 +13342,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/4363",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "kalevala",
       "surface_patterns": [
         "Kalevalan 'Kanteleensoiton' kuvaukset",
         "'Kanteleensoiton' kuvaukset",
@@ -13339,6 +13370,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kalevala-mitali",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "kalevala",
       "surface_patterns": [
         "Kalevalan mitali",
         "Kalevalan-mitali"
@@ -13377,6 +13409,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kalevalan_p%C3%A4iv%C3%A4",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "kalevala",
       "surface_patterns": [
         "Kalevalan päivät",
         "Kalevalan päivä"
@@ -13709,6 +13742,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kannaksen suurhyökkäys",
         "suurhyökkäys Karjalankannaksella",
@@ -13747,6 +13781,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "kansakoulun penkki",
         "kansakoulunpenkki",
@@ -13785,6 +13820,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "kansakunnan herääminen",
         "kansallisen heräämisen aika",
@@ -13810,6 +13846,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kansalaissodan alkaminen",
         "Kansalaissota alkoi 27. tammikuuta 1918",
@@ -13836,6 +13873,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kansalaissota",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kansalaissodan puhkeaminen",
         "tammikuun 27. päivä 1918",
@@ -13930,6 +13968,7 @@
       "source_url": "https://www.kansallisteatteri.fi/fi/teatterista/teatterin-historia",
       "source_work": "Various (institutional history)",
       "source_work_key": "mnemosyne.fi.work.various_institutional_history",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kansallisen teatterin perustaminen 1872",
         "Suomen Kansallisteatterin perustaminen",
@@ -13955,6 +13994,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Turun_yliopisto",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kansallisen tiedeakatemian perustaminen 1640",
         "Turun akatemia 1640",
@@ -13983,6 +14023,7 @@
       "source_url": "https://www.kansallismuseo.fi/en",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kansallismuseon avajaiset 1916",
         "Kansallismuseo avattiin 1916",
@@ -14009,6 +14050,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kansallisooppera",
       "source_work": "Various (historical records)",
       "source_work_key": "mnemosyne.fi.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kansallisoopperan perustaminen",
         "Kansallisoopperan perustaminen vuonna 1911",
@@ -14087,6 +14129,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "kansallisrunoilija",
         "Suomen kansallisrunoilija",
@@ -14165,6 +14208,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "kansanvalistuksen aika",
         "Kansanvalistuksen aikakausi",
@@ -14243,6 +14287,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Karjalan_kannas",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Karjalan kannaksella",
         "Karjalan kannaksella lauletaan",
@@ -14268,6 +14313,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Katajanokan_teloitukset",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Katajanokan teloitus",
         "Katajanokan teloitusta",
@@ -14306,6 +14352,7 @@
       "source_license": "not_required",
       "source_work": "Historical discourse",
       "source_work_key": "mnemosyne.fi.work.historical_discourse",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kekkosen aika",
         "Kekkosen aikakaudella"
@@ -14330,6 +14377,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Keuruun_hautapaikka",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Keuruun haudat",
         "Keuruun hautojen",
@@ -14395,6 +14443,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kihlaus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kihlaus",
         "kihlajaiset",
@@ -14531,6 +14580,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Erillinen_Pataljoona_4",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Korpisoturit",
         "Korpisotureita"
@@ -14555,6 +14605,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Korsikan paavi",
         "korsikalainen paavi",
@@ -14630,6 +14681,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Porkkala",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "kuin Porkkala",
         "Porkkalan tapaan",
@@ -14668,6 +14720,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Sauna",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "kuin Sauna-isäntä",
         "Sauna-isäntä",
@@ -14948,6 +15001,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Kuningas Litmanen",
         "Litmanen kuningas",
@@ -15016,6 +15070,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kustaa_III:n_murha",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kustaa III:n murha",
         "Kustaan III:n murha",
@@ -15041,6 +15096,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kustaa_Vasa",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kustaa Vaasan kruunaus",
         "Kustaa Vaasan kruunauspäivä",
@@ -15078,6 +15134,7 @@
       "source_license": "public_domain",
       "source_work": "Various (historical accounts)",
       "source_work_key": "mnemosyne.fi.work.various_historical_accounts",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kustaa Vaasan valtaannousu",
         "Kustaa Vaasan valtaistuimelle nousu",
@@ -15130,6 +15187,7 @@
       "source_license": "not_required",
       "source_work": "Vanhat tervehdyssanat",
       "source_work_key": "mnemosyne.fi.work.vanhat_tervehdyssanat",
+      "subcategory": "sananlasku",
       "surface_patterns": [
         "Kyllä tämä vielä toipuu!",
         "Kyllä tämä toipuu!",
@@ -15369,6 +15427,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Lapin_sota",
       "source_work": "Lapin sota",
       "source_work_key": "mnemosyne.fi.work.lapin_sota",
+      "subcategory": "historical",
       "surface_patterns": [
         "Lapin sodan muistomerkki",
         "Lapin sodan muistomerkit",
@@ -15407,6 +15466,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Lapin sota",
         "Lapin sota 1944–1945",
@@ -15432,6 +15492,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Lappaj%C3%A4rvi_(kraatteri)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Lappajärven kraatteri",
         "Lappajärven kraatterin historia",
@@ -15471,6 +15532,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Lapuan_liike",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Lapuan liike",
         "Lapuanliike",
@@ -15497,6 +15559,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Lapuan_liike",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Lapuan liikkeen nousu 1929–1932",
         "Lapuan liike nousi 1929–1932",
@@ -15550,6 +15613,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Lapuanliike",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mäntsälän kapina",
         "1930-luvun poliittinen murros",
@@ -15843,6 +15907,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "Luonnon henget puhuvat ihmisille metsän ja järvien ääniä",
         "Luonnon henget puhuvat metsän ja järvien ääniä",
@@ -15936,6 +16001,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Naisten_%C3%A4%C3%A4nioikeus_Suomessa",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "naisten äänioikeus Suomessa 1906",
         "Suomen naisten äänioikeus 1906",
@@ -15962,6 +16028,7 @@
         "zh": "这是芬兰的国歌，表达了爱国情感和民族认同；歌词由J. L. Runeberg创作。"
       },
       "id": "fi_cultural_reference_maamme_laulu_5621f72c",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- This is an accurate and verifiable reference to the Finnish national anthem with correct attribution to Runeberg and Pacius.",
@@ -15975,6 +16042,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Maamme",
       "source_work": "Maamme",
       "source_work_key": "mnemosyne.fi.work.maamme",
+      "subcategory": "music",
       "surface_patterns": [
         "Maamme-laulu",
         "Maamme"
@@ -15999,6 +16067,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "maan ja taivaan välissä",
         "maan ja taivaan välissä oleva",
@@ -16037,6 +16106,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mannerheim-risti",
         "Mannerheim-ristin",
@@ -16062,6 +16132,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Mannerheim-risti",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mannerheim-ristin perustaminen 1942",
         "Mannerheim-risti perustettiin 1942",
@@ -16102,6 +16173,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Mannerheimin_ratsastajapatsas",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mannerheimin ratsastaja",
         "Mannerheimin ratsastajapatsas",
@@ -16128,6 +16200,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Mannerheimin_ratsastajapatsas",
       "source_work": "Mannerheimin ratsastajapatsas",
       "source_work_key": "mnemosyne.fi.work.mannerheimin_ratsastajapatsas",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mannerheimin patsas"
       ]
@@ -16177,6 +16250,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Marskin_murha",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Marskin murha 26. toukokuuta 1942",
         "Marskin murhan symboli",
@@ -16204,6 +16278,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Martti Ahtisaaren rauhanneuvotteluiden symbolinen taide-esitys",
         "Ahtisaaren rauhanneuvotteluiden symbolinen taide-esitys",
@@ -16295,6 +16370,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Mets%C3%A4npeitto",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "metsänpeitto",
         "metsän peittoon joutua",
@@ -16366,6 +16442,7 @@
       "source_url": "https://www.kansalliskirjasto.fi/fi/aineisto/agricolan-abckiria",
       "source_work": "Abckiria",
       "source_work_key": "mnemosyne.fi.work.abckiria",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mikael Agricolan abc-kirja",
         "Agricolan abc-kirja",
@@ -16408,6 +16485,7 @@
       "source_url": "https://fi.wikisource.org/wiki/ABC-kiria",
       "source_work": "Various (notably 'ABC-kiria', 'Se Wsi Testamenti')",
       "source_work_key": "mnemosyne.fi.work.various_notably_abc_kiria_se_wsi_testamenti",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mikael Agricolan työ",
         "Agricolan työ",
@@ -16434,6 +16512,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kulkurin_valssi",
       "source_work": "Kulkurin valssi",
       "source_work_key": "mnemosyne.fi.work.kulkurin_valssi",
+      "subcategory": "music",
       "surface_patterns": [
         "Kulkurin valssi",
         "Minna Haapkylän 'Kulkurin valssi'",
@@ -16501,6 +16580,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Moskovan rauha",
         "Moskovan rauha 1940",
@@ -16592,6 +16672,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "Noitarumpu",
         "noitarummun",
@@ -16661,6 +16742,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suuret_n%C3%A4lk%C3%A4vuodet",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Nälkävuodet",
         "Suuret nälkävuodet",
@@ -16866,6 +16948,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Pehr_Evind_Svinhufvud",
       "source_work": "Itsenäisyysjulistus",
       "source_work_key": "mnemosyne.fi.work.itsenäisyysjulistus",
+      "subcategory": "historical",
       "surface_patterns": [
         "P.E. Svinhufvudin puhe 4. joulukuuta 1917",
         "Svinhufvudin puhe",
@@ -16904,6 +16987,7 @@
       "source_license": "not_required",
       "source_work": "Historical and political commentary",
       "source_work_key": "mnemosyne.fi.work.historical_and_political_commentary",
+      "subcategory": "historical",
       "surface_patterns": [
         "Paasikiven–Kekkosen linja",
         "Paasikiven-Kekkosen linja",
@@ -16995,6 +17079,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Pikkuviha"
       ]
@@ -17030,6 +17115,7 @@
       "source_license": "public_domain",
       "source_work": "Various (historical records)",
       "source_work_key": "mnemosyne.fi.work.various_historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "Pitkä viha",
         "pitkä viha -aika",
@@ -17242,6 +17328,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Porkkalan palautus 1956",
         "Porkkalan alueen palautus",
@@ -17268,6 +17355,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Porkkalan_palautus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Porkkalan palautus",
         "Porkkalan palauttaminen 1956"
@@ -17305,6 +17393,7 @@
       "source_license": "not_required",
       "source_work": "Historical records",
       "source_work_key": "mnemosyne.fi.work.historical_records",
+      "subcategory": "historical",
       "surface_patterns": [
         "Porvoon valtiopäivät 1809",
         "Porvoon valtiopäivät",
@@ -17330,6 +17419,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Porvoon_valtiop%C3%A4iv%C3%A4t_1809",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Porvoon maapäivät",
         "Suomen aseman määrittäminen 1809"
@@ -17354,6 +17444,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Paasikivi-Kekkonen_line",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Kekkosen linjanveto",
         "Kekkosen linja",
@@ -17392,6 +17483,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Punaisen Suomen loppu",
         "Punaisen Suomen tuhoutuminen",
@@ -17554,6 +17646,7 @@
       "source_url": "https://imslp.org/wiki/Porilaisten_marssi_(Kajanus,_Robert)",
       "source_work": "Porilaisten marssi",
       "source_work_key": "mnemosyne.fi.work.porilaisten_marssi",
+      "subcategory": "music",
       "surface_patterns": [
         "Porilaisten marssi",
         "Kajanuksen Porilaisten marssi",
@@ -17580,6 +17673,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Runebergin_päivä",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Runeberginpäivä",
         "5. helmikuuta Runebergin päivä",
@@ -17620,6 +17714,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Runebergin_p%C3%A4iv%C3%A4",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Runebergin päivä",
         "Runebergin päivänä",
@@ -17941,6 +18036,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "saunan henki",
         "saunanhengen",
@@ -17979,6 +18075,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Finlandia-hymni",
       "source_work": "Finlandia",
       "source_work_key": "mnemosyne.fi.work.finlandia",
+      "subcategory": "music",
       "surface_patterns": [
         "Sibeliuksen Finlandia",
         "Finlandia-hymni",
@@ -18084,6 +18181,7 @@
       "source_url": "https://www.siba.fi/",
       "source_work": "Sibelius-Akatemian verkkosivut",
       "source_work_key": "mnemosyne.fi.work.sibelius_akatemian_verkkosivut",
+      "subcategory": "music",
       "surface_patterns": [
         "Kultainen sali",
         "Sibelius-Akatemian Kultainen sali",
@@ -18163,6 +18261,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Sibelius-muistomerkki Helsingissä",
         "Sibelius-muistomerkki",
@@ -18189,6 +18288,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Jean_Sibelius",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Sibelius-sävellykset",
         "Sibelius sävellykset",
@@ -18343,6 +18443,7 @@
       "source_url": "https://www.finlit.fi/sanasto/2021/03/15/siniset-silmät-ja-punaiset-posket/",
       "source_work": "Siniset silmät ja punaiset posket",
       "source_work_key": "mnemosyne.fi.work.siniset_silmät_ja_punaiset_posket",
+      "subcategory": "music",
       "surface_patterns": [
         "siniset silmät ja punaiset posket",
         "siniset silmät ja punaiset posket -laulu",
@@ -18382,6 +18483,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Sisu",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fi.work.oral_tradition",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "sisu",
         "suomalainen sisu",
@@ -18419,6 +18521,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Sisällissodan valkoiset",
         "valkoiset",
@@ -18457,6 +18560,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Sodasta rauhaan",
         "Sodasta rauhaan -kausi",
@@ -18524,6 +18628,7 @@
       "source_url": "https://finlit.fi/finnish-folklore-collection",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "Sudenmorsian",
         "Sudenmorsianta"
@@ -18574,6 +18679,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Helsinki%E2%80%93H%C3%A4meenlinna-rata",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen ensimmäinen rautatielinja 1862",
         "Helsinki–Hämeenlinna rata 1862",
@@ -18599,6 +18705,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Helsinki%E2%80%93H%C3%A4meenlinna-rautatie",
       "source_work": "Suomen rautatieliikenteen historia",
       "source_work_key": "mnemosyne.fi.work.suomen_rautatieliikenteen_historia",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen ensimmäinen rautatieyhteys Helsinki–Hämeenlinna 1862",
         "Helsinki–Hämeenlinna rautatie 1862",
@@ -18625,6 +18732,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kaarlo_Juho_St%C3%A5hlberg",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "K. J. Ståhlberg",
         "Ståhlberg",
@@ -18653,6 +18761,7 @@
       "source_url": "https://www.eduskunta.fi/EN/parliament/history/Pages/default.aspx",
       "source_work": "Various (constitutional history)",
       "source_work_key": "mnemosyne.fi.work.various_constitutional_history",
+      "subcategory": "historical",
       "surface_patterns": [
         "ensimmäisen pysyvän parlamentin muodostaminen 1907",
         "Suomen parlamentin perustaminen 1907",
@@ -18679,6 +18788,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Turun_yliopisto",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Turun yliopiston perustaminen vuonna 1640",
         "Suomen ensimmäinen yliopisto perustettiin Turkuun vuonna 1640",
@@ -18705,6 +18815,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Helsingin_1952_kes%C3%A4olympialaiset",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Helsingin olympialaiset 1952",
         "Suomen ensimmäiset olympialaiset 1952",
@@ -18731,6 +18842,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomen_valtiop%C3%A4iv%C3%A4t_1863",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen ensimmäiset valtiopäivät 1863",
         "valtiopäivät 1863",
@@ -18758,6 +18870,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomen_ensimm%C3%A4iset_yleisvaalit",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "ensimmäiset yleisvaalit",
         "Suomen yleisvaalit 1907",
@@ -18784,6 +18897,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Evankelisluterilainen_kirkko",
       "source_work": "Reformaation vaikutus Suomeen",
       "source_work_key": "mnemosyne.fi.work.reformaation_vaikutus_suomeen",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen evankelisluterilaisen kirkon perustaminen reformaation yhteydessä",
         "evankelisluterilaisen kirkon perustaminen Suomessa reformaation aikana",
@@ -18810,6 +18924,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen heimo",
         "suomalaiset heimot",
@@ -18835,6 +18950,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomen_itsen%C3%A4isyysjulistus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "itsenäistymisen julistus",
         "4. joulukuuta 1917",
@@ -18861,6 +18977,7 @@
       "source_url": "https://finland.fi/history/independence/",
       "source_work": "Various (political history)",
       "source_work_key": "mnemosyne.fi.work.various_political_history",
+      "subcategory": "historical",
       "surface_patterns": [
         "valtakirjavallan siirtymät 1918",
         "kuningaskuntavaalit 1918",
@@ -18887,6 +19004,7 @@
       "source_url": "https://www.finlex.fi/fi/laki/ajantasa/1917/19171036",
       "source_work": "Various (Finnish law and tradition)",
       "source_work_key": "mnemosyne.fi.work.various_finnish_law_and_tradition",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen itsenäistymisen päivä",
         "itsenäisyyspäivä",
@@ -18926,6 +19044,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen itsenäisyysjulistus",
         "itsenäisyysjulistus"
@@ -18950,6 +19069,7 @@
       "source_url": "https://finlex.fi/fi/ajantasa/1917/19171033",
       "source_work": "Suomen itsenäisyysjulistus",
       "source_work_key": "mnemosyne.fi.work.suomen_itsenäisyysjulistus",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen itsenäistyminen"
       ]
@@ -18973,6 +19093,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomen_itsen%C3%A4isyysjulistus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "itsenäisyysjulistus 6. joulukuuta 1917",
         "kansakunnan syntyhetki",
@@ -18998,6 +19119,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kalmarska_unioni",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen ja Ruotsin personaaliunioni",
         "Ruotsin ja Suomen personaaliunioni 1389–1523",
@@ -19024,6 +19146,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Tarton_rauha",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Tarton rauhansopimus",
         "Suomen ja Venäjän rauhansopimus 1920",
@@ -19050,6 +19173,7 @@
       "source_url": "https://www.kansallisteatteri.fi/",
       "source_work": "Various (Finnish National Theatre productions)",
       "source_work_key": "mnemosyne.fi.work.various_finnish_national_theatre_productions",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Suomen kansallisteatterin lavastustaide",
         "klassikoiden lavastus",
@@ -19077,6 +19201,7 @@
       "source_url": "https://www.kansallisteatteri.fi/fi/historia",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen kansallisteatterin perustaminen vuonna 1872",
         "Suomen Kansallisteatterin perustaminen 1872",
@@ -19103,6 +19228,7 @@
       "source_url": "https://www.eduskunta.fi/FI/valtiopaivaasiakirjat/Sivut/default.aspx",
       "source_work": "Suomen itsenäisyysjulistus ja sen edellytykset",
       "source_work_key": "mnemosyne.fi.work.suomen_itsenäisyysjulistus_ja_sen_edellytykset",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen kansanedustajien valinta perustuslakia säätämään vuonna 1917",
         "kansanedustajien valinta perustuslakia säätämään 1917",
@@ -19129,6 +19255,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Kieltolaki_Suomessa",
       "source_work": "Suomen alkoholipolitiikan historia",
       "source_work_key": "mnemosyne.fi.work.suomen_alkoholipolitiikan_historia",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen kieltolakien voimaantulo 1919 ja päättyminen 1932",
         "kieltolaki Suomessa 1919–1932",
@@ -19168,6 +19295,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomen_vaakuna",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen leijona",
         "leijona-symboli",
@@ -19193,6 +19321,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomen_EU-j%C3%A4senyys",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen liittyminen Euroopan unioniin 1995",
         "EU-jäsenyys 1995",
@@ -19219,6 +19348,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen liittyminen YK:hon",
         "Suomi liittyi YK:hon 1955",
@@ -19245,6 +19375,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mannerheimin syntymäpäivä 4. kesäkuuta",
         "Mannerheimin syntymäpäivä",
@@ -19284,6 +19415,7 @@
       "source_license": "not_required",
       "source_work": "Official Finnish military ranks",
       "source_work_key": "mnemosyne.fi.work.official_finnish_military_ranks",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen marsalkka",
         "marsalkka Mannerheim"
@@ -19349,6 +19481,7 @@
       "source_url": "https://www.finlex.fi/fi/laki/alkup/1921/19210678",
       "source_work": "Oppivelvollisuuslaki",
       "source_work_key": "mnemosyne.fi.work.oppivelvollisuuslaki",
+      "subcategory": "historical",
       "surface_patterns": [
         "oppivelvollisuuslain käyttöönotto vuonna 1921",
         "oppivelvollisuuslain voimaantulo 1921",
@@ -19376,6 +19509,7 @@
       "source_url": "https://finland.fi/history/independence/",
       "source_work": "Various (historical studies)",
       "source_work_key": "mnemosyne.fi.work.various_historical_studies",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen osallistuminen ensimmäiseen maailmansotaan 1914–1918",
         "Suomi ensimmäisessä maailmansodassa",
@@ -19402,6 +19536,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Rauhanturvaaminen",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen osallistuminen kansainväliseen rauhanturvaamiseen ensimmäisten tehtävien myötä 1956",
         "Suomen rauhanturvaamistehtävät 1956",
@@ -19427,6 +19562,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomen_YK-j%C3%A4senyys",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen YK-jäsenyys 1955",
         "Suomen YK:n jäsenyys 1955",
@@ -19452,6 +19588,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Porvoon_valtiopäivät",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen senaatin perustaminen",
         "senaatin perustaminen 1809",
@@ -19491,6 +19628,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen sinivalkoinen",
         "sinivalkoinen Suomi",
@@ -19516,6 +19654,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Sis%C3%A4llissota_(Suomi)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "sisällissodan jälkeinen jako",
         "valkoiset ja punaiset",
@@ -19542,6 +19681,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomen_sota",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen sodan päättyminen vuonna 1809",
         "Suomen sota päättyi 1809",
@@ -19568,6 +19708,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/J%C3%A4lleenrakennuskausi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "jälleenrakennuskausi",
         "sotien jälkeinen jälleenrakennuskausi",
@@ -19594,6 +19735,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Moskovan_aselepo",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen sotien päättyminen 1944",
         "aselepo 1944",
@@ -19621,6 +19763,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomen_suuriruhtinaskunta",
       "source_work": "Suomen historia 1809–1917",
       "source_work_key": "mnemosyne.fi.work.suomen_historia_1809_1917",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen suuriruhtinaskunnan aika 1809–1917",
         "Suomen suuriruhtinaskunta 1809–1917",
@@ -19647,6 +19790,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Senaatti_(Suomi)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomen suuriruhtinaskunnan senaatin perustaminen 1816",
         "Suomen senaatin perustaminen 1816",
@@ -19674,6 +19818,7 @@
       "source_url": "https://www.helsinki.fi/en/university/history",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Suomenkielinen yliopisto 1828",
         "Helsingin yliopisto suomenkielisenä 1828",
@@ -19700,6 +19845,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Ars_(taiden%C3%A4yttely)",
       "source_work": "Ars exhibitions",
       "source_work_key": "mnemosyne.fi.work.ars_exhibitions",
+      "subcategory": "historical",
       "surface_patterns": [
         "Taideyhdistys Ars",
         "Ars-näyttelyt",
@@ -19777,6 +19923,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Taito_M%C3%A4kinen",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Taito Mäkisen 'Suomalainen tanssi' -kansantanssin kuvaus",
         "'Suomalainen tanssi' -kansantanssin kuvaus",
@@ -19816,6 +19963,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "sananlasku",
       "surface_patterns": [
         "taivaanrannan maalari",
         "taivaanrannanmaalaaja",
@@ -19854,6 +20002,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Talin–Ihantalan taistelu",
         "Tali-Ihantalan taistelu",
@@ -19891,6 +20040,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Talonpoikaiskapina 1597",
         "vuoden 1597 talonpoikaiskapina",
@@ -19929,6 +20079,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Talonpoikaismarssi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Talonpoikaismarssi",
         "talonpoikais-marssi",
@@ -19967,6 +20118,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Talonpojan oikeus",
         "oikeus talonpojalle",
@@ -20006,6 +20158,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Talvisodan_henki",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Talvisodan henki",
         "Talvisodan hengen"
@@ -20044,6 +20197,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Talvisodan_ihme",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Talvisodan ihme",
         "Talvisodan ihmeen",
@@ -20069,6 +20223,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Talvisota",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Talvisodan päättyminen 13. maaliskuuta 1940",
         "Talvisodan loppu 13. maaliskuuta 1940",
@@ -20095,6 +20250,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Tampereen_taistelu",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Tampereen taistelu",
         "Tampereen taistelu 1918",
@@ -20121,6 +20277,7 @@
       "source_url": "https://kansanlaulut.fi/laulu/tanssiva-kissa",
       "source_work": "Tanssiva kissa",
       "source_work_key": "mnemosyne.fi.work.tanssiva_kissa",
+      "subcategory": "music",
       "surface_patterns": [
         "tanssiva kissa",
         "Tanssiva kissa -sävelmä",
@@ -20151,6 +20308,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Tapio_Wirkkala",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Tapio Wirkkalan lasitetut lasityöt",
         "Wirkkalan lasityöt",
@@ -20177,6 +20335,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "kalevala",
       "surface_patterns": [
         "Tapiola",
         "Tapiolan metsä",
@@ -20215,6 +20374,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Tapiolan tanhuilla",
         "Tapiolan tansseissa",
@@ -20325,6 +20485,7 @@
       "source_url": "https://finlex.fi/fi/ajantasa/1920/19200002",
       "source_work": "Tarton rauha",
       "source_work_key": "mnemosyne.fi.work.tarton_rauha",
+      "subcategory": "historical",
       "surface_patterns": [
         "Tarton rauha 1920",
         "Suomen ja Venäjän välinen raja",
@@ -20350,6 +20511,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Tarton rauhan solmiminen",
         "Tarton rauha 14. lokakuuta 1920",
@@ -20376,6 +20538,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Tarton_rauha",
       "source_work": "Tarton rauha",
       "source_work_key": "mnemosyne.fi.work.tarton_rauha",
+      "subcategory": "historical",
       "surface_patterns": [
         "sotien jälkeinen rauha"
       ]
@@ -20427,6 +20590,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Muumi",
       "source_work": "Various (Moomin series)",
       "source_work_key": "mnemosyne.fi.work.various_moomin_series",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Tove Janssonin Muumi-hahmot",
         "Muumi-hahmot",
@@ -20453,6 +20617,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Aleksanteri_II:n_murha",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Aleksanteri II:n murha",
         "Aleksanteri II:n salamurha",
@@ -20571,6 +20736,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Tuntematon_sotilas_(elokuva,_1955)",
       "source_work": "Tuntematon sotilas (The Unknown Soldier)",
       "source_work_key": "mnemosyne.fi.work.tuntematon_sotilas_the_unknown_soldier",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "'Tuntematon sotilas' -elokuvamusiikki",
         "Tuntemattoman sotilaan elokuvamusiikki",
@@ -20597,6 +20763,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Tuntematon_sotilas_(romaani)",
       "source_work": "Tuntematon sotilas",
       "source_work_key": "mnemosyne.fi.work.tuntematon_sotilas",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Tuntematon sotilas -elokuva",
         "Tuntematon sotilas -sotaelokuva"
@@ -20774,6 +20941,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Turun palo 1827",
         "Turun palo"
@@ -20798,6 +20966,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Turun_palo_1827",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Turun suuri palo",
         "Turun palo vuonna 1827",
@@ -21021,6 +21190,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Valtioneuvosto",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Valtioneuvoston perustaminen 1917",
         "Valtioneuvosto perustettiin 1917",
@@ -21047,6 +21217,7 @@
       "source_url": "https://kansanlaulut.fi/kehtolaulut",
       "source_work": "Various / Oral tradition",
       "source_work_key": "mnemosyne.fi.work.various_oral_tradition",
+      "subcategory": "music",
       "surface_patterns": [
         "vanhanaikainen kehtolaulu",
         "vanhanaikainen kehtolaulu -sävelmä",
@@ -21144,6 +21315,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Vapaudenristi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Vapauden risti",
         "Vapaudenristi"
@@ -21274,6 +21446,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Viaporin kapina",
         "Viaporin kapina 1906"
@@ -21298,6 +21471,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Suomenlinna#Viaporin_antautuminen_1855",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Viaporin linnoituksen antautuminen",
         "Viaporin antautuminen 1855",
@@ -21324,6 +21498,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "vieras mies",
         "vieras mies tuli kylään",
@@ -21348,6 +21523,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "sananlasku",
       "surface_patterns": [
         "Voi hyvänen aika!",
         "Voi hyvänen!",
@@ -21387,6 +21563,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "Voi voi, pojat",
         "Voi voi pojat",
@@ -21544,6 +21721,7 @@
       "source_url": "https://fi.wikipedia.org/wiki/Lauluja_Karjalan_kannakselta",
       "source_work": "Lauluja Karjalan kannakselta",
       "source_work_key": "mnemosyne.fi.work.lauluja_karjalan_kannakselta",
+      "subcategory": "music",
       "surface_patterns": [
         "Yrjö Kilpisen 'Lauluja Karjalan kannakselta' -laulusarja",
         "'Lauluja Karjalan kannakselta' -laulusarja",
@@ -21652,6 +21830,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "aarre haudattuna",
         "aarre on haudattuna",
@@ -24304,6 +24483,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "ihmeellinen matka",
         "ihmeellisen matkan"
@@ -24665,6 +24845,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.fi.explanation.kalevala_cultural_phrases_ilmarisen_paja_tulen_ja_",
       "id": "fi_literary_reference_ilmarisen_paja_tulen_ja_luomisen_tyyssija_9e4ca0ea",
+      "is_poetic_citation": true,
       "language": "fi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -24678,6 +24859,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Kalevala",
       "source_work": "Kalevala",
       "source_work_key": "mnemosyne.fi.work.kalevala",
+      "subcategory": "kalevala",
       "surface_patterns": [
         "tulen pajassa",
         "luomisen tyyssija",
@@ -26515,6 +26697,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/435",
       "source_work": "Kauhea murhamies",
       "source_work_key": "mnemosyne.fi.work.kauhea_murhamies",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Kauhea murhamies",
         "Kauhea murhamies -romaani",
@@ -28645,6 +28828,7 @@
       "source_license": "not_required",
       "source_work": "Kurittomat laulut",
       "source_work_key": "mnemosyne.fi.work.kurittomat_laulut",
+      "subcategory": "music",
       "surface_patterns": [
         "Kurittomat laulut"
       ]
@@ -29935,6 +30119,7 @@
       "source_url": "https://fi.wikisource.org/wiki/V%C3%A4nrikki_Stoolin_tarinat/Lotta_Sv%C3%A4rd",
       "source_work": "Vänrikki Stoolin tarinat",
       "source_work_key": "mnemosyne.fi.work.vänrikki_stoolin_tarinat",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Lotta Svärd",
         "Lotta-sisaret",
@@ -30899,6 +31084,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/5403",
       "source_work": "Tuntematon sotilas",
       "source_work_key": "mnemosyne.fi.work.tuntematon_sotilas",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Minun täytyy lähteä",
         "Täytyy lähteä",
@@ -34356,6 +34542,7 @@
       "source_url": "https://fi.wikisource.org/wiki/Tulitikkuja_lainaamassa",
       "source_work": "Tulitikkuja lainaamassa",
       "source_work_key": "mnemosyne.fi.work.tulitikkuja_lainaamassa",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Tulitikkuja lainaamassa",
         "mennä tulitikkuja lainaamaan",
@@ -38493,6 +38680,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fi.work.various",
+      "subcategory": "sananlasku",
       "surface_patterns": [
         "Kantoja kantaa, kunnes paljaaksi kuluu",
         "Kantoja kantaa, kunnes kuluu paljaaksi",

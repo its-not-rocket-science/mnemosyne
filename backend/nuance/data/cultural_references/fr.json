@@ -538,6 +538,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.french_national_symbols_allons_enfants_courage",
       "id": "fr_classical_or_scriptural_allusion_allons_enfants_courage_4a9af7c6",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -552,6 +553,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/La_Marseillaise",
       "source_work": "La Marseillaise",
       "source_work_key": "mnemosyne.fr.work.la_marseillaise",
+      "subcategory": "music",
       "surface_patterns": [
         "Allons, enfants, courage !",
         "Allons enfants, courage !",
@@ -1362,6 +1364,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0001%3Abook%3D7",
       "source_work": "Commentaries on the Gallic Wars",
       "source_work_key": "mnemosyne.fr.work.commentaries_on_the_gallic_wars",
+      "subcategory": "historical",
       "surface_patterns": [
         "le Bouclier de Brennus",
         "bouclier de Brennus"
@@ -4738,6 +4741,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Dictionnaire_de_musique",
       "source_work": "Dictionnaire de musique",
       "source_work_key": "mnemosyne.fr.work.dictionnaire_de_musique",
+      "subcategory": "music",
       "surface_patterns": [
         "La musique est le langage universel de l’âme",
         "La musique, langage universel de l’âme",
@@ -4874,6 +4878,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Monadologie",
       "source_work": "Monadologie",
       "source_work_key": "mnemosyne.fr.work.monadologie",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "la raison suffisante",
         "principe de raison suffisante",
@@ -5078,6 +5083,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Du_Contrat_social",
       "source_work": "Du Contrat Social",
       "source_work_key": "mnemosyne.fr.work.du_contrat_social",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "la volonté générale",
         "volonté générale",
@@ -5103,6 +5109,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "La vérité est le but de la philosophie",
         "La vérité est le but de la philosophie, non son point de départ"
@@ -7929,6 +7936,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Th%C3%A9orie_des_sentiments_moraux",
       "source_work": "Théorie des sentiments moraux",
       "source_work_key": "mnemosyne.fr.work.théorie_des_sentiments_moraux",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "main invisible de la Providence",
         "la main invisible de la Providence"
@@ -8934,6 +8942,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0084:card=1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "greek_mythology",
       "surface_patterns": [
         "se perdre dans un labyrinthe",
         "perdre son chemin dans un labyrinthe",
@@ -13083,6 +13092,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Allumez les lustres !",
         "les lustres s'allument"
@@ -13461,6 +13471,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Au_clair_de_la_lune",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "music",
       "surface_patterns": [
         "Au clair de la lune",
         "la chanson Au clair de la lune"
@@ -14311,6 +14322,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_la_t%C3%AAte_sur_les_%C3%A9paules",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "avoir la tête sur les épaules"
       ]
@@ -14802,6 +14814,7 @@
       "source_dataset": "fr_proverbs_tradition",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "avoir un polichinelle dans le tiroir",
         "avoir un polichinelle dans son tiroir",
@@ -14925,6 +14938,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Baiser_Lamourette",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Baiser Lamourette",
         "le baiser Lamourette"
@@ -15024,6 +15038,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "la beauté du diable",
         "une beauté du diable"
@@ -15048,6 +15063,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_des_beaux-arts",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Beaux-Arts",
         "école des Beaux-Arts",
@@ -15097,6 +15113,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Belle_%C3%89poque",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la Belle Époque",
         "Belle Époque",
@@ -15147,6 +15164,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Sc%C3%A8nes_de_la_vie_de_Boh%C3%A8me",
       "source_work": "Scènes de la vie de Bohème",
       "source_work_key": "mnemosyne.fr.work.scènes_de_la_vie_de_bohème",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "la Bohème",
         "vie de Bohème",
@@ -15236,6 +15254,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "boire une potion magique",
         "boire la potion magique",
@@ -15372,6 +15391,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Boulevard_du_crime",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Boulevard du crime",
         "les boulevards du crime"
@@ -15396,6 +15416,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "le bouquet final",
         "un bouquet final"
@@ -15541,6 +15562,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "la bête noire",
         "une bête noire"
@@ -15787,6 +15809,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Bataille_de_la_Bérézina",
       "source_work": "Historical event",
       "source_work_key": "mnemosyne.fr.work.historical_event",
+      "subcategory": "historical",
       "surface_patterns": [
         "C’est la Bérézina",
         "Ce fut la Bérézina",
@@ -15812,6 +15835,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "C'est la comédie !",
         "quelle comédie !"
@@ -15847,6 +15871,7 @@
       "source_dataset": "fr_proverbs_tradition",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "biblical",
       "surface_patterns": [
         "c'est la croix et la bannière",
         "faire la croix et la bannière",
@@ -15896,6 +15921,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "c'est la fin des vins",
         "c’est la fin des vins",
@@ -15973,6 +15999,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.fr.explanation.piaf_vie_en_rose_c_est_la_vie_en_rose",
       "id": "fr_cultural_reference_c_est_la_vie_en_rose_662dbb98",
+      "is_poetic_citation": true,
       "language": "fr",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -15986,6 +16013,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Vie_en_rose",
       "source_work": "La Vie en rose",
       "source_work_key": "mnemosyne.fr.work.la_vie_en_rose",
+      "subcategory": "music",
       "surface_patterns": [
         "la vie en rose"
       ]
@@ -16022,6 +16050,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/La_Vie_en_rose",
       "source_work": "La Vie en rose",
       "source_work_key": "mnemosyne.fr.work.la_vie_en_rose",
+      "subcategory": "music",
       "surface_patterns": [
         "C'est la vie en rose",
         "Voir la vie en rose",
@@ -16161,6 +16190,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Pierre_Cambronne",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "C’est magnifique !",
         "magnifique !",
@@ -16485,6 +16515,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/C%27est_si_bon",
       "source_work": "C'est si bon",
       "source_work_key": "mnemosyne.fr.work.c_est_si_bon",
+      "subcategory": "music",
       "surface_patterns": [
         "C'est si bon",
         "C'est si bon !"
@@ -16713,6 +16744,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Martyre_des_Carm%C3%A9lites_de_Compi%C3%A8gne",
       "source_work": "Various historical accounts",
       "source_work_key": "mnemosyne.fr.work.various_historical_accounts",
+      "subcategory": "historical",
       "surface_patterns": [
         "Carmélites de Compiègne",
         "les Carmélites de Compiègne",
@@ -16876,6 +16908,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Mai_68",
       "source_work": "Slogan politique",
       "source_work_key": "mnemosyne.fr.work.slogan_politique",
+      "subcategory": "historical",
       "surface_patterns": [
         "Ce n'est qu'un début, continuons le combat",
         "Ce n'est qu'un début, continuons le combat !"
@@ -17216,6 +17249,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Chemin_des_Dames",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le Chemin des Dames",
         "Chemin des Dames",
@@ -17337,6 +17371,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Chute_de_Constantinople",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la Chute de Constantinople",
         "chute de Constantinople",
@@ -17617,6 +17652,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Congrès_de_Vienne",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Congrès de Vienne",
         "le Congrès de Vienne",
@@ -17737,6 +17773,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Coup_d%27%C3%89tat_du_18_Brumaire",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Coup d'État du 18 Brumaire"
       ]
@@ -17963,6 +18000,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "Courir à bride abattue",
         "Partir à bride abattue",
@@ -18232,6 +18270,7 @@
       "source_url": "https://en.wikipedia.org/wiki/The_Duck_Dance",
       "source_work": "The Duck Dance",
       "source_work_key": "mnemosyne.fr.work.the_duck_dance",
+      "subcategory": "music",
       "surface_patterns": [
         "la danse des canards",
         "la danse du canard",
@@ -18332,6 +18371,7 @@
       "source_license": "public_domain",
       "source_work": "Speech to the National Convention",
       "source_work_key": "mnemosyne.fr.work.speech_to_the_national_convention",
+      "subcategory": "historical",
       "surface_patterns": [
         "De l'audace, encore de l'audace, toujours de l'audace",
         "De l'audace! encore de l'audace! toujours de l'audace!",
@@ -18382,6 +18422,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "Demain, ce sera pire !",
         "Demain, ça sera pire !",
@@ -18431,6 +18472,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Dernier_Tango_%C3%A0_Paris",
       "source_work": "Ultimo tango a Parigi",
       "source_work_key": "mnemosyne.fr.work.ultimo_tango_a_parigi",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Le Dernier Tango à Paris",
         "Dernier Tango à Paris",
@@ -18784,6 +18826,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Affaire_Dreyfus",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Affaire Dreyfus",
         "l'Affaire",
@@ -18834,6 +18877,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Bataille_de_Sedan",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Défaite de Sedan",
         "bataille de Sedan",
@@ -20041,6 +20085,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "Faire partie de la pièce",
         "Être partie de la pièce",
@@ -20444,6 +20489,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Femme_fatale",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "la femme fatale",
         "une femme fatale",
@@ -20494,6 +20540,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Femmes_peintres",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "les femmes peintres",
         "une femme peintre",
@@ -20713,6 +20760,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Fuite_%C3%A0_Varennes",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la fuite à Varennes",
         "fuite de Varennes",
@@ -20952,6 +21000,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Chroniques_de_Froissart",
       "source_work": "Chroniques",
       "source_work_key": "mnemosyne.fr.work.chroniques",
+      "subcategory": "historical",
       "surface_patterns": [
         "Guerre de Cent Ans",
         "la Guerre de Cent Ans",
@@ -20977,6 +21026,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Histoire_de_la_guerre_franco-allemande_de_1870-1871",
       "source_work": "Histoire de la guerre franco-allemande de 1870-1871",
       "source_work_key": "mnemosyne.fr.work.histoire_de_la_guerre_franco_allemande_de_1870_187",
+      "subcategory": "historical",
       "surface_patterns": [
         "Guerre franco-prussienne",
         "la guerre franco-prussienne",
@@ -21072,6 +21122,7 @@
       "source_url": "https://en.wiktionary.org/wiki/huis_clos",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "huis clos"
       ]
@@ -21744,6 +21795,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "Je vais lui faire une scène",
         "Il va me faire une scène",
@@ -21975,6 +22027,7 @@
       "source_url": "https://fr.wikisource.org/wiki/J%27accuse...!",
       "source_work": "J'accuse...!",
       "source_work_key": "mnemosyne.fr.work.j_accuse",
+      "subcategory": "historical",
       "surface_patterns": [
         "l'affaire Dreyfus",
         "le procès Dreyfus"
@@ -22024,6 +22077,7 @@
       "source_url": "https://fr.wikisource.org/wiki/M%C3%A9moires_de_M._de_Belloy",
       "source_work": "Mémoires",
       "source_work_key": "mnemosyne.fr.work.mémoires",
+      "subcategory": "historical",
       "surface_patterns": [
         "l'affaire du collier de la reine",
         "l'affaire du collier",
@@ -22397,6 +22451,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/L%E2%80%99art_pour_l%E2%80%99art",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "L’art pour l’art",
         "L'art pour l'art"
@@ -22860,6 +22915,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Discours_sur_l%E2%80%99origine_et_les_fondements_de_l%E2%80%99in%C3%A9galit%C3%A9_parmi_les_hommes",
       "source_work": "Discours sur l’origine et les fondements de l’inégalité parmi les hommes",
       "source_work_key": "mnemosyne.fr.work.discours_sur_l_origine_et_les_fondements_de_l_inég",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "l’état de nature",
         "état de nature",
@@ -22890,6 +22946,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Bataille_de_Marignan",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la bataille de Marignan",
         "Marignan",
@@ -22915,6 +22972,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Bataille_de_Valmy",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la bataille de Valmy",
         "Bataille de Valmy",
@@ -22941,6 +22999,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Bataille_de_Verdun",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la bataille de Verdun",
         "la Grande Bataille",
@@ -23055,6 +23114,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Guerre_civile_en_France",
       "source_work": "La Guerre civile en France",
       "source_work_key": "mnemosyne.fr.work.la_guerre_civile_en_france",
+      "subcategory": "historical",
       "surface_patterns": [
         "la Commune de Paris",
         "la Commune",
@@ -23108,6 +23168,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "les couleurs locales"
       ]
@@ -23352,6 +23413,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Fuite_%C3%A0_Varennes",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la fuite de Louis XVI",
         "Varennes"
@@ -23415,6 +23477,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Guerre_d%27Alg%C3%A9rie",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la guerre d'Algérie",
         "guerre d'Algérie",
@@ -23442,6 +23505,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Chroniques_de_Jean_Froissart",
       "source_work": "Chroniques",
       "source_work_key": "mnemosyne.fr.work.chroniques",
+      "subcategory": "historical",
       "surface_patterns": [
         "la guerre de Cent-Ans"
       ]
@@ -23491,6 +23555,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Ligne_bleue_des_Vosges",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la ligne bleue des Vosges",
         "la ligne bleue",
@@ -23516,6 +23581,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Loi_Falloux",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la loi Falloux",
         "Loi Falloux",
@@ -23541,6 +23607,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Loi_du_16_juin_1881",
       "source_work": "Loi du 16 juin 1881 (loi Ferry)",
       "source_work_key": "mnemosyne.fr.work.loi_du_16_juin_1881_loi_ferry",
+      "subcategory": "historical",
       "surface_patterns": [
         "la loi Ferry",
         "loi Ferry de 1881",
@@ -23591,6 +23658,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Gaia_Science",
       "source_work": "La Gaya Scienza (The Gay Science)",
       "source_work_key": "mnemosyne.fr.work.la_gaya_scienza_the_gay_science",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "la mort de Dieu",
         "la mort de Dieu est un concept",
@@ -23622,6 +23690,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Henri_IV_de_France#Assassinat",
       "source_work": "Various (contemporary accounts)",
       "source_work_key": "mnemosyne.fr.work.various_contemporary_accounts",
+      "subcategory": "historical",
       "surface_patterns": [
         "la mort d'Henri IV",
         "l'assassinat d'Henri IV",
@@ -23748,6 +23817,7 @@
       "source_url": "https://francearchives.fr/fr/archives-parlementaires",
       "source_work": "Archives parlementaires",
       "source_work_key": "mnemosyne.fr.work.archives_parlementaires",
+      "subcategory": "historical",
       "surface_patterns": [
         "la nuit du 4 août 1789",
         "nuit du 4 août",
@@ -23773,6 +23843,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Nuit_du_4_ao%C3%BBt_1789",
       "source_work": "Archives parlementaires de la Révolution française",
       "source_work_key": "mnemosyne.fr.work.archives_parlementaires_de_la_révolution_française",
+      "subcategory": "historical",
       "surface_patterns": [
         "la nuit du 4 août",
         "nuit du 4 août 1789",
@@ -23934,6 +24005,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Prise_de_la_Bastille",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la Bastille",
         "14 juillet 1789"
@@ -23958,6 +24030,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Rafle_du_V%C3%A9lodrome_d%27Hiver",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la rafle du Vél' d'Hiv'",
         "rafle du Vél' d'Hiv'",
@@ -23985,6 +24058,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la Restauration",
         "Restauration",
@@ -24010,6 +24084,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/R%C3%A9vocation_de_l%27%C3%A9dit_de_Nantes",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la révocation de l'édit de Nantes",
         "Révocation de l'édit de Nantes",
@@ -24035,6 +24110,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Massacre_de_la_Saint-Barth%C3%A9lemy",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la Saint-Barthélemy",
         "le massacre de la Saint-Barthélemy",
@@ -24457,6 +24533,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le 18 Brumaire",
         "18 brumaire",
@@ -24482,6 +24559,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Blocus_continentale",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le Blocus continental",
         "le système continental"
@@ -24539,6 +24617,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "un cadeau empoisonné",
         "le cadeau empoisonné",
@@ -24685,6 +24764,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Colin-maillard",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "le colin-maillard",
         "jouer au colin-maillard",
@@ -24710,6 +24790,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le Consulat",
         "Consulat",
@@ -24761,6 +24842,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Coup_d%27%C3%89tat_du_18_Brumaire",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le coup d'État du 18 Brumaire",
         "le coup d'État de Napoléon"
@@ -24785,6 +24867,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Coup_d%27%C3%89tat_du_2_d%C3%A9cembre_1851",
       "source_work": "Various (historical accounts)",
       "source_work_key": "mnemosyne.fr.work.various_historical_accounts",
+      "subcategory": "historical",
       "surface_patterns": [
         "le coup d'État du 2 décembre",
         "le 2 décembre 1851",
@@ -24963,6 +25046,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "despotisme éclairé",
         "despotisme des Lumières",
@@ -24988,6 +25072,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Histoire_de_la_R%C3%A9volution_fran%C3%A7aise",
       "source_work": "Histoire de la Révolution française",
       "source_work_key": "mnemosyne.fr.work.histoire_de_la_révolution_française",
+      "subcategory": "historical",
       "surface_patterns": [
         "le Directoire",
         "le régime du Directoire",
@@ -25013,6 +25098,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Discours_de_Bayeux",
       "source_work": "Discours de Bayeux",
       "source_work_key": "mnemosyne.fr.work.discours_de_bayeux",
+      "subcategory": "historical",
       "surface_patterns": [
         "le discours de Bayeux",
         "discours de Bayeux",
@@ -25038,6 +25124,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Appel_du_18_juin",
       "source_work": "Appel du 18 juin 1940",
       "source_work_key": "mnemosyne.fr.work.appel_du_18_juin_1940",
+      "subcategory": "historical",
       "surface_patterns": [
         "l'appel du 18 Juin",
         "le discours du 18 Juin",
@@ -25086,6 +25173,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Front_populaire_(France)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le Front populaire",
         "Front populaire",
@@ -25111,6 +25199,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Le_Grand_Si%C3%A8cle",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le Grand Siècle",
         "le siècle de Louis XIV",
@@ -25136,6 +25225,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/D%C3%A9barquement_de_Normandie",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le jour le plus long",
         "Jour le plus long"
@@ -25160,6 +25250,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Massacre_de_la_Saint-Barth%C3%A9lemy",
       "source_work": "Various (contemporary chronicles)",
       "source_work_key": "mnemosyne.fr.work.various_contemporary_chronicles",
+      "subcategory": "historical",
       "surface_patterns": [
         "le massacre des protestants"
       ]
@@ -25183,6 +25274,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Massacre_de_la_Saint-Valentin",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le Massacre de la Saint-Valentin",
         "le massacre de la Saint-Valentin de 1929",
@@ -25259,6 +25351,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "un pied de nez",
         "le pied de nez"
@@ -25307,6 +25400,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le Premier Empire",
         "Premier Empire",
@@ -25332,6 +25426,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le Printemps des peuples",
         "Printemps des peuples",
@@ -25435,6 +25530,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Le rideau tombe",
         "Le rideau est tombé",
@@ -25461,6 +25557,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Sacre_de_Napol%C3%A9on",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le sacre de Napoléon",
         "le couronnement de Napoléon",
@@ -25486,6 +25583,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Suaire_de_Turin",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "biblical",
       "surface_patterns": [
         "le Saint-Suaire",
         "Saint-Suaire",
@@ -25512,6 +25610,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Affaire_de_Panama",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "le scandale du canal de Panama",
         "scandale du canal de Panama",
@@ -25538,6 +25637,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Serment_du_Jeu_de_paume",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Jeu de Paume"
       ]
@@ -25780,6 +25880,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Trait%C3%A9_de_Versailles",
       "source_work": "Traité de Versailles",
       "source_work_key": "mnemosyne.fr.work.traité_de_versailles",
+      "subcategory": "historical",
       "surface_patterns": [
         "traité de 1919"
       ]
@@ -25803,6 +25904,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Trait%C3%A9_des_Pyr%C3%A9n%C3%A9es",
       "source_work": "Traité des Pyrénées",
       "source_work_key": "mnemosyne.fr.work.traité_des_pyrénées",
+      "subcategory": "historical",
       "surface_patterns": [
         "le traité des Pyrénées",
         "le traité de 1659",
@@ -25828,6 +25930,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Waterloo",
         "la bataille de Waterloo",
@@ -25961,6 +26064,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "les Cent-Jours",
         "cent jours",
@@ -26147,6 +26251,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Guerres_de_Religion_(France)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "les Guerres de Religion",
         "les guerres de religion en France",
@@ -26294,6 +26399,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Trente_Glorieuses",
       "source_work": "Les Trente Glorieuses, ou la révolution invisible de 1946 à 1975",
       "source_work_key": "mnemosyne.fr.work.les_trente_glorieuses_ou_la_révolution_invisible_d",
+      "subcategory": "historical",
       "surface_patterns": [
         "les Trente Glorieuses",
         "Trente Glorieuses",
@@ -26332,6 +26438,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Les Trois Glorieuses",
         "Trois Glorieuses"
@@ -26535,6 +26642,7 @@
       "source_url": "https://www.soundofmusic.com/lyrics/my-world/",
       "source_work": "Musical *The Sound of Music*",
       "source_work_key": "mnemosyne.fr.work.musical_the_sound_of_music",
+      "subcategory": "music",
       "surface_patterns": [
         "live in a world of my own",
         "living in a world of my own",
@@ -26608,6 +26716,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Mai_68",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "les événements de Mai 68",
         "Mai 68 en France",
@@ -26837,6 +26946,7 @@
       "source_license": "public_domain",
       "source_work": "Historical anecdote",
       "source_work_key": "mnemosyne.fr.work.historical_anecdote",
+      "subcategory": "historical",
       "surface_patterns": [
         "Messieurs les Anglais, tirez les premiers!",
         "Messieurs les Anglais tirez les premiers",
@@ -26993,6 +27103,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/mettre_les_pieds_dans_le_plat",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "mettre les pieds dans le plat",
         "il a mis les pieds dans le plat",
@@ -27330,6 +27441,7 @@
       "source_url": "https://en.wiktionary.org/wiki/neuvi%C3%A8me_art",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "neuvième art"
       ]
@@ -28176,6 +28288,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Peindre la nature comme elle est",
         "Peindre la nature telle qu'elle est",
@@ -28238,6 +28351,7 @@
       "source_url": "https://www.linternaute.fr/dictionnaire/fr/definition/pendre-la-cremaillere/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "pendre la crémaillère",
         "pendre sa crémaillère",
@@ -29175,6 +29289,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "Que le spectacle commence !",
         "Que le spectacle commence",
@@ -29717,6 +29832,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Trait%C3%A9_%C3%A9l%C3%A9mentaire_de_chimie",
       "source_work": "Traité élémentaire de chimie",
       "source_work_key": "mnemosyne.fr.work.traité_élémentaire_de_chimie",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "Rien ne se perd, rien ne se crée, tout se transforme",
         "rien ne se perd, rien ne se crée",
@@ -30595,6 +30711,7 @@
       "source_url": "https://en.wiktionary.org/wiki/taillable_et_corv%C3%A9able_%C3%A0_merci",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "historical",
       "surface_patterns": [
         "taillable et corvéable à merci"
       ]
@@ -31163,6 +31280,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Trait%C3%A9_de_Versailles",
       "source_work": "Traité de paix entre les puissances alliées et associées et l'Allemagne",
       "source_work_key": "mnemosyne.fr.work.traité_de_paix_entre_les_puissances_alliées_et_ass",
+      "subcategory": "historical",
       "surface_patterns": [
         "Traité de Versailles",
         "le Traité de Versailles"
@@ -31328,6 +31446,7 @@
       "source_url": "https://en.wiktionary.org/wiki/un_mauvais_ouvrier_a_toujours_de_mauvais_outils",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "un mauvais ouvrier a toujours de mauvais outils"
       ]
@@ -31637,6 +31756,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Vend%C3%A9miaire",
       "source_work": "Décret de la Convention nationale",
       "source_work_key": "mnemosyne.fr.work.décret_de_la_convention_nationale",
+      "subcategory": "historical",
       "surface_patterns": [
         "Vendémiaire",
         "le Vendémiaire",
@@ -31744,6 +31864,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Vive la France!",
         "Vive la France"
@@ -32088,6 +32209,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "à l'usure",
         "gagner à l'usure",
@@ -32202,6 +32324,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "À la manière de...",
         "À la manière de [auteur/artiste]",
@@ -32444,6 +32567,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/%C3%89dit_de_Nantes",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Édit de Nantes",
         "l'Édit de Nantes",
@@ -32469,6 +32593,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Mai_68",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Mai 68",
         "les émeutes de 1968",
@@ -32496,6 +32621,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Affaire_des_poisons",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "l'affaire des Poisons",
         "l'épisode des Poisons",
@@ -32549,6 +32675,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/%C3%89tats_g%C3%A9n%C3%A9raux_de_1789",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "les États généraux de 1789",
         "États généraux",
@@ -34990,6 +35117,7 @@
       "source_url": "https://www.cnrtl.fr/definition/guerre",
       "source_work": "Ancien français legal texts",
       "source_work_key": "mnemosyne.fr.work.ancien_français_legal_texts",
+      "subcategory": "historical",
       "surface_patterns": [
         "De guerre lasse",
         "à la guerre lasse"
@@ -36157,6 +36285,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Discours_de_la_m%C3%A9thode",
       "source_work": "Discours de la méthode",
       "source_work_key": "mnemosyne.fr.work.discours_de_la_méthode",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "je pense donc je suis",
         "je pense, donc je suis",
@@ -36510,6 +36639,7 @@
       "source_url": "https://fr.wikisource.org/wiki/De_l%27esprit_des_lois",
       "source_work": "De l'esprit des lois",
       "source_work_key": "mnemosyne.fr.work.de_l_esprit_des_lois",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "L'Esprit des lois",
         "De l'esprit des lois"
@@ -36939,6 +37069,7 @@
       "source_url": "https://fr.wikisource.org/wiki/L%E2%80%99Homme_Machine",
       "source_work": "L'Homme Machine",
       "source_work_key": "mnemosyne.fr.work.l_homme_machine",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "l'homme machine",
         "l'homme-machine",
@@ -37144,6 +37275,7 @@
       "source_url": "https://fr.wikisource.org/wiki/%C3%89mile_ou_De_l%E2%80%99%C3%A9ducation",
       "source_work": "Émile ou De l'éducation",
       "source_work_key": "mnemosyne.fr.work.émile_ou_de_l_éducation",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "L'éducation doit former l'homme",
         "L'éducation doit former l'homme dans sa totalité",
@@ -37561,6 +37693,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Com%C3%A9die_humaine",
       "source_work": "La Comédie humaine",
       "source_work_key": "mnemosyne.fr.work.la_comédie_humaine",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "La Comédie humaine est un miroir",
         "La comédie humaine, miroir de la société",
@@ -37959,6 +38092,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Discours_sur_l%E2%80%99origine_et_les_fondements_de_l%E2%80%99in%C3%A9galit%C3%A9_parmi_les_hommes",
       "source_work": "Discours sur l'origine et les fondements de l'inégalité parmi les hommes",
       "source_work_key": "mnemosyne.fr.work.discours_sur_l_origine_et_les_fondements_de_l_inég",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "la perfectibilité",
         "une perfectibilité",
@@ -38167,6 +38301,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Pens%C3%A9es_(%C3%A9d._Brunschvicg)/Fragment_199",
       "source_work": "Pensées",
       "source_work_key": "mnemosyne.fr.work.pensées",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "La raison pure ne suffit pas pour comprendre le monde",
         "La raison pure est insuffisante pour comprendre le monde",
@@ -38589,6 +38724,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Du_Contrat_social",
       "source_work": "Du Contrat Social",
       "source_work_key": "mnemosyne.fr.work.du_contrat_social",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "Le contrat social",
         "un contrat social",
@@ -38693,6 +38829,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Le_Dernier_Homme",
       "source_work": "Le Dernier Homme",
       "source_work_key": "mnemosyne.fr.work.le_dernier_homme",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "le dernier homme",
         "le dernier des hommes"
@@ -38981,6 +39118,7 @@
       "source_url": "https://fr.wikisource.org/wiki/La_Religion_dans_les_limites_de_la_simple_raison",
       "source_work": "Die Religion innerhalb der Grenzen der bloßen Vernunft",
       "source_work_key": "mnemosyne.fr.work.die_religion_innerhalb_der_grenzen_der_blossen_ver",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "le mal radical",
         "un mal radical",
@@ -39392,6 +39530,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Esquisse_d%E2%80%99un_tableau_historique_des_progr%C3%A8s_de_l%E2%80%99esprit_humain",
       "source_work": "Esquisse d'un tableau historique des progrès de l'esprit humain",
       "source_work_key": "mnemosyne.fr.work.esquisse_d_un_tableau_historique_des_progrès_de_l_",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "le progrès fatal",
         "un progrès fatal",
@@ -39417,6 +39556,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "enlightenment",
       "surface_patterns": [
         "le progrès indéfini",
         "progrès indéfini",
@@ -42098,6 +42238,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/À_l%27Ouest,_rien_de_nouveau",
       "source_work": "Im Westen nichts Neues",
       "source_work_key": "mnemosyne.fr.work.im_westen_nichts_neues",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "À l’ouest rien de nouveau",
         "Rien de nouveau à l’ouest",
@@ -44297,6 +44438,7 @@
       "source_url": "https://www.linternaute.fr/dictionnaire/fr/definition/avoir-barre-sur/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "avoir barre sur quelqu’un",
         "prendre barre sur quelqu’un",
@@ -44603,6 +44745,7 @@
       "source_dataset": "oral_proverbs_fr",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "Avoir un grain de folie",
         "Il a un grain de folie",
@@ -44781,6 +44924,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fr.work.oral_tradition",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "il y a belle lurette",
         "depuis belle lurette",
@@ -45107,6 +45251,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/b%C3%AAte_comme_une_oie",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "Bête comme une oie",
         "Bête comme une oie blanche",
@@ -45638,6 +45783,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "C’est le monde à l’envers !",
         "C’est le monde sens dessus dessous !",
@@ -48078,6 +48224,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "ennuyeux comme la pluie",
         "ennuyeux comme une pluie d'automne",
@@ -48116,6 +48263,7 @@
       "source_url": "https://www.linternaute.fr/proverbes/10000/entre-la-poire-et-le-fromage/",
       "source_work": "Le Grand Robert de la langue française",
       "source_work_key": "mnemosyne.fr.work.le_grand_robert_de_la_langue_française",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "entre la poire et le fromage",
         "entre la poire et le fromage du dessert",
@@ -48269,6 +48417,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "Faire la balance",
         "Faire la balance entre",
@@ -48344,6 +48493,7 @@
       "source_url": "https://www.dictionnaire-academie.fr/article/A9F0960",
       "source_work": "Dictionnaire de l’Académie française",
       "source_work_key": "mnemosyne.fr.work.dictionnaire_de_l_académie_française",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "faire la fine bouche",
         "ne pas faire la fine bouche",
@@ -48576,6 +48726,7 @@
       "source_url": "https://www.dictionnaire-academie.fr/article/A9C1100",
       "source_work": "Dictionnaire de l'Académie française",
       "source_work_key": "mnemosyne.fr.work.dictionnaire_de_l_académie_française",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "faire ses choux gras de",
         "faire ses choux gras",
@@ -48898,6 +49049,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "il faut battre le fer tant qu’il est chaud",
         "battre le fer tant qu’il est chaud",
@@ -49634,6 +49786,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "jeter un pavé dans la mare",
         "jeter un pavé dans l'étang",
@@ -50374,6 +50527,7 @@
       "source_url": "https://fr.wiktionary.org/wiki/le_monde_est_petit",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "Le monde est petit",
         "Le monde est bien petit",
@@ -52447,6 +52601,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "trouver une aiguille dans un tas de foin",
         "trouver une aiguille dans du foin"
@@ -53751,6 +53906,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "proverbe",
       "surface_patterns": [
         "être fait comme un rat",
         "se faire prendre comme un rat"

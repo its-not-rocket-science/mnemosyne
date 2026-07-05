@@ -10,6 +10,7 @@
       "reference_type": "classical_or_scriptural_allusion",
       "register": "classical",
       "short_explanation": "A hidden threat inside something apparently harmless.",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "cavallo di Troia"
       ]
@@ -4718,6 +4719,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Il_gatto_con_gli_stivali",
       "source_work": "Le Maître chat ou le Chat botté",
       "source_work_key": "mnemosyne.it.work.le_maître_chat_ou_le_chat_botté",
+      "subcategory": "renaissance_literature",
       "surface_patterns": [
         "Il gatto con gli stivali",
         "Gatto con gli stivali"
@@ -4991,6 +4993,7 @@
       "source_url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0104%3Achapter%3D11",
       "source_work": "Vita di Teseo",
       "source_work_key": "mnemosyne.it.work.vita_di_teseo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "il letto di Procuste",
         "il letto di Procruste",
@@ -11333,6 +11336,7 @@
       "reference_type": "classical_or_scriptural_allusion",
       "register": "classical",
       "short_explanation": "A vulnerable point.",
+      "subcategory": "greek_tag",
       "surface_patterns": [
         "tallone d’Achille"
       ]
@@ -11349,6 +11353,7 @@
       "short_explanation": "A life of pleasure, glamour, or stylish ease.",
       "source_author": "Federico Fellini",
       "source_work": "La Dolce Vita",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "dolce vita"
       ]
@@ -12670,6 +12675,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.it_opera_phrases_aida_ritorna_vincitor",
       "id": "it_cultural_reference_aida_ritorna_vincitor_f3a88313",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -12684,6 +12690,7 @@
       "source_url": "https://www.wikisource.org/wiki/Aida",
       "source_work": "Aida",
       "source_work_key": "mnemosyne.it.work.aida",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "ritorna vincitor",
         "ritorna vincitore",
@@ -13502,6 +13509,7 @@
       "source_url": "https://www.treccani.it/vocabolario/alzare/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "Alzare il tiro",
         "Alzare il tiro di qualcosa",
@@ -14210,6 +14218,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Aprite le porte di Firenze",
         "Aprite le porte a Firenze",
@@ -14343,6 +14352,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/L%E2%80%99art_pour_l%E2%80%99art",
       "source_work": "L’arte per l’arte",
       "source_work_key": "mnemosyne.it.work.l_arte_per_l_arte",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Arte per l’arte",
         "L’arte per l’arte",
@@ -15275,6 +15285,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Bellini e il suo Vesuvio",
         "il Vesuvio di Bellini",
@@ -15380,6 +15391,7 @@
       "source_url": "https://it.wikipedia.org/wiki/La_nascita_di_Venere",
       "source_work": "La nascita di Venere",
       "source_work_key": "mnemosyne.it.work.la_nascita_di_venere",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "la Venere di Botticelli"
       ]
@@ -15403,6 +15415,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Primavera_(Botticelli)",
       "source_work": "Primavera",
       "source_work_key": "mnemosyne.it.work.primavera",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Primavera",
         "La Primavera di Botticelli"
@@ -15755,6 +15768,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Bacco_malato",
       "source_work": "Bacco malato",
       "source_work_key": "mnemosyne.it.work.bacco_malato",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Bacco malato",
         "Bacco ammalato",
@@ -15833,6 +15847,7 @@
       "source_url": "https://www.louvre.fr/en/oeuvre-notices/death-virgin",
       "source_work": "Morte della Vergine",
       "source_work_key": "mnemosyne.it.work.morte_della_vergine",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Morte della Vergine",
         "La Morte della Vergine"
@@ -15844,6 +15859,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.fr_opera_phrases_carmen_habanera",
       "id": "it_cultural_reference_carmen_habanera_02c453cc",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -15858,6 +15874,7 @@
       "source_url": "https://www.wikisource.org/wiki/Carmen",
       "source_work": "Carmen",
       "source_work_key": "mnemosyne.it.work.carmen",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "l'amore è un uccellino",
         "l'amore è un uccellino che nessuno può domare",
@@ -15906,6 +15923,7 @@
       "source_url": "https://en.wiktionary.org/wiki/Casa_Bianca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "historical",
       "surface_patterns": [
         "Casa Bianca"
       ]
@@ -16070,6 +16088,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cavare_un_ragno_dal_buco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "cavare un ragno dal buco"
       ]
@@ -16232,6 +16251,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cercare_il_pelo_nell%27uovo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "cercare il pelo nell'uovo"
       ]
@@ -16255,6 +16275,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cercare_un_ago_in_un_pagliaio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "cercare un ago in un pagliaio"
       ]
@@ -16279,6 +16300,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0153%3Abook%3D1%3Achapter%3D7",
       "source_work": "De Bello Civili",
       "source_work_key": "mnemosyne.it.work.de_bello_civili",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Cesare attraversa il Rubicone",
         "Il Rubicone di Cesare",
@@ -16365,6 +16387,7 @@
       "source_url": "https://it.wikisource.org/wiki/La_Boh%C3%A8me/Atto_primo",
       "source_work": "La Bohème",
       "source_work_key": "mnemosyne.it.work.la_bohème",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Che gelida manina",
         "Che gelida manina, se la lasci riscaldar"
@@ -16747,6 +16770,7 @@
       "source_url": "https://it.wikisource.org/wiki/Le_lettere_di_Cristoforo_Colombo",
       "source_work": "Diario di bordo",
       "source_work_key": "mnemosyne.it.work.diario_di_bordo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Colombo e il Nuovo Mondo",
         "Cristoforo Colombo e il Nuovo Mondo",
@@ -17245,6 +17269,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Cosa_Nostra",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Cosa nostra",
         "la Cosa nostra"
@@ -17256,6 +17281,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.it_opera_phrases_così_fan_tutte_soave_sia_il_vento",
       "id": "it_cultural_reference_così_fan_tutte_soave_sia_il_vento_06194aa9",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17270,6 +17296,7 @@
       "source_url": "https://www.wikisource.org/wiki/Cos%C3%AC_fan_tutte",
       "source_work": "Così fan tutte",
       "source_work_key": "mnemosyne.it.work.così_fan_tutte",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "soave sia il vento",
         "soave sia il vento, soave",
@@ -17487,6 +17514,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Dal Verrocchio al David",
         "dalla bottega del Verrocchio al David",
@@ -18456,6 +18484,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Natale_in_casa_Cupiello",
       "source_work": "Natale in casa Cupiello",
       "source_work_key": "mnemosyne.it.work.natale_in_casa_cupiello",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Natale in casa Cupiello",
         "Natale in casa Cupiello di De Filippo",
@@ -18528,6 +18557,7 @@
       "source_url": "https://en.wiktionary.org/wiki/del_senno_di_poi_son_piene_le_fosse",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "del senno di poi son piene le fosse"
       ]
@@ -19019,6 +19049,7 @@
       "source_url": "https://it.wikisource.org/wiki/La_gaia_scienza/125",
       "source_work": "La gaia scienza",
       "source_work_key": "mnemosyne.it.work.la_gaia_scienza",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Dio è morto",
         "Dio è morto!",
@@ -19044,6 +19075,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "dipingere con i colori del cielo",
         "usare i colori del cielo nella pittura",
@@ -19128,6 +19160,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.it_opera_phrases_don_giovanni_madamina_il_catalogo",
       "id": "it_cultural_reference_don_giovanni_madamina_il_catalogo_è_questo_2059f3a9",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19142,6 +19175,7 @@
       "source_url": "https://www.wikisource.org/wiki/Don_Giovanni",
       "source_work": "Don Giovanni",
       "source_work_key": "mnemosyne.it.work.don_giovanni",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "madamina, il catalogo è questo",
         "madamina, il catalogo è questo...",
@@ -19393,6 +19427,7 @@
       "source_license": "not_required",
       "source_work": "Attributed to Galileo Galilei (first recorded in later sources)",
       "source_work_key": "mnemosyne.it.work.attributed_to_galileo_galilei_first_recorded_in_la",
+      "subcategory": "historical",
       "surface_patterns": [
         "Eppur si muove",
         "eppure si muove"
@@ -21131,6 +21166,7 @@
       "source_url": "https://it.wikipedia.org/wiki/La_dolce_vita",
       "source_work": "La dolce vita",
       "source_work_key": "mnemosyne.it.work.la_dolce_vita",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "la dolce vita",
         "la vita dolce"
@@ -21165,6 +21201,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.rossini_barbiere_phrases_figaro_qui_figaro_là",
       "id": "it_cultural_reference_figaro_qui_figaro_là_e99ae4b6",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21179,6 +21216,7 @@
       "source_url": "https://www.gutenberg.org/files/67001/67001-h/67001-h.htm",
       "source_work": "Il barbiere di Siviglia",
       "source_work_key": "mnemosyne.it.work.il_barbiere_di_siviglia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Figaro qui, Figaro là",
         "Figaro qui e là",
@@ -21419,6 +21457,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Bernardino_da_Siena",
       "source_work": "Vite dei Santi",
       "source_work_key": "mnemosyne.it.work.vite_dei_santi",
+      "subcategory": "historical",
       "surface_patterns": [
         "San Bernardino",
         "Fra’ Giovanni da Fidenza",
@@ -21472,6 +21511,7 @@
         "zh": "意大利国歌，1847年由戈弗雷多·马梅利作词，米开朗基罗·诺瓦罗作曲。象征意大利统一与爱国主义。"
       },
       "id": "it_cultural_reference_fratelli_d_italia_3f802bbc",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution, surface patterns, and explanation are accurate and verifiable.",
@@ -21485,6 +21525,7 @@
       "source_url": "https://it.wikisource.org/wiki/Il_Canto_degli_Italiani",
       "source_work": "Il Canto degli Italiani",
       "source_work_key": "mnemosyne.it.work.il_canto_degli_italiani",
+      "subcategory": "historical",
       "surface_patterns": [
         "Fratelli d’Italia",
         "Fratelli d'Italia",
@@ -21753,6 +21794,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Spedizione_dei_Mille",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "i Mille di Garibaldi",
         "l’impresa dei Mille"
@@ -21801,6 +21843,7 @@
       "source_url": "https://www.gutenberg.org/files/25717/25717-h/25717-h.htm",
       "source_work": "Vite de' più eccellenti pittori, scultori, e architettori",
       "source_work_key": "mnemosyne.it.work.vite_de_più_eccellenti_pittori_scultori_e_architet",
+      "subcategory": "historical",
       "surface_patterns": [
         "Gattamelata",
         "il Gattamelata",
@@ -21938,6 +21981,7 @@
       "source_location": "1905 edition",
       "source_work": "Dizionario moderno",
       "source_work_key": "mnemosyne.it.work.dizionario_moderno",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "gettare la spugna",
         "aver gettato la spugna",
@@ -22035,6 +22079,7 @@
       "source_url": "https://en.wiktionary.org/wiki/gioco_delle_parti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "gioco delle parti"
       ]
@@ -22058,6 +22103,7 @@
       "source_license": "not_required",
       "source_work": "Storia d'Italia",
       "source_work_key": "mnemosyne.it.work.storia_d_italia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "l’età giolittiana",
         "Giolitti",
@@ -22111,6 +22157,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Inno_di_Giovinezza",
       "source_work": "Inno di Giovinezza",
       "source_work_key": "mnemosyne.it.work.inno_di_giovinezza",
+      "subcategory": "music",
       "surface_patterns": [
         "Giovinezza",
         "la Giovinezza",
@@ -22136,6 +22183,7 @@
       "source_url": "https://en.wiktionary.org/wiki/girare_a_vuoto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "girare a vuoto"
       ]
@@ -22159,6 +22207,7 @@
       "source_url": "https://en.wiktionary.org/wiki/girare_il_coltello_nella_piaga",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "girare il coltello nella piaga"
       ]
@@ -22182,6 +22231,7 @@
       "source_url": "https://en.wiktionary.org/wiki/girare_intorno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "girare intorno"
       ]
@@ -22205,6 +22255,7 @@
       "source_url": "https://en.wiktionary.org/wiki/giro_di_boa",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "giro di boa"
       ]
@@ -22228,6 +22279,7 @@
       "source_url": "https://en.wiktionary.org/wiki/giro_di_vite",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "giro di vite"
       ]
@@ -22251,6 +22303,7 @@
       "source_url": "https://en.wiktionary.org/wiki/gi%C3%B9_di_corda",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "giù di corda"
       ]
@@ -22274,6 +22327,7 @@
       "source_url": "https://en.wiktionary.org/wiki/grande_amore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "grande amore"
       ]
@@ -22297,6 +22351,7 @@
       "source_url": "https://en.wiktionary.org/wiki/guadagnare_terreno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "guadagnare terreno"
       ]
@@ -22320,6 +22375,7 @@
       "source_url": "https://en.wiktionary.org/wiki/guardare_in_faccia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "guardare in faccia"
       ]
@@ -22343,6 +22399,7 @@
       "source_url": "https://en.wiktionary.org/wiki/guardarsi_alle_spalle",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "guardarsi alle spalle"
       ]
@@ -22418,6 +22475,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "25 Aprile",
         "il 25 Aprile",
@@ -22456,6 +22514,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "2 Giugno",
         "il 2 Giugno",
@@ -22481,6 +22540,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Il_Bacio_(Klimt)",
       "source_work": "Il Bacio",
       "source_work_key": "mnemosyne.it.work.il_bacio",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Il Bacio di Klimt",
         "Bacio di Klimt"
@@ -22547,6 +22607,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.rossini_barbiere_phrases_il_barbiere_di_siviglia_u",
       "id": "it_cultural_reference_il_barbiere_di_siviglia_una_voce_poco_fa_607b70d5",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -22561,6 +22622,7 @@
       "source_url": "https://www.gutenberg.org/files/67001/67001-h/67001-h.htm",
       "source_work": "Il barbiere di Siviglia",
       "source_work_key": "mnemosyne.it.work.il_barbiere_di_siviglia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Una voce poco fa",
         "Una voce poco fa..."
@@ -22585,6 +22647,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Il_Battesimo_di_Cristo_(Piero_della_Francesca)",
       "source_work": "Il Battesimo di Cristo",
       "source_work_key": "mnemosyne.it.work.il_battesimo_di_cristo",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Il Battesimo di Cristo di Piero della Francesca",
         "Il Battesimo di Cristo",
@@ -22662,6 +22725,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Carnevale_di_Venezia",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "il carnevale di Venezia",
         "Carnevale di Venezia",
@@ -22688,6 +22752,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Concilio_di_Trento",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "il concilio di Trento",
         "Concilio di Trento",
@@ -22741,6 +22806,7 @@
       "source_url": "https://it.wikisource.org/wiki/Memorie_del_Congresso_di_Vienna",
       "source_work": "Memorie del Congresso di Vienna",
       "source_work_key": "mnemosyne.it.work.memorie_del_congresso_di_vienna",
+      "subcategory": "historical",
       "surface_patterns": [
         "il Congresso di Vienna",
         "il Congresso di Vienna e la Restaurazione",
@@ -22846,6 +22912,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Il_demonio_veste_Prada",
       "source_work": "Il demonio veste Prada",
       "source_work_key": "mnemosyne.it.work.il_demonio_veste_prada",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Il demonio veste Prada",
         "Il demonio veste Prada (film)",
@@ -22985,6 +23052,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "fascio littorio",
         "il fascio littorio"
@@ -23089,6 +23157,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Il_Giardino_delle_Delizie",
       "source_work": "Il Giardino delle Delizie",
       "source_work_key": "mnemosyne.it.work.il_giardino_delle_delizie",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Il Giardino delle Delizie di Bosch",
         "Il Giardino delle Delizie",
@@ -23162,6 +23231,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Il_Giudizio_Universale_(Michelangelo)",
       "source_work": "Il Giudizio Universale",
       "source_work_key": "mnemosyne.it.work.il_giudizio_universale",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Il Giudizio Universale",
         "Giudizio Universale",
@@ -23216,6 +23286,7 @@
       "source_url": "https://www.dmgh.de/de/fs1/object/display/bsb00000679_00189.html",
       "source_work": "Gesta Federici I imperatoris",
       "source_work_key": "mnemosyne.it.work.gesta_federici_i_imperatoris",
+      "subcategory": "historical",
       "surface_patterns": [
         "il giuramento di Pontida",
         "Giuramento di Pontida",
@@ -23370,6 +23441,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Mos%C3%A8_(Michelangelo)",
       "source_work": "Il Mosè",
       "source_work_key": "mnemosyne.it.work.il_mosè",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Il Mosè di Michelangelo",
         "Mosè di Michelangelo",
@@ -23549,6 +23621,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Principe_azzurro",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "il principe azzurro",
         "un principe azzurro",
@@ -23575,6 +23648,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Processo_a_Galileo_Galilei",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "il processo a Galileo Galilei",
         "Processo a Galileo",
@@ -23600,6 +23674,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Processo_di_Verona",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Processo di Verona",
         "il processo di Verona"
@@ -23664,6 +23739,7 @@
       "source_url": "https://www.galleriaaccademiafirenze.it/en/collections/il-ratto-delle-sabine/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Il Ratto delle Sabine di Giambologna",
         "il gruppo scultoreo di Giambologna"
@@ -23701,6 +23777,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "il Risorgimento",
         "Risorgimento"
@@ -23766,6 +23843,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "saluto romano",
         "il saluto romano",
@@ -23791,6 +23869,7 @@
       "source_url": "https://it.wikipedia.org/wiki/San_Giorgio_(Donatello)",
       "source_work": "Il San Giorgio",
       "source_work_key": "mnemosyne.it.work.il_san_giorgio",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Il San Giorgio di Donatello",
         "San Giorgio di Donatello",
@@ -23858,6 +23937,7 @@
       "source_url": "https://it.wikisource.org/wiki/Cos%C3%AC_parl%C3%B2_Zarathustra",
       "source_work": "Così parlò Zarathustra",
       "source_work_key": "mnemosyne.it.work.così_parlò_zarathustra",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "il superuomo",
         "superuomo",
@@ -24054,6 +24134,7 @@
       "source_url": "https://fr.wikisource.org/wiki/Correspondance_de_Napol%C3%A9on_Bonaparte/Tome_3",
       "source_work": "Correspondance de Napoléon Bonaparte",
       "source_work_key": "mnemosyne.it.work.correspondance_de_napoléon_bonaparte",
+      "subcategory": "historical",
       "surface_patterns": [
         "il trattato di Campoformio",
         "Trattato di Campoformio",
@@ -24092,6 +24173,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "tricolore",
         "il tricolore",
@@ -24144,6 +24226,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Il_Trionfo_della_Morte_(Palazzo_Abatellis)",
       "source_work": "Il Trionfo della Morte",
       "source_work_key": "mnemosyne.it.work.il_trionfo_della_morte",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Il Trionfo della Morte",
         "Trionfo della Morte di Palazzo Abatellis"
@@ -24260,6 +24343,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_alto_mare",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "in alto mare"
       ]
@@ -24283,6 +24367,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_altre_parole",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "in altre parole"
       ]
@@ -24306,6 +24391,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_arrivo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "in arrivo"
       ]
@@ -24329,6 +24415,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_assetto_di_guerra",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "in assetto di guerra"
       ]
@@ -24352,6 +24439,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_ballo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "in ballo"
       ]
@@ -24375,6 +24463,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_barba_a",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "in barba a"
       ]
@@ -24398,6 +24487,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_bilico",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "in bilico"
       ]
@@ -24446,6 +24536,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_cattive_acque",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "in cattive acque"
       ]
@@ -24745,6 +24836,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_pompa_magna",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "latin_tag",
       "surface_patterns": [
         "in pompa magna"
       ]
@@ -25219,6 +25311,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "8 settembre",
         "l'8 settembre"
@@ -25243,6 +25336,7 @@
       "source_url": "https://www.uffizi.it/en/artworks/adoration-of-the-magi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "L'Adorazione dei Magi di Gentile da Fabriano",
         "l'Adorazione dei Magi",
@@ -25310,6 +25404,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Zombi_2",
       "source_work": "Dawn of the Dead",
       "source_work_key": "mnemosyne.it.work.dawn_of_the_dead",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "l'alba dei morti viventi",
         "l'alba dei morti che camminano",
@@ -25398,6 +25493,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.donizetti_elisir_phrases_l_elisir_d_amore_una_furt",
       "id": "it_cultural_reference_l_elisir_d_amore_una_furtiva_lagrima_2238ba5e",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25412,6 +25508,7 @@
       "source_url": "https://imslp.org/wiki/L%27elisir_d%27amore_(Donizetti,_Gaetano)",
       "source_work": "L'elisir d'amore",
       "source_work_key": "mnemosyne.it.work.l_elisir_d_amore",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "Una furtiva lagrima negli occhi suoi spuntò"
       ]
@@ -25638,6 +25735,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Darkest_Hour",
       "source_work": "Darkest Hour",
       "source_work_key": "mnemosyne.it.work.darkest_hour",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "l'ora più buia",
         "l'ora più buia di",
@@ -25702,6 +25800,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Il_Cenacolo",
       "source_work": "Il Cenacolo",
       "source_work_key": "mnemosyne.it.work.il_cenacolo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "L'Ultima Cena",
         "Ultima Cena",
@@ -25822,6 +25921,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Battaglia_di_Vittorio_Veneto",
       "source_work": "Storia contemporanea italiana",
       "source_work_key": "mnemosyne.it.work.storia_contemporanea_italiana",
+      "subcategory": "historical",
       "surface_patterns": [
         "la battaglia di Vittorio Veneto",
         "Battaglia di Vittorio Veneto",
@@ -25922,6 +26022,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.puccini_la_boheme_phrases_la_bohème_che_gelida_man",
       "id": "it_cultural_reference_la_bohème_che_gelida_manina_d6519aaa",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -25936,6 +26037,7 @@
       "source_url": "https://imslp.org/wiki/La_Bohème_(Puccini,_Giacomo)",
       "source_work": "La Bohème",
       "source_work_key": "mnemosyne.it.work.la_bohème",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "Che gelida manina...",
         "La gelida manina"
@@ -26091,6 +26193,7 @@
       "source_url": "https://it.wikisource.org/wiki/Storia_della_Repubblica_di_Venezia",
       "source_work": "Storia della Repubblica di Venezia",
       "source_work_key": "mnemosyne.it.work.storia_della_repubblica_di_venezia",
+      "subcategory": "historical",
       "surface_patterns": [
         "la caduta della Repubblica di Venezia",
         "caduta della Repubblica di Venezia",
@@ -26117,6 +26220,7 @@
       "source_url": "https://en.wiktionary.org/wiki/la_ciliegina_sulla_torta",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "la ciliegina sulla torta"
       ]
@@ -26153,6 +26257,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Commedia_dell%27arte",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "la commedia dell’arte",
         "commedia dell’arte",
@@ -26178,6 +26283,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Commedia_dell%27arte",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "commedia dell’arte italiana",
         "commedia dell’arte del Cinquecento"
@@ -26202,6 +26308,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Congiura_dei_Pazzi",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la Congiura de’ Pazzi",
         "Congiura de’ Pazzi",
@@ -26255,6 +26362,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Croce_del_Sud",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "la croce del sud",
         "Croce del Sud"
@@ -26279,6 +26387,7 @@
       "source_url": "https://www.christusrex.org/www2/decem/21masaccio.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Crocifissione di Masaccio",
         "la Crocifissione",
@@ -26305,6 +26414,7 @@
       "source_url": "https://it.wikipedia.org/wiki/La_Dama_con_l%27ermellino",
       "source_work": "La Dama con l'ermellino",
       "source_work_key": "mnemosyne.it.work.la_dama_con_l_ermellino",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Dama con l'ermellino di Leonardo",
         "Dama con l'ermellino",
@@ -26357,6 +26467,7 @@
       "source_url": "https://it.wikipedia.org/wiki/La_Deposizione_dalla_croce_(Pontormo)",
       "source_work": "La Deposizione dalla Croce",
       "source_work_key": "mnemosyne.it.work.la_deposizione_dalla_croce",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Deposizione dalla Croce di Pontormo",
         "La Deposizione dalla Croce",
@@ -26466,6 +26577,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Disfida_di_Barletta",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Barletta"
       ]
@@ -26571,6 +26683,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Flagellazione_di_Cristo_(Piero_della_Francesca)",
       "source_work": "La Flagellazione di Cristo",
       "source_work_key": "mnemosyne.it.work.la_flagellazione_di_cristo",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Flagellazione di Cristo di Piero della Francesca",
         "Flagellazione di Cristo",
@@ -26596,6 +26709,7 @@
       "source_url": "https://it.wikipedia.org/wiki/La_Fornarina",
       "source_work": "La Fornarina",
       "source_work_key": "mnemosyne.it.work.la_fornarina",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Fornarina",
         "Fornarina di Raffaello"
@@ -26607,6 +26721,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.verdi_forza_del_destino_phrases_la_forza_del_desti",
       "id": "it_cultural_reference_la_forza_del_destino_pace_pace_mio_dio_5d866846",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -26621,6 +26736,7 @@
       "source_url": "https://www.gutenberg.org/files/67002/67002-h/67002-h.htm",
       "source_work": "La forza del destino",
       "source_work_key": "mnemosyne.it.work.la_forza_del_destino",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Pace, pace, mio Dio..."
       ]
@@ -26688,6 +26804,7 @@
       "source_location": "Louvre Museum, Paris",
       "source_work": "Mona Lisa (La Gioconda)",
       "source_work_key": "mnemosyne.it.work.mona_lisa_la_gioconda",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Gioconda",
         "La Giaconda",
@@ -26716,6 +26833,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Monna_Lisa",
       "source_work": "Monna Lisa",
       "source_work_key": "mnemosyne.it.work.monna_lisa",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Monna Lisa",
         "il sorriso della Gioconda",
@@ -26781,6 +26899,7 @@
       "source_license": "not_required",
       "source_work": "Historical event",
       "source_work_key": "mnemosyne.it.work.historical_event",
+      "subcategory": "historical",
       "surface_patterns": [
         "La marcia su Roma",
         "Marcia su Roma",
@@ -26806,6 +26925,7 @@
       "source_url": "https://it.wikipedia.org/wiki/La_Nascita_di_Venere_(Botticelli)",
       "source_work": "La Nascita di Venere",
       "source_work_key": "mnemosyne.it.work.la_nascita_di_venere",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Nascita di Venere",
         "Nascita di Venere",
@@ -26885,6 +27005,7 @@
       "source_url": "https://www.vatican.va/roman_curia/pontifical_commissions/archeo/it/documents/articolo_01_it.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Pietà di Michelangelo",
         "la Pietà",
@@ -26912,6 +27033,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Presa_della_Bastiglia",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la presa della Bastiglia",
         "presa della Bastiglia",
@@ -26979,6 +27101,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "presa di Roma",
         "la presa di Roma",
@@ -27005,6 +27128,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Presa_di_Roma",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Roma capitale"
       ]
@@ -27028,6 +27152,7 @@
       "source_url": "https://www.uffizi.it/en/artworks/la-primavera-spring",
       "source_work": "La Primavera",
       "source_work_key": "mnemosyne.it.work.la_primavera",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "il dipinto La Primavera di Botticelli",
         "il simbolo del Rinascimento fiorentino rappresentato da La Primavera di Botticelli"
@@ -27052,6 +27177,7 @@
       "source_url": "https://it.wikipedia.org/wiki/La_Primavera_(Botticelli)",
       "source_work": "La Primavera",
       "source_work_key": "mnemosyne.it.work.la_primavera",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Primavera",
         "Primavera di Botticelli",
@@ -27090,6 +27216,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la Resistenza",
         "Resistenza"
@@ -27114,6 +27241,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Sacra_Famiglia_(Michelangelo)",
       "source_work": "La Sacra Famiglia",
       "source_work_key": "mnemosyne.it.work.la_sacra_famiglia",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Sacra Famiglia di Michelangelo",
         "Sacra Famiglia di Michelangelo",
@@ -27139,6 +27267,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Scoperta_dell%27America",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "scoperta dell'America",
         "Cristoforo Colombo America",
@@ -27206,6 +27335,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "spedizione dei Mille",
         "la spedizione dei Mille",
@@ -27286,6 +27416,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Trasfigurazione_(Raffaello)",
       "source_work": "La Trasfigurazione",
       "source_work_key": "mnemosyne.it.work.la_trasfigurazione",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Trasfigurazione di Raffaello",
         "La Trasfigurazione",
@@ -27323,6 +27454,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.verdi_la_traviata_phrases_la_traviata_libiamo_ne_l",
       "id": "it_cultural_reference_la_traviata_libiamo_ne_lieti_calici_abf3f5d8",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "A1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27337,6 +27469,7 @@
       "source_url": "https://imslp.org/wiki/La_traviata_(Verdi,_Giuseppe)",
       "source_work": "La Traviata",
       "source_work_key": "mnemosyne.it.work.la_traviata",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "Libiamo ne' lieti calici!",
         "Libiamo!",
@@ -27417,6 +27550,7 @@
       "source_url": "https://it.wikipedia.org/wiki/La_Vocazione_di_San_Matteo",
       "source_work": "La Vocazione di San Matteo",
       "source_work_key": "mnemosyne.it.work.la_vocazione_di_san_matteo",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "La Vocazione di San Matteo",
         "Vocazione di San Matteo",
@@ -27731,6 +27865,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Cinque_Giornate_di_Milano",
       "source_work": "Various (historical accounts)",
       "source_work_key": "mnemosyne.it.work.various_historical_accounts",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Cinque Giornate di Milano",
         "le cinque giornate",
@@ -27756,6 +27891,7 @@
       "source_url": "https://it.wikisource.org/wiki/Le_Cinque_Giornate_di_Milano",
       "source_work": "Le Cinque Giornate di Milano",
       "source_work_key": "mnemosyne.it.work.le_cinque_giornate_di_milano",
+      "subcategory": "historical",
       "surface_patterns": [
         "Le Cinque Giornate di Milano",
         "le cinque giornate milanesi"
@@ -27780,6 +27916,7 @@
       "source_url": "https://it.wikisource.org/wiki/Categoria:Crociate",
       "source_work": "Various medieval chronicles",
       "source_work_key": "mnemosyne.it.work.various_medieval_chronicles",
+      "subcategory": "historical",
       "surface_patterns": [
         "le crociate",
         "Crociate",
@@ -27861,6 +27998,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Repubbliche_marinare",
       "source_work": "Storia delle repubbliche marinare",
       "source_work_key": "mnemosyne.it.work.storia_delle_repubbliche_marinare",
+      "subcategory": "historical",
       "surface_patterns": [
         "le repubbliche marinare",
         "Repubbliche marinare",
@@ -27990,6 +28128,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Leone_X",
       "source_work": "Various (historical and theological texts)",
       "source_work_key": "mnemosyne.it.work.various_historical_and_theological_texts",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Leone X e la Riforma protestante",
         "papa Leone X e Lutero",
@@ -28140,6 +28279,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Scisma_d%27Oriente",
       "source_work": "Various historical and theological sources",
       "source_work_key": "mnemosyne.it.work.various_historical_and_theological_sources",
+      "subcategory": "historical",
       "surface_patterns": [
         "lo scisma d'Oriente",
         "Scisma d'Oriente",
@@ -28449,6 +28589,7 @@
       "source_url": "https://www.gutenberg.org/files/1515/1515-h/1515-h.htm#page15",
       "source_work": "Madama Butterfly",
       "source_work_key": "mnemosyne.it.work.madama_butterfly",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Un bel dì, un bel dì vedremo"
       ]
@@ -28651,6 +28792,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.it.explanation.boito_mefistofele_phrases_mefistofele_ave_signor",
       "id": "it_cultural_reference_mefistofele_ave_signor_b70cfedc",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -28665,6 +28807,7 @@
       "source_url": "https://www.gutenberg.org/files/67003/67003-h/67003-h.htm",
       "source_work": "Mefistofele",
       "source_work_key": "mnemosyne.it.work.mefistofele",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Ave Signor",
         "Ave Signore",
@@ -29337,6 +29480,7 @@
       "source_url": "https://www.treccani.it/vocabolario/pulce",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "Mettere la pulce nell’orecchio",
         "Mettere una pulce nell’orecchio",
@@ -30168,6 +30312,7 @@
       "source_url": "https://it.wikisource.org/wiki/Autore:Emmanuel_de_Las_Cases",
       "source_work": "Mémorial de Sainte-Hélène",
       "source_work_key": "mnemosyne.it.work.mémorial_de_sainte_hélène",
+      "subcategory": "historical",
       "surface_patterns": [
         "il soggiorno di Napoleone a Sant'Elena"
       ]
@@ -30191,6 +30336,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Battaglia_di_Waterloo",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Napoleone a Waterloo",
         "Battaglia di Waterloo",
@@ -30401,6 +30547,7 @@
       "source_url": "https://it.wikisource.org/wiki/Turandot/Atto_terzo",
       "source_work": "Turandot",
       "source_work_key": "mnemosyne.it.work.turandot",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Nessun dorma",
         "Nessun dorma, nessun dorma"
@@ -30724,6 +30871,7 @@
       "source_url": "https://www.treccani.it/enciclopedia/non-vedere-l-ora_(La-grammatica-italiana)/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "Non vedere l’ora",
         "Non vedo l’ora",
@@ -30737,6 +30885,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.bellini_norma_phrases_norma_casta_diva",
       "id": "it_cultural_reference_norma_casta_diva_366732b5",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -30751,6 +30900,7 @@
       "source_url": "https://www.gutenberg.org/files/69781/69781-h/69781-h.htm",
       "source_work": "Norma",
       "source_work_key": "mnemosyne.it.work.norma",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "la casta diva"
       ]
@@ -30839,6 +30989,7 @@
       "source_url": "https://it.wikisource.org/wiki/O_sole_mio",
       "source_work": "O sole mio",
       "source_work_key": "mnemosyne.it.work.o_sole_mio",
+      "subcategory": "music",
       "surface_patterns": [
         "O sole mio",
         "'O sole mio"
@@ -30879,6 +31030,7 @@
       "source_license": "not_required",
       "source_work": "Historical utterance",
       "source_work_key": "mnemosyne.it.work.historical_utterance",
+      "subcategory": "historical",
       "surface_patterns": [
         "Obbedisco"
       ]
@@ -30973,6 +31125,7 @@
       "source_url": "https://www.gutenberg.org/files/1515/1515-h/1515-h.htm#page15",
       "source_work": "Otello",
       "source_work_key": "mnemosyne.it.work.otello",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Credo a una possanza arcana",
         "Credo in un Dio crudel"
@@ -31013,6 +31166,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.verdi_otello_phrases_otello_dio_mi_potevi_scagliar",
       "id": "it_cultural_reference_otello_dio_mi_potevi_scagliare_112c77f2",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -31027,6 +31181,7 @@
       "source_url": "https://www.gutenberg.org/files/69782/69782-h/69782-h.htm",
       "source_work": "Otello",
       "source_work_key": "mnemosyne.it.work.otello",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "Dio mi potevi scagliare",
         "Dio mi potevi scagliare all'inferno",
@@ -31052,6 +31207,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "pagare pegno",
         "pagare il pegno",
@@ -31091,6 +31247,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.leoncavallo_pagliacci_phrases_pagliacci_vesti_la_g",
       "id": "it_cultural_reference_pagliacci_vesti_la_giubba_1a1600a7",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -31105,6 +31262,7 @@
       "source_url": "https://www.gutenberg.org/files/69783/69783-h/69783-h.htm",
       "source_work": "Pagliacci",
       "source_work_key": "mnemosyne.it.work.pagliacci",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "Vesti la giubba!"
       ]
@@ -31772,6 +31930,7 @@
       "source_url": "https://www.treccani.it/vocabolario/staffa",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "Perdere le staffe",
         "Ha perso le staffe",
@@ -32046,6 +32205,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Breccia_di_Porta_Pia",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Pio IX e Porta Pia",
         "presa di Porta Pia",
@@ -32202,6 +32362,7 @@
       "source_url": "https://www.discogs.com/master/104174-Raf-Piu-Forte-Di-Te/release/1150145",
       "source_work": "Più forte di te",
       "source_work_key": "mnemosyne.it.work.più_forte_di_te",
+      "subcategory": "music",
       "surface_patterns": [
         "più forte di te",
         "più forte di te (song title)",
@@ -33141,6 +33302,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.puccini_turandot_aria_puccini_nessun_dorma",
       "id": "it_cultural_reference_puccini_nessun_dorma_8e199547",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33154,6 +33316,7 @@
       "source_url": "https://www.gutenberg.org/files/67015/67015-h/67015-h.htm",
       "source_work": "Turandot",
       "source_work_key": "mnemosyne.it.work.turandot",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "'Nessun dorma'",
         "aria 'Nessun dorma'",
@@ -33344,6 +33507,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Quadrilatero",
       "source_work": "Various historical texts",
       "source_work_key": "mnemosyne.it.work.various_historical_texts",
+      "subcategory": "historical",
       "surface_patterns": [
         "il Quadrilatero di Mantova",
         "Quadrilatero di Mantova",
@@ -33566,6 +33730,7 @@
       "source_url": "https://www.wikisource.org/wiki/Category:La_Scuola_di_Atene",
       "source_work": "La scuola di Atene",
       "source_work_key": "mnemosyne.it.work.la_scuola_di_atene",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "'La scuola di Atene'",
         "Raffaello's *La scuola di Atene*",
@@ -33861,6 +34026,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.verdi_rigoletto_phrases_rigoletto_la_donna_è_mobil",
       "id": "it_cultural_reference_rigoletto_la_donna_è_mobile_0082da92",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -33875,6 +34041,7 @@
       "source_url": "https://www.gutenberg.org/files/69784/69784-h/69784-h.htm",
       "source_work": "Rigoletto",
       "source_work_key": "mnemosyne.it.work.rigoletto",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "La donna è mobile!",
         "la donna è mobile..."
@@ -33899,6 +34066,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rimboccarsi_le_maniche",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "rimboccarsi le maniche"
       ]
@@ -34062,6 +34230,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Risorgimento",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "unità d'Italia",
         "processo di unificazione italiana",
@@ -34110,6 +34279,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Giuseppe_Garibaldi",
       "source_work": "Oral tradition / Garibaldi's speeches",
       "source_work_key": "mnemosyne.it.work.oral_tradition_garibaldi_s_speeches",
+      "subcategory": "historical",
       "surface_patterns": [
         "Roma o morte",
         "Roma o la morte",
@@ -34159,6 +34329,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rompere_le_uova_nel_paniere",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "rompere le uova nel paniere"
       ]
@@ -34195,6 +34366,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Roma_citt%C3%A0_aperta",
       "source_work": "Roma città aperta",
       "source_work_key": "mnemosyne.it.work.roma_città_aperta",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "Roma città aperta",
         "Roma, città aperta",
@@ -34207,6 +34379,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.rossini_barbiere_factotum_rossini_barbiere_di_sivi",
       "id": "it_cultural_reference_rossini_barbiere_di_siviglia_largo_al_factotum_0fd8d29e",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34221,6 +34394,7 @@
       "source_url": "https://www.gutenberg.org/files/14700/14700-h/14700-h.htm",
       "source_work": "Il barbiere di Siviglia",
       "source_work_key": "mnemosyne.it.work.il_barbiere_di_siviglia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Largo al factotum' dal Barbiere di Siviglia"
       ]
@@ -34245,6 +34419,7 @@
       "source_url": "https://www.gutenberg.org/files/1125/1125-h/1125-h.htm#page12",
       "source_work": "Guillaume Tell",
       "source_work_key": "mnemosyne.it.work.guillaume_tell",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Gran Marcia di Guglielmo Tell",
         "Gran Marcia",
@@ -34257,6 +34432,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.it.explanation.rossini_italiana_algeri_una_voce_rossini_l_italian",
       "id": "it_cultural_reference_rossini_l_italiana_in_algeri_una_voce_poco_fa_3381f880",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34271,6 +34447,7 @@
       "source_url": "https://imslp.org/wiki/L%27italiana_in_Algeri_(Rossini%2C_Gioachino)",
       "source_work": "L'italiana in Algeri",
       "source_work_key": "mnemosyne.it.work.l_italiana_in_algeri",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Una voce poco fa cantava"
       ]
@@ -34364,6 +34541,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sale_in_zucca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "sale in zucca"
       ]
@@ -34555,6 +34733,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Casa_Savoia",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Casa Savoia",
         "dinastia sabauda",
@@ -34582,6 +34761,7 @@
       "source_url": "https://it.wikisource.org/wiki/Historia_Florentina",
       "source_work": "Historia Florentini populi",
       "source_work_key": "mnemosyne.it.work.historia_florentini_populi",
+      "subcategory": "historical",
       "surface_patterns": [
         "il rogo delle vanità",
         "i roghi delle vanità",
@@ -35837,6 +36017,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sul_filo_del_rasoio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "sul filo del rasoio"
       ]
@@ -36055,6 +36236,7 @@
       "source_dataset": "italian_colloquialisms",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.it.work.oral_tradition",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "sì, sì, no, no",
         "sì sì no no",
@@ -36196,6 +36378,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.it.work.oral_tradition",
+      "subcategory": "historical",
       "surface_patterns": [
         "Teatro chiuso per lutto",
         "chiuso per lutto",
@@ -36663,6 +36846,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Venere_di_Urbino",
       "source_work": "Venere di Urbino",
       "source_work_key": "mnemosyne.it.work.venere_di_urbino",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Venere di Urbino",
         "Venere di Tiziano",
@@ -36827,6 +37011,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tornare_sui_propri_passi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tornare sui propri passi"
       ]
@@ -36941,6 +37126,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.puccini_tosca_phrases_tosca_vissi_d_arte",
       "id": "it_cultural_reference_tosca_vissi_d_arte_dc6b3e2b",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36955,6 +37141,7 @@
       "source_url": "https://www.gutenberg.org/files/69785/69785-h/69785-h.htm",
       "source_work": "Tosca",
       "source_work_key": "mnemosyne.it.work.tosca",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "vissi d'arte..."
       ]
@@ -36978,6 +37165,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tra_i_piedi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tra i piedi"
       ]
@@ -37034,6 +37222,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.puccini_turandot_phrases_turandot_nessun_dorma",
       "id": "it_cultural_reference_turandot_nessun_dorma_2f368c4b",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37048,6 +37237,7 @@
       "source_url": "https://www.gutenberg.org/files/67000/67000-h/67000-h.htm",
       "source_work": "Turandot",
       "source_work_key": "mnemosyne.it.work.turandot",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Nessun dorma!",
         "nessun dorma..."
@@ -37551,6 +37741,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Veduta ideale di città rinascimentale",
         "Veduta di città rinascimentale ideale",
@@ -37770,6 +37961,7 @@
       "source_url": "https://it.wikisource.org/wiki/Autore:Amerigo_Vespucci",
       "source_work": "Lettere di Amerigo Vespucci",
       "source_work_key": "mnemosyne.it.work.lettere_di_amerigo_vespucci",
+      "subcategory": "historical",
       "surface_patterns": [
         "Vespucci e il Nuovo Mondo",
         "Amerigo Vespucci e il Nuovo Mondo",
@@ -37835,6 +38027,7 @@
       "source_url": "https://it.wikisource.org/wiki/Tosca/Atto_secondo",
       "source_work": "Tosca",
       "source_work_key": "mnemosyne.it.work.tosca",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Vissi d'arte",
         "Vissi d'arte, vissi d'amore"
@@ -37926,6 +38119,7 @@
       "short_explanation": "Cowardly or evasive clerical behaviour.",
       "source_author": "Alessandro Manzoni",
       "source_work": "I promessi sposi",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "don Abbondio"
       ]
@@ -37935,6 +38129,7 @@
       "canonical_reference": "galeotto fu il libro",
       "confidence": 0.88,
       "id": "galeotto_fu_il_libro",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "reference_type": "literary_reference",
@@ -37942,6 +38137,7 @@
       "short_explanation": "A book or intermediary that enables a fateful romance.",
       "source_author": "Dante Alighieri",
       "source_work": "Inferno",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "galeotto fu il libro"
       ]
@@ -37958,6 +38154,7 @@
       "short_explanation": "Apparent change that preserves existing power.",
       "source_author": "Giuseppe Tomasi di Lampedusa",
       "source_work": "Il Gattopardo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "gattopardo",
         "gattopardesco"
@@ -37973,6 +38170,7 @@
       "reference_type": "literary_reference",
       "register": "literary",
       "short_explanation": "A reference to canonical Italian literature and social/religious constraint.",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "i promessi sposi"
       ]
@@ -38724,6 +38922,7 @@
         "zh": "但丁《地狱篇》第五章第103行的著名诗句，表达了爱是一种无法抗拒的力量，甚至能迫使被爱的人回报爱情。这反映了中世纪骑士爱情的概念和激情的力量。"
       },
       "id": "it_literary_reference_amor_ch_a_nullo_amato_amar_perdona_c6f09cb8",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to Dante's *Inferno*, Canto V, line 103, with correct surface patterns and explanation.",
@@ -38738,6 +38937,7 @@
       "source_url": "https://it.wikisource.org/wiki/La_Divina_Commedia_(Alighieri)/Inferno/Canto_V",
       "source_work": "La Divina Commedia",
       "source_work_key": "mnemosyne.it.work.la_divina_commedia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Amor ch'a nullo amato amar perdona",
         "Amor, ch'a nullo amato amar perdona",
@@ -38957,6 +39157,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.it.explanation.ovidio_metamorfosi_references_andromeda_e_il_mostr",
       "id": "it_literary_reference_andromeda_e_il_mostro_marino_da_ovidio_metamorfosi_iv_2fca22d7",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -38971,6 +39172,7 @@
       "source_url": "https://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus:text:1999.02.0062:book=4:card=663",
       "source_work": "Metamorfosi",
       "source_work_key": "mnemosyne.it.work.metamorfosi",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Andromeda e il mostro marino",
         "Andromeda legata alla roccia",
@@ -39918,6 +40120,7 @@
       "source_url": "https://it.wikisource.org/wiki/Norma_(Bellini)",
       "source_work": "Norma",
       "source_work_key": "mnemosyne.it.work.norma",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Casta diva",
         "Casta diva, che inargenti",
@@ -41674,6 +41877,7 @@
       "source_url": "https://it.wikisource.org/wiki/Tosca_(Puccini)",
       "source_work": "Tosca",
       "source_work_key": "mnemosyne.it.work.tosca",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "E lucevan le stelle",
         "lucevan le stelle",
@@ -41739,6 +41943,7 @@
         "zh": "加布里埃莱·邓南遮诗作《松林之雨》中的一句，表达了雨水降临在‘我们’身上的意象，常被解读为共同经历或命运的隐喻。这首诗是意大利颓废主义的代表作品。"
       },
       "id": "it_literary_reference_e_piove_su_noi_bbd4f353",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate attribution to Gabriele D'Annunzio's *La pioggia nel pineto*, line 1, with correct surface patterns and explanation.",
@@ -41753,6 +41958,7 @@
       "source_url": "https://it.wikisource.org/wiki/Alcyone/La_pioggia_nel_pineto",
       "source_work": "Alcyone",
       "source_work_key": "mnemosyne.it.work.alcyone",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "E piove su noi",
         "E piove su di noi"
@@ -42073,6 +42279,7 @@
         "zh": "但丁《地狱篇》中维吉尔劝诫人类超越动物般的生存，追求美德与知识以定义人类尊严的著名诗句。"
       },
       "id": "it_literary_reference_fatti_non_foste_a_viver_come_bruti_226a891d",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Exact quote from Dante's *Inferno* (Canto XXVI) with correct attribution and location.",
@@ -42087,6 +42294,7 @@
       "source_url": "https://it.wikisource.org/wiki/La_Divina_Commedia_(Alighieri)/Inferno/Canto_XXVI",
       "source_work": "La Divina Commedia",
       "source_work_key": "mnemosyne.it.work.la_divina_commedia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Fatti non foste a viver come bruti",
         "Non foste a viver come bruti, ma per seguir virtute e canoscenza",
@@ -42650,6 +42858,7 @@
       "source_url": "https://it.wikisource.org/wiki/Guerra_e_pace",
       "source_work": "Война и мир (Voyna i mir)",
       "source_work_key": "mnemosyne.it.work.война_и_мир_voyna_i_mir",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Guerra e pace",
         "La guerra e la pace",
@@ -42972,6 +43181,7 @@
         "zh": "彼特拉克《歌集》中的著名诗句，将意大利理想化为和谐与美德之地，在那里肯定的“sì”回荡。体现了文艺复兴时期的人文主义与民族自豪感。"
       },
       "id": "it_literary_reference_il_bel_paese_là_dove_l_sì_suona_4a35371c",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Verified line from Petrarch's *Canzoniere* with correct citation and Renaissance context.",
@@ -42986,6 +43196,7 @@
       "source_url": "https://it.wikisource.org/wiki/Canzoniere_(Petrarca)/Canzone_CXLVI",
       "source_work": "Canzoniere",
       "source_work_key": "mnemosyne.it.work.canzoniere",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Il bel paese là dove 'l sì suona",
         "Il bel paese là dove 'l sì si suona",
@@ -43909,6 +44120,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Jonathan_Livingston_Seagull",
       "source_work": "Jonathan Livingston Seagull",
       "source_work_key": "mnemosyne.it.work.jonathan_livingston_seagull",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "il gabbiano Jonathan Livingston",
         "Jonathan Livingston gabbiano",
@@ -47424,6 +47636,7 @@
       "source_url": "https://it.wikisource.org/wiki/Il_barbiere_di_Siviglia_(Rossini)",
       "source_work": "Il barbiere di Siviglia",
       "source_work_key": "mnemosyne.it.work.il_barbiere_di_siviglia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Largo al factotum",
         "Largo al factotum della città",
@@ -48616,6 +48829,7 @@
       "source_url": "https://it.wikisource.org/wiki/La_Boh%C3%A8me",
       "source_work": "La Bohème",
       "source_work_key": "mnemosyne.it.work.la_bohème",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "Mi chiamano Mimì",
         "chiamano Mimì",
@@ -50902,6 +51116,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Scugnizzi_(opera)",
       "source_work": "Scugnizzi",
       "source_work_key": "mnemosyne.it.work.scugnizzi",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "Scugnizzi"
       ]
@@ -52221,6 +52436,7 @@
       "canonical_reference": "uscire dalla selva oscura",
       "confidence": 0.88,
       "id": "uscire_dalla_selva_oscura",
+      "is_poetic_citation": true,
       "language": "it",
       "learner_level": "B2",
       "reference_type": "literary_reference",
@@ -52228,6 +52444,7 @@
       "short_explanation": "Emerging from confusion, crisis, or moral darkness.",
       "source_author": "Dante Alighieri",
       "source_work": "Divina Commedia",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "uscire dalla selva oscura"
       ]
@@ -52242,6 +52459,7 @@
       "reference_type": "proverb_tradition",
       "register": "proverbial",
       "short_explanation": "Opportunity requires action.",
+      "subcategory": "proverb",
       "surface_patterns": [
         "chi dorme non piglia pesci"
       ]
@@ -53897,6 +54115,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.it.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "A San Martino si spilla il vino nuovo",
         "Per San Martino si spilla il vino nuovo",
@@ -54523,6 +54742,7 @@
       "source_url": "https://www.treccani.it/enciclopedia/alzare-il-gomito_(Il-racconto-della-lingua-italiana)/",
       "source_work": "Dizionario dei modi di dire della lingua italiana",
       "source_work_key": "mnemosyne.it.work.dizionario_dei_modi_di_dire_della_lingua_italiana",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "alzare il gomito",
         "aver alzato il gomito",
@@ -55708,6 +55928,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Chi non ha testa abbia gambe",
         "Chi non ha testa, abbia gambe"
@@ -56348,6 +56569,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.it.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Chi va piano va sano e va lontano",
         "Chi va piano va sano e lontano",
@@ -57294,6 +57516,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.it.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "Dio li fa e poi li accoppia"
       ]
@@ -58334,6 +58557,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.it.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "In bocca al lupo!",
         "In bocca al lupo e crepi il lupo!",
@@ -60423,6 +60647,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.it.work.oral_tradition",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "restare di stucco",
         "rimanere di stucco",
@@ -61298,6 +61523,7 @@
       "source_license": "public_domain",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.it.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "È meglio un uovo oggi che una gallina domani",
         "Meglio un uovo oggi che una gallina domani",
@@ -61315,6 +61541,7 @@
       "reference_type": "proverb_tradition",
       "register": "proverbial",
       "short_explanation": "Saying something is much easier than doing it.",
+      "subcategory": "proverb",
       "surface_patterns": [
         "tra il dire e il fare c’è di mezzo il mare"
       ]
