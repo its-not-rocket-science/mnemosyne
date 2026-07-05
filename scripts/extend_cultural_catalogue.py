@@ -1469,7 +1469,7 @@ def run_backfill_subcategory(
     price_in  = provider.get("in",  0.15)
     price_out = provider.get("out", 0.60)
     cost = cost_in * price_in + cost_out * price_out
-    print(f"\nTokens: {total_in:,} in / {total_out:,} out  ≈  ${cost:.4f}")
+    print(f"\nTokens: {total_in:,} in / {total_out:,} out  ~=  ${cost:.4f}")
 
     print(f"Writing {seed_path} ...", flush=True)
     if _use_ruamel:

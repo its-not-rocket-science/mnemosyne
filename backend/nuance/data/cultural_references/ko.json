@@ -2878,6 +2878,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC",
       "source_work": "삼국유사",
       "source_work_key": "mnemosyne.ko.work.삼국유사",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "동명왕 신화",
         "동명왕의 신화",
@@ -3992,6 +3993,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%B0%B1%EC%9D%98%EC%A2%85%EA%B5%B0",
       "source_work": "Various (notably 임진장초, 난중일기)",
       "source_work_key": "mnemosyne.ko.work.various_notably_임진장초_난중일기",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "백의종군",
         "백의종군하다",
@@ -4329,6 +4331,7 @@
       "source_url": "https://ko.wikisource.org/wiki/삼국지/촉서/선주전",
       "source_work": "삼국지 (Records of the Three Kingdoms)",
       "source_work_key": "mnemosyne.ko.work.삼국지_records_of_the_three_kingdoms",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "비육지탄",
         "비육지탄(髀肉之歎)",
@@ -6079,6 +6082,7 @@
       "source_url": "https://ko.wikisource.org/wiki/사기/월왕구천세가",
       "source_work": "사기 (Records of the Grand Historian)",
       "source_work_key": "mnemosyne.ko.work.사기_records_of_the_grand_historian",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "와신상담",
         "와신상담(臥薪嘗膽)",
@@ -7236,6 +7240,7 @@
         "zh": "指韩国佛教故事《曹信传》中著名的梦境情节，僧人曹信在梦中经历一生，体现了世俗执念的虚幻性。"
       },
       "id": "ko_classical_or_scriptural_allusion_조신의_꿈_0870bb44",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately describes the well-known Buddhist tale from '조신전', and the surface patterns are appropriate.",
@@ -10627,6 +10632,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "검은 학 그림의 흰 눈 같다",
         "검은 학 그림의 흰 눈처럼",
@@ -10889,6 +10895,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ko.explanation.korean_cultural_terms_계절의_화신",
       "id": "ko_cultural_reference_계절의_화신_e2bca392",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -10902,6 +10909,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "계절의 화신이다",
         "계절의 화신으로",
@@ -10929,6 +10937,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "고개가 수그러지다",
         "고개가 수그러진다",
@@ -11261,6 +11270,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "pansori",
       "surface_patterns": [
         "고전가요의 절창",
         "고전가요를 절창하다",
@@ -11661,6 +11671,7 @@
         "zh": "广开土大王的名字，他是4-5世纪高句丽（朝鲜三国之一）的君主。以其军事征服和领土扩张而闻名，他的碑文是重要的历史文物。"
       },
       "id": "ko_cultural_reference_광개토대왕_8c76c2e0",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- King Gwanggaeto the Great is a historical figure from Goguryeo, and the stele is correctly identified.",
@@ -11674,6 +11685,7 @@
       "source_location": "Ji'an, China",
       "source_work": "광개토왕릉비 (Gwanggaeto Stele)",
       "source_work_key": "mnemosyne.ko.work.광개토왕릉비_gwanggaeto_stele",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "광개토대왕",
         "광개토 대왕"
@@ -12374,6 +12386,7 @@
       "source_license": "not_required",
       "source_work": "Various (Korean literature)",
       "source_work_key": "mnemosyne.ko.work.various_korean_literature",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "교토의 밤",
         "교토의 밤은 아름답다",
@@ -13007,6 +13020,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ko.explanation.akak_kwebum_terms_금관옥관의_조화로운_소리",
       "id": "ko_cultural_reference_금관옥관의_조화로운_소리_122bc5bf",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -13021,6 +13035,7 @@
       "source_url": "https://www.nl.go.kr/collection/collectionView.do?collectionId=AC0000000101",
       "source_work": "악학궤범",
       "source_work_key": "mnemosyne.ko.work.악학궤범",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "금관옥관의 조화로운 소리",
         "금관과 옥관의 조화로운 소리",
@@ -13048,6 +13063,7 @@
       "source_url": "https://www.nl.go.kr/collection/collectionView.do?collectionId=AC0000000101",
       "source_work": "악학궤범",
       "source_work_key": "mnemosyne.ko.work.악학궤범",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "금관옥관의 조화로운 음악",
         "금관과 옥관의 조화로운 음악",
@@ -13145,6 +13161,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ko.explanation.korean_musical_terms_금관의_가락",
       "id": "ko_cultural_reference_금관의_가락_fd92fa0b",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -13158,6 +13175,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "금관의 가락이 흐르다",
         "금관의 가락이 아름답다",
@@ -13520,6 +13538,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "pansori",
       "surface_patterns": [
         "꼭두각시 놀음",
         "꼭두각시 놀이를 하다",
@@ -13548,6 +13567,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "꼭두각시가 인형이 된다",
         "꼭두각시가 인형이 되었다",
@@ -13575,6 +13595,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "pansori",
       "surface_patterns": [
         "꼭두각시의 인형극",
         "꼭두각시 인형극",
@@ -14355,6 +14376,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%97%B0%EB%A0%A4%EC%8B%A4%EA%B8%B0%EC%88%A0",
       "source_work": "연려실기술",
       "source_work_key": "mnemosyne.ko.work.연려실기술",
+      "subcategory": "sijo",
       "surface_patterns": [
         "단종의 피리소리",
         "단종의 피리소리가 들린다",
@@ -14384,6 +14406,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%97%B0%EB%A0%A4%EC%8B%A4%EA%B8%B0%EC%88%A0",
       "source_work": "연려실기술",
       "source_work_key": "mnemosyne.ko.work.연려실기술",
+      "subcategory": "sijo",
       "surface_patterns": [
         "단종의 피리소리와 세종대왕",
         "세종대왕이 단종의 피리소리를 들었다",
@@ -14496,6 +14519,7 @@
       "source_url": "https://ko.dict.naver.com/#/entry/koko.57a7b330155343428522334a3963983a",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "달밤",
         "달밤의",
@@ -15129,6 +15153,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ko.explanation.korean_cultural_terms_독수공방",
       "id": "ko_cultural_reference_독수공방_96ddaa80",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -15143,6 +15168,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110240",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "독수공방",
         "독수공방하다",
@@ -15747,6 +15773,7 @@
       "source_url": "https://sillok.history.go.kr/front/inspection/inspectionDetail.do?levelId=cd_12301010_001",
       "source_work": "退溪全書",
       "source_work_key": "mnemosyne.ko.work.退溪全書",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "두문동 칠신",
         "두문동의 칠신",
@@ -17049,6 +17076,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%B0%B1%EB%85%84%ED%95%B4%EB%A1%9C",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "백년해로",
         "백년해로를 하다",
@@ -17080,6 +17108,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1110000&cid=40942&categoryId=31000",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "백마산의 노을",
         "백마산 노을",
@@ -17454,6 +17483,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%B3%84%EC%A3%BC%EB%B6%80%EC%A0%84",
       "source_work": "별주부전",
       "source_work_key": "mnemosyne.ko.work.별주부전",
+      "subcategory": "pansori",
       "surface_patterns": [
         "별주부전의 가면극",
         "별주부전 가면극",
@@ -17519,6 +17549,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "보름달에 호떡 먹기",
         "보름달에 호떡을 먹다",
@@ -18255,6 +18286,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "pansori",
       "surface_patterns": [
         "산조와 시나위",
         "산조를 연주하다",
@@ -19708,6 +19740,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%88%98%EA%B5%AC%EA%B0%80",
       "source_work": "수궁가",
       "source_work_key": "mnemosyne.ko.work.수궁가",
+      "subcategory": "pansori",
       "surface_patterns": [
         "수궁가의 탈춤",
         "수궁가 탈춤",
@@ -20084,6 +20117,7 @@
       "source_url": "https://terms.naver.com/entry.naver?docId=1106500&cid=40942&categoryId=32203",
       "source_work": "심청전",
       "source_work_key": "mnemosyne.ko.work.심청전",
+      "subcategory": "pansori",
       "surface_patterns": [
         "심청전의 창극",
         "심청전의 창극을 공연하다",
@@ -22586,6 +22620,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Compassion",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "자비심",
         "자비심을 가지다",
@@ -24448,6 +24483,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "삼수갑산",
         "삼수갑산에 가다",
@@ -25655,6 +25691,7 @@
       "source_license": "public_domain",
       "source_work": "향약구agher",
       "source_work_key": "mnemosyne.ko.work.향약구agher",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "향약구agher",
         "향약구agher를 하다",
@@ -26422,6 +26459,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EB%AC%BC%EC%A0%95_(%EC%86%8C%EC%84%A4)",
       "source_work": "Mujŏng (무정)",
       "source_work_key": "mnemosyne.ko.work.mujŏng_무정",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "검불도 못 되는 그림",
         "검불도 못 되는 그림이다",
@@ -26804,6 +26842,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EA%B5%AC%EB%91%90%EC%87%80%EC%9D%98_%EC%B5%9C%ED%9B%84",
       "source_work": "구두쇠의 최후",
       "source_work_key": "mnemosyne.ko.work.구두쇠의_최후",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "구두쇠의 최후",
         "구두쇠의 최후를 맞이하다",
@@ -26876,6 +26915,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Book_of_Songs",
       "source_work": "시경 (Book of Songs) influence",
       "source_work_key": "mnemosyne.ko.work.시경_book_of_songs_influence",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "국화 향기",
         "국화 향기가 나다",
@@ -26943,6 +26983,7 @@
       "source_license": "public_domain",
       "source_work": "규중칠우쟁론기",
       "source_work_key": "mnemosyne.ko.work.규중칠우쟁론기",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "규중칠우쟁론기",
         "閨中七友爭論記"
@@ -27123,6 +27164,7 @@
       "source_url": "https://ko.wikisource.org/wiki/금오신화",
       "source_work": "금오신화 (金鰲新話)",
       "source_work_key": "mnemosyne.ko.work.금오신화_金鰲新話",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "금오신화",
         "금오신화 이야기"
@@ -27247,6 +27289,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.ko.explanation.baekbeom_ilji_references_김구와_백범일지",
       "id": "ko_literary_reference_김구와_백범일지_fe4518d6",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27260,6 +27303,7 @@
       "source_url": "https://ko.wikisource.org/wiki/백범일지",
       "source_work": "백범일지",
       "source_work_key": "mnemosyne.ko.work.백범일지",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "김구는",
         "김구가",
@@ -27492,6 +27536,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ko.explanation.korean_literary_references_김시습의_금오신화",
       "id": "ko_literary_reference_김시습의_금오신화_341be6ca",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -27505,6 +27550,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EA%B8%88%EC%98%A4%EC%8B%A0%ED%99%94",
       "source_work": "금오신화",
       "source_work_key": "mnemosyne.ko.work.금오신화",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "김시습의 금오신화",
         "금오신화를 읽다",
@@ -28085,6 +28131,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Korean_literature",
       "source_work": "Various (Korean classical poetry)",
       "source_work_key": "mnemosyne.ko.work.various_korean_classical_poetry",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "단풍의 우울",
         "단풍 우울",
@@ -28246,6 +28293,7 @@
         "zh": "桃园结义，指小说《三国演义》中刘备、关羽、张飞的结拜兄弟。象征着深厚的忠诚和兄弟情谊。"
       },
       "id": "ko_literary_reference_도원결의_b682471e",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Accurate reference to the oath in Romance of the Three Kingdoms by Luo Guanzhong.",
@@ -28260,6 +28308,7 @@
       "source_url": "https://ctext.org/sanguo-yanyi",
       "source_work": "삼국지연의 (三國志演義)",
       "source_work_key": "mnemosyne.ko.work.삼국지연의_三國志演義",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "도원결의",
         "도원결의(桃園結義)",
@@ -28625,6 +28674,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/494",
       "source_work": "杜甫詩集",
       "source_work_key": "mnemosyne.ko.work.杜甫詩集",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "두보의 시선",
         "두보의 시는",
@@ -28638,6 +28688,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ko.explanation.korean_literary_references_마지막_수업",
       "id": "ko_literary_reference_마지막_수업_ea6da7c1",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -28651,6 +28702,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EB%A7%88%EC%A7%80%EB%A7%89_%EC%88%98%EC%97%85",
       "source_work": "마지막 수업",
       "source_work_key": "mnemosyne.ko.work.마지막_수업",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "마지막 수업",
         "마지막 수업을 하다",
@@ -29059,6 +29111,7 @@
       "source_url": "https://ko.wikisource.org/wiki/박씨전",
       "source_work": "박씨전 (朴氏傳)",
       "source_work_key": "mnemosyne.ko.work.박씨전_朴氏傳",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "박씨전",
         "박씨 부인전"
@@ -29295,6 +29348,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Korean_literature",
       "source_work": "Various (Korean classical literature)",
       "source_work_key": "mnemosyne.ko.work.various_korean_classical_literature",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "백마강의 달",
         "백마강 달",
@@ -30249,6 +30303,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ko.explanation.yi_sang_literary_phrases_소설가_구보氏의_일일",
       "id": "ko_literary_reference_소설가_구보氏의_일일_73aab740",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -30262,6 +30317,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%86%8C%EC%84%A4%EA%B0%80_%EA%B5%AC%EB%B3%B4%EC%9D%98_%EC%9D%BC%EC%9D%BC",
       "source_work": "소설가 구보씨의 일일",
       "source_work_key": "mnemosyne.ko.work.소설가_구보씨의_일일",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "소설가 구보의 일일",
         "소설가 구보의 하루",
@@ -30382,6 +30438,7 @@
         "zh": "松江郑澈是朝鲜王朝著名的诗人和政治家，以其时调和歌辞诗作著称，被视为韩国文学的杰作。"
       },
       "id": "ko_literary_reference_송강_정철_7d563d71",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Jeong Cheol's identity as a Joseon poet and his association with sijo and gasa poetry are accurate, and the surface patterns are appropriate.",
@@ -30395,6 +30452,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%86%A1%EA%B0%95%EC%A7%91",
       "source_work": "송강집 (Songgangjip)",
       "source_work_key": "mnemosyne.ko.work.송강집_songgangjip",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "송강 정철",
         "Songgang Jeong Cheol",
@@ -30533,6 +30591,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "시인의 별",
         "시인의 별을 보다",
@@ -30642,6 +30701,7 @@
         "zh": "沈奉士是韩国传统盘索里《沈清传》中的人物，沈清的盲父，象征着父母之爱与艰辛。"
       },
       "id": "ko_literary_reference_심봉사_7af100aa",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Sim Bong-sa is accurately described as Sim Cheong's blind father from 'Simcheongga', and the surface patterns are appropriate.",
@@ -30655,6 +30715,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%8B%AC%EC%B2%AD%EA%B0%80",
       "source_work": "심청가",
       "source_work_key": "mnemosyne.ko.work.심청가",
+      "subcategory": "pansori",
       "surface_patterns": [
         "심봉사",
         "심 봉사",
@@ -30935,6 +30996,7 @@
       "source_url": "https://ko.wikisource.org/wiki/악장가사",
       "source_work": "악장가사 (樂章歌詞)",
       "source_work_key": "mnemosyne.ko.work.악장가사_樂章歌詞",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "악장가사",
         "악장"
@@ -31035,6 +31097,7 @@
       "source_license": "public_domain",
       "source_work": "양반전",
       "source_work_key": "mnemosyne.ko.work.양반전",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "양반전",
         "양반전(兩班傳)",
@@ -31564,6 +31627,7 @@
       "source_url": "https://ko.wikisource.org/wiki/월인천강지곡",
       "source_work": "월인천강지곡 (月印千江之曲)",
       "source_work_key": "mnemosyne.ko.work.월인천강지곡_月印千江之曲",
+      "subcategory": "pansori",
       "surface_patterns": [
         "월인천강지곡",
         "월인천강"
@@ -31588,6 +31652,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%A0%80%EC%9E%90:%EA%B9%80%EB%A7%8C%EC%A4%91/%EC%9C%A0%EC%94%A8%EC%82%BC%EB%8C%80",
       "source_work": "유씨삼대",
       "source_work_key": "mnemosyne.ko.work.유씨삼대",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "유씨삼대",
         "유씨의 세 대",
@@ -32241,6 +32306,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ko.explanation.korean_literary_references_이충의_사씨남정기",
       "id": "ko_literary_reference_이충의_사씨남정기_5184ea99",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -32254,6 +32320,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%EC%82%AC%EC%94%A8%EB%82%A8%EC%A0%95%EA%B8%B0",
       "source_work": "사씨남정기",
       "source_work_key": "mnemosyne.ko.work.사씨남정기",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "사씨의 남정기",
         "사씨남정기를 읽다",
@@ -33591,6 +33658,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/%EC%B5%9C%EC%8A%B9%EB%A1%9C",
       "source_work": "시림",
       "source_work_key": "mnemosyne.ko.work.시림",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "최승로의 시림",
         "시림",
@@ -33675,6 +33743,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.ko.explanation.korean_literary_phrases_춘원_이광수의_소년_에서_나온_인생은_마차바퀴",
       "id": "ko_literary_reference_춘원_이광수의_소년_에서_나온_인생은_마차바퀴_9679c989",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34453,6 +34522,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.ko.explanation.korean_religious_literature_한용운의_조선불교유신론",
       "id": "ko_literary_reference_한용운의_조선불교유신론_c381814e",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34466,6 +34536,7 @@
       "source_url": "https://ko.wikipedia.org/wiki/조선불교유신론",
       "source_work": "조선불교유신론",
       "source_work_key": "mnemosyne.ko.work.조선불교유신론",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "한용운은 조선불교유신론을 저술하였다",
         "조선불교유신론은 조선불교의 개혁을 주장하였다",
@@ -34655,6 +34726,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.ko.explanation.korean_literary_references_허균의_홍길동전",
       "id": "ko_literary_reference_허균의_홍길동전_2fa69d9f",
+      "is_poetic_citation": true,
       "language": "ko",
       "learner_level": "C2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34668,6 +34740,7 @@
       "source_url": "https://ko.wikisource.org/wiki/%ED%99%8D%EA%B8%B8%EB%8F%99%EC%A0%84",
       "source_work": "홍길동전",
       "source_work_key": "mnemosyne.ko.work.홍길동전",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "허균의 홍길동전",
         "홍길동전을 읽다",
@@ -34808,6 +34881,7 @@
       "source_license": "public_domain",
       "source_work": "허생전",
       "source_work_key": "mnemosyne.ko.work.허생전",
+      "subcategory": "sajaseong_eo",
       "surface_patterns": [
         "허생전",
         "허생전(許生傳)",
@@ -35960,6 +36034,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ko.work.oral_tradition",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "검은 머리 파뿌리 되도록",
         "검은 머리가 파뿌리 되도록",
@@ -42091,6 +42166,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ko.work.various",
+      "subcategory": "korean_proverb",
       "surface_patterns": [
         "쥐구멍에도 볕 들 날 있다",
         "쥐구멍에도 볕이 든다",

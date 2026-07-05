@@ -193,6 +193,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_vedic_allusions_अग_न_क_अग_न",
       "id": "hi_classical_or_scriptural_allusion_अग_न_क_अग_न_301316c4",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -223,6 +224,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.vedic_agni_phrases_अग_न_क_अग_न_यज_ञ",
       "id": "hi_classical_or_scriptural_allusion_अग_न_क_अग_न_यज_ञ_ce1f962a",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -235,6 +237,7 @@
       "source_license": "public_domain",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "अग्नि का अग्नि-यज्ञ",
         "अग्नि-यज्ञ में",
@@ -1665,6 +1668,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.hi.explanation.vedic_allusions_hindi_अग_न_न_क_र_ध_क_य",
       "id": "hi_classical_or_scriptural_allusion_अग_न_न_क_र_ध_क_य_2ae4a6cc",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -1756,6 +1760,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.vedic_mythology_phrases_अग_न_प_त_र",
       "id": "hi_classical_or_scriptural_allusion_अग_न_प_त_र_babc0497",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2182,6 +2187,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.vedic_philosophy_phrases_अग_न_म_र_ग",
       "id": "hi_classical_or_scriptural_allusion_अग_न_म_र_ग_d8251ba1",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2445,6 +2451,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.puranic_mythology_phrases_अग_न_श_ख",
       "id": "hi_classical_or_scriptural_allusion_अग_न_श_ख_0ef1f1a4",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -3729,6 +3736,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%A5%E0%A4%B6%E0%A4%BE%E0%A4%B7%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0",
       "source_work": "अर्थशास्त्र",
       "source_work_key": "mnemosyne.hi.work.अर_थश_स_त_र",
+      "subcategory": "arthashastra",
       "surface_patterns": [
         "अर्थशास्त्र",
         "अर्थ शास्त्र"
@@ -4157,6 +4165,7 @@
       "source_url": "https://www.wikisource.org/wiki/Ramayana_(Valmiki)",
       "source_work": "Ramayana",
       "source_work_key": "mnemosyne.hi.work.ramayana",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "अहिल्या",
         "अहिल्या का उद्धार",
@@ -4514,6 +4523,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.hindi_upanishad_phrases_आत_म_व_अर_द_रष_टव_य",
       "id": "hi_classical_or_scriptural_allusion_आत_म_व_अर_द_रष_टव_य_8149f408",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -4946,6 +4956,7 @@
       "source_url": "https://www.wikisource.org/wiki/Upanishads",
       "source_work": "Upanishads",
       "source_work_key": "mnemosyne.hi.work.upanishads",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "उपनिषदों का ज्ञान",
         "उपनिषदों का अध्ययन"
@@ -5008,6 +5019,7 @@
         "zh": "“乌莎卡尔”一词指的是黎明或清晨时期，常常象征着新的开始和希望，在各种印度文学和哲学背景中。"
       },
       "id": "hi_classical_or_scriptural_allusion_उष_क_ल_25701a66",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- Attribution is accurate and verifiable, and the surface patterns correctly represent the concept of dawn in literary contexts.",
@@ -5047,6 +5059,7 @@
         "zh": "《梨俱吠陀》是世界上已知的最古老的经典之一，由献给各种神祇的颂歌组成。它是吠陀文学和印度哲学的基础。"
       },
       "id": "hi_classical_or_scriptural_allusion_ऋग_व_द_35185d9b",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The attribution is accurate and verifiable, and the surface patterns correctly represent the foundational nature of the text in Vedic literature.",
@@ -5158,6 +5171,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.upanishadic_phrases_एतद_ध_सत_य",
       "id": "hi_classical_or_scriptural_allusion_एतद_ध_सत_य_ed2753d6",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -5704,6 +5718,7 @@
       "source_url": "https://www.wisdomlib.org/hinduism/book/bhagavata-purana-srimad-bhagavatam",
       "source_work": "भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "कृष्ण की माखन चोरी",
         "माखनचोर कृष्ण",
@@ -8326,6 +8341,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.hindi_upanishadic_phrases_ज_ञ_न_ब_रह_म",
       "id": "hi_classical_or_scriptural_allusion_ज_ञ_न_ब_रह_म_797166e8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8430,6 +8446,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.upanishadic_phrases_ज_व_ब_रह_म_व_न_पर",
       "id": "hi_classical_or_scriptural_allusion_ज_व_ब_रह_म_व_न_पर_ed167da8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -8605,6 +8622,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.vedic_phrases_जन_म_तर_र_नरक_त",
       "id": "hi_classical_or_scriptural_allusion_जन_म_तर_र_नरक_त_dbb40436",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -9061,6 +9079,7 @@
       "source_license": "public_domain",
       "source_work": "दुर्गा सप्तशती",
       "source_work_key": "mnemosyne.hi.work.द_र_ग_सप_तशत",
+      "subcategory": "ramcharitmanas",
       "surface_patterns": [
         "दुर्गा सप्तशती",
         "दुर्गा सप्तशती का पाठ",
@@ -11097,6 +11116,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%B9%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "ब्रह्मसूत्र",
       "source_work_key": "mnemosyne.hi.work.ब_रह_मस_त_र",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "प्रस्थानत्रयी",
         "प्रस्थानत्रयी के",
@@ -11657,6 +11677,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_advaita_vedanta_phrases_ब_रह_म_सत_य_जगन_म_थ_",
       "id": "hi_classical_or_scriptural_allusion_ब_रह_म_सत_य_जगन_म_थ_य_6e65e723",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -11729,6 +11750,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AC%E0%A5%8D%E0%A4%B0%E0%A4%B9%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "ब्रह्मसूत्र",
       "source_work_key": "mnemosyne.hi.work.ब_रह_मस_त_र",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "ब्रह्मसूत्र",
         "ब्रह्मसूत्र के",
@@ -13584,6 +13606,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_manusmriti_phrases_म_क_ष_परम_प_र_ष_र_थ",
       "id": "hi_classical_or_scriptural_allusion_म_क_ष_परम_प_र_ष_र_थ_5c95c54e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14237,6 +14260,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.yoga_sutras_य_गस_त_र_ण",
       "id": "hi_classical_or_scriptural_allusion_य_गस_त_र_ण_5147b361",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -15451,6 +15475,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A4_%E0%A4%B8%E0%A4%BE%E0%A4%B0%E0%A4%83",
       "source_work": "वेदांत सार",
       "source_work_key": "mnemosyne.hi.work.व_द_त_स_र",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "वेदांत सार",
         "वेदांत सार के",
@@ -15468,6 +15493,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.vedanta_darshana_व_द_न_त_दर_शनम",
       "id": "hi_classical_or_scriptural_allusion_व_द_न_त_दर_शनम_a2cc41db",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -16077,6 +16103,7 @@
       "source_license": "public_domain",
       "source_work": "श्रीमद्भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.श_र_मद_भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "श्रीमद्भागवत",
         "भागवत पुराण",
@@ -16531,6 +16558,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.sankhya_darshana_स_ख_य_दर_शनम",
       "id": "hi_classical_or_scriptural_allusion_स_ख_य_दर_शनम_fbd9a357",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -16739,6 +16767,7 @@
       "source_url": "https://www.wikisource.org/wiki/%E0%A4%AD%E0%A4%BE%E0%A4%97%E0%A4%B5%E0%A4%A4_%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3",
       "source_work": "भागवत पुराण",
       "source_work_key": "mnemosyne.hi.work.भ_गवत_प_र_ण",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "सुदामा का दान",
         "सुदामा का उपहार",
@@ -16968,6 +16997,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_vedanta_phrases_स_स_र_ज_व_त_म",
       "id": "hi_classical_or_scriptural_allusion_स_स_र_ज_व_त_म_24f4453f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17024,6 +17054,7 @@
       "confidence": 0.87,
       "explanation_key": "mnemosyne.hi.explanation.upanishadic_phrases_सत_य_ब_रह_म",
       "id": "hi_classical_or_scriptural_allusion_सत_य_ब_रह_म_e2073fa4",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -17684,6 +17715,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%82%E0%A4%A1%E0%A5%87_%E0%A4%95%E0%A4%BE_%E0%A4%B6%E0%A4%B9%E0%A4%9C%E0%A4%BC%E0%A4%BE%E0%A4%A6%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अंडे का शहज़ादा"
       ]
@@ -18396,6 +18428,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_cultural_fire_phrases_अग_न_क_च_ग_र",
       "id": "hi_cultural_reference_अग_न_क_च_ग_र_34157ff3",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18853,6 +18886,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_common_phrases_अग_न_क_ध_प",
       "id": "hi_cultural_reference_अग_न_क_ध_प_10b89785",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18883,6 +18917,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.vedic_agni_phrases_अग_न_क_प_क_र",
       "id": "hi_cultural_reference_अग_न_क_प_क_र_8cce66f8",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -18989,6 +19024,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_ritual_phrases_अग_न_क_पर_क_रम",
       "id": "hi_cultural_reference_अग_न_क_पर_क_रम_56008875",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19019,6 +19055,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.hi.explanation.hindi_cultural_fire_phrases_अग_न_क_ल",
       "id": "hi_cultural_reference_अग_न_क_ल_8400a581",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -19644,6 +19681,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.hi.explanation.theatrical_cultural_phrases_अग_न_व_श",
       "id": "hi_cultural_reference_अग_न_व_श_9316155d",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -21185,6 +21223,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आधे-अधूरे प्यार में",
         "आधे-अधूरे प्यार से",
@@ -21212,6 +21251,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आधे-अधूरे परिवार",
         "आधे-अधूरे परिवार में",
@@ -21241,6 +21281,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आधे-अधूरे सपनों",
         "आधे-अधूरे सपने देखना",
@@ -21268,6 +21309,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आधे-अधूरे समाज में",
         "आधे-अधूरे समाज से",
@@ -22508,6 +22550,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A4%BF%E0%A4%82%E0%A4%A4%E0%A5%81-%E0%A4%AA%E0%A4%B0%E0%A4%82%E0%A4%A4%E0%A5%81",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "किंतु-परंतु"
       ]
@@ -22531,6 +22574,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A5%87_%E0%A4%AC%E0%A4%97%E0%A4%BC%E0%A4%B2_%E0%A4%AE%E0%A5%87%E0%A4%82",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "के बग़ल में"
       ]
@@ -22702,6 +22746,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/काला_पानी",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "काला पानी",
         "काले पानी में",
@@ -23064,6 +23109,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE_%E0%A4%9A%E0%A4%B2_%E0%A4%B0%E0%A4%B9%E0%A4%BE_%E0%A4%B9%E0%A5%88",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "क्या चल रहा है"
       ]
@@ -23087,6 +23133,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A4%BE_%E0%A4%AE%E0%A5%88%E0%A4%82_%E0%A4%AB%E0%A4%BC%E0%A4%BE%E0%A4%B0%E0%A4%B8%E0%A5%80_%E0%A4%AC%E0%A5%8B%E0%A4%B2_%E0%A4%B0%E0%A4%B9%E0%A4%BE_%E0%A4%B9%E0%A5%82%E0%A4%81",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "क्या मैं फ़ारसी बोल रहा हूँ"
       ]
@@ -23171,6 +23218,7 @@
         "zh": "贾伊尚卡尔·普拉萨德是Chhayavad运动的重要印地语诗人、剧作家和小说家，以《卡玛亚尼》等作品及其对现代印地语文学的影响著称。"
       },
       "id": "hi_cultural_reference_कव_जयश_कर_प_रस_द_fbe3921e",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion. AI review: approve -- The entry accurately describes Jaishankar Prasad's literary significance and Chhayavad association, with correct surface patterns.",
@@ -26908,6 +26956,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A4%E0%A5%81%E0%A4%95%E0%A5%8D%E0%A4%95%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "तुक्का"
       ]
@@ -28733,6 +28782,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%A8%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%81",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "नक्राश्रु"
       ]
@@ -29362,6 +29412,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AA%E0%A5%82%E0%A4%B0%E0%A4%BE_%E0%A4%95%E0%A4%BE_%E0%A4%AA%E0%A5%82%E0%A4%B0%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "पूरा का पूरा"
       ]
@@ -29629,6 +29680,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AB%E0%A4%BC%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A5%87_%E0%A4%96%E0%A4%BC%E0%A4%BE%E0%A4%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "फ़न्ने ख़ान"
       ]
@@ -31625,6 +31677,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A4%95%E0%A5%8D%E0%A4%96%E0%A4%A8_%E0%A4%B2%E0%A4%97%E0%A4%BE%E0%A4%A8%E0%A4%BE",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "मक्खन लगाना"
       ]
@@ -32099,6 +32152,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_raga_phrases_र_ग_मल_ह_र_बरस_न_लग",
       "id": "hi_cultural_reference_र_ग_मल_ह_र_बरस_न_लग_2d9860e5",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -32644,6 +32698,7 @@
       "confidence": 0.85,
       "explanation_key": "mnemosyne.hi.explanation.hindi_religious_phrases_001_र_म_ब_न_सब_स_न",
       "id": "hi_cultural_reference_र_म_ब_न_सब_स_न_51942749",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "A2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -35708,6 +35763,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "हाँ में हाँ मिलाने वाला",
         "हाँ में हाँ मिलाने वाला व्यक्ति",
@@ -36145,6 +36201,7 @@
       "confidence": 0.82,
       "explanation_key": "mnemosyne.hi.explanation.hindi_godan_phrases_अग_न_क_ख_ल",
       "id": "hi_literary_reference_अग_न_क_ख_ल_6462623f",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -36359,6 +36416,7 @@
       "confidence": 0.78,
       "explanation_key": "mnemosyne.hi.explanation.hindi_nirala_phrases_अग_न_क_रचन",
       "id": "hi_literary_reference_अग_न_क_रचन_a4f5bb3c",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "B2",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -37541,6 +37599,7 @@
       "source_url": "https://archive.org/details/adh-aadhure-mohan-rakesh",
       "source_work": "आधे-अधूरे",
       "source_work_key": "mnemosyne.hi.work.आध_अध_र",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आधे-अधूरे",
         "आधे-अधूरे में",
@@ -37572,6 +37631,7 @@
       "source_url": "https://archive.org/details/adh-aadhure-mohan-rakesh",
       "source_work": "आधे-अधूरे",
       "source_work_key": "mnemosyne.hi.work.आध_अध_र",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "आधे-अधूरे विश्वास",
         "आधे-अधूरे विश्वास में",
@@ -40906,6 +40966,7 @@
       "source_url": "https://www.kavitakosh.org/kk/ठंडा_लोहा",
       "source_work": "ठंडा लोहा",
       "source_work_key": "mnemosyne.hi.work.ठ_ड_ल_ह",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "ठंडा लोहा",
         "ठंडे लोहे से",
@@ -41718,6 +41779,7 @@
       "confidence": 0.88,
       "explanation_key": "mnemosyne.hi.explanation.hindi_nadi_ke_dvip_नद_क_द_व_प",
       "id": "hi_literary_reference_नद_क_द_व_प_787f1d11",
+      "is_poetic_citation": true,
       "language": "hi",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -42200,6 +42262,7 @@
       "source_url": "https://archive.org/details/baburnama0000babu",
       "source_work": "बाबरनामा",
       "source_work_key": "mnemosyne.hi.work.ब_बरन_म",
+      "subcategory": "bhagavad_gita",
       "surface_patterns": [
         "बाबरनामा",
         "बाबरनामा में",
@@ -44733,6 +44796,7 @@
       "source_url": "https://hi.wikisource.org/wiki/%E0%A4%B8%E0%A5%80%E0%A4%82%E0%A4%B9%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A8_%E0%A4%AC%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A5%80%E0%A4%B8%E0%A5%80",
       "source_work": "सिंहासन बत्तीसी",
       "source_work_key": "mnemosyne.hi.work.स_ह_सन_बत_त_स",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "सिंहासन बत्तीसी",
         "सिंहासन बत्तीसी की कहानी",
@@ -48618,6 +48682,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "बिल्ली के भागो दुर्गा हो गयी",
         "बिल्ली भागो दुर्गा हो गयी",
@@ -49375,6 +49440,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "hindi_lokokti",
       "surface_patterns": [
         "विद्या विनयेन शोभते",
         "विद्या विनय से शोभित होती है",
