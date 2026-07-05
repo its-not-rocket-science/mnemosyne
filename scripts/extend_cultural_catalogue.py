@@ -298,9 +298,18 @@ def load_existing(seed_path: Path, language: str, extra_yaml: Path | None = None
 # Client factory
 # ---------------------------------------------------------------------------
 
-def make_client() -> OpenAI:
+def _provider_url(model: str) -> str | None:
+    """Return the API base URL for a known model, or None for OpenAI default."""
+    entry = PROVIDERS.get(model, {})
+    url = entry.get("url", "")
+    if url.startswith("http"):
+        return url
+    return None
+
+
+def make_client(model: str = "") -> OpenAI:
     api_key  = os.environ.get("CULTURAL_CATALOGUE_API_KEY") or os.environ.get("OPENAI_API_KEY")
-    base_url = os.environ.get("CULTURAL_CATALOGUE_BASE_URL")
+    base_url = os.environ.get("CULTURAL_CATALOGUE_BASE_URL") or _provider_url(model)
     if not api_key:
         sys.exit("ERROR: set CULTURAL_CATALOGUE_API_KEY (or OPENAI_API_KEY) in scripts/.env")
     kwargs: dict = {"api_key": api_key}
@@ -309,15 +318,15 @@ def make_client() -> OpenAI:
     return OpenAI(**kwargs)
 
 
-def make_review_client() -> OpenAI:
+def make_review_client(model: str = "") -> OpenAI:
     """Review can run against a different provider than generation (e.g.
     Mistral for discover/enrich breadth, DeepSeek for review judgment) by
     setting CULTURAL_CATALOGUE_REVIEW_API_KEY / _BASE_URL. Falls back to
     the main client's credentials when unset."""
     api_key = os.environ.get("CULTURAL_CATALOGUE_REVIEW_API_KEY")
-    base_url = os.environ.get("CULTURAL_CATALOGUE_REVIEW_BASE_URL")
+    base_url = os.environ.get("CULTURAL_CATALOGUE_REVIEW_BASE_URL") or _provider_url(model)
     if not api_key and not base_url:
-        return make_client()
+        return make_client(model)
     api_key = api_key or os.environ.get("CULTURAL_CATALOGUE_API_KEY") or os.environ.get("OPENAI_API_KEY")
     if not api_key:
         sys.exit("ERROR: set CULTURAL_CATALOGUE_REVIEW_API_KEY (or CULTURAL_CATALOGUE_API_KEY) in scripts/.env")
@@ -1127,8 +1136,8 @@ def run(
     if need == 0:
         print("Target already met for generation -- resuming to finish remaining phases (i18n/review/promote).")
 
-    client = make_client()
-    review_client = make_review_client()
+    client = make_client(model)
+    review_client = make_review_client(review_model)
     state  = load_progress(output) if resume else {
         "discovered": [], "enriched": [], "i18n": [], "reviewed": [],
         "tokens_in": 0, "tokens_out": 0,
@@ -1398,7 +1407,7 @@ def run_backfill_subcategory(
         print("Nothing to backfill.")
         return
 
-    client = make_client()
+    client = make_client(model)
     total_in = total_out = 0
     batches = [targets[i:i + batch_size] for i in range(0, len(targets), batch_size)]
 
