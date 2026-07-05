@@ -15745,6 +15745,7 @@
       "source_url": "https://en.wiktionary.org/wiki/campo_libero",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "campo libero"
       ]
@@ -15900,6 +15901,7 @@
       "source_url": "https://en.wiktionary.org/wiki/carne_al_fuoco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "carne al fuoco"
       ]
@@ -16065,6 +16067,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cavare_le_castagne_dal_fuoco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "cavare le castagne dal fuoco"
       ]
@@ -17965,6 +17968,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_il_diapason",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "music",
       "surface_patterns": [
         "dare il diapason"
       ]
@@ -17988,6 +17992,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_il_la",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "music",
       "surface_patterns": [
         "dare il la"
       ]
@@ -36156,6 +36161,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sulla_stessa_barca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "sulla stessa barca"
       ]

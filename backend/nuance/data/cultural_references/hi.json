@@ -7885,6 +7885,7 @@
       "source_url": "https://www.wisdomlib.org/history/buddhism/book/vinaya-pitaka-i-vinaya-vibhanga/d/doc42037.html",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "गौतम बुद्ध महाभिनिष्क्रमण करते हैं",
         "गौतम बुद्ध का महाभिनिष्क्रमण",
@@ -8222,6 +8223,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "योगसूत्र",
       "source_work_key": "mnemosyne.hi.work.य_गस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "चित्तवृत्तिनिरोधः",
         "चित्तवृत्तिनिरोधेन",
@@ -9800,6 +9802,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%A8%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%BF",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "धर्मो रक्षति रक्षितः",
         "धर्मः रक्षति रक्षितः",
@@ -11229,6 +11232,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%A8%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%BF",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "पुरुषार्थ चतुष्टयम्",
         "पुरुषार्थस्य चतुष्टयम्",
@@ -13823,6 +13827,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "मोक्षस्य मार्गः",
         "मोक्षस्य मार्गः अस्ति",
@@ -14333,6 +14338,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "योगसूत्र",
       "source_work_key": "mnemosyne.hi.work.य_गस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "योगः चित्तवृत्ति निरोधः",
         "योगः चित्तवृत्तेः निरोधः",
@@ -14486,6 +14492,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%AE%E0%A5%8D",
       "source_work": "योगसूत्र",
       "source_work_key": "mnemosyne.hi.work.य_गस_त_र",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "योगसिद्धिः",
         "योगसिद्धेः",
@@ -17337,6 +17344,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A4%BF%E0%A4%B7%E0%A5%8D%E0%A4%A0%E0%A4%AE%E0%A5%8D",
       "source_work": "योगवासिष्ठ",
       "source_work_key": "mnemosyne.hi.work.य_गव_स_ष_ठ",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "सर्वात्मभावना",
         "सर्वात्मभावनायाः",
@@ -18362,6 +18370,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "अकबर-बीरबल की जोड़ी",
         "अकबर और बीरबल की जोड़ी",
@@ -19098,6 +19107,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "vedic_scripture",
       "surface_patterns": [
         "अग्नि के दर्शन",
         "अग्नि के दर्शन करना",
@@ -23082,6 +23092,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "काला सागर",
         "काले सागर",
@@ -23252,6 +23263,7 @@
       "source_url": "https://hi.wikipedia.org/wiki/कृष्ण_जन्माष्टमी",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "mythology",
       "surface_patterns": [
         "कृष्ण जन्माष्टमी",
         "कृष्ण जन्माष्टमी का",
@@ -27477,6 +27489,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "तानसेन का दरबार",
         "तानसेन के दरबार में",
@@ -33583,6 +33596,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "विक्रमादित्य",
         "विक्रमादित्य का",
@@ -34669,6 +34683,7 @@
       "source_url": "https://hi.wikisource.org/wiki/संत_रैदास_के_पद",
       "source_work": "रैदास के पद",
       "source_work_key": "mnemosyne.hi.work.र_द_स_क_पद",
+      "subcategory": "historical",
       "surface_patterns": [
         "संत रैदास",
         "रैदास जी",
@@ -39155,6 +39170,7 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%85%E0%A4%AD%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%E0%A4%B6%E0%A4%BE%E0%A4%95%E0%A5%81%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%B2%E0%A4%AE%E0%A5%8D",
       "source_work": "अभिज्ञानशाकुन्तलम्",
       "source_work_key": "mnemosyne.hi.work.अभ_ज_ञ_नश_क_न_तलम",
+      "subcategory": "historical",
       "surface_patterns": [
         "अभिज्ञानशाकुन्तलम",
         "अभिज्ञानशाकुन्तलम् की",
@@ -44950,6 +44966,7 @@
       "source_url": "https://www.hindisamay.com/contentDetail.aspx?id=22&pageno=1",
       "source_work": "सूरसागर",
       "source_work_key": "mnemosyne.hi.work.स_रस_गर",
+      "subcategory": "historical",
       "surface_patterns": [
         "सूरदास की कृष्ण भक्ति",
         "सूरदास की भक्ति",
@@ -45599,6 +45616,7 @@
       "short_explanation": "Chaotic, foolish, or unjust governance.",
       "source_author": "Bharatendu Harishchandra",
       "source_work": "Andher Nagari",
+      "subcategory": "hindi_muhavare",
       "surface_patterns": [
         "अंधेर नगरी"
       ]
