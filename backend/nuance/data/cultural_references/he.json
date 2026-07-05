@@ -2133,6 +2133,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.he.explanation.tehilim_phrases_א_יש_א_נו_ש_ב_צ_ל_מ_ח_ד_ש_יו",
       "id": "he_classical_or_scriptural_allusion_א_יש_א_נו_ש_ב_צ_ל_מ_ח_ד_ש_יו_ee9e9301",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "C1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -2147,6 +2148,7 @@
       "source_url": "https://www.mechon-mamre.org/p/pt/pt2633.htm",
       "source_work": "תהלים",
       "source_work_key": "mnemosyne.he.work.תהלים",
+      "subcategory": "biblical",
       "surface_patterns": [
         "איש אנוש בצל מחדשיו",
         "איש אנוש בצל"
@@ -14788,6 +14790,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.he.explanation.tanakh_phrases_ח_ז_ה_ו_ל_א_ר_א_ה",
       "id": "he_classical_or_scriptural_allusion_ח_ז_ה_ו_ל_א_ר_א_ה_08cf0df9",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "B1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -14802,6 +14805,7 @@
       "source_url": "https://www.mechon-mamre.org/p/pt/pt1044.htm",
       "source_work": "תַּנַּךְ",
       "source_work_key": "mnemosyne.he.work.ת_נ_ך",
+      "subcategory": "biblical",
       "surface_patterns": [
         "חזה ולא ראה",
         "חזה ולא ראה את",
@@ -23721,6 +23725,7 @@
       "source_url": "https://he.wikisource.org/wiki/%D7%A8%D7%A9%22%D7%99",
       "source_work": "Commentary on the Torah",
       "source_work_key": "mnemosyne.he.work.commentary_on_the_torah",
+      "subcategory": "biblical",
       "surface_patterns": [
         "רש\"י"
       ]
@@ -25249,6 +25254,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "איך זה יכול להיות",
         "איך יכול להיות",
@@ -25327,6 +25333,7 @@
       "source_license": "not_required",
       "source_work": "Modern Hebrew idiom",
       "source_work_key": "mnemosyne.he.work.modern_hebrew_idiom",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "אין לי כוח להתמודד עם זה",
         "אין לי כוח להתמודד איתו",
@@ -25481,6 +25488,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "אהבה",
         "אהבת",
@@ -25545,6 +25553,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%90%D7%99%D7%9F_%D7%9E%D7%94_%D7%9C%D7%97%D7%A4%D7%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "אין מה לחפש"
       ]
@@ -25581,6 +25590,7 @@
       "source_location": "Various tractates (e.g., Shabbat 68a)",
       "source_work": "תלמוד בבלי (Babylonian Talmud)",
       "source_work_key": "mnemosyne.he.work.תלמוד_בבלי_babylonian_talmud",
+      "subcategory": "talmudic",
       "surface_patterns": [
         "אספסתא",
         "אספסתא (צמח)",
@@ -25712,6 +25722,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%91%D7%90%D7%A8%D7%91%D7%A2_%D7%A2%D7%99%D7%A0%D7%99%D7%99%D7%9D",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "בארבע עיניים"
       ]
@@ -25735,6 +25746,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%91%D7%93%D7%9D_%D7%A7%D7%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "בדם קר"
       ]
@@ -25758,6 +25770,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%91%D7%95%D7%A7%D7%A8_%D7%98%D7%95%D7%91_%D7%90%D7%9C%D7%99%D7%94%D7%95",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "בוקר טוב אליהו"
       ]
@@ -25820,6 +25833,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%91%D7%9F_%D7%96%D7%95%D7%A0%D7%94",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "בן זונה"
       ]
@@ -25867,6 +25881,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%91%D7%A8_%D7%9E%D7%99%D7%A0%D7%9F",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "talmudic",
       "surface_patterns": [
         "בר מינן"
       ]
@@ -26072,6 +26087,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%93%D7%91%D7%A8_%D7%90%D7%97%D7%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "talmudic",
       "surface_patterns": [
         "דבר אחר"
       ]
@@ -26134,6 +26150,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "הַדָּבָר הַזֶּה צָרִיךְ לְהֶחָלֵט מִיָּד",
         "הדבר הזה צריך להחלט מיד",
@@ -26250,6 +26267,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "הַמַּחֲזֶה הָאֲמִתִּי הוּא הַתְּמוּנָה שֶׁל אֶרֶץ יִשְׂרָאֵל",
         "המחזה האמיתי הוא תמונת הארץ ישראל",
@@ -26325,6 +26343,7 @@
       "source_license": "not_required",
       "source_work": "Modern Hebrew idiom",
       "source_work_key": "mnemosyne.he.work.modern_hebrew_idiom",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "הרבה פעם הגיע הזמן לדבר מה",
         "הרבה פעמים הגיע הזמן לדבר מה",
@@ -26374,6 +26393,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%94%D7%90%D7%95%D7%AA%D7%99%D7%95%D7%AA_%D7%94%D7%A7%D7%98%D7%A0%D7%95%D7%AA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "האותיות הקטנות"
       ]
@@ -26513,6 +26533,7 @@
       "source_url": "https://he.wikipedia.org/wiki/%D7%94%D7%9B%D7%95%D7%AA%D7%9C_%D7%94%D7%9E%D7%A2%D7%A8%D7%91%D7%99",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "הכותל המערבי",
         "כותל המערבי",
@@ -26590,6 +26611,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "המהפכה העברית",
         "מהפכה עברית",
@@ -26632,6 +26654,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "המהפכה הצרפתית",
         "המהפכה בצרפת",
@@ -26710,6 +26733,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "liturgical",
       "surface_patterns": [
         "הנר הראשון",
         "נר ראשון",
@@ -26889,6 +26913,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "זֶה לֹא הָיָה צָרִיךְ לְהִגַּע לְכָאן",
         "זה לא היה צריך להגיע לכאן",
@@ -26914,6 +26939,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "זה לא נכלל בתקנה",
         "לא נכלל בתקנה",
@@ -26939,6 +26965,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "liturgical",
       "surface_patterns": [
         "זכרונו לברכה",
         "ז״ל",
@@ -27165,6 +27192,7 @@
       "source_license": "not_required",
       "source_work": "Various (biographies)",
       "source_work_key": "mnemosyne.he.work.various_biographies",
+      "subcategory": "historical",
       "surface_patterns": [
         "יוסף טרומפלדור",
         "טרומפלדור",
@@ -27238,6 +27266,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "כְּאִלּוּ הָעֵצָה שֶׁנָּתַתִּי לוֹ הָיְתָה מֵחֲזִית שֶׁל מַחֲזֶה",
         "כאילו העצה שנתתי לו הייתה מחזית של מחזה",
@@ -27266,6 +27295,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "כאשר הקורא מסתכל בכותל – הכותל מתרפא",
         "הקורא מסתכל בכותל והכותל מתרפא",
@@ -27394,6 +27424,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "כְּמִנְהַג הַיְּהוּדִים בִּבְנֵי בְרַק",
         "כְּמִנְהַג בְּנֵי בְרַק",
@@ -27661,6 +27692,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%9C%D7%99%D7%9E%D7%99%D7%9D",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "לימים"
       ]
@@ -27895,6 +27927,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.he.work.oral_tradition",
+      "subcategory": "historical",
       "surface_patterns": [
         "מַלְכֵי רוֹמָא",
         "מַלְכֵי רוֹמָה",
@@ -27984,6 +28017,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%9E%D7%97%D7%A0%D7%94_%D7%9E%D7%A9%D7%95%D7%AA%D7%A3",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "מחנה משותף"
       ]
@@ -28007,6 +28041,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%9E%D7%9B%D7%9C_%D7%95%D7%9B%D7%9C",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "מכל וכל"
       ]
@@ -28264,6 +28299,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "עַל פִּי הַנִּסִּים שֶׁלִּיטַנּוּקְלִי",
         "כְּמוֹ הַנִּסִּים שֶׁלִּיטַנּוּקְלִי",
@@ -28289,6 +28325,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%A2%D7%91%D7%A8_%D7%A2%D7%9C_%D7%94%D7%97%D7%95%D7%A7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "עבר על החוק"
       ]
@@ -28312,6 +28349,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%A2%D7%99%D7%92%D7%9C_%D7%A4%D7%99%D7%A0%D7%95%D7%AA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "עיגל פינות"
       ]
@@ -28450,6 +28488,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%A2%D7%9C_%D7%94%D7%97%D7%99%D7%99%D7%9D_%D7%95%D7%A2%D7%9C_%D7%94%D7%9E%D7%95%D7%95%D7%AA",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "על החיים ועל המוות"
       ]
@@ -28473,6 +28512,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%A2%D7%9C%D7%94_%D7%91%D7%A7%D7%A0%D7%94_%D7%90%D7%97%D7%93",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "עלה בקנה אחד"
       ]
@@ -28497,6 +28537,7 @@
       "source_url": "https://he.wikisource.org/wiki/קוראן",
       "source_work": "הקוראן (Quran)",
       "source_work_key": "mnemosyne.he.work.הקוראן_quran",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "עם הספר",
         "עם הספר (ביטוי)",
@@ -28590,6 +28631,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%A2%D7%A9%D7%94_%D7%90%D7%AA_%D7%A9%D7%9C%D7%95",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "עשה את שלו"
       ]
@@ -28627,6 +28669,7 @@
       "source_url": "https://he.wikipedia.org/wiki/%D7%A4%D7%AA%D7%97_%D7%AA%D7%A7%D7%95%D7%95%D7%94",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "פתח תקווה",
         "עיר פתח תקווה"
@@ -28718,6 +28761,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "מה שאינו נראה אינו קיים",
         "מה שלא נראה אינו קיים",
@@ -28743,6 +28787,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "קְדֻשַּׁת הַיָּם",
         "קְדֻשַּׁת הַיָּם הַתִּיכוֹן",
@@ -28833,6 +28878,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "liturgical",
       "surface_patterns": [
         "שבת שלום",
         "שבת-שלום",
@@ -28858,6 +28904,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D7%A9%D7%99%D7%94%D7%99%D7%94",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "שיהיה"
       ]
@@ -28880,6 +28927,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "שלום",
         "שלום עליכם",
@@ -29317,6 +29365,7 @@
       "source_license": "public_domain",
       "source_work": "שירים ופזמונות",
       "source_work_key": "mnemosyne.he.work.שירים_ופזמונות",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "אֵין מַצָּב בְּלִי אַהֲבָה",
         "אין מצב בלי אהבה"
@@ -29613,6 +29662,7 @@
       "source_license": "not_required",
       "source_work": "ש",
       "source_work_key": "mnemosyne.he.work.ש",
+      "subcategory": "proverb",
       "surface_patterns": [
         "אני לא זוכר אם זה מתורת חנוכה או מן המשנה",
         "אני לא זוכר אם זה מן המשנה או מתורת חנוכה",
@@ -29638,6 +29688,7 @@
       "source_url": "https://benyehuda.org/bialik/140.html",
       "source_work": "מִשְׁפָּטִים",
       "source_work_key": "mnemosyne.he.work.מ_ש_פ_ט_ים",
+      "subcategory": "proverb",
       "surface_patterns": [
         "אֲנִי לֹא עוֹשֶׂה צְלָחָה מֵהָרִיקוּלִין שֶׁלּוֹ",
         "אני לא עושה צלחה מהריקולין שלו",
@@ -29664,6 +29715,7 @@
       "source_url": "https://www.sefaria.org/Shabbat.63a.1?lang=he",
       "source_work": "תלמוד בבלי",
       "source_work_key": "mnemosyne.he.work.תלמוד_בבלי",
+      "subcategory": "talmudic",
       "surface_patterns": [
         "אני מבין מה שאתה אומר בעין החיות",
         "מבין בעין החיות",
@@ -29715,6 +29767,7 @@
       "source_url": "https://www.sefaria.org/Sanhedrin.99b.1?lang=he",
       "source_work": "תלמוד בבלי",
       "source_work_key": "mnemosyne.he.work.תלמוד_בבלי",
+      "subcategory": "talmudic",
       "surface_patterns": [
         "נשאר בעין הגדי",
         "להישאר בעין הגדי"
@@ -30748,6 +30801,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "היכן אתה יושב",
         "איפה אתה גר",
@@ -32287,6 +32341,7 @@
       "source_license": "not_required",
       "source_work": "Modern Hebrew literature/colloquial",
       "source_work_key": "mnemosyne.he.work.modern_hebrew_literature_colloquial",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "לא שהיה לו מחשבה בראשו",
         "זה לא שהיה לו מחשבה בראשו"
@@ -32311,6 +32366,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "נִשְׁמַע כְּמוֹ מִסִּפּוּר הַמַּעֲשִׂיּוֹת",
         "נִשְׁמַע כְּמִסִּפּוּר הַמַּעֲשִׂיּוֹת",
@@ -32337,6 +32393,7 @@
       "source_url": "https://he.wikipedia.org/wiki/%D7%96%D7%94%D7%95%D7%93%D7%99_%D7%95%D7%A8%D7%91%D7%99_%D7%A2%D7%9B%D7%91%D7%A8",
       "source_work": "סיפורי עמים",
       "source_work_key": "mnemosyne.he.work.סיפורי_עמים",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "זְהוּדִי וְרַבִּי עַכְבָּר",
         "זְהוּדִי וְעַכְבָּר",
@@ -34652,6 +34709,7 @@
       "confidence": 0.9,
       "explanation_key": "mnemosyne.he.explanation.israeli_national_anthem_עו_ד_ל_א_א_ב_ד_ה_ת_ק_ו_ת_נ",
       "id": "he_literary_reference_עו_ד_ל_א_א_ב_ד_ה_ת_ק_ו_ת_נו_ש_יר_ה_ת_ק_ו_ה_20d1d520",
+      "is_poetic_citation": true,
       "language": "he",
       "learner_level": "A1",
       "notes": "AI-generated; verify attribution and surface patterns before promotion.",
@@ -34665,6 +34723,7 @@
       "source_url": "https://he.wikipedia.org/wiki/%D7%94%D7%AA%D7%A7%D7%95%D7%95%D7%94",
       "source_work": "תקוותינו",
       "source_work_key": "mnemosyne.he.work.תקוותינו",
+      "subcategory": "liturgical",
       "surface_patterns": [
         "עוד לא אבדה תקוותנו",
         "עוד לא אבדה תקותנו",
@@ -34934,6 +34993,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "liturgical",
       "surface_patterns": [
         "שיר הערשון של אבא",
         "שיר הערשון של אבינו"
@@ -36172,6 +36232,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.he.work.various",
+      "subcategory": "modern_hebrew",
       "surface_patterns": [
         "אֵיפֹה אַתָּה",
         "איפה אתה",
