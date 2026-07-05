@@ -94,7 +94,10 @@ def _collect_morph_lemmas(lang: str, pos_filter: set[str]) -> list[str]:
 
 def _collect_lemmas(lang: str, pos_filter: set[str]) -> list[str]:
     """Return ordered list of lemmas to pre-fetch, deduplicating across sources."""
-    verb_lemmas = _collect_verb_lemmas(lang)
+    # Skip verb-morph DB when filtering to non-verb POS (nouns/adjs are not in it).
+    _verb_pos = {"verb", "aux"}
+    include_verbs = not pos_filter or bool(pos_filter & _verb_pos)
+    verb_lemmas = _collect_verb_lemmas(lang) if include_verbs else []
     seen: set[str] = set(verb_lemmas)
 
     morph_lemmas = [
