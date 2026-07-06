@@ -1,6 +1,6 @@
 # Beta Gap Report — Mnemosyne
 
-*Originally written 2026-04-15. Updated 2026-05-28 (feature-maturity pass, Priority 1–8 complete). Updated 2026-05-29 (items 7–12 complete; auth/deps fixes; 4 468 passing tests). Updated 2026-05-31 (English grammar/nuance plugin, Chinese tone contours/heteronyms, analytics insight UI; 4 605 passing tests).*
+*Originally written 2026-04-15. Updated 2026-05-28 (feature-maturity pass, Priority 1–8 complete). Updated 2026-05-29 (items 7–12 complete; auth/deps fixes; 4 468 passing tests). Updated 2026-05-31 (English grammar/nuance plugin, Chinese tone contours/heteronyms, analytics insight UI; 4 605 passing tests). Updated 2026-07-06 (cultural catalogue subcategory backfill complete; subcategory-labels.js expanded; 5 218 passing tests).*
 
 All private alpha and public beta blockers are resolved. All vision items V1–V5 are
 implemented. The system is at or beyond the original 12-week plan. This document is
@@ -12,7 +12,7 @@ tier.
 ## What is solid (do not second-guess)
 
 - **Core loop.** Parse → lesson → review → recommend is complete, tested, and persistent.
-  4 605 passing tests (full suite as of 2026-05-31).
+  5 218 passing tests (full suite as of 2026-07-06).
 - **Practice activities.** Detail pane exposes scored retell, typed drill, comprehension, and
   mini-quiz practice panels. Every practice check dispatches `pane-practice-check` → `submitReview(objectId, quality)` → FSRS `/review` endpoint, so practice directly updates spaced-repetition state. Session score and next-interval feedback shown inline.
 - **FSRS-5.** Pure Python, deterministic, no external dependencies. Per-user calibration
@@ -81,6 +81,17 @@ tier.
 - **Dictionary + translation enrichment.** Wiktionary gloss enrichment
   (`ENABLE_DICTIONARY_LOOKUP`). LibreTranslate + MyMemory translation
   (`ENABLE_TRANSLATION_ENRICHMENT`). Both run as background tasks post-parse.
+- **Cultural catalogue subcategory coverage (2026-07-06).** 52 441 entries across 18 languages.
+  Subcategory fill rate raised from ~22 % to 91 % (4 699 remaining, mostly es/hi/it/pt).
+  `_SUBCATEGORY_VALUES` expanded to per-language taxonomies for all 18 language codes;
+  `idiom` added as English catchall; `_BACKFILL_SYS` prompt sharpened to distinguish
+  idiom / proverb / literary_allusion / is_poetic_citation. English: 97.5 % coverage
+  (300 unclassifiable entries remain). `frontend/js/subcategory-labels.js` expanded from
+  37 to 93 label entries covering all active subcategory codes. Data fixes: zh `suyu` →
+  `suyv` (52 entries), fa `bov_kor` → `modern_literature` (2 entries), null-string
+  subcategory cleanup (261 entries across all langs). The es/hi/it/pt gaps (20–33 %)
+  represent entries the LLM could not classify into the current taxonomies; expanding
+  those taxonomies further and re-running would close most of the remaining gap.
 
 ---
 
