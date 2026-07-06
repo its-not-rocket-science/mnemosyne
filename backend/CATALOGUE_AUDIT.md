@@ -35,6 +35,25 @@ Multi-pass subcategory backfill complete across all 18 languages using deepseek-
 
 **Note on en/es gaps:** Remaining uncategorized entries are predominantly historical events, visual art references, and pop-culture items that don't fit any predefined subcategory. These are semantically correct nulls, not missing data — the practical floor for the current taxonomy.
 
+### Path to closing en/es gaps further
+
+Sampled unclassified entries reveal these dominant uncovered types:
+
+**English (~7,764 remaining):**
+- Historical figures and events (Cromwell's Ironsides, Gauguin, Klimt, Pollock) → would need `historical_figure`, `visual_art_movement`, `political_history`
+- Orwellian coinages already have `modern_literature` but Newspeak compounds fall through → `dystopian_literature` or `science_fiction` subcategory
+- Pop culture (film, TV, advertising) → already have `film_tv` but many entries tagged `common` register with no source_work signal confuse the LLM
+
+**Spanish (~1,659 remaining):**
+- Spanish Civil War era references, Francoist history, regional fiestas → `historical` exists but entries have `source_work: Various` which causes LLM to return null
+- Latin American political/cultural history → `latin_american_literature` exists but `latin_american_history` is missing
+
+**Recommended next taxonomy additions:**
+- en: `science_fiction`, `historical_figure`, `political_history`, `visual_art_movement`, `sport`
+- es: `latin_american_history`, `spanish_civil_war` (or fold into existing `historical`)
+
+After adding categories, re-run `--backfill-subcategory` for en/es only. Expected uplift: en 35% → ~55%, es 64% → ~80%.
+
 ---
 
 ## Update — 2026-07-03 (LLM backfill run)
