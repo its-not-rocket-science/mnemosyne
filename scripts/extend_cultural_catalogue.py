@@ -1353,7 +1353,7 @@ _SUBCATEGORY_VALUES: dict[str, list[str]] = {
     "en": ["biblical", "shakespearean", "arthurian", "greek_mythology", "roman_mythology",
            "norse_mythology", "literary_allusion", "modern_literature", "science_fiction",
            "visual_art", "visual_art_movement", "historical", "historical_figure",
-           "political_history", "film_tv", "music", "sport", "proverb", "folk_tale"],
+           "political_history", "film_tv", "music", "sport", "proverb", "folk_tale", "idiom"],
     "es": ["biblical", "golden_age", "latin_american_literature", "latin_american_history",
            "quijote", "greek_mythology", "roman_mythology", "literary_allusion",
            "modern_literature", "visual_art", "historical", "political_history",
@@ -1389,7 +1389,19 @@ _SUBCATEGORY_DEFAULT = ["biblical", "latin_tag", "greek_mythology", "roman_mytho
 _BACKFILL_SYS = (
     "You are a cultural catalogue specialist. For each entry, assign the most "
     "specific subcategory value and determine if is_poetic_citation is true. "
-    "Return ONLY a JSON array in the same order as input."
+    "Return ONLY a JSON array in the same order as input.\n\n"
+    "Key distinctions:\n"
+    "- idiom: a fixed idiomatic expression whose meaning is non-literal and "
+    "whose origin is folk/oral/unknown (e.g. 'bite the bullet', 'raining cats "
+    "and dogs', 'burn the midnight oil'). Use this as the catchall for everyday "
+    "expressions that do not fit a more specific category.\n"
+    "- proverb: a complete sentence expressing a general truth with a known "
+    "proverbial tradition (e.g. 'every cloud has a silver lining').\n"
+    "- literary_allusion: a reference to a specific named author, work, or "
+    "character from literature (e.g. 'Quixotic', 'Kafkaesque', 'Orwellian').\n"
+    "- is_poetic_citation: true ONLY when the entry is a verbatim quotation "
+    "from a named poem, scripture, or classical text. Everyday idioms are "
+    "always false."
 )
 
 _BACKFILL_USER = """\

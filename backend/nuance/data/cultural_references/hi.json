@@ -1081,7 +1081,6 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
-      "subcategory": "null",
       "surface_patterns": [
         "अग्नि देवता",
         "अग्नि देव को पूजना",
@@ -2306,7 +2305,6 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%B5%E0%A5%87%E0%A4%A6",
       "source_work": "वेद",
       "source_work_key": "mnemosyne.hi.work.व_द",
-      "subcategory": "null",
       "surface_patterns": [
         "अग्नि यज्ञ",
         "अग्नि-यज्ञ करना",
@@ -3512,7 +3510,6 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%85%E0%A4%AD%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8_%E0%A4%B6%E0%A4%BE%E0%A4%95%E0%A5%81%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%B2%E0%A4%AE%E0%A5%8D",
       "source_work": "अभिज्ञान शाकुंतलम्",
       "source_work_key": "mnemosyne.hi.work.अभ_ज_ञ_न_श_क_तलम",
-      "subcategory": "null",
       "surface_patterns": [
         "अभिज्ञान शाकुंतलम्",
         "अभिज्ञान शाकुंतलम् का",
@@ -3642,7 +3639,6 @@
       "source_url": "https://hi.wikipedia.org/wiki/%E0%A4%85%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%AE%E0%A4%A5%E0%A4%A8",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
-      "subcategory": "null",
       "surface_patterns": [
         "अमृतमंथन",
         "अमृतमंथन का",
@@ -3769,7 +3765,6 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A5%80%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
-      "subcategory": "null",
       "surface_patterns": [
         "अरुणोदय",
         "अरुणोदय का समय",
@@ -4734,7 +4729,6 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%B0%E0%A5%80%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
-      "subcategory": "null",
       "surface_patterns": [
         "इंद्र का वज्र",
         "इंद्र के वज्र",
@@ -4765,7 +4759,6 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%8F%E0%A4%95%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A4%A5%E0%A4%AE%E0%A5%8D",
       "source_work": "ऋग्वेद",
       "source_work_key": "mnemosyne.hi.work.ऋग_व_द",
-      "subcategory": "null",
       "surface_patterns": [
         "इंद्र लोक",
         "इंद्र लोक में",
@@ -5312,7 +5305,6 @@
       "source_url": "https://sa.wikisource.org/wiki/%E0%A4%AE%E0%A4%A8%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A5%83%E0%A4%A4%E0%A4%BF",
       "source_work": "मनुस्मृति",
       "source_work_key": "mnemosyne.hi.work.मन_स_म_त",
-      "subcategory": "null",
       "surface_patterns": [
         "एवं सति",
         "एवं सति में",
@@ -20377,7 +20369,6 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AE%E0%A5%81%E0%A4%A3%E0%A5%8D%E0%A4%A1%E0%A4%95_%E0%A4%89%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A6",
       "source_work": "मुण्डक उपनिषद",
       "source_work_key": "mnemosyne.hi.work.म_ण_डक_उपन_षद",
-      "subcategory": "null",
       "surface_patterns": [
         "सत्यमेव जयते कहते हैं",
         "सत्यमेव जयते का अर्थ",
@@ -20798,7 +20789,6 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
-      "subcategory": "null",
       "surface_patterns": [
         "अर्वाचीन",
         "अर्वाचीन काल",
@@ -21685,7 +21675,6 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
-      "subcategory": "null",
       "surface_patterns": [
         "आर्याभिवादन",
         "आर्याभिवादन करना",
@@ -37518,7 +37507,6 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%BE%E0%A4%A3",
       "source_work": "पुराण",
       "source_work_key": "mnemosyne.hi.work.प_र_ण",
-      "subcategory": "null",
       "surface_patterns": [
         "अद्भुत आख्यान",
         "अद्भुत आख्यान लिखना",
@@ -37676,7 +37664,6 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
-      "subcategory": "null",
       "surface_patterns": [
         "अभिमानिनी",
         "अभिमानिनी का",
@@ -37708,7 +37695,6 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.hi.work.various",
-      "subcategory": "null",
       "surface_patterns": [
         "अभिमानमर्दन",
         "अभिमानमर्दन का",
@@ -42843,7 +42829,6 @@
       "source_url": "https://wikisource.org/wiki/%E0%A4%85%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%87%E0%A4%B0_%E0%A4%A8%E0%A4%97%E0%A4%B0%E0%A5%80",
       "source_work": "अंधेर नगरी",
       "source_work_key": "mnemosyne.hi.work.अ_ध_र_नगर",
-      "subcategory": "null",
       "surface_patterns": [
         "भारतेंदु हरिश्चंद्र की ‘अंधेर नगरी’",
         "‘अंधेर नगरी’ भारतेंदु हरिश्चंद्र द्वारा लिखी गई",

@@ -14824,7 +14824,6 @@
       "source_url": "https://ganjoor.net/sadeghhedayat/bofkor/",
       "source_work": "بوف کور",
       "source_work_key": "mnemosyne.fa.work.بوف_کور",
-      "subcategory": "null",
       "surface_patterns": [
         "بوفِ کور",
         "بوفِ کورِ من",
@@ -18317,7 +18316,6 @@
       "source_url": "https://ganjoor.net/moulavi/shams/ghazalsha/sh1054",
       "source_work": "دیوان اشعار",
       "source_work_key": "mnemosyne.fa.work.دیوان_اشعار",
-      "subcategory": "null",
       "surface_patterns": [
         "شهر غم",
         "شهرِ غم",
@@ -18706,7 +18704,6 @@
       "source_license": "not_required",
       "source_work": " Various",
       "source_work_key": "mnemosyne.fa.work.various",
-      "subcategory": "null",
       "surface_patterns": [
         "عروسک خانه",
         "عروسکِ خانه",
@@ -19874,7 +19871,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/بوف_کور",
       "source_work": "بوف کور",
       "source_work_key": "mnemosyne.fa.work.بوف_کور",
-      "subcategory": "bov_kor",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "مردی که درخت شد",
         "مردی که درخت می‌شود",
@@ -20886,7 +20883,7 @@
       "source_url": "https://fa.wikipedia.org/wiki/%D8%A8%D9%88%D9%81_%DA%A9%D9%88%D8%B1",
       "source_work": "بوف کور",
       "source_work_key": "mnemosyne.fa.work.بوف_کور",
-      "subcategory": "bov_kor",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "چراغ مرده",
         "چراغِ مرده",
