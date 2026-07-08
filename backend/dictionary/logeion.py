@@ -322,7 +322,27 @@ _LA_NOUN_GENDER_RE = re.compile(r",\s*([mfn])\.")
 # Greek definite articles that mark noun gender in LSJ entries
 _GRC_MASC = ("ὁ", "ὁ")   # ὁ  (with smooth breathing)
 _GRC_FEM  = ("ἡ",)             # ἡ  (with rough breathing)
-_GRC_NEUT = ("τό", "τό")  # τό
+_GRC_NEUT = ("τό", "τό", "τά", "τά")  # τό (sg) / τά (pl neuter)
+
+# Greek verb/adjective patterns for LSJ entries
+_GRC_TENSE_RE  = re.compile(r"\b(?:aor|fut|impf|pf|plpf|opt|subj)\.")
+_GRC_PERSON_RE = re.compile(r"\b[123]\s+(?:sg|pl)\.")
+_GRC_ADJ_RE    = re.compile(r",\s*[αἀᾱ],\s*ον|,\s*η,\s*ον")
+# Athematic (-μι) verbs: headword ends in μι followed by comma/space/bracket
+_GRC_MI_VERB_RE   = re.compile(r"^[Ͱ-Ͽἀ-῿\[\] \-]+?μι[,\s\[]")
+_GRC_HEAD_TOK_RE  = re.compile(r"^[^\s,;:\(\[]+")
+_GRC_VERB_ENDINGS = ("ω", "ομαι", "εω", "αω", "υω", "ζω", "νω", "ευω", "νυμαι", "νυω")
+
+
+def _grc_head_is_verb(plain: str) -> bool:
+    m = _GRC_HEAD_TOK_RE.match(plain)
+    if not m:
+        return False
+    tok = m.group(0).rstrip("-[]")
+    nfd = unicodedata.normalize("NFD", tok)
+    base = "".join(c for c in nfd if unicodedata.category(c) != "Mn")
+    base = unicodedata.normalize("NFC", base)
+    return any(base.endswith(e) for e in _GRC_VERB_ENDINGS)
 
 _GENDER_NAMES = {"m": "masculine", "f": "feminine", "n": "neuter"}
 
@@ -358,6 +378,13 @@ def _extract_morphology(plain: str, lang: str) -> dict:
         elif any(a in header for a in _GRC_NEUT):
             result["part_of_speech"] = "noun"
             result["gender"] = "neuter"
+        elif _GRC_ADJ_RE.search(header):
+            result["part_of_speech"] = "adjective"
+        elif (_GRC_TENSE_RE.search(header)
+              or _GRC_PERSON_RE.search(header)
+              or _GRC_MI_VERB_RE.match(plain[:50])
+              or _grc_head_is_verb(plain)):
+            result["part_of_speech"] = "verb"
 
     return result
 
