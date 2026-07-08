@@ -8,6 +8,7 @@ const LABELS = {
   // ── Chinese ───────────────────────────────────────────────────────────
   chengyu:                '成语',       xiehouyu:              '歇后语',
   suyv:                   '俗语',       yanyu:                 '谚语',
+  peking_opera:           '京剧',       tang_poetry:           '唐诗',
 
   // ── Arabic ────────────────────────────────────────────────────────────
   quranic:                'قرآن',       hadith:                'حديث',
@@ -25,7 +26,7 @@ const LABELS = {
   yojijukugo:             '四字熟語',    kanyoku:               '慣用句',
   kotowaza:               'ことわざ',     zen_koan:              '公案',
   classical_literature:   'Classical',  buddhist_text:         '仏典',
-  mythology:              'Mythology',
+  mythology:              'Mythology',  aesthetic_concept:     'Aesthetic',
 
   // ── Korean ────────────────────────────────────────────────────────────
   sajaseong_eo:           '사자성어',    pansori:               '판소리',
@@ -48,6 +49,7 @@ const LABELS = {
 
   // ── Russian ───────────────────────────────────────────────────────────
   pushkin:                'Пушкин',      poslovitsa:           'пословица',
+  philosophy:             'Philosophy',
 
   // ── German ────────────────────────────────────────────────────────────
   goethe_schiller:        'Goethe',      fairy_tale:           'Märchen',

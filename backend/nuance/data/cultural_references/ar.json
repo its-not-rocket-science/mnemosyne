@@ -1578,6 +1578,7 @@
       "source_url": "https://sunnah.com",
       "source_work": "الحديث النبوي",
       "source_work_key": "mnemosyne.ar.work.الحديث_النبوي",
+      "subcategory": "hadith",
       "surface_patterns": [
         "إنما نحن عبيد الله",
         "نحن عبيد الله",
@@ -4370,6 +4371,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الموت خير من حياة الذل",
         "الموت خير من عيشة الذل",
@@ -5382,6 +5384,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "حيث لا يعلم إلا الله",
         "حيث لا يعلم إلا الله تعالى",
@@ -6874,6 +6877,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "لا تتبع إلا الحق ولو كان قليلاً",
         "اتبع الحق ولو كان قليلاً",
@@ -11197,6 +11201,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الحلم العربي",
         "الحلم العربيّ",
@@ -11235,6 +11240,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "الحلم الفلسطيني",
         "حلم الفلسطينيّين"
@@ -11796,6 +11802,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "الضربة القاضية",
         "ضربة قاضية"
@@ -11859,6 +11866,7 @@
       "source_url": "https://www.almaany.com/ar/dict/ar-ar/%D8%B9%D9%86%D9%82%D8%A7%D8%A1/",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "عنقاء مغرب",
         "عنقاء العرب",
@@ -11949,6 +11957,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "غرابك"
       ]
@@ -11996,6 +12005,7 @@
       "source_url": "https://archive.org/details/arabiannights1907018gut",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "غولا",
         "الغولا",
@@ -12066,6 +12076,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "الفقر مدقع",
         "فقره مدقع",
@@ -12447,6 +12458,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال ولا نفس ولا أصل ولا فصل ولا له جمل ولا له كعكة",
         "اللي ما له同日 ما له عدله ولا له صدقه ولا له حاله ولا له ماله ولا نفسه ولا أصلة ولا فصله ولا له جمله ولا له كعكته",
@@ -12528,6 +12540,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يرضي ربه ما يرضي دنياه",
         "ما يرضي ربه ما يرضي دنياه",
@@ -12700,6 +12713,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "النار شريكة كل من عصى",
         "ناره شريكة كل من عصاه",
@@ -13386,6 +13400,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/ثورة_الزنج",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "ثورة العبيد الزنج",
         "ثورة الزنج في البصرة",
@@ -13450,6 +13465,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/القرامطة",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "ثورة القرامطة",
         "ثورات القرامطة",
@@ -13548,6 +13564,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%AC%D9%86_%D8%AC%D9%86%D9%88%D9%86%D8%A7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "جن جنونا"
       ]
@@ -13571,6 +13588,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/معركة_أجنادين",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "جيش من لا جيش له",
         "جيشه من لا جيش له",
@@ -14067,6 +14085,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Fatimid_Caliphate",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "دولة الفاطميين",
         "الدولة الفاطمية",
@@ -14529,6 +14548,7 @@
       "source_url": "https://en.wikipedia.org/wiki/Siege_of_Baghdad_(1258)",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "سقوط بغداد على يد المغول",
         "سقوط بغداد ده",
@@ -14744,6 +14764,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B4%D8%A7%D8%B0_%D8%A7%D9%84%D8%A2%D9%81%D8%A7%D9%82",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "شاذ الآفاق"
       ]
@@ -14767,6 +14788,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B4%D8%AF_%D8%A7%D9%84%D8%B9%D8%B6%D8%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "شد العضد"
       ]
@@ -14814,6 +14836,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B5%D8%A7%D9%84_%D9%88%D8%AC%D8%A7%D9%84",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "صال وجال"
       ]
@@ -14941,6 +14964,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B6%D8%A8%D8%B7_%D9%85%D8%AA%D9%84%D8%A8%D8%B3%D8%A7_%D8%A8%D8%A7%D9%84%D8%AC%D8%B1%D9%85_%D8%A7%D9%84%D9%85%D8%B4%D9%87%D9%88%D8%AF",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "ضبط متلبسا بالجرم المشهود"
       ]
@@ -15068,6 +15092,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D8%B9%D8%A7%D8%AF_%D8%A3%D8%AF%D8%B1%D8%A7%D8%AC%D9%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "عاد أدراجه"
       ]
@@ -15355,6 +15380,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "عنقاء المغرب",
         "عنقا مغرب",
@@ -15547,6 +15573,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/فتنة_مقتل_عثمان",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "null",
       "surface_patterns": [
         "فتنة مقتل عثمان",
         "فتنة مقتل عثمان بن عفان",
@@ -15629,6 +15656,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%81%D9%84%D8%A7%D9%86_%D9%88%D9%81%D9%84%D8%A7%D9%86",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "فلان وفلان"
       ]
@@ -15684,6 +15712,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%82%D8%AA%D9%84_%D9%85%D9%82%D8%A8%D9%84%D8%A7_%D8%BA%D9%8A%D8%B1_%D9%85%D8%AF%D8%A8%D8%B1",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "قتل مقبلا غير مدبر"
       ]
@@ -15707,6 +15736,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الأمير بندر"
       ]
@@ -15730,6 +15760,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الأمير سعد"
       ]
@@ -15753,6 +15784,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الأمير شاكر"
       ]
@@ -15776,6 +15808,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الأمير عثمان"
       ]
@@ -15799,6 +15832,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الأمير مجاهد"
       ]
@@ -15822,6 +15856,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%82%D8%B6%D9%89_%D9%86%D8%AD%D8%A8%D9%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "قضى نحبه"
       ]
@@ -15892,6 +15927,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%83%D8%B4%D9%81_%D8%A7%D9%84%D9%86%D9%82%D8%A7%D8%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "كشف النقاب"
       ]
@@ -16065,6 +16101,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D9%81%D8%B6_%D9%81%D9%88%D9%83",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "لا فض فوك"
       ]
@@ -16112,6 +16149,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%84%D8%A7_%D9%8A%D8%A8%D9%82%D9%8A_%D9%88%D9%84%D8%A7_%D9%8A%D8%B0%D8%B1",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "لا يبقي ولا يذر"
       ]
@@ -16183,6 +16221,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%84%D8%B9%D8%A8_%D8%AF%D9%88%D8%B1%D8%A7",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "لعب دورا"
       ]
@@ -16230,6 +16269,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%84%D9%82%D9%8A_%D8%AD%D8%AA%D9%81%D9%87",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "لقي حتفه"
       ]
@@ -16373,6 +16413,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%D9%84%D9%8A%D8%AA_%D8%B4%D8%B9%D8%B1%D9%8A",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "ليت شعري"
       ]
@@ -17508,6 +17549,7 @@
       "source_url": "https://archive.org/details/TareekhTabari",
       "source_work": "تاريخ الرسل والملوك",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الرسل_والملوك",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "يوم الجمل فيه",
         "يوم الجمل في البصرة",
@@ -17535,6 +17577,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/معركة_حطين",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "يوم الزينة"
       ]
@@ -17558,6 +17601,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/%D9%85%D8%B9%D8%B1%D9%83%D8%A9_%D8%A7%D9%84%D9%82%D8%A7%D8%AF%D8%B3%D9%8A%D8%A9",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "يومها القادسية",
         "يوم قادسية",
@@ -17617,6 +17661,7 @@
       "source_url": "https://archive.org/details/TareekhTabari",
       "source_work": "تاريخ الرسل والملوك",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الرسل_والملوك",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "يوم النهروان فيه",
         "يوم النهروان في العراق",
@@ -17691,6 +17736,7 @@
       "source_url": "https://archive.org/details/FutoohSham",
       "source_work": "فتوح الشام",
       "source_work_key": "mnemosyne.ar.work.فتوح_الشام",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "يوم اليمامة",
         "يوم اليمامة فيه",
@@ -17719,6 +17765,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/%D9%85%D8%B9%D8%B1%D9%83%D8%A9_%D8%AA%D8%B3%D8%AA%D8%B1",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "يوم تستر",
         "يومها تستر",
@@ -17797,6 +17844,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "يوم داثن",
         "يوم الداثن",
@@ -17825,6 +17873,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "يوم دمياط",
         "يوم الدمياط",
@@ -18022,6 +18071,7 @@
       "source_url": "https://archive.org/details/TareekhTabari",
       "source_work": "تاريخ الرسل والملوك",
       "source_work_key": "mnemosyne.ar.work.تاريخ_الرسل_والملوك",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "يوم صفين فيه",
         "يوم صفين في الشام",
@@ -18099,6 +18149,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "يوم عين جالوت في هزيمة المغول",
         "يوم عين جالوت هزيمة المغول",
@@ -18154,6 +18205,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/%D8%B7%D8%A7%D8%B1%D9%82_%D8%A8%D9%86_%D8%B2%D9%8A%D8%A7%D8%AF",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "يومها فتح الأندلس",
         "يوم فتح الأندلس على يد طارق بن زياد",
@@ -18396,6 +18448,7 @@
       "source_url": "https://archive.org/details/FutoohMisr",
       "source_work": "فتوح مصر وأخبارها",
       "source_work_key": "mnemosyne.ar.work.فتوح_مصر_وأخبارها",
+      "subcategory": "modern_media",
       "surface_patterns": [
         "يوم نطاة",
         "يوم النطاة",
@@ -18456,6 +18509,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/%D9%85%D8%B9%D8%B1%D9%83%D8%A9_%D8%A7%D9%84%D9%8A%D8%B1%D9%85%D9%88%D9%83",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "يومها اليرموك",
         "يوم معركة اليرموك",
@@ -24267,6 +24321,7 @@
       "source_url": "https://archive.org/details/diwan-alhamasa",
       "source_work": "Diwan al-Hamasa",
       "source_work_key": "mnemosyne.ar.work.diwan_al_hamasa",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "الطين في العيون",
         "طين في العيون",
@@ -27463,6 +27518,7 @@
       "source_url": "https://ar.wikisource.org/wiki/رسالة_التوابع_والزوابع",
       "source_work": "رسالة التوابع والزوابع",
       "source_work_key": "mnemosyne.ar.work.رسالة_التوابع_والزوابع",
+      "subcategory": "abbasid",
       "surface_patterns": [
         "رسالة التوابع والزوابع",
         "التوابع والزوابع",
@@ -28956,6 +29012,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الأمير خالد",
         "قصة الأمير خالد بن الوليد",
@@ -29015,6 +29072,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الأمير عمر",
         "قصة الأمير عمر بن الخطاب",
@@ -29076,6 +29134,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الأمير منصور",
         "قصة الأمير منصور بن نوح",
@@ -29106,6 +29165,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الأمير ناصر",
         "قصة الأمير ناصر بن أحمد",
@@ -29133,6 +29193,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الأمير نصر",
         "قصة الأمير الناصر",
@@ -29275,6 +29336,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/سيف_بن_ذي_يزن",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة الملك سيف بن ذي يزن",
         "قصة سيف بن ذي يزن",
@@ -29326,6 +29388,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/بهلول_المجنون",
       "source_work": " Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة بهلول الدجال",
         "قصة بهلول الدجّال"
@@ -29403,6 +29466,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/جحا",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة جحا والشيخ",
         "حكاية جحا والشيخ",
@@ -29456,6 +29520,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/جحا",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة جحا والشيخ والدين",
         "حكاية جحا والشيخ والدين",
@@ -29506,6 +29571,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة جحا والمطر",
         "قصة جحا والمطره",
@@ -29533,6 +29599,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/جحا",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة جحا والمعلم",
         "حكاية جحا والمعلم",
@@ -29558,6 +29625,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/جحا",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة جحا والنعجة",
         "حكاية جحا والنعجة",
@@ -29582,6 +29650,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة جحا والنعجة الثانية",
         "قصة جحا والنعجتين",
@@ -29610,6 +29679,7 @@
       "source_url": "https://ar.wikipedia.org/wiki/جحا",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة جحا وزوجة ابنه",
         "حكاية جحا وزوجة ابنه",
@@ -29636,6 +29706,7 @@
       "source_url": "https://archive.org/details/SiratIbnHisham",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "folk_tale",
       "surface_patterns": [
         "قصة جناب بن الحارث الكندي"
       ]
@@ -32759,6 +32830,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "أشد من قارورة الحجاج",
         "أقوى من قارورة الحجاج",
@@ -33037,6 +33109,7 @@
       "source_license": "not_required",
       "source_work": "Various classical Arabic sources",
       "source_work_key": "mnemosyne.ar.work.various_classical_arabic_sources",
+      "subcategory": "proverb",
       "surface_patterns": [
         "ألا أيها الواشي لقد بلغ السيل الزبى",
         "قد بلغ السيل الزبى",
@@ -33101,6 +33174,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "أنّى تستقم الدنيا لك ما استقمت",
         "أنّى استقامت الدنيا لك استقمت"
@@ -33631,6 +33705,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "العين ترى كل شيء إلا نفسها",
         "العين بتشوف كل حاجة إلا نفسها",
@@ -33802,6 +33877,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الإنسان عدو لما يجهل",
         "الإنسان عدوه لما يجهل",
@@ -33964,6 +34040,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الخير حيثما كانت الدنيا والشر حيثما كان المال",
         "خيره حيثما كانت دنياه وشره حيثما كان ماله",
@@ -34044,6 +34121,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الدال على الخير كفعله",
         "الدال على الخير كفاعله (مصري)",
@@ -34166,6 +34244,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "السيف أصدق أنباء من الكتب",
         "سيفه أصدق أنباء من كتبه",
@@ -34233,6 +34312,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الشعر شعري",
         "الشعر شعريّ",
@@ -34285,6 +34365,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "صبرك مفتاح الفرج"
       ]
@@ -34386,6 +34467,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "صبره مفتاح فرجه",
         "الصبر مفتاح الفرج في اللغة",
@@ -34566,6 +34648,7 @@
       "source_url": "https://archive.org/details/aldurar_202101/details",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "العلم في الصغر كالنقش عليه",
         "العلم بالصغر كالنقش على الحجر",
@@ -34644,6 +34727,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الغد أفضل",
         "الغد خير",
@@ -34709,6 +34793,7 @@
       "source_license": "public_domain",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الغريب من لا يعرف قيمة بلاده",
         "الغريب من لا يعرف قيمتها",
@@ -34735,6 +34820,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الغنم في ظلي والذئب حيث تقضى المنية",
         "الغنم في ظلي والذئب حيث تقضى منيته",
@@ -34802,6 +34888,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "القلم أحد اللسانين",
         "قلمه أحد اللسانين",
@@ -34869,6 +34956,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الكذب منج إلى الفضيحة",
         "كذبه منج إلى فضيحته",
@@ -34954,6 +35042,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما تسعفه نفسه ما تسعفه الدنيا",
         "اللي ما تسعف نفسه ما تسعفه الدنيا",
@@ -34980,6 +35069,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما عليه كلام ما عليه جواب",
         "اللي ما عليه كلام، ما عليه جواب",
@@ -35006,6 +35096,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما عليه مشط ما عليه خيط",
         "اللي ما عليه مشط، ما عليه خيط",
@@ -35138,6 +35229,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما له أصل، ما له فصل",
         "اللي ما له أصل ما له فصله"
@@ -35367,6 +35459,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما له ذُو يَوْمٍ ما له عدلُه ولا صدقُه",
         "ما له ذُو يَوْمٍ ما له عدلُها ولا صدقُها",
@@ -35392,6 +35485,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال",
         "اللي ما له يومه ما له عدل ولا له صدق ولا له حال ولا له مال",
@@ -35420,6 +35514,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس",
         "اللي ما له يومه ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس",
@@ -35448,6 +35543,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس ولا له أصل",
         "اللي ما له يومه ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس ولا له أصل",
@@ -35476,6 +35572,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس ولا له أصل ولا له فصل",
         "اللي ما له يومه ما له عدل ولا له صدق ولا له حال ولا له مال ولا له نفس ولا له أصل ولا له فصل",
@@ -35504,6 +35601,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل ولا له صدق ولا له حال ولا له مال ولا نفس ولا أصل ولا فصل ولا له جمل",
         "اللي ما له同日 ما له عدله ولا له صدقه ولا له حاله ولا له ماله ولا نفسه ولا أصلة ولا فصله ولا له جمله",
@@ -35530,6 +35628,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما له ذُو يَوْمٍ ما له عدلُه وما له صدقُه",
         "ما له ذُو يَوْمٍ ما له عدلُه وما له صدقُه",
@@ -35556,6 +35655,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما له同日 ما له عدل وما له صدق ولا له حال",
         "اللي ما له يومه ما له عدل وما له صدق ولا له حال",
@@ -35582,6 +35682,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما نفعك ما ضرّك",
         "اللي ما نفعك، ما ضرّك",
@@ -35828,6 +35929,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يخاف من الظلم ما يعرف حقه",
         "اللي ما تخاف من الظلم ما تعرف حقها",
@@ -35856,6 +35958,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يخاف من الغش ما يعرف خيانة",
         "اللي ما يخاف من الغش ما يعرف خيانتها",
@@ -35941,6 +36044,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يخاف من الليل ما يعرف فجره",
         "اللي ما تخاف من الليل ما تعرف فجرها",
@@ -35996,6 +36100,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يخاف من الما ما يعرف غرقه",
         "اللي ما يخاف من الماء ما يعرف غرقه",
@@ -36053,6 +36158,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يخاف من الموت ما يخاف من السيف",
         "من ما يخاف من الموت ما يخاف من السيف",
@@ -36079,6 +36185,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يخاف من الموت ما يعرف حياته",
         "اللي ما تخاف من الموت ما تعرف حياتك",
@@ -36132,6 +36239,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يخاف من النار ما يعرف حرقها",
         "اللي ما تخاف من النار ما تعرف حرقها",
@@ -36187,6 +36295,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يرضي ربه ما يرضي آخرته",
         "من ما يرضي ربه ما يرضي آخرته"
@@ -36211,6 +36320,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يرضي ربه ما يرضي أحداً",
         "اللي ما يرضي ربه ما يرضي أحد",
@@ -36237,6 +36347,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يرضي ربه ما يرضي أحداً سوانا",
         "اللي ما يرضي ربه ما يرضي أحد سوانا",
@@ -36263,6 +36374,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يرضي ربه ما يرضي أهله",
         "ما يرضي ربه ما يرضي أهله",
@@ -36288,6 +36400,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يرضي ربه ما يرضي نفسه",
         "ما يرضي ربه ما يرضي نفسه",
@@ -36313,6 +36426,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يرضيه إلا ابن حلاله",
         "ما يرضيه إلا ابن حلاله"
@@ -36337,6 +36451,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يرضيه إلا زوجته وأولاده",
         "ما يرضيه إلا زوجته وأولاده",
@@ -36529,6 +36644,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يصيده الصقر يصيده الديك",
         "من ما يصيده الصقر يصيده الديك",
@@ -36928,6 +37044,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يعرف الصقر يشويه",
         "من ما يعرف الصقر يشويه",
@@ -37067,6 +37184,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "اللي ما يغرس في شبابه ما يحصد في كبره",
         "من ما يغرس في شبابه ما يحصد في كبره",
@@ -37286,6 +37404,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "المال كالداء والشهرة كالدواء",
         "المال كالمرض والشهرة كالدواء",
@@ -37353,6 +37472,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الناس معادن",
         "الناس معادنهم",
@@ -37382,6 +37502,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الهدية تهدي القلوب قبل الأكف",
         "هديته تهدي القلوب قبل الأيادي",
@@ -37447,6 +37568,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "الوحدة خير من جليس السوء"
       ]
@@ -37538,6 +37660,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "تبصّر قبل أن تقتحم",
         "تبصر قبل أن تقتحم",
@@ -37644,6 +37767,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "جرّب ولا تحزن",
         "جرب ولا تحزن",
@@ -37673,6 +37797,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "حب الوطن من الإيمان",
         "حب الوطن من الايمان",
@@ -37873,6 +37998,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "خذ الحكمة من أي فم خرجت",
         "خذ الحكمة من أي فم خرج",
@@ -38013,6 +38139,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "خير الكلام ما قل ودل",
         "خير الكلام ما قل ودلّ",
@@ -38052,6 +38179,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "خير جليس في الزمان كتاب",
         "خير جليس في الزمان كتابٌ",
@@ -38294,6 +38422,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "رب ساع لما يضره",
         "ساعٍ لما يضره",
@@ -38338,6 +38467,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "رب كلمة سلبت نعمة",
         "رب كلمة تزيل نعمة",
@@ -38625,6 +38755,7 @@
       "source_url": "https://www.almaany.com/ar/proverb/12345",
       "source_work": " Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "عليك بالصدق وإن كان مرًّا",
         "الصدق مرٌّ",
@@ -38743,6 +38874,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "لا تصالح من لا يغضب لظلمك",
         "من لا يغضب لظلمك فلا تصالحه",
@@ -39116,6 +39248,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.ar.work.oral_tradition",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من استشار السفيه شاركه عقله",
         "استشارة السفيه مشاركة في عقله",
@@ -39384,6 +39517,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من عاش بالكرامة مات بالكرامة",
         "من عاش كريما مات كريما",
@@ -39462,6 +39596,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من لم يجز خيراً بخير لم يجز شراً بشر",
         "من لم يجز الخير بالخير لم يجز الشر بالشر",
@@ -39500,6 +39635,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من لم يحتمل أذى الزمان لم ينل مراداً",
         "من لم يحتمل أذى الدهر لم ينل مراده",
@@ -39577,6 +39713,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من لم يخش لومة لائم لم يفلح",
         "من لم يخش لوم اللائم لم يفلح",
@@ -39615,6 +39752,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من لم يستفد من تجارب من سبقه كان كالميت في قبره",
         "من لم يستفد من تجارب من قبله كان كالميت في قبره",
@@ -39692,6 +39830,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من لم يعش بغير بلده عاش أسيرا",
         "من لم يعش بغير وطنه عاش أسيرا",
@@ -39730,6 +39869,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من لم يعظم الحق في نفسه لم يصن عرضه",
         "من لم يعظم الحق لم يصن عرضه",
@@ -39772,6 +39912,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من لم يكن له في الماضي عبر لم يكن له في المستقبل أمل",
         "من لم يستفد من ماضيه لم يكن له مستقبل",
@@ -39810,6 +39951,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من لم يكن له في الناس أمل لم يكن له في الله أمل",
         "من لم يكن له أمل في الناس لم يكن له أمل في الله",
@@ -39848,6 +39990,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.ar.work.various",
+      "subcategory": "proverb",
       "surface_patterns": [
         "من لم يكن له من نفسه واعظ لم يجد له من غيره ناصح",
         "من لم يكن له واعظ من نفسه لم يجد ناصحاً غيره",

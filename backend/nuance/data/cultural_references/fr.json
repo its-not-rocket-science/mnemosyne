@@ -12427,6 +12427,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%A0_contre-courant",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "à contre-courant"
       ]
@@ -12450,6 +12451,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%A0_contre-jour",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "à contre-jour"
       ]
@@ -12497,6 +12499,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%A0_l%27anglaise",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "à l'anglaise"
       ]
@@ -12544,6 +12547,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%A0_la_une",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "à la une"
       ]
@@ -12567,6 +12571,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%A0_la_v%C3%B4tre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "à la vôtre"
       ]
@@ -12614,6 +12619,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%A0_pleine_lanc%C3%A9e",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "à pleine lancée"
       ]
@@ -12637,6 +12643,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%A0_plus_tard",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "à plus tard"
       ]
@@ -12660,6 +12667,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%A0_ta_sant%C3%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "à ta santé"
       ]
@@ -12683,6 +12691,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%A0_voile_et_%C3%A0_vapeur",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "à voile et à vapeur"
       ]
@@ -12706,6 +12715,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%A0_votre_sant%C3%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "à votre santé"
       ]
@@ -12821,6 +12831,7 @@
       "source_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006227864/",
       "source_work": "Code de commerce français",
       "source_work_key": "mnemosyne.fr.work.code_de_commerce_français",
+      "subcategory": "historical",
       "surface_patterns": [
         "abus de biens sociaux",
         "l'abus de biens sociaux"
@@ -12845,6 +12856,7 @@
       "source_url": "https://en.wiktionary.org/wiki/acharnement_th%C3%A9rapeutique",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "acharnement thérapeutique"
       ]
@@ -12868,6 +12880,7 @@
       "source_url": "https://en.wiktionary.org/wiki/acte_manqu%C3%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "acte manqué"
       ]
@@ -12962,6 +12975,7 @@
       "source_url": "https://en.wiktionary.org/wiki/aimer_bien",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "aimer bien"
       ]
@@ -13023,6 +13037,7 @@
       "source_url": "https://en.wiktionary.org/wiki/aller_se_faire_enculer",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "aller se faire enculer"
       ]
@@ -13046,6 +13061,7 @@
       "source_url": "https://en.wiktionary.org/wiki/aller_se_faire_foutre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "aller se faire foutre"
       ]
@@ -13069,6 +13085,7 @@
       "source_url": "https://en.wiktionary.org/wiki/allez_voir_l%C3%A0-bas_si_j%27y_suis",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "allez voir là-bas si j'y suis"
       ]
@@ -13287,6 +13304,7 @@
       "source_url": "https://en.wiktionary.org/wiki/apr%C3%A8s_la_lettre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "après la lettre"
       ]
@@ -13310,6 +13328,7 @@
       "source_url": "https://en.wiktionary.org/wiki/apr%C3%A8s_ski",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "après ski"
       ]
@@ -14115,6 +14134,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_la_gueule_de_bois",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir la gueule de bois"
       ]
@@ -14138,6 +14158,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_la_haine",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir la haine"
       ]
@@ -14161,6 +14182,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_la_main_heureuse",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir la main heureuse"
       ]
@@ -14184,6 +14206,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_la_main_verte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir la main verte"
       ]
@@ -14207,6 +14230,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_la_moutarde_qui_monte_au_nez",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir la moutarde qui monte au nez"
       ]
@@ -14230,6 +14254,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_la_pelote_%C3%A0_terre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir la pelote à terre"
       ]
@@ -14253,6 +14278,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_la_poisse",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir la poisse"
       ]
@@ -14276,6 +14302,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_la_t%C3%AAte_dans_le_cul",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir la tête dans le cul"
       ]
@@ -14299,6 +14326,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_la_t%C3%AAte_qui_tourne",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir la tête qui tourne"
       ]
@@ -14346,6 +14374,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_le_bourdon",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir le bourdon"
       ]
@@ -14369,6 +14398,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_le_cuir_dur",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir le cuir dur"
       ]
@@ -14392,6 +14422,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_le_cuir_%C3%A9pais",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir le cuir épais"
       ]
@@ -14415,6 +14446,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_le_cuir_solide",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir le cuir solide"
       ]
@@ -14464,6 +14496,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_le_c%C5%93ur_sur_la_main",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir le cœur sur la main"
       ]
@@ -14513,6 +14546,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_le_gros_cou",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir le gros cou"
       ]
@@ -14536,6 +14570,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_le_seum",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir le seum"
       ]
@@ -14559,6 +14594,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_le_vent_en_poupe",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir le vent en poupe"
       ]
@@ -14621,6 +14657,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avoir_les_jambes_en_coton",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avoir les jambes en coton"
       ]
@@ -17276,6 +17313,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cheveux_blancs",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "cheveux blancs"
       ]
@@ -17398,6 +17436,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cinq_%C3%A0_sept",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "cinq à sept"
       ]
@@ -17447,6 +17486,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cligner_des_yeux",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "cligner des yeux"
       ]
@@ -17584,6 +17624,7 @@
       "source_url": "https://en.wiktionary.org/wiki/comment_%C3%A7a_se_plume",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "comment ça se plume"
       ]
@@ -17607,6 +17648,7 @@
       "source_url": "https://en.wiktionary.org/wiki/comment_les_cannes_sont",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "comment les cannes sont"
       ]
@@ -17630,6 +17672,7 @@
       "source_url": "https://en.wiktionary.org/wiki/comment_sont_les_zaricos",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "comment sont les zaricos"
       ]
@@ -17679,6 +17722,7 @@
       "source_url": "https://en.wiktionary.org/wiki/continuer_sur_une_lanc%C3%A9e",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "continuer sur une lancée"
       ]
@@ -17702,6 +17746,7 @@
       "source_url": "https://en.wiktionary.org/wiki/couler_un_bronze",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "couler un bronze"
       ]
@@ -17751,6 +17796,7 @@
       "source_url": "https://en.wiktionary.org/wiki/coup_d%27%C3%A9clat",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "coup d'éclat"
       ]
@@ -17798,6 +17844,7 @@
       "source_url": "https://en.wiktionary.org/wiki/coup_de_bourre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "coup de bourre"
       ]
@@ -17821,6 +17868,7 @@
       "source_url": "https://en.wiktionary.org/wiki/coup_de_pouce",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "coup de pouce"
       ]
@@ -18941,6 +18989,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Défense de rire",
         "Il est défendu de rire",
@@ -19171,6 +19220,7 @@
       "source_url": "https://en.wiktionary.org/wiki/en_direct",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "en direct"
       ]
@@ -19194,6 +19244,7 @@
       "source_url": "https://en.wiktionary.org/wiki/en_revenir",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "en revenir"
       ]
@@ -19217,6 +19268,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "en robe de chambre",
         "porter une robe de chambre",
@@ -19243,6 +19295,7 @@
       "source_url": "https://en.wiktionary.org/wiki/enculer_les_mouches",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "enculer les mouches"
       ]
@@ -19383,6 +19436,7 @@
       "source_url": "https://en.wiktionary.org/wiki/entre_couilles",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "entre couilles"
       ]
@@ -19526,6 +19580,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%AAtre_%C3%A0_la_bourre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "être à la bourre"
       ]
@@ -19549,6 +19604,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%AAtre_%C3%A0_la_f%C3%AAte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "être à la fête"
       ]
@@ -19596,6 +19652,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%AAtre_dans_la_merde_jusqu%27au_cou",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "être dans la merde jusqu'au cou"
       ]
@@ -19619,6 +19676,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%AAtre_en_bonne_odeur",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "être en bonne odeur"
       ]
@@ -19642,6 +19700,7 @@
       "source_url": "https://en.wiktionary.org/wiki/%C3%AAtre_en_mauvaise_odeur",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "être en mauvaise odeur"
       ]
@@ -19702,6 +19761,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_boule_de_neige",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire boule de neige"
       ]
@@ -19725,6 +19785,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_chier",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire chier"
       ]
@@ -19748,6 +19809,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_des_salamalecs",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire des salamalecs"
       ]
@@ -19797,6 +19859,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_la_t%C3%AAte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire la tête"
       ]
@@ -19846,6 +19909,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_le_canard",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire le canard"
       ]
@@ -19896,6 +19960,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_le_grand_saut",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire le grand saut"
       ]
@@ -19919,6 +19984,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_le_gros_dos",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire le gros dos"
       ]
@@ -19942,6 +20008,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_le_mur",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire le mur"
       ]
@@ -19991,6 +20058,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_marche_arri%C3%A8re",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire marche arrière"
       ]
@@ -20014,6 +20082,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_mine",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire mine"
       ]
@@ -20063,6 +20132,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_noir",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire noir"
       ]
@@ -20112,6 +20182,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faire_ses_armes",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire ses armes"
       ]
@@ -20395,6 +20466,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fausse_barbe",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fausse barbe"
       ]
@@ -20646,6 +20718,7 @@
       "source_url": "https://en.wiktionary.org/wiki/foutre_la_trouille",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "foutre la trouille"
       ]
@@ -20669,6 +20742,7 @@
       "source_url": "https://en.wiktionary.org/wiki/frapper_les_grands_coups",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "frapper les grands coups"
       ]
@@ -20692,6 +20766,7 @@
       "source_url": "https://en.wiktionary.org/wiki/frapper_un_grand_coup",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "frapper un grand coup"
       ]
@@ -20715,6 +20790,7 @@
       "source_url": "https://en.wiktionary.org/wiki/froncer_les_sourcils",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "froncer les sourcils"
       ]
@@ -20738,6 +20814,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fuite_en_avant",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fuite en avant"
       ]
@@ -20815,6 +20892,7 @@
       "source_url": "https://en.wiktionary.org/wiki/gagner_son_bifteck",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "gagner son bifteck"
       ]
@@ -20838,6 +20916,7 @@
       "source_url": "https://en.wiktionary.org/wiki/garder_son_sang-froid",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "garder son sang-froid"
       ]
@@ -20886,6 +20965,7 @@
       "source_url": "https://en.wiktionary.org/wiki/grasse_matin%C3%A9e",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "grasse matinée"
       ]
@@ -20909,6 +20989,7 @@
       "source_url": "https://en.wiktionary.org/wiki/griffer_la_glace",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "griffer la glace"
       ]
@@ -20932,6 +21013,7 @@
       "source_url": "https://en.wiktionary.org/wiki/gros_bonnet",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "gros bonnet"
       ]
@@ -20955,6 +21037,7 @@
       "source_url": "https://en.wiktionary.org/wiki/gros_temps",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "gros temps"
       ]
@@ -20978,6 +21061,7 @@
       "source_url": "https://en.wiktionary.org/wiki/grosse_l%C3%A9gume",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "grosse légume"
       ]
@@ -21054,6 +21138,7 @@
       "source_url": "https://en.wiktionary.org/wiki/habit_vert",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "historical",
       "surface_patterns": [
         "habit vert"
       ]
@@ -21077,6 +21162,7 @@
       "source_url": "https://en.wiktionary.org/wiki/heure_du_myst%C3%A8re",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "heure du mystère"
       ]
@@ -21100,6 +21186,7 @@
       "source_url": "https://en.wiktionary.org/wiki/huile_de_coude",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "huile de coude"
       ]
@@ -21147,6 +21234,7 @@
       "source_url": "https://en.wiktionary.org/wiki/huiti%C3%A8me_art",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "huitième art"
       ]
@@ -21170,6 +21258,7 @@
       "source_url": "https://en.wiktionary.org/wiki/humour_noir",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "humour noir"
       ]
@@ -21747,6 +21836,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "Je suis perdu",
         "Je me suis perdu",
@@ -21773,6 +21863,7 @@
       "source_url": "https://en.wiktionary.org/wiki/je_te_dis_merde",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "je te dis merde"
       ]
@@ -21957,6 +22048,7 @@
       "source_url": "https://en.wiktionary.org/wiki/jolie_laide",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "jolie laide"
       ]
@@ -22004,6 +22096,7 @@
       "source_url": "https://en.wiktionary.org/wiki/joyeuses_f%C3%AAtes",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "joyeuses fêtes"
       ]
@@ -23289,6 +23382,7 @@
       "source_url": "https://fr.wikipedia.org/wiki/Fleur_au_fusil",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "partir la fleur au fusil",
         "partir avec la fleur au fusil",
@@ -24402,6 +24496,7 @@
       "source_url": "https://en.wiktionary.org/wiki/laboratoire_d%27id%C3%A9es",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "laboratoire d'idées"
       ]
@@ -24497,6 +24592,7 @@
       "source_url": "https://en.wiktionary.org/wiki/laisser_tranquille",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "laisser tranquille"
       ]
@@ -24644,6 +24740,7 @@
       "source_url": "https://en.wiktionary.org/wiki/le_cas_%C3%A9ch%C3%A9ant",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "le cas échéant"
       ]
@@ -24717,6 +24814,7 @@
       "source_url": "https://en.wiktionary.org/wiki/le_chercher",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "le chercher"
       ]
@@ -25150,6 +25248,7 @@
       "source_url": "https://en.wiktionary.org/wiki/le_fond_du_baril",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "le fond du baril"
       ]
@@ -25956,6 +26055,7 @@
       "source_url": "https://en.wiktionary.org/wiki/l%C3%A8che-vitrine",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "lèche-vitrine"
       ]
@@ -26511,6 +26611,7 @@
       "source_url": "https://en.wiktionary.org/wiki/les_zaricos_sont_sal%C3%A9s",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "les zaricos sont salés"
       ]
@@ -26534,6 +26635,7 @@
       "source_url": "https://en.wiktionary.org/wiki/lever_les_yeux_au_ciel",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "lever les yeux au ciel"
       ]
@@ -26595,6 +26697,7 @@
       "source_url": "https://en.wiktionary.org/wiki/lire_entre_les_lignes",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "lire entre les lignes"
       ]
@@ -26618,6 +26721,7 @@
       "source_url": "https://en.wiktionary.org/wiki/lire_sur_les_l%C3%A8vres",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "lire sur les lèvres"
       ]
@@ -26742,6 +26846,7 @@
       "source_url": "https://en.wiktionary.org/wiki/manger_%C3%A0_tous_les_r%C3%A2teliers",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "manger à tous les râteliers"
       ]
@@ -26817,6 +26922,7 @@
       "source_url": "https://en.wiktionary.org/wiki/marcher_%C3%A0_quatre_pattes",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "marcher à quatre pattes"
       ]
@@ -26864,6 +26970,7 @@
       "source_url": "https://en.wiktionary.org/wiki/marin_d%27eau_douce",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "marin d'eau douce"
       ]
@@ -26887,6 +26994,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mener_par_le_bout_du_nez",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mener par le bout du nez"
       ]
@@ -26973,6 +27081,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.fr.work.oral_tradition",
+      "subcategory": "idiom",
       "surface_patterns": [
         "Mets tes mains en prière",
         "mains en prière"
@@ -26997,6 +27106,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettre_au_monde",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettre au monde"
       ]
@@ -27044,6 +27154,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettre_en_bouteille",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettre en bouteille"
       ]
@@ -27067,6 +27178,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettre_l%27accent_sur",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettre l'accent sur"
       ]
@@ -27346,6 +27458,7 @@
       "source_url": "https://en.wiktionary.org/wiki/n%27y_%C3%AAtre_pour_rien",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "n'y être pour rien"
       ]
@@ -27465,6 +27578,7 @@
       "source_url": "https://en.wiktionary.org/wiki/nez_%C3%A0_nez",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "nez à nez"
       ]
@@ -27488,6 +27602,7 @@
       "source_url": "https://en.wiktionary.org/wiki/nid_d%27amour",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "nid d'amour"
       ]
@@ -27919,6 +28034,7 @@
       "source_url": "https://en.wiktionary.org/wiki/orf%C3%A8vre_en_la_mati%C3%A8re",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "orfèvre en la matière"
       ]
@@ -27942,6 +28058,7 @@
       "source_url": "https://en.wiktionary.org/wiki/par_contre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "par contre"
       ]
@@ -28074,6 +28191,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pas_mal",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pas mal"
       ]
@@ -28121,6 +28239,7 @@
       "source_url": "https://en.wiktionary.org/wiki/passage_%C3%A0_vide",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "passage à vide"
       ]
@@ -28144,6 +28263,7 @@
       "source_url": "https://en.wiktionary.org/wiki/passer_%C3%A0_la_moulinette",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "passer à la moulinette"
       ]
@@ -28167,6 +28287,7 @@
       "source_url": "https://en.wiktionary.org/wiki/passer_de_vie_%C3%A0_tr%C3%A9pas",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "passer de vie à trépas"
       ]
@@ -28190,6 +28311,7 @@
       "source_url": "https://en.wiktionary.org/wiki/passer_le_cap",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "passer le cap"
       ]
@@ -28213,6 +28335,7 @@
       "source_url": "https://en.wiktionary.org/wiki/passer_le_temps",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "passer le temps"
       ]
@@ -28236,6 +28359,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pauvre_con",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pauvre con"
       ]
@@ -28377,6 +28501,7 @@
       "source_url": "https://en.wiktionary.org/wiki/perdre_la_t%C3%AAte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "perdre la tête"
       ]
@@ -28400,6 +28525,7 @@
       "source_url": "https://en.wiktionary.org/wiki/p%C3%A9tage_de_plombs",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pétage de plombs"
       ]
@@ -28423,6 +28549,7 @@
       "source_url": "https://en.wiktionary.org/wiki/p%C3%A9tard_mouill%C3%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pétard mouillé"
       ]
@@ -28494,6 +28621,7 @@
       "source_url": "https://en.wiktionary.org/wiki/petite_mort",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "petite mort"
       ]
@@ -28589,6 +28717,7 @@
       "source_url": "https://en.wiktionary.org/wiki/piquer_une_col%C3%A8re",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "piquer une colère"
       ]
@@ -28708,6 +28837,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pogner",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pogner"
       ]
@@ -28731,6 +28861,7 @@
       "source_url": "https://en.wiktionary.org/wiki/poser_une_p%C3%AAche",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "poser une pêche"
       ]
@@ -28754,6 +28885,7 @@
       "source_url": "https://en.wiktionary.org/wiki/poudre_de_perlimpinpin",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "poudre de perlimpinpin"
       ]
@@ -28801,6 +28933,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pousser_des_cris_d%27orfraie",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pousser des cris d'orfraie"
       ]
@@ -28850,6 +28983,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pr%C3%AAcher_pour_sa_paroisse",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prêcher pour sa paroisse"
       ]
@@ -28873,6 +29007,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendre"
       ]
@@ -28896,6 +29031,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendre_position",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendre position"
       ]
@@ -28919,6 +29055,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendre_pour_cible",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendre pour cible"
       ]
@@ -28942,6 +29079,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendre_sa_plume",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendre sa plume"
       ]
@@ -28965,6 +29103,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendre_sa_retraite",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendre sa retraite"
       ]
@@ -28988,6 +29127,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendre_une_brosse",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendre une brosse"
       ]
@@ -29011,6 +29151,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pr%C3%AAter_l%27oreille",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prêter l'oreille"
       ]
@@ -29120,6 +29261,7 @@
       "source_url": "https://en.wiktionary.org/wiki/purement_et_simplement",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "purement et simplement"
       ]
@@ -29170,6 +29312,7 @@
       "source_url": "https://en.wiktionary.org/wiki/qu%27est-ce_qu%27il_y_a",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "qu'est-ce qu'il y a"
       ]
@@ -29603,6 +29746,7 @@
       "source_url": "https://en.wiktionary.org/wiki/quoi_que_ce_soit",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "quoi que ce soit"
       ]
@@ -29675,6 +29819,7 @@
       "source_url": "https://en.wiktionary.org/wiki/remplumer",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "remplumer"
       ]
@@ -29773,6 +29918,7 @@
       "source_url": "https://en.wiktionary.org/wiki/respirer_%C3%A0_pleins_poumons",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "respirer à pleins poumons"
       ]
@@ -29796,6 +29942,7 @@
       "source_url": "https://en.wiktionary.org/wiki/revenir_%C3%A0_la_charge",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "revenir à la charge"
       ]
@@ -29947,6 +30094,7 @@
       "source_url": "https://en.wiktionary.org/wiki/s%27%C3%A9tirer_les_jambes",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "s'étirer les jambes"
       ]
@@ -29970,6 +30118,7 @@
       "source_url": "https://en.wiktionary.org/wiki/s%27y_casser_les_dents",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "s'y casser les dents"
       ]
@@ -30017,6 +30166,7 @@
       "source_url": "https://en.wiktionary.org/wiki/savoir_%C3%A0_quoi_s%27en_tenir",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "savoir à quoi s'en tenir"
       ]
@@ -30064,6 +30214,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_casser",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se casser"
       ]
@@ -30087,6 +30238,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_changer_les_id%C3%A9es",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se changer les idées"
       ]
@@ -30147,6 +30299,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_faire_un_sang_d%27encre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se faire un sang d'encre"
       ]
@@ -30170,6 +30323,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_jeter_au_cou",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se jeter au cou"
       ]
@@ -30193,6 +30347,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_mettre_en_bonne_odeur",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se mettre en bonne odeur"
       ]
@@ -30216,6 +30371,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_mettre_en_mauvaise_odeur",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se mettre en mauvaise odeur"
       ]
@@ -30239,6 +30395,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_piquer_le_nez",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se piquer le nez"
       ]
@@ -30262,6 +30419,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_pousser",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se pousser"
       ]
@@ -30285,6 +30443,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_rendre_%C3%A0_l%27%C3%A9vidence",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se rendre à l'évidence"
       ]
@@ -30332,6 +30491,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_taper_la_cloche",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se taper la cloche"
       ]
@@ -30355,6 +30515,7 @@
       "source_url": "https://en.wiktionary.org/wiki/se_tirer_une_balle_dans_le_pied",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "se tirer une balle dans le pied"
       ]
@@ -30416,6 +30577,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sentir_le_roussi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sentir le roussi"
       ]
@@ -30439,6 +30601,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sentir_le_soufre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sentir le soufre"
       ]
@@ -30595,6 +30758,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sortir_ensemble",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sortir ensemble"
       ]
@@ -30642,6 +30806,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sur_l%27ongle",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sur l'ongle"
       ]
@@ -30665,6 +30830,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sur_le_bout_de_la_langue",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sur le bout de la langue"
       ]
@@ -30688,6 +30854,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tache_de_vin",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tache de vin"
       ]
@@ -30735,6 +30902,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tailler_le_bout_de_gras",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tailler le bout de gras"
       ]
@@ -30758,6 +30926,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tailler_une_bavette",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tailler une bavette"
       ]
@@ -30853,6 +31022,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tenir_le_coup",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tenir le coup"
       ]
@@ -30876,6 +31046,7 @@
       "source_url": "https://en.wiktionary.org/wiki/t%C3%AAte_%C3%A0_claques",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tête à claques"
       ]
@@ -30899,6 +31070,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tir%C3%A9_par_les_cheveux",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tiré par les cheveux"
       ]
@@ -30948,6 +31120,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tomber_dans_les_pommes",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tomber dans les pommes"
       ]
@@ -30994,6 +31167,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tonnerre_mes_chiens",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tonnerre mes chiens"
       ]
@@ -31113,6 +31287,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tout_de_suite",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tout de suite"
       ]
@@ -31257,6 +31432,7 @@
       "source_url": "https://en.wiktionary.org/wiki/toutes_voiles_dehors",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "toutes voiles dehors"
       ]
@@ -31305,6 +31481,7 @@
       "source_url": "https://en.wiktionary.org/wiki/trou_dans_la_raquette",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "trou dans la raquette"
       ]
@@ -31328,6 +31505,7 @@
       "source_url": "https://en.wiktionary.org/wiki/trouver_la_mort",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "trouver la mort"
       ]
@@ -31351,6 +31529,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tu_as_ou_tu_vas",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tu as ou tu vas"
       ]
@@ -31782,6 +31961,7 @@
       "source_url": "https://en.wiktionary.org/wiki/venir_au_monde",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "venir au monde"
       ]
@@ -31805,6 +31985,7 @@
       "source_url": "https://en.wiktionary.org/wiki/venir_de",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "venir de"
       ]
@@ -31828,6 +32009,7 @@
       "source_url": "https://en.wiktionary.org/wiki/venir_en_%C3%A2ge",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "venir en âge"
       ]
@@ -31928,6 +32110,7 @@
       "source_url": "https://en.wiktionary.org/wiki/vivre_en_grand_seigneur",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "vivre en grand seigneur"
       ]
@@ -31977,6 +32160,7 @@
       "source_url": "https://en.wiktionary.org/wiki/voir_le_loup",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "voir le loup"
       ]
@@ -32024,6 +32208,7 @@
       "source_url": "https://en.wiktionary.org/wiki/vrai_de_vrai",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "vrai de vrai"
       ]
@@ -32351,6 +32536,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.fr.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faire la une",
         "en une"
