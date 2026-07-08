@@ -7065,6 +7065,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/10349",
       "source_work": "Dei delitti e delle pene",
       "source_work_key": "mnemosyne.it.work.dei_delitti_e_delle_pene",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "L'utilità è il criterio del bene",
         "L'utilità come criterio del bene"
@@ -7515,6 +7516,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/13846",
       "source_work": "Discorso sul metodo",
       "source_work_key": "mnemosyne.it.work.discorso_sul_metodo",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "La ragione è la facoltà più nobile dell'uomo",
         "La ragione, facoltà più nobile dell'uomo"
@@ -11687,6 +11689,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_freddo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a freddo"
       ]
@@ -11710,6 +11713,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_gambe_levate",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a gambe levate"
       ]
@@ -11733,6 +11737,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_man_bassa",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a man bassa"
       ]
@@ -11756,6 +11761,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_morte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a morte"
       ]
@@ -11804,6 +11810,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_passo_di_lumaca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a passo di lumaca"
       ]
@@ -11827,6 +11834,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_pesci_in_faccia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a pesci in faccia"
       ]
@@ -11850,6 +11858,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_pezzi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a pezzi"
       ]
@@ -11873,6 +11882,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_pieni_voti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a pieni voti"
       ]
@@ -11896,6 +11906,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_portata_di_mano",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a portata di mano"
       ]
@@ -11919,6 +11930,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_porte_chiuse",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a porte chiuse"
       ]
@@ -11942,6 +11954,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_prezzo_di",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a prezzo di"
       ]
@@ -11965,6 +11978,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_proprio_rischio_e_pericolo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a proprio rischio e pericolo"
       ]
@@ -11988,6 +12002,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_quattr%27occhi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a quattr'occhi"
       ]
@@ -12036,6 +12051,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_quattro_mani",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a quattro mani"
       ]
@@ -12059,6 +12075,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_raffica",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a raffica"
       ]
@@ -12082,6 +12099,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_ragione",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a ragione"
       ]
@@ -12105,6 +12123,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_ripetizione",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a ripetizione"
       ]
@@ -12128,6 +12147,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_rischio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a rischio"
       ]
@@ -12151,6 +12171,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_sangue_freddo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a sangue freddo"
       ]
@@ -12174,6 +12195,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_scoppio_ritardato",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a scoppio ritardato"
       ]
@@ -12197,6 +12219,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_senso_unico",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a senso unico"
       ]
@@ -12220,6 +12243,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_spese_di",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a spese di"
       ]
@@ -12243,6 +12267,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_squarciagola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a squarciagola"
       ]
@@ -12266,6 +12291,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_stretto_giro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a stretto giro"
       ]
@@ -12289,6 +12315,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_suono_di",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a suono di"
       ]
@@ -12337,6 +12364,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_terra",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a terra"
       ]
@@ -12360,6 +12388,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_un_passo_da",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a un passo da"
       ]
@@ -12383,6 +12412,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_viso_aperto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a viso aperto"
       ]
@@ -12406,6 +12436,7 @@
       "source_url": "https://en.wiktionary.org/wiki/a_vuoto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "a vuoto"
       ]
@@ -12429,6 +12460,7 @@
       "source_url": "https://en.wiktionary.org/wiki/abbandonare_al_proprio_destino",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "abbandonare al proprio destino"
       ]
@@ -12452,6 +12484,7 @@
       "source_url": "https://en.wiktionary.org/wiki/abbassare_la_guardia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "abbassare la guardia"
       ]
@@ -12475,6 +12508,7 @@
       "source_url": "https://en.wiktionary.org/wiki/accusare_il_colpo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "accusare il colpo"
       ]
@@ -12498,6 +12532,7 @@
       "source_url": "https://en.wiktionary.org/wiki/acqua_alla_gola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "acqua alla gola"
       ]
@@ -12545,6 +12580,7 @@
       "source_url": "https://en.wiktionary.org/wiki/addetto_ai_lavori",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "addetto ai lavori"
       ]
@@ -12568,6 +12604,7 @@
       "source_url": "https://en.wiktionary.org/wiki/affogare_in_un_bicchier_d%27acqua",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "affogare in un bicchier d'acqua"
       ]
@@ -12591,6 +12628,7 @@
       "source_url": "https://en.wiktionary.org/wiki/agli_sgoccioli",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "agli sgoccioli"
       ]
@@ -12614,6 +12652,7 @@
       "source_url": "https://en.wiktionary.org/wiki/ai_ferri_corti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "ai ferri corti"
       ]
@@ -12637,6 +12676,7 @@
       "source_url": "https://en.wiktionary.org/wiki/ai_propri_piedi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "ai propri piedi"
       ]
@@ -12714,6 +12754,7 @@
       "source_url": "https://en.wiktionary.org/wiki/al_cardiopalmo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "al cardiopalmo"
       ]
@@ -12737,6 +12778,7 @@
       "source_url": "https://en.wiktionary.org/wiki/al_verde",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "al verde"
       ]
@@ -12760,6 +12802,7 @@
       "source_url": "https://en.wiktionary.org/wiki/all%27ennesima_potenza",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "all'ennesima potenza"
       ]
@@ -12783,6 +12826,7 @@
       "source_url": "https://en.wiktionary.org/wiki/all%27indirizzo_di",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "all'indirizzo di"
       ]
@@ -12806,6 +12850,7 @@
       "source_url": "https://en.wiktionary.org/wiki/all%27inglese",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "all'inglese"
       ]
@@ -12829,6 +12874,7 @@
       "source_url": "https://en.wiktionary.org/wiki/all%27ordine_del_giorno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "all'ordine del giorno"
       ]
@@ -12852,6 +12898,7 @@
       "source_url": "https://en.wiktionary.org/wiki/all%27oscuro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "all'oscuro"
       ]
@@ -12875,6 +12922,7 @@
       "source_url": "https://en.wiktionary.org/wiki/all%27osso",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "all'osso"
       ]
@@ -12898,6 +12946,7 @@
       "source_url": "https://en.wiktionary.org/wiki/all%27ultimo_minuto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "all'ultimo minuto"
       ]
@@ -12921,6 +12970,7 @@
       "source_url": "https://en.wiktionary.org/wiki/all%27ultimo_momento",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "all'ultimo momento"
       ]
@@ -12944,6 +12994,7 @@
       "source_url": "https://en.wiktionary.org/wiki/all%27ultimo_sangue",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "all'ultimo sangue"
       ]
@@ -13471,6 +13522,7 @@
       "source_url": "https://en.wiktionary.org/wiki/alzare_gli_occhi_al_cielo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "alzare gli occhi al cielo"
       ]
@@ -13533,6 +13585,7 @@
       "source_url": "https://en.wiktionary.org/wiki/alzare_la_falda",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "alzare la falda"
       ]
@@ -13589,6 +13642,7 @@
       "source_url": "https://en.wiktionary.org/wiki/alzare_le_mani",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "alzare le mani"
       ]
@@ -13660,6 +13714,7 @@
       "source_url": "https://en.wiktionary.org/wiki/anatra_zoppa",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "anatra zoppa"
       ]
@@ -13683,6 +13738,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_a_finire",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare a finire"
       ]
@@ -13706,6 +13762,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_a_nozze",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare a nozze"
       ]
@@ -13729,6 +13786,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_a_parare",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare a parare"
       ]
@@ -13752,6 +13810,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_a_rotoli",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare a rotoli"
       ]
@@ -13775,6 +13834,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_a_ruba",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare a ruba"
       ]
@@ -13798,6 +13858,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_avanti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare avanti"
       ]
@@ -13821,6 +13882,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_da_s%C3%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare da sé"
       ]
@@ -13844,6 +13906,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_dietro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare dietro"
       ]
@@ -13867,6 +13930,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_forte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare forte"
       ]
@@ -13890,6 +13954,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_gi%C3%B9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare giù"
       ]
@@ -13913,6 +13978,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_in_fumo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare in fumo"
       ]
@@ -13936,6 +14002,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_in_tilt",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare in tilt"
       ]
@@ -13959,6 +14026,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_lontano",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare lontano"
       ]
@@ -13982,6 +14050,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_matto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare matto"
       ]
@@ -14005,6 +14074,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_oltre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare oltre"
       ]
@@ -14028,6 +14098,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_pazzo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare pazzo"
       ]
@@ -14051,6 +14122,7 @@
       "source_url": "https://en.wiktionary.org/wiki/andare_per_la_propria_strada",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "andare per la propria strada"
       ]
@@ -14124,6 +14196,7 @@
       "source_url": "https://en.wiktionary.org/wiki/apertura_di_credito",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "apertura di credito"
       ]
@@ -14147,6 +14220,7 @@
       "source_url": "https://en.wiktionary.org/wiki/aprire_bocca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "aprire bocca"
       ]
@@ -14170,6 +14244,7 @@
       "source_url": "https://en.wiktionary.org/wiki/aprire_il_fuoco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "aprire il fuoco"
       ]
@@ -14193,6 +14268,7 @@
       "source_url": "https://en.wiktionary.org/wiki/aprire_le_porte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "aprire le porte"
       ]
@@ -14290,6 +14366,7 @@
       "source_url": "https://en.wiktionary.org/wiki/armato_fino_ai_denti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "armato fino ai denti"
       ]
@@ -14377,6 +14454,7 @@
       "source_url": "https://en.wiktionary.org/wiki/astro_nascente",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "astro nascente"
       ]
@@ -14400,6 +14478,7 @@
       "source_url": "https://en.wiktionary.org/wiki/attaccare_bottone",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "attaccare bottone"
       ]
@@ -14423,6 +14502,7 @@
       "source_url": "https://en.wiktionary.org/wiki/attaccare_le_ganasse_al_chiodo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "attaccare le ganasse al chiodo"
       ]
@@ -14509,6 +14589,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avere_a_che_fare_con",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avere a che fare con"
       ]
@@ -14532,6 +14613,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avere_a_cuore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avere a cuore"
       ]
@@ -14555,6 +14637,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avere_a_ridosso",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avere a ridosso"
       ]
@@ -14578,6 +14661,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avere_effetto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avere effetto"
       ]
@@ -14625,6 +14709,7 @@
       "source_url": "https://en.wiktionary.org/wiki/avere_in_cuore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "avere in cuore"
       ]
@@ -15079,6 +15164,7 @@
       "source_url": "https://en.wiktionary.org/wiki/battere_il_naso",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "battere il naso"
       ]
@@ -15102,6 +15188,7 @@
       "source_url": "https://en.wiktionary.org/wiki/battere_in_ritirata",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "battere in ritirata"
       ]
@@ -15125,6 +15212,7 @@
       "source_url": "https://en.wiktionary.org/wiki/battere_la_diana",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "battere la diana"
       ]
@@ -15148,6 +15236,7 @@
       "source_url": "https://en.wiktionary.org/wiki/battere_la_fiacca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "battere la fiacca"
       ]
@@ -15171,6 +15260,7 @@
       "source_url": "https://en.wiktionary.org/wiki/battere_la_grancassa",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "battere la grancassa"
       ]
@@ -15194,6 +15284,7 @@
       "source_url": "https://en.wiktionary.org/wiki/bell%27e_buono",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "bell'e buono"
       ]
@@ -15260,6 +15351,7 @@
       "source_url": "https://en.wiktionary.org/wiki/bellezza_acqua_e_sapone",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "bellezza acqua e sapone"
       ]
@@ -15438,6 +15530,7 @@
       "source_url": "https://en.wiktionary.org/wiki/bruciare_i_tempi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "bruciare i tempi"
       ]
@@ -15557,6 +15650,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cadere_vittima",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "cadere vittima"
       ]
@@ -15580,6 +15674,7 @@
       "source_url": "https://en.wiktionary.org/wiki/calcare_la_mano",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "calcare la mano"
       ]
@@ -15603,6 +15698,7 @@
       "source_url": "https://en.wiktionary.org/wiki/calcare_le_scene",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "calcare le scene"
       ]
@@ -15626,6 +15722,7 @@
       "source_url": "https://en.wiktionary.org/wiki/calcio_dell%27asino",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "calcio dell'asino"
       ]
@@ -15673,6 +15770,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cambiare_le_carte_in_tavola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "cambiare le carte in tavola"
       ]
@@ -15696,6 +15794,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cambiare_registro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "cambiare registro"
       ]
@@ -15947,6 +16046,7 @@
       "source_url": "https://en.wiktionary.org/wiki/caso_di_scuola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "caso di scuola"
       ]
@@ -15996,6 +16096,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cattedrale_nel_deserto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "cattedrale nel deserto"
       ]
@@ -16019,6 +16120,7 @@
       "source_url": "https://en.wiktionary.org/wiki/causa_persa",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "causa persa"
       ]
@@ -16042,6 +16144,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cavallo_di_battaglia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "cavallo di battaglia"
       ]
@@ -16113,6 +16216,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cavarsi_gli_occhi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "cavarsi gli occhi"
       ]
@@ -16136,6 +16240,7 @@
       "source_url": "https://en.wiktionary.org/wiki/cavarsi_un_dente",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "cavarsi un dente"
       ]
@@ -16327,6 +16432,7 @@
       "source_url": "https://en.wiktionary.org/wiki/che_culo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "che culo"
       ]
@@ -16350,6 +16456,7 @@
       "source_url": "https://en.wiktionary.org/wiki/che_fine_ha_fatto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "che fine ha fatto"
       ]
@@ -16413,6 +16520,7 @@
       "source_url": "https://en.wiktionary.org/wiki/che_palle",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "che palle"
       ]
@@ -16436,6 +16544,7 @@
       "source_url": "https://en.wiktionary.org/wiki/che_te_farebbi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "che te farebbi"
       ]
@@ -16459,6 +16568,7 @@
       "source_url": "https://en.wiktionary.org/wiki/chiamare_a_raccolta",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "chiamare a raccolta"
       ]
@@ -16482,6 +16592,7 @@
       "source_url": "https://en.wiktionary.org/wiki/chiamare_in_causa",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "chiamare in causa"
       ]
@@ -16505,6 +16616,7 @@
       "source_url": "https://en.wiktionary.org/wiki/chiudere_i_battenti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "chiudere i battenti"
       ]
@@ -16798,6 +16910,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/author/438",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Colombo scopre l'America",
         "La scoperta dell'America",
@@ -17711,6 +17824,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_ascolto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare ascolto"
       ]
@@ -17734,6 +17848,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_battaglia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare battaglia"
       ]
@@ -17757,6 +17872,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_corda",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare corda"
       ]
@@ -17780,6 +17896,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_corpo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare corpo"
       ]
@@ -17803,6 +17920,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_di_matto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare di matto"
       ]
@@ -17826,6 +17944,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_esca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare esca"
       ]
@@ -17873,6 +17992,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_fondo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare fondo"
       ]
@@ -17896,6 +18016,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_fuoco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare fuoco"
       ]
@@ -17919,6 +18040,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_i_natali",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare i natali"
       ]
@@ -17942,6 +18064,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_il_cinque",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare il cinque"
       ]
@@ -18013,6 +18136,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_il_meglio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare il meglio"
       ]
@@ -18036,6 +18160,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_la_caccia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare la caccia"
       ]
@@ -18059,6 +18184,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_la_mano",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare la mano"
       ]
@@ -18082,6 +18208,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_per_buono",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare per buono"
       ]
@@ -18105,6 +18232,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_per",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare per"
       ]
@@ -18128,6 +18256,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_ragione",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare ragione"
       ]
@@ -18151,6 +18280,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_retta",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare retta"
       ]
@@ -18174,6 +18304,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_spettacolo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare spettacolo"
       ]
@@ -18197,6 +18328,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_sui_nervi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare sui nervi"
       ]
@@ -18220,6 +18352,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_un_colpo_di_freno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare un colpo di freno"
       ]
@@ -18243,6 +18376,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_un%27occhiata",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare un'occhiata"
       ]
@@ -18266,6 +18400,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_una_lezione",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare una lezione"
       ]
@@ -18289,6 +18424,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_vita",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare vita"
       ]
@@ -18312,6 +18448,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dare_voce",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dare voce"
       ]
@@ -18335,6 +18472,7 @@
       "source_url": "https://en.wiktionary.org/wiki/darla_vinta",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "darla vinta"
       ]
@@ -18358,6 +18496,7 @@
       "source_url": "https://en.wiktionary.org/wiki/darsi_alla_pazza_gioia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "darsi alla pazza gioia"
       ]
@@ -18381,6 +18520,7 @@
       "source_url": "https://en.wiktionary.org/wiki/darsi_delle_arie",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "darsi delle arie"
       ]
@@ -18404,6 +18544,7 @@
       "source_url": "https://en.wiktionary.org/wiki/darsi_pace",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "darsi pace"
       ]
@@ -18427,6 +18568,7 @@
       "source_url": "https://en.wiktionary.org/wiki/darsi_pena",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "darsi pena"
       ]
@@ -18450,6 +18592,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dato_di_fatto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dato di fatto"
       ]
@@ -18512,6 +18655,7 @@
       "source_url": "https://en.wiktionary.org/wiki/del_cavolo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "del cavolo"
       ]
@@ -18583,6 +18727,7 @@
       "source_url": "https://en.wiktionary.org/wiki/della_prima_ora",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "della prima ora"
       ]
@@ -18606,6 +18751,7 @@
       "source_url": "https://en.wiktionary.org/wiki/di_bocca_buona",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "di bocca buona"
       ]
@@ -18629,6 +18775,7 @@
       "source_url": "https://en.wiktionary.org/wiki/di_colpo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "di colpo"
       ]
@@ -18652,6 +18799,7 @@
       "source_url": "https://en.wiktionary.org/wiki/di_punta",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "di punta"
       ]
@@ -18726,6 +18874,7 @@
       "source_url": "https://en.wiktionary.org/wiki/di_rilievo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "di rilievo"
       ]
@@ -18797,6 +18946,7 @@
       "source_url": "https://en.wiktionary.org/wiki/di_striscio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "di striscio"
       ]
@@ -18820,6 +18970,7 @@
       "source_url": "https://en.wiktionary.org/wiki/di_ultima_istanza",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "di ultima istanza"
       ]
@@ -18867,6 +19018,7 @@
       "source_url": "https://en.wiktionary.org/wiki/di_vista",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "di vista"
       ]
@@ -18938,6 +19090,7 @@
       "source_url": "https://en.wiktionary.org/wiki/Dio_cane",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "Dio cane"
       ]
@@ -19011,6 +19164,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "Dio mio!",
         "Dio mio",
@@ -19103,6 +19257,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dirittura_d%27arrivo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dirittura d'arrivo"
       ]
@@ -19253,6 +19408,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dormire",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dormire"
       ]
@@ -19300,6 +19456,7 @@
       "source_url": "https://en.wiktionary.org/wiki/dove_non_batte_il_sole",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "dove non batte il sole"
       ]
@@ -19347,6 +19504,7 @@
       "source_url": "https://en.wiktionary.org/wiki/entrare_in_carica",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "entrare in carica"
       ]
@@ -19370,6 +19528,7 @@
       "source_url": "https://en.wiktionary.org/wiki/entrare_in_scena",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "entrare in scena"
       ]
@@ -19393,6 +19552,7 @@
       "source_url": "https://en.wiktionary.org/wiki/entrare_nel_vivo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "entrare nel vivo"
       ]
@@ -19477,6 +19637,7 @@
       "source_url": "https://en.wiktionary.org/wiki/essere_di_casa",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "essere di casa"
       ]
@@ -19500,6 +19661,7 @@
       "source_url": "https://en.wiktionary.org/wiki/essere_di_troppo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "essere di troppo"
       ]
@@ -19523,6 +19685,7 @@
       "source_url": "https://en.wiktionary.org/wiki/essere_in_s%C3%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "essere in sé"
       ]
@@ -19570,6 +19733,7 @@
       "source_url": "https://en.wiktionary.org/wiki/essere_pazzo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "essere pazzo"
       ]
@@ -19593,6 +19757,7 @@
       "source_url": "https://en.wiktionary.org/wiki/essere_su_questa_terra",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "essere su questa terra"
       ]
@@ -19642,6 +19807,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fa_lo_stesso",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fa lo stesso"
       ]
@@ -19665,6 +19831,7 @@
       "source_url": "https://en.wiktionary.org/wiki/faccia_da_culo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "faccia da culo"
       ]
@@ -19688,6 +19855,7 @@
       "source_url": "https://en.wiktionary.org/wiki/far_battere_il_cuore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "far battere il cuore"
       ]
@@ -19711,6 +19879,7 @@
       "source_url": "https://en.wiktionary.org/wiki/far_pesare",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "far pesare"
       ]
@@ -19734,6 +19903,7 @@
       "source_url": "https://en.wiktionary.org/wiki/far_saltare",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "far saltare"
       ]
@@ -19757,6 +19927,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_a_meno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare a meno"
       ]
@@ -19804,6 +19975,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_al_caso",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare al caso"
       ]
@@ -19827,6 +19999,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_bene",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare bene"
       ]
@@ -19850,6 +20023,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_breccia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare breccia"
       ]
@@ -19897,6 +20071,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_campagna",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare campagna"
       ]
@@ -19920,6 +20095,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_centro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare centro"
       ]
@@ -19943,6 +20119,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_chiarezza",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare chiarezza"
       ]
@@ -19966,6 +20143,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_colpo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare colpo"
       ]
@@ -19989,6 +20167,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_da_paravento",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare da paravento"
       ]
@@ -20012,6 +20191,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_del_proprio_meglio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare del proprio meglio"
       ]
@@ -20035,6 +20215,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_eccezione",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare eccezione"
       ]
@@ -20058,6 +20239,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_effetto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare effetto"
       ]
@@ -20081,6 +20263,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_fuori",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare fuori"
       ]
@@ -20104,6 +20287,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_gola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare gola"
       ]
@@ -20127,6 +20311,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_i_conti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare i conti"
       ]
@@ -20150,6 +20335,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_i_propri_bisogni",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare i propri bisogni"
       ]
@@ -20245,6 +20431,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_il_pieno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare il pieno"
       ]
@@ -20268,6 +20455,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_l%27impossibile",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare l'impossibile"
       ]
@@ -20291,6 +20479,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_la_gavetta",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare la gavetta"
       ]
@@ -20314,6 +20503,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_la_linguaccia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare la linguaccia"
       ]
@@ -20337,6 +20527,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_la_scarpetta",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare la scarpetta"
       ]
@@ -20384,6 +20575,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_lezione",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare lezione"
       ]
@@ -20407,6 +20599,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_luce",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare luce"
       ]
@@ -20430,6 +20623,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_muro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare muro"
       ]
@@ -20453,6 +20647,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_notizia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare notizia"
       ]
@@ -20476,6 +20671,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_ombra",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare ombra"
       ]
@@ -20523,6 +20719,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_parola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare parola"
       ]
@@ -20546,6 +20743,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_politica",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare politica"
       ]
@@ -20569,6 +20767,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_presente",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare presente"
       ]
@@ -20592,6 +20791,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_proprio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare proprio"
       ]
@@ -20615,6 +20815,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_quadrato",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare quadrato"
       ]
@@ -20638,6 +20839,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_scena",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare scena"
       ]
@@ -20661,6 +20863,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_storie",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare storie"
       ]
@@ -20684,6 +20887,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_tesoro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare tesoro"
       ]
@@ -20707,6 +20911,7 @@
       "source_url": "https://en.wiktionary.org/wiki/fare_un_punto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "fare un punto"
       ]
@@ -20754,6 +20959,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farla_finita",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farla finita"
       ]
@@ -20777,6 +20983,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farla_franca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farla franca"
       ]
@@ -20800,6 +21007,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsene_un_baffo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsene un baffo"
       ]
@@ -20823,6 +21031,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_avanti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi avanti"
       ]
@@ -20846,6 +21055,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_carico",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi carico"
       ]
@@ -20869,6 +21079,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_da_parte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi da parte"
       ]
@@ -20892,6 +21103,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_furbo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi furbo"
       ]
@@ -20915,6 +21127,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_giustizia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi giustizia"
       ]
@@ -20938,6 +21151,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_i_cavoli_propri",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi i cavoli propri"
       ]
@@ -20961,6 +21175,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_in_quattro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi in quattro"
       ]
@@ -20984,6 +21199,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_notare",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi notare"
       ]
@@ -21007,6 +21223,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_prendere_la_mano",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi prendere la mano"
       ]
@@ -21030,6 +21247,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_rispettare",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi rispettare"
       ]
@@ -21053,6 +21271,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_scrupolo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi scrupolo"
       ]
@@ -21076,6 +21295,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_sentire",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi sentire"
       ]
@@ -21099,6 +21319,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_una_ragione",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi una ragione"
       ]
@@ -21122,6 +21343,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_vedere",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi vedere"
       ]
@@ -21145,6 +21367,7 @@
       "source_url": "https://en.wiktionary.org/wiki/farsi_vivo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "farsi vivo"
       ]
@@ -22058,6 +22281,7 @@
       "source_url": "https://en.wiktionary.org/wiki/gettare_un%27ombra",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "gettare un'ombra"
       ]
@@ -23081,6 +23305,7 @@
       "source_url": "https://www.gutenberg.org/files/69984/69984-h/69984-h.htm#THE_MAGIC_FLUTE",
       "source_work": "Die Zauberflöte",
       "source_work_key": "mnemosyne.it.work.die_zauberflöte",
+      "subcategory": "opera_libretto",
       "surface_patterns": [
         "Der Hölle Rache",
         "Der Hölle Rache kocht in meinem Herzen",
@@ -23326,6 +23551,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "il lupo mannaro",
         "un lupo mannaro",
@@ -23351,6 +23577,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Befana",
       "source_work": "Tradizione orale",
       "source_work_key": "mnemosyne.it.work.tradizione_orale",
+      "subcategory": "historical",
       "surface_patterns": [
         "la Befana di Natale",
         "il mistero della Befana",
@@ -23468,6 +23695,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Rosa_dei_venti",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "la rosa dei venti",
         "Rosa dei venti"
@@ -23505,6 +23733,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Paese_di_Cuccagna",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "il paese di cuccagna",
         "il paese della cuccagna",
@@ -24110,6 +24339,7 @@
       "source_url": "https://www.gutenberg.org/ebooks/14766",
       "source_work": "Advice to a Young Tradesman",
       "source_work_key": "mnemosyne.it.work.advice_to_a_young_tradesman",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "Il tempo è denaro, non si spreca"
       ]
@@ -24559,6 +24789,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_cinque_minuti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in cinque minuti"
       ]
@@ -24582,6 +24813,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_fiore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in fiore"
       ]
@@ -24605,6 +24837,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_gioco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in gioco"
       ]
@@ -24628,6 +24861,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_mano",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in mano"
       ]
@@ -24651,6 +24885,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_nome_di",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in nome di"
       ]
@@ -24674,6 +24909,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_oggetto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in oggetto"
       ]
@@ -24697,6 +24933,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_omaggio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in omaggio"
       ]
@@ -24720,6 +24957,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_onda",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in onda"
       ]
@@ -24743,6 +24981,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_ordine_sparso",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in ordine sparso"
       ]
@@ -24766,6 +25005,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_palio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in palio"
       ]
@@ -24789,6 +25029,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_pari",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in pari"
       ]
@@ -24812,6 +25053,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_pericolo_di_vita",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in pericolo di vita"
       ]
@@ -24859,6 +25101,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_prima_fila",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in prima fila"
       ]
@@ -24882,6 +25125,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_pugno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in pugno"
       ]
@@ -24905,6 +25149,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_quadrupedia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in quadrupedia"
       ]
@@ -24928,6 +25173,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_riga",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in riga"
       ]
@@ -24951,6 +25197,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_salita",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in salita"
       ]
@@ -24974,6 +25221,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_seno_a",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in seno a"
       ]
@@ -24997,6 +25245,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_sonno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in sonno"
       ]
@@ -25020,6 +25269,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_sordina",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in sordina"
       ]
@@ -25043,6 +25293,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_sospeso",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in sospeso"
       ]
@@ -25066,6 +25317,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_tasca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in tasca"
       ]
@@ -25089,6 +25341,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_testa",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in testa"
       ]
@@ -25112,6 +25365,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_tiro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in tiro"
       ]
@@ -25135,6 +25389,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_tronco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in tronco"
       ]
@@ -25158,6 +25413,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_tutte_le_salse",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in tutte le salse"
       ]
@@ -25181,6 +25437,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_ultima_istanza",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in ultima istanza"
       ]
@@ -25204,6 +25461,7 @@
       "source_url": "https://en.wiktionary.org/wiki/in_vista",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "in vista"
       ]
@@ -25227,6 +25485,7 @@
       "source_url": "https://en.wiktionary.org/wiki/incrociare_le_spade",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "incrociare le spade"
       ]
@@ -25250,6 +25509,7 @@
       "source_url": "https://en.wiktionary.org/wiki/ingiurie_del_tempo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "ingiurie del tempo"
       ]
@@ -25892,6 +26152,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Battaglia_di_Lepanto",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la battaglia di Lepanto",
         "la vittoria di Lepanto",
@@ -25958,6 +26219,7 @@
       "source_license": "not_required",
       "source_work": "Oral tradition",
       "source_work_key": "mnemosyne.it.work.oral_tradition",
+      "subcategory": "idiom",
       "surface_patterns": [
         "la Befana",
         "Befana"
@@ -25982,6 +26244,7 @@
       "source_url": "https://en.wiktionary.org/wiki/la_bellezza_di",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "la bellezza di"
       ]
@@ -26137,6 +26400,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Restaurazione_borbonica",
       "source_work": "Storia del Regno di Napoli",
       "source_work_key": "mnemosyne.it.work.storia_del_regno_di_napoli",
+      "subcategory": "historical",
       "surface_patterns": [
         "la cacciata dei francesi da Napoli",
         "1815 Napoli e i francesi",
@@ -26518,6 +26782,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Battaglia_di_Caporetto",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Caporetto",
         "la disfatta di Caporetto",
@@ -27057,6 +27322,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la presa della Bastiglia italiana",
         "la Bastiglia italiana",
@@ -27357,6 +27623,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "la strage di piazza Fontana",
         "p piazza Fontana",
@@ -28096,6 +28363,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Mona_Lisa",
       "source_work": "Mona Lisa",
       "source_work_key": "mnemosyne.it.work.mona_lisa",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Leonardo e la Gioconda",
         "il dipinto di Leonardo noto come Gioconda"
@@ -28299,6 +28567,7 @@
       "source_url": "https://www.senato.it/export/parlamento/documenti/archivio/archivio_discorsi/1861/03/17/0001_1861-03-17.pdf",
       "source_work": "Discorsi parlamentari",
       "source_work_key": "mnemosyne.it.work.discorsi_parlamentari",
+      "subcategory": "historical",
       "surface_patterns": [
         "Lo stato siamo noi"
       ]
@@ -29090,6 +29359,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_fine",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere fine"
       ]
@@ -29113,6 +29383,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_fuori_combattimento",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere fuori combattimento"
       ]
@@ -29136,6 +29407,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_gi%C3%B9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere giù"
       ]
@@ -29183,6 +29455,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_atto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in atto"
       ]
@@ -29206,6 +29479,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_campo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in campo"
       ]
@@ -29229,6 +29503,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_chiaro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in chiaro"
       ]
@@ -29252,6 +29527,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_conto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in conto"
       ]
@@ -29275,6 +29551,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_evidenza",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in evidenza"
       ]
@@ -29298,6 +29575,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_giro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in giro"
       ]
@@ -29321,6 +29599,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_guardia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in guardia"
       ]
@@ -29344,6 +29623,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_mostra",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in mostra"
       ]
@@ -29367,6 +29647,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_moto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in moto"
       ]
@@ -29390,6 +29671,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_piedi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in piedi"
       ]
@@ -29413,6 +29695,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_in_pratica",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere in pratica"
       ]
@@ -29436,6 +29719,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_incinta",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere incinta"
       ]
@@ -29527,6 +29811,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_le_corna",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere le corna"
       ]
@@ -29550,6 +29835,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_le_mani",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere le mani"
       ]
@@ -29573,6 +29859,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_piede",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere piede"
       ]
@@ -29596,6 +29883,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_radici",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere radici"
       ]
@@ -29619,6 +29907,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_sotto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere sotto"
       ]
@@ -29666,6 +29955,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_su_un_piedistallo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere su un piedistallo"
       ]
@@ -29689,6 +29979,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_una_pietra_sopra",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere una pietra sopra"
       ]
@@ -29712,6 +30003,7 @@
       "source_url": "https://en.wiktionary.org/wiki/mettere_una_toppa",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "mettere una toppa"
       ]
@@ -29905,6 +30197,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Piet%C3%A0_(Michelangelo)",
       "source_work": "Pietà",
       "source_work_key": "mnemosyne.it.work.pietà",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "Pietà di Michelangelo",
         "la scultura di Michelangelo nota come Pietà"
@@ -30277,6 +30570,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Esilio_di_Napoleone_a_Sant%27Elena",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Napoleone a Sant'Elena",
         "l'esilio di Napoleone a Sant'Elena",
@@ -30476,6 +30770,7 @@
       "source_url": "https://en.wiktionary.org/wiki/nel_profondo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "nel profondo"
       ]
@@ -30499,6 +30794,7 @@
       "source_url": "https://en.wiktionary.org/wiki/nell%27aria",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "nell'aria"
       ]
@@ -30590,6 +30886,7 @@
       "source_url": "https://en.wiktionary.org/wiki/nodo_alla_gola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "nodo alla gola"
       ]
@@ -30661,6 +30958,7 @@
       "source_url": "https://en.wiktionary.org/wiki/non_fa_per_me",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "non fa per me"
       ]
@@ -30684,6 +30982,7 @@
       "source_url": "https://en.wiktionary.org/wiki/non_muovere_un_dito",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "non muovere un dito"
       ]
@@ -30707,6 +31006,7 @@
       "source_url": "https://en.wiktionary.org/wiki/non_poterne_pi%C3%B9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "non poterne più"
       ]
@@ -30730,6 +31030,7 @@
       "source_url": "https://en.wiktionary.org/wiki/non_resta_che",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "non resta che"
       ]
@@ -30801,6 +31102,7 @@
       "source_url": "https://en.wiktionary.org/wiki/non_so_che",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "non so che"
       ]
@@ -30914,6 +31216,7 @@
       "source_url": "https://en.wiktionary.org/wiki/notte_fonda",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "notte fonda"
       ]
@@ -31044,6 +31347,7 @@
       "source_url": "https://en.wiktionary.org/wiki/ora_o_mai_pi%C3%B9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "proverbio",
       "surface_patterns": [
         "ora o mai più"
       ]
@@ -31067,6 +31371,7 @@
       "source_url": "https://en.wiktionary.org/wiki/ordine_del_giorno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "ordine del giorno"
       ]
@@ -31090,6 +31395,7 @@
       "source_url": "https://en.wiktionary.org/wiki/osso_duro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "osso duro"
       ]
@@ -31276,6 +31582,7 @@
       "source_url": "https://en.wiktionary.org/wiki/palla_al_piede",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "palla al piede"
       ]
@@ -31299,6 +31606,7 @@
       "source_url": "https://en.wiktionary.org/wiki/parente_povero",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "parente povero"
       ]
@@ -31346,6 +31654,7 @@
       "source_url": "https://en.wiktionary.org/wiki/parlare_sopra",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "parlare sopra"
       ]
@@ -31369,6 +31678,7 @@
       "source_url": "https://en.wiktionary.org/wiki/parlarsi_addosso",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "parlarsi addosso"
       ]
@@ -31416,6 +31726,7 @@
       "source_url": "https://en.wiktionary.org/wiki/passare_alla_storia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "passare alla storia"
       ]
@@ -31439,6 +31750,7 @@
       "source_url": "https://en.wiktionary.org/wiki/passare_il_segno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "passare il segno"
       ]
@@ -31462,6 +31774,7 @@
       "source_url": "https://en.wiktionary.org/wiki/passare_oltre",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "passare oltre"
       ]
@@ -31557,6 +31870,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pendaglio_da_forca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pendaglio da forca"
       ]
@@ -31628,6 +31942,7 @@
       "source_url": "https://en.wiktionary.org/wiki/per_il_momento",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "per il momento"
       ]
@@ -31675,6 +31990,7 @@
       "source_url": "https://en.wiktionary.org/wiki/per_mano_di",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "per mano di"
       ]
@@ -31698,6 +32014,7 @@
       "source_url": "https://en.wiktionary.org/wiki/per_non_parlare_di",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "per non parlare di"
       ]
@@ -31721,6 +32038,7 @@
       "source_url": "https://en.wiktionary.org/wiki/per_sbaglio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "per sbaglio"
       ]
@@ -31768,6 +32086,7 @@
       "source_url": "https://en.wiktionary.org/wiki/perch%C3%A9_mai",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "perché mai"
       ]
@@ -31791,6 +32110,7 @@
       "source_url": "https://en.wiktionary.org/wiki/perdere_di_vista",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "perdere di vista"
       ]
@@ -31814,6 +32134,7 @@
       "source_url": "https://en.wiktionary.org/wiki/perdere_il_filo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "perdere il filo"
       ]
@@ -31837,6 +32158,7 @@
       "source_url": "https://en.wiktionary.org/wiki/perdere_il_lume_della_ragione",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "perdere il lume della ragione"
       ]
@@ -31884,6 +32206,7 @@
       "source_url": "https://en.wiktionary.org/wiki/perdere_la_bussola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "perdere la bussola"
       ]
@@ -31953,6 +32276,7 @@
       "source_url": "https://en.wiktionary.org/wiki/perdere_terreno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "perdere terreno"
       ]
@@ -31976,6 +32300,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pesare_le_parole",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pesare le parole"
       ]
@@ -32073,6 +32398,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pezzo_grosso",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pezzo grosso"
       ]
@@ -32096,6 +32422,7 @@
       "source_url": "https://en.wiktionary.org/wiki/piccola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "piccola"
       ]
@@ -32119,6 +32446,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pieno_di_s%C3%A8",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pieno di sè"
       ]
@@ -32168,6 +32496,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Pietro_Micca",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "historical",
       "surface_patterns": [
         "Pietro Micca",
         "la battaglia di Torino",
@@ -32220,6 +32549,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pistola_fumante",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pistola fumante"
       ]
@@ -32449,6 +32779,7 @@
       "source_url": "https://en.wiktionary.org/wiki/porco_Dio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "porco Dio"
       ]
@@ -32472,6 +32803,7 @@
       "source_url": "https://en.wiktionary.org/wiki/portare_a_casa",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "portare a casa"
       ]
@@ -32495,6 +32827,7 @@
       "source_url": "https://en.wiktionary.org/wiki/portare_alla_luce",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "portare alla luce"
       ]
@@ -32518,6 +32851,7 @@
       "source_url": "https://en.wiktionary.org/wiki/portare_avanti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "portare avanti"
       ]
@@ -32565,6 +32899,7 @@
       "source_url": "https://en.wiktionary.org/wiki/poteri_forti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "poteri forti"
       ]
@@ -32588,6 +32923,7 @@
       "source_url": "https://en.wiktionary.org/wiki/precorrere_i_tempi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "precorrere i tempi"
       ]
@@ -32611,6 +32947,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_alla_lontana",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere alla lontana"
       ]
@@ -32634,6 +32971,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_corpo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere corpo"
       ]
@@ -32657,6 +32995,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_d%27assalto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere d'assalto"
       ]
@@ -32704,6 +33043,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_fiato",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere fiato"
       ]
@@ -32727,6 +33067,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_forma",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere forma"
       ]
@@ -32750,6 +33091,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_il_sole",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere il sole"
       ]
@@ -32797,6 +33139,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_il_via",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere il via"
       ]
@@ -32820,6 +33163,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_il_volante",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere il volante"
       ]
@@ -32843,6 +33187,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_la_parola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere la parola"
       ]
@@ -32866,6 +33211,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_le_armi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere le armi"
       ]
@@ -32889,6 +33235,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_le_distanze",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere le distanze"
       ]
@@ -32912,6 +33259,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_le_parti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere le parti"
       ]
@@ -32935,6 +33283,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_moglie",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere moglie"
       ]
@@ -32958,6 +33307,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_parte",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere parte"
       ]
@@ -32981,6 +33331,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_per_il_culo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere per il culo"
       ]
@@ -33004,6 +33355,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_per_la_gola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere per la gola"
       ]
@@ -33027,6 +33379,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_per_oro_colato",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere per oro colato"
       ]
@@ -33050,6 +33403,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_piede",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere piede"
       ]
@@ -33073,6 +33427,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_posto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere posto"
       ]
@@ -33096,6 +33451,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendere_vita",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendere vita"
       ]
@@ -33119,6 +33475,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prenderla_larga",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prenderla larga"
       ]
@@ -33142,6 +33499,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendersi_a_cuore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendersi a cuore"
       ]
@@ -33165,6 +33523,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prendersi_gioco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prendersi gioco"
       ]
@@ -33188,6 +33547,7 @@
       "source_url": "https://en.wiktionary.org/wiki/preparare_il_terreno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "preparare il terreno"
       ]
@@ -33211,6 +33571,7 @@
       "source_url": "https://en.wiktionary.org/wiki/presa_in_giro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "presa in giro"
       ]
@@ -33234,6 +33595,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prestare_giuramento",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prestare giuramento"
       ]
@@ -33257,6 +33619,7 @@
       "source_url": "https://en.wiktionary.org/wiki/prestare_il_fianco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "prestare il fianco"
       ]
@@ -33358,6 +33721,7 @@
       "source_url": "https://en.wiktionary.org/wiki/pulcino_bagnato",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "pulcino bagnato"
       ]
@@ -33381,6 +33745,7 @@
       "source_url": "https://en.wiktionary.org/wiki/punta_dell%27iceberg",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "punta dell'iceberg"
       ]
@@ -33404,6 +33769,7 @@
       "source_url": "https://en.wiktionary.org/wiki/punto_caldo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "punto caldo"
       ]
@@ -33427,6 +33793,7 @@
       "source_url": "https://en.wiktionary.org/wiki/punto_dolente",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "punto dolente"
       ]
@@ -33450,6 +33817,7 @@
       "source_url": "https://en.wiktionary.org/wiki/punto_fermo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "punto fermo"
       ]
@@ -33670,6 +34038,7 @@
       "source_url": "https://en.wiktionary.org/wiki/radere_al_suolo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "radere al suolo"
       ]
@@ -33745,6 +34114,7 @@
       "source_url": "https://en.wiktionary.org/wiki/ragazzo_immagine",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "ragazzo immagine"
       ]
@@ -33768,6 +34138,7 @@
       "source_url": "https://en.wiktionary.org/wiki/raggio_d%27azione",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "raggio d'azione"
       ]
@@ -33791,6 +34162,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rendere_la_pariglia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rendere la pariglia"
       ]
@@ -33814,6 +34186,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rendere_onore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rendere onore"
       ]
@@ -33885,6 +34258,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rientrare_in_argomento",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rientrare in argomento"
       ]
@@ -33908,6 +34282,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rientrare_in_gioco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rientrare in gioco"
       ]
@@ -33931,6 +34306,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rientrare_in_s%C3%A9",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rientrare in sé"
       ]
@@ -33954,6 +34330,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rientrare_nei_ranghi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rientrare nei ranghi"
       ]
@@ -33977,6 +34354,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rifarsi_una_vita",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rifarsi una vita"
       ]
@@ -34079,6 +34457,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rimettere_in_piedi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rimettere in piedi"
       ]
@@ -34102,6 +34481,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rimettersi_in_piedi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rimettersi in piedi"
       ]
@@ -34125,6 +34505,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rincarare_la_dose",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rincarare la dose"
       ]
@@ -34172,6 +34553,7 @@
       "source_url": "https://en.wiktionary.org/wiki/riprendere_la_parola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "riprendere la parola"
       ]
@@ -34245,6 +34627,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rodersi_il_cuore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rodersi il cuore"
       ]
@@ -34295,6 +34678,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rompere_il_ghiaccio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rompere il ghiaccio"
       ]
@@ -34484,6 +34868,7 @@
       "source_url": "https://en.wiktionary.org/wiki/rubare_la_scena",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "rubare la scena"
       ]
@@ -34507,6 +34892,7 @@
       "source_url": "https://en.wiktionary.org/wiki/saldare_i_conti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "saldare i conti"
       ]
@@ -34698,6 +35084,7 @@
       "source_license": "not_required",
       "source_work": "Various",
       "source_work_key": "mnemosyne.it.work.various",
+      "subcategory": "idiom",
       "surface_patterns": [
         "Santo cielo!",
         "Santo cielo"
@@ -35452,6 +35839,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sotto_le_stelle",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sotto le stelle"
       ]
@@ -35475,6 +35863,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sotto_tiro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sotto tiro"
       ]
@@ -35618,6 +36007,7 @@
       "source_url": "https://en.wiktionary.org/wiki/spostamento_d%27aria",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "spostamento d'aria"
       ]
@@ -35641,6 +36031,7 @@
       "source_url": "https://en.wiktionary.org/wiki/stare_al_gioco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "stare al gioco"
       ]
@@ -35664,6 +36055,7 @@
       "source_url": "https://en.wiktionary.org/wiki/stare_dietro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "stare dietro"
       ]
@@ -35687,6 +36079,7 @@
       "source_url": "https://en.wiktionary.org/wiki/stare_insieme",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "stare insieme"
       ]
@@ -35710,6 +36103,7 @@
       "source_url": "https://en.wiktionary.org/wiki/stare_sul_cazzo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "stare sul cazzo"
       ]
@@ -35757,6 +36151,7 @@
       "source_url": "https://en.wiktionary.org/wiki/Stato-balia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "Stato-balia"
       ]
@@ -35822,6 +36217,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sticazzi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sticazzi"
       ]
@@ -35845,6 +36241,7 @@
       "source_url": "https://en.wiktionary.org/wiki/stringere_i_denti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "stringere i denti"
       ]
@@ -35868,6 +36265,7 @@
       "source_url": "https://en.wiktionary.org/wiki/stringere_il_cuore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "stringere il cuore"
       ]
@@ -35891,6 +36289,7 @@
       "source_url": "https://en.wiktionary.org/wiki/stringere_la_gola",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "stringere la gola"
       ]
@@ -35914,6 +36313,7 @@
       "source_url": "https://en.wiktionary.org/wiki/su_due_piedi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "su due piedi"
       ]
@@ -35937,6 +36337,7 @@
       "source_url": "https://en.wiktionary.org/wiki/su_tutte_le_furie",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "su tutte le furie"
       ]
@@ -35960,6 +36361,7 @@
       "source_url": "https://en.wiktionary.org/wiki/suca",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "suca"
       ]
@@ -35983,6 +36385,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sul_fatto",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sul fatto"
       ]
@@ -36030,6 +36433,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sul_pezzo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sul pezzo"
       ]
@@ -36053,6 +36457,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sul_piede_di_guerra",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sul piede di guerra"
       ]
@@ -36076,6 +36481,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sull%27unghia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sull'unghia"
       ]
@@ -36099,6 +36505,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sulla_carta",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sulla carta"
       ]
@@ -36122,6 +36529,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sulla_punta_delle_dita",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sulla punta delle dita"
       ]
@@ -36169,6 +36577,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sulle_spalle",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sulle spalle"
       ]
@@ -36192,6 +36601,7 @@
       "source_url": "https://en.wiktionary.org/wiki/sulle_spine",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "sulle spine"
       ]
@@ -36252,6 +36662,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tabella_di_marcia",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tabella di marcia"
       ]
@@ -36275,6 +36686,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tagliare_fuori",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tagliare fuori"
       ]
@@ -36298,6 +36710,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tagliare_il_cordone_ombelicale",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tagliare il cordone ombelicale"
       ]
@@ -36395,6 +36808,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tempi_morti",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tempi morti"
       ]
@@ -36418,6 +36832,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tendere_l%27orecchio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tendere l'orecchio"
       ]
@@ -36441,6 +36856,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tenere_a_freno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tenere a freno"
       ]
@@ -36488,6 +36904,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tenere_d%27occhio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tenere d'occhio"
       ]
@@ -36511,6 +36928,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tenere_dietro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tenere dietro"
       ]
@@ -36534,6 +36952,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tenere_duro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tenere duro"
       ]
@@ -36557,6 +36976,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tenere_il_passo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tenere il passo"
       ]
@@ -36580,6 +37000,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tenere_in_cuore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tenere in cuore"
       ]
@@ -36603,6 +37024,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tenere_in_piedi",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tenere in piedi"
       ]
@@ -36626,6 +37048,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tenersi_tutto_dentro",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tenersi tutto dentro"
       ]
@@ -36673,6 +37096,7 @@
       "source_url": "https://en.wiktionary.org/wiki/teste_di_cuoio",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "teste di cuoio"
       ]
@@ -36720,6 +37144,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tirare_a_lucido",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tirare a lucido"
       ]
@@ -36743,6 +37168,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tirare_il_fiato",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tirare il fiato"
       ]
@@ -36790,6 +37216,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tirare_le_somme",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tirare le somme"
       ]
@@ -36813,6 +37240,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tirare_su",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tirare su"
       ]
@@ -36862,6 +37290,7 @@
       "source_url": "https://en.wiktionary.org/wiki/toccare_con_mano",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "toccare con mano"
       ]
@@ -36885,6 +37314,7 @@
       "source_url": "https://en.wiktionary.org/wiki/toccare_il_fondo",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "toccare il fondo"
       ]
@@ -36908,6 +37338,7 @@
       "source_url": "https://en.wiktionary.org/wiki/togliere_il_fiato",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "togliere il fiato"
       ]
@@ -36955,6 +37386,7 @@
       "source_url": "https://en.wiktionary.org/wiki/togliersi_un_peso_dallo_stomaco",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "togliersi un peso dallo stomaco"
       ]
@@ -36978,6 +37410,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tornare_alla_carica",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tornare alla carica"
       ]
@@ -37202,6 +37635,7 @@
       "source_url": "https://en.wiktionary.org/wiki/tuffo_al_cuore",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "tuffo al cuore"
       ]
@@ -37853,6 +38287,7 @@
       "source_url": "https://en.wiktionary.org/wiki/venire_meno",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "venire meno"
       ]
@@ -37876,6 +38311,7 @@
       "source_url": "https://en.wiktionary.org/wiki/venire_su",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "venire su"
       ]
@@ -38070,6 +38506,7 @@
       "source_url": "https://en.wiktionary.org/wiki/voltare_le_spalle",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "voltare le spalle"
       ]
@@ -38093,6 +38530,7 @@
       "source_url": "https://en.wiktionary.org/wiki/voltare_pagina",
       "source_work": "Wiktionary",
       "source_work_key": "mnemosyne.en.work.wiktionary",
+      "subcategory": "idiom",
       "surface_patterns": [
         "voltare pagina"
       ]
@@ -44580,6 +45018,7 @@
       "source_url": "https://it.wikisource.org/wiki/Il_male_oscuro",
       "source_work": "Il male oscuro",
       "source_work_key": "mnemosyne.it.work.il_male_oscuro",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "il male oscuro",
         "il suo male oscuro",
@@ -45721,6 +46160,7 @@
       "source_url": "https://it.wikipedia.org/wiki/Il_sorpasso",
       "source_work": "Il sorpasso",
       "source_work_key": "mnemosyne.it.work.il_sorpasso",
+      "subcategory": "film_tv",
       "surface_patterns": [
         "il sorpasso",
         "il suo sorpasso",
@@ -46056,6 +46496,7 @@
       "source_url": "https://en.wikisource.org/wiki/The_Art_of_War_(Sun_Tzu)",
       "source_work": "The Art of War",
       "source_work_key": "mnemosyne.it.work.the_art_of_war",
+      "subcategory": "literary_allusion",
       "surface_patterns": [
         "L'arte della guerra",
         "L'arte della guerra di Sun Tzu",
@@ -46354,6 +46795,7 @@
       "source_url": "https://it.wikipedia.org/wiki/L%27ombra_della_sera",
       "source_work": "L'ombra della sera",
       "source_work_key": "mnemosyne.it.work.l_ombra_della_sera",
+      "subcategory": "visual_art",
       "surface_patterns": [
         "L'ombra della sera",
         "L'ombra della sera di Michelangelo",
@@ -47176,6 +47618,7 @@
       "source_url": "https://it.wikisource.org/wiki/La_luna_e_i_fal%C3%B2",
       "source_work": "La luna e i falò",
       "source_work_key": "mnemosyne.it.work.la_luna_e_i_falò",
+      "subcategory": "modern_literature",
       "surface_patterns": [
         "la luna e i falò",
         "luna e falò",

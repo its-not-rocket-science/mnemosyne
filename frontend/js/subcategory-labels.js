@@ -39,6 +39,9 @@ const LABELS = {
   vedic_scripture:        'वेद',         filmi:                 'फ़िल्मी',
   hindi_muhavare:         'मुहावरा',     hindi_lokokti:         'लोकोक्ति',
 
+  // ── Hindi (extended) ──────────────────────────────────────────────────
+  classical_sanskrit:     'Sanskrit',    hindu_philosophy:      'Hindu phil.',
+
   // ── Hebrew ────────────────────────────────────────────────────────────
   talmudic:               'Talmud',      kabbalistic:          'Kabbalah',
   liturgical:             'Liturgy',     modern_hebrew:        'Modern Heb.',
