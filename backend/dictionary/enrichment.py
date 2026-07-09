@@ -44,6 +44,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.dictionary import logeion
+from backend.dictionary import perseus as _perseus
 from backend.dictionary.wiktionary import fetch_definition
 from backend.models import CanonicalObjectRow
 
@@ -168,14 +169,25 @@ async def enrich_objects(
             if gloss:
                 updated["gloss"] = gloss
             if logeion_data:
+                citations = logeion_data.get("classical_citations", [])
+                for c in citations:
+                    url = _perseus.scaife_citation_url(
+                        c.get("abbreviated", ""), c.get("ref", "")
+                    )
+                    if url:
+                        c["url"] = url
                 updated["ls_definition"]       = logeion_data.get("ls_definition")
-                updated["classical_citations"] = logeion_data.get("classical_citations", [])
+                updated["classical_citations"] = citations
                 updated["compound_words"]      = logeion_data.get("compound_words", [])
                 updated["lexicon_source"]      = logeion_data.get("lexicon_source")
                 if logeion_data.get("part_of_speech"):
                     updated["part_of_speech"] = logeion_data["part_of_speech"]
                 if logeion_data.get("gender"):
                     updated["gender"] = logeion_data["gender"]
+            if lang in _perseus.SUPPORTED_LANGUAGES:
+                updated["perseus_morph_url"] = _perseus.perseus_morph_url(
+                    row.canonical_form, lang
+                )
             row.lesson_data = updated
             dirty.append(row)
 

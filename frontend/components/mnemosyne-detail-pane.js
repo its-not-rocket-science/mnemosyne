@@ -1195,7 +1195,12 @@ export class MnemosyneDetailPane extends HTMLElement {
         ` : ''}
         ${ld.lexicon_source ? /* html */`
           <p class="pane__lexicon-meta">
-            <span class="pane__lexicon-badge">${esc(ld.lexicon_source)}</span>${ld.part_of_speech ? /* html */`
+            ${ld.perseus_morph_url ? /* html */`
+            <a class="pane__lexicon-badge pane__lexicon-badge--link"
+               href="${esc(ld.perseus_morph_url)}" target="_blank" rel="noopener noreferrer"
+               aria-label="${esc(ld.lexicon_source)} — ${esc(t('dp_view_in_perseus'))}"
+            >${esc(ld.lexicon_source)}</a>` : /* html */`
+            <span class="pane__lexicon-badge">${esc(ld.lexicon_source)}</span>`}${ld.part_of_speech ? /* html */`
             <span class="pane__pos-badge">${esc(ld.part_of_speech)}${ld.gender ? ` · ${esc(ld.gender)}` : ''}</span>` : ''}
           </p>
         ` : ''}
@@ -1206,7 +1211,9 @@ export class MnemosyneDetailPane extends HTMLElement {
           <ol class="pane__citations">
             ${ld.classical_citations.map(c => /* html */`
               <li class="pane__citation">
-                <cite>${esc(c.abbreviated)}</cite>
+                ${c.url ? /* html */`
+                <a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer"><cite>${esc(c.abbreviated)}</cite></a>` : /* html */`
+                <cite>${esc(c.abbreviated)}</cite>`}
                 ${c.author ? ` — ${esc(c.author)}` : ''}
               </li>
             `).join('')}
@@ -4569,6 +4576,14 @@ export class MnemosyneDetailPane extends HTMLElement {
       .pane__lexicon-badge {
         background: var(--surface-raised, #f0f0f0);
         color: var(--muted, #666);
+        text-decoration: none;
+      }
+      a.pane__lexicon-badge--link:hover,
+      a.pane__lexicon-badge--link:focus-visible {
+        background: var(--surface-hover, #e4e4e4);
+        color: var(--accent, #1a56db);
+        text-decoration: underline;
+        outline-offset: 2px;
       }
       .pane__pos-badge {
         background: var(--accent-subtle, #e8f0fe);
@@ -4596,6 +4611,15 @@ export class MnemosyneDetailPane extends HTMLElement {
       .pane__citation cite {
         font-style: normal;
         font-weight: 600;
+      }
+      .pane__citation a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .pane__citation a:hover cite,
+      .pane__citation a:focus-visible cite {
+        color: var(--accent, #1a56db);
+        text-decoration: underline;
       }
 
       /* ── Compound words ──────────────────────────────────────────── */
