@@ -327,22 +327,39 @@ _GRC_NEUT = ("τό", "τό", "τά", "τά")  # τό (sg) / τά (pl neuter)
 # Greek verb/adjective patterns for LSJ entries
 _GRC_TENSE_RE  = re.compile(r"\b(?:aor|fut|impf|pf|plpf|opt|subj)\.")
 _GRC_PERSON_RE = re.compile(r"\b[123]\s+(?:sg|pl)\.")
-_GRC_ADJ_RE    = re.compile(r",\s*[αἀᾱ],\s*ον|,\s*η,\s*ον")
+# Adjective paradigm patterns matched on diacritics-stripped header (first 80 chars):
+#   α/η, ον  — 3-termination 1st/2nd declension (incl. accented ή, όν)
+#   ες       — 3rd declension -ης/-ές type (ἀσφαλής, ές)
+#   εια      — 3rd declension -υς/-εῖα/-ύ type (βαρύς, εῖα, ύ)
+#   ον       — 2-termination (ἄλογος, ον)
+_GRC_ADJ_BASE_RE = re.compile(
+    r",\s*[αη]\s*,\s*ον"
+    r"|,\s*ια\s*,\s*ιον"
+    r"|,\s*ες[,\s]"
+    r"|,\s*εια[,\s]"
+    r"|,\s*ον[,\s]"
+)
 # Athematic (-μι) verbs: headword ends in μι followed by comma/space/bracket
 _GRC_MI_VERB_RE   = re.compile(r"^[Ͱ-Ͽἀ-῿\[\] \-]+?μι[,\s\[]")
 _GRC_HEAD_TOK_RE  = re.compile(r"^[^\s,;:\(\[]+")
 _GRC_VERB_ENDINGS = ("ω", "ομαι", "εω", "αω", "υω", "ζω", "νω", "ευω", "νυμαι", "νυω")
 
 
+def _strip_grc_diacritics(s: str) -> str:
+    nfd = unicodedata.normalize("NFD", s)
+    return unicodedata.normalize("NFC", "".join(c for c in nfd if unicodedata.category(c) != "Mn"))
+
+
 def _grc_head_is_verb(plain: str) -> bool:
     m = _GRC_HEAD_TOK_RE.match(plain)
     if not m:
         return False
-    tok = m.group(0).rstrip("-[]")
-    nfd = unicodedata.normalize("NFD", tok)
-    base = "".join(c for c in nfd if unicodedata.category(c) != "Mn")
-    base = unicodedata.normalize("NFC", base)
+    base = _strip_grc_diacritics(m.group(0).rstrip("-[]"))
     return any(base.endswith(e) for e in _GRC_VERB_ENDINGS)
+
+
+def _grc_is_adjective(plain: str) -> bool:
+    return bool(_GRC_ADJ_BASE_RE.search(_strip_grc_diacritics(plain[:80])))
 
 _GENDER_NAMES = {"m": "masculine", "f": "feminine", "n": "neuter"}
 
@@ -378,7 +395,7 @@ def _extract_morphology(plain: str, lang: str) -> dict:
         elif any(a in header for a in _GRC_NEUT):
             result["part_of_speech"] = "noun"
             result["gender"] = "neuter"
-        elif _GRC_ADJ_RE.search(header):
+        elif _grc_is_adjective(plain):
             result["part_of_speech"] = "adjective"
         elif (_GRC_TENSE_RE.search(header)
               or _GRC_PERSON_RE.search(header)
